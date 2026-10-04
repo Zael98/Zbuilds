@@ -13,7 +13,12 @@ local WIDTH = PAD + LIST_W + 16 + TREES_W + PAD
 local HEIGHT = 640
 
 local CLASS_ORDER = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
-local SOURCES = { "Talents Forever", "Icy Veins", "Guías extra", "Mis enlaces" }
+local SOURCES = { "Talents Forever", "Icy Veins", "Warcraft Tavern", "Method", "WoW Forever Builds", "Guías extra",
+    "Mis enlaces" }
+-- short names for the filter chips (the list headers keep the full ones)
+local SOURCE_SHORT = { ["Talents Forever"] = "T. Forever", ["WoW Forever Builds"] = "WF Builds",
+    ["Warcraft Tavern"] = "Tavern" }
+local CHIPS_PER_ROW = 4
 local CATEGORIES = { { key = "all", label = "Todas" }, { key = "Leveo", label = "Leveo" }, { key = "PvE", label = "PvE" },
     { key = "PvP", label = "PvP" }, { key = "none", label = "Sin tipo" } }
 
@@ -30,8 +35,9 @@ local C = {
     onlyB = { 1, 0.55, 0.15 },
     differ = { 1, 0.85, 0.2 },
     same = { 0.85, 0.85, 0.85 },
-    source = { ["Talents Forever"] = { 0.5, 0.88, 0.82 }, ["Icy Veins"] = { 0.45, 0.72, 1 }, ["Guías extra"] = { 0.8, 0.6, 1 },
-        ["Mis enlaces"] = { 1, 0.82, 0 } },
+    source = { ["Talents Forever"] = { 0.5, 0.88, 0.82 }, ["Icy Veins"] = { 0.45, 0.72, 1 },
+        ["Warcraft Tavern"] = { 0.95, 0.6, 0.35 }, ["Method"] = { 1, 0.42, 0.5 }, ["WoW Forever Builds"] = { 0.62, 0.86, 0.4 },
+        ["Guías extra"] = { 0.8, 0.6, 1 }, ["Mis enlaces"] = { 1, 0.82, 0 } },
 }
 
 local frame
@@ -595,10 +601,10 @@ local function create()
         ns.Refresh()
     end)
 
-    local chipW = (LIST_W - (#SOURCES - 1) * 6) / #SOURCES
+    local chipW = (LIST_W - (CHIPS_PER_ROW - 1) * 6) / CHIPS_PER_ROW
     for k, source in ipairs(SOURCES) do
         local chip
-        chip = button(frame, source, chipW, function()
+        chip = button(frame, SOURCE_SHORT[source] or source, chipW, function()
             state.hidden[source] = not state.hidden[source]
             chip:SetBackdropColor(unpack(state.hidden[source] and C.bg or { 0.14, 0.14, 0.17, 1 }))
             chip.label:SetTextColor(unpack(state.hidden[source] and C.dim or C.source[source]))
@@ -607,7 +613,8 @@ local function create()
         chip:SetHeight(20)
         chip.label:SetFont(STANDARD_TEXT_FONT, 10, "")
         chip.label:SetTextColor(unpack(C.source[source]))
-        chip:SetPoint("TOPLEFT", PAD + (k - 1) * (chipW + 6), top - 122)
+        local col, row = (k - 1) % CHIPS_PER_ROW, math.floor((k - 1) / CHIPS_PER_ROW)
+        chip:SetPoint("TOPLEFT", PAD + col * (chipW + 6), top - 122 - row * 24)
     end
 
     local typeW = (LIST_W - (#CATEGORIES - 1) * 4) / #CATEGORIES
@@ -625,7 +632,7 @@ local function create()
         categoryChips[k] = chip
     end
 
-    local listTop = top - 150
+    local listTop = top - 174
     frame.list = CreateFrame("ScrollFrame", nil, frame)
     frame.list:SetPoint("TOPLEFT", PAD, listTop)
     frame.list:SetSize(LIST_W, HEIGHT + listTop - PAD - 34)
@@ -721,7 +728,7 @@ local function create()
 
     local credits = text(frame, 10, C.dim)
     credits:SetPoint("BOTTOMLEFT", right, 8)
-    credits:SetText(("Datos: Talents Forever (CC BY 4.0) e Icy Veins  ·  actualizado %s  ·  enlace: clic y Ctrl+C")
+    credits:SetText(("Datos: Talents Forever (CC BY 4.0), Icy Veins, Warcraft Tavern, Method, WoW Forever Builds  ·  %s")
         :format(ZbuildsData and ZbuildsData.generated or "?"))
 end
 

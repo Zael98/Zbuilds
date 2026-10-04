@@ -6,6 +6,8 @@ Then /reload in game.
 Sources
   - talentsforever.com: talent trees (canonical layout, CC BY 4.0) and its "popular builds" list.
   - icy-veins.com: the talent builds embedded in its WoW Forever class guides.
+  - warcrafttavern.com, method.gg, wowforeverbuilds.com: the builds in their WoW Forever guides
+    (PvE, PvP and leveling; the type comes from the guide URL, heading or title).
   - links.txt: extra guides and build links shipped to everyone ("Guías extra").
 
 Every build is translated into the talentsforever tree layout: per tree a list of ranks in the same
@@ -17,6 +19,7 @@ import json
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import datetime
 from pathlib import Path
@@ -37,7 +40,6 @@ TF_CODE_VERSION = 6
 TF_SYMS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz056789"
 # Icy Veins calculator: one character per invested point, in order; talents numbered across trees.
 IV_SYMS = [str(i) for i in range(10)] + list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-._~[]()")
-IV_GRID_COLUMNS = 4
 
 # Build types shown in the addon. Icy Veins says it in the guide URL; Talents Forever's popular list does not.
 CATEGORIES = {"leveling": "Leveo", "leveo": "Leveo", "pve": "PvE", "pvp": "PvP"}
@@ -69,19 +71,53 @@ class ClassTrees:
         self.token = name.upper().replace(" ", "")  # "SHAMAN", matches UnitClass() file name
         self.trees = data["trees"]
         self.flat = [(ti, i) for ti, t in enumerate(self.trees) for i in range(len(t["talents"]))]
-        self.by_pos = {}
+        self.by_pos, self.by_name = {}, {}
         for ti, t in enumerate(self.trees):
             for i, tal in enumerate(t["talents"]):
                 self.by_pos[(ti, tal["row"], tal["col"])] = i
+                self.by_name[tal["name"].lower()] = (ti, i)
 
     def empty_ranks(self):
         return [[0] * len(t["talents"]) for t in self.trees]
 
+    # Sites keep their own copy of the trees, and some lag a patch (talents moved, renamed or
+    # reshaped by a hotfix), so their builds are read with their own tree and placed here by name.
+    def resolve(self, name):
+        spot = self.by_name.get(RENAMES.get(name, name).lower())
+        if not spot:
+            raise ValueError(f"{name} is not in the current {self.name} tree")
+        return spot
+
+    def from_points(self, names):
+        """Talent names, one per point in the order they are learned -> (ranks, order)."""
+        ranks, order = self.empty_ranks(), []
+        for name in names:
+            ti, i = self.resolve(name)
+            ranks[ti][i] += 1
+            order.append((ti, i))
+        return ranks, order
+
+    def from_ranks(self, ranks_by_name):
+        ranks = self.empty_ranks()
+        for name, rank in ranks_by_name.items():
+            if rank:
+                ti, i = self.resolve(name)
+                ranks[ti][i] = rank
+        return ranks
+
     def validate(self, ranks):
+        """Why the build cannot be learned in the current trees, or None."""
         for ti, t in enumerate(self.trees):
+            per_row = {}
             for i, tal in enumerate(t["talents"]):
                 if ranks[ti][i] > tal["max"]:
                     return f"{tal['name']} has {ranks[ti][i]} of {tal['max']} ranks"
+                per_row[tal["row"]] = per_row.get(tal["row"], 0) + ranks[ti][i]
+            # row r opens after 5 * (r - 1) points in the rows above: a talent that moved rows breaks old builds
+            for row, points in per_row.items():
+                above = sum(p for r, p in per_row.items() if r < row)
+                if points and above < 5 * (row - 1):
+                    return f"{t['name']} row {row} needs {5 * (row - 1)} points above it, the build has {above}"
         return None
 
     def to_lua(self):
@@ -100,8 +136,16 @@ class ClassTrees:
         }
 
 
+RENAMES = {}  # old talent name -> current name, from talentsforever
+
+
 def load_trees():
     data = json.loads(fetch(TF + "/data.json"))
+    try:
+        m = re.search(r"TALENT_RENAMES\s*=\s*(\{[^}]*\})", fetch(TF + "/talents.js"))
+        RENAMES.update(json.loads(m.group(1)))
+    except Exception as e:  # without it, builds naming an old talent are skipped instead
+        warn(f"talent renames: {e}")
     return {name: ClassTrees(name, c) for name, c in data["talents"].items()}
 
 
@@ -170,55 +214,186 @@ def talentsforever_popular(classes):
 
 # ---------------------------------------------------------------- Icy Veins
 
-def iv_class_map(slug, classes, cache={}):
-    """Icy Veins point symbol -> (tree, talent index) in the canonical layout, checked by name."""
-    if slug in cache:
-        return cache[slug]
-    data = json.loads(fetch(IV_JSON + slug + ".json"))
-    cls = classes.get(data["class"])
-    mapping = {}
-    if not cls:
-        warn(f"Icy Veins class {data['class']} has no talentsforever tree")
-    else:
-        sym = 0
-        for ti, group in enumerate(data["talentGroups"]):
-            for grid, tal in enumerate(group["talents"]):
-                if not tal:
-                    continue
-                row, col = grid // IV_GRID_COLUMNS + 1, grid % IV_GRID_COLUMNS + 1
-                i = cls.by_pos.get((ti, row, col))
-                if i is None or cls.trees[ti]["talents"][i]["name"].lower() != tal["name"].lower():
-                    warn(f"Icy Veins {data['class']}: {tal['name']} (tree {ti + 1}, row {row}, col {col}) "
-                         "does not match talentsforever")
-                else:
-                    mapping[IV_SYMS[sym]] = (ti, i)
-                sym += 1
-    cache[slug] = (cls, mapping)
+def iv_symbols(slug, cache={}):
+    """Icy Veins point symbol -> talent name, from its own calculator data (talents numbered across trees)."""
+    if slug not in cache:
+        data = json.loads(fetch(IV_JSON + slug + ".json"))
+        names = [tal["name"] for group in data["talentGroups"] for tal in group["talents"] if tal]
+        cache[slug] = dict(zip(IV_SYMS, names))
     return cache[slug]
 
 
 def parse_iv_points(slug, points, classes):
-    cls, mapping = iv_class_map(slug, classes)
-    if not cls:
-        raise ValueError("unknown class")
-    ranks, order = cls.empty_ranks(), []
-    for ch in points:
-        if ch not in mapping:
-            raise ValueError(f"point symbol {ch!r} has no matching talent")
-        ti, i = mapping[ch]
-        ranks[ti][i] += 1
-        order.append((ti, i))
+    cls, symbols = class_by_slug(slug, classes), iv_symbols(slug)
+    if any(ch not in symbols for ch in points):
+        raise ValueError("point symbol with no talent")
+    ranks, order = cls.from_points(symbols[ch] for ch in points)
     return cls, ranks, order
 
 
+# ---------------------------------------------------------------- Warcraft Tavern (warcraftdb calculator)
+
+TAVERN = "https://www.warcrafttavern.com"
+TAVERN_TREES = "ABC"
+
+
+def tavern_tree(slug, cache={}):
+    """(tree, tier, column) -> talent name in warcraftdb's own copy of the trees (0-based grid)."""
+    if slug not in cache:
+        data = json.loads(fetch(f"https://forever.warcraftdb.com/api/v1/talents/{slug}"))
+        cache[slug] = {(ti, t["tier"], t["column"]): t["name"]
+                       for ti, tree in enumerate(data["trees"]) for t in tree["talents"]}
+    return cache[slug]
+
+
+def parse_tavern_points(slug, code, classes):
+    """'A1111004466b': a tree letter, then one symbol per point, in order: tier*4 + column in base 36."""
+    cls, grid = class_by_slug(slug, classes), tavern_tree(slug)
+    names, tree = [], None
+    for ch in code:
+        if ch in TAVERN_TREES:
+            tree = TAVERN_TREES.index(ch)
+            continue
+        value = int(ch, 36)
+        name = grid.get((tree, value // 4, value % 4))
+        if not name:
+            raise ValueError(f"point {ch!r} has no talent in tree {tree}")
+        names.append(name)
+    ranks, order = cls.from_points(names)
+    return cls, ranks, order
+
+
+# ---------------------------------------------------------------- WoW Forever Builds (wowforeverbuilds.com)
+
+WFB = "https://wowforeverbuilds.com"
+
+
+def wfb_tree(slug, cache={}):
+    """Talent names per tree, in the order of wowforeverbuilds' own calculator (embedded in its page)."""
+    if slug not in cache:
+        page = html.unescape(fetch(f"{WFB}/talents/{slug}"))
+        cache[slug] = [re.findall(r'"name":\[0,"([^"]+)"\],"icon":\[0,"[^"]*"\],"row":', part)
+                       for part in page.split('"talents":[1,[')[1:]]
+    return cache[slug]
+
+
+def parse_wfb_query(slug, query, classes):
+    """'b=-0355...-2030...&o=2222...': b = rank per talent, one block per tree; o = point order,
+    two characters per point (tree index, talent index in base 36)."""
+    cls, trees = class_by_slug(slug, classes), wfb_tree(slug)
+    params = urllib.parse.parse_qs(query)
+    ranks_by_name = {}
+    for ti, seg in enumerate(params.get("b", [""])[0].split("-")[:len(trees)]):
+        for i, ch in enumerate(seg):
+            if int(ch):
+                ranks_by_name[trees[ti][i]] = int(ch)
+    code = params.get("o", [""])[0]
+    names = [trees[int(code[k])][int(code[k + 1], 36)] for k in range(0, len(code) - 1, 2)]
+    if names and len(names) == sum(ranks_by_name.values()):
+        ranks, order = cls.from_points(names)
+    else:
+        ranks, order = cls.from_ranks(ranks_by_name), []
+    return cls, ranks, order
+
+
+# ---------------------------------------------------------------- Method (Blizzard-style export string)
+
+METHOD = "https://www.method.gg"
+B64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+TREE_ORIGIN_X, TREE_ORIGIN_Y, NODE_SPACING = (1020, 5020, 9080), 2130, 600  # same grid the game uses
+_method_data = {}
+
+
+def method_nodes(class_token):
+    """Method's node list for a class, sorted by node id as its codes are: [(node id, tree, row, col, max)]."""
+    if "data" not in _method_data:
+        script = re.search(r'ForeverTalents\.min\.js\?version=([\d.]+)', fetch(METHOD + "/wow-forever/talent-calculator"))
+        _method_data["data"] = json.loads(fetch(f"{METHOD}/dfc/ForeverTalentsData-{script.group(1)}.json"))
+    data = _method_data["data"]
+    nodes = []
+    for tab in data["classes"][class_token]["tabs"]:
+        for node_id, n in data[tab["treeID"]].items():
+            if n["curFlag"] == tab["curFlag"] and n["spells"]:
+                nodes.append((int(node_id), tab["order"], round((n["y"] - TREE_ORIGIN_Y) / NODE_SPACING) + 1,
+                              round((n["x"] - TREE_ORIGIN_X[tab["order"]]) / NODE_SPACING) + 1, n["maxRank"]))
+    return sorted(nodes)
+
+
+METHOD_CLASS_IDS = {1: "WARRIOR", 2: "PALADIN", 4: "HUNTER", 8: "ROGUE", 16: "PRIEST", 64: "SHAMAN",
+                    128: "MAGE", 256: "WARLOCK", 1024: "DRUID"}
+
+
+def parse_method(code, classes):
+    """'<export>;<leveling>': the export is a bit stream (6 bits per character, low bits first):
+    version 8, class 16, tree hash 16x8, then per node: selected 1 [purchased 1 [partial 1 [rank 6]] choice 1 [2]].
+    The leveling part is one character per point: the index of the node in id order."""
+    export, _, leveling = code.partition(";")
+    bits = [(B64.index(ch) >> b) & 1 for ch in export for b in range(6)]
+    pos = 0
+
+    def read(n):
+        nonlocal pos
+        if pos + n > len(bits):
+            raise ValueError("export string too short")
+        value = sum(bits[pos + k] << k for k in range(n))
+        pos += n
+        return value
+
+    if read(8) != 1:
+        raise ValueError("unknown Method export version")
+    token = METHOD_CLASS_IDS.get(read(16))
+    cls = next((c for c in classes.values() if c.token == token), None)
+    if not cls:
+        raise ValueError(f"unknown class in Method export: {token}")
+    read(16 * 8)
+
+    nodes = method_nodes(token)
+    ranks, at = cls.empty_ranks(), []
+    for _, tree, row, col, max_rank in nodes:
+        i = cls.by_pos.get((tree, row, col))
+        at.append((tree, i))
+        if not read(1):  # not selected
+            continue
+        purchased = read(1)
+        rank = max_rank if purchased else 1
+        if purchased:
+            if read(1):  # partial rank
+                rank = read(6)
+            if read(1):  # choice node
+                read(2)
+        if i is None or cls.trees[tree]["talents"][i]["max"] != max_rank:
+            raise ValueError(f"Method talent at tree {tree} row {row} col {col} differs from the current tree")
+        ranks[tree][i] = min(rank, max_rank)
+
+    order = []
+    for ch in leveling:
+        tree, i = at[B64.index(ch)]
+        if i is None:
+            raise ValueError("leveling order points at an unknown talent")
+        order.append((tree, i))
+    return cls, ranks, order
+
+
+# ---------------------------------------------------------------- reading guide pages
+
 TF_LINK = r'talentsforever\.com/(?P<tf>[a-z]+/\d+/[0-9A-Za-z-]+)'
 IV_LINK = r'icy-veins\.com/wow-forever/(?P<ivc>[a-z-]+)-talent-calculator#tc-(?P<ivp>[0-9A-Za-z._~()\[\]-]+)'
+TAVERN_LINK = r'/forever/tools/talent-calculator/(?P<tvc>[a-z]+)#\?t=(?P<tvp>[A-C][0-9a-zA-C]*)'
+WFB_LINK = r'/talents/(?P<wfc>[a-z]+)\?(?P<wfq>b=[^"\'<\s]+)'
+METHOD_EMBED = r'data-talent="(?P<mt>[A-Za-z0-9+/]+(?:;[A-Za-z0-9+/]*)?)"'
 PAGE_TOKENS = re.compile(
     r'<h[1-4][^>]*>(?P<h>.*?)</h[1-4]>'
     r'|<span id="area_(?P<tabid>\d+)_button">(?P<tab>.*?)</span>'  # Icy Veins tabs ("21-Point Tree")
     r'|id="area_(?P<area>\d+)"'
-    r'|' + TF_LINK + r'|' + IV_LINK,
+    r'|' + '|'.join((TF_LINK, IV_LINK, TAVERN_LINK, WFB_LINK, METHOD_EMBED)),
     re.S)
+
+
+def class_by_slug(slug, classes):
+    cls = next((c for n, c in classes.items() if n.lower() == slug.lower()), None)
+    if not cls:
+        raise ValueError(f"unknown class {slug}")
+    return cls
 
 
 def link_build(url, classes):
@@ -231,12 +406,38 @@ def link_build(url, classes):
     if m:
         cls, ranks, order = parse_iv_points(m.group("ivc"), m.group("ivp"), classes)
         return cls, None, ranks, order, f"{IV}/wow-forever/{m.group('ivc')}-talent-calculator#tc-{m.group('ivp')}"
+    m = re.search(TAVERN_LINK, url)
+    if m:
+        cls, ranks, order = parse_tavern_points(m.group("tvc"), m.group("tvp"), classes)
+        return cls, None, ranks, order, f"{TAVERN}/forever/tools/talent-calculator/{m.group('tvc')}#?t={m.group('tvp')}"
+    m = re.search(WFB_LINK, url)
+    if m:
+        cls, ranks, order = parse_wfb_query(m.group("wfc"), m.group("wfq"), classes)
+        return cls, None, ranks, order, f"{WFB}/talents/{m.group('wfc')}?{m.group('wfq')}"
     return None
 
 
-def page_builds(url, classes, source, category, spec=None, prefix=""):
-    """Every talentsforever / Icy Veins build linked from a guide page, named after the heading above it."""
+def heading_category(text):
+    """Build type from a heading or title; None when it does not say."""
+    text = text.lower()
+    if "pvp" in text:
+        return "PvP"
+    if re.search(r"\b(leveling|levelling|leveo|solo|questing)\b", text):
+        return "Leveo"
+    if re.search(r"\b(pve|dungeon|raid|raiding|endgame)\b", text):
+        return "PvE"
+    return None
+
+
+def page_builds(url, classes, source, category, spec=None, prefix="", title_name=False):
+    """Every build linked or embedded in a guide page, named after the heading above it (or the page title).
+    Without a fixed category, each build takes the type its heading or the page title mentions.
+    With title_name, the page is about one build: the one whose points per tree match the
+    "N pts" the page shows. Other builds it links (the rest of a group in a duo or 5-man guide)
+    have pages of their own and are left out here."""
     page = fetch(url)
+    title = clean((re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S) or re.search(r"<title>(.*?)</title>", page, re.S)).group(1))
+    shown = [int(p) for p in re.findall(r'>(\d+) pts<', page)[:3]]
     builds, seen = [], set()
     heading, tabs, area = "", {}, None
     for m in PAGE_TOKENS.finditer(page):
@@ -247,23 +448,67 @@ def page_builds(url, classes, source, category, spec=None, prefix=""):
         elif m.group("area"):
             area = m.group("area")
         else:
-            name = prefix + (heading or "Build") + (f" ({tabs[area]})" if area in tabs else "")
+            name = prefix + ((title if title_name else heading) or "Build") + (f" ({tabs[area]})" if area in tabs else "")
             if m.group(0) in seen:
                 continue
             seen.add(m.group(0))
             try:
-                cls, level, ranks, order, link = link_build(html.unescape(m.group(0)), classes)
+                if m.group("mt"):  # embedded tree with no link of its own: point at the guide
+                    cls, ranks, order = parse_method(m.group("mt"), classes)
+                    level, link = None, f"{url}#zb{len(builds) + 1}"
+                else:
+                    cls, level, ranks, order, link = link_build(html.unescape(m.group(0)), classes)
             except Exception as e:
                 warn(f"{url} '{name}': {e}")
                 continue
+            if title_name and [sum(t) for t in ranks] != shown:
+                continue
             builds.append(make_build(cls, ranks, order, level, name=name, spec=spec or lead_tree(cls, ranks),
-                                     source=source, category=category, url=link, guide=url))
+                                     source=source, url=link, guide=url,
+                                     category=category or heading_category(name) or heading_category(title)
+                                     or heading_category(url.rsplit("/", 1)[-1].replace("-", " "))))
     return [b for b in builds if b]
 
 
 def guide_category(url):
     m = re.search(r"-(pve|pvp|leveling)-guide", url)
     return CATEGORIES[m.group(1)] if m else None
+
+
+# ---------------------------------------------------------------- site crawlers (one cache entry per page)
+
+def crawl(source, key, classes, base, paths=(), index_urls=(), link_pattern=None, **options):
+    """Read each guide page (given, or listed by the index pages); when the indexes fail,
+    fall back to the pages read last time. One cache entry per page."""
+    paths = list(paths)
+    for index_url in index_urls:
+        try:
+            paths += re.findall(link_pattern, fetch(index_url))
+        except Exception as e:
+            warn(f"{source} index {index_url}: {e}")
+    paths = sorted(set(paths)) or [k[len(key) + 1:] for k in cache_old if k.startswith(key + ":")]
+    builds = []
+    for path in paths:
+        builds += cached(f"{key}:{path}", lambda: page_builds(base + path, classes, source, None, **options))
+    return builds
+
+
+def tavern_guides(classes):
+    # one guide per class, with every build of the class in it
+    return crawl("Warcraft Tavern", "tavern", classes, TAVERN,
+                 paths=[f"/forever/guides/{name.lower()}/" for name in classes])
+
+
+def method_guides(classes):
+    return crawl("Method", "method", classes, METHOD,
+                 index_urls=[f"{METHOD}/wow-forever", f"{METHOD}/wow-forever/leveling-guides"],
+                 link_pattern=r'href="(?:https://www\.method\.gg)?(/wow-forever/[a-z0-9-]*guide[a-z0-9-]*)"')
+
+
+def wfb_guides(classes):
+    return crawl("WoW Forever Builds", "wfb", classes, WFB,
+                 index_urls=[f"{WFB}/guides/{name.lower()}" for name in classes],
+                 link_pattern=r'href="(/guide/[a-z0-9-]+)"', title_name=True)
 
 
 def icy_veins_guides(classes):
@@ -397,6 +642,9 @@ def main():
     builds = []
     for label, collect in (("Talents Forever popular builds", lambda c: cached("popular", lambda: talentsforever_popular(c))),
                            ("Icy Veins guides", icy_veins_guides),
+                           ("Warcraft Tavern guides", tavern_guides),
+                           ("Method guides", method_guides),
+                           ("WoW Forever Builds guides", wfb_guides),
                            ("links.txt", custom_links)):
         print(label)
         found = [b for b in collect(classes) if b]
@@ -408,6 +656,9 @@ def main():
         "sources": [
             {"name": "Talents Forever", "url": TF, "note": "Talent data CC BY 4.0, talentsforever.com"},
             {"name": "Icy Veins", "url": IV + "/wow-forever/"},
+            {"name": "Warcraft Tavern", "url": TAVERN + "/forever/guides/"},
+            {"name": "Method", "url": METHOD + "/wow-forever"},
+            {"name": "WoW Forever Builds", "url": WFB},
         ],
         "classes": {c.token: c.to_lua() for c in classes.values()},
         "builds": builds,
