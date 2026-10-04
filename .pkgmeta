@@ -3,3 +3,4 @@ package-as: ForeverBuilds
 ignore:
   - tools
   - README.md
+  - logo.png
