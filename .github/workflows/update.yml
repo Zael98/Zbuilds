@@ -1,0 +1,68 @@
+# Daily: refresh the builds from the sites; if any changed, commit, tag and publish a release
+# (GitHub release for WowUp/manual installs, and CurseForge when the CF_API_KEY secret is set).
+# Pushing a v* tag by hand publishes that version the same way.
+name: Actualizar builds
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Descargar builds
+        run: python tools/update_builds.py
+
+      - name: Guardar y etiquetar si cambiaron
+        id: commit
+        run: |
+          if git diff --quiet -- Data.lua; then
+            echo "Sin cambios en las builds"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Data.lua tools/cache.json
+          git commit -m "Actualizar builds $(date -u +%Y-%m-%d)"
+          tag="v$(date -u +%Y.%m.%d.%H%M)"
+          git tag "$tag"
+          git push origin HEAD "$tag"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publicar versión
+        if: steps.commit.outputs.changed == 'true'
+        uses: BigWigsMods/packager@v2
+        env:
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+
+  release:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Publicar versión
+        uses: BigWigsMods/packager@v2
+        env:
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}

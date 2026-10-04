@@ -1,0 +1,4498 @@
+{
+"popular": [
+{
+"class": "WARRIOR",
+"ranks": [
+"30305213132515201",
+"05050100000000000",
+"000000000000000000"
+],
+"points": [
+37,
+11,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Arms",
+"spec": "Arms",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"05020000000000000",
+"05000000000000000",
+"250533120321021351"
+],
+"points": [
+7,
+5,
+39
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"05000000000000000",
+"05000000000000000",
+"250530120321021351"
+],
+"points": [
+5,
+5,
+36
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"30305013002000000",
+"05253005102210501",
+"200000000000000000"
+],
+"points": [
+17,
+32,
+2
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Fury",
+"spec": "Fury",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/30305013002-05253005102210501-2-6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"30305013002000000",
+"05253005151010501",
+"000000000000000000"
+],
+"points": [
+17,
+34,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Fury",
+"spec": "Fury",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/30305013002-05253005151010501--6"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"50003000000000000",
+"5030000000000000",
+"05225131201331321"
+],
+"points": [
+8,
+8,
+35
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Retribution",
+"spec": "Retribution",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/paladin/60/50003-503-05225131201331321-6"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"4530513321301551",
+"50200000000000000"
+],
+"points": [
+0,
+42,
+7
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/paladin/60/-4530513321301551-502-6"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"55003000000000000",
+"0000000000000000",
+"05225331001330321"
+],
+"points": [
+13,
+0,
+34
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Retribution",
+"spec": "Retribution",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/paladin/60/55003--05225331001330321-6"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"05320213225131051",
+"5032000000000000",
+"05000000000000000"
+],
+"points": [
+36,
+10,
+5
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Holy",
+"spec": "Holy",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/paladin/60/05320213225131051-5032-05-6"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"51003000000000000",
+"5030000000000000",
+"05225331001330321"
+],
+"points": [
+9,
+8,
+34
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Retribution",
+"spec": "Retribution",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/paladin/60/51003-503-05225331001330321-6"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5000000000000000",
+"0050050010000000",
+"500230230250222151"
+],
+"points": [
+5,
+11,
+35
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Survival",
+"spec": "Survival",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/hunter/60/5-005005001-500230230250222151-6"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5000000000000000",
+"3053552011523051",
+"500000000000000000"
+],
+"points": [
+5,
+41,
+5
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Marksmanship",
+"spec": "Marksmanship",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/hunter/60/5-3053552011523051-5-6"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5000000000000000",
+"0050050010000000",
+"503200230250222151"
+],
+"points": [
+5,
+11,
+35
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Survival",
+"spec": "Survival",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/hunter/60/5-005005001-503200230250222151-6"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5120021505101251",
+"0050352000500000",
+"000000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Beast Mastery",
+"spec": "Beast Mastery",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/hunter/60/5120021505101251-00503520005--6"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5000000000000000",
+"0050450010000000",
+"500230230050220151"
+],
+"points": [
+5,
+15,
+31
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Survival",
+"spec": "Survival",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/hunter/60/5-005045001-500230230050220151-6"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00530310501000000",
+"32300320200515231",
+"0000000000000000000"
+],
+"points": [
+18,
+32,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Combat",
+"spec": "Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/rogue/60/00530310501-32300320200515231--6"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00531310551521051",
+"30230300000000000",
+"0020000000000000000"
+],
+"points": [
+38,
+11,
+2
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Assassination",
+"spec": "Assassination",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/rogue/60/00531310551521051-302303-002-6"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"30502010401000000",
+"32030200200000000",
+"3320023200212210000"
+],
+"points": [
+16,
+12,
+23
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Subtlety",
+"spec": "Subtlety",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/rogue/60/30502010401-320302002-332002320021221-6"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00530310501000000",
+"32003320201515231",
+"0000000000000000000"
+],
+"points": [
+18,
+33,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Combat",
+"spec": "Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/rogue/60/00530310501-32003320201515231--6"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00530310501000000",
+"32030320200515231",
+"0000000000000000000"
+],
+"points": [
+18,
+32,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Combat",
+"spec": "Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/rogue/60/00530310501-32030320200515231--6"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"025003001300000000",
+"30000000000000000",
+"500322501201302251"
+],
+"points": [
+14,
+3,
+34
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Shadow",
+"spec": "Shadow",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/priest/60/0250030013-3-500322501201302251-6"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"525330031305001001",
+"30515100202000000",
+"000000000000000000"
+],
+"points": [
+32,
+19,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Discipline",
+"spec": "Discipline",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/priest/60/525330031305001001-30515100202--6"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"005203031305101531",
+"02505003030000000",
+"000000000000000000"
+],
+"points": [
+33,
+18,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Discipline",
+"spec": "Discipline",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/priest/60/005203031305101531-0250500303--6"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"005303001303100000",
+"03505103030021531",
+"000000000000000000"
+],
+"points": [
+19,
+32,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Holy",
+"spec": "Holy",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/priest/60/0053030013031-03505103030021531--6"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"505330031305021001",
+"31505100202000000",
+"000000000000000000"
+],
+"points": [
+32,
+19,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Discipline",
+"spec": "Discipline",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/priest/60/505330031305021001-31505100202--6"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0505330020000000",
+"052032031005112251",
+"0000000000000000"
+],
+"points": [
+18,
+33,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Enhancement",
+"spec": "Enhancement",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/shaman/60/050533002-052032031005112251--6"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0000000000000000",
+"055000000000000000",
+"5030503315513151"
+],
+"points": [
+0,
+10,
+41
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Restoration",
+"spec": "Restoration",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/shaman/60/-055-5030503315513151-6"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0500030000000000",
+"052032031005112251",
+"0500500000000000"
+],
+"points": [
+8,
+33,
+10
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Enhancement",
+"spec": "Enhancement",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/shaman/60/050003-052032031005112251-05005-6"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"5505301303123151",
+"055002001000000000",
+"0000000000000000"
+],
+"points": [
+38,
+13,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Elemental",
+"spec": "Elemental",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/shaman/60/5505301303123151-055002001--6"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0500331320100000",
+"052032031005112251",
+"0000000000000000"
+],
+"points": [
+18,
+33,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Enhancement",
+"spec": "Enhancement",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/shaman/60/05003313201-052032031005112251--6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"00551030130133040",
+"0055000331000300200"
+],
+"points": [
+0,
+29,
+22
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Fire",
+"spec": "Fire",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/-0055103013013304-00550003310003002-6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"050203000100000000",
+"03550010130133051",
+"0054000000000000000"
+],
+"points": [
+11,
+31,
+9
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Fire",
+"spec": "Fire",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/0502030001-03550010130133051-0054-6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"00000000000000000",
+"0555323331321331251"
+],
+"points": [
+0,
+0,
+51
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Frost",
+"spec": "Frost",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/--0555323331321331251-6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"255225223122311531",
+"13000000000000000",
+"0000000000000000000"
+],
+"points": [
+47,
+4,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Arcane",
+"spec": "Arcane",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/255225223122311531-13--6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"050205200102301000",
+"00552330130103110",
+"0020000000000000000"
+],
+"points": [
+21,
+28,
+2
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Fire",
+"spec": "Fire",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/050205200102301-0055233013010311-002-6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"05550320035201351",
+"0050203001000000000",
+"0000000000000000"
+],
+"points": [
+40,
+11,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Affliction",
+"spec": "Affliction",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/05550320035201351-0050203001--6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"05000000000000000",
+"0050203001000000000",
+"2050355103101351"
+],
+"points": [
+5,
+11,
+35
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Destruction",
+"spec": "Destruction",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/05-0050203001-2050355103101351-6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"00500000000000000",
+"0050233201211031351",
+"2055000100000000"
+],
+"points": [
+5,
+33,
+13
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Demonology",
+"spec": "Demonology",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/005-0050233201211031351-20550001-6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"03500323100211000",
+"0055103201201001300",
+"2040000000000000"
+],
+"points": [
+21,
+24,
+6
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Demonology",
+"spec": "Demonology",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/03500323100211-00551032012010013-204-6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"00000000000000000",
+"0305003200220300000",
+"2050315103101351"
+],
+"points": [
+0,
+20,
+31
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Destruction",
+"spec": "Destruction",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/-03050032002203-2050315103101351-6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500220000000000",
+"55200032120032012051",
+"0500000000000000"
+],
+"points": [
+9,
+34,
+5
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Feral Combat",
+"spec": "Feral Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0530200100000000",
+"05000000000000000000",
+"5050035103113251"
+],
+"points": [
+11,
+5,
+35
+],
+"order": null,
+"level": 60,
+"name": "Popular #2: Restoration",
+"spec": "Restoration",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/05302001-05-5050035103113251-6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"5032220115501351",
+"00000000000000000000",
+"5052030000000000"
+],
+"points": [
+36,
+0,
+15
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Balance",
+"spec": "Balance",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500220000000000",
+"55230202120132012551",
+"0000000000000000"
+],
+"points": [
+9,
+42,
+0
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Feral Combat",
+"spec": "Feral Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/050022-55230202120132012551--6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500220000000000",
+"55000032021032212051",
+"0500300000000000"
+],
+"points": [
+9,
+34,
+8
+],
+"order": null,
+"level": 60,
+"name": "Popular #5: Feral Combat",
+"spec": "Feral Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/050022-55000032021032212051-05003-6"
+}
+],
+"iv:/wow-forever/affliction-warlock-ranged-dps-pve-guide": [
+{
+"class": "WARLOCK",
+"ranks": [
+"03550020030201000",
+"0000000000000000000",
+"0000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+14
+]
+],
+"level": null,
+"name": "Affliction Level 30 Talent Build",
+"spec": "Affliction",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-111222223333366bb999d",
+"guide": "https://www.icy-veins.com/wow-forever/affliction-warlock-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/arcane-mage-ranged-dps-pve-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"230203000100000000",
+"00000000000000000",
+"0000000000000000000"
+],
+"points": [
+11,
+0,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+10
+]
+],
+"level": null,
+"name": "Level 20 Talent Build",
+"spec": "Arcane",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-00111335559",
+"guide": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/arms-warrior-melee-dps-pve-guide": [
+{
+"class": "WARRIOR",
+"ranks": [
+"02305213130010000",
+"00000000000000000",
+"000000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+7
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+9
+],
+[
+1,
+13
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Arms",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-22211554447774469998c",
+"guide": "https://www.icy-veins.com/wow-forever/arms-warrior-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/assassination-rogue-melee-dps-pve-guide": [
+{
+"class": "ROGUE",
+"ranks": [
+"02530010401401000",
+"00000000000000000",
+"0000000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+7
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+11
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+14
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Assassination",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-112223332268888abbbbd",
+"guide": "https://www.icy-veins.com/wow-forever/assassination-rogue-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/balance-druid-ranged-dps-pve-guide": [],
+"iv:/wow-forever/beast-mastery-hunter-ranged-dps-pve-guide": [
+{
+"class": "HUNTER",
+"ranks": [
+"5100221503101000",
+"0000000000000000",
+"000000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+2
+],
+[
+1,
+7
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+11
+],
+[
+1,
+8
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+13
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Beast Mastery",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-000004455167777a7999c",
+"guide": "https://www.icy-veins.com/wow-forever/beast-mastery-hunter-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/combat-rogue-melee-dps-pve-guide": [
+{
+"class": "ROGUE",
+"ranks": [
+"00000000000000000",
+"32003321101410000",
+"0000000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+8
+],
+[
+2,
+6
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+13
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Combat",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-iihhhlllmmomnnprsssst",
+"guide": "https://www.icy-veins.com/wow-forever/combat-rogue-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/demonology-warlock-ranged-dps-pve-guide": [
+{
+"class": "WARLOCK",
+"ranks": [
+"00000000000000000",
+"0005003231201301000",
+"0000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+10
+],
+[
+2,
+13
+],
+[
+2,
+16
+]
+],
+"level": null,
+"name": "Demonology Level 30 Talent Build",
+"spec": "Demonology",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-kkkkkoonnnppprruuuqtw",
+"guide": "https://www.icy-veins.com/wow-forever/demonology-warlock-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/destruction-warlock-ranged-dps-pve-guide": [
+{
+"class": "WARLOCK",
+"ranks": [
+"00000000000000000",
+"0000000000000000000",
+"2050305103101000"
+],
+"points": [
+0,
+0,
+21
+],
+"order": [
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+8
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+13
+]
+],
+"level": null,
+"name": "Destruction Level 30 Talent Build",
+"spec": "Destruction",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-AACCCCCEEEGGGGGHJJJKM",
+"guide": "https://www.icy-veins.com/wow-forever/destruction-warlock-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/discipline-priest-healer-pve-guide": [
+{
+"class": "PRIEST",
+"ranks": [
+"023013111300100000",
+"00000000000000000",
+"005000000000000000"
+],
+"points": [
+16,
+0,
+5
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+7
+],
+[
+1,
+5
+],
+[
+1,
+9
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+8
+],
+[
+1,
+13
+],
+[
+3,
+3
+]
+],
+"level": null,
+"name": "Deep Discipline",
+"spec": "Discipline",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-BBBB112225556489997cB",
+"guide": "https://www.icy-veins.com/wow-forever/discipline-priest-healer-pve-guide"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"320023001000000000",
+"32000000000000000",
+"005000000000000000"
+],
+"points": [
+11,
+5,
+5
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+1,
+9
+]
+],
+"level": null,
+"name": "Alternative Build",
+"spec": "Discipline",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-BBBBB1100044jj555iii8",
+"guide": "https://www.icy-veins.com/wow-forever/discipline-priest-healer-pve-guide"
+}
+],
+"iv:/wow-forever/elemental-shaman-ranged-dps-pve-guide": [
+{
+"class": "SHAMAN",
+"ranks": [
+"0530301323100000",
+"000000000000000000",
+"0000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+7
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+3
+],
+[
+1,
+11
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+9
+],
+[
+1,
+9
+]
+],
+"level": null,
+"name": "Level 30 Talent Build (21-Point Tree)",
+"spec": "Elemental",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-111114442267772a99988",
+"guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-guide"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0530301323103110",
+"000000000000000000",
+"0000000000000000"
+],
+"points": [
+26,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+7
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+3
+],
+[
+1,
+11
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+14
+],
+[
+1,
+15
+]
+],
+"level": null,
+"name": "Level 30 Talent Build (26-Point Tree)",
+"spec": "Elemental",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-111114442267772a99988cccde",
+"guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/enhancement-shaman-melee-dps-pve-guide": [
+{
+"class": "SHAMAN",
+"ranks": [
+"0000000000000000",
+"051032031004100100",
+"0000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+13
+],
+[
+2,
+16
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Enhancement",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhikkkllnnnorrrrsv",
+"guide": "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/feral-druid-melee-dps-and-tank-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50230032021101010000",
+"0000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+11
+],
+[
+2,
+12
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+14
+],
+[
+2,
+16
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Feral",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggiijjjmmmnnqrpptv",
+"guide": "https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide"
+}
+],
+"iv:/wow-forever/fire-mage-ranged-dps-pve-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"20530000100000000",
+"0000000000000000000"
+],
+"points": [
+0,
+11,
+0
+],
+"order": [
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+9
+]
+],
+"level": null,
+"name": "Level 20 Talent Build",
+"spec": "Fire",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-kkkkkiilllq",
+"guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/frost-mage-ranged-dps-pve-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"00000000000000000",
+"0525003001001300100"
+],
+"points": [
+0,
+0,
+21
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+10
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+4
+],
+[
+3,
+13
+],
+[
+3,
+17
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Frost",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-AAAAAFFFBBICCCCMMMCLP",
+"guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/fury-warrior-melee-dps-pve-guide": [
+{
+"class": "WARRIOR",
+"ranks": [
+"00000000000000000",
+"05153105000010000",
+"000000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+6
+],
+[
+2,
+3
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+13
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Fury",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-iiiiikkkkklllmjooooot",
+"guide": "https://www.icy-veins.com/wow-forever/fury-warrior-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/holy-paladin-healer-pve-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"05321013005001000",
+"0000000000000000",
+"00000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+7
+],
+[
+1,
+5
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+14
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Holy",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-111112223377764aaaaad",
+"guide": "https://www.icy-veins.com/wow-forever/holy-paladin-healer-pve-guide"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"05322013025101010",
+"0000000000000000",
+"00000000000000000"
+],
+"points": [
+26,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+7
+],
+[
+1,
+5
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+14
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+12
+],
+[
+1,
+5
+],
+[
+1,
+16
+]
+],
+"level": null,
+"name": "26-Point Tree (Full Legacy Talents)",
+"spec": "Holy",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-111112223377764aaaaad99b4f",
+"guide": "https://www.icy-veins.com/wow-forever/holy-paladin-healer-pve-guide"
+}
+],
+"iv:/wow-forever/holy-priest-healer-pve-guide": [
+{
+"class": "PRIEST",
+"ranks": [
+"020000000000000000",
+"33205100000000000",
+"005000000000000000"
+],
+"points": [
+2,
+14,
+5
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+6
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Holy",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-BBBBB11jjjkkmmmmmiiin",
+"guide": "https://www.icy-veins.com/wow-forever/holy-priest-healer-pve-guide"
+}
+],
+"iv:/wow-forever/marksmanship-hunter-ranged-dps-pve-guide": [
+{
+"class": "HUNTER",
+"ranks": [
+"0000000000000000",
+"0050252011500000",
+"000000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+10
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Marksmanship",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiilllllommkkpqqqqq",
+"guide": "https://www.icy-veins.com/wow-forever/marksmanship-hunter-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/protection-paladin-tank-pve-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"0530210300000000",
+"50020000000000000"
+],
+"points": [
+0,
+14,
+7
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+2,
+6
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Protection",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiilljjjoooxxxxxAAm",
+"guide": "https://www.icy-veins.com/wow-forever/protection-paladin-tank-pve-guide"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"0530512300000000",
+"50020000000000000"
+],
+"points": [
+0,
+19,
+7
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+3,
+1
+],
+[
+2,
+6
+],
+[
+2,
+7
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+2,
+5
+],
+[
+2,
+7
+]
+],
+"level": null,
+"name": "26-Point Tree (Full Legacy Talents)",
+"spec": "Protection",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiilljjjoooxmnllxxxxAAln",
+"guide": "https://www.icy-veins.com/wow-forever/protection-paladin-tank-pve-guide"
+}
+],
+"iv:/wow-forever/protection-warrior-tank-pve-guide": [
+{
+"class": "WARRIOR",
+"ranks": [
+"00300000000000000",
+"02000000000000000",
+"250033020001000000"
+],
+"points": [
+3,
+2,
+16
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+6
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+12
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Protection",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-zzzzzCCCDDFFDyyJii222",
+"guide": "https://www.icy-veins.com/wow-forever/protection-warrior-tank-pve-guide"
+}
+],
+"iv:/wow-forever/restoration-druid-healer-pve-guide": [],
+"iv:/wow-forever/restoration-shaman-healer-pve-guide": [
+{
+"class": "SHAMAN",
+"ranks": [
+"0000000000000000",
+"000000000000000000",
+"5032003114010100"
+],
+"points": [
+0,
+0,
+21
+],
+"order": [
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+9
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+8
+],
+[
+3,
+12
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+14
+]
+],
+"level": null,
+"name": "Level 30 Talent Builds (21-Point Tree)",
+"spec": "Restoration",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-yyyyyAAABBGEEEFJHHHHL",
+"guide": "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-guide"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0000000000000000",
+"000000000000000000",
+"5032003115013110"
+],
+"points": [
+0,
+0,
+26
+],
+"order": [
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+9
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+8
+],
+[
+3,
+12
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+14
+],
+[
+3,
+10
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+15
+]
+],
+"level": null,
+"name": "Level 30 Talent Builds (26-Point Tree)",
+"spec": "Restoration",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-yyyyyAAABBGEEEFJHHHHLHKKKM",
+"guide": "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-guide"
+}
+],
+"iv:/wow-forever/retribution-paladin-melee-dps-pve-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"0000000000000000",
+"05224031201001000"
+],
+"points": [
+0,
+0,
+21
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+5
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+8
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+11
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+14
+]
+],
+"level": null,
+"name": "Retribution Focused Talents",
+"spec": "Retribution",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzzAABDDDEFFHBBBK",
+"guide": "https://www.icy-veins.com/wow-forever/retribution-paladin-melee-dps-pve-guide"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"55003013200101000",
+"0000000000000000",
+"00000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+7
+],
+[
+1,
+12
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+14
+]
+],
+"level": null,
+"name": "Holy Focused/Shockadin Talents",
+"spec": "Retribution",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-11111444000007776b88d",
+"guide": "https://www.icy-veins.com/wow-forever/retribution-paladin-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/shadow-priest-ranged-dps-pve-guide": [
+{
+"class": "PRIEST",
+"ranks": [
+"020000000000000000",
+"30000000000000000",
+"105022201201000000"
+],
+"points": [
+2,
+3,
+16
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+1
+],
+[
+3,
+9
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+12
+]
+],
+"level": null,
+"name": "Deep Shadow",
+"spec": "Shadow",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-11iiiBBBBBDDEEzHIIFFK",
+"guide": "https://www.icy-veins.com/wow-forever/shadow-priest-ranged-dps-pve-guide"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"025003000300000000",
+"30000000000000000",
+"005000000000000000"
+],
+"points": [
+13,
+3,
+5
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+]
+],
+"level": null,
+"name": "Meditation",
+"spec": "Shadow",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-BB11BBBiii22222555999",
+"guide": "https://www.icy-veins.com/wow-forever/shadow-priest-ranged-dps-pve-guide"
+}
+],
+"iv:/wow-forever/subtlety-rogue-melee-dps-pve-guide": [
+{
+"class": "ROGUE",
+"ranks": [
+"00000000000000000",
+"00000000000000000",
+"4023003310013001000"
+],
+"points": [
+0,
+0,
+21
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+9
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+4
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+1
+],
+[
+3,
+16
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Subtlety",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-AAyyyEEEBBGFFFBJKKKyN",
+"guide": "https://www.icy-veins.com/wow-forever/subtlety-rogue-melee-dps-pve-guide"
+}
+],
+"iv:/wow-forever/survival-hunter-melee-dps-pve-guide": [
+{
+"class": "HUNTER",
+"ranks": [
+"0000000000000000",
+"0000000000000000",
+"503200230050000100"
+],
+"points": [
+0,
+0,
+21
+],
+"order": [
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+16
+]
+],
+"level": null,
+"name": "Level 30 Talent Build",
+"spec": "Survival",
+"source": "Icy Veins",
+"category": "PvE",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-wwwwwzzyyyDDDCCGGGGGL",
+"guide": "https://www.icy-veins.com/wow-forever/survival-hunter-melee-dps-pve-guide"
+}
+],
+"link:https://talentsforever.com/shaman/60/050033-051032031005112251--BEFRSUVXYbcdefgh-6": [
+{
+"class": "SHAMAN",
+"ranks": [
+"0500330000000000",
+"051032031005112251",
+"0000000000000000"
+],
+"points": [
+11,
+32,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+13
+],
+[
+2,
+14
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+18
+]
+],
+"level": 60,
+"name": "Chaman Mejora (enlace propio)",
+"spec": "Enhancement",
+"source": "Guías extra",
+"url": "https://talentsforever.com/shaman/60/050033-051032031005112251--BEFRSUVXYbcdefgh-6",
+"category": null
+}
+]
+}

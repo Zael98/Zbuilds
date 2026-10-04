@@ -1,0 +1,8 @@
+# Tus builds y guias: una por linea.
+#   Nombre | enlace           -> sin tipo (o el de la URL si es una guia de Icy Veins *-pve/pvp/leveling-guide)
+#   Nombre | Tipo | enlace    -> Tipo: Leveo, PvE o PvP
+# El enlace puede ser una build (talentsforever.com o calculadora de Icy Veins con #tc-)
+# o una GUIA: se leen todas las builds que enlace y se vuelven a leer en cada actualizacion.
+# Ejemplo de guia (quita la # para activarla):
+# Guia Mejora | PvE | https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide
+Chaman Mejora (enlace propio) | https://talentsforever.com/shaman/60/050033-051032031005112251--BEFRSUVXYbcdefgh-6
