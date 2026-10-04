@@ -6,7 +6,7 @@ local _, ns = ...
 local NODE_SPACING = 600
 local TREE_GAP = NODE_SPACING * 2
 
-ns.PREFIX = "|cff33ff99ForeverBuilds|r: "
+ns.PREFIX = "|cff33ff99Zbuilds|r: "
 
 function ns.Print(msg)
     print(ns.PREFIX .. msg)
@@ -17,12 +17,12 @@ function ns.PlayerClass()
 end
 
 function ns.ClassData(classToken)
-    return ForeverBuildsData and ForeverBuildsData.classes[classToken]
+    return ZbuildsData and ZbuildsData.classes[classToken]
 end
 
 function ns.BuildsFor(classToken)
     local out = {}
-    for _, build in ipairs(ForeverBuildsData and ForeverBuildsData.builds or {}) do
+    for _, build in ipairs(ZbuildsData and ZbuildsData.builds or {}) do
         if build.class == classToken then out[#out + 1] = build end
     end
     for _, build in ipairs(ns.Imports()) do -- links pasted in game
@@ -221,15 +221,15 @@ end
 
 -- Selected build per character, remembered by its link.
 function ns.SelectedBuild(classToken)
-    local url = ForeverBuildsCharDB and ForeverBuildsCharDB.selected
+    local url = ZbuildsCharDB and ZbuildsCharDB.selected
     for _, build in ipairs(ns.BuildsFor(classToken)) do
         if build.url == url then return build end
     end
 end
 
 function ns.Select(build)
-    ForeverBuildsCharDB = ForeverBuildsCharDB or {}
-    ForeverBuildsCharDB.selected = build and build.url
+    ZbuildsCharDB = ZbuildsCharDB or {}
+    ZbuildsCharDB.selected = build and build.url
 end
 
 local function announceNext()
@@ -240,7 +240,7 @@ local function announceNext()
     if not tree then return end
     local t, i, rank = ns.NextStep(build, classData, tree)
     if t and ns.FreePoints(tree) > 0 then
-        ns.Print(("siguiente talento de \"%s\": |cffffd100%s|r (rango %d). Escribe /fb para aplicarlo.")
+        ns.Print(("siguiente talento de \"%s\": |cffffd100%s|r (rango %d). Escribe /zb para aplicarlo.")
             :format(build.name, classData.trees[t].talents[i].name, rank))
     end
 end
@@ -255,8 +255,8 @@ events:SetScript("OnEvent", function(_, event)
     if ns.Refresh then ns.Refresh() end
 end)
 
-SLASH_FOREVERBUILDS1 = "/fb"
-SLASH_FOREVERBUILDS2 = "/foreverbuilds"
-SlashCmdList.FOREVERBUILDS = function()
+SLASH_ZBUILDS1 = "/zb"
+SLASH_ZBUILDS2 = "/zbuilds"
+SlashCmdList.ZBUILDS = function()
     ns.Toggle()
 end

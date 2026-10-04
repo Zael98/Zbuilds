@@ -522,7 +522,7 @@ local function cycleClass(step)
 end
 
 local function create()
-    frame = flat(CreateFrame("Frame", "ForeverBuildsFrame", UIParent, "BackdropTemplate"), C.bg)
+    frame = flat(CreateFrame("Frame", "ZbuildsFrame", UIParent, "BackdropTemplate"), C.bg)
     frame:SetSize(WIDTH, HEIGHT)
     frame:SetPoint("CENTER")
     frame:SetFrameStrata("HIGH")
@@ -534,7 +534,7 @@ local function create()
         state.class, state.spec = ns.PlayerClass(), nil
         ns.Refresh()
     end)
-    tinsert(UISpecialFrames, "ForeverBuildsFrame")
+    tinsert(UISpecialFrames, "ZbuildsFrame")
 
     -- header bar: drag to move
     local header = flat(CreateFrame("Frame", nil, frame, "BackdropTemplate"), C.panel)
@@ -547,7 +547,7 @@ local function create()
     header:SetScript("OnDragStop", function() frame:StopMovingOrSizing() end)
     local title = text(header, 14)
     title:SetPoint("LEFT", PAD, 0)
-    title:SetText(paint("Forever", C.pending) .. "Builds")
+    title:SetText(paint("Z", C.pending) .. "builds")
     local close = button(header, "×", 24, function() frame:Hide() end)
     close:SetPoint("RIGHT", -4, 0)
     close.label:SetFont(STANDARD_TEXT_FONT, 16, "")
@@ -722,7 +722,7 @@ local function create()
     local credits = text(frame, 10, C.dim)
     credits:SetPoint("BOTTOMLEFT", right, 8)
     credits:SetText(("Datos: Talents Forever (CC BY 4.0) e Icy Veins  ·  actualizado %s  ·  enlace: clic y Ctrl+C")
-        :format(ForeverBuildsData and ForeverBuildsData.generated or "?"))
+        :format(ZbuildsData and ZbuildsData.generated or "?"))
 end
 
 -- ---------------------------------------------------------------- import dialog
@@ -730,12 +730,12 @@ end
 local dialog
 
 local function createImport()
-    dialog = flat(CreateFrame("Frame", "ForeverBuildsImport", frame, "BackdropTemplate"), C.bg, C.pending)
+    dialog = flat(CreateFrame("Frame", "ZbuildsImport", frame, "BackdropTemplate"), C.bg, C.pending)
     dialog:SetSize(460, 214)
     dialog:SetPoint("CENTER")
     dialog:SetFrameStrata("DIALOG")
     dialog:EnableMouse(true)
-    tinsert(UISpecialFrames, "ForeverBuildsImport")
+    tinsert(UISpecialFrames, "ZbuildsImport")
 
     local title = text(dialog, 14)
     title:SetPoint("TOPLEFT", PAD, -PAD)
@@ -815,7 +815,7 @@ function ns.ShowImport()
 end
 
 function ns.Toggle()
-    if not ForeverBuildsData then
+    if not ZbuildsData then
         ns.Print("falta Data.lua: ejecuta tools/update_builds.py")
         return
     end

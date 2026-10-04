@@ -131,9 +131,9 @@ function ns.DecodeLink(url, name, category)
 end
 
 function ns.Imports()
-    ForeverBuildsDB = ForeverBuildsDB or {}
-    ForeverBuildsDB.imports = ForeverBuildsDB.imports or {}
-    return ForeverBuildsDB.imports
+    ZbuildsDB = ZbuildsDB or {}
+    ZbuildsDB.imports = ZbuildsDB.imports or {}
+    return ZbuildsDB.imports
 end
 
 function ns.AddImport(build)

@@ -1,4 +1,4 @@
-# ForeverBuilds
+# Zbuilds
 
 Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja verlas, compararlas y aprenderlas en el juego.
 
@@ -9,11 +9,11 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Aprender puntos libres:** gasta tus puntos siguiendo el orden de la build (fuera de combate).
 - **+ Importar enlace:** pega un enlace de build de talentsforever.com o de la calculadora de Icy Veins. Funciona sin conexión y se guarda en tu cuenta.
 
-Comando: `/fb`
+Comando: `/zb`
 
 ## Instalación
 
-- **CurseForge / WowUp:** instala "ForeverBuilds"; tu gestor de addons te avisará de cada actualización.
+- **CurseForge / WowUp:** instala "Zbuilds"; tu gestor de addons te avisará de cada actualización.
 - **A mano:** descarga el `.zip` de la última [versión](../../releases) y descomprímelo en `World of Warcraft\<cliente>\Interface\AddOns\`.
 
 ## Cómo se actualizan las builds
