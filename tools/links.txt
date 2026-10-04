@@ -5,4 +5,3 @@
 # o una GUIA: se leen todas las builds que enlace y se vuelven a leer en cada actualizacion.
 # Ejemplo de guia (quita la # para activarla):
 # Guia Mejora | PvE | https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide
-Chaman Mejora (enlace propio) | https://talentsforever.com/shaman/60/050033-051032031005112251--BEFRSUVXYbcdefgh-6

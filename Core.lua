@@ -2,6 +2,7 @@
 -- Forever keeps the three classic trees as nodes of one C_Traits tree; nodes sit on a grid of
 -- NODE_SPACING units, with a wide gap between the three trees.
 local _, ns = ...
+local L = ns.L
 
 local NODE_SPACING = 600
 local TREE_GAP = NODE_SPACING * 2
@@ -55,7 +56,7 @@ function ns.Order(build, classData)
             for _ = 1, ns.TargetRank(build, t, i) do order[#order + 1] = { t, i } end
         end
     end
-    build.order = order
+    build.order, build.orderEstimated = order, true
     return order
 end
 
@@ -68,11 +69,11 @@ end
 
 -- Returns { configID, treeID, node[t][i], spell[t][i], rank[t][i], mismatches } or nil, error.
 function ns.ReadTree(classData)
-    if not (C_ClassTalents and C_Traits) then return nil, "este cliente no tiene la API de talentos C_Traits" end
+    if not (C_ClassTalents and C_Traits) then return nil, L.NO_API end
     local configID = C_ClassTalents.GetActiveConfigID()
     local config = configID and C_Traits.GetConfigInfo(configID)
     local treeID = config and config.treeIDs and config.treeIDs[1]
-    if not treeID then return nil, "no hay árbol de talentos activo (¿nivel < 10?)" end
+    if not treeID then return nil, L.NO_TREE end
 
     local nodes = {}
     for _, nodeID in ipairs(C_Traits.GetTreeNodes(treeID)) do
@@ -90,7 +91,7 @@ function ns.ReadTree(classData)
         last = n.posX
     end
     if #clusters ~= #classData.trees then
-        return nil, ("el juego tiene %d árboles y los datos %d; actualiza Data.lua"):format(#clusters, #classData.trees)
+        return nil, L.TREE_COUNT:format(#clusters, #classData.trees)
     end
 
     local result = { configID = configID, treeID = treeID, node = {}, spell = {}, rank = {}, mismatches = {}, edges = {} }
@@ -121,7 +122,7 @@ function ns.ReadTree(classData)
             end
             -- a talent the site data places elsewhere or with other ranks: the data lags a game patch
             if not i or talents[i].max ~= n.maxRanks then
-                result.mismatches[#result.mismatches + 1] = C_Spell.GetSpellName(spell or 0) or ("nodo " .. n.ID)
+                result.mismatches[#result.mismatches + 1] = C_Spell.GetSpellName(spell or 0) or L.NODE:format(n.ID)
             end
         end
     end
@@ -146,7 +147,12 @@ function ns.CurrentAsBuild(classData, tree)
         end
         ranks[t], points[t] = table.concat(digits), sum
     end
-    return { name = "Mi reparto actual", source = "Personaje", class = ns.PlayerClass(), ranks = ranks, points = points }
+    return { name = L.MY_TALENTS, source = "Personaje", class = ns.PlayerClass(), ranks = ranks, points = points }
+end
+
+function ns.TalentName(classData, tree, t, i)
+    local spell = tree and tree.spell[t] and tree.spell[t][i]
+    return (spell and C_Spell.GetSpellName(spell)) or classData.trees[t].talents[i].name
 end
 
 function ns.FreePoints(tree)
@@ -188,19 +194,19 @@ end
 
 -- Spends the free points following the build. Returns number of points learned, or nil, error.
 function ns.Apply(build, classData)
-    if InCombatLockdown() then return nil, "no se puede en combate" end
+    if InCombatLockdown() then return nil, L.IN_COMBAT end
     local tree, err = ns.ReadTree(classData)
     if not tree then return nil, err end
     local conflicts = ns.Conflicts(build, classData, tree)
     if #conflicts > 0 then
-        return nil, "tienes puntos que esta build no usa (" .. table.concat(conflicts, ", ") .. "). Reinicia los talentos primero."
+        return nil, L.CONFLICTS:format(table.concat(conflicts, ", "))
     end
 
     local bought, failure = 0, nil
     missingSteps(build, classData, tree, function(t, i)
         local nodeID = tree.node[t][i]
         if not nodeID then
-            failure = classData.trees[t].talents[i].name .. " no existe en el árbol del juego"
+            failure = L.NOT_IN_TREE:format(classData.trees[t].talents[i].name)
             return false
         end
         if not C_Traits.PurchaseRank(tree.configID, nodeID) then return false end -- out of points
@@ -212,7 +218,7 @@ function ns.Apply(build, classData)
         if not committed and C_ClassTalents.CommitConfig then committed = C_ClassTalents.CommitConfig() end
         if not committed then
             C_Traits.RollbackConfig(tree.configID)
-            return nil, "el juego rechazó los cambios"
+            return nil, L.REJECTED
         end
     end
     if failure then return nil, failure end
@@ -240,8 +246,7 @@ local function announceNext()
     if not tree then return end
     local t, i, rank = ns.NextStep(build, classData, tree)
     if t and ns.FreePoints(tree) > 0 then
-        ns.Print(("siguiente talento de \"%s\": |cffffd100%s|r (rango %d). Escribe /zb para aplicarlo.")
-            :format(build.name, classData.trees[t].talents[i].name, rank))
+        ns.Print(L.NEXT_ANNOUNCE:format(build.name, ns.TalentName(classData, tree, t, i), rank))
     end
 end
 

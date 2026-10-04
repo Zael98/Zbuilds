@@ -1,6 +1,8 @@
 ## Interface: 16001
 ## Title: Zbuilds
-## Notes: Builds de talentos de Talents Forever, Icy Veins, Warcraft Tavern, Method, WoW Forever Builds y tus enlaces. /zb
+## Notes: Talent builds from Talents Forever, Icy Veins, Warcraft Tavern, Method, WoW Forever Builds and your links. /zb
+## Notes-esES: Builds de talentos de Talents Forever, Icy Veins, Warcraft Tavern, Method, WoW Forever Builds y tus enlaces. /zb
+## Notes-esMX: Builds de talentos de Talents Forever, Icy Veins, Warcraft Tavern, Method, WoW Forever Builds y tus enlaces. /zb
 ## Author: Domi
 ## Version: @project-version@
 ## X-Curse-Project-ID: 1726513
@@ -8,6 +10,7 @@
 ## SavedVariablesPerCharacter: ZbuildsCharDB
 
 Data.lua
+Locales.lua
 Core.lua
 Import.lua
 UI.lua

@@ -1,16 +1,23 @@
 -- Window: flat dark style. Left: grouped, searchable build list. Right: the selected build over the
 -- three trees, either against your current talents or against a second build (compare mode).
 local _, ns = ...
+local L = ns.L
 
 local WHITE = "Interface\\Buttons\\WHITE8x8"
-local PAD, HEADER_H = 12, 32
-local LIST_W, ROW_H, GROUP_H = 290, 40, 24
+local PAD, HEADER_H = 12, 34
+local LIST_W, ROW_H, GROUP_H = 290, 42, 24
 local CELL, GAP = 36, 10
+local CARD_HEAD = 46
 local CARD_W = 4 * (CELL + GAP) - GAP + 2 * PAD
-local CARD_H = 34 + 7 * (CELL + GAP) - GAP + PAD
+local CARD_H = CARD_HEAD + 7 * (CELL + GAP) - GAP + PAD
 local TREES_W = 3 * CARD_W + 2 * 8
 local WIDTH = PAD + LIST_W + 16 + TREES_W + PAD
-local HEIGHT = 640
+local HEIGHT = 728
+local MAX_POINTS = 51
+-- point order timeline: two rows of talent icons under the trees
+local TL_ICON, TL_STEP, TL_PER_ROW, TL_ROW_H = 21, 23, 26, 32
+local TL_H = 18 + 2 * TL_ROW_H
+local LOGO = "Interface\\AddOns\\Zbuilds\\media\\logo"
 
 local CLASS_ORDER = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
 local SOURCES = { "Talents Forever", "Icy Veins", "Warcraft Tavern", "Method", "WoW Forever Builds", "Guías extra",
@@ -19,12 +26,13 @@ local SOURCES = { "Talents Forever", "Icy Veins", "Warcraft Tavern", "Method", "
 local SOURCE_SHORT = { ["Talents Forever"] = "T. Forever", ["WoW Forever Builds"] = "WF Builds",
     ["Warcraft Tavern"] = "Tavern" }
 local CHIPS_PER_ROW = 4
-local CATEGORIES = { { key = "all", label = "Todas" }, { key = "Leveo", label = "Leveo" }, { key = "PvE", label = "PvE" },
-    { key = "PvP", label = "PvP" }, { key = "none", label = "Sin tipo" } }
+local CATEGORIES = { "all", "Leveo", "PvE", "PvP", "none" }
 
 local C = {
-    bg = { 0.05, 0.05, 0.06, 0.94 },
+    bg = { 0.05, 0.05, 0.06, 0.95 },
     panel = { 0.09, 0.09, 0.11, 1 },
+    raised = { 0.14, 0.14, 0.17, 1 },
+    selected = { 0.16, 0.16, 0.21, 1 },
     line = { 0.2, 0.2, 0.23, 1 },
     text = { 0.92, 0.92, 0.92 },
     dim = { 0.5, 0.5, 0.55 },
@@ -35,6 +43,9 @@ local C = {
     onlyB = { 1, 0.55, 0.15 },
     differ = { 1, 0.85, 0.2 },
     same = { 0.85, 0.85, 0.85 },
+    category = { Leveo = { 0.4, 0.85, 0.5 }, PvE = { 0.45, 0.68, 1 }, PvP = { 1, 0.42, 0.42 } },
+    -- one colour per tree, shared by its card stripe, the list's points bar and the timeline
+    tree = { { 0.72, 0.52, 1 }, { 0.35, 0.85, 0.78 }, { 1, 0.5, 0.66 } },
     source = { ["Talents Forever"] = { 0.5, 0.88, 0.82 }, ["Icy Veins"] = { 0.45, 0.72, 1 },
         ["Warcraft Tavern"] = { 0.95, 0.6, 0.35 }, ["Method"] = { 1, 0.42, 0.5 }, ["WoW Forever Builds"] = { 0.62, 0.86, 0.4 },
         ["Guías extra"] = { 0.8, 0.6, 1 }, ["Mis enlaces"] = { 1, 0.82, 0 } },
@@ -42,8 +53,11 @@ local C = {
 
 local frame
 -- spec: tree index of the open tab (nil = pick the character's current one)
-local state = { class = nil, spec = nil, category = "all", build = nil, compare = nil, search = "", hidden = {}, collapsed = {} }
-local rows, cells, cards, specTabs, categoryChips = {}, {}, {}, {}, {}
+-- preview: number of points of the build shown (the build at a level), nil = the whole build
+local state = { class = nil, spec = nil, category = "all", build = nil, compare = nil, search = "", hidden = {}, collapsed = {},
+    preview = nil, previewOf = nil }
+local rows, cells, cards, specTabs, categoryChips, steps, diffChips = {}, {}, {}, {}, {}, {}, {}
+local compareSummary
 
 -- ---------------------------------------------------------------- flat widgets
 
@@ -61,9 +75,9 @@ local function classColor(token)
     return c and { c.r, c.g, c.b } or C.pending
 end
 
-local function flat(f, bg, border)
+local function flat(f, bg, border, edge)
     if not f.SetBackdrop then Mixin(f, BackdropTemplateMixin) end
-    f:SetBackdrop({ bgFile = WHITE, edgeFile = WHITE, edgeSize = 1 })
+    f:SetBackdrop({ bgFile = WHITE, edgeFile = WHITE, edgeSize = edge or 1 })
     f:SetBackdropColor(unpack(bg or C.panel))
     f:SetBackdropBorderColor(unpack(border or C.line))
     return f
@@ -78,12 +92,13 @@ local function text(parent, size, color, justify)
     return fs
 end
 
+-- width is a minimum: translated labels can be longer, so the button grows to fit
 local function button(parent, label, width, onClick)
-    local b = flat(CreateFrame("Button", nil, parent, "BackdropTemplate"), { 0.14, 0.14, 0.17, 1 })
-    b:SetSize(width, 24)
+    local b = flat(CreateFrame("Button", nil, parent, "BackdropTemplate"), C.raised)
     b.label = text(b, 12)
     b.label:SetPoint("CENTER")
     b.label:SetText(label)
+    b:SetSize(math.max(width, b.label:GetStringWidth() + 24), 24)
     b:SetScript("OnEnter", function(self) if self:IsEnabled() then self:SetBackdropBorderColor(unpack(C.pending)) end end)
     b:SetScript("OnLeave", function(self) self:SetBackdropBorderColor(unpack(C.line)) end)
     b:SetScript("OnClick", onClick)
@@ -101,6 +116,25 @@ local function input(parent, width)
     e:SetScript("OnEscapePressed", e.ClearFocus)
     e:SetScript("OnEnterPressed", e.ClearFocus)
     return e
+end
+
+-- a thin horizontal bar: background track plus a fill sized by SetValue(0..1)
+local function bar(parent, height)
+    local track = parent:CreateTexture(nil, "ARTWORK")
+    track:SetColorTexture(1, 1, 1, 0.06)
+    track:SetHeight(height)
+    local fill = parent:CreateTexture(nil, "ARTWORK", nil, 1)
+    fill:SetHeight(height)
+    fill:SetPoint("LEFT", track, "LEFT")
+    return {
+        track = track, fill = fill,
+        Set = function(self, value, color)
+            self.fill:SetColorTexture(color[1], color[2], color[3], 1)
+            self.fill:SetWidth(math.max(0.001, (self.track:GetWidth() or 0) * math.min(1, value)))
+            self.fill:SetShown(value > 0)
+        end,
+        SetShown = function(self, on) self.track:SetShown(on) self.fill:SetShown(on) end,
+    }
 end
 
 -- ---------------------------------------------------------------- helpers
@@ -148,29 +182,38 @@ end
 local function listRow(index)
     if rows[index] then return rows[index] end
     local row = CreateFrame("Button", nil, frame.listContent, "BackdropTemplate")
-    row:SetHeight(ROW_H - 4)
     row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
     row.accent = row:CreateTexture(nil, "ARTWORK")
     row.accent:SetPoint("TOPLEFT")
     row.accent:SetPoint("BOTTOMLEFT")
     row.accent:SetWidth(3)
     row.icon = row:CreateTexture(nil, "ARTWORK")
-    row.icon:SetSize(26, 26)
+    row.icon:SetSize(28, 28)
     row.icon:SetPoint("LEFT", 9, 0)
     row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    row.pill = flat(CreateFrame("Frame", nil, row, "BackdropTemplate"))
+    row.pill:SetHeight(14)
+    row.pill:SetPoint("TOPRIGHT", -6, -5)
+    row.pill.text = text(row.pill, 9, C.text, "CENTER")
+    row.pill.text:SetPoint("CENTER")
     row.title = text(row, 12)
-    row.title:SetPoint("TOPLEFT", 42, -5)
-    row.title:SetPoint("RIGHT", -8, 0)
+    row.title:SetPoint("TOPLEFT", 44, -6)
     row.sub = text(row, 10, C.dim)
-    row.sub:SetPoint("BOTTOMLEFT", 42, 5)
-    row.sub:SetPoint("RIGHT", -8, 0)
-    row.tag = text(row, 10, C.onlyB, "RIGHT")
-    row.tag:SetPoint("TOPRIGHT", -8, -5)
+    row.sub:SetPoint("BOTTOMLEFT", 44, 6)
+    row.sub:SetPoint("RIGHT", -24, 0)
+    row.tag = text(row, 11, C.onlyB, "RIGHT")
+    row.tag:SetPoint("BOTTOMRIGHT", -8, 5)
+    -- how the build splits its points between the three trees
+    row.split = {}
+    for t = 1, 3 do
+        row.split[t] = row:CreateTexture(nil, "ARTWORK")
+        row.split[t]:SetHeight(2)
+    end
     row:SetScript("OnEnter", function(self)
         if self.build then
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:SetText(self.build.name, 1, 1, 1)
-            GameTooltip:AddLine("Clic: ver   ·   Clic derecho: comparar", 0.7, 0.7, 0.7)
+            GameTooltip:SetText(self.build.name, 1, 1, 1, 1, true)
+            GameTooltip:AddLine(L.ROW_HINT, 0.7, 0.7, 0.7)
             GameTooltip:Show()
         end
         if not self.selectedRow then self:SetBackdropColor(0.13, 0.13, 0.16, 1) end
@@ -195,6 +238,12 @@ local function listRow(index)
     return row
 end
 
+local function place(row, y, height)
+    row:SetHeight(height)
+    row:SetPoint("TOPLEFT", 0, -y)
+    row:SetPoint("TOPRIGHT", 0, -y)
+end
+
 local function refreshList()
     local classData = ns.ClassData(state.class)
     local y, n = 0, 0
@@ -203,16 +252,17 @@ local function refreshList()
             n = n + 1
             local row = flat(listRow(n), { 0, 0, 0, 0 }, { 0, 0, 0, 0 })
             row.group, row.build, row.selectedRow, row.base = g.source, nil, false, { 0, 0, 0, 0 }
-            row:SetHeight(GROUP_H)
-            row:SetPoint("TOPLEFT", 0, -y)
-            row:SetPoint("TOPRIGHT", 0, -y)
+            place(row, y, GROUP_H)
             row.icon:Hide()
             row.accent:Hide()
+            row.pill:Hide()
+            for t = 1, 3 do row.split[t]:Hide() end
             row.sub:SetText("")
             row.tag:SetText("")
             row.title:SetPoint("TOPLEFT", 4, -6)
-            row.title:SetText(paint((state.collapsed[g.source] and "+ " or "– ") .. g.source:upper(), C.source[g.source] or C.dim)
-                .. paint("  " .. #g.builds, C.dim))
+            row.title:SetPoint("RIGHT", -8, 0)
+            row.title:SetText(paint((state.collapsed[g.source] and "+ " or "- ") .. ns.SourceName(g.source):upper(),
+                C.source[g.source] or C.dim) .. paint("  " .. #g.builds, C.dim))
             row:Show()
             y = y + GROUP_H
             if not state.collapsed[g.source] then
@@ -220,23 +270,42 @@ local function refreshList()
                     n = n + 1
                     local selected = build == state.build
                     row = listRow(n)
-                    row.base = selected and { 0.16, 0.16, 0.2, 1 } or C.panel
+                    row.base = selected and C.selected or C.panel
                     flat(row, row.base, selected and classColor(state.class) or C.line)
                     row.group, row.build, row.selectedRow = nil, build, selected
-                    row:SetHeight(ROW_H - 4)
-                    row:SetPoint("TOPLEFT", 0, -y)
-                    row:SetPoint("TOPRIGHT", 0, -y)
+                    place(row, y, ROW_H - 4)
                     local tree = lead(build, classData)
                     row.icon:SetTexture("Interface\\Icons\\" .. (tree and tree.icon or "inv_misc_questionmark"))
                     row.icon:Show()
                     row.accent:SetColorTexture(unpack(classColor(state.class)))
                     row.accent:SetShown(selected)
-                    row.title:SetPoint("TOPLEFT", 42, -5)
+
+                    local color = C.category[build.category]
+                    row.pill:SetShown(color ~= nil)
+                    if color then
+                        row.pill.text:SetText(ns.CategoryName(build.category))
+                        row.pill.text:SetTextColor(unpack(color))
+                        row.pill:SetWidth(row.pill.text:GetStringWidth() + 10)
+                        row.pill:SetBackdropColor(color[1], color[2], color[3], 0.15)
+                        row.pill:SetBackdropBorderColor(color[1], color[2], color[3], 0.6)
+                    end
+                    row.title:SetPoint("TOPLEFT", 44, -6)
+                    if color then row.title:SetPoint("RIGHT", row.pill, "LEFT", -6, 0) else row.title:SetPoint("RIGHT", -8, 0) end
                     row.title:SetText(build.name)
-                    row.sub:SetText(("%s  ·  %s  ·  %s%s"):format(build.category or "sin tipo", build.spec or "",
-                        table.concat(build.points, "/"),
-                        build.level and ("  ·  nv " .. build.level) or ""))
+                    row.sub:SetText(("%s  ·  %s%s"):format(build.spec or "", table.concat(build.points, "/"),
+                        build.level and ("  ·  " .. L.LEVEL_SHORT:format(build.level)) or ""))
                     row.tag:SetText(build == state.compare and "B" or "")
+                    local total, x = math.max(1, build.points[1] + build.points[2] + build.points[3]), 44
+                    for t = 1, 3 do
+                        local w = (LIST_W - 44 - 8) * build.points[t] / total
+                        local seg = row.split[t]
+                        seg:ClearAllPoints()
+                        seg:SetPoint("BOTTOMLEFT", x, 2)
+                        seg:SetWidth(math.max(0.001, w))
+                        seg:SetColorTexture(C.tree[t][1], C.tree[t][2], C.tree[t][3], 0.85)
+                        seg:SetShown(w > 0)
+                        x = x + w
+                    end
                     row:Show()
                     y = y + ROW_H
                 end
@@ -256,47 +325,74 @@ local function card(t)
     local c = flat(CreateFrame("Frame", nil, frame.trees, "BackdropTemplate"))
     c:SetSize(CARD_W, CARD_H)
     c:SetPoint("TOPLEFT", (t - 1) * (CARD_W + 8), 0)
-    c.watermark = c:CreateTexture(nil, "BACKGROUND", nil, 1)
-    c.watermark:SetSize(CARD_W - 40, CARD_W - 40)
-    c.watermark:SetPoint("CENTER", 0, -14)
-    c.watermark:SetAlpha(0.06)
+    -- class-coloured glow fading down from the header
+    c.glow = c:CreateTexture(nil, "BACKGROUND", nil, 1)
+    c.glow:SetPoint("TOPLEFT", 1, -1)
+    c.glow:SetPoint("TOPRIGHT", -1, -1)
+    c.glow:SetHeight(140)
+    c.glow:SetColorTexture(1, 1, 1, 1)
+    c.stripe = c:CreateTexture(nil, "ARTWORK", nil, 3)
+    c.stripe:SetPoint("TOPLEFT", 1, -1)
+    c.stripe:SetPoint("TOPRIGHT", -1, -1)
+    c.stripe:SetHeight(3)
+    c.watermark = c:CreateTexture(nil, "BACKGROUND", nil, 2)
+    c.watermark:SetSize(CARD_W - 20, CARD_W - 20)
+    c.watermark:SetPoint("CENTER", 0, -24)
+    c.watermark:SetAlpha(0.07)
     c.watermark:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     c.icon = c:CreateTexture(nil, "ARTWORK")
-    c.icon:SetSize(18, 18)
-    c.icon:SetPoint("TOPLEFT", PAD, -9)
+    c.icon:SetSize(20, 20)
+    c.icon:SetPoint("TOPLEFT", PAD, -8)
     c.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     c.title = text(c, 13)
     c.title:SetPoint("LEFT", c.icon, "RIGHT", 6, 0)
+    c.title:SetPoint("RIGHT", c, "TOPRIGHT", -54, -18)
     c.points = text(c, 13, C.text, "RIGHT")
     c.points:SetPoint("TOPRIGHT", -PAD, -11)
-    c.rule = c:CreateTexture(nil, "ARTWORK")
-    c.rule:SetColorTexture(unpack(C.line))
-    c.rule:SetHeight(1)
-    c.rule:SetPoint("TOPLEFT", 1, -34)
-    c.rule:SetPoint("TOPRIGHT", -1, -34)
+    -- points bars: one for the build (or A), a second one for B when comparing
+    c.barA, c.barB = bar(c, 3), bar(c, 3)
+    c.barA.track:SetPoint("TOPLEFT", PAD, -33)
+    c.barA.track:SetPoint("TOPRIGHT", -PAD, -33)
+    c.barB.track:SetPoint("TOPLEFT", PAD, -38)
+    c.barB.track:SetPoint("TOPRIGHT", -PAD, -38)
     cards[t] = c
     return c
 end
 
 local function cellPos(talent)
-    return PAD + (talent.col - 1) * (CELL + GAP), -(34 + PAD / 2) - (talent.row - 1) * (CELL + GAP)
+    return PAD + (talent.col - 1) * (CELL + GAP), -(CARD_HEAD + PAD / 2) - (talent.row - 1) * (CELL + GAP)
+end
+
+local function badge(parent, point, x, y)
+    local b = flat(CreateFrame("Frame", nil, parent, "BackdropTemplate"), { 0, 0, 0, 0.9 })
+    b:SetPoint(point, x, y)
+    b:SetSize(18, 14)
+    b.text = text(b, 10, C.text, "CENTER")
+    b.text:SetPoint("CENTER", 0, 0)
+    b.Set = function(self, label, color)
+        self.text:SetText(label)
+        self.text:SetTextColor(unpack(color))
+        self:SetBackdropBorderColor(color[1], color[2], color[3], 0.7)
+        self:SetWidth(math.max(16, self.text:GetStringWidth() + 8))
+        self:Show()
+    end
+    return b
 end
 
 local function cell(t, i)
     cells[t] = cells[t] or {}
     if cells[t][i] then return cells[t][i] end
-    local c = flat(CreateFrame("Button", nil, card(t), "BackdropTemplate"), { 0, 0, 0, 1 })
+    local c = flat(CreateFrame("Button", nil, card(t), "BackdropTemplate"), { 0, 0, 0, 1 }, C.line, 2)
     c:SetSize(CELL, CELL)
     c:SetFrameLevel(card(t):GetFrameLevel() + 2)
     c.icon = c:CreateTexture(nil, "ARTWORK")
     c.icon:SetPoint("TOPLEFT", 2, -2)
     c.icon:SetPoint("BOTTOMRIGHT", -2, 2)
     c.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-    c.badge = flat(CreateFrame("Frame", nil, c, "BackdropTemplate"), { 0, 0, 0, 0.85 })
-    c.badge:SetPoint("BOTTOMRIGHT", 5, -5)
-    c.badge:SetSize(26, 14)
-    c.rank = text(c.badge, 10, C.text, "CENTER")
-    c.rank:SetPoint("CENTER", 0, 0)
+    c.tint = c:CreateTexture(nil, "ARTWORK", nil, 2)
+    c.tint:SetAllPoints(c.icon)
+    c.badge = badge(c, "BOTTOMRIGHT", 6, -6)  -- the build's rank, or B's when comparing
+    c.badgeA = badge(c, "BOTTOMLEFT", -6, -6) -- A's rank when comparing
     c.next = c:CreateTexture(nil, "OVERLAY")
     c.next:SetTexture("Interface\\Buttons\\CheckButtonHilight")
     c.next:SetBlendMode("ADD")
@@ -305,7 +401,7 @@ local function cell(t, i)
     c:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         if self.spell then GameTooltip:SetSpellByID(self.spell) else GameTooltip:SetText(self.name, 1, 1, 1) end
-        for _, line in ipairs(self.info) do GameTooltip:AddLine(line[1], unpack(line[2])) end
+        for _, info in ipairs(self.info) do GameTooltip:AddLine(info[1], unpack(info[2])) end
         GameTooltip:Show()
     end)
     c:SetScript("OnLeave", GameTooltip_Hide)
@@ -313,28 +409,30 @@ local function cell(t, i)
     return c
 end
 
--- What one talent cell shows: border colour, rank label, dimmed, tooltip lines.
+-- How one talent cell looks: { border, tint, dim, badge = {label, color}, badgeA = {label, color}, info }
 local function cellLook(a, b, max, mine)
     if b then -- comparing build A with B
-        if a == 0 and b == 0 then return nil, "", true, {} end
-        local info = { { ("A: %d/%d   B: %d/%d"):format(a, max, b, max), C.same } }
-        if a == b then return C.same, tostring(a), false, info end
-        if b == 0 then return C.onlyA, a .. "·0", false, info end
-        if a == 0 then return C.onlyB, "0·" .. b, false, info end
-        return C.differ, a .. "·" .. b, false, info
+        if a == 0 and b == 0 then return { dim = true, info = {} } end
+        local info = { { L.TIP_AB:format(a, max, b, max), C.same } }
+        if a == b then return { border = C.same, badge = { tostring(a), C.same }, info = info } end
+        local color = (b == 0 and C.onlyA) or (a == 0 and C.onlyB) or C.differ
+        return { border = color, tint = color, info = info,
+            badgeA = { a > 0 and tostring(a) or "-", C.onlyA }, badge = { b > 0 and tostring(b) or "-", C.onlyB } }
     end
     -- the label is always the build's rank; the border tells how far you are with it
-    local label = a > 0 and (a .. "/" .. max) or ""
+    local label = a .. "/" .. max
     if not mine then
-        if a == 0 then return nil, "", true, {} end
-        return C.pending, label, false, { { ("Build: %d/%d"):format(a, max), C.pending } }
+        if a == 0 then return { dim = true, info = {} } end
+        return { border = C.pending, badge = { label, C.pending }, info = { { L.TIP_BUILD:format(a, max), C.pending } } }
     end
-    local cur = mine
-    local info = { { ("Build: %d/%d   Tú: %d"):format(a, max, cur), C.pending } }
-    if a == 0 and cur == 0 then return nil, "", true, {} end
-    if cur > a then return C.over, label, false, { { ("Tienes %d, la build usa %d"):format(cur, a), C.over } } end
-    if cur == a then return C.done, label, false, info end
-    return C.pending, label, false, info
+    local info = { { L.TIP_BUILD_YOU:format(a, max, mine), C.pending } }
+    if a == 0 and mine == 0 then return { dim = true, info = {} } end
+    if mine > a then
+        return { border = C.over, tint = C.over, badge = a > 0 and { label, C.over } or nil,
+            info = { { L.TIP_OVER:format(mine, a), C.over } } }
+    end
+    local color = mine == a and C.done or C.pending
+    return { border = color, badge = { label, color }, info = info }
 end
 
 -- arrows live on the tree card: above its background, below the talent buttons
@@ -347,6 +445,26 @@ local function line(c, index)
     return c.lines[index]
 end
 
+-- Ranks of the build as shown: the whole build, or its first state.preview points (the build at a level).
+local function shownRanks(build, classData)
+    local ranks, points = {}, {}
+    for t, data in ipairs(classData.trees) do
+        ranks[t], points[t] = {}, 0
+        for i in ipairs(data.talents) do
+            ranks[t][i] = state.preview and 0 or ns.TargetRank(build, t, i)
+            points[t] = points[t] + ranks[t][i]
+        end
+    end
+    if state.preview then
+        local order = ns.Order(build, classData)
+        for k = 1, math.min(state.preview, #order) do
+            local t, i = order[k][1], order[k][2]
+            ranks[t][i], points[t] = ranks[t][i] + 1, points[t] + 1
+        end
+    end
+    return ranks, points
+end
+
 local function refreshTrees(classData, tree)
     for _, list in pairs(cells) do for _, c in pairs(list) do c:Hide() end end
     for _, c in pairs(cards) do
@@ -356,32 +474,45 @@ local function refreshTrees(classData, tree)
     local build, other = state.build, state.compare
     if not (build and classData) then return end
 
+    local color = classColor(state.class)
+    local ranksA, pointsA = shownRanks(build, classData)
     local nt, ni
-    if tree and not other then nt, ni = ns.NextStep(build, classData, tree) end
+    if tree and not other and not state.preview then nt, ni = ns.NextStep(build, classData, tree) end
     for t, data in ipairs(classData.trees) do
         local c = card(t)
-        c.icon:SetTexture("Interface\\Icons\\" .. (data.icon or "inv_misc_questionmark"))
-        c.watermark:SetTexture("Interface\\Icons\\" .. (data.icon or "inv_misc_questionmark"))
+        local icon = "Interface\\Icons\\" .. (data.icon or "inv_misc_questionmark")
+        c.icon:SetTexture(icon)
+        c.watermark:SetTexture(icon)
+        c.glow:SetGradient("VERTICAL", CreateColor(color[1], color[2], color[3], 0),
+            CreateColor(color[1], color[2], color[3], 0.14))
         c.title:SetText(data.name)
-        c.points:SetText(other and (paint(build.points[t], C.onlyA) .. paint(" · ", C.dim) .. paint(other.points[t], C.onlyB))
-            or tostring(build.points[t]))
+        c.stripe:SetColorTexture(C.tree[t][1], C.tree[t][2], C.tree[t][3], 1)
+        if other then
+            c.points:SetText(paint(pointsA[t], C.onlyA) .. paint(" / ", C.dim) .. paint(other.points[t], C.onlyB))
+            c.barA:Set(pointsA[t] / MAX_POINTS, C.onlyA)
+            c.barB:SetShown(true)
+            c.barB:Set(other.points[t] / MAX_POINTS, C.onlyB)
+        else
+            c.points:SetText(tostring(pointsA[t]))
+            c.barA:Set(pointsA[t] / MAX_POINTS, C.tree[t])
+            c.barB:SetShown(false)
+        end
         c:Show()
         for i, tal in ipairs(data.talents) do
             local cl = cell(t, i)
             cl:SetPoint("TOPLEFT", cellPos(tal))
             cl.icon:SetTexture("Interface\\Icons\\" .. (tal.icon or "inv_misc_questionmark"))
             cl.name, cl.spell = tal.name, tree and tree.spell[t][i]
-            local a = ns.TargetRank(build, t, i)
-            local b = other and ns.TargetRank(other, t, i)
-            local border, label, dim, info = cellLook(a, b, tal.max, tree and tree.rank[t][i])
-            cl.info = info
-            cl:SetBackdropBorderColor(unpack(border or C.line))
-            cl.icon:SetDesaturated(dim)
-            cl.icon:SetAlpha(dim and 0.3 or 1)
-            cl.rank:SetText(label)
-            if border then cl.rank:SetTextColor(unpack(border)) end
-            cl.badge:SetShown(label ~= "")
-            cl.badge:SetWidth(math.max(18, cl.rank:GetStringWidth() + 8))
+            local look = cellLook(ranksA[t][i], other and ns.TargetRank(other, t, i), tal.max,
+                tree and tree.rank[t][i])
+            cl.info = look.info
+            cl:SetBackdropBorderColor(unpack(look.border or C.line))
+            cl.icon:SetDesaturated(look.dim == true)
+            cl.icon:SetAlpha(look.dim and 0.25 or 1)
+            if look.tint then cl.tint:SetColorTexture(look.tint[1], look.tint[2], look.tint[3], 0.22) end
+            cl.tint:SetShown(look.tint ~= nil)
+            if look.badge then cl.badge:Set(look.badge[1], look.badge[2]) else cl.badge:Hide() end
+            if look.badgeA then cl.badgeA:Set(look.badgeA[1], look.badgeA[2]) else cl.badgeA:Hide() end
             cl.next:SetShown(t == nt and i == ni)
             cl:Show()
         end
@@ -389,14 +520,133 @@ local function refreshTrees(classData, tree)
 
     -- prerequisite arrows come from the game, so only for your own class
     for k, e in ipairs(tree and tree.edges or {}) do
-        local from, to = cells[e[1]][e[2]], cells[e[3]][e[4]]
         local l = line(cards[e[1]], k)
-        l:SetStartPoint("CENTER", from)
-        l:SetEndPoint("CENTER", to)
-        local used = ns.TargetRank(build, e[3], e[4]) > 0
-        l:SetColorTexture(unpack(used and C.pending or C.line))
+        l:SetStartPoint("CENTER", cells[e[1]][e[2]])
+        l:SetEndPoint("CENTER", cells[e[3]][e[4]])
+        local used = ranksA[e[3]][e[4]] > 0 or (other and ns.TargetRank(other, e[3], e[4]) > 0)
+        l:SetColorTexture(unpack(used and color or C.line))
         l:Show()
     end
+end
+
+-- One point of the order timeline: talent icon, the level it is learned at, a border in its tree's colour.
+local function step(k)
+    if steps[k] then return steps[k] end
+    local b = flat(CreateFrame("Button", nil, frame.timeline, "BackdropTemplate"), { 0, 0, 0, 1 })
+    b:SetSize(TL_ICON, TL_ICON)
+    b:SetPoint("TOPLEFT", 8 + ((k - 1) % TL_PER_ROW) * TL_STEP, -18 - math.floor((k - 1) / TL_PER_ROW) * TL_ROW_H)
+    b.icon = b:CreateTexture(nil, "ARTWORK")
+    b.icon:SetPoint("TOPLEFT", 1, -1)
+    b.icon:SetPoint("BOTTOMRIGHT", -1, 1)
+    b.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    b.level = text(b, 8, C.dim, "CENTER")
+    b.level:SetPoint("TOP", b, "BOTTOM", 0, -1)
+    b:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        if self.spell then GameTooltip:SetSpellByID(self.spell) else GameTooltip:SetText(self.name, 1, 1, 1) end
+        GameTooltip:AddLine(L.TIP_LEVEL:format(self.k + 9, self.k), 1, 0.82, 0)
+        GameTooltip:Show()
+        self:SetBackdropBorderColor(1, 1, 1, 1)
+    end)
+    b:SetScript("OnLeave", function(self)
+        GameTooltip:Hide()
+        self:SetBackdropBorderColor(unpack(self.border))
+    end)
+    b:SetScript("OnClick", function(self)
+        state.preview = state.preview ~= self.k and self.k or nil
+        ns.Refresh()
+    end)
+    steps[k] = b
+    return b
+end
+
+local function refreshTimeline(build, classData, tree)
+    local order = ns.Order(build, classData)
+    for k, s in ipairs(order) do
+        local b, t, i = step(k), s[1], s[2]
+        local tal = classData.trees[t].talents[i]
+        b.k, b.name, b.spell = k, tal.name, tree and tree.spell[t][i]
+        b.icon:SetTexture("Interface\\Icons\\" .. (tal.icon or "inv_misc_questionmark"))
+        local ahead = state.preview and k > state.preview
+        b.icon:SetDesaturated(ahead)
+        b.icon:SetAlpha(ahead and 0.35 or 1)
+        b.border = k == state.preview and { 1, 1, 1, 1 } or { C.tree[t][1], C.tree[t][2], C.tree[t][3], ahead and 0.35 or 1 }
+        b:SetBackdropBorderColor(unpack(b.border))
+        b.level:SetText(k + 9)
+        b.level:SetTextColor(unpack(k == state.preview and C.text or C.dim))
+        b:Show()
+    end
+    for k = #order + 1, #steps do steps[k]:Hide() end
+    if state.preview then
+        frame.timelineTitle:SetText(paint(L.PREVIEW:format(state.preview + 9, state.preview), C.pending))
+    else
+        frame.timelineTitle:SetText(paint(build.orderEstimated and L.ORDER_ESTIMATED or L.ORDER_TITLE, C.dim))
+    end
+end
+
+-- Compare mode: one chip per talent that differs, "icon  name  3 > 1".
+local DIFF_PER_ROW, DIFF_ROWS = 4, 2
+local function diffChip(k)
+    if diffChips[k] then return diffChips[k] end
+    local w = (TREES_W - 16 - (DIFF_PER_ROW - 1) * 6) / DIFF_PER_ROW
+    local c = flat(CreateFrame("Frame", nil, frame.timeline, "BackdropTemplate"), C.raised)
+    c:SetSize(w, 24)
+    c:SetPoint("TOPLEFT", 8 + ((k - 1) % DIFF_PER_ROW) * (w + 6), -20 - math.floor((k - 1) / DIFF_PER_ROW) * 30)
+    c.icon = c:CreateTexture(nil, "ARTWORK")
+    c.icon:SetSize(18, 18)
+    c.icon:SetPoint("LEFT", 3, 0)
+    c.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    c.ranks = text(c, 11, C.text, "RIGHT")
+    c.ranks:SetPoint("RIGHT", -6, 0)
+    c.name = text(c, 10, C.text)
+    c.name:SetPoint("LEFT", c.icon, "RIGHT", 5, 0)
+    c.name:SetPoint("RIGHT", c.ranks, "LEFT", -4, 0)
+    diffChips[k] = c
+    return c
+end
+
+local function refreshDifferences(build, other, classData, tree)
+    local list = {}
+    for t, data in ipairs(classData.trees) do
+        for i, tal in ipairs(data.talents) do
+            local a, b = ns.TargetRank(build, t, i), ns.TargetRank(other, t, i)
+            if a ~= b then list[#list + 1] = { t = t, i = i, tal = tal, a = a, b = b } end
+        end
+    end
+    local room = DIFF_PER_ROW * DIFF_ROWS
+    for k = 1, math.min(#list, room) do
+        local c, d = diffChip(k), list[k]
+        if k == room and #list > room then
+            c.icon:SetTexture("Interface\\Icons\\inv_misc_questionmark")
+            c.name:SetText(L.MORE:format(#list - room + 1))
+            c.ranks:SetText("")
+        else
+            local color = (d.b == 0 and C.onlyA) or (d.a == 0 and C.onlyB) or C.differ
+            c.icon:SetTexture("Interface\\Icons\\" .. (d.tal.icon or "inv_misc_questionmark"))
+            c.name:SetText(ns.TalentName(classData, tree, d.t, d.i))
+            c.ranks:SetText(paint(d.a, C.onlyA) .. paint(" > ", C.dim) .. paint(d.b, C.onlyB))
+            c:SetBackdropBorderColor(color[1], color[2], color[3], 0.8)
+        end
+        c:Show()
+    end
+    for k = math.min(#list, room) + 1, #diffChips do diffChips[k]:Hide() end
+    frame.timelineTitle:SetText(paint(L.DIFF_TITLE, C.text) .. "     " .. compareSummary(classData, build, other))
+end
+
+-- "N talents differ · only in A: x points · only in B: y points"
+function compareSummary(classData, a, b)
+    local differ, onlyA, onlyB = 0, 0, 0
+    for t, data in ipairs(classData.trees) do
+        for i in ipairs(data.talents) do
+            local ra, rb = ns.TargetRank(a, t, i), ns.TargetRank(b, t, i)
+            if ra ~= rb then
+                differ = differ + 1
+                if ra > rb then onlyA = onlyA + ra - rb else onlyB = onlyB + rb - ra end
+            end
+        end
+    end
+    if differ == 0 then return paint(L.SAME_BUILD, C.done) end
+    return L.DIFF_SUMMARY:format(differ, onlyA, onlyB)
 end
 
 -- ---------------------------------------------------------------- spec tabs / type chips
@@ -404,15 +654,18 @@ end
 local function refreshSpecTabs(classData, current)
     local trees = classData and classData.trees or {}
     local w = (LIST_W - (#trees - 1) * 4) / math.max(1, #trees)
+    local color = classColor(state.class)
     for t, data in ipairs(trees) do
         local tab = specTabs[t]
         tab:SetWidth(w)
         tab:SetPoint("TOPLEFT", (t - 1) * (w + 4), 0)
         tab.icon:SetTexture("Interface\\Icons\\" .. (data.icon or "inv_misc_questionmark"))
-        tab.label:SetText(data.name .. (t == current and paint(" (tú)", C.done) or ""))
+        tab.label:SetText(data.name .. (t == current and paint(" (" .. L.YOU .. ")", C.done) or ""))
         local active = t == state.spec
-        tab:SetBackdropColor(unpack(active and { 0.16, 0.16, 0.2, 1 } or C.panel))
-        tab:SetBackdropBorderColor(unpack(active and classColor(state.class) or C.line))
+        tab:SetBackdropColor(unpack(active and C.selected or C.panel))
+        tab:SetBackdropBorderColor(unpack(active and color or C.line))
+        tab.underline:SetColorTexture(color[1], color[2], color[3], 1)
+        tab.underline:SetShown(active)
         tab.label:SetTextColor(unpack(active and C.text or C.dim))
         tab.icon:SetDesaturated(not active)
         tab:Show()
@@ -426,10 +679,10 @@ local function refreshSpecTabs(classData, current)
     end
     for _, chip in ipairs(categoryChips) do
         local n, active = counts[chip.key] or 0, chip.key == state.category
-        chip.label:SetText(chip.text .. " " .. n)
-        chip:SetBackdropColor(unpack(active and { 0.16, 0.16, 0.2, 1 } or C.panel))
-        chip:SetBackdropBorderColor(unpack(active and classColor(state.class) or C.line))
-        chip.label:SetTextColor(unpack((active and C.text) or (n > 0 and C.same) or C.dim))
+        chip.label:SetText(ns.CategoryName(chip.key) .. " " .. n)
+        chip:SetBackdropColor(unpack(active and C.selected or C.panel))
+        chip:SetBackdropBorderColor(unpack(active and color or C.line))
+        chip.label:SetTextColor(unpack((active and C.text) or (n > 0 and (C.category[chip.key] or C.same)) or C.dim))
     end
 end
 
@@ -468,26 +721,45 @@ function ns.Refresh()
         state.compare = tree and ns.CurrentAsBuild(classData, tree) or nil -- keep "my talents" current
     end
 
-    frame.classLabel:SetText(paint(LOCALIZED_CLASS_NAMES_MALE and LOCALIZED_CLASS_NAMES_MALE[state.class] or state.class,
-        classColor(state.class)))
+    if state.previewOf ~= state.build or state.compare then state.preview = nil end -- a preview belongs to one build
+    state.previewOf = state.build
+
+    local color = classColor(state.class)
+    frame.accent:SetColorTexture(color[1], color[2], color[3], 1)
+    frame.classLabel:SetText(paint(LOCALIZED_CLASS_NAMES_MALE and LOCALIZED_CLASS_NAMES_MALE[state.class] or state.class, color))
     refreshList()
     refreshTrees(classData, tree)
 
     local build = state.build
-    frame.buildTitle:SetText(build and build.name or "No hay builds para esta clase")
-    frame.buildSub:SetText(build and (paint(build.source, C.source[build.source] or C.dim) .. paint(
-        ("  ·  %s  ·  %s%s"):format(build.spec or "", table.concat(build.points, "/"),
-            build.level and ("  ·  nivel " .. build.level) or ""), C.dim)) or "")
+    frame.timeline:SetShown(build ~= nil and classData ~= nil)
+    for _, c in ipairs(diffChips) do c:Hide() end
+    for _, b in ipairs(steps) do b:Hide() end
+    if build and classData then
+        if state.compare then refreshDifferences(build, state.compare, classData, tree)
+        else refreshTimeline(build, classData, tree) end
+    end
+    frame.buildTitle:SetText(build and build.name or L.NO_BUILDS)
+    local sub = ""
+    if build then
+        sub = paint(ns.SourceName(build.source), C.source[build.source] or C.dim)
+        if C.category[build.category] then sub = sub .. "   " .. paint(ns.CategoryName(build.category), C.category[build.category]) end
+        sub = sub .. paint(("   ·   %s   ·   %s%s"):format(build.spec or "", table.concat(build.points, "/"),
+            build.level and ("   ·   " .. L.LEVEL:format(build.level)) or ""), C.dim)
+    end
+    frame.buildSub:SetText(sub)
 
     if state.compare then
-        frame.legend:SetText(paint("A ", C.onlyA) .. (build and build.name or "") .. paint("   vs   B ", C.onlyB) .. state.compare.name
-            .. "\n" .. swatch(C.onlyA, "solo A") .. "   " .. swatch(C.onlyB, "solo B") .. "   "
-            .. swatch(C.differ, "rangos distintos") .. "   " .. swatch(C.same, "iguales"))
+        frame.legend:SetText(paint("A  ", C.onlyA) .. (build and build.name or "") .. paint("     B  ", C.onlyB)
+            .. state.compare.name)
+        frame.summary:SetText(swatch(C.onlyA, L.LEG_ONLY_A) .. "   " .. swatch(C.onlyB, L.LEG_ONLY_B) .. "   "
+            .. swatch(C.differ, L.LEG_DIFF) .. "   " .. swatch(C.same, L.LEG_SAME))
     elseif mine and tree then
-        frame.legend:SetText(swatch(C.done, "aprendido") .. "   " .. swatch(C.pending, "pendiente") .. "   "
-            .. swatch(C.over, "sobra") .. "     Clic derecho en otra build para comparar")
+        frame.legend:SetText(swatch(C.done, L.LEG_LEARNED) .. "   " .. swatch(C.pending, L.LEG_PENDING) .. "   "
+            .. swatch(C.over, L.LEG_OVER))
+        frame.summary:SetText(paint(L.RIGHT_CLICK, C.dim))
     else
-        frame.legend:SetText(paint("Clic derecho en otra build para comparar", C.dim))
+        frame.legend:SetText("")
+        frame.summary:SetText(paint(L.RIGHT_CLICK, C.dim))
     end
 
     local status = ""
@@ -495,14 +767,13 @@ function ns.Refresh()
         status = paint(err or "", C.over)
     elseif build and tree then
         local nt, ni, nr = ns.NextStep(build, classData, tree)
-        local free = ns.FreePoints(tree)
-        status = (nt and ("Siguiente: " .. paint(classData.trees[nt].talents[ni].name, C.pending) .. (" (rango %d)"):format(nr))
-            or paint("Build completa", C.done)) .. paint(("     Puntos libres: %d"):format(free), C.dim)
+        status = (nt and L.NEXT:format(paint(ns.TalentName(classData, tree, nt, ni), C.pending), nr) or paint(L.COMPLETE, C.done))
+            .. paint("     " .. L.FREE:format(ns.FreePoints(tree)), C.dim)
         if #tree.mismatches > 0 then
-            status = status .. "\n" .. paint("Datos desfasados en: " .. table.concat(tree.mismatches, ", "), C.onlyB)
+            status = status .. "\n" .. paint(L.OUTDATED:format(table.concat(tree.mismatches, ", ")), C.onlyB)
         end
     elseif build then
-        status = paint("Solo puedes aplicar builds de tu clase.", C.dim)
+        status = paint(L.OTHER_CLASS, C.dim)
     end
     frame.status:SetText(status)
 
@@ -527,6 +798,12 @@ local function cycleClass(step)
     ns.Refresh()
 end
 
+local function version()
+    local get = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
+    local v = get and get("Zbuilds", "Version")
+    return (v and not v:find("^@")) and v or ""
+end
+
 local function create()
     frame = flat(CreateFrame("Frame", "ZbuildsFrame", UIParent, "BackdropTemplate"), C.bg)
     frame:SetSize(WIDTH, HEIGHT)
@@ -542,7 +819,7 @@ local function create()
     end)
     tinsert(UISpecialFrames, "ZbuildsFrame")
 
-    -- header bar: drag to move
+    -- header bar: drag to move; a line in the class colour under it
     local header = flat(CreateFrame("Frame", nil, frame, "BackdropTemplate"), C.panel)
     header:SetPoint("TOPLEFT")
     header:SetPoint("TOPRIGHT")
@@ -551,14 +828,21 @@ local function create()
     header:RegisterForDrag("LeftButton")
     header:SetScript("OnDragStart", function() frame:StartMoving() end)
     header:SetScript("OnDragStop", function() frame:StopMovingOrSizing() end)
-    local title = text(header, 14)
-    title:SetPoint("LEFT", PAD, 0)
-    title:SetText(paint("Z", C.pending) .. "builds")
-    local close = button(header, "×", 24, function() frame:Hide() end)
-    close:SetPoint("RIGHT", -4, 0)
-    close.label:SetFont(STANDARD_TEXT_FONT, 16, "")
+    frame.accent = header:CreateTexture(nil, "ARTWORK")
+    frame.accent:SetHeight(2)
+    frame.accent:SetPoint("BOTTOMLEFT", 1, 0)
+    frame.accent:SetPoint("BOTTOMRIGHT", -1, 0)
+    local logo = header:CreateTexture(nil, "ARTWORK")
+    logo:SetSize(24, 24)
+    logo:SetPoint("LEFT", PAD - 2, 0)
+    logo:SetTexture(LOGO)
+    local title = text(header, 15)
+    title:SetPoint("LEFT", logo, "RIGHT", 7, 0)
+    title:SetText(paint("Z", C.pending) .. "builds" .. paint("  " .. version(), C.dim))
+    local close = button(header, "x", 24, function() frame:Hide() end)
+    close:SetPoint("RIGHT", -5, 0)
 
-    -- left column: class switcher, search, source filters, list
+    -- left column: class switcher, spec tabs, search, type and source filters, list
     local top = -HEADER_H - PAD
     local prev = button(frame, "<", 26, function() cycleClass(-1) end)
     prev:SetPoint("TOPLEFT", PAD, top)
@@ -582,6 +866,10 @@ local function create()
         tab.icon:SetSize(18, 18)
         tab.icon:SetPoint("LEFT", 6, 0)
         tab.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        tab.underline = tab:CreateTexture(nil, "OVERLAY")
+        tab.underline:SetHeight(2)
+        tab.underline:SetPoint("BOTTOMLEFT", 1, 1)
+        tab.underline:SetPoint("BOTTOMRIGHT", -1, 1)
         tab.label:ClearAllPoints()
         tab.label:SetPoint("LEFT", tab.icon, "RIGHT", 4, 0)
         tab.label:SetPoint("RIGHT", -4, 0)
@@ -594,42 +882,42 @@ local function create()
     search:SetPoint("TOPLEFT", PAD, top - 66)
     local hint = text(search, 12, C.dim)
     hint:SetPoint("LEFT", 8, 0)
-    hint:SetText("Buscar build o especialización…")
+    hint:SetText(L.SEARCH)
     search:SetScript("OnTextChanged", function(self)
         state.search = self:GetText()
         hint:SetShown(state.search == "")
         ns.Refresh()
     end)
 
+    local typeW = (LIST_W - (#CATEGORIES - 1) * 4) / #CATEGORIES
+    for k, key in ipairs(CATEGORIES) do
+        local chip = button(frame, ns.CategoryName(key), typeW, function()
+            state.category, state.build = key, nil
+            ns.Refresh()
+        end)
+        chip:SetSize(typeW, 20)
+        chip:SetScript("OnEnter", nil)
+        chip:SetScript("OnLeave", nil)
+        chip.label:SetFont(STANDARD_TEXT_FONT, 10, "")
+        chip.key = key
+        chip:SetPoint("TOPLEFT", PAD + (k - 1) * (typeW + 4), top - 96)
+        categoryChips[k] = chip
+    end
+
     local chipW = (LIST_W - (CHIPS_PER_ROW - 1) * 6) / CHIPS_PER_ROW
     for k, source in ipairs(SOURCES) do
         local chip
-        chip = button(frame, SOURCE_SHORT[source] or source, chipW, function()
+        chip = button(frame, SOURCE_SHORT[source] or ns.SourceName(source), chipW, function()
             state.hidden[source] = not state.hidden[source]
-            chip:SetBackdropColor(unpack(state.hidden[source] and C.bg or { 0.14, 0.14, 0.17, 1 }))
+            chip:SetBackdropColor(unpack(state.hidden[source] and C.bg or C.raised))
             chip.label:SetTextColor(unpack(state.hidden[source] and C.dim or C.source[source]))
             ns.Refresh()
         end)
-        chip:SetHeight(20)
+        chip:SetSize(chipW, 20)
         chip.label:SetFont(STANDARD_TEXT_FONT, 10, "")
         chip.label:SetTextColor(unpack(C.source[source]))
         local col, row = (k - 1) % CHIPS_PER_ROW, math.floor((k - 1) / CHIPS_PER_ROW)
         chip:SetPoint("TOPLEFT", PAD + col * (chipW + 6), top - 122 - row * 24)
-    end
-
-    local typeW = (LIST_W - (#CATEGORIES - 1) * 4) / #CATEGORIES
-    for k, cat in ipairs(CATEGORIES) do
-        local chip = button(frame, cat.label, typeW, function()
-            state.category, state.build = cat.key, nil
-            ns.Refresh()
-        end)
-        chip:SetHeight(20)
-        chip:SetScript("OnEnter", nil)
-        chip:SetScript("OnLeave", nil)
-        chip.label:SetFont(STANDARD_TEXT_FONT, 10, "")
-        chip.key, chip.text = cat.key, cat.label
-        chip:SetPoint("TOPLEFT", PAD + (k - 1) * (typeW + 4), top - 96)
-        categoryChips[k] = chip
     end
 
     local listTop = top - 174
@@ -646,11 +934,11 @@ local function create()
     frame.list:SetScrollChild(frame.listContent)
     frame.empty = text(frame, 12, C.dim, "CENTER")
     frame.empty:SetPoint("TOP", frame.list, "TOP", 0, -20)
-    frame.empty:SetText("Ninguna build coincide")
+    frame.empty:SetText(L.NO_MATCH)
 
-    local importBtn = button(frame, "+ Importar enlace", LIST_W, function() ns.ShowImport() end)
+    local importBtn = button(frame, L.IMPORT_BTN, LIST_W, function() ns.ShowImport() end)
+    importBtn:SetSize(LIST_W, 26)
     importBtn:SetPoint("BOTTOMLEFT", PAD, PAD)
-    importBtn:SetHeight(26)
 
     local divider = frame:CreateTexture(nil, "ARTWORK")
     divider:SetColorTexture(unpack(C.line))
@@ -658,54 +946,64 @@ local function create()
     divider:SetPoint("TOPLEFT", PAD + LIST_W + 8, -HEADER_H)
     divider:SetPoint("BOTTOMLEFT", PAD + LIST_W + 8, 0)
 
-    -- right column: build header, legend, trees, actions
+    -- right column: build header, legend and compare summary, trees, actions
     local right = PAD + LIST_W + 16
-    frame.buildTitle = text(frame, 16)
+    frame.buildTitle = text(frame, 17)
     frame.buildTitle:SetPoint("TOPLEFT", right, top)
     frame.buildTitle:SetWidth(TREES_W)
     frame.buildSub = text(frame, 11, C.dim)
-    frame.buildSub:SetPoint("TOPLEFT", right, top - 22)
+    frame.buildSub:SetPoint("TOPLEFT", right, top - 23)
+    frame.buildSub:SetWidth(TREES_W)
     frame.legend = text(frame, 11, C.text)
-    frame.legend:SetPoint("TOPLEFT", right, top - 42)
-    frame.legend:SetWordWrap(true)
-    frame.legend:SetSpacing(3)
+    frame.legend:SetPoint("TOPLEFT", right, top - 44)
+    frame.legend:SetWidth(TREES_W)
+    frame.summary = text(frame, 11, C.text)
+    frame.summary:SetPoint("TOPLEFT", right, top - 61)
+    frame.summary:SetWidth(TREES_W)
 
     frame.trees = CreateFrame("Frame", nil, frame)
-    frame.trees:SetPoint("TOPLEFT", right, top - 78)
+    frame.trees:SetPoint("TOPLEFT", right, top - 82)
     frame.trees:SetSize(TREES_W, CARD_H)
 
+    -- under the trees: the point order timeline, or the list of differences when comparing
+    frame.timeline = flat(CreateFrame("Frame", nil, frame, "BackdropTemplate"))
+    frame.timeline:SetPoint("TOPLEFT", frame.trees, "BOTTOMLEFT", 0, -8)
+    frame.timeline:SetSize(TREES_W, TL_H)
+    frame.timelineTitle = text(frame.timeline, 10, C.dim)
+    frame.timelineTitle:SetPoint("TOPLEFT", 8, -4)
+    frame.timelineTitle:SetWidth(TREES_W - 16)
+
     frame.status = text(frame, 12)
-    frame.status:SetPoint("TOPLEFT", frame.trees, "BOTTOMLEFT", 0, -10)
+    frame.status:SetPoint("TOPLEFT", frame.timeline, "BOTTOMLEFT", 0, -8)
     frame.status:SetWidth(TREES_W)
     frame.status:SetWordWrap(true)
     frame.status:SetSpacing(3)
 
-    frame.apply = button(frame, "Aprender puntos libres", 170, function()
+    frame.apply = button(frame, L.APPLY, 160, function()
         local learned, err = ns.Apply(state.build, ns.ClassData(state.class))
         if learned then
-            ns.Print(learned > 0 and ("aprendidos %d puntos de \"%s\"."):format(learned, state.build.name)
-                or "no hay puntos libres o la build ya está completa.")
+            ns.Print(learned > 0 and L.LEARNED_N:format(learned, state.build.name) or L.NOTHING_TO_LEARN)
         else
             ns.Print("|cffff5050" .. err .. "|r")
         end
         ns.Refresh()
     end)
     frame.apply:SetPoint("BOTTOMLEFT", right, PAD + 18)
-    frame.apply:SetBackdropColor(0.12, 0.3, 0.16, 1)
+    frame.apply:SetBackdropColor(0.12, 0.32, 0.17, 1)
 
-    frame.compareMine = button(frame, "Comparar con mis talentos", 180, function()
+    frame.compareMine = button(frame, L.COMPARE_MINE, 150, function()
         local classData = ns.ClassData(state.class)
         local tree = ns.ReadTree(classData)
         state.compare = tree and ns.CurrentAsBuild(classData, tree)
         ns.Refresh()
     end)
     frame.compareMine:SetPoint("LEFT", frame.apply, "RIGHT", 8, 0)
-    frame.clearCompare = button(frame, "Quitar comparación", 140, function()
+    frame.clearCompare = button(frame, L.CLEAR_COMPARE, 120, function()
         state.compare = nil
         ns.Refresh()
     end)
     frame.clearCompare:SetPoint("LEFT", frame.compareMine, "RIGHT", 8, 0)
-    frame.remove = button(frame, "Borrar", 90, function()
+    frame.remove = button(frame, L.DELETE, 80, function()
         if state.build and state.build.imported then
             ns.RemoveImport(state.build)
             state.build = nil
@@ -713,6 +1011,7 @@ local function create()
         end
     end)
     frame.remove:SetPoint("LEFT", frame.clearCompare, "RIGHT", 8, 0)
+    frame.remove:SetBackdropColor(0.32, 0.12, 0.12, 1)
 
     -- link to the source, selectable for Ctrl+C
     frame.link = input(frame, TREES_W)
@@ -728,8 +1027,8 @@ local function create()
 
     local credits = text(frame, 10, C.dim)
     credits:SetPoint("BOTTOMLEFT", right, 8)
-    credits:SetText(("Datos: Talents Forever (CC BY 4.0), Icy Veins, Warcraft Tavern, Method, WoW Forever Builds  ·  %s")
-        :format(ZbuildsData and ZbuildsData.generated or "?"))
+    credits:SetWidth(TREES_W)
+    credits:SetText(L.CREDITS:format(ZbuildsData and ZbuildsData.generated or "?"))
 end
 
 -- ---------------------------------------------------------------- import dialog
@@ -738,44 +1037,47 @@ local dialog
 
 local function createImport()
     dialog = flat(CreateFrame("Frame", "ZbuildsImport", frame, "BackdropTemplate"), C.bg, C.pending)
-    dialog:SetSize(460, 214)
+    dialog:SetSize(480, 220)
     dialog:SetPoint("CENTER")
     dialog:SetFrameStrata("DIALOG")
     dialog:EnableMouse(true)
     tinsert(UISpecialFrames, "ZbuildsImport")
 
+    local inner = 480 - 2 * PAD
     local title = text(dialog, 14)
     title:SetPoint("TOPLEFT", PAD, -PAD)
-    title:SetText("Importar enlace de build")
+    title:SetText(L.IMPORT_TITLE)
     local help = text(dialog, 10, C.dim)
     help:SetPoint("TOPLEFT", PAD, -34)
-    help:SetText("Enlace de talentsforever.com o de la calculadora de Icy Veins (#tc-). Se guarda en tu cuenta.")
+    help:SetWidth(inner)
+    help:SetText(L.IMPORT_HELP)
 
-    dialog.url = input(dialog, 460 - 2 * PAD)
+    dialog.url = input(dialog, inner)
     dialog.url:SetPoint("TOPLEFT", PAD, -54)
-    dialog.name = input(dialog, 460 - 2 * PAD)
+    dialog.name = input(dialog, inner)
     dialog.name:SetPoint("TOPLEFT", PAD, -86)
     local urlHint, nameHint = text(dialog.url, 12, C.dim), text(dialog.name, 12, C.dim)
     urlHint:SetPoint("LEFT", 8, 0)
-    urlHint:SetText("Pega aquí el enlace (Ctrl+V)")
+    urlHint:SetText(L.PASTE)
     nameHint:SetPoint("LEFT", 8, 0)
-    nameHint:SetText("Nombre (opcional)")
+    nameHint:SetText(L.NAME_OPT)
     dialog.url:SetScript("OnTextChanged", function(self) urlHint:SetShown(self:GetText() == "") end)
     dialog.name:SetScript("OnTextChanged", function(self) nameHint:SetShown(self:GetText() == "") end)
 
-    -- type: one of the CATEGORIES except "all"
+    -- type: any of the CATEGORIES except "all"
     dialog.types = {}
-    local typeW = (460 - 2 * PAD - 3 * 4) / 4
-    for k, cat in ipairs({ CATEGORIES[5], CATEGORIES[2], CATEGORIES[3], CATEGORIES[4] }) do
-        local chip = button(dialog, cat.label, typeW, function()
-            dialog.category = cat.key
+    local typeW = (inner - 3 * 4) / 4
+    for k, key in ipairs({ "none", "Leveo", "PvE", "PvP" }) do
+        local chip = button(dialog, ns.CategoryName(key), typeW, function()
+            dialog.category = key
             for _, other in ipairs(dialog.types) do
                 local active = other.key == dialog.category
                 other:SetBackdropBorderColor(unpack(active and C.pending or C.line))
                 other.label:SetTextColor(unpack(active and C.text or C.dim))
             end
         end)
-        chip.key = cat.key
+        chip:SetSize(typeW, 24)
+        chip.key = key
         chip:SetScript("OnEnter", nil)
         chip:SetScript("OnLeave", nil)
         chip:SetPoint("TOPLEFT", PAD + (k - 1) * (typeW + 4), -118)
@@ -784,10 +1086,10 @@ local function createImport()
 
     dialog.error = text(dialog, 11, C.over)
     dialog.error:SetPoint("TOPLEFT", PAD, -150)
-    dialog.error:SetWidth(460 - 2 * PAD)
+    dialog.error:SetWidth(inner)
     dialog.error:SetWordWrap(true)
 
-    local ok = button(dialog, "Importar", 120, function()
+    local ok = button(dialog, L.IMPORT, 110, function()
         local category = dialog.category ~= "none" and dialog.category or nil
         local build, err = ns.DecodeLink(dialog.url:GetText(), strtrim(dialog.name:GetText()), category)
         if not build then
@@ -801,12 +1103,12 @@ local function createImport()
         for t, tree in ipairs(ns.ClassData(build.class).trees) do
             if tree.name == build.spec then state.spec = t end
         end
-        ns.Print(("importada \"%s\" (%s)."):format(build.name, table.concat(build.points, "/")))
+        ns.Print(L.IMPORTED:format(build.name, table.concat(build.points, "/")))
         ns.Refresh()
     end)
     ok:SetPoint("BOTTOMRIGHT", -PAD, PAD)
-    ok:SetBackdropColor(0.12, 0.3, 0.16, 1)
-    local cancel = button(dialog, "Cancelar", 100, function() dialog:Hide() end)
+    ok:SetBackdropColor(0.12, 0.32, 0.17, 1)
+    local cancel = button(dialog, L.CANCEL, 100, function() dialog:Hide() end)
     cancel:SetPoint("RIGHT", ok, "LEFT", -8, 0)
     dialog.url:SetScript("OnEnterPressed", function() ok:Click() end)
 end
@@ -823,7 +1125,7 @@ end
 
 function ns.Toggle()
     if not ZbuildsData then
-        ns.Print("falta Data.lua: ejecuta tools/update_builds.py")
+        ns.Print(L.MISSING_DATA)
         return
     end
     if not frame then

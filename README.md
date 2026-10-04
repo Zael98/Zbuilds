@@ -6,11 +6,14 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Siempre válidas:** cada build se traduce al árbol actual del juego por el nombre de sus talentos, y se descarta si usa un talento que ya no existe o no se puede aprender (por ejemplo, si un talento ha cambiado de fila).
 - **Pestañas por especialización:** se abre en la tuya. Puedes filtrar por tipo (Leveo, PvE, PvP), por web y con un buscador.
 - **Árboles:** muestran los rangos de la build y, con el color del borde, lo que ya tienes aprendido. Incluyen las flechas de requisitos.
-- **Comparar:** clic derecho en otra build, o "Comparar con mis talentos".
+- **Orden de puntos:** una línea de tiempo con los 51 puntos en orden y su nivel; pulsa uno para ver la build tal como queda en ese nivel.
+- **Comparar:** clic derecho en otra build, o "Comparar con mis talentos". Cada talento muestra los rangos de A y B, y debajo aparece la lista de diferencias.
 - **Aprender puntos libres:** gasta tus puntos siguiendo el orden de la build (fuera de combate).
 - **+ Importar enlace:** pega un enlace de build de talentsforever.com o de la calculadora de Icy Veins. Funciona sin conexión y se guarda en tu cuenta.
 
 Comando: `/zb`
+
+Idiomas: inglés, español, alemán, francés, portugués, italiano, ruso, coreano y chino (simplificado y tradicional). Se elige el del juego automáticamente.
 
 ## Instalación
 
