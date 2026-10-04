@@ -3,6 +3,7 @@
 ## Notes: Builds de talentos de Talents Forever, Icy Veins y tus enlaces. /zb
 ## Author: Domi
 ## Version: @project-version@
+## X-Curse-Project-ID: 1726513
 ## SavedVariables: ZbuildsDB
 ## SavedVariablesPerCharacter: ZbuildsCharDB
 
