@@ -3,6 +3,25 @@
 {
 "class": "WARRIOR",
 "ranks": [
+"05020000000000000",
+"05000000000000000",
+"250533120321021351"
+],
+"points": [
+7,
+5,
+39
+],
+"order": null,
+"level": 60,
+"name": "Popular #1: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
 "30305213132515201",
 "05050100000000000",
 "000000000000000000"
@@ -14,7 +33,7 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #1: Arms",
+"name": "Popular #2: Arms",
 "spec": "Arms",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
@@ -33,29 +52,10 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #2: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"05020000000000000",
-"05000000000000000",
-"250533120321021351"
-],
-"points": [
-7,
-5,
-39
-],
-"order": null,
-"level": 60,
 "name": "Popular #3: Protection",
 "spec": "Protection",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
+"url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
 },
 {
 "class": "WARRIOR",
@@ -611,6 +611,25 @@
 {
 "class": "MAGE",
 "ranks": [
+"050205200102301000",
+"00552330130103110",
+"0020000000000000000"
+],
+"points": [
+21,
+28,
+2
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Fire",
+"spec": "Fire",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/050205200102301-0055233013010311-002-6"
+},
+{
+"class": "MAGE",
+"ranks": [
 "000000000000000000",
 "00000000000000000",
 "0555323331321331251"
@@ -622,7 +641,7 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #3: Frost",
+"name": "Popular #4: Frost",
 "spec": "Frost",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/mage/60/--0555323331321331251-6"
@@ -641,29 +660,10 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #4: Arcane",
+"name": "Popular #5: Arcane",
 "spec": "Arcane",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/mage/60/255225223122311531-13--6"
-},
-{
-"class": "MAGE",
-"ranks": [
-"050205200102301000",
-"00552330130103110",
-"0020000000000000000"
-],
-"points": [
-21,
-28,
-2
-],
-"order": null,
-"level": 60,
-"name": "Popular #5: Fire",
-"spec": "Fire",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/050205200102301-0055233013010311-002-6"
 },
 {
 "class": "WARLOCK",
@@ -725,25 +725,6 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"03500323100211000",
-"0055103201201001300",
-"2040000000000000"
-],
-"points": [
-21,
-24,
-6
-],
-"order": null,
-"level": 60,
-"name": "Popular #4: Demonology",
-"spec": "Demonology",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/03500323100211-00551032012010013-204-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
 "00000000000000000",
 "0305003200220300000",
 "2050315103101351"
@@ -755,29 +736,29 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #5: Destruction",
+"name": "Popular #4: Destruction",
 "spec": "Destruction",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warlock/60/-03050032002203-2050315103101351-6"
 },
 {
-"class": "DRUID",
+"class": "WARLOCK",
 "ranks": [
-"0500220000000000",
-"55200032120032012051",
-"0500000000000000"
+"03500323100211000",
+"0055103201201001300",
+"2040000000000000"
 ],
 "points": [
-9,
-34,
-5
+21,
+24,
+6
 ],
 "order": null,
 "level": 60,
-"name": "Popular #1: Feral Combat",
-"spec": "Feral Combat",
+"name": "Popular #5: Demonology",
+"spec": "Demonology",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
+"url": "https://talentsforever.com/warlock/60/03500323100211-00551032012010013-204-6"
 },
 {
 "class": "DRUID",
@@ -793,29 +774,10 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #2: Restoration",
+"name": "Popular #1: Restoration",
 "spec": "Restoration",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/druid/60/05302001-05-5050035103113251-6"
-},
-{
-"class": "DRUID",
-"ranks": [
-"5032220115501351",
-"00000000000000000000",
-"5052030000000000"
-],
-"points": [
-36,
-0,
-15
-],
-"order": null,
-"level": 60,
-"name": "Popular #3: Balance",
-"spec": "Balance",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
 },
 {
 "class": "DRUID",
@@ -831,10 +793,48 @@
 ],
 "order": null,
 "level": 60,
-"name": "Popular #4: Feral Combat",
+"name": "Popular #2: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/druid/60/050022-55230202120132012551--6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500220000000000",
+"55200032120032012051",
+"0500000000000000"
+],
+"points": [
+9,
+34,
+5
+],
+"order": null,
+"level": 60,
+"name": "Popular #3: Feral Combat",
+"spec": "Feral Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"5032220115501351",
+"00000000000000000000",
+"5052030000000000"
+],
+"points": [
+36,
+0,
+15
+],
+"order": null,
+"level": 60,
+"name": "Popular #4: Balance",
+"spec": "Balance",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
 },
 {
 "class": "DRUID",
@@ -7373,6 +7373,114 @@
 "source": "Method",
 "url": "https://www.method.gg/wow-forever/wow-forever-druid-leveling-guide-and-talents#zb2",
 "guide": "https://www.method.gg/wow-forever/wow-forever-druid-leveling-guide-and-talents",
+"category": "Leveo"
+}
+],
+"method:/wow-forever/wow-forever-hunter-leveling-guide-and-talents": [
+{
+"class": "HUNTER",
+"ranks": [
+"5020221502101000",
+"0000000000000000",
+"000000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+6
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+11
+],
+[
+1,
+6
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+7
+],
+[
+1,
+13
+]
+],
+"level": null,
+"name": "Recommended Leveling Talents for Hunter",
+"spec": "Beast Mastery",
+"source": "Method",
+"url": "https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents#zb1",
+"guide": "https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents",
 "category": "Leveo"
 }
 ],
