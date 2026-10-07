@@ -67,7 +67,7 @@ local function nodeSpell(configID, node)
     return def and def.spellID
 end
 
--- Returns { configID, treeID, node[t][i], spell[t][i], rank[t][i], mismatches } or nil, error.
+-- Returns { configID, treeID, node[t][i], entry[t][i], spell[t][i], rank[t][i], mismatches, edges } or nil, error.
 function ns.ReadTree(classData)
     if not (C_ClassTalents and C_Traits) then return nil, L.NO_API end
     local configID = C_ClassTalents.GetActiveConfigID()
@@ -94,7 +94,8 @@ function ns.ReadTree(classData)
         return nil, L.TREE_COUNT:format(#clusters, #classData.trees)
     end
 
-    local result = { configID = configID, treeID = treeID, node = {}, spell = {}, rank = {}, mismatches = {}, edges = {} }
+    local result = { configID = configID, treeID = treeID, node = {}, entry = {}, spell = {}, rank = {}, mismatches = {},
+        edges = {} }
     local where, nodeEdges = {}, {}
     for t, cluster in ipairs(clusters) do
         local talents = classData.trees[t].talents
@@ -106,7 +107,7 @@ function ns.ReadTree(classData)
         local minX, minY = math.huge, math.huge
         for _, n in ipairs(cluster) do minX, minY = math.min(minX, n.posX), math.min(minY, n.posY) end
 
-        result.node[t], result.spell[t], result.rank[t] = {}, {}, {}
+        result.node[t], result.entry[t], result.spell[t], result.rank[t] = {}, {}, {}, {}
         for i in ipairs(talents) do result.rank[t][i] = 0 end
         for _, n in ipairs(cluster) do
             local row = floor((n.posY - minY) / NODE_SPACING + 0.5) + minRow
@@ -115,6 +116,7 @@ function ns.ReadTree(classData)
             local spell = nodeSpell(configID, n)
             if i then
                 result.node[t][i] = n.ID
+                result.entry[t][i] = n.entryIDs[1]
                 result.spell[t][i] = spell
                 result.rank[t][i] = n.currentRank or 0
                 where[n.ID] = { t, i }
@@ -150,8 +152,14 @@ function ns.CurrentAsBuild(classData, tree)
     return { name = L.MY_TALENTS, source = "Personaje", class = ns.PlayerClass(), ranks = ranks, points = points }
 end
 
+-- The talent's spell: read from the game for your class, else the id the data carries (any class).
+function ns.TalentSpell(classData, tree, t, i)
+    return (tree and tree.spell[t] and tree.spell[t][i]) or classData.trees[t].talents[i].spell
+end
+
+-- The talent's name in the game's language when the game knows its spell, else the data's English name.
 function ns.TalentName(classData, tree, t, i)
-    local spell = tree and tree.spell[t] and tree.spell[t][i]
+    local spell = ns.TalentSpell(classData, tree, t, i)
     return (spell and C_Spell.GetSpellName(spell)) or classData.trees[t].talents[i].name
 end
 
@@ -165,7 +173,7 @@ function ns.Conflicts(build, classData, tree)
     local out = {}
     for t, data in ipairs(classData.trees) do
         for i, tal in ipairs(data.talents) do
-            if tree.rank[t][i] > ns.TargetRank(build, t, i) then out[#out + 1] = tal.name end
+            if tree.rank[t][i] > ns.TargetRank(build, t, i) then out[#out + 1] = ns.TalentName(classData, tree, t, i) end
         end
     end
     return out
@@ -225,6 +233,31 @@ function ns.Apply(build, classData)
     return bought
 end
 
+-- Saves the whole build as one of the game's talent loadouts (the game keeps up to 10 per spec).
+-- Returns true, or nil, error.
+function ns.SaveLoadout(build, classData)
+    if InCombatLockdown() then return nil, L.IN_COMBAT end
+    if not (C_ClassTalents and C_ClassTalents.ImportLoadout) then return nil, L.NO_API end
+    local tree, err = ns.ReadTree(classData)
+    if not tree then return nil, err end
+    local entries = {}
+    for t, data in ipairs(classData.trees) do
+        for i in ipairs(data.talents) do
+            local rank = ns.TargetRank(build, t, i)
+            if rank > 0 then
+                if not tree.node[t][i] then return nil, L.NOT_IN_TREE:format(ns.TalentName(classData, tree, t, i)) end
+                entries[#entries + 1] = { nodeID = tree.node[t][i], ranksPurchased = rank,
+                    selectionEntryID = tree.entry[t][i], isChoiceNode = false }
+            end
+        end
+    end
+    local name = build.name:sub(1, 32) -- loadout names are short
+    local ok, saved, message = pcall(C_ClassTalents.ImportLoadout, tree.configID, entries, name)
+    if not ok then return nil, tostring(saved) end
+    if saved == false then return nil, message or L.REJECTED end
+    return true, name
+end
+
 -- Selected build per character, remembered by its link.
 function ns.SelectedBuild(classToken)
     local url = ZbuildsCharDB and ZbuildsCharDB.selected
@@ -260,8 +293,48 @@ events:SetScript("OnEvent", function(_, event)
     if ns.Refresh then ns.Refresh() end
 end)
 
+-- /zb diag: what this client lets the addon do, to check a new game build quickly.
+local function diagnose()
+    local lines = {}
+    local function add(label, value) lines[#lines + 1] = ("%s: |cffffffff%s|r"):format(label, tostring(value)) end
+    local version, build, _, interface = GetBuildInfo()
+    add("Client", ("%s (%s), interface %s, %s"):format(version, build, interface, GetLocale()))
+    add("Data", ZbuildsData and ZbuildsData.generated or "missing")
+    for _, fn in ipairs({ "PurchaseRank", "CommitConfig", "RollbackConfig", "GetNodeInfo" }) do
+        add("C_Traits." .. fn, C_Traits and C_Traits[fn] and "yes" or "NO")
+    end
+    add("C_ClassTalents.ImportLoadout", C_ClassTalents and C_ClassTalents.ImportLoadout and "yes" or "NO")
+    local classData = ns.ClassData(ns.PlayerClass())
+    if classData then
+        local tree, err = ns.ReadTree(classData)
+        if tree then
+            local mapped, total = 0, 0
+            for t, data in ipairs(classData.trees) do
+                for i in ipairs(data.talents) do
+                    total = total + 1
+                    if tree.node[t][i] then mapped = mapped + 1 end
+                end
+            end
+            add("Talent tree", ("%d/%d talents found, %d outdated, %d free points"):format(mapped, total,
+                #tree.mismatches, ns.FreePoints(tree)))
+        else
+            add("Talent tree", err)
+        end
+        add("Builds for your class", #ns.BuildsFor(ns.PlayerClass()))
+    end
+    ns.Print("diagnostics")
+    for _, line in ipairs(lines) do print("   " .. line) end
+end
+
 SLASH_ZBUILDS1 = "/zb"
 SLASH_ZBUILDS2 = "/zbuilds"
-SlashCmdList.ZBUILDS = function()
-    ns.Toggle()
+SlashCmdList.ZBUILDS = function(msg)
+    msg = strtrim(msg or ""):lower()
+    if msg == "diag" then
+        diagnose()
+    elseif msg == "minimap" then
+        ns.ToggleMinimapButton()
+    else
+        ns.Toggle()
+    end
 end

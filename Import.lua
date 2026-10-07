@@ -5,8 +5,6 @@ local L = ns.L
 
 local TF_CODE_VERSION = "6"
 local TF_SYMS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz056789"
--- Icy Veins numbers the talents across the trees in grid order, the same order as our talent lists
-local IV_SYMS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-._~[]()"
 
 local function split(s, sep)
     local out, start = {}, 1
@@ -83,18 +81,72 @@ local function decodeTalentsForever(code)
     return token, classData, ranks, order, tonumber(level)
 end
 
--- icy-veins.com/wow-forever/<class>-talent-calculator#tc-<one symbol per point, in order>
-local function decodeIcyVeins(slug, points)
-    local token, classData = classFromSlug(slug)
-    local flat, ranks, order = flatTalents(classData), emptyRanks(classData), {}
-    for k = 1, #points do
-        local f = IV_SYMS:find(points:sub(k, k), 1, true)
-        local spot = f and flat[f]
-        if not spot then error(L.ERR_IV_UNKNOWN, 0) end
+-- The other sites keep their own copy of the trees; the updater ships each site's symbols already
+-- placed in ours (ZbuildsData.decoders.<site>[CLASS][symbol] = { tree, index }).
+local function siteMap(site, token)
+    local map = ZbuildsData.decoders and ZbuildsData.decoders[site] and ZbuildsData.decoders[site][token]
+    if not map then error(L.ERR_LINK, 0) end
+    return map
+end
+
+-- Points given one symbol each, in the order they are learned.
+local function fromPoints(token, classData, map, symbols)
+    local ranks, order = emptyRanks(classData), {}
+    for _, key in ipairs(symbols) do
+        local spot = map[key]
+        if not spot then error(L.ERR_UNKNOWN_TALENT, 0) end
         ranks[spot[1]][spot[2]] = ranks[spot[1]][spot[2]] + 1
         order[#order + 1] = { spot[1], spot[2] }
     end
     return token, classData, ranks, order, nil
+end
+
+-- icy-veins.com/wow-forever/<class>-talent-calculator#tc-<one symbol per point, in order>
+local function decodeIcyVeins(slug, points)
+    local token, classData = classFromSlug(slug)
+    local symbols = {}
+    for k = 1, #points do symbols[k] = points:sub(k, k) end
+    return fromPoints(token, classData, siteMap("iv", token), symbols)
+end
+
+-- warcrafttavern.com/forever/tools/talent-calculator/<class>#?t=A1111004466b: a tree letter, then a point per symbol
+local function decodeTavern(slug, code)
+    local token, classData = classFromSlug(slug)
+    local symbols, tree = {}, nil
+    for k = 1, #code do
+        local ch = code:sub(k, k)
+        if ch:match("[ABC]") then tree = ch elseif tree then symbols[#symbols + 1] = tree .. ch end
+    end
+    return fromPoints(token, classData, siteMap("tavern", token), symbols)
+end
+
+-- wowforeverbuilds.com/talents/<class>?b=<ranks per tree>&o=<order: tree digit + talent index in base 36>
+local function decodeWfb(slug, query)
+    local token, classData = classFromSlug(slug)
+    local map = siteMap("wfb", token)
+    local b, o = query:match("[?&]?b=([%d%-]*)"), query:match("[?&]o=(%w+)") or ""
+    if not b then error(L.ERR_LINK, 0) end
+    local total = 0
+    for d in b:gmatch("%d") do total = total + tonumber(d) end
+    if #o == 2 * total then
+        local symbols = {}
+        for k = 1, #o - 1, 2 do symbols[#symbols + 1] = o:sub(k, k) .. ":" .. tonumber(o:sub(k + 1, k + 1), 36) end
+        return fromPoints(token, classData, map, symbols)
+    end
+    local ranks = emptyRanks(classData)
+    local tree = 0
+    for seg in (b .. "-"):gmatch("([%d]*)%-") do
+        for i = 1, #seg do
+            local rank = tonumber(seg:sub(i, i))
+            if rank > 0 then
+                local spot = map[tree .. ":" .. (i - 1)]
+                if not spot then error(L.ERR_UNKNOWN_TALENT, 0) end
+                ranks[spot[1]][spot[2]] = rank
+            end
+        end
+        tree = tree + 1
+    end
+    return token, classData, ranks, {}, nil
 end
 
 -- Returns a build table, or nil, error message.
@@ -105,6 +157,10 @@ function ns.DecodeLink(url, name, category)
         if tf then return decodeTalentsForever(tf) end
         local slug, points = url:match("wow%-forever/(%a+)%-talent%-calculator#tc%-(.+)$")
         if slug then return decodeIcyVeins(slug, points) end
+        local tvSlug, tvCode = url:match("talent%-calculator/(%a+)#%?t=(%w+)")
+        if tvSlug then return decodeTavern(tvSlug, tvCode) end
+        local wfSlug, wfQuery = url:match("wowforeverbuilds%.com/talents/(%a+)%?(.+)$")
+        if wfSlug then return decodeWfb(wfSlug, wfQuery) end
         error(L.ERR_LINK, 0)
     end)
     if not ok then return nil, token end

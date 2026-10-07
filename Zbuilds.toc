@@ -6,6 +6,10 @@
 ## Author: Domi
 ## Version: @project-version@
 ## X-Curse-Project-ID: 1726513
+## IconTexture: Interface\AddOns\Zbuilds\media\logo
+## AddonCompartmentFunc: Zbuilds_OnCompartmentClick
+## AddonCompartmentFuncOnEnter: Zbuilds_OnCompartmentEnter
+## AddonCompartmentFuncOnLeave: Zbuilds_OnCompartmentLeave
 ## SavedVariables: ZbuildsDB
 ## SavedVariablesPerCharacter: ZbuildsCharDB
 
@@ -14,3 +18,4 @@ Locales.lua
 Core.lua
 Import.lua
 UI.lua
+Launchers.lua

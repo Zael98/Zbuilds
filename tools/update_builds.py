@@ -127,7 +127,8 @@ class ClassTrees:
                     "name": t["name"],
                     "icon": t.get("icon"),
                     "talents": [
-                        {"name": x["name"], "row": x["row"], "col": x["col"], "max": x["max"], "icon": x.get("icon")}
+                        {"name": x["name"], "row": x["row"], "col": x["col"], "max": x["max"], "icon": x.get("icon"),
+                         "spell": x.get("spell")}
                         for x in t["talents"]
                     ],
                 }
@@ -304,12 +305,17 @@ TREE_ORIGIN_X, TREE_ORIGIN_Y, NODE_SPACING = (1020, 5020, 9080), 2130, 600  # sa
 _method_data = {}
 
 
-def method_nodes(class_token):
-    """Method's node list for a class, sorted by node id as its codes are: [(node id, tree, row, col, max)]."""
+def method_data():
+    """Method's copy of the game's talent data (node positions, ranks, spell ids), read once."""
     if "data" not in _method_data:
         script = re.search(r'ForeverTalents\.min\.js\?version=([\d.]+)', fetch(METHOD + "/wow-forever/talent-calculator"))
         _method_data["data"] = json.loads(fetch(f"{METHOD}/dfc/ForeverTalentsData-{script.group(1)}.json"))
-    data = _method_data["data"]
+    return _method_data["data"]
+
+
+def method_nodes(class_token):
+    """Method's node list for a class, sorted by node id as its codes are: [(node id, tree, row, col, max)]."""
+    data = method_data()
     nodes = []
     for tab in data["classes"][class_token]["tabs"]:
         for node_id, n in data[tab["treeID"]].items():
@@ -317,6 +323,26 @@ def method_nodes(class_token):
                 nodes.append((int(node_id), tab["order"], round((n["y"] - TREE_ORIGIN_Y) / NODE_SPACING) + 1,
                               round((n["x"] - TREE_ORIGIN_X[tab["order"]]) / NODE_SPACING) + 1, n["maxRank"]))
     return sorted(nodes)
+
+
+def method_spells(classes):
+    """[class, tree, index, spell id] for every talent whose Method node sits at the same place,
+    with the same ranks and icon (so a node a hotfix moved never lends its spell to another talent)."""
+    out = []
+    for cls in classes.values():
+        data = method_data()
+        for tab in data["classes"][cls.token]["tabs"]:
+            for n in data[tab["treeID"]].values():
+                if n["curFlag"] != tab["curFlag"] or not n["spells"]:
+                    continue
+                t = tab["order"]
+                i = cls.by_pos.get((t, round((n["y"] - TREE_ORIGIN_Y) / NODE_SPACING) + 1,
+                                    round((n["x"] - TREE_ORIGIN_X[t]) / NODE_SPACING) + 1))
+                spell = sorted(n["spells"], key=lambda sp: sp.get("index", 0))[0]
+                tal = i is not None and cls.trees[t]["talents"][i]
+                if tal and tal["max"] == n["maxRank"] and spell["icon"].rsplit(".", 1)[0].lower() == (tal.get("icon") or "").lower():
+                    out.append([cls.token, t, i, spell["spellID"]])
+    return out
 
 
 METHOD_CLASS_IDS = {1: "WARRIOR", 2: "PALADIN", 4: "HUNTER", 8: "ROGUE", 16: "PRIEST", 64: "SHAMAN",
@@ -372,6 +398,34 @@ def parse_method(code, classes):
             raise ValueError("leveling order points at an unknown talent")
         order.append((tree, i))
     return cls, ranks, order
+
+
+# ---------------------------------------------------------------- decoders shipped to the game
+# The in-game "Import link" reads links offline, so it gets each site's symbols already placed in our
+# trees (by talent name, like the updater does): "symbol" -> {tree, index}, 1-based.
+
+def link_decoders(classes):
+    out = {"iv": {}, "tavern": {}, "wfb": {}}
+    for cls in classes.values():
+        slug = cls.name.lower()
+
+        def spot(name):
+            try:
+                ti, i = cls.resolve(name)
+                return [ti + 1, i + 1]
+            except ValueError:
+                return None  # a talent the current tree no longer has: links using it are refused
+
+        out["iv"][cls.token] = {sym: spot(name) for sym, name in iv_symbols(slug).items() if spot(name)}
+        out["tavern"][cls.token] = {TAVERN_TREES[t] + int_to36(tier * 4 + col): spot(name)
+                                    for (t, tier, col), name in tavern_tree(slug).items() if spot(name)}
+        out["wfb"][cls.token] = {f"{t}:{i}": spot(name) for t, names in enumerate(wfb_tree(slug))
+                                 for i, name in enumerate(names) if spot(name)}
+    return out
+
+
+def int_to36(value):
+    return "0123456789abcdefghijklmnopqrstuvwxyz"[value]
 
 
 # ---------------------------------------------------------------- reading guide pages
@@ -583,6 +637,10 @@ cache_old = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else
 cache_new = {}
 
 
+PROBLEMS_FILE = HERE / "problems.txt"
+problems = []  # what failed this run; the GitHub workflow turns a non-empty list into an issue
+
+
 def cached(key, produce):
     """produce() now, or, if the site fails, the builds it gave last time (so a bad day loses nothing)."""
     try:
@@ -592,6 +650,9 @@ def cached(key, produce):
         if key in cache_old:
             warn(f"{key}: using the copy from the last successful run")
             cache_new[key] = cache_old[key]
+            problems.append(f"{key}: {e} (kept the copy from the last good run)")
+        else:
+            problems.append(f"{key}: {e}")
     return cache_new.get(key, [])
 
 
@@ -602,20 +663,43 @@ def lead_tree(cls, ranks):
     return cls.trees[pts.index(max(pts))]["name"]
 
 
+BETA_POINTS = 21  # the beta stops at level 30: builds this small, or that say "beta", are for it
+
+
 def make_build(cls, ranks, order, level, **fields):
     problem = cls.validate(ranks)
     if problem:
         # usually a code made against an older version of the site's tree: its symbols point at the wrong talents
         warn(f"{fields['source']} '{fields['name']}' skipped: {problem}")
         return None
+    total = sum(map(sum, ranks))
     return {
         "class": cls.token,
         "ranks": ["".join(str(r) for r in t) for t in ranks],
         "points": [sum(t) for t in ranks],
-        "order": [[ti + 1, i + 1] for ti, i in order] if order and sum(map(sum, ranks)) == len(order) else None,
+        "order": [[ti + 1, i + 1] for ti, i in order] if order and total == len(order) else None,
         "level": level,
+        "beta": True if total <= BETA_POINTS or "beta" in fields["name"].lower() else None,
         **fields,
     }
+
+
+def merge_duplicates(builds):
+    """Builds with the same talents become one, recommended by every site that has it.
+    The first one found (sources run in a fixed order) leads; the others are listed in "also"."""
+    merged, by_key = [], {}
+    for b in builds:
+        key = (b["class"], tuple(b["ranks"]))
+        first = by_key.get(key)
+        if not first:
+            by_key[key] = b
+            merged.append(b)
+            continue
+        first.setdefault("also", []).append({k: b.get(k) for k in ("source", "name", "url", "guide")})
+        first["order"] = first["order"] or b["order"]
+        first["category"] = first.get("category") or b.get("category")
+        first["beta"] = first["beta"] and b["beta"]
+    return merged
 
 
 def lua(value, indent=""):
@@ -632,7 +716,9 @@ def lua(value, indent=""):
         if all(isinstance(v, (int, float)) for v in value):
             return "{" + ", ".join(lua(v) for v in value) + "}"
         return "{\n" + "".join(f"{inner}{lua(v, inner)},\n" for v in value) + indent + "}"
-    items = "".join(f"{inner}{k} = {lua(v, inner)},\n" for k, v in value.items() if v is not None)
+    def key(k):
+        return k if isinstance(k, str) and re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", k) else f"[{lua(k)}]"
+    items = "".join(f"{inner}{key(k)} = {lua(v, inner)},\n" for k, v in value.items() if v is not None)
     return "{\n" + items + indent + "}"
 
 
@@ -649,7 +735,15 @@ def main():
         print(label)
         found = [b for b in collect(classes) if b]
         print(f"  {len(found)} builds")
+        if not found and label != "links.txt":
+            problems.append(f"{label}: no builds at all (the site may have changed)")
         builds += found
+
+    for token, t, i, spell in cached("spells", lambda: method_spells(classes)):
+        next(c for c in classes.values() if c.token == token).trees[t]["talents"][i]["spell"] = spell
+    decoders = cached("decoders", lambda: [link_decoders(classes)])
+    builds = merge_duplicates([dict(b) for b in builds])  # copies: the cache keeps each site's own builds
+    PROBLEMS_FILE.write_text("\n".join(problems), encoding="utf-8")
 
     data = {
         "generated": datetime.now().strftime("%Y-%m-%d %H:%M"),
@@ -662,6 +756,7 @@ def main():
         ],
         "classes": {c.token: c.to_lua() for c in classes.values()},
         "builds": builds,
+        "decoders": decoders[0] if decoders else {},
     }
     CACHE.write_text(json.dumps(cache_new, ensure_ascii=False, indent=0), encoding="utf-8")
     content = ("-- Generated by tools/update_builds.py. Do not edit; run the script again instead.\n"

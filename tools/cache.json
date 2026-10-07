@@ -14,6 +14,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Protection",
 "spec": "Protection",
 "source": "Talents Forever",
@@ -33,6 +34,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Arms",
 "spec": "Arms",
 "source": "Talents Forever",
@@ -52,6 +54,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Protection",
 "spec": "Protection",
 "source": "Talents Forever",
@@ -71,6 +74,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Fury",
 "spec": "Fury",
 "source": "Talents Forever",
@@ -90,6 +94,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Fury",
 "spec": "Fury",
 "source": "Talents Forever",
@@ -109,6 +114,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Retribution",
 "spec": "Retribution",
 "source": "Talents Forever",
@@ -128,6 +134,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Protection",
 "spec": "Protection",
 "source": "Talents Forever",
@@ -147,6 +154,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Retribution",
 "spec": "Retribution",
 "source": "Talents Forever",
@@ -166,6 +174,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Holy",
 "spec": "Holy",
 "source": "Talents Forever",
@@ -185,6 +194,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Retribution",
 "spec": "Retribution",
 "source": "Talents Forever",
@@ -204,6 +214,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Survival",
 "spec": "Survival",
 "source": "Talents Forever",
@@ -223,6 +234,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Marksmanship",
 "spec": "Marksmanship",
 "source": "Talents Forever",
@@ -242,6 +254,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Survival",
 "spec": "Survival",
 "source": "Talents Forever",
@@ -261,6 +274,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Beast Mastery",
 "spec": "Beast Mastery",
 "source": "Talents Forever",
@@ -280,6 +294,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Survival",
 "spec": "Survival",
 "source": "Talents Forever",
@@ -299,6 +314,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Combat",
 "spec": "Combat",
 "source": "Talents Forever",
@@ -318,6 +334,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Assassination",
 "spec": "Assassination",
 "source": "Talents Forever",
@@ -337,6 +354,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Subtlety",
 "spec": "Subtlety",
 "source": "Talents Forever",
@@ -356,6 +374,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Combat",
 "spec": "Combat",
 "source": "Talents Forever",
@@ -375,6 +394,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Combat",
 "spec": "Combat",
 "source": "Talents Forever",
@@ -394,6 +414,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Shadow",
 "spec": "Shadow",
 "source": "Talents Forever",
@@ -413,6 +434,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Discipline",
 "spec": "Discipline",
 "source": "Talents Forever",
@@ -432,6 +454,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Discipline",
 "spec": "Discipline",
 "source": "Talents Forever",
@@ -451,6 +474,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Holy",
 "spec": "Holy",
 "source": "Talents Forever",
@@ -470,6 +494,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Discipline",
 "spec": "Discipline",
 "source": "Talents Forever",
@@ -489,6 +514,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Enhancement",
 "spec": "Enhancement",
 "source": "Talents Forever",
@@ -508,6 +534,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Restoration",
 "spec": "Restoration",
 "source": "Talents Forever",
@@ -527,6 +554,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Enhancement",
 "spec": "Enhancement",
 "source": "Talents Forever",
@@ -546,6 +574,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Elemental",
 "spec": "Elemental",
 "source": "Talents Forever",
@@ -565,6 +594,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Enhancement",
 "spec": "Enhancement",
 "source": "Talents Forever",
@@ -584,6 +614,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Fire",
 "spec": "Fire",
 "source": "Talents Forever",
@@ -603,6 +634,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Fire",
 "spec": "Fire",
 "source": "Talents Forever",
@@ -622,6 +654,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Fire",
 "spec": "Fire",
 "source": "Talents Forever",
@@ -641,6 +674,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Arcane",
 "spec": "Arcane",
 "source": "Talents Forever",
@@ -660,6 +694,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Frost",
 "spec": "Frost",
 "source": "Talents Forever",
@@ -679,6 +714,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Affliction",
 "spec": "Affliction",
 "source": "Talents Forever",
@@ -698,6 +734,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Destruction",
 "spec": "Destruction",
 "source": "Talents Forever",
@@ -717,6 +754,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Demonology",
 "spec": "Demonology",
 "source": "Talents Forever",
@@ -736,6 +774,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Destruction",
 "spec": "Destruction",
 "source": "Talents Forever",
@@ -755,6 +794,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Demonology",
 "spec": "Demonology",
 "source": "Talents Forever",
@@ -774,6 +814,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #1: Restoration",
 "spec": "Restoration",
 "source": "Talents Forever",
@@ -793,6 +834,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #2: Balance",
 "spec": "Balance",
 "source": "Talents Forever",
@@ -812,6 +854,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #3: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
@@ -831,6 +874,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #4: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
@@ -850,6 +894,7 @@
 ],
 "order": null,
 "level": 60,
+"beta": null,
 "name": "Popular #5: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
@@ -956,6 +1001,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Affliction Level 30 Talent Build",
 "spec": "Affliction",
 "source": "Icy Veins",
@@ -1064,6 +1110,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Arcane",
 "source": "Icy Veins",
@@ -1172,6 +1219,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Arms",
 "source": "Icy Veins",
@@ -1280,6 +1328,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Assassination",
 "source": "Icy Veins",
@@ -1389,6 +1438,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Beast Mastery",
 "source": "Icy Veins",
@@ -1497,6 +1547,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Combat",
 "source": "Icy Veins",
@@ -1605,6 +1656,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Demonology Level 30 Talent Build",
 "spec": "Demonology",
 "source": "Icy Veins",
@@ -1713,6 +1765,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Destruction Level 30 Talent Build",
 "spec": "Destruction",
 "source": "Icy Veins",
@@ -1821,6 +1874,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Deep Discipline",
 "spec": "Discipline",
 "source": "Icy Veins",
@@ -1927,6 +1981,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Alternative Build",
 "spec": "Discipline",
 "source": "Icy Veins",
@@ -2053,6 +2108,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Pure Discipline",
 "spec": "Discipline",
 "source": "Icy Veins",
@@ -2179,6 +2235,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Holy Dip",
 "spec": "Discipline",
 "source": "Icy Veins",
@@ -2287,6 +2344,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build (21-Point Tree)",
 "spec": "Elemental",
 "source": "Icy Veins",
@@ -2413,6 +2471,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Level 30 Talent Build (26-Point Tree)",
 "spec": "Elemental",
 "source": "Icy Veins",
@@ -2521,6 +2580,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Enhancement",
 "source": "Icy Veins",
@@ -2629,6 +2689,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Feral",
 "source": "Icy Veins",
@@ -2737,6 +2798,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Fire",
 "source": "Icy Veins",
@@ -2845,6 +2907,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Frost",
 "source": "Icy Veins",
@@ -2953,6 +3016,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Fury",
 "source": "Icy Veins",
@@ -3061,6 +3125,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Holy",
 "source": "Icy Veins",
@@ -3187,6 +3252,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "26-Point Tree (Full Legacy Talents)",
 "spec": "Holy",
 "source": "Icy Veins",
@@ -3295,6 +3361,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Holy Nova",
 "spec": "Holy",
 "source": "Icy Veins",
@@ -3421,6 +3488,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Holy Solo",
 "spec": "Holy",
 "source": "Icy Veins",
@@ -3547,6 +3615,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Group Healer",
 "spec": "Holy",
 "source": "Icy Veins",
@@ -3655,6 +3724,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Marksmanship",
 "source": "Icy Veins",
@@ -3763,6 +3833,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Protection",
 "source": "Icy Veins",
@@ -3889,6 +3960,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "26-Point Tree (Full Legacy Talents)",
 "spec": "Protection",
 "source": "Icy Veins",
@@ -3997,6 +4069,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Protection",
 "source": "Icy Veins",
@@ -4106,6 +4179,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Builds (21-Point Tree)",
 "spec": "Restoration",
 "source": "Icy Veins",
@@ -4232,6 +4306,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Level 30 Talent Builds (26-Point Tree)",
 "spec": "Restoration",
 "source": "Icy Veins",
@@ -4340,6 +4415,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Retribution Focused Talents",
 "spec": "Retribution",
 "source": "Icy Veins",
@@ -4446,6 +4522,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Holy Focused/Shockadin Talents",
 "spec": "Retribution",
 "source": "Icy Veins",
@@ -4554,6 +4631,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Deep Shadow",
 "spec": "Shadow",
 "source": "Icy Veins",
@@ -4660,6 +4738,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Meditation",
 "spec": "Shadow",
 "source": "Icy Veins",
@@ -4768,6 +4847,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Subtlety",
 "source": "Icy Veins",
@@ -4876,6 +4956,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Talent Build",
 "spec": "Survival",
 "source": "Icy Veins",
@@ -4944,6 +5025,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Balance Build",
 "spec": "Balance",
 "source": "Warcraft Tavern",
@@ -5010,6 +5092,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Feral Build",
 "spec": "Feral Combat",
 "source": "Warcraft Tavern",
@@ -5076,6 +5159,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Restoration Build",
 "spec": "Restoration",
 "source": "Warcraft Tavern",
@@ -5182,6 +5266,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Balance Build",
 "spec": "Balance",
 "source": "Warcraft Tavern",
@@ -5288,6 +5373,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Feral Build",
 "spec": "Feral Combat",
 "source": "Warcraft Tavern",
@@ -5394,6 +5480,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Restoration Build",
 "spec": "Restoration",
 "source": "Warcraft Tavern",
@@ -5462,6 +5549,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Beta Build",
 "spec": "Beast Mastery",
 "source": "Warcraft Tavern",
@@ -5568,6 +5656,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Beast Mastery Build",
 "spec": "Beast Mastery",
 "source": "Warcraft Tavern",
@@ -5674,6 +5763,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Marksmanship Build",
 "spec": "Marksmanship",
 "source": "Warcraft Tavern",
@@ -5780,6 +5870,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Survival Build",
 "spec": "Survival",
 "source": "Warcraft Tavern",
@@ -5848,6 +5939,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Frost Beta Build",
 "spec": "Frost",
 "source": "Warcraft Tavern",
@@ -5914,6 +6006,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Solo Arcane Beta Build",
 "spec": "Arcane",
 "source": "Warcraft Tavern",
@@ -5980,6 +6073,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Dungeon Arcane Beta Build",
 "spec": "Arcane",
 "source": "Warcraft Tavern",
@@ -6086,6 +6180,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Frost Beta Build",
 "spec": "Frost",
 "source": "Warcraft Tavern",
@@ -6192,6 +6287,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Solo Arcane Beta Build",
 "spec": "Arcane",
 "source": "Warcraft Tavern",
@@ -6298,6 +6394,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Solo Arcane Beta Build",
 "spec": "Arcane",
 "source": "Warcraft Tavern",
@@ -6404,6 +6501,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Fire Beta Build",
 "spec": "Fire",
 "source": "Warcraft Tavern",
@@ -6472,6 +6570,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Holy Healing – Reverence – 11/0/0",
 "spec": "Holy",
 "source": "Warcraft Tavern",
@@ -6540,6 +6639,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Discipline DPS Priest Build",
 "spec": "Discipline",
 "source": "Warcraft Tavern",
@@ -6606,6 +6706,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Holy Priest Build",
 "spec": "Holy",
 "source": "Warcraft Tavern",
@@ -6672,6 +6773,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Shadow Priest Build",
 "spec": "Shadow",
 "source": "Warcraft Tavern",
@@ -6778,6 +6880,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Discipline DPS Priest",
 "spec": "Discipline",
 "source": "Warcraft Tavern",
@@ -6884,6 +6987,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Holy Priest Build",
 "spec": "Holy",
 "source": "Warcraft Tavern",
@@ -6990,6 +7094,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Shadow Priest Build",
 "spec": "Shadow",
 "source": "Warcraft Tavern",
@@ -7058,6 +7163,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 2/2/7 Build",
 "spec": "Subtlety",
 "source": "Warcraft Tavern",
@@ -7124,6 +7230,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Riposte Combat Build",
 "spec": "Combat",
 "source": "Warcraft Tavern",
@@ -7190,6 +7297,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 20 Subtlety Ghostly Strike Build",
 "spec": "Subtlety",
 "source": "Warcraft Tavern",
@@ -7296,6 +7404,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Ambush/Sinister Strike Crit Build",
 "spec": "Subtlety",
 "source": "Warcraft Tavern",
@@ -7402,6 +7511,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Assassination Build",
 "spec": "Assassination",
 "source": "Warcraft Tavern",
@@ -7508,6 +7618,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Combat Build",
 "spec": "Combat",
 "source": "Warcraft Tavern",
@@ -7614,6 +7725,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30 Subtlety  Build",
 "spec": "Subtlety",
 "source": "Warcraft Tavern",
@@ -7726,6 +7838,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 30",
 "spec": "Feral Combat",
 "source": "Method",
@@ -7952,6 +8065,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Level 60",
 "spec": "Feral Combat",
 "source": "Method",
@@ -8060,6 +8174,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Recommended Leveling Talents for Hunter",
 "spec": "Beast Mastery",
 "source": "Method",
@@ -8168,6 +8283,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Recommended Leveling Talents for Mage",
 "spec": "Frost",
 "source": "Method",
@@ -8276,6 +8392,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Recommended Leveling Talents for Paladin in WoW Forever",
 "spec": "Retribution",
 "source": "Method",
@@ -8380,6 +8497,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Level 1-29",
 "spec": "Discipline",
 "source": "Method",
@@ -8522,6 +8640,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Level 30-39",
 "spec": "Discipline",
 "source": "Method",
@@ -8668,6 +8787,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Level 40",
 "spec": "Shadow",
 "source": "Method",
@@ -8894,6 +9014,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Level 41-60",
 "spec": "Shadow",
 "source": "Method",
@@ -9002,6 +9123,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Combat: General Build",
 "spec": "Combat",
 "source": "Method",
@@ -9108,6 +9230,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Assassination: General Build",
 "spec": "Assassination",
 "source": "Method",
@@ -9217,6 +9340,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Affliction",
 "spec": "Affliction",
 "source": "Method",
@@ -9323,6 +9447,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Demonology",
 "spec": "Demonology",
 "source": "Method",
@@ -9429,6 +9554,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Destruction",
 "spec": "Destruction",
 "source": "Method",
@@ -9657,6 +9783,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Arms (Two-handed) Build",
 "spec": "Arms",
 "source": "Method",
@@ -9682,6 +9809,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Affliction Warlock PvP guide: level 60 Soul Link and Curse of Exhaustion drain build",
 "spec": "Affliction",
 "source": "WoW Forever Builds",
@@ -9705,6 +9833,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Arcane Mage PvE guide: level 60 Arcane Blast and Arcane Power raid build",
 "spec": "Arcane",
 "source": "WoW Forever Builds",
@@ -9934,6 +10063,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Arms Warrior leveling guide 10–60: Sweeping Strikes and Mortal Strike talent order",
 "spec": "Arms",
 "source": "WoW Forever Builds",
@@ -9959,6 +10089,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Assassination Rogue PvE guide: Mutilate and Venom build for level 60",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
@@ -9982,6 +10113,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Assassination Rogue PvP guide: Cold Blood Mutilate burst for battlegrounds",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
@@ -10170,6 +10302,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Balance Druid leveling guide 10–50: Moonkin talent order with Improved Wrath",
 "spec": "Balance",
 "source": "WoW Forever Builds",
@@ -10320,6 +10453,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Restoration Shaman leveling guide 10–40: Water Shield battle-healer talents",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -10344,6 +10478,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Beast Mastery Hunter PvE guide: pet raid DPS with Deadly Aspects, Summon Hawk and Bestial Wrath",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
@@ -10367,6 +10502,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Beast Mastery Hunter PvP guide: Intimidation, Bestial Wrath and a pet that will not die",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
@@ -10435,6 +10571,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Warlock build for level 20: Affliction DoTs that crit",
 "spec": "Affliction",
 "source": "WoW Forever Builds",
@@ -10503,6 +10640,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Hunter build for level 20: Beast Mastery with Deadly Aspects",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
@@ -10571,6 +10709,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Rogue build for level 20: Combat without Restless Blades",
 "spec": "Combat",
 "source": "WoW Forever Builds",
@@ -10639,6 +10778,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Priest build for level 20: wand leveling with Spirit Tap",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
@@ -10707,6 +10847,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Shaman build for level 20: Enhancement to Shamanistic Focus",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
@@ -10775,6 +10916,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Druid build for level 20: Bear until 20, then Cat",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -10843,6 +10985,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Mage build for level 20: Frost with Frostbite and Ice Lance",
 "spec": "Frost",
 "source": "WoW Forever Builds",
@@ -10911,6 +11054,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Warrior build for level 20: fixing Rage with Unbridled Wrath",
 "spec": "Fury",
 "source": "WoW Forever Builds",
@@ -10979,6 +11123,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "WoW Forever beta Paladin build for level 20: Retribution, the class everyone calls overtuned",
 "spec": "Retribution",
 "source": "WoW Forever Builds",
@@ -11210,6 +11355,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Control Group 5-man: Beast Mastery Hunter pet off-tank talents (levels 40–60)",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
@@ -11438,6 +11584,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Control Group 5-man: Holy Priest healing and Shackle talents (levels 40–60)",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -11667,6 +11814,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Control Group 5-man: Subtlety Rogue Sap, Blind and Hemorrhage talents (levels 40–60)",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
@@ -11895,6 +12043,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Control Group 5-man: Survival Hunter trap and melee talents (levels 40–60)",
 "spec": "Survival",
 "source": "WoW Forever Builds",
@@ -12043,6 +12192,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Demonology Warlock leveling guide 1–40: Voidwalker tank and Soul Link talent order",
 "spec": "Demonology",
 "source": "WoW Forever Builds",
@@ -12066,6 +12216,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Demonology Warlock PvE guide: level 60 Demonic Pact and Master Demonologist build",
 "spec": "Demonology",
 "source": "WoW Forever Builds",
@@ -12089,6 +12240,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Demonology Warlock PvP guide: level 60 Felhunter and Soul Link survival build",
 "spec": "Demonology",
 "source": "WoW Forever Builds",
@@ -12317,6 +12469,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Destruction Warlock leveling guide 30–60: Shadow Bolt nuke with Ruin and Nightfall",
 "spec": "Destruction",
 "source": "WoW Forever Builds",
@@ -12340,6 +12493,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Destruction Warlock PvE guide: level 60 Shadow and Flame, Ruin and Incinerate build",
 "spec": "Destruction",
 "source": "WoW Forever Builds",
@@ -12363,6 +12517,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Destruction Warlock PvP guide: level 60 Pyroclasm, Aftermath and Molten Skin build",
 "spec": "Destruction",
 "source": "WoW Forever Builds",
@@ -12386,6 +12541,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Discipline Priest PvE guide: Penance, Divine Aegis and shields at level 60",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
@@ -12409,6 +12565,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Discipline Priest PvP guide: shields, Penance and Spell Warding for battlegrounds",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
@@ -12638,6 +12795,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Druid + Hunter duo leveling 40–60: Beast Mastery Hunter pet talents",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
@@ -12746,6 +12904,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Fury Warrior leveling guide 1–30: early Cruelty build before the Arms respec",
 "spec": "Fury",
 "source": "WoW Forever Builds",
@@ -12934,6 +13093,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Elemental Shaman leveling guide 20–50: Lightning Overload and Lava Burst talent order",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
@@ -12958,6 +13118,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Elemental Shaman PvP guide: shocks, Lava Burst and Earthbound for battlegrounds",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
@@ -13186,6 +13347,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Enhancement Shaman leveling guide 10–60: Flurry, Stormstrike and Maelstrom Weapon",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
@@ -13210,6 +13372,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Enhancement Shaman PvP guide: Stormstrike burst and Windfury for world PvP",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
@@ -13234,6 +13397,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Feral Druid tank guide: level 60 bear build with Mangle, Berserk and Natural Reaction",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -13383,6 +13547,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Fire Mage leveling guide 10–40: Ignite, Hot Streak and Combustion talent order",
 "spec": "Fire",
 "source": "WoW Forever Builds",
@@ -13406,6 +13571,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Fire Mage PvE guide: level 60 Scorch, Hot Streak and Combustion raid build",
 "spec": "Fire",
 "source": "WoW Forever Builds",
@@ -13601,6 +13767,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Subtlety Rogue leveling guide 20–50: Hemorrhage, Premeditation and Thousand Cuts",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
@@ -13624,6 +13791,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Holy Paladin PvE guide: raid tank healing with Illumination, Infusion of Light and Light's Vigil",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -13647,6 +13815,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Holy Paladin PvP guide: unkillable battleground healer with Hammer of Justice control",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -13670,6 +13839,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Holy Priest PvE guide: Prayer of Mending raid healing for level 60",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -13693,6 +13863,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Holy Priest PvP guide: battleground healer with Spell Warding and Prayer of Mending",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -13922,6 +14093,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Holy Priest leveling guide 30–60: Smite, Holy Fire and Searing Light talents",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -14150,6 +14322,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hunter + Warlock duo leveling 10–60: Beast Mastery Hunter talents",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
@@ -14378,6 +14551,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hunter + Warlock duo leveling 10–60: Demonology Warlock Soul Link talents",
 "spec": "Demonology",
 "source": "WoW Forever Builds",
@@ -14526,6 +14700,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Destruction Warlock AoE and Bane of Havoc talents (levels 15–40)",
 "spec": "Destruction",
 "source": "WoW Forever Builds",
@@ -14672,6 +14847,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Destruction Warlock AoE and Bane of Havoc talents (levels 15–40)",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -14820,6 +14996,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Elemental Shaman Earthbound and Fire Nova talents (levels 15–40)",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
@@ -14968,6 +15145,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Marksmanship Hunter Lone Wolf talents (levels 15–40)",
 "spec": "Marksmanship",
 "source": "WoW Forever Builds",
@@ -15116,6 +15294,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Protection Warrior tank talents (levels 15–40)",
 "spec": "Destruction",
 "source": "WoW Forever Builds",
@@ -15262,6 +15441,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Protection Warrior tank talents (levels 15–40)",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -15410,6 +15590,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Restoration Druid Wild Growth talents (levels 15–40)",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -15556,6 +15737,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Hybrid Cleave 5-man: Restoration Druid Wild Growth talents (levels 15–40)",
 "spec": "Destruction",
 "source": "WoW Forever Builds",
@@ -15784,6 +15966,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Mage Cleave 5-man: Arcane Mage Arcane Explosion talents (levels 40–60)",
 "spec": "Arcane",
 "source": "WoW Forever Builds",
@@ -16012,6 +16195,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Mage Cleave 5-man: Balance Druid Hurricane and Moonkin talents (levels 40–60)",
 "spec": "Arcane",
 "source": "WoW Forever Builds",
@@ -16240,6 +16424,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Mage Cleave 5-man: Fire Mage Flamestrike and Blast Wave talents (levels 40–60)",
 "spec": "Fire",
 "source": "WoW Forever Builds",
@@ -16469,6 +16654,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Mage Cleave 5-man: Protection Paladin tank talents for big pulls (levels 40–60)",
 "spec": "Protection",
 "source": "WoW Forever Builds",
@@ -16659,6 +16845,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Marksmanship Hunter leveling guide 20–50: Careful Aim, Trueshot Aura and Sniper Shot",
 "spec": "Marksmanship",
 "source": "WoW Forever Builds",
@@ -16682,6 +16869,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Marksmanship Hunter PvE guide: Trueshot Aura, Sniper Shot and the Lone Wolf choice",
 "spec": "Marksmanship",
 "source": "WoW Forever Builds",
@@ -16705,6 +16893,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Marksmanship Hunter PvP guide: Scatter Shot, Hawk Eye and Entrapment kiting",
 "spec": "Marksmanship",
 "source": "WoW Forever Builds",
@@ -16933,6 +17122,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Burst 5-man: Assassination Rogue Mutilate talents (levels 40–60)",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
@@ -17161,6 +17351,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Burst 5-man: Enhancement Shaman Stormstrike and Maelstrom talents (levels 40–60)",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
@@ -17390,6 +17581,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Burst 5-man: Restoration Shaman healing and totem talents (levels 40–60)",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -17539,6 +17731,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Cleave 5-man: Arms Warrior Sweeping Strikes talents (levels 20–40)",
 "spec": "Arms",
 "source": "WoW Forever Builds",
@@ -17687,6 +17880,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Cleave 5-man: Combat Rogue Blade Flurry talents (levels 20–40)",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -17835,6 +18029,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Cleave 5-man: Feral Druid bear tank talents for AoE threat (levels 20–40)",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -17983,6 +18178,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Melee Cleave 5-man: Restoration Shaman healing and totem talents (levels 20–40)",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -18211,6 +18407,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Assassination Rogue leveling guide 30–60: Mutilate and Seal Fate talents",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
@@ -18439,6 +18636,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Paladin + Mage AoE duo 30–60: Frost Mage Blizzard talents",
 "spec": "Frost",
 "source": "WoW Forever Builds",
@@ -18667,6 +18865,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Paladin + Mage AoE duo 30–60: Protection Paladin gathering talents",
 "spec": "Protection",
 "source": "WoW Forever Builds",
@@ -18775,6 +18974,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Priest + Shaman duo leveling 10–30: Discipline Priest talents and shields",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
@@ -18883,6 +19083,7 @@
 ]
 ],
 "level": null,
+"beta": true,
 "name": "Priest + Shaman duo leveling 10–30: Enhancement Shaman melee talents",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
@@ -19111,6 +19312,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Protection Paladin AoE leveling guide 30–60: Consecration pulls with Holy Shield",
 "spec": "Protection",
 "source": "WoW Forever Builds",
@@ -19135,6 +19337,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Protection Paladin PvP guide: flag defense with Templar's Bulwark and Hammer of Justice",
 "spec": "Protection",
 "source": "WoW Forever Builds",
@@ -19161,6 +19364,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Restoration Druid PvE guide: level 60 Wild Growth and Swiftmend raid healing build",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -19184,6 +19388,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Restoration Druid PvP guide: level 60 flag carrier and battleground healer build",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -19332,6 +19537,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Restoration Druid leveling guide 1–40: solo healer hybrid talent order",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -19355,6 +19561,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Restoration Shaman PvE guide: Riptide, Chain Heal and Mana Tide for level 60",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -19378,6 +19585,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Restoration Shaman PvP guide: Nature's Swiftness, Riptide and totem control",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -19509,6 +19717,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Rogue + Druid duo leveling 10–35: Combat Rogue dagger talents",
 "spec": "Combat",
 "source": "WoW Forever Builds",
@@ -19635,6 +19844,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Rogue + Druid duo leveling 10–35: Combat Rogue dagger talents",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -19763,6 +19973,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Rogue + Druid duo leveling 10–35: Feral Druid bear tank and heals",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -19889,6 +20100,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Rogue + Druid duo leveling 10–35: Feral Druid bear tank and heals",
 "spec": "Combat",
 "source": "WoW Forever Builds",
@@ -20118,6 +20330,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Shadow Cleave 5-man: Demonology Warlock Felhunter and Soul Link talents (levels 40–60)",
 "spec": "Demonology",
 "source": "WoW Forever Builds",
@@ -20346,6 +20559,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Shadow Cleave 5-man: Discipline Priest shield and Penance talents (levels 40–60)",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
@@ -20574,6 +20788,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Shadow Cleave 5-man: Feral Druid bear tank talents (levels 40–60)",
 "spec": "Feral Combat",
 "source": "WoW Forever Builds",
@@ -20802,6 +21017,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Shadow Cleave 5-man: Shadow Priest Vampiric Embrace talents (levels 40–60)",
 "spec": "Shadow",
 "source": "WoW Forever Builds",
@@ -21030,6 +21246,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Shadow Priest leveling guide 10–60: Spirit Tap, Mind Flay and Shadowform talent order",
 "spec": "Shadow",
 "source": "WoW Forever Builds",
@@ -21053,6 +21270,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Shadow Priest PvE guide: Shadowform damage and Shadow Weaving at level 60",
 "spec": "Shadow",
 "source": "WoW Forever Builds",
@@ -21076,6 +21294,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Shadow Priest PvP guide: Blackout, Silence and Shadowform for level 60 PvP",
 "spec": "Shadow",
 "source": "WoW Forever Builds",
@@ -21305,6 +21524,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Shaman + Warrior duo leveling 30–60: Restoration Shaman healer talents",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
@@ -21453,6 +21673,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Spell Cleave 5-man: Frost Mage talents and Blizzard rotation (levels 15–40)",
 "spec": "Frost",
 "source": "WoW Forever Builds",
@@ -21601,6 +21822,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Spell Cleave 5-man: Holy Priest healing talents for big pulls (levels 15–40)",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -21747,6 +21969,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Spell Cleave 5-man: Holy Priest healing talents for big pulls (levels 15–40)",
 "spec": "Protection",
 "source": "WoW Forever Builds",
@@ -21895,6 +22118,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Spell Cleave 5-man: Protection Paladin tank talents and pulls (levels 15–40)",
 "spec": "Protection",
 "source": "WoW Forever Builds",
@@ -22041,6 +22265,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Spell Cleave 5-man: Protection Paladin tank talents and pulls (levels 15–40)",
 "spec": "Holy",
 "source": "WoW Forever Builds",
@@ -22269,6 +22494,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "SPriest Leveling",
 "spec": "Shadow",
 "source": "WoW Forever Builds",
@@ -22292,6 +22518,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Subtlety Rogue PvE guide: Hemorrhage and Rupture build for Forever raids",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
@@ -22315,6 +22542,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Subtlety Rogue PvP guide: Hemorrhage, Preparation and Cold Blood control",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
@@ -22543,6 +22771,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Survival Hunter leveling guide 30–60: Lightning Reflexes, Deterrence and Lacerating Strikes",
 "spec": "Survival",
 "source": "WoW Forever Builds",
@@ -22566,6 +22795,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Survival Hunter PvE guide: Lightning Reflexes, Improved Tracking and trap control",
 "spec": "Survival",
 "source": "WoW Forever Builds",
@@ -22589,6 +22819,7 @@
 ],
 "order": null,
 "level": null,
+"beta": null,
 "name": "Survival Hunter PvP guide: Improved Wing Clip, Counterattack and Frost Trap roots",
 "spec": "Survival",
 "source": "WoW Forever Builds",
@@ -22737,6 +22968,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Discipline Priest leveling guide 10–40: wand, Soul Warding and Penance talents",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
@@ -22886,6 +23118,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Warlock + Priest duo leveling 15–40: Shadow Priest talents and heals",
 "spec": "Shadow",
 "source": "WoW Forever Builds",
@@ -23114,6 +23347,7 @@
 ]
 ],
 "level": null,
+"beta": null,
 "name": "Warrior + Paladin duo leveling 10–60: Arms Warrior talents and pulls",
 "spec": "Arms",
 "source": "WoW Forever Builds",
@@ -23122,5 +23356,8405 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/warrior-paladin-retribution-paladin-group-leveling": []
+"wfb:/guide/warrior-paladin-retribution-paladin-group-leveling": [],
+"spells": [
+[
+"WARRIOR",
+0,
+16,
+12294
+],
+[
+"WARRIOR",
+0,
+15,
+12289
+],
+[
+"WARRIOR",
+0,
+13,
+1290261
+],
+[
+"WARRIOR",
+0,
+12,
+12292
+],
+[
+"WARRIOR",
+0,
+10,
+16493
+],
+[
+"WARRIOR",
+0,
+9,
+12163
+],
+[
+"WARRIOR",
+0,
+8,
+1310222
+],
+[
+"WARRIOR",
+0,
+7,
+12834
+],
+[
+"WARRIOR",
+0,
+6,
+12296
+],
+[
+"WARRIOR",
+0,
+5,
+12290
+],
+[
+"WARRIOR",
+0,
+4,
+12295
+],
+[
+"WARRIOR",
+0,
+3,
+12285
+],
+[
+"WARRIOR",
+0,
+2,
+12286
+],
+[
+"WARRIOR",
+0,
+1,
+16462
+],
+[
+"WARRIOR",
+0,
+0,
+12282
+],
+[
+"WARRIOR",
+0,
+11,
+1289682
+],
+[
+"WARRIOR",
+0,
+14,
+12862
+],
+[
+"WARRIOR",
+1,
+13,
+20504
+],
+[
+"WARRIOR",
+1,
+12,
+12328
+],
+[
+"WARRIOR",
+1,
+16,
+23881
+],
+[
+"WARRIOR",
+1,
+9,
+12317
+],
+[
+"WARRIOR",
+1,
+10,
+20502
+],
+[
+"WARRIOR",
+1,
+7,
+23584
+],
+[
+"WARRIOR",
+1,
+6,
+16487
+],
+[
+"WARRIOR",
+1,
+5,
+12323
+],
+[
+"WARRIOR",
+1,
+3,
+12322
+],
+[
+"WARRIOR",
+1,
+0,
+12321
+],
+[
+"WARRIOR",
+1,
+1,
+12320
+],
+[
+"WARRIOR",
+1,
+8,
+1310315
+],
+[
+"WARRIOR",
+1,
+2,
+1323964
+],
+[
+"WARRIOR",
+1,
+14,
+12319
+],
+[
+"WARRIOR",
+1,
+4,
+1323963
+],
+[
+"WARRIOR",
+1,
+11,
+20500
+],
+[
+"WARRIOR",
+1,
+15,
+1323967
+],
+[
+"WARRIOR",
+2,
+17,
+23922
+],
+[
+"WARRIOR",
+2,
+13,
+12312
+],
+[
+"WARRIOR",
+2,
+14,
+12809
+],
+[
+"WARRIOR",
+2,
+10,
+12308
+],
+[
+"WARRIOR",
+2,
+6,
+12975
+],
+[
+"WARRIOR",
+2,
+7,
+1310316
+],
+[
+"WARRIOR",
+2,
+5,
+12287
+],
+[
+"WARRIOR",
+2,
+1,
+12298
+],
+[
+"WARRIOR",
+2,
+9,
+12792
+],
+[
+"WARRIOR",
+2,
+15,
+29787
+],
+[
+"WARRIOR",
+2,
+16,
+16538
+],
+[
+"WARRIOR",
+2,
+12,
+12311
+],
+[
+"WARRIOR",
+2,
+11,
+1310317
+],
+[
+"WARRIOR",
+2,
+8,
+12313
+],
+[
+"WARRIOR",
+2,
+4,
+12797
+],
+[
+"WARRIOR",
+2,
+0,
+12301
+],
+[
+"WARRIOR",
+2,
+3,
+12297
+],
+[
+"WARRIOR",
+2,
+2,
+12962
+],
+[
+"PALADIN",
+0,
+16,
+1310911
+],
+[
+"PALADIN",
+0,
+15,
+5923
+],
+[
+"PALADIN",
+0,
+13,
+1311606
+],
+[
+"PALADIN",
+0,
+12,
+1310904
+],
+[
+"PALADIN",
+0,
+11,
+20216
+],
+[
+"PALADIN",
+0,
+8,
+429144
+],
+[
+"PALADIN",
+0,
+10,
+20210
+],
+[
+"PALADIN",
+0,
+6,
+1310897
+],
+[
+"PALADIN",
+0,
+5,
+9453
+],
+[
+"PALADIN",
+0,
+1,
+20257
+],
+[
+"PALADIN",
+0,
+2,
+20237
+],
+[
+"PALADIN",
+0,
+4,
+20224
+],
+[
+"PALADIN",
+0,
+3,
+20205
+],
+[
+"PALADIN",
+0,
+0,
+20262
+],
+[
+"PALADIN",
+0,
+7,
+1310899
+],
+[
+"PALADIN",
+0,
+14,
+1310905
+],
+[
+"PALADIN",
+0,
+9,
+426065
+],
+[
+"PALADIN",
+1,
+12,
+1311015
+],
+[
+"PALADIN",
+1,
+1,
+20127
+],
+[
+"PALADIN",
+1,
+13,
+20177
+],
+[
+"PALADIN",
+1,
+15,
+20925
+],
+[
+"PALADIN",
+1,
+10,
+20196
+],
+[
+"PALADIN",
+1,
+0,
+20143
+],
+[
+"PALADIN",
+1,
+8,
+1224697
+],
+[
+"PALADIN",
+1,
+11,
+20487
+],
+[
+"PALADIN",
+1,
+6,
+20468
+],
+[
+"PALADIN",
+1,
+4,
+20096
+],
+[
+"PALADIN",
+1,
+3,
+20174
+],
+[
+"PALADIN",
+1,
+2,
+20189
+],
+[
+"PALADIN",
+1,
+7,
+20150
+],
+[
+"PALADIN",
+1,
+5,
+1314103
+],
+[
+"PALADIN",
+1,
+9,
+1310994
+],
+[
+"PALADIN",
+1,
+14,
+1311034
+],
+[
+"PALADIN",
+2,
+16,
+1310735
+],
+[
+"PALADIN",
+2,
+12,
+20049
+],
+[
+"PALADIN",
+2,
+13,
+20066
+],
+[
+"PALADIN",
+2,
+7,
+20375
+],
+[
+"PALADIN",
+2,
+11,
+20111
+],
+[
+"PALADIN",
+2,
+9,
+9799
+],
+[
+"PALADIN",
+2,
+8,
+26022
+],
+[
+"PALADIN",
+2,
+10,
+1311087
+],
+[
+"PALADIN",
+2,
+6,
+1311074
+],
+[
+"PALADIN",
+2,
+5,
+9452
+],
+[
+"PALADIN",
+2,
+4,
+20117
+],
+[
+"PALADIN",
+2,
+3,
+1237268
+],
+[
+"PALADIN",
+2,
+2,
+25956
+],
+[
+"PALADIN",
+2,
+1,
+20101
+],
+[
+"PALADIN",
+2,
+0,
+20060
+],
+[
+"PALADIN",
+2,
+15,
+1311085
+],
+[
+"PALADIN",
+2,
+14,
+1311084
+],
+[
+"HUNTER",
+0,
+0,
+19552
+],
+[
+"HUNTER",
+0,
+15,
+19574
+],
+[
+"HUNTER",
+0,
+14,
+19621
+],
+[
+"HUNTER",
+0,
+13,
+19590
+],
+[
+"HUNTER",
+0,
+12,
+19577
+],
+[
+"HUNTER",
+0,
+11,
+19578
+],
+[
+"HUNTER",
+0,
+10,
+1293241
+],
+[
+"HUNTER",
+0,
+9,
+19598
+],
+[
+"HUNTER",
+0,
+8,
+19572
+],
+[
+"HUNTER",
+0,
+7,
+19616
+],
+[
+"HUNTER",
+0,
+6,
+19596
+],
+[
+"HUNTER",
+0,
+5,
+24443
+],
+[
+"HUNTER",
+0,
+4,
+19559
+],
+[
+"HUNTER",
+0,
+3,
+19549
+],
+[
+"HUNTER",
+0,
+2,
+1223755
+],
+[
+"HUNTER",
+0,
+1,
+19583
+],
+[
+"HUNTER",
+1,
+15,
+1310687
+],
+[
+"HUNTER",
+1,
+14,
+19507
+],
+[
+"HUNTER",
+1,
+11,
+1223987
+],
+[
+"HUNTER",
+1,
+13,
+19503
+],
+[
+"HUNTER",
+1,
+12,
+19461
+],
+[
+"HUNTER",
+1,
+10,
+19485
+],
+[
+"HUNTER",
+1,
+9,
+1299346
+],
+[
+"HUNTER",
+1,
+6,
+415405
+],
+[
+"HUNTER",
+1,
+7,
+19454
+],
+[
+"HUNTER",
+1,
+8,
+415370
+],
+[
+"HUNTER",
+1,
+5,
+1223984
+],
+[
+"HUNTER",
+1,
+4,
+19416
+],
+[
+"HUNTER",
+1,
+2,
+19426
+],
+[
+"HUNTER",
+1,
+1,
+19407
+],
+[
+"HUNTER",
+1,
+0,
+19498
+],
+[
+"HUNTER",
+1,
+3,
+1310661
+],
+[
+"HUNTER",
+2,
+15,
+1317257
+],
+[
+"HUNTER",
+2,
+12,
+440529
+],
+[
+"HUNTER",
+2,
+17,
+1310533
+],
+[
+"HUNTER",
+2,
+13,
+1310532
+],
+[
+"HUNTER",
+2,
+8,
+19263
+],
+[
+"HUNTER",
+2,
+7,
+19290
+],
+[
+"HUNTER",
+2,
+9,
+19376
+],
+[
+"HUNTER",
+2,
+11,
+19306
+],
+[
+"HUNTER",
+2,
+5,
+19228
+],
+[
+"HUNTER",
+2,
+6,
+19239
+],
+[
+"HUNTER",
+2,
+4,
+19255
+],
+[
+"HUNTER",
+2,
+3,
+19159
+],
+[
+"HUNTER",
+2,
+2,
+19184
+],
+[
+"HUNTER",
+2,
+1,
+19295
+],
+[
+"HUNTER",
+2,
+0,
+24293
+],
+[
+"HUNTER",
+2,
+16,
+19168
+],
+[
+"HUNTER",
+2,
+14,
+1310496
+],
+[
+"HUNTER",
+2,
+10,
+1310627
+],
+[
+"ROGUE",
+0,
+13,
+1310707
+],
+[
+"ROGUE",
+0,
+15,
+14186
+],
+[
+"ROGUE",
+0,
+14,
+14174
+],
+[
+"ROGUE",
+0,
+16,
+1310703
+],
+[
+"ROGUE",
+0,
+11,
+14113
+],
+[
+"ROGUE",
+0,
+9,
+16513
+],
+[
+"ROGUE",
+0,
+10,
+14177
+],
+[
+"ROGUE",
+0,
+8,
+14128
+],
+[
+"ROGUE",
+0,
+7,
+14168
+],
+[
+"ROGUE",
+0,
+12,
+14983
+],
+[
+"ROGUE",
+0,
+4,
+14158
+],
+[
+"ROGUE",
+0,
+3,
+14156
+],
+[
+"ROGUE",
+0,
+2,
+14138
+],
+[
+"ROGUE",
+0,
+1,
+14144
+],
+[
+"ROGUE",
+0,
+5,
+14165
+],
+[
+"ROGUE",
+0,
+0,
+13741
+],
+[
+"ROGUE",
+0,
+6,
+14179
+],
+[
+"ROGUE",
+1,
+0,
+14162
+],
+[
+"ROGUE",
+1,
+3,
+1224716
+],
+[
+"ROGUE",
+1,
+16,
+13750
+],
+[
+"ROGUE",
+1,
+14,
+30919
+],
+[
+"ROGUE",
+1,
+13,
+13960
+],
+[
+"ROGUE",
+1,
+12,
+13877
+],
+[
+"ROGUE",
+1,
+15,
+18427
+],
+[
+"ROGUE",
+1,
+8,
+13743
+],
+[
+"ROGUE",
+1,
+9,
+13754
+],
+[
+"ROGUE",
+1,
+7,
+14251
+],
+[
+"ROGUE",
+1,
+6,
+13742
+],
+[
+"ROGUE",
+1,
+5,
+13705
+],
+[
+"ROGUE",
+1,
+4,
+13713
+],
+[
+"ROGUE",
+1,
+11,
+13715
+],
+[
+"ROGUE",
+1,
+1,
+13732
+],
+[
+"ROGUE",
+1,
+10,
+1310711
+],
+[
+"ROGUE",
+1,
+2,
+13712
+],
+[
+"ROGUE",
+2,
+11,
+14183
+],
+[
+"ROGUE",
+2,
+13,
+14082
+],
+[
+"ROGUE",
+2,
+14,
+14185
+],
+[
+"ROGUE",
+2,
+10,
+30894
+],
+[
+"ROGUE",
+2,
+15,
+16511
+],
+[
+"ROGUE",
+2,
+6,
+14079
+],
+[
+"ROGUE",
+2,
+17,
+462708
+],
+[
+"ROGUE",
+2,
+3,
+13983
+],
+[
+"ROGUE",
+2,
+12,
+14171
+],
+[
+"ROGUE",
+2,
+4,
+13981
+],
+[
+"ROGUE",
+2,
+8,
+14278
+],
+[
+"ROGUE",
+2,
+7,
+13976
+],
+[
+"ROGUE",
+2,
+0,
+13975
+],
+[
+"ROGUE",
+2,
+5,
+1224782
+],
+[
+"ROGUE",
+2,
+2,
+14057
+],
+[
+"ROGUE",
+2,
+1,
+13958
+],
+[
+"ROGUE",
+2,
+18,
+1310721
+],
+[
+"ROGUE",
+2,
+16,
+1310728
+],
+[
+"ROGUE",
+2,
+9,
+14084
+],
+[
+"PRIEST",
+0,
+14,
+402174
+],
+[
+"PRIEST",
+0,
+15,
+425280
+],
+[
+"PRIEST",
+0,
+17,
+10060
+],
+[
+"PRIEST",
+0,
+11,
+18551
+],
+[
+"PRIEST",
+0,
+13,
+14750
+],
+[
+"PRIEST",
+0,
+12,
+402000
+],
+[
+"PRIEST",
+0,
+16,
+431622
+],
+[
+"PRIEST",
+0,
+10,
+14747
+],
+[
+"PRIEST",
+0,
+7,
+14520
+],
+[
+"PRIEST",
+0,
+9,
+14521
+],
+[
+"PRIEST",
+0,
+8,
+14751
+],
+[
+"PRIEST",
+0,
+6,
+14531
+],
+[
+"PRIEST",
+0,
+5,
+14748
+],
+[
+"PRIEST",
+0,
+3,
+14523
+],
+[
+"PRIEST",
+0,
+2,
+1225132
+],
+[
+"PRIEST",
+0,
+1,
+14524
+],
+[
+"PRIEST",
+0,
+4,
+1309957
+],
+[
+"PRIEST",
+0,
+0,
+1309969
+],
+[
+"PRIEST",
+1,
+16,
+401859
+],
+[
+"PRIEST",
+1,
+15,
+14898
+],
+[
+"PRIEST",
+1,
+14,
+14901
+],
+[
+"PRIEST",
+1,
+13,
+20711
+],
+[
+"PRIEST",
+1,
+12,
+1317006
+],
+[
+"PRIEST",
+1,
+11,
+401937
+],
+[
+"PRIEST",
+1,
+10,
+14909
+],
+[
+"PRIEST",
+1,
+9,
+14912
+],
+[
+"PRIEST",
+1,
+8,
+27789
+],
+[
+"PRIEST",
+1,
+7,
+14892
+],
+[
+"PRIEST",
+1,
+6,
+27811
+],
+[
+"PRIEST",
+1,
+5,
+15237
+],
+[
+"PRIEST",
+1,
+4,
+18530
+],
+[
+"PRIEST",
+1,
+3,
+27900
+],
+[
+"PRIEST",
+1,
+1,
+14908
+],
+[
+"PRIEST",
+1,
+0,
+14913
+],
+[
+"PRIEST",
+1,
+2,
+14889
+],
+[
+"PRIEST",
+2,
+17,
+15473
+],
+[
+"PRIEST",
+2,
+16,
+15259
+],
+[
+"PRIEST",
+2,
+11,
+15286
+],
+[
+"PRIEST",
+2,
+12,
+15257
+],
+[
+"PRIEST",
+2,
+10,
+15274
+],
+[
+"PRIEST",
+2,
+13,
+15487
+],
+[
+"PRIEST",
+2,
+9,
+1225139
+],
+[
+"PRIEST",
+2,
+8,
+15407
+],
+[
+"PRIEST",
+2,
+6,
+15273
+],
+[
+"PRIEST",
+2,
+7,
+15392
+],
+[
+"PRIEST",
+2,
+5,
+17322
+],
+[
+"PRIEST",
+2,
+4,
+15275
+],
+[
+"PRIEST",
+2,
+3,
+15318
+],
+[
+"PRIEST",
+2,
+1,
+15326
+],
+[
+"PRIEST",
+2,
+2,
+15270
+],
+[
+"PRIEST",
+2,
+0,
+15260
+],
+[
+"PRIEST",
+2,
+15,
+1310076
+],
+[
+"SHAMAN",
+0,
+15,
+408490
+],
+[
+"SHAMAN",
+0,
+12,
+408438
+],
+[
+"SHAMAN",
+0,
+13,
+1222988
+],
+[
+"SHAMAN",
+0,
+11,
+28999
+],
+[
+"SHAMAN",
+0,
+10,
+16120
+],
+[
+"SHAMAN",
+0,
+9,
+29062
+],
+[
+"SHAMAN",
+0,
+8,
+16086
+],
+[
+"SHAMAN",
+0,
+7,
+16578
+],
+[
+"SHAMAN",
+0,
+14,
+16089
+],
+[
+"SHAMAN",
+0,
+3,
+16040
+],
+[
+"SHAMAN",
+0,
+6,
+16164
+],
+[
+"SHAMAN",
+0,
+5,
+30160
+],
+[
+"SHAMAN",
+0,
+4,
+16038
+],
+[
+"SHAMAN",
+0,
+2,
+28996
+],
+[
+"SHAMAN",
+0,
+1,
+16035
+],
+[
+"SHAMAN",
+0,
+0,
+16039
+],
+[
+"SHAMAN",
+1,
+17,
+425336
+],
+[
+"SHAMAN",
+1,
+16,
+408498
+],
+[
+"SHAMAN",
+1,
+15,
+1223031
+],
+[
+"SHAMAN",
+1,
+12,
+17364
+],
+[
+"SHAMAN",
+1,
+14,
+30812
+],
+[
+"SHAMAN",
+1,
+13,
+16268
+],
+[
+"SHAMAN",
+1,
+10,
+16252
+],
+[
+"SHAMAN",
+1,
+11,
+16256
+],
+[
+"SHAMAN",
+1,
+9,
+16254
+],
+[
+"SHAMAN",
+1,
+8,
+1223030
+],
+[
+"SHAMAN",
+1,
+7,
+16266
+],
+[
+"SHAMAN",
+1,
+6,
+16261
+],
+[
+"SHAMAN",
+1,
+5,
+16262
+],
+[
+"SHAMAN",
+1,
+1,
+16255
+],
+[
+"SHAMAN",
+1,
+3,
+16258
+],
+[
+"SHAMAN",
+1,
+4,
+415140
+],
+[
+"SHAMAN",
+1,
+2,
+17485
+],
+[
+"SHAMAN",
+1,
+0,
+16043
+],
+[
+"SHAMAN",
+2,
+15,
+408521
+],
+[
+"SHAMAN",
+2,
+14,
+16178
+],
+[
+"SHAMAN",
+2,
+13,
+16188
+],
+[
+"SHAMAN",
+2,
+12,
+29206
+],
+[
+"SHAMAN",
+2,
+11,
+16190
+],
+[
+"SHAMAN",
+2,
+1,
+16173
+],
+[
+"SHAMAN",
+2,
+10,
+16187
+],
+[
+"SHAMAN",
+2,
+6,
+16176
+],
+[
+"SHAMAN",
+2,
+8,
+408510
+],
+[
+"SHAMAN",
+2,
+7,
+16181
+],
+[
+"SHAMAN",
+2,
+2,
+1223033
+],
+[
+"SHAMAN",
+2,
+4,
+16179
+],
+[
+"SHAMAN",
+2,
+3,
+29187
+],
+[
+"SHAMAN",
+2,
+5,
+16184
+],
+[
+"SHAMAN",
+2,
+9,
+16194
+],
+[
+"SHAMAN",
+2,
+0,
+16182
+],
+[
+"MAGE",
+0,
+17,
+12042
+],
+[
+"MAGE",
+0,
+16,
+15058
+],
+[
+"MAGE",
+0,
+15,
+11232
+],
+[
+"MAGE",
+0,
+14,
+12043
+],
+[
+"MAGE",
+0,
+13,
+400588
+],
+[
+"MAGE",
+0,
+12,
+18462
+],
+[
+"MAGE",
+0,
+11,
+11255
+],
+[
+"MAGE",
+0,
+10,
+11252
+],
+[
+"MAGE",
+0,
+9,
+400574
+],
+[
+"MAGE",
+0,
+8,
+11242
+],
+[
+"MAGE",
+0,
+7,
+11247
+],
+[
+"MAGE",
+0,
+6,
+28574
+],
+[
+"MAGE",
+0,
+5,
+11213
+],
+[
+"MAGE",
+0,
+4,
+29441
+],
+[
+"MAGE",
+0,
+3,
+11210
+],
+[
+"MAGE",
+0,
+2,
+11237
+],
+[
+"MAGE",
+0,
+1,
+11222
+],
+[
+"MAGE",
+0,
+0,
+6057
+],
+[
+"MAGE",
+1,
+16,
+11129
+],
+[
+"MAGE",
+1,
+15,
+11124
+],
+[
+"MAGE",
+1,
+14,
+11113
+],
+[
+"MAGE",
+1,
+13,
+11115
+],
+[
+"MAGE",
+1,
+12,
+29074
+],
+[
+"MAGE",
+1,
+11,
+400624
+],
+[
+"MAGE",
+1,
+10,
+11094
+],
+[
+"MAGE",
+1,
+9,
+11095
+],
+[
+"MAGE",
+1,
+6,
+11083
+],
+[
+"MAGE",
+1,
+8,
+11366
+],
+[
+"MAGE",
+1,
+7,
+11108
+],
+[
+"MAGE",
+1,
+5,
+11103
+],
+[
+"MAGE",
+1,
+4,
+11100
+],
+[
+"MAGE",
+1,
+3,
+11119
+],
+[
+"MAGE",
+1,
+2,
+11069
+],
+[
+"MAGE",
+1,
+1,
+18459
+],
+[
+"MAGE",
+1,
+0,
+11078
+],
+[
+"MAGE",
+2,
+18,
+11426
+],
+[
+"MAGE",
+2,
+17,
+11180
+],
+[
+"MAGE",
+2,
+16,
+400647
+],
+[
+"MAGE",
+2,
+14,
+11190
+],
+[
+"MAGE",
+2,
+15,
+12472
+],
+[
+"MAGE",
+2,
+9,
+1312002
+],
+[
+"MAGE",
+2,
+13,
+11170
+],
+[
+"MAGE",
+2,
+12,
+11958
+],
+[
+"MAGE",
+2,
+11,
+16757
+],
+[
+"MAGE",
+2,
+10,
+11185
+],
+[
+"MAGE",
+2,
+8,
+11160
+],
+[
+"MAGE",
+2,
+7,
+11151
+],
+[
+"MAGE",
+2,
+6,
+11071
+],
+[
+"MAGE",
+2,
+5,
+11165
+],
+[
+"MAGE",
+2,
+4,
+11175
+],
+[
+"MAGE",
+2,
+3,
+11207
+],
+[
+"MAGE",
+2,
+2,
+29438
+],
+[
+"MAGE",
+2,
+1,
+11070
+],
+[
+"MAGE",
+2,
+0,
+11189
+],
+[
+"WARLOCK",
+0,
+16,
+1316697
+],
+[
+"WARLOCK",
+0,
+15,
+18271
+],
+[
+"WARLOCK",
+0,
+14,
+17804
+],
+[
+"WARLOCK",
+0,
+13,
+18265
+],
+[
+"WARLOCK",
+0,
+12,
+18223
+],
+[
+"WARLOCK",
+0,
+11,
+18094
+],
+[
+"WARLOCK",
+0,
+8,
+18288
+],
+[
+"WARLOCK",
+0,
+9,
+427712
+],
+[
+"WARLOCK",
+0,
+7,
+17783
+],
+[
+"WARLOCK",
+0,
+6,
+18827
+],
+[
+"WARLOCK",
+0,
+5,
+403511
+],
+[
+"WARLOCK",
+0,
+0,
+18182
+],
+[
+"WARLOCK",
+0,
+4,
+437032
+],
+[
+"WARLOCK",
+0,
+3,
+1225177
+],
+[
+"WARLOCK",
+0,
+2,
+17810
+],
+[
+"WARLOCK",
+0,
+1,
+18174
+],
+[
+"WARLOCK",
+0,
+10,
+1310949
+],
+[
+"WARLOCK",
+1,
+18,
+425464
+],
+[
+"WARLOCK",
+1,
+17,
+23785
+],
+[
+"WARLOCK",
+1,
+15,
+19028
+],
+[
+"WARLOCK",
+1,
+16,
+412732
+],
+[
+"WARLOCK",
+1,
+14,
+1225217
+],
+[
+"WARLOCK",
+1,
+12,
+18708
+],
+[
+"WARLOCK",
+1,
+13,
+1293695
+],
+[
+"WARLOCK",
+1,
+11,
+440870
+],
+[
+"WARLOCK",
+1,
+10,
+18709
+],
+[
+"WARLOCK",
+1,
+7,
+1225214
+],
+[
+"WARLOCK",
+1,
+9,
+18788
+],
+[
+"WARLOCK",
+1,
+8,
+18754
+],
+[
+"WARLOCK",
+1,
+4,
+1235316
+],
+[
+"WARLOCK",
+1,
+6,
+18731
+],
+[
+"WARLOCK",
+1,
+5,
+18705
+],
+[
+"WARLOCK",
+1,
+0,
+18703
+],
+[
+"WARLOCK",
+1,
+3,
+18769
+],
+[
+"WARLOCK",
+1,
+2,
+18697
+],
+[
+"WARLOCK",
+1,
+1,
+18694
+],
+[
+"WARLOCK",
+2,
+15,
+412758
+],
+[
+"WARLOCK",
+2,
+14,
+426316
+],
+[
+"WARLOCK",
+2,
+12,
+1225228
+],
+[
+"WARLOCK",
+2,
+13,
+412751
+],
+[
+"WARLOCK",
+2,
+11,
+18073
+],
+[
+"WARLOCK",
+2,
+9,
+17927
+],
+[
+"WARLOCK",
+2,
+10,
+1293817
+],
+[
+"WARLOCK",
+2,
+0,
+17917
+],
+[
+"WARLOCK",
+2,
+8,
+18135
+],
+[
+"WARLOCK",
+2,
+6,
+17959
+],
+[
+"WARLOCK",
+2,
+7,
+17877
+],
+[
+"WARLOCK",
+2,
+3,
+1225220
+],
+[
+"WARLOCK",
+2,
+5,
+18119
+],
+[
+"WARLOCK",
+2,
+4,
+17778
+],
+[
+"WARLOCK",
+2,
+2,
+17788
+],
+[
+"WARLOCK",
+2,
+1,
+17793
+],
+[
+"DRUID",
+0,
+0,
+16814
+],
+[
+"DRUID",
+0,
+1,
+1223081
+],
+[
+"DRUID",
+0,
+2,
+16845
+],
+[
+"DRUID",
+0,
+6,
+16918
+],
+[
+"DRUID",
+0,
+4,
+1223082
+],
+[
+"DRUID",
+0,
+7,
+1223083
+],
+[
+"DRUID",
+0,
+5,
+16819
+],
+[
+"DRUID",
+0,
+8,
+5570
+],
+[
+"DRUID",
+0,
+3,
+16821
+],
+[
+"DRUID",
+0,
+9,
+16909
+],
+[
+"DRUID",
+0,
+10,
+16850
+],
+[
+"DRUID",
+0,
+12,
+16880
+],
+[
+"DRUID",
+0,
+13,
+408248
+],
+[
+"DRUID",
+0,
+14,
+16896
+],
+[
+"DRUID",
+0,
+15,
+24858
+],
+[
+"DRUID",
+0,
+11,
+17245
+],
+[
+"DRUID",
+1,
+0,
+16934
+],
+[
+"DRUID",
+1,
+1,
+17003
+],
+[
+"DRUID",
+1,
+3,
+16947
+],
+[
+"DRUID",
+1,
+4,
+16940
+],
+[
+"DRUID",
+1,
+5,
+16929
+],
+[
+"DRUID",
+1,
+2,
+17002
+],
+[
+"DRUID",
+1,
+8,
+1238122
+],
+[
+"DRUID",
+1,
+6,
+16966
+],
+[
+"DRUID",
+1,
+9,
+16942
+],
+[
+"DRUID",
+1,
+13,
+16958
+],
+[
+"DRUID",
+1,
+7,
+16998
+],
+[
+"DRUID",
+1,
+11,
+407995
+],
+[
+"DRUID",
+1,
+16,
+1223242
+],
+[
+"DRUID",
+1,
+10,
+1322605
+],
+[
+"DRUID",
+1,
+12,
+16972
+],
+[
+"DRUID",
+1,
+18,
+1223246
+],
+[
+"DRUID",
+1,
+17,
+417051
+],
+[
+"DRUID",
+1,
+15,
+17007
+],
+[
+"DRUID",
+1,
+19,
+417141
+],
+[
+"DRUID",
+1,
+14,
+1322670
+],
+[
+"DRUID",
+2,
+13,
+17123
+],
+[
+"DRUID",
+2,
+15,
+408120
+],
+[
+"DRUID",
+2,
+12,
+1309631
+],
+[
+"DRUID",
+2,
+10,
+18562
+],
+[
+"DRUID",
+2,
+14,
+17074
+],
+[
+"DRUID",
+2,
+9,
+17111
+],
+[
+"DRUID",
+2,
+8,
+24968
+],
+[
+"DRUID",
+2,
+6,
+17104
+],
+[
+"DRUID",
+2,
+5,
+17106
+],
+[
+"DRUID",
+2,
+7,
+414673
+],
+[
+"DRUID",
+2,
+4,
+16833
+],
+[
+"DRUID",
+2,
+3,
+17118
+],
+[
+"DRUID",
+2,
+11,
+17116
+],
+[
+"DRUID",
+2,
+2,
+17069
+],
+[
+"DRUID",
+2,
+0,
+17063
+],
+[
+"DRUID",
+2,
+1,
+17056
+]
+],
+"decoders": [
+{
+"iv": {
+"WARRIOR": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+2,
+1
+],
+"i": [
+2,
+2
+],
+"j": [
+2,
+3
+],
+"k": [
+2,
+4
+],
+"l": [
+2,
+5
+],
+"m": [
+2,
+6
+],
+"n": [
+2,
+7
+],
+"o": [
+2,
+8
+],
+"p": [
+2,
+9
+],
+"q": [
+2,
+10
+],
+"r": [
+2,
+11
+],
+"s": [
+2,
+12
+],
+"t": [
+2,
+13
+],
+"u": [
+2,
+14
+],
+"v": [
+2,
+15
+],
+"w": [
+2,
+16
+],
+"x": [
+2,
+17
+],
+"y": [
+3,
+1
+],
+"z": [
+3,
+2
+],
+"A": [
+3,
+3
+],
+"B": [
+3,
+4
+],
+"C": [
+3,
+5
+],
+"D": [
+3,
+6
+],
+"E": [
+3,
+7
+],
+"F": [
+3,
+8
+],
+"G": [
+3,
+9
+],
+"H": [
+3,
+10
+],
+"I": [
+3,
+11
+],
+"J": [
+3,
+12
+],
+"K": [
+3,
+13
+],
+"L": [
+3,
+14
+],
+"M": [
+3,
+15
+],
+"N": [
+3,
+16
+],
+"O": [
+3,
+17
+],
+"P": [
+3,
+18
+]
+},
+"PALADIN": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+2,
+1
+],
+"i": [
+2,
+2
+],
+"j": [
+2,
+3
+],
+"k": [
+2,
+4
+],
+"l": [
+2,
+5
+],
+"m": [
+2,
+6
+],
+"n": [
+2,
+7
+],
+"o": [
+2,
+8
+],
+"p": [
+2,
+9
+],
+"q": [
+2,
+10
+],
+"r": [
+2,
+11
+],
+"s": [
+2,
+12
+],
+"t": [
+2,
+13
+],
+"u": [
+2,
+14
+],
+"v": [
+2,
+15
+],
+"w": [
+2,
+16
+],
+"x": [
+3,
+1
+],
+"y": [
+3,
+2
+],
+"z": [
+3,
+3
+],
+"A": [
+3,
+4
+],
+"B": [
+3,
+5
+],
+"C": [
+3,
+6
+],
+"D": [
+3,
+7
+],
+"E": [
+3,
+8
+],
+"F": [
+3,
+9
+],
+"G": [
+3,
+10
+],
+"H": [
+3,
+11
+],
+"I": [
+3,
+12
+],
+"J": [
+3,
+13
+],
+"K": [
+3,
+14
+],
+"L": [
+3,
+15
+],
+"M": [
+3,
+16
+],
+"N": [
+3,
+17
+]
+},
+"HUNTER": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+2,
+1
+],
+"h": [
+2,
+2
+],
+"i": [
+2,
+3
+],
+"j": [
+2,
+4
+],
+"k": [
+2,
+5
+],
+"l": [
+2,
+6
+],
+"m": [
+2,
+7
+],
+"n": [
+2,
+8
+],
+"o": [
+2,
+9
+],
+"p": [
+2,
+10
+],
+"q": [
+2,
+11
+],
+"r": [
+2,
+12
+],
+"s": [
+2,
+13
+],
+"t": [
+2,
+14
+],
+"u": [
+2,
+15
+],
+"v": [
+2,
+16
+],
+"w": [
+3,
+1
+],
+"x": [
+3,
+2
+],
+"y": [
+3,
+3
+],
+"z": [
+3,
+4
+],
+"A": [
+3,
+5
+],
+"B": [
+3,
+6
+],
+"C": [
+3,
+7
+],
+"D": [
+3,
+8
+],
+"E": [
+3,
+9
+],
+"F": [
+3,
+10
+],
+"G": [
+3,
+11
+],
+"H": [
+3,
+12
+],
+"I": [
+3,
+13
+],
+"J": [
+3,
+14
+],
+"K": [
+3,
+15
+],
+"L": [
+3,
+16
+],
+"M": [
+3,
+17
+],
+"N": [
+3,
+18
+]
+},
+"ROGUE": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+2,
+1
+],
+"i": [
+2,
+2
+],
+"j": [
+2,
+3
+],
+"k": [
+2,
+4
+],
+"l": [
+2,
+5
+],
+"m": [
+2,
+6
+],
+"n": [
+2,
+7
+],
+"o": [
+2,
+8
+],
+"p": [
+2,
+9
+],
+"q": [
+2,
+10
+],
+"r": [
+2,
+11
+],
+"s": [
+2,
+12
+],
+"t": [
+2,
+13
+],
+"u": [
+2,
+14
+],
+"v": [
+2,
+15
+],
+"w": [
+2,
+16
+],
+"x": [
+2,
+17
+],
+"y": [
+3,
+1
+],
+"z": [
+3,
+2
+],
+"A": [
+3,
+3
+],
+"B": [
+3,
+4
+],
+"C": [
+3,
+5
+],
+"D": [
+3,
+6
+],
+"E": [
+3,
+7
+],
+"F": [
+3,
+8
+],
+"G": [
+3,
+9
+],
+"H": [
+3,
+10
+],
+"I": [
+3,
+11
+],
+"J": [
+3,
+12
+],
+"K": [
+3,
+13
+],
+"L": [
+3,
+14
+],
+"M": [
+3,
+15
+],
+"N": [
+3,
+16
+],
+"O": [
+3,
+17
+],
+"P": [
+3,
+18
+],
+"Q": [
+3,
+19
+]
+},
+"PRIEST": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+1,
+18
+],
+"i": [
+2,
+1
+],
+"j": [
+2,
+2
+],
+"k": [
+2,
+3
+],
+"l": [
+2,
+4
+],
+"m": [
+2,
+5
+],
+"n": [
+2,
+6
+],
+"o": [
+2,
+7
+],
+"p": [
+2,
+8
+],
+"q": [
+2,
+9
+],
+"r": [
+2,
+10
+],
+"s": [
+2,
+11
+],
+"t": [
+2,
+12
+],
+"u": [
+2,
+13
+],
+"v": [
+2,
+14
+],
+"w": [
+2,
+15
+],
+"x": [
+2,
+16
+],
+"y": [
+2,
+17
+],
+"z": [
+3,
+1
+],
+"A": [
+3,
+2
+],
+"B": [
+3,
+3
+],
+"C": [
+3,
+4
+],
+"D": [
+3,
+5
+],
+"E": [
+3,
+6
+],
+"F": [
+3,
+7
+],
+"G": [
+3,
+8
+],
+"H": [
+3,
+9
+],
+"I": [
+3,
+10
+],
+"J": [
+3,
+11
+],
+"K": [
+3,
+12
+],
+"L": [
+3,
+13
+],
+"M": [
+3,
+14
+],
+"N": [
+3,
+15
+],
+"O": [
+3,
+16
+],
+"P": [
+3,
+17
+],
+"Q": [
+3,
+18
+]
+},
+"SHAMAN": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+2,
+1
+],
+"h": [
+2,
+2
+],
+"i": [
+2,
+3
+],
+"j": [
+2,
+4
+],
+"k": [
+2,
+5
+],
+"l": [
+2,
+6
+],
+"m": [
+2,
+7
+],
+"n": [
+2,
+8
+],
+"o": [
+2,
+9
+],
+"p": [
+2,
+10
+],
+"q": [
+2,
+11
+],
+"r": [
+2,
+12
+],
+"s": [
+2,
+13
+],
+"t": [
+2,
+14
+],
+"u": [
+2,
+15
+],
+"v": [
+2,
+16
+],
+"w": [
+2,
+17
+],
+"x": [
+2,
+18
+],
+"y": [
+3,
+1
+],
+"z": [
+3,
+2
+],
+"A": [
+3,
+3
+],
+"B": [
+3,
+4
+],
+"C": [
+3,
+5
+],
+"D": [
+3,
+6
+],
+"E": [
+3,
+7
+],
+"F": [
+3,
+8
+],
+"G": [
+3,
+9
+],
+"H": [
+3,
+10
+],
+"I": [
+3,
+11
+],
+"J": [
+3,
+12
+],
+"K": [
+3,
+13
+],
+"L": [
+3,
+14
+],
+"M": [
+3,
+15
+],
+"N": [
+3,
+16
+]
+},
+"MAGE": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+1,
+18
+],
+"i": [
+2,
+1
+],
+"j": [
+2,
+2
+],
+"k": [
+2,
+3
+],
+"l": [
+2,
+4
+],
+"m": [
+2,
+5
+],
+"n": [
+2,
+6
+],
+"o": [
+2,
+7
+],
+"p": [
+2,
+8
+],
+"q": [
+2,
+9
+],
+"r": [
+2,
+10
+],
+"s": [
+2,
+11
+],
+"t": [
+2,
+12
+],
+"u": [
+2,
+13
+],
+"v": [
+2,
+14
+],
+"w": [
+2,
+15
+],
+"x": [
+2,
+16
+],
+"y": [
+2,
+17
+],
+"z": [
+3,
+1
+],
+"A": [
+3,
+2
+],
+"B": [
+3,
+3
+],
+"C": [
+3,
+4
+],
+"D": [
+3,
+5
+],
+"E": [
+3,
+6
+],
+"F": [
+3,
+7
+],
+"G": [
+3,
+8
+],
+"H": [
+3,
+9
+],
+"I": [
+3,
+10
+],
+"J": [
+3,
+11
+],
+"K": [
+3,
+12
+],
+"L": [
+3,
+13
+],
+"M": [
+3,
+14
+],
+"N": [
+3,
+15
+],
+"O": [
+3,
+16
+],
+"P": [
+3,
+17
+],
+"Q": [
+3,
+18
+],
+"R": [
+3,
+19
+]
+},
+"WARLOCK": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+2,
+1
+],
+"i": [
+2,
+2
+],
+"j": [
+2,
+3
+],
+"k": [
+2,
+4
+],
+"l": [
+2,
+5
+],
+"m": [
+2,
+6
+],
+"n": [
+2,
+7
+],
+"o": [
+2,
+8
+],
+"p": [
+2,
+9
+],
+"q": [
+2,
+10
+],
+"r": [
+2,
+11
+],
+"s": [
+2,
+12
+],
+"t": [
+2,
+13
+],
+"u": [
+2,
+14
+],
+"v": [
+2,
+15
+],
+"w": [
+2,
+16
+],
+"x": [
+2,
+17
+],
+"y": [
+2,
+18
+],
+"z": [
+2,
+19
+],
+"A": [
+3,
+1
+],
+"B": [
+3,
+2
+],
+"C": [
+3,
+3
+],
+"D": [
+3,
+4
+],
+"E": [
+3,
+5
+],
+"F": [
+3,
+6
+],
+"G": [
+3,
+7
+],
+"H": [
+3,
+8
+],
+"I": [
+3,
+9
+],
+"J": [
+3,
+10
+],
+"K": [
+3,
+11
+],
+"L": [
+3,
+12
+],
+"M": [
+3,
+13
+],
+"N": [
+3,
+14
+],
+"O": [
+3,
+15
+],
+"P": [
+3,
+16
+]
+},
+"DRUID": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+2,
+1
+],
+"h": [
+2,
+2
+],
+"i": [
+2,
+3
+],
+"j": [
+2,
+4
+],
+"k": [
+2,
+5
+],
+"l": [
+2,
+6
+],
+"m": [
+2,
+7
+],
+"n": [
+2,
+8
+],
+"o": [
+2,
+9
+],
+"p": [
+2,
+10
+],
+"q": [
+2,
+11
+],
+"r": [
+2,
+12
+],
+"s": [
+2,
+13
+],
+"t": [
+2,
+14
+],
+"u": [
+2,
+15
+],
+"v": [
+2,
+16
+],
+"w": [
+2,
+17
+],
+"x": [
+2,
+18
+],
+"y": [
+2,
+19
+],
+"z": [
+2,
+20
+],
+"A": [
+3,
+1
+],
+"B": [
+3,
+2
+],
+"C": [
+3,
+3
+],
+"D": [
+3,
+4
+],
+"E": [
+3,
+5
+],
+"F": [
+3,
+6
+],
+"G": [
+3,
+7
+],
+"H": [
+3,
+8
+],
+"I": [
+3,
+9
+],
+"J": [
+3,
+10
+],
+"K": [
+3,
+11
+],
+"L": [
+3,
+12
+],
+"M": [
+3,
+13
+],
+"N": [
+3,
+14
+],
+"O": [
+3,
+15
+],
+"P": [
+3,
+16
+]
+}
+},
+"tavern": {
+"WARRIOR": {
+"A0": [
+1,
+1
+],
+"A1": [
+1,
+2
+],
+"A2": [
+1,
+3
+],
+"A4": [
+1,
+4
+],
+"A5": [
+1,
+5
+],
+"A7": [
+1,
+6
+],
+"A9": [
+1,
+7
+],
+"Aa": [
+1,
+8
+],
+"Ac": [
+1,
+9
+],
+"Ad": [
+1,
+10
+],
+"Ae": [
+1,
+11
+],
+"Ag": [
+1,
+12
+],
+"Ah": [
+1,
+13
+],
+"Ai": [
+1,
+14
+],
+"Ak": [
+1,
+15
+],
+"Am": [
+1,
+16
+],
+"Ap": [
+1,
+17
+],
+"B1": [
+2,
+1
+],
+"B2": [
+2,
+2
+],
+"B5": [
+3,
+3
+],
+"B6": [
+2,
+4
+],
+"B9": [
+2,
+6
+],
+"Ba": [
+2,
+7
+],
+"Bc": [
+2,
+8
+],
+"Bd": [
+2,
+9
+],
+"Be": [
+2,
+10
+],
+"Bf": [
+2,
+11
+],
+"Bh": [
+2,
+13
+],
+"Bj": [
+2,
+14
+],
+"Bk": [
+2,
+12
+],
+"Bm": [
+2,
+15
+],
+"Bp": [
+2,
+17
+],
+"C1": [
+3,
+2
+],
+"C2": [
+3,
+4
+],
+"C4": [
+3,
+1
+],
+"C7": [
+3,
+6
+],
+"C8": [
+3,
+7
+],
+"C9": [
+3,
+8
+],
+"Ca": [
+3,
+5
+],
+"Cb": [
+3,
+10
+],
+"Cc": [
+3,
+11
+],
+"Cd": [
+3,
+9
+],
+"Ce": [
+3,
+12
+],
+"Cg": [
+3,
+14
+],
+"Ch": [
+3,
+15
+],
+"Ci": [
+3,
+13
+],
+"Cj": [
+3,
+17
+],
+"Cm": [
+3,
+16
+],
+"Cp": [
+3,
+18
+]
+},
+"PALADIN": {
+"A1": [
+1,
+1
+],
+"A2": [
+1,
+2
+],
+"A4": [
+1,
+3
+],
+"A5": [
+1,
+4
+],
+"A6": [
+1,
+5
+],
+"A7": [
+1,
+6
+],
+"A8": [
+1,
+7
+],
+"A9": [
+1,
+8
+],
+"Aa": [
+1,
+9
+],
+"Ac": [
+1,
+10
+],
+"Ad": [
+1,
+11
+],
+"Ae": [
+1,
+12
+],
+"Ag": [
+1,
+13
+],
+"Ah": [
+1,
+14
+],
+"Ai": [
+1,
+15
+],
+"Am": [
+1,
+16
+],
+"Ap": [
+1,
+17
+],
+"B1": [
+2,
+1
+],
+"B2": [
+2,
+2
+],
+"B4": [
+2,
+3
+],
+"B5": [
+2,
+4
+],
+"B7": [
+2,
+5
+],
+"B8": [
+2,
+6
+],
+"B9": [
+2,
+7
+],
+"Ba": [
+2,
+8
+],
+"Bb": [
+2,
+9
+],
+"Bc": [
+2,
+10
+],
+"Bd": [
+2,
+11
+],
+"Be": [
+2,
+12
+],
+"Bh": [
+2,
+13
+],
+"Bi": [
+2,
+14
+],
+"Bm": [
+2,
+15
+],
+"Bp": [
+2,
+16
+],
+"C1": [
+3,
+1
+],
+"C2": [
+3,
+2
+],
+"C4": [
+3,
+3
+],
+"C5": [
+3,
+4
+],
+"C6": [
+3,
+5
+],
+"C8": [
+3,
+6
+],
+"C9": [
+3,
+7
+],
+"Ca": [
+3,
+8
+],
+"Cb": [
+3,
+9
+],
+"Cc": [
+3,
+10
+],
+"Ce": [
+3,
+11
+],
+"Cg": [
+3,
+12
+],
+"Ch": [
+3,
+13
+],
+"Ci": [
+3,
+14
+],
+"Cl": [
+3,
+15
+],
+"Cm": [
+3,
+16
+],
+"Cp": [
+3,
+17
+]
+},
+"HUNTER": {
+"A1": [
+1,
+1
+],
+"A2": [
+1,
+2
+],
+"A4": [
+1,
+3
+],
+"A5": [
+1,
+4
+],
+"A6": [
+1,
+5
+],
+"A7": [
+1,
+6
+],
+"A9": [
+1,
+7
+],
+"Aa": [
+1,
+8
+],
+"Ac": [
+1,
+9
+],
+"Ae": [
+1,
+10
+],
+"Af": [
+1,
+11
+],
+"Ag": [
+1,
+12
+],
+"Ah": [
+1,
+13
+],
+"Aj": [
+1,
+14
+],
+"Am": [
+1,
+15
+],
+"Ap": [
+1,
+16
+],
+"B0": [
+2,
+1
+],
+"B1": [
+2,
+2
+],
+"B2": [
+2,
+3
+],
+"B4": [
+2,
+4
+],
+"B5": [
+2,
+5
+],
+"B6": [
+2,
+6
+],
+"B8": [
+2,
+7
+],
+"B9": [
+2,
+8
+],
+"Bb": [
+2,
+9
+],
+"Bd": [
+2,
+10
+],
+"Be": [
+2,
+11
+],
+"Bg": [
+2,
+12
+],
+"Bi": [
+2,
+13
+],
+"Bj": [
+2,
+14
+],
+"Bm": [
+2,
+15
+],
+"Bp": [
+2,
+16
+],
+"C1": [
+3,
+1
+],
+"C2": [
+3,
+2
+],
+"C4": [
+3,
+3
+],
+"C5": [
+3,
+4
+],
+"C6": [
+3,
+5
+],
+"C7": [
+3,
+6
+],
+"C8": [
+3,
+7
+],
+"C9": [
+3,
+8
+],
+"Ca": [
+3,
+9
+],
+"Cc": [
+3,
+10
+],
+"Cd": [
+3,
+11
+],
+"Ce": [
+3,
+12
+],
+"Cg": [
+3,
+13
+],
+"Ch": [
+3,
+14
+],
+"Ci": [
+3,
+15
+],
+"Cj": [
+3,
+16
+],
+"Cm": [
+3,
+17
+],
+"Cp": [
+3,
+18
+]
+},
+"ROGUE": {
+"A0": [
+1,
+1
+],
+"A1": [
+1,
+2
+],
+"A2": [
+1,
+3
+],
+"A4": [
+1,
+4
+],
+"A5": [
+1,
+5
+],
+"A7": [
+1,
+6
+],
+"A8": [
+1,
+7
+],
+"A9": [
+1,
+8
+],
+"Aa": [
+1,
+9
+],
+"Ac": [
+1,
+10
+],
+"Ad": [
+1,
+11
+],
+"Ae": [
+1,
+12
+],
+"Ag": [
+1,
+13
+],
+"Ah": [
+1,
+14
+],
+"Ai": [
+1,
+15
+],
+"Am": [
+1,
+16
+],
+"Ap": [
+1,
+17
+],
+"B0": [
+2,
+1
+],
+"B1": [
+2,
+2
+],
+"B2": [
+2,
+3
+],
+"B4": [
+2,
+4
+],
+"B5": [
+2,
+5
+],
+"B6": [
+2,
+6
+],
+"B8": [
+2,
+7
+],
+"B9": [
+2,
+8
+],
+"Bb": [
+2,
+9
+],
+"Bc": [
+2,
+10
+],
+"Bd": [
+2,
+11
+],
+"Be": [
+2,
+12
+],
+"Bh": [
+2,
+13
+],
+"Bi": [
+2,
+14
+],
+"Bl": [
+2,
+15
+],
+"Bm": [
+2,
+16
+],
+"Bp": [
+2,
+17
+],
+"C0": [
+3,
+1
+],
+"C1": [
+3,
+2
+],
+"C2": [
+3,
+3
+],
+"C4": [
+3,
+4
+],
+"C5": [
+3,
+5
+],
+"C6": [
+3,
+6
+],
+"C7": [
+3,
+7
+],
+"C8": [
+3,
+8
+],
+"C9": [
+3,
+9
+],
+"Ca": [
+3,
+10
+],
+"Cc": [
+3,
+11
+],
+"Cd": [
+3,
+12
+],
+"Ce": [
+3,
+13
+],
+"Cg": [
+3,
+14
+],
+"Ch": [
+3,
+15
+],
+"Ci": [
+3,
+16
+],
+"Ck": [
+3,
+17
+],
+"Cm": [
+3,
+18
+],
+"Cp": [
+3,
+19
+]
+},
+"PRIEST": {
+"A0": [
+1,
+1
+],
+"A1": [
+1,
+2
+],
+"A2": [
+1,
+3
+],
+"A4": [
+1,
+4
+],
+"A5": [
+1,
+5
+],
+"A6": [
+1,
+6
+],
+"A7": [
+1,
+7
+],
+"A8": [
+1,
+8
+],
+"A9": [
+1,
+9
+],
+"Ab": [
+1,
+10
+],
+"Ac": [
+1,
+11
+],
+"Ad": [
+1,
+12
+],
+"Ae": [
+1,
+13
+],
+"Af": [
+1,
+14
+],
+"Ah": [
+1,
+15
+],
+"Ai": [
+1,
+16
+],
+"Am": [
+1,
+17
+],
+"Ap": [
+1,
+18
+],
+"B0": [
+2,
+1
+],
+"B1": [
+2,
+2
+],
+"B2": [
+2,
+3
+],
+"B5": [
+2,
+4
+],
+"B6": [
+2,
+5
+],
+"B8": [
+2,
+6
+],
+"B9": [
+2,
+7
+],
+"Bb": [
+2,
+8
+],
+"Bc": [
+2,
+9
+],
+"Bd": [
+2,
+10
+],
+"Be": [
+2,
+11
+],
+"Bf": [
+2,
+12
+],
+"Bg": [
+2,
+13
+],
+"Bh": [
+2,
+14
+],
+"Bi": [
+2,
+15
+],
+"Bm": [
+2,
+16
+],
+"Bp": [
+2,
+17
+],
+"C0": [
+3,
+1
+],
+"C1": [
+3,
+2
+],
+"C2": [
+3,
+3
+],
+"C4": [
+3,
+4
+],
+"C6": [
+3,
+5
+],
+"C7": [
+3,
+6
+],
+"C8": [
+3,
+7
+],
+"C9": [
+3,
+8
+],
+"Ca": [
+3,
+9
+],
+"Cb": [
+3,
+10
+],
+"Cc": [
+3,
+11
+],
+"Cd": [
+3,
+12
+],
+"Ce": [
+3,
+13
+],
+"Cg": [
+3,
+14
+],
+"Ci": [
+3,
+15
+],
+"Ck": [
+3,
+16
+],
+"Cm": [
+3,
+17
+],
+"Cp": [
+3,
+18
+]
+},
+"SHAMAN": {
+"A1": [
+1,
+1
+],
+"A2": [
+1,
+2
+],
+"A4": [
+1,
+3
+],
+"A5": [
+1,
+4
+],
+"A6": [
+1,
+5
+],
+"A7": [
+1,
+6
+],
+"A9": [
+1,
+7
+],
+"Aa": [
+1,
+15
+],
+"Ac": [
+1,
+9
+],
+"Ad": [
+1,
+10
+],
+"Ae": [
+1,
+11
+],
+"Ag": [
+1,
+12
+],
+"Ah": [
+1,
+13
+],
+"Aj": [
+1,
+14
+],
+"Am": [
+1,
+8
+],
+"Ap": [
+1,
+16
+],
+"B0": [
+2,
+1
+],
+"B1": [
+2,
+2
+],
+"B2": [
+2,
+3
+],
+"B4": [
+2,
+4
+],
+"B5": [
+2,
+5
+],
+"B6": [
+2,
+6
+],
+"B7": [
+2,
+7
+],
+"B8": [
+2,
+8
+],
+"Ba": [
+2,
+9
+],
+"Bb": [
+2,
+10
+],
+"Bc": [
+2,
+11
+],
+"Bd": [
+2,
+12
+],
+"Be": [
+2,
+13
+],
+"Bg": [
+2,
+14
+],
+"Bh": [
+2,
+15
+],
+"Bi": [
+2,
+16
+],
+"Bm": [
+2,
+17
+],
+"Bp": [
+2,
+18
+],
+"C1": [
+3,
+1
+],
+"C2": [
+3,
+2
+],
+"C4": [
+3,
+3
+],
+"C5": [
+3,
+4
+],
+"C6": [
+3,
+5
+],
+"C7": [
+3,
+6
+],
+"C8": [
+3,
+7
+],
+"C9": [
+3,
+8
+],
+"Ca": [
+3,
+9
+],
+"Cc": [
+3,
+10
+],
+"Cd": [
+3,
+11
+],
+"Ce": [
+3,
+12
+],
+"Ch": [
+3,
+13
+],
+"Ci": [
+3,
+14
+],
+"Cm": [
+3,
+15
+],
+"Cp": [
+3,
+16
+]
+},
+"MAGE": {
+"A0": [
+1,
+1
+],
+"A1": [
+1,
+2
+],
+"A2": [
+1,
+3
+],
+"A4": [
+1,
+4
+],
+"A5": [
+1,
+5
+],
+"A6": [
+1,
+6
+],
+"A7": [
+1,
+7
+],
+"A8": [
+1,
+8
+],
+"A9": [
+1,
+9
+],
+"Ab": [
+1,
+10
+],
+"Ac": [
+1,
+11
+],
+"Ad": [
+1,
+12
+],
+"Ae": [
+1,
+13
+],
+"Af": [
+1,
+14
+],
+"Ah": [
+1,
+15
+],
+"Ai": [
+1,
+16
+],
+"Am": [
+1,
+17
+],
+"Ap": [
+1,
+18
+],
+"B0": [
+2,
+1
+],
+"B1": [
+2,
+2
+],
+"B2": [
+2,
+3
+],
+"B4": [
+2,
+4
+],
+"B5": [
+2,
+5
+],
+"B6": [
+2,
+6
+],
+"B8": [
+2,
+7
+],
+"B9": [
+2,
+8
+],
+"Ba": [
+2,
+9
+],
+"Bc": [
+2,
+10
+],
+"Bd": [
+2,
+11
+],
+"Be": [
+2,
+12
+],
+"Bf": [
+2,
+13
+],
+"Bh": [
+2,
+14
+],
+"Bi": [
+2,
+15
+],
+"Bm": [
+2,
+16
+],
+"Bp": [
+2,
+17
+],
+"C0": [
+3,
+1
+],
+"C1": [
+3,
+2
+],
+"C2": [
+3,
+3
+],
+"C4": [
+3,
+4
+],
+"C5": [
+3,
+5
+],
+"C6": [
+3,
+6
+],
+"C7": [
+3,
+7
+],
+"C8": [
+3,
+8
+],
+"C9": [
+3,
+9
+],
+"Ca": [
+3,
+10
+],
+"Cb": [
+3,
+11
+],
+"Cc": [
+3,
+12
+],
+"Cd": [
+3,
+13
+],
+"Cf": [
+3,
+14
+],
+"Cg": [
+3,
+15
+],
+"Ch": [
+3,
+16
+],
+"Ci": [
+3,
+17
+],
+"Cm": [
+3,
+18
+],
+"Cp": [
+3,
+19
+]
+},
+"WARLOCK": {
+"A0": [
+1,
+1
+],
+"A1": [
+1,
+2
+],
+"A2": [
+1,
+3
+],
+"A4": [
+1,
+4
+],
+"A5": [
+1,
+5
+],
+"A6": [
+1,
+6
+],
+"A8": [
+1,
+7
+],
+"A9": [
+1,
+8
+],
+"Aa": [
+1,
+9
+],
+"Ab": [
+1,
+10
+],
+"Ac": [
+1,
+11
+],
+"Ad": [
+1,
+12
+],
+"Ae": [
+1,
+13
+],
+"Ah": [
+1,
+14
+],
+"Ai": [
+1,
+15
+],
+"Am": [
+1,
+16
+],
+"Ap": [
+1,
+17
+],
+"B0": [
+2,
+1
+],
+"B1": [
+2,
+2
+],
+"B2": [
+2,
+3
+],
+"B3": [
+2,
+4
+],
+"B4": [
+2,
+5
+],
+"B5": [
+2,
+6
+],
+"B6": [
+2,
+7
+],
+"B7": [
+2,
+8
+],
+"B8": [
+2,
+9
+],
+"B9": [
+2,
+10
+],
+"Ba": [
+2,
+11
+],
+"Bc": [
+2,
+12
+],
+"Be": [
+2,
+13
+],
+"Bf": [
+2,
+14
+],
+"Bg": [
+2,
+15
+],
+"Bh": [
+2,
+16
+],
+"Bi": [
+2,
+17
+],
+"Bm": [
+2,
+18
+],
+"Bp": [
+2,
+19
+],
+"C0": [
+3,
+1
+],
+"C1": [
+3,
+2
+],
+"C2": [
+3,
+3
+],
+"C4": [
+3,
+4
+],
+"C5": [
+3,
+5
+],
+"C6": [
+3,
+6
+],
+"C9": [
+3,
+7
+],
+"Ca": [
+3,
+8
+],
+"Cc": [
+3,
+9
+],
+"Cd": [
+3,
+10
+],
+"Ce": [
+3,
+11
+],
+"Cg": [
+3,
+12
+],
+"Ch": [
+3,
+13
+],
+"Ci": [
+3,
+14
+],
+"Cm": [
+3,
+15
+],
+"Cp": [
+3,
+16
+]
+},
+"DRUID": {
+"A1": [
+1,
+1
+],
+"A2": [
+1,
+2
+],
+"A4": [
+1,
+3
+],
+"A5": [
+1,
+4
+],
+"A6": [
+1,
+5
+],
+"A7": [
+1,
+6
+],
+"A8": [
+1,
+7
+],
+"Aa": [
+1,
+8
+],
+"Ac": [
+1,
+9
+],
+"Ad": [
+1,
+10
+],
+"Ae": [
+1,
+11
+],
+"Ag": [
+1,
+12
+],
+"Ah": [
+1,
+13
+],
+"Ai": [
+1,
+14
+],
+"Al": [
+1,
+15
+],
+"Ap": [
+1,
+16
+],
+"B1": [
+2,
+1
+],
+"B2": [
+2,
+2
+],
+"B4": [
+2,
+3
+],
+"B5": [
+2,
+4
+],
+"B6": [
+2,
+5
+],
+"B7": [
+2,
+6
+],
+"B9": [
+2,
+8
+],
+"Ba": [
+2,
+9
+],
+"Bb": [
+2,
+10
+],
+"Bc": [
+2,
+7
+],
+"Bd": [
+2,
+12
+],
+"Be": [
+2,
+13
+],
+"Bf": [
+2,
+14
+],
+"Bg": [
+2,
+17
+],
+"Bh": [
+2,
+16
+],
+"Bk": [
+2,
+18
+],
+"Bm": [
+2,
+19
+],
+"Bp": [
+2,
+20
+],
+"C1": [
+3,
+1
+],
+"C2": [
+3,
+2
+],
+"C4": [
+3,
+3
+],
+"C5": [
+3,
+4
+],
+"C6": [
+3,
+5
+],
+"C9": [
+3,
+6
+],
+"Ca": [
+3,
+7
+],
+"Cb": [
+3,
+8
+],
+"Cd": [
+3,
+9
+],
+"Ce": [
+3,
+10
+],
+"Cf": [
+3,
+11
+],
+"Cg": [
+3,
+12
+],
+"Ch": [
+3,
+13
+],
+"Cj": [
+3,
+14
+],
+"Cm": [
+3,
+15
+],
+"Cp": [
+3,
+16
+]
+}
+},
+"wfb": {
+"WARRIOR": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+14
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+12
+],
+"0:14": [
+1,
+15
+],
+"0:15": [
+1,
+16
+],
+"0:16": [
+1,
+17
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+3,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+7
+],
+"1:8": [
+2,
+8
+],
+"1:9": [
+2,
+9
+],
+"1:10": [
+2,
+10
+],
+"1:11": [
+2,
+11
+],
+"1:13": [
+2,
+13
+],
+"1:14": [
+2,
+14
+],
+"1:15": [
+2,
+12
+],
+"1:16": [
+2,
+15
+],
+"1:17": [
+2,
+17
+],
+"2:0": [
+3,
+2
+],
+"2:1": [
+3,
+4
+],
+"2:2": [
+3,
+1
+],
+"2:4": [
+3,
+6
+],
+"2:5": [
+3,
+7
+],
+"2:6": [
+3,
+8
+],
+"2:7": [
+3,
+5
+],
+"2:8": [
+3,
+10
+],
+"2:9": [
+3,
+11
+],
+"2:10": [
+3,
+9
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+14
+],
+"2:13": [
+3,
+15
+],
+"2:14": [
+3,
+13
+],
+"2:16": [
+3,
+16
+],
+"2:17": [
+3,
+17
+],
+"2:18": [
+3,
+18
+]
+},
+"PALADIN": {
+"0:1": [
+1,
+1
+],
+"0:2": [
+1,
+2
+],
+"0:3": [
+1,
+3
+],
+"0:4": [
+1,
+4
+],
+"0:5": [
+1,
+5
+],
+"0:6": [
+1,
+6
+],
+"0:7": [
+1,
+7
+],
+"0:8": [
+1,
+8
+],
+"0:9": [
+1,
+9
+],
+"0:10": [
+1,
+10
+],
+"0:11": [
+1,
+11
+],
+"0:12": [
+1,
+12
+],
+"0:13": [
+1,
+13
+],
+"0:14": [
+1,
+14
+],
+"0:15": [
+1,
+15
+],
+"0:16": [
+1,
+16
+],
+"0:17": [
+1,
+17
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+7
+],
+"1:7": [
+2,
+8
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:10": [
+2,
+11
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+14
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+10
+],
+"2:10": [
+3,
+11
+],
+"2:12": [
+3,
+12
+],
+"2:13": [
+3,
+13
+],
+"2:14": [
+3,
+14
+],
+"2:15": [
+3,
+15
+],
+"2:16": [
+3,
+16
+],
+"2:17": [
+3,
+17
+]
+},
+"HUNTER": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+12
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+14
+],
+"0:14": [
+1,
+15
+],
+"0:15": [
+1,
+16
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+6
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+3
+],
+"1:6": [
+2,
+7
+],
+"1:7": [
+2,
+8
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:10": [
+2,
+11
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+14
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+10
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+15
+],
+"2:15": [
+3,
+16
+],
+"2:16": [
+3,
+17
+],
+"2:17": [
+3,
+18
+]
+},
+"ROGUE": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+12
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+17
+],
+"0:14": [
+1,
+15
+],
+"0:15": [
+1,
+16
+],
+"0:16": [
+1,
+14
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+7
+],
+"1:7": [
+2,
+8
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+14
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"1:16": [
+2,
+17
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+10
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+15
+],
+"2:15": [
+3,
+16
+],
+"2:16": [
+3,
+17
+],
+"2:17": [
+3,
+18
+],
+"2:18": [
+3,
+19
+]
+},
+"PRIEST": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+12
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+14
+],
+"0:14": [
+1,
+15
+],
+"0:15": [
+1,
+16
+],
+"0:16": [
+1,
+17
+],
+"0:17": [
+1,
+18
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+7
+],
+"1:7": [
+2,
+8
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:10": [
+2,
+11
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+14
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"1:16": [
+2,
+17
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+10
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+15
+],
+"2:15": [
+3,
+16
+],
+"2:16": [
+3,
+17
+],
+"2:17": [
+3,
+18
+]
+},
+"SHAMAN": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+15
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+12
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+14
+],
+"0:14": [
+1,
+8
+],
+"0:15": [
+1,
+16
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+7
+],
+"1:7": [
+2,
+8
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:10": [
+2,
+11
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+14
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"1:16": [
+2,
+17
+],
+"1:17": [
+2,
+18
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+10
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+2
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+15
+],
+"2:15": [
+3,
+16
+]
+},
+"MAGE": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+12
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+14
+],
+"0:14": [
+1,
+15
+],
+"0:15": [
+1,
+16
+],
+"0:16": [
+1,
+17
+],
+"0:17": [
+1,
+18
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+7
+],
+"1:7": [
+2,
+8
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:10": [
+2,
+11
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+14
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"1:16": [
+2,
+17
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+10
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+15
+],
+"2:15": [
+3,
+16
+],
+"2:16": [
+3,
+17
+],
+"2:17": [
+3,
+18
+],
+"2:18": [
+3,
+19
+]
+},
+"WARLOCK": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:8": [
+1,
+9
+],
+"0:9": [
+1,
+10
+],
+"0:10": [
+1,
+11
+],
+"0:11": [
+1,
+12
+],
+"0:12": [
+1,
+13
+],
+"0:13": [
+1,
+14
+],
+"0:14": [
+1,
+15
+],
+"0:15": [
+1,
+16
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+14
+],
+"1:7": [
+2,
+7
+],
+"1:8": [
+2,
+9
+],
+"1:9": [
+2,
+10
+],
+"1:10": [
+2,
+11
+],
+"1:11": [
+2,
+12
+],
+"1:12": [
+2,
+13
+],
+"1:13": [
+2,
+8
+],
+"1:14": [
+2,
+15
+],
+"1:15": [
+2,
+16
+],
+"1:16": [
+2,
+17
+],
+"1:17": [
+2,
+18
+],
+"1:18": [
+2,
+19
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+6
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+3
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+15
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+10
+],
+"2:15": [
+3,
+16
+]
+},
+"DRUID": {
+"0:0": [
+1,
+1
+],
+"0:1": [
+1,
+2
+],
+"0:2": [
+1,
+3
+],
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
+1,
+8
+],
+"0:9": [
+1,
+9
+],
+"0:10": [
+1,
+10
+],
+"0:11": [
+1,
+11
+],
+"0:12": [
+1,
+12
+],
+"0:13": [
+1,
+13
+],
+"0:14": [
+1,
+14
+],
+"0:15": [
+1,
+15
+],
+"0:16": [
+1,
+16
+],
+"1:0": [
+2,
+1
+],
+"1:1": [
+2,
+2
+],
+"1:2": [
+2,
+3
+],
+"1:3": [
+2,
+4
+],
+"1:4": [
+2,
+5
+],
+"1:5": [
+2,
+6
+],
+"1:6": [
+2,
+8
+],
+"1:7": [
+2,
+9
+],
+"1:8": [
+2,
+10
+],
+"1:9": [
+2,
+7
+],
+"1:10": [
+2,
+12
+],
+"1:11": [
+2,
+13
+],
+"1:12": [
+2,
+14
+],
+"1:13": [
+2,
+17
+],
+"1:14": [
+2,
+16
+],
+"1:16": [
+2,
+18
+],
+"1:17": [
+2,
+19
+],
+"1:18": [
+2,
+20
+],
+"2:0": [
+3,
+1
+],
+"2:1": [
+3,
+2
+],
+"2:2": [
+3,
+3
+],
+"2:3": [
+3,
+4
+],
+"2:4": [
+3,
+5
+],
+"2:5": [
+3,
+6
+],
+"2:6": [
+3,
+7
+],
+"2:7": [
+3,
+8
+],
+"2:8": [
+3,
+9
+],
+"2:9": [
+3,
+10
+],
+"2:10": [
+3,
+11
+],
+"2:11": [
+3,
+12
+],
+"2:12": [
+3,
+13
+],
+"2:13": [
+3,
+14
+],
+"2:14": [
+3,
+15
+],
+"2:15": [
+3,
+16
+]
+}
+}
+}
+]
 }

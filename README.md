@@ -9,9 +9,14 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Orden de puntos:** una línea de tiempo con los 51 puntos en orden y su nivel; pulsa uno para ver la build tal como queda en ese nivel.
 - **Comparar:** clic derecho en otra build, o "Comparar con mis talentos". Cada talento muestra los rangos de A y B, y debajo aparece la lista de diferencias.
 - **Aprender puntos libres:** gasta tus puntos siguiendo el orden de la build (fuera de combate).
-- **+ Importar enlace:** pega un enlace de build de talentsforever.com o de la calculadora de Icy Veins. Funciona sin conexión y se guarda en tu cuenta.
+- **+ Importar enlace:** pega un enlace de build de talentsforever.com, Icy Veins, Warcraft Tavern o wowforeverbuilds.com. Funciona sin conexión y se guarda en tu cuenta.
+- **Recomendaciones:** las builds iguales de varias webs se juntan en una ("también la recomiendan: …") y salen primero.
+- **Guardar como configuración:** guarda la build como una configuración de talentos del juego, para cambiar entre builds desde la ventana de talentos.
+- **Builds de la beta:** marcadas, y se pueden ocultar con el filtro "Beta".
+- **Nombres y descripciones en tu idioma** para los talentos de todas las clases.
+- **Accesos:** botón en el minimapa (`/zb minimap` lo oculta), menú de addons del juego y botón sobre la ventana de talentos.
 
-Comando: `/zb`
+Comandos: `/zb` abre la ventana · `/zb minimap` oculta o muestra el botón del minimapa · `/zb diag` comprueba qué permite este cliente
 
 Idiomas: inglés, español, alemán, francés, portugués, italiano, ruso, coreano y chino (simplificado y tradicional). Se elige el del juego automáticamente.
 
@@ -22,7 +27,7 @@ Idiomas: inglés, español, alemán, francés, portugués, italiano, ruso, corea
 
 ## Cómo se actualizan las builds
 
-Los addons de WoW no pueden conectarse a internet, así que el trabajo lo hace GitHub: cada día ejecuta `tools/update_builds.py`. Si alguna build ha cambiado, publica una versión nueva y tu gestor de addons la descarga. También se puede lanzar a mano desde la pestaña **Actions** → "Actualizar builds" → **Run workflow**.
+Los addons de WoW no pueden conectarse a internet, así que el trabajo lo hace GitHub: cada día ejecuta `tools/update_builds.py`. Si alguna build ha cambiado, publica una versión nueva y tu gestor de addons la descarga. Si una web falla o cambia, se mantiene la copia anterior y se abre un aviso en [Issues](../../issues). También se puede lanzar a mano desde la pestaña **Actions** → "Actualizar builds" → **Run workflow**.
 
 ## Añadir guías para todos
 

@@ -55,7 +55,7 @@ local frame
 -- spec: tree index of the open tab (nil = pick the character's current one)
 -- preview: number of points of the build shown (the build at a level), nil = the whole build
 local state = { class = nil, spec = nil, category = "all", build = nil, compare = nil, search = "", hidden = {}, collapsed = {},
-    preview = nil, previewOf = nil }
+    preview = nil, previewOf = nil, hideBeta = false }
 local rows, cells, cards, specTabs, categoryChips, steps, diffChips = {}, {}, {}, {}, {}, {}, {}
 local compareSummary
 
@@ -168,11 +168,22 @@ local function visibleBuilds()
     local groups = {}
     for _, source in ipairs(SOURCES) do groups[#groups + 1] = { source = source, builds = {} } end
     for _, build in ipairs(specBuilds()) do
-        local haystack = (build.name .. " " .. (build.spec or "")):lower()
+        local haystack = build.name .. " " .. (build.spec or "")
+        for _, other in ipairs(build.also or {}) do haystack = haystack .. " " .. other.name .. " " .. other.source end
         if not state.hidden[build.source] and (state.category == "all" or categoryKey(build) == state.category)
-            and (query == "" or haystack:find(query, 1, true)) then
+            and not (state.hideBeta and build.beta) and (query == "" or haystack:lower():find(query, 1, true)) then
             for _, g in ipairs(groups) do if g.source == build.source then table.insert(g.builds, build) end end
         end
+    end
+    -- the builds more sites agree on first, otherwise in the order the sources give them
+    for _, g in ipairs(groups) do
+        local position = {}
+        for k, b in ipairs(g.builds) do position[b] = k end
+        table.sort(g.builds, function(a, b)
+            local na, nb = #(a.also or {}), #(b.also or {})
+            if na ~= nb then return na > nb end
+            return position[a] < position[b]
+        end)
     end
     return groups
 end
@@ -213,6 +224,10 @@ local function listRow(index)
         if self.build then
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
             GameTooltip:SetText(self.build.name, 1, 1, 1, 1, true)
+            for _, other in ipairs(self.build.also or {}) do
+                GameTooltip:AddLine(ns.SourceName(other.source) .. ": " .. other.name, 0.5, 0.85, 0.5, true)
+            end
+            if self.build.beta then GameTooltip:AddLine(L.BETA_TIP, 0.6, 0.6, 0.65, true) end
             GameTooltip:AddLine(L.ROW_HINT, 0.7, 0.7, 0.7)
             GameTooltip:Show()
         end
@@ -292,8 +307,10 @@ local function refreshList()
                     row.title:SetPoint("TOPLEFT", 44, -6)
                     if color then row.title:SetPoint("RIGHT", row.pill, "LEFT", -6, 0) else row.title:SetPoint("RIGHT", -8, 0) end
                     row.title:SetText(build.name)
-                    row.sub:SetText(("%s  ·  %s%s"):format(build.spec or "", table.concat(build.points, "/"),
-                        build.level and ("  ·  " .. L.LEVEL_SHORT:format(build.level)) or ""))
+                    row.sub:SetText(("%s  ·  %s%s%s%s"):format(build.spec or "", table.concat(build.points, "/"),
+                        build.level and ("  ·  " .. L.LEVEL_SHORT:format(build.level)) or "",
+                        build.beta and ("  ·  " .. L.BETA) or "",
+                        build.also and paint("  ·  +" .. #build.also, C.done) or ""))
                     row.tag:SetText(build == state.compare and "B" or "")
                     local total, x = math.max(1, build.points[1] + build.points[2] + build.points[3]), 44
                     for t = 1, 3 do
@@ -502,7 +519,7 @@ local function refreshTrees(classData, tree)
             local cl = cell(t, i)
             cl:SetPoint("TOPLEFT", cellPos(tal))
             cl.icon:SetTexture("Interface\\Icons\\" .. (tal.icon or "inv_misc_questionmark"))
-            cl.name, cl.spell = tal.name, tree and tree.spell[t][i]
+            cl.name, cl.spell = tal.name, ns.TalentSpell(classData, tree, t, i)
             local look = cellLook(ranksA[t][i], other and ns.TargetRank(other, t, i), tal.max,
                 tree and tree.rank[t][i])
             cl.info = look.info
@@ -565,7 +582,7 @@ local function refreshTimeline(build, classData, tree)
     for k, s in ipairs(order) do
         local b, t, i = step(k), s[1], s[2]
         local tal = classData.trees[t].talents[i]
-        b.k, b.name, b.spell = k, tal.name, tree and tree.spell[t][i]
+        b.k, b.name, b.spell = k, tal.name, ns.TalentSpell(classData, tree, t, i)
         b.icon:SetTexture("Interface\\Icons\\" .. (tal.icon or "inv_misc_questionmark"))
         local ahead = state.preview and k > state.preview
         b.icon:SetDesaturated(ahead)
@@ -743,8 +760,13 @@ function ns.Refresh()
     if build then
         sub = paint(ns.SourceName(build.source), C.source[build.source] or C.dim)
         if C.category[build.category] then sub = sub .. "   " .. paint(ns.CategoryName(build.category), C.category[build.category]) end
-        sub = sub .. paint(("   ·   %s   ·   %s%s"):format(build.spec or "", table.concat(build.points, "/"),
-            build.level and ("   ·   " .. L.LEVEL:format(build.level)) or ""), C.dim)
+        sub = sub .. paint(("   ·   %s   ·   %s%s%s"):format(build.spec or "", table.concat(build.points, "/"),
+            build.level and ("   ·   " .. L.LEVEL:format(build.level)) or "", build.beta and ("   ·   " .. L.BETA) or ""), C.dim)
+        if build.also then
+            local names = {}
+            for _, other in ipairs(build.also) do names[#names + 1] = ns.SourceName(other.source) end
+            sub = sub .. "   ·   " .. paint(L.RECOMMENDED_BY:format(table.concat(names, ", ")), C.done)
+        end
     end
     frame.buildSub:SetText(sub)
 
@@ -781,6 +803,7 @@ function ns.Refresh()
     frame.link:SetCursorPosition(0)
     frame.apply:SetEnabled(tree ~= nil and build ~= nil)
     frame.compareMine:SetEnabled(tree ~= nil and build ~= nil)
+    frame.saveLoadout:SetEnabled(tree ~= nil and build ~= nil)
     frame.clearCompare:SetEnabled(state.compare ~= nil)
     frame.remove:SetShown(build ~= nil and build.imported == true)
 end
@@ -919,6 +942,18 @@ local function create()
         local col, row = (k - 1) % CHIPS_PER_ROW, math.floor((k - 1) / CHIPS_PER_ROW)
         chip:SetPoint("TOPLEFT", PAD + col * (chipW + 6), top - 122 - row * 24)
     end
+    local beta
+    beta = button(frame, L.BETA, chipW, function()
+        state.hideBeta = not state.hideBeta
+        beta:SetBackdropColor(unpack(state.hideBeta and C.bg or C.raised))
+        beta.label:SetTextColor(unpack(state.hideBeta and C.dim or C.same))
+        ns.Refresh()
+    end)
+    beta:SetSize(chipW, 20)
+    beta.label:SetFont(STANDARD_TEXT_FONT, 10, "")
+    beta.label:SetTextColor(unpack(C.same))
+    beta:SetPoint("TOPLEFT", PAD + (#SOURCES % CHIPS_PER_ROW) * (chipW + 6),
+        top - 122 - math.floor(#SOURCES / CHIPS_PER_ROW) * 24)
 
     local listTop = top - 174
     frame.list = CreateFrame("ScrollFrame", nil, frame)
@@ -1014,7 +1049,12 @@ local function create()
     frame.remove:SetBackdropColor(0.32, 0.12, 0.12, 1)
 
     -- link to the source, selectable for Ctrl+C
-    frame.link = input(frame, TREES_W)
+    frame.saveLoadout = button(frame, L.SAVE_LOADOUT, 120, function()
+        local ok, result = ns.SaveLoadout(state.build, ns.ClassData(state.class))
+        ns.Print(ok and L.LOADOUT_SAVED:format(result) or ("|cffff5050" .. L.LOADOUT_FAILED:format(result) .. "|r"))
+    end)
+    frame.saveLoadout:SetPoint("BOTTOMRIGHT", -PAD, PAD + 50)
+    frame.link = input(frame, TREES_W - frame.saveLoadout:GetWidth() - 8)
     frame.link:SetPoint("BOTTOMLEFT", right, PAD + 50)
     frame.link:SetTextColor(unpack(C.dim))
     frame.link:SetScript("OnEditFocusGained", function(self) self:HighlightText() end)
