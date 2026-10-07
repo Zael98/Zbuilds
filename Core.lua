@@ -199,6 +199,20 @@ function ns.NextStep(build, classData, tree)
     return nt, ni, nr
 end
 
+-- The next `count` points the build wants, free points or not: { t, i, rank, level } each.
+-- The ones your free points cover have no level (they can be learned now); the rest come one per
+-- level from your current one.
+function ns.UpcomingSteps(build, classData, tree, count)
+    local free, level = ns.FreePoints(tree), UnitLevel("player")
+    local out = {}
+    missingSteps(build, classData, tree, function(t, i, rank)
+        local k = #out + 1
+        out[k] = { t = t, i = i, rank = rank, level = k > free and level + k - free or nil }
+        if k >= count then return false end
+    end)
+    return out
+end
+
 -- Spends the free points following the build. Returns number of points learned, or nil, error.
 function ns.Apply(build, classData)
     if InCombatLockdown() then return nil, L.IN_COMBAT end

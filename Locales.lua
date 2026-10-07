@@ -783,6 +783,24 @@ local pick = { esES = "Elige una build...", deDE = "Build wählen...", frFR = "C
     ptBR = "Escolha uma build...", itIT = "Scegli una build...", ruRU = "Выберите сборку...", koKR = "빌드 선택...",
     zhCN = "选择方案...", zhTW = "選擇配置..." }
 for loc, value in pairs(pick) do translations[loc].PICK_BUILD = value end
+L.NEXT_AT = "Next  ·  level %d"
+L.NEXT_NOW = "Next  ·  available now"
+L.LEARN_N = "Learn %d points"
+L.NO_FREE = "No free points"
+local barTexts = {
+    esES = { NEXT_NOW = "Siguiente  ·  disponible ya", NEXT_AT = "Siguiente  ·  nivel %d", LEARN_N = "Aprender %d puntos", NO_FREE = "Sin puntos libres" },
+    deDE = { NEXT_NOW = "Nächstes  ·  jetzt verfügbar", NEXT_AT = "Nächstes  ·  Stufe %d", LEARN_N = "%d Punkte lernen", NO_FREE = "Keine freien Punkte" },
+    frFR = { NEXT_NOW = "Suivant  ·  disponible", NEXT_AT = "Suivant  ·  niveau %d", LEARN_N = "Apprendre %d points", NO_FREE = "Aucun point libre" },
+    ptBR = { NEXT_NOW = "Próximo  ·  disponível já", NEXT_AT = "Próximo  ·  nível %d", LEARN_N = "Aprender %d pontos", NO_FREE = "Sem pontos livres" },
+    itIT = { NEXT_NOW = "Prossimo  ·  disponibile ora", NEXT_AT = "Prossimo  ·  livello %d", LEARN_N = "Impara %d punti", NO_FREE = "Nessun punto libero" },
+    ruRU = { NEXT_NOW = "Следующий  ·  доступен сейчас", NEXT_AT = "Следующий  ·  уровень %d", LEARN_N = "Изучить очки: %d", NO_FREE = "Нет свободных очков" },
+    koKR = { NEXT_NOW = "다음  ·  지금 가능", NEXT_AT = "다음  ·  %d레벨", LEARN_N = "포인트 %d개 배우기", NO_FREE = "남은 포인트 없음" },
+    zhCN = { NEXT_NOW = "下一个  ·  现在可学", NEXT_AT = "下一个  ·  %d级", LEARN_N = "学习 %d 点", NO_FREE = "没有可用点数" },
+    zhTW = { NEXT_NOW = "下一個  ·  現在可學", NEXT_AT = "下一個  ·  %d級", LEARN_N = "學習 %d 點", NO_FREE = "沒有可用點數" },
+}
+for loc, texts in pairs(barTexts) do
+    for key, value in pairs(texts) do translations[loc][key] = value end
+end
 translations.esMX = translations.esES
 
 local locale = GetLocale and GetLocale() or "enUS"
