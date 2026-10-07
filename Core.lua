@@ -260,44 +260,65 @@ function ns.Select(build)
     if ns.RefreshTalentBar then ns.RefreshTalentBar() end
 end
 
--- Loadouts: builds the character keeps at hand to rotate between on the talent window.
--- Remembered by link, per character (each character is one class).
-local function loadoutLinks()
+-- Loadouts: builds the character keeps at hand to rotate between on the talent window, each with
+-- an optional name of its own. Saved per character as { url = link, name = custom name or nil }.
+local function loadoutEntries()
     ZbuildsCharDB = ZbuildsCharDB or {}
     ZbuildsCharDB.loadouts = ZbuildsCharDB.loadouts or {}
-    return ZbuildsCharDB.loadouts
+    local entries = ZbuildsCharDB.loadouts
+    for k, entry in ipairs(entries) do
+        if type(entry) == "string" then entries[k] = { url = entry } end -- saved before loadouts had names
+    end
+    return entries
+end
+
+local function loadoutEntry(build)
+    for k, entry in ipairs(loadoutEntries()) do
+        if entry.url == build.url then return entry, k end
+    end
+end
+
+local function changed()
+    if ns.RefreshTalentBar then ns.RefreshTalentBar() end
+    if ns.Refresh then ns.Refresh() end
 end
 
 function ns.Loadouts(classToken)
     local byLink = {}
     for _, build in ipairs(ns.BuildsFor(classToken)) do byLink[build.url] = byLink[build.url] or build end
     local out = {}
-    for _, link in ipairs(loadoutLinks()) do
-        if byLink[link] then out[#out + 1] = byLink[link] end -- a build a site dropped is skipped
+    for _, entry in ipairs(loadoutEntries()) do
+        if byLink[entry.url] then out[#out + 1] = byLink[entry.url] end -- a build a site dropped is skipped
     end
     return out
 end
 
 function ns.IsLoadout(build)
-    for _, link in ipairs(loadoutLinks()) do
-        if link == build.url then return true end
-    end
-    return false
+    return loadoutEntry(build) ~= nil
+end
+
+-- The name to show: the loadout's own name when it has one, else the build's.
+function ns.DisplayName(build)
+    local entry = loadoutEntry(build)
+    return entry and entry.name or build.name
+end
+
+-- Empty or blank names go back to the build's own name.
+function ns.RenameLoadout(build, name)
+    local entry = loadoutEntry(build)
+    if not entry then return end
+    name = strtrim(name or "")
+    entry.name = name ~= "" and name or nil
+    changed()
 end
 
 -- Adds the build to the loadouts or takes it out; returns whether it is one now.
 function ns.ToggleLoadout(build)
-    local links = loadoutLinks()
-    for k, link in ipairs(links) do
-        if link == build.url then
-            table.remove(links, k)
-            if ns.RefreshTalentBar then ns.RefreshTalentBar() end
-            return false
-        end
-    end
-    links[#links + 1] = build.url
+    local entries = loadoutEntries()
+    local _, k = loadoutEntry(build)
+    if k then table.remove(entries, k) else entries[#entries + 1] = { url = build.url } end
     if ns.RefreshTalentBar then ns.RefreshTalentBar() end
-    return true
+    return k == nil
 end
 
 -- Selects the next (step 1) or previous (step -1) loadout after the selected build.

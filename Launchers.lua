@@ -116,7 +116,7 @@ local function openMenu(owner)
     MenuUtil.CreateContextMenu(owner, function(_, root)
         if root.SetScrollMode then root:SetScrollMode(460) end
         local function radio(build)
-            local label = ("%s  |cff888888%s · %s|r"):format(shorten(build.name, 48), table.concat(build.points, "/"),
+            local label = ("%s  |cff888888%s · %s|r"):format(shorten(ns.DisplayName(build), 48), table.concat(build.points, "/"),
                 ns.SourceName(build.source))
             root:CreateRadio(label, function() return build == selected end, function() ns.Select(build) end)
         end
@@ -260,6 +260,42 @@ local function showMarks(talentFrame, tree, steps)
     end
 end
 
+-- ---- renaming a loadout: the game's own text prompt
+
+StaticPopupDialogs.ZBUILDS_RENAME_LOADOUT = {
+    text = "%s",
+    button1 = OKAY,
+    button2 = CANCEL,
+    hasEditBox = true,
+    maxLetters = 48,
+    timeout = 0,
+    whileDead = true,
+    hideOnEscape = true,
+    OnShow = function(self, build)
+        local box = self.editBox or self.EditBox or (self.GetEditBox and self:GetEditBox())
+        box:SetText(ns.DisplayName(build))
+        box:HighlightText()
+        box:SetFocus()
+    end,
+    OnAccept = function(self, build)
+        local box = self.editBox or self.EditBox or (self.GetEditBox and self:GetEditBox())
+        ns.RenameLoadout(build, box:GetText())
+        ns.Print(L.LOADOUT_RENAMED:format(ns.DisplayName(build)))
+    end,
+    EditBoxOnEnterPressed = function(box)
+        local popup = box:GetParent()
+        StaticPopupDialogs.ZBUILDS_RENAME_LOADOUT.OnAccept(popup, popup.data)
+        popup:Hide()
+    end,
+    EditBoxOnEscapePressed = function(box) box:GetParent():Hide() end,
+}
+
+function ns.PromptRename(build)
+    if build and ns.IsLoadout(build) then
+        StaticPopup_Show("ZBUILDS_RENAME_LOADOUT", L.LOADOUT_RENAME_PROMPT:format(build.name), nil, build)
+    end
+end
+
 -- ---- the bar
 
 -- "Next · level 31", or "Next · now" when your free points already cover it
@@ -273,7 +309,7 @@ function ns.RefreshTalentBar()
     local classData, build = ns.ClassData(classToken), ns.SelectedBuild(classToken)
     local lead = build and classData and classData.trees[leadTree(build)]
     bar.pick.icon:SetTexture("Interface\\Icons\\" .. (lead and lead.icon or "inv_misc_book_09"))
-    bar.pick.text:SetText(build and build.name or L.PICK_BUILD)
+    bar.pick.text:SetText(build and ns.DisplayName(build) or L.PICK_BUILD)
     local loadouts, at = ns.Loadouts(classToken), nil
     for k, b in ipairs(loadouts) do if b == build then at = k end end
     bar.pick.sub:SetText(build and (table.concat(build.points, "/") .. "  ·  " .. ns.SourceName(build.source)
@@ -368,12 +404,22 @@ local function createBar(talentFrame)
     arrow:SetTexture("Interface\\Buttons\\Arrow-Down-Up")
     arrow:SetSize(14, 14)
     arrow:SetPoint("RIGHT", -8, -3)
-    bar.pick:SetScript("OnClick", openMenu)
+    -- left click: choose a build; right click: rename the loadout shown
+    bar.pick:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    bar.pick:SetScript("OnClick", function(self, mouse)
+        if mouse == "RightButton" then return ns.PromptRename(ns.SelectedBuild(ns.PlayerClass())) end
+        openMenu(self)
+    end)
     -- the mouse wheel over the picker rotates the loadouts too
     bar.pick:EnableMouseWheel(true)
     bar.pick:SetScript("OnMouseWheel", function(_, delta) ns.CycleLoadout(delta > 0 and -1 or 1) end)
-    bar.pick:SetScript("OnEnter", hoverGold)
-    bar.pick:SetScript("OnLeave", hoverOff)
+    bar.pick:SetScript("OnEnter", function(self)
+        hoverGold(self)
+        GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
+        GameTooltip:SetText(L.PICK_TIP, 0.9, 0.9, 0.9, 1, true)
+        GameTooltip:Show()
+    end)
+    bar.pick:SetScript("OnLeave", function(self) hoverOff(self) GameTooltip:Hide() end)
 
     -- the predicted next point, then the two after it
     bar.next = panel(CreateFrame("Frame", nil, bar, "BackdropTemplate"))

@@ -313,7 +313,7 @@ local function refreshList()
                     end
                     row.title:SetPoint("TOPLEFT", 44, -6)
                     if color then row.title:SetPoint("RIGHT", row.pill, "LEFT", -6, 0) else row.title:SetPoint("RIGHT", -8, 0) end
-                    row.title:SetText(build.name)
+                    row.title:SetText(ns.DisplayName(build))
                     row.sub:SetText(("%s  ·  %s%s%s%s"):format(build.spec or "", table.concat(build.points, "/"),
                         build.level and ("  ·  " .. L.LEVEL_SHORT:format(build.level)) or "",
                         build.beta and ("  ·  " .. L.BETA) or "",
@@ -762,7 +762,7 @@ function ns.Refresh()
         if state.compare then refreshDifferences(build, state.compare, classData, tree)
         else refreshTimeline(build, classData, tree) end
     end
-    frame.buildTitle:SetText(build and build.name or L.NO_BUILDS)
+    frame.buildTitle:SetText(build and ns.DisplayName(build) or L.NO_BUILDS)
     local sub = ""
     if build then
         sub = paint(ns.SourceName(build.source), C.source[build.source] or C.dim)
@@ -811,6 +811,7 @@ function ns.Refresh()
     frame.apply:SetEnabled(tree ~= nil and build ~= nil)
     frame.compareMine:SetEnabled(tree ~= nil and build ~= nil)
     frame.loadout:SetShown(mine and build ~= nil)
+    frame.rename:SetShown(mine and build ~= nil and ns.IsLoadout(build))
     frame.loadout.label:SetText(build and ns.IsLoadout(build) and L.LOADOUT_REMOVE or L.LOADOUT_ADD)
     frame.clearCompare:SetEnabled(state.compare ~= nil)
     frame.remove:SetShown(build ~= nil and build.imported == true)
@@ -1061,7 +1062,9 @@ local function create()
     end)
     frame.loadout:SetWidth(math.max(frame.loadout:GetWidth(), 150))
     frame.loadout:SetPoint("BOTTOMRIGHT", -PAD, PAD + 50)
-    frame.link = input(frame, TREES_W - frame.loadout:GetWidth() - 8)
+    frame.rename = button(frame, L.LOADOUT_RENAME, 90, function() ns.PromptRename(state.build) end)
+    frame.rename:SetPoint("RIGHT", frame.loadout, "LEFT", -6, 0)
+    frame.link = input(frame, TREES_W - frame.loadout:GetWidth() - frame.rename:GetWidth() - 14)
     frame.link:SetPoint("BOTTOMLEFT", right, PAD + 50)
     frame.link:SetTextColor(unpack(C.dim))
     frame.link:SetScript("OnEditFocusGained", function(self) self:HighlightText() end)

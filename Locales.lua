@@ -852,6 +852,44 @@ local loadoutTexts = {
 for loc, texts in pairs(loadoutTexts) do
     for key, value in pairs(texts) do translations[loc][key] = value end
 end
+
+-- renaming loadouts
+L.LOADOUT_RENAME = "Rename"
+L.LOADOUT_RENAME_PROMPT = "Name for the loadout \"%s\" (empty: the build's own name):"
+L.LOADOUT_RENAMED = "loadout renamed to \"%s\"."
+L.PICK_TIP = "Click: choose a build\nRight-click: rename this loadout\nMouse wheel: previous / next loadout"
+local renameTexts = {
+    esES = { LOADOUT_RENAME = "Renombrar", LOADOUT_RENAME_PROMPT = "Nombre para el loadout \"%s\" (vacío: el nombre de la build):",
+        LOADOUT_RENAMED = "loadout renombrado a \"%s\".",
+        PICK_TIP = "Clic: elegir una build\nClic derecho: renombrar este loadout\nRueda del ratón: loadout anterior / siguiente" },
+    deDE = { LOADOUT_RENAME = "Umbenennen", LOADOUT_RENAME_PROMPT = "Name für das Loadout \"%s\" (leer: Name des Builds):",
+        LOADOUT_RENAMED = "Loadout in \"%s\" umbenannt.",
+        PICK_TIP = "Klick: Build wählen\nRechtsklick: dieses Loadout umbenennen\nMausrad: vorheriges / nächstes Loadout" },
+    frFR = { LOADOUT_RENAME = "Renommer", LOADOUT_RENAME_PROMPT = "Nom du loadout \"%s\" (vide : le nom du build) :",
+        LOADOUT_RENAMED = "loadout renommé en \"%s\".",
+        PICK_TIP = "Clic : choisir un build\nClic droit : renommer ce loadout\nMolette : loadout précédent / suivant" },
+    ptBR = { LOADOUT_RENAME = "Renomear", LOADOUT_RENAME_PROMPT = "Nome do loadout \"%s\" (vazio: o nome da build):",
+        LOADOUT_RENAMED = "loadout renomeado para \"%s\".",
+        PICK_TIP = "Clique: escolher uma build\nBotão direito: renomear este loadout\nRoda do mouse: loadout anterior / seguinte" },
+    itIT = { LOADOUT_RENAME = "Rinomina", LOADOUT_RENAME_PROMPT = "Nome del loadout \"%s\" (vuoto: il nome della build):",
+        LOADOUT_RENAMED = "loadout rinominato in \"%s\".",
+        PICK_TIP = "Clic: scegli una build\nClic destro: rinomina questo loadout\nRotellina: loadout precedente / successivo" },
+    ruRU = { LOADOUT_RENAME = "Переименовать", LOADOUT_RENAME_PROMPT = "Название набора \"%s\" (пусто — название сборки):",
+        LOADOUT_RENAMED = "набор переименован в \"%s\".",
+        PICK_TIP = "ЛКМ: выбрать сборку\nПКМ: переименовать набор\nКолёсико: предыдущий / следующий набор" },
+    koKR = { LOADOUT_RENAME = "이름 변경", LOADOUT_RENAME_PROMPT = "로드아웃 \"%s\"의 이름 (비우면 빌드 이름):",
+        LOADOUT_RENAMED = "로드아웃 이름을 \"%s\"(으)로 변경했습니다.",
+        PICK_TIP = "클릭: 빌드 선택\n우클릭: 이 로드아웃 이름 변경\n마우스 휠: 이전 / 다음 로드아웃" },
+    zhCN = { LOADOUT_RENAME = "重命名", LOADOUT_RENAME_PROMPT = "配置“%s”的名称（留空：使用方案名称）：",
+        LOADOUT_RENAMED = "配置已重命名为“%s”。",
+        PICK_TIP = "点击：选择方案\n右键：重命名此配置\n鼠标滚轮：上一个 / 下一个配置" },
+    zhTW = { LOADOUT_RENAME = "重新命名", LOADOUT_RENAME_PROMPT = "配置「%s」的名稱（留空：使用配置原名）：",
+        LOADOUT_RENAMED = "配置已重新命名為「%s」。",
+        PICK_TIP = "點擊：選擇配置\n右鍵：重新命名此配置\n滑鼠滾輪：上一個 / 下一個配置" },
+}
+for loc, texts in pairs(renameTexts) do
+    for key, value in pairs(texts) do translations[loc][key] = value end
+end
 translations.esMX = translations.esES
 
 local locale = GetLocale and GetLocale() or "enUS"
