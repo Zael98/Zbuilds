@@ -67,7 +67,7 @@ local function nodeSpell(configID, node)
     return def and def.spellID
 end
 
--- Returns { configID, treeID, node[t][i], entry[t][i], spell[t][i], rank[t][i], mismatches, edges } or nil, error.
+-- Returns { configID, treeID, node[t][i], spell[t][i], rank[t][i], mismatches, edges } or nil, error.
 function ns.ReadTree(classData)
     if not (C_ClassTalents and C_Traits) then return nil, L.NO_API end
     local configID = C_ClassTalents.GetActiveConfigID()
@@ -94,7 +94,7 @@ function ns.ReadTree(classData)
         return nil, L.TREE_COUNT:format(#clusters, #classData.trees)
     end
 
-    local result = { configID = configID, treeID = treeID, node = {}, entry = {}, spell = {}, rank = {}, mismatches = {},
+    local result = { configID = configID, treeID = treeID, node = {}, spell = {}, rank = {}, mismatches = {},
         edges = {} }
     local where, nodeEdges = {}, {}
     for t, cluster in ipairs(clusters) do
@@ -107,7 +107,7 @@ function ns.ReadTree(classData)
         local minX, minY = math.huge, math.huge
         for _, n in ipairs(cluster) do minX, minY = math.min(minX, n.posX), math.min(minY, n.posY) end
 
-        result.node[t], result.entry[t], result.spell[t], result.rank[t] = {}, {}, {}, {}
+        result.node[t], result.spell[t], result.rank[t] = {}, {}, {}
         for i in ipairs(talents) do result.rank[t][i] = 0 end
         for _, n in ipairs(cluster) do
             local row = floor((n.posY - minY) / NODE_SPACING + 0.5) + minRow
@@ -116,7 +116,6 @@ function ns.ReadTree(classData)
             local spell = nodeSpell(configID, n)
             if i then
                 result.node[t][i] = n.ID
-                result.entry[t][i] = n.entryIDs[1]
                 result.spell[t][i] = spell
                 result.rank[t][i] = n.currentRank or 0
                 where[n.ID] = { t, i }
@@ -233,32 +232,6 @@ function ns.Apply(build, classData)
     return bought
 end
 
--- Saves the whole build as one of the game's talent loadouts (the game keeps up to 10 per spec).
--- Returns true, or nil, error.
-function ns.SaveLoadout(build, classData)
-    if InCombatLockdown() then return nil, L.IN_COMBAT end
-    if not (C_ClassTalents and C_ClassTalents.ImportLoadout) then return nil, L.NO_API end
-    local tree, err = ns.ReadTree(classData)
-    if not tree then return nil, err end
-    local entries = {}
-    for t, data in ipairs(classData.trees) do
-        for i in ipairs(data.talents) do
-            local rank = ns.TargetRank(build, t, i)
-            if rank > 0 then
-                if not tree.node[t][i] then return nil, L.NOT_IN_TREE:format(ns.TalentName(classData, tree, t, i)) end
-                -- the game's ImportLoadoutEntryInfo: every field is required, ranksGranted included
-                entries[#entries + 1] = { nodeID = tree.node[t][i], ranksGranted = 0, ranksPurchased = rank,
-                    selectionEntryID = tree.entry[t][i] }
-            end
-        end
-    end
-    local name = build.name:sub(1, 32) -- loadout names are short
-    local ok, saved, message = pcall(C_ClassTalents.ImportLoadout, tree.configID, entries, name)
-    if not ok then return nil, tostring(saved) end
-    if saved == false then return nil, message or L.REJECTED end
-    return true, name
-end
-
 -- Selected build per character, remembered by its link.
 function ns.SelectedBuild(classToken)
     local url = ZbuildsCharDB and ZbuildsCharDB.selected
@@ -304,7 +277,6 @@ local function diagnose()
     for _, fn in ipairs({ "PurchaseRank", "CommitConfig", "RollbackConfig", "GetNodeInfo" }) do
         add("C_Traits." .. fn, C_Traits and C_Traits[fn] and "yes" or "NO")
     end
-    add("C_ClassTalents.ImportLoadout", C_ClassTalents and C_ClassTalents.ImportLoadout and "yes" or "NO")
     local classData = ns.ClassData(ns.PlayerClass())
     if classData then
         local tree, err = ns.ReadTree(classData)

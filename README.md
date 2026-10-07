@@ -11,7 +11,6 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Aprender puntos libres:** gasta tus puntos siguiendo el orden de la build (fuera de combate).
 - **+ Importar enlace:** pega un enlace de build de talentsforever.com, Icy Veins, Warcraft Tavern o wowforeverbuilds.com. Funciona sin conexión y se guarda en tu cuenta.
 - **Recomendaciones:** las builds iguales de varias webs se juntan en una ("también la recomiendan: …") y salen primero.
-- **Guardar como configuración:** guarda la build como una configuración de talentos del juego, para cambiar entre builds desde la ventana de talentos.
 - **Builds de la beta:** marcadas, y se pueden ocultar con el filtro "Beta".
 - **Nombres y descripciones en tu idioma** para los talentos de todas las clases.
 - **Accesos:** botón en el minimapa (`/zb minimap` lo oculta), menú de addons del juego y botón sobre la ventana de talentos.
