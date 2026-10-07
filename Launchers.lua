@@ -143,6 +143,7 @@ local NEXT_TEXTURE = "Interface\\Buttons\\UI-SpellbookIcon-NextPage-Up"
 local UPCOMING = 3 -- points predicted: the next one glows on the tree, the following ones are numbered
 
 local function panel(frame, alpha)
+    if frame.RegisterForClicks then frame:RegisterForClicks("LeftButtonUp") end
     if not frame.SetBackdrop then Mixin(frame, BackdropTemplateMixin) end
     frame:SetBackdrop({ bgFile = WHITE, edgeFile = WHITE, edgeSize = 1 })
     frame:SetBackdropColor(0, 0, 0, alpha or 0.6)
@@ -317,6 +318,7 @@ local function createBar(talentFrame)
     bar = CreateFrame("Frame", nil, talentFrame)
     bar.talentFrame = talentFrame
     -- above the window's own art (its band and backgrounds are child frames several levels up)
+    bar:SetFrameStrata("DIALOG")
     bar:SetFrameLevel(talentFrame:GetFrameLevel() + 500)
     -- centred on the gold band under the spec tabs, left of the game's "Unspent Talents" box
     local function place()
@@ -367,6 +369,9 @@ local function createBar(talentFrame)
     arrow:SetSize(14, 14)
     arrow:SetPoint("RIGHT", -8, -3)
     bar.pick:SetScript("OnClick", openMenu)
+    -- the mouse wheel over the picker rotates the loadouts too
+    bar.pick:EnableMouseWheel(true)
+    bar.pick:SetScript("OnMouseWheel", function(_, delta) ns.CycleLoadout(delta > 0 and -1 or 1) end)
     bar.pick:SetScript("OnEnter", hoverGold)
     bar.pick:SetScript("OnLeave", hoverOff)
 

@@ -251,7 +251,6 @@ local function listRow(index)
         else
             state.build = self.build
             if state.compare == self.build then state.compare = nil end
-            if state.class == ns.PlayerClass() then ns.Select(self.build) end
         end
         ns.Refresh()
     end)
