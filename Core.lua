@@ -246,8 +246,9 @@ function ns.SaveLoadout(build, classData)
             local rank = ns.TargetRank(build, t, i)
             if rank > 0 then
                 if not tree.node[t][i] then return nil, L.NOT_IN_TREE:format(ns.TalentName(classData, tree, t, i)) end
-                entries[#entries + 1] = { nodeID = tree.node[t][i], ranksPurchased = rank,
-                    selectionEntryID = tree.entry[t][i], isChoiceNode = false }
+                -- the game's ImportLoadoutEntryInfo: every field is required, ranksGranted included
+                entries[#entries + 1] = { nodeID = tree.node[t][i], ranksGranted = 0, ranksPurchased = rank,
+                    selectionEntryID = tree.entry[t][i] }
             end
         end
     end
