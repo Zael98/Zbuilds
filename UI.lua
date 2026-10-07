@@ -1014,12 +1014,7 @@ local function create()
     frame.status:SetSpacing(3)
 
     frame.apply = button(frame, L.APPLY, 160, function()
-        local learned, err = ns.Apply(state.build, ns.ClassData(state.class))
-        if learned then
-            ns.Print(learned > 0 and L.LEARNED_N:format(learned, state.build.name) or L.NOTHING_TO_LEARN)
-        else
-            ns.Print("|cffff5050" .. err .. "|r")
-        end
+        ns.LearnAndReport(state.build, ns.ClassData(state.class))
         ns.Refresh()
     end)
     frame.apply:SetPoint("BOTTOMLEFT", right, PAD + 18)

@@ -243,6 +243,17 @@ end
 function ns.Select(build)
     ZbuildsCharDB = ZbuildsCharDB or {}
     ZbuildsCharDB.selected = build and build.url
+    if ns.RefreshTalentBar then ns.RefreshTalentBar() end
+end
+
+-- Learns the free points of a build and says what happened in the chat.
+function ns.LearnAndReport(build, classData)
+    local learned, err = ns.Apply(build, classData)
+    if learned then
+        ns.Print(learned > 0 and L.LEARNED_N:format(learned, build.name) or L.NOTHING_TO_LEARN)
+    else
+        ns.Print("|cffff5050" .. err .. "|r")
+    end
 end
 
 local function announceNext()
@@ -265,6 +276,7 @@ events:SetScript("OnEvent", function(_, event)
         C_Timer.After(1, announceNext) -- the new point shows up a moment after the event
     end
     if ns.Refresh then ns.Refresh() end
+    if ns.RefreshTalentBar then ns.RefreshTalentBar() end
 end)
 
 -- /zb diag: what this client lets the addon do, to check a new game build quickly.

@@ -776,6 +776,13 @@ local more = {
 for loc, texts in pairs(more) do
     for key, value in pairs(texts) do translations[loc][key] = value end
 end
+
+-- bar on the game's talent window
+L.PICK_BUILD = "Choose a build..."
+local pick = { esES = "Elige una build...", deDE = "Build wählen...", frFR = "Choisir un build...",
+    ptBR = "Escolha uma build...", itIT = "Scegli una build...", ruRU = "Выберите сборку...", koKR = "빌드 선택...",
+    zhCN = "选择方案...", zhTW = "選擇配置..." }
+for loc, value in pairs(pick) do translations[loc].PICK_BUILD = value end
 translations.esMX = translations.esES
 
 local locale = GetLocale and GetLocale() or "enUS"
