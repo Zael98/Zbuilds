@@ -801,6 +801,57 @@ local barTexts = {
 for loc, texts in pairs(barTexts) do
     for key, value in pairs(texts) do translations[loc][key] = value end
 end
+
+-- loadouts: builds kept at hand to rotate between on the talent window
+L.LOADOUTS = "Loadouts"
+L.LOADOUT_ADD = "Save as loadout"
+L.LOADOUT_REMOVE = "Remove loadout"
+L.LOADOUT_N = "loadout %d/%d"
+L.LOADOUT_ADDED = "\"%s\" saved as a loadout."
+L.LOADOUT_REMOVED = "\"%s\" removed from your loadouts."
+L.LOADOUT_NONE = "Save builds as loadouts in Zbuilds (/zb) to rotate between them here."
+L.LOADOUT_ROTATE = "Previous / next loadout"
+local loadoutTexts = {
+    esES = { LOADOUT_ADD = "Guardar como loadout", LOADOUT_REMOVE = "Quitar loadout", LOADOUT_N = "loadout %d/%d",
+        LOADOUT_ADDED = "\"%s\" guardada como loadout.", LOADOUT_REMOVED = "\"%s\" quitada de tus loadouts.",
+        LOADOUT_NONE = "Guarda builds como loadout en Zbuilds (/zb) para rotar entre ellas aquí.",
+        LOADOUT_ROTATE = "Loadout anterior / siguiente" },
+    deDE = { LOADOUT_ADD = "Als Loadout speichern", LOADOUT_REMOVE = "Loadout entfernen", LOADOUT_N = "Loadout %d/%d",
+        LOADOUT_ADDED = "\"%s\" als Loadout gespeichert.", LOADOUT_REMOVED = "\"%s\" aus deinen Loadouts entfernt.",
+        LOADOUT_NONE = "Speichere Builds in Zbuilds (/zb) als Loadouts, um hier zwischen ihnen zu wechseln.",
+        LOADOUT_ROTATE = "Vorheriges / nächstes Loadout" },
+    frFR = { LOADOUT_ADD = "Enregistrer comme loadout", LOADOUT_REMOVE = "Retirer le loadout", LOADOUT_N = "loadout %d/%d",
+        LOADOUT_ADDED = "\"%s\" enregistré comme loadout.", LOADOUT_REMOVED = "\"%s\" retiré de vos loadouts.",
+        LOADOUT_NONE = "Enregistrez des builds comme loadouts dans Zbuilds (/zb) pour passer de l'un à l'autre ici.",
+        LOADOUT_ROTATE = "Loadout précédent / suivant" },
+    ptBR = { LOADOUT_ADD = "Salvar como loadout", LOADOUT_REMOVE = "Remover loadout", LOADOUT_N = "loadout %d/%d",
+        LOADOUT_ADDED = "\"%s\" salva como loadout.", LOADOUT_REMOVED = "\"%s\" removida dos seus loadouts.",
+        LOADOUT_NONE = "Salve builds como loadouts no Zbuilds (/zb) para alternar entre elas aqui.",
+        LOADOUT_ROTATE = "Loadout anterior / seguinte" },
+    itIT = { LOADOUT_ADD = "Salva come loadout", LOADOUT_REMOVE = "Rimuovi loadout", LOADOUT_N = "loadout %d/%d",
+        LOADOUT_ADDED = "\"%s\" salvata come loadout.", LOADOUT_REMOVED = "\"%s\" rimossa dai tuoi loadout.",
+        LOADOUT_NONE = "Salva delle build come loadout in Zbuilds (/zb) per passare dall'una all'altra qui.",
+        LOADOUT_ROTATE = "Loadout precedente / successivo" },
+    ruRU = { LOADOUTS = "Наборы", LOADOUT_ADD = "Сохранить как набор", LOADOUT_REMOVE = "Убрать набор", LOADOUT_N = "набор %d/%d",
+        LOADOUT_ADDED = "\"%s\" сохранена как набор.", LOADOUT_REMOVED = "\"%s\" убрана из наборов.",
+        LOADOUT_NONE = "Сохраните сборки как наборы в Zbuilds (/zb), чтобы переключаться между ними здесь.",
+        LOADOUT_ROTATE = "Предыдущий / следующий набор" },
+    koKR = { LOADOUTS = "로드아웃", LOADOUT_ADD = "로드아웃으로 저장", LOADOUT_REMOVE = "로드아웃 제거", LOADOUT_N = "로드아웃 %d/%d",
+        LOADOUT_ADDED = "\"%s\"을(를) 로드아웃으로 저장했습니다.", LOADOUT_REMOVED = "\"%s\"을(를) 로드아웃에서 제거했습니다.",
+        LOADOUT_NONE = "Zbuilds(/zb)에서 빌드를 로드아웃으로 저장하면 여기서 전환할 수 있습니다.",
+        LOADOUT_ROTATE = "이전 / 다음 로드아웃" },
+    zhCN = { LOADOUTS = "配置方案", LOADOUT_ADD = "保存为配置", LOADOUT_REMOVE = "移除配置", LOADOUT_N = "配置 %d/%d",
+        LOADOUT_ADDED = "“%s”已保存为配置。", LOADOUT_REMOVED = "“%s”已从配置中移除。",
+        LOADOUT_NONE = "在 Zbuilds（/zb）中把方案保存为配置，即可在这里切换。",
+        LOADOUT_ROTATE = "上一个 / 下一个配置" },
+    zhTW = { LOADOUTS = "配置方案", LOADOUT_ADD = "儲存為配置", LOADOUT_REMOVE = "移除配置", LOADOUT_N = "配置 %d/%d",
+        LOADOUT_ADDED = "「%s」已儲存為配置。", LOADOUT_REMOVED = "「%s」已從配置中移除。",
+        LOADOUT_NONE = "在 Zbuilds（/zb）中把配置儲存起來，即可在這裡切換。",
+        LOADOUT_ROTATE = "上一個 / 下一個配置" },
+}
+for loc, texts in pairs(loadoutTexts) do
+    for key, value in pairs(texts) do translations[loc][key] = value end
+end
 translations.esMX = translations.esES
 
 local locale = GetLocale and GetLocale() or "enUS"

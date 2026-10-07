@@ -260,6 +260,58 @@ function ns.Select(build)
     if ns.RefreshTalentBar then ns.RefreshTalentBar() end
 end
 
+-- Loadouts: builds the character keeps at hand to rotate between on the talent window.
+-- Remembered by link, per character (each character is one class).
+local function loadoutLinks()
+    ZbuildsCharDB = ZbuildsCharDB or {}
+    ZbuildsCharDB.loadouts = ZbuildsCharDB.loadouts or {}
+    return ZbuildsCharDB.loadouts
+end
+
+function ns.Loadouts(classToken)
+    local byLink = {}
+    for _, build in ipairs(ns.BuildsFor(classToken)) do byLink[build.url] = byLink[build.url] or build end
+    local out = {}
+    for _, link in ipairs(loadoutLinks()) do
+        if byLink[link] then out[#out + 1] = byLink[link] end -- a build a site dropped is skipped
+    end
+    return out
+end
+
+function ns.IsLoadout(build)
+    for _, link in ipairs(loadoutLinks()) do
+        if link == build.url then return true end
+    end
+    return false
+end
+
+-- Adds the build to the loadouts or takes it out; returns whether it is one now.
+function ns.ToggleLoadout(build)
+    local links = loadoutLinks()
+    for k, link in ipairs(links) do
+        if link == build.url then
+            table.remove(links, k)
+            if ns.RefreshTalentBar then ns.RefreshTalentBar() end
+            return false
+        end
+    end
+    links[#links + 1] = build.url
+    if ns.RefreshTalentBar then ns.RefreshTalentBar() end
+    return true
+end
+
+-- Selects the next (step 1) or previous (step -1) loadout after the selected build.
+function ns.CycleLoadout(step)
+    local classToken = ns.PlayerClass()
+    local list, selected = ns.Loadouts(classToken), ns.SelectedBuild(classToken)
+    if #list == 0 then return end
+    local at = 0
+    for k, build in ipairs(list) do if build == selected then at = k end end
+    if at == 0 and step < 0 then at = 1 end
+    ns.Select(list[(at - 1 + step) % #list + 1])
+    if ns.Refresh then ns.Refresh() end
+end
+
 -- Learns the free points of a build and says what happened in the chat.
 function ns.LearnAndReport(build, classData)
     local learned, err = ns.Apply(build, classData)

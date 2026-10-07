@@ -14,6 +14,7 @@ local TREES_W = 3 * CARD_W + 2 * 8
 local WIDTH = PAD + LIST_W + 16 + TREES_W + PAD
 local HEIGHT = 728
 local MAX_POINTS = 51
+local STAR = "Interface\\COMMON\\FavoritesIcon"
 -- point order timeline: two rows of talent icons under the trees
 local TL_ICON, TL_STEP, TL_PER_ROW, TL_ROW_H = 21, 23, 26, 32
 local TL_H = 18 + 2 * TL_ROW_H
@@ -198,6 +199,11 @@ local function listRow(index)
     row.accent:SetPoint("TOPLEFT")
     row.accent:SetPoint("BOTTOMLEFT")
     row.accent:SetWidth(3)
+    -- a star on the builds kept as loadouts
+    row.star = row:CreateTexture(nil, "OVERLAY")
+    row.star:SetTexture(STAR)
+    row.star:SetSize(14, 14)
+    row.star:SetPoint("TOPLEFT", 4, -2)
     row.icon = row:CreateTexture(nil, "ARTWORK")
     row.icon:SetSize(28, 28)
     row.icon:SetPoint("LEFT", 9, 0)
@@ -269,6 +275,7 @@ local function refreshList()
             row.group, row.build, row.selectedRow, row.base = g.source, nil, false, { 0, 0, 0, 0 }
             place(row, y, GROUP_H)
             row.icon:Hide()
+            row.star:Hide()
             row.accent:Hide()
             row.pill:Hide()
             for t = 1, 3 do row.split[t]:Hide() end
@@ -294,6 +301,7 @@ local function refreshList()
                     row.icon:Show()
                     row.accent:SetColorTexture(unpack(classColor(state.class)))
                     row.accent:SetShown(selected)
+                    row.star:SetShown(ns.IsLoadout(build))
 
                     local color = C.category[build.category]
                     row.pill:SetShown(color ~= nil)
@@ -803,6 +811,8 @@ function ns.Refresh()
     frame.link:SetCursorPosition(0)
     frame.apply:SetEnabled(tree ~= nil and build ~= nil)
     frame.compareMine:SetEnabled(tree ~= nil and build ~= nil)
+    frame.loadout:SetShown(mine and build ~= nil)
+    frame.loadout.label:SetText(build and ns.IsLoadout(build) and L.LOADOUT_REMOVE or L.LOADOUT_ADD)
     frame.clearCompare:SetEnabled(state.compare ~= nil)
     frame.remove:SetShown(build ~= nil and build.imported == true)
 end
@@ -1043,7 +1053,16 @@ local function create()
     frame.remove:SetBackdropColor(0.32, 0.12, 0.12, 1)
 
     -- link to the source, selectable for Ctrl+C
-    frame.link = input(frame, TREES_W)
+    -- keep the build as a loadout, to rotate between loadouts on the game's talent window
+    frame.loadout = button(frame, L.LOADOUT_ADD, 150, function()
+        local build = state.build
+        if not build then return end
+        ns.Print((ns.ToggleLoadout(build) and L.LOADOUT_ADDED or L.LOADOUT_REMOVED):format(build.name))
+        ns.Refresh()
+    end)
+    frame.loadout:SetWidth(math.max(frame.loadout:GetWidth(), 150))
+    frame.loadout:SetPoint("BOTTOMRIGHT", -PAD, PAD + 50)
+    frame.link = input(frame, TREES_W - frame.loadout:GetWidth() - 8)
     frame.link:SetPoint("BOTTOMLEFT", right, PAD + 50)
     frame.link:SetTextColor(unpack(C.dim))
     frame.link:SetScript("OnEditFocusGained", function(self) self:HighlightText() end)

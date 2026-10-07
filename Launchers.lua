@@ -107,7 +107,7 @@ local function shorten(text, size)
     return #text > size and (text:sub(1, size - 3) .. "...") or text
 end
 
--- The game's own menu: builds of your class under a title per tree, the chosen one ticked.
+-- The game's own menu: your loadouts first, then every build of your class under its tree; the chosen one ticked.
 local function openMenu(owner)
     local classToken = ns.PlayerClass()
     local classData = ns.ClassData(classToken)
@@ -115,15 +115,21 @@ local function openMenu(owner)
     local selected = ns.SelectedBuild(classToken)
     MenuUtil.CreateContextMenu(owner, function(_, root)
         if root.SetScrollMode then root:SetScrollMode(460) end
+        local function radio(build)
+            local label = ("%s  |cff888888%s · %s|r"):format(shorten(build.name, 48), table.concat(build.points, "/"),
+                ns.SourceName(build.source))
+            root:CreateRadio(label, function() return build == selected end, function() ns.Select(build) end)
+        end
+        local loadouts = ns.Loadouts(classToken)
+        if #loadouts > 0 then
+            root:CreateTitle(L.LOADOUTS)
+            for _, build in ipairs(loadouts) do radio(build) end
+        end
         local builds = ns.BuildsFor(classToken)
         for t, tree in ipairs(classData.trees) do
             root:CreateTitle(tree.name)
             for _, build in ipairs(builds) do
-                if leadTree(build) == t then
-                    local label = ("%s  |cff888888%s · %s|r"):format(shorten(build.name, 48), table.concat(build.points, "/"),
-                        ns.SourceName(build.source))
-                    root:CreateRadio(label, function() return build == selected end, function() ns.Select(build) end)
-                end
+                if leadTree(build) == t then radio(build) end
             end
         end
     end)
@@ -132,6 +138,8 @@ end
 -- Look of the bar: dark panels with a thin gold edge, like the game's "Unspent Talents" box.
 local WHITE = "Interface\\Buttons\\WHITE8x8"
 local GOLD = { 1, 0.82, 0 }
+local PREV_TEXTURE = "Interface\\Buttons\\UI-SpellbookIcon-PrevPage-Up"
+local NEXT_TEXTURE = "Interface\\Buttons\\UI-SpellbookIcon-NextPage-Up"
 local UPCOMING = 3 -- points predicted: the next one glows on the tree, the following ones are numbered
 
 local function panel(frame, alpha)
@@ -265,7 +273,14 @@ function ns.RefreshTalentBar()
     local lead = build and classData and classData.trees[leadTree(build)]
     bar.pick.icon:SetTexture("Interface\\Icons\\" .. (lead and lead.icon or "inv_misc_book_09"))
     bar.pick.text:SetText(build and build.name or L.PICK_BUILD)
-    bar.pick.sub:SetText(build and (table.concat(build.points, "/") .. "  ·  " .. ns.SourceName(build.source)) or "")
+    local loadouts, at = ns.Loadouts(classToken), nil
+    for k, b in ipairs(loadouts) do if b == build then at = k end end
+    bar.pick.sub:SetText(build and (table.concat(build.points, "/") .. "  ·  " .. ns.SourceName(build.source)
+        .. (at and ("  ·  |cffffd100" .. L.LOADOUT_N:format(at, #loadouts) .. "|r") or "")) or "")
+    for _, arrow in ipairs(bar.rotate) do
+        arrow.icon:SetDesaturated(#loadouts == 0)
+        arrow.icon:SetAlpha(#loadouts == 0 and 0.4 or 1)
+    end
 
     local tree = build and classData and ns.ReadTree(classData)
     local steps = tree and ns.UpcomingSteps(build, classData, tree, UPCOMING) or {}
@@ -312,10 +327,33 @@ local function createBar(talentFrame)
     end
     place()
 
+    -- rotate between the loadouts: an arrow each side of the picker
+    local function rotateArrow(step, texture)
+        local a = panel(CreateFrame("Button", nil, bar, "BackdropTemplate"), 0.6)
+        a:SetSize(22, 36)
+        a.icon = a:CreateTexture(nil, "ARTWORK")
+        a.icon:SetTexture(texture)
+        a.icon:SetSize(24, 24)
+        a.icon:SetPoint("CENTER")
+        a:SetScript("OnClick", function() ns.CycleLoadout(step) end)
+        a:SetScript("OnEnter", function(self)
+            hoverGold(self)
+            GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
+            GameTooltip:SetText(L.LOADOUTS, GOLD[1], GOLD[2], GOLD[3])
+            GameTooltip:AddLine(#ns.Loadouts(ns.PlayerClass()) > 0 and L.LOADOUT_ROTATE or L.LOADOUT_NONE, 0.9, 0.9, 0.9, true)
+            GameTooltip:Show()
+        end)
+        a:SetScript("OnLeave", function(self) hoverOff(self) GameTooltip:Hide() end)
+        return a
+    end
+    bar.rotate = { rotateArrow(-1, PREV_TEXTURE), rotateArrow(1, NEXT_TEXTURE) }
+    bar.rotate[1]:SetPoint("LEFT")
+
     -- build picker: lead tree icon, name, points and source, an arrow; opens the game's menu
     bar.pick = panel(CreateFrame("Button", nil, bar, "BackdropTemplate"))
-    bar.pick:SetSize(300, 36)
-    bar.pick:SetPoint("LEFT")
+    bar.pick:SetSize(290, 36)
+    bar.pick:SetPoint("LEFT", bar.rotate[1], "RIGHT", 2, 0)
+    bar.rotate[2]:SetPoint("LEFT", bar.pick, "RIGHT", 2, 0)
     bar.pick.icon = icon(bar.pick, 28)
     bar.pick.icon:SetPoint("LEFT", 5, 0)
     bar.pick.text = label(bar.pick, 12)
@@ -325,9 +363,9 @@ local function createBar(talentFrame)
     bar.pick.sub:SetPoint("BOTTOMLEFT", bar.pick.icon, "BOTTOMRIGHT", 8, 2)
     bar.pick.sub:SetPoint("RIGHT", -26, 0)
     local arrow = bar.pick:CreateTexture(nil, "ARTWORK")
-    arrow:SetTexture("Interface\\Buttons\\UI-ScrollBar-ScrollDownButton-Up")
-    arrow:SetSize(22, 22)
-    arrow:SetPoint("RIGHT", -3, 0)
+    arrow:SetTexture("Interface\\Buttons\\Arrow-Down-Up")
+    arrow:SetSize(14, 14)
+    arrow:SetPoint("RIGHT", -8, -3)
     bar.pick:SetScript("OnClick", openMenu)
     bar.pick:SetScript("OnEnter", hoverGold)
     bar.pick:SetScript("OnLeave", hoverOff)
@@ -335,7 +373,7 @@ local function createBar(talentFrame)
     -- the predicted next point, then the two after it
     bar.next = panel(CreateFrame("Frame", nil, bar, "BackdropTemplate"))
     bar.next:SetSize(250, 36)
-    bar.next:SetPoint("LEFT", bar.pick, "RIGHT", 8, 0)
+    bar.next:SetPoint("LEFT", bar.rotate[2], "RIGHT", 8, 0)
     bar.next:EnableMouse(true)
     bar.next.icon = icon(bar.next, 28)
     bar.next.icon:SetPoint("LEFT", 5, 0)
@@ -347,7 +385,7 @@ local function createBar(talentFrame)
     bar.next:SetScript("OnEnter", spellTooltip)
     bar.next:SetScript("OnLeave", GameTooltip_Hide)
     bar.done = label(bar, 12, { 0.25, 0.85, 0.35 })
-    bar.done:SetPoint("LEFT", bar.pick, "RIGHT", 14, 0)
+    bar.done:SetPoint("LEFT", bar.rotate[2], "RIGHT", 14, 0)
     bar.done:SetText(L.COMPLETE)
 
     bar.after = {}
