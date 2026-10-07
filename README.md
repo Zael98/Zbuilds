@@ -13,7 +13,8 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Recomendaciones:** las builds iguales de varias webs se juntan en una ("también la recomiendan: …") y salen primero.
 - **Builds de la beta:** marcadas, y se pueden ocultar con el filtro "Beta".
 - **Nombres y descripciones en tu idioma** para los talentos de todas las clases.
-- **En la ventana de talentos del juego:** un desplegable con tus builds, el botón "Aprender puntos libres" y el siguiente talento que toca. Como en Classic, para cambiar de build hay que olvidar los talentos en el instructor; después, un clic la aplica entera.
+- **En la ventana de talentos del juego:** una barra en la franja dorada con el selector de build, la predicción del siguiente punto ("disponible ya" o "nivel 31", más los dos siguientes), el brillo numerado sobre el árbol del juego y "Aprender N puntos".
+- **Loadouts:** guarda builds como loadout, ponles nombre y rota entre ellos con las flechas o la rueda en la ventana de talentos (clic derecho en el selector para renombrar). Como en Classic, para cambiar de build hay que olvidar los talentos en el instructor; después, un clic la aplica entera.
 - **Accesos:** botón en el minimapa (`/zb minimap` lo oculta) y menú de addons del juego.
 
 Comandos: `/zb` abre la ventana · `/zb minimap` oculta o muestra el botón del minimapa · `/zb diag` comprueba qué permite este cliente
