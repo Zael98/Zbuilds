@@ -186,16 +186,24 @@ local function scanButtons(frame, depth)
     if depth > 8 then return end
     for _, child in ipairs({ frame:GetChildren() }) do
         local id = nodeOf(child)
-        if id then nodeButtons[id] = child else scanButtons(child, depth + 1) end
+        if id then
+            if child:IsShown() then nodeButtons[id] = child end
+        else
+            scanButtons(child, depth + 1)
+        end
     end
 end
 
+-- The game reuses its buttons when it redraws the tree, so a remembered button is checked again
+-- and the tree scanned anew when it now shows another talent.
 local function buttonFor(talentFrame, nodeID)
-    if not nodeButtons[nodeID] then
+    local button = nodeButtons[nodeID]
+    if not (button and nodeOf(button) == nodeID and button:IsShown()) then
         wipe(nodeButtons)
         scanButtons(talentFrame, 0)
+        button = nodeButtons[nodeID]
     end
-    return nodeButtons[nodeID]
+    return button
 end
 
 -- A mark over a talent button: a pulsing gold glow for the next point, a numbered badge for all.
@@ -293,21 +301,22 @@ end
 local function createBar(talentFrame)
     bar = CreateFrame("Frame", nil, talentFrame)
     bar.talentFrame = talentFrame
-    bar:SetFrameLevel(talentFrame:GetFrameLevel() + 20)
-    -- in the gold band under the spec tabs, left of the game's "Unspent Talents" box
+    -- above the window's own art (its band and backgrounds are child frames several levels up)
+    bar:SetFrameLevel(talentFrame:GetFrameLevel() + 500)
+    -- centred on the gold band under the spec tabs, left of the game's "Unspent Talents" box
     local function place()
         local w, h = talentFrame:GetWidth(), talentFrame:GetHeight()
         bar:ClearAllPoints()
-        bar:SetPoint("TOPLEFT", talentFrame, "TOPLEFT", w * 0.03, -h * 0.137)
-        bar:SetSize(w * 0.76, 40)
+        bar:SetPoint("LEFT", talentFrame, "TOPLEFT", w * 0.03, -h * 0.136)
+        bar:SetSize(w * 0.76, 36)
     end
     place()
 
     -- build picker: lead tree icon, name, points and source, an arrow; opens the game's menu
     bar.pick = panel(CreateFrame("Button", nil, bar, "BackdropTemplate"))
-    bar.pick:SetSize(300, 40)
+    bar.pick:SetSize(300, 36)
     bar.pick:SetPoint("LEFT")
-    bar.pick.icon = icon(bar.pick, 30)
+    bar.pick.icon = icon(bar.pick, 28)
     bar.pick.icon:SetPoint("LEFT", 5, 0)
     bar.pick.text = label(bar.pick, 12)
     bar.pick.text:SetPoint("TOPLEFT", bar.pick.icon, "TOPRIGHT", 8, -2)
@@ -325,10 +334,10 @@ local function createBar(talentFrame)
 
     -- the predicted next point, then the two after it
     bar.next = panel(CreateFrame("Frame", nil, bar, "BackdropTemplate"))
-    bar.next:SetSize(250, 40)
+    bar.next:SetSize(250, 36)
     bar.next:SetPoint("LEFT", bar.pick, "RIGHT", 8, 0)
     bar.next:EnableMouse(true)
-    bar.next.icon = icon(bar.next, 30)
+    bar.next.icon = icon(bar.next, 28)
     bar.next.icon:SetPoint("LEFT", 5, 0)
     bar.next.title = label(bar.next, 10, GOLD)
     bar.next.title:SetPoint("TOPLEFT", bar.next.icon, "TOPRIGHT", 8, -2)
