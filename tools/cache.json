@@ -643,26 +643,6 @@
 {
 "class": "MAGE",
 "ranks": [
-"050205200102301000",
-"00552330130103110",
-"0020000000000000000"
-],
-"points": [
-21,
-28,
-2
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Fire",
-"spec": "Fire",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/050205200102301-0055233013010311-002-6"
-},
-{
-"class": "MAGE",
-"ranks": [
 "255225223122311531",
 "13000000000000000",
 "0000000000000000000"
@@ -675,10 +655,30 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #4: Arcane",
+"name": "Popular #3: Arcane",
 "spec": "Arcane",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/mage/60/255225223122311531-13--6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"050205200102301000",
+"00552330130103110",
+"0020000000000000000"
+],
+"points": [
+21,
+28,
+2
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #4: Fire",
+"spec": "Fire",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/050205200102301-0055233013010311-002-6"
 },
 {
 "class": "MAGE",
@@ -783,14 +783,14 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"03500323100211000",
-"0055103201201001300",
-"2040000000000000"
+"00100000000000000",
+"0005003221221301351",
+"0550005103000000"
 ],
 "points": [
-21,
-24,
-6
+1,
+31,
+19
 ],
 "order": null,
 "level": 60,
@@ -798,7 +798,7 @@
 "name": "Popular #5: Demonology",
 "spec": "Demonology",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/03500323100211-00551032012010013-204-6"
+"url": "https://talentsforever.com/warlock/60/001-0005003221221301351-0550005103-6"
 },
 {
 "class": "DRUID",
