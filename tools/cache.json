@@ -3,26 +3,6 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"05020000000000000",
-"05000000000000000",
-"250533120321021351"
-],
-"points": [
-7,
-5,
-39
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
 "30305213132515201",
 "05050100000000000",
 "000000000000000000"
@@ -35,7 +15,7 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #2: Arms",
+"name": "Popular #1: Arms",
 "spec": "Arms",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
@@ -55,7 +35,7 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #3: Protection",
+"name": "Popular #2: Protection",
 "spec": "Protection",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
@@ -63,22 +43,42 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30305013002000000",
-"05253005102210501",
-"200000000000000000"
+"05020000000000000",
+"05000000000000000",
+"250533120321021351"
 ],
 "points": [
-17,
-32,
-2
+7,
+5,
+39
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #4: Fury",
-"spec": "Fury",
+"name": "Popular #3: Protection",
+"spec": "Protection",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/30305013002-05253005102210501-2-6"
+"url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"05010000000000000",
+"00000000000000000",
+"250533120331021351"
+],
+"points": [
+6,
+0,
+40
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #4: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/0501--250533120331021351-6"
 },
 {
 "class": "WARRIOR",
@@ -95,7 +95,7 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #5: Fury",
+"name": "Popular #7: Fury",
 "spec": "Fury",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/30305013002-05253005151010501--6"
@@ -623,26 +623,6 @@
 {
 "class": "MAGE",
 "ranks": [
-"050203000100000000",
-"03550010130133051",
-"0054000000000000000"
-],
-"points": [
-11,
-31,
-9
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Fire",
-"spec": "Fire",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/0502030001-03550010130133051-0054-6"
-},
-{
-"class": "MAGE",
-"ranks": [
 "255225223122311531",
 "13000000000000000",
 "0000000000000000000"
@@ -655,10 +635,30 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #3: Arcane",
+"name": "Popular #2: Arcane",
 "spec": "Arcane",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/mage/60/255225223122311531-13--6"
+},
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"00000000000000000",
+"0555323331321331251"
+],
+"points": [
+0,
+0,
+51
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #3: Frost",
+"spec": "Frost",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/mage/60/--0555323331321331251-6"
 },
 {
 "class": "MAGE",
@@ -683,22 +683,22 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
-"00000000000000000",
-"0555323331321331251"
+"050203000100000000",
+"03550010130133051",
+"0054000000000000000"
 ],
 "points": [
-0,
-0,
-51
+11,
+31,
+9
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #5: Frost",
-"spec": "Frost",
+"name": "Popular #5: Fire",
+"spec": "Fire",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/--0555323331321331251-6"
+"url": "https://talentsforever.com/mage/60/0502030001-03550010130133051-0054-6"
 },
 {
 "class": "WARLOCK",
@@ -763,26 +763,6 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"00000000000000000",
-"0305003200220300000",
-"2050315103101351"
-],
-"points": [
-0,
-20,
-31
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Destruction",
-"spec": "Destruction",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/-03050032002203-2050315103101351-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
 "00100000000000000",
 "0005003221221301351",
 "0550005103000000"
@@ -795,10 +775,30 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #5: Demonology",
+"name": "Popular #4: Demonology",
 "spec": "Demonology",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warlock/60/001-0005003221221301351-0550005103-6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"00000000000000000",
+"0305003200220300000",
+"2050315103101351"
+],
+"points": [
+0,
+20,
+31
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #5: Destruction",
+"spec": "Destruction",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/-03050032002203-2050315103101351-6"
 },
 {
 "class": "DRUID",
@@ -823,22 +823,22 @@
 {
 "class": "DRUID",
 "ranks": [
-"5032220115501351",
-"00000000000000000000",
-"5052030000000000"
+"0500220000000000",
+"55200032120032012051",
+"0500000000000000"
 ],
 "points": [
-36,
-0,
-15
+9,
+34,
+5
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #2: Balance",
-"spec": "Balance",
+"name": "Popular #2: Feral Combat",
+"spec": "Feral Combat",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
+"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
 },
 {
 "class": "DRUID",
@@ -863,34 +863,34 @@
 {
 "class": "DRUID",
 "ranks": [
-"0500220000000000",
-"55200032120032012051",
-"0500000000000000"
+"5032220115501351",
+"00000000000000000000",
+"5052030000000000"
 ],
 "points": [
-9,
-34,
-5
+36,
+0,
+15
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #4: Feral Combat",
-"spec": "Feral Combat",
+"name": "Popular #4: Balance",
+"spec": "Balance",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
+"url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
 },
 {
 "class": "DRUID",
 "ranks": [
-"0500220000000000",
-"55000032021032212051",
-"0500300000000000"
+"0000000000000000",
+"55230332120132012551",
+"0500000000000000"
 ],
 "points": [
-9,
-34,
-8
+0,
+46,
+5
 ],
 "order": null,
 "level": 60,
@@ -898,7 +898,7 @@
 "name": "Popular #5: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55000032021032212051-05003-6"
+"url": "https://talentsforever.com/druid/60/-55230332120132012551-05-6"
 }
 ],
 "iv:/wow-forever/affliction-warlock-ranged-dps-pve-guide": [
@@ -4969,207 +4969,6 @@
 {
 "class": "DRUID",
 "ranks": [
-"5030210000000000",
-"00000000000000000000",
-"0000000000000000"
-],
-"points": [
-11,
-0,
-0
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Balance Build",
-"spec": "Balance",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=A11111444667",
-"guide": "https://www.warcrafttavern.com/forever/guides/druid/",
-"category": null
-},
-{
-"class": "DRUID",
-"ranks": [
-"0000000000000000",
-"53200000100000000000",
-"0000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-9
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Feral Build",
-"spec": "Feral Combat",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=B1111144222a",
-"guide": "https://www.warcrafttavern.com/forever/guides/druid/",
-"category": null
-},
-{
-"class": "DRUID",
-"ranks": [
-"0000000000000000",
-"00000000000000000000",
-"5050000100000000"
-],
-"points": [
-0,
-0,
-11
-],
-"order": [
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Restoration Build",
-"spec": "Restoration",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=C1111144444b",
-"guide": "https://www.warcrafttavern.com/forever/guides/druid/",
-"category": null
-},
-{
-"class": "DRUID",
-"ranks": [
 "5032220110500000",
 "00000000000000000000",
 "0000000000000000"
@@ -5278,7 +5077,7 @@
 "class": "DRUID",
 "ranks": [
 "0000000000000000",
-"53200002120032010000",
+"53200031121002010000",
 "0000000000000000"
 ],
 "points": [
@@ -5329,6 +5128,18 @@
 ],
 [
 2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
 9
 ],
 [
@@ -5337,7 +5148,7 @@
 ],
 [
 2,
-8
+11
 ],
 [
 2,
@@ -5346,18 +5157,6 @@
 [
 2,
 10
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-13
 ],
 [
 2,
@@ -5377,7 +5176,7 @@
 "name": "Level 30 Feral Build",
 "spec": "Feral Combat",
 "source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=B1111144222a99bbeeeffh",
+"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=B1111144222888a9cbbffh",
 "guide": "https://www.warcrafttavern.com/forever/guides/druid/",
 "category": null
 },
@@ -6510,75 +6309,7 @@
 "category": null
 }
 ],
-"tavern:/forever/guides/paladin/": [
-{
-"class": "PALADIN",
-"ranks": [
-"05320001000000000",
-"0000000000000000",
-"00000000000000000"
-],
-"points": [
-11,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "Holy Healing – Reverence – 11/0/0",
-"spec": "Holy",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/paladin#?t=A22222444559",
-"guide": "https://www.warcrafttavern.com/forever/guides/paladin/",
-"category": null
-}
-],
+"tavern:/forever/guides/paladin/": [],
 "tavern:/forever/guides/priest/": [
 {
 "class": "PRIEST",
@@ -8181,6 +7912,133 @@
 "url": "https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents#zb1",
 "guide": "https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents",
 "category": "Leveo"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5020221505101000",
+"0020000000000000",
+"000000000000000000"
+],
+"points": [
+24,
+2,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+6
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+11
+],
+[
+1,
+6
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+7
+],
+[
+1,
+13
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+2,
+3
+],
+[
+2,
+3
+]
+],
+"level": null,
+"beta": null,
+"name": "Recommended Leveling Talents for Hunter",
+"spec": "Beast Mastery",
+"source": "Method",
+"url": "https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents#zb2",
+"guide": "https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents",
+"category": "Leveo"
 }
 ],
 "method:/wow-forever/wow-forever-mage-leveling-guide-and-talents": [
@@ -8288,6 +8146,133 @@
 "spec": "Frost",
 "source": "Method",
 "url": "https://www.method.gg/wow-forever/wow-forever-mage-leveling-guide-and-talents#zb1",
+"guide": "https://www.method.gg/wow-forever/wow-forever-mage-leveling-guide-and-talents",
+"category": "Leveo"
+},
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"00000000000000000",
+"0535003201001301200"
+],
+"points": [
+0,
+0,
+26
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+10
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+8
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+13
+],
+[
+3,
+8
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+16
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+]
+],
+"level": null,
+"beta": null,
+"name": "Recommended Leveling Talents for Mage",
+"spec": "Frost",
+"source": "Method",
+"url": "https://www.method.gg/wow-forever/wow-forever-mage-leveling-guide-and-talents#zb2",
 "guide": "https://www.method.gg/wow-forever/wow-forever-mage-leveling-guide-and-talents",
 "category": "Leveo"
 }
@@ -9244,12 +9229,12 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"05500020035001000",
+"05540020035001010",
 "0000000000000000000",
 "0000000000000000"
 ],
 "points": [
-21,
+26,
 0,
 0
 ],
@@ -9272,27 +9257,27 @@
 ],
 [
 1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
 2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
 ],
 [
 1,
@@ -9337,10 +9322,30 @@
 [
 1,
 14
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+16
 ]
 ],
 "level": null,
-"beta": true,
+"beta": null,
 "name": "Affliction",
 "spec": "Affliction",
 "source": "Method",
@@ -9352,12 +9357,12 @@
 "class": "WARLOCK",
 "ranks": [
 "04000000000000000",
-"0015203200200200000",
+"0025203200201300200",
 "0000000000000000"
 ],
 "points": [
 4,
-17,
+22,
 0
 ],
 "order": [
@@ -9444,10 +9449,30 @@
 [
 2,
 14
+],
+[
+2,
+14
+],
+[
+2,
+3
+],
+[
+2,
+13
+],
+[
+2,
+17
+],
+[
+2,
+17
 ]
 ],
 "level": null,
-"beta": true,
+"beta": null,
 "name": "Demonology",
 "spec": "Demonology",
 "source": "Method",
@@ -9458,16 +9483,20 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"04000000000000000",
+"05000000000000000",
 "0000000000000000000",
-"0050055100100000"
+"0050055103100100"
 ],
 "points": [
-4,
+5,
 0,
-17
+21
 ],
 "order": [
+[
+1,
+2
+],
 [
 1,
 2
@@ -9551,10 +9580,26 @@
 [
 3,
 7
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+14
 ]
 ],
 "level": null,
-"beta": true,
+"beta": null,
 "name": "Destruction",
 "spec": "Destruction",
 "source": "Method",
@@ -9563,235 +9608,7 @@
 "category": "Leveo"
 }
 ],
-"method:/wow-forever/wow-forever-warrior-leveling-guide-and-talents": [
-{
-"class": "WARRIOR",
-"ranks": [
-"05325213132515201",
-"05050000000000000",
-"000000000000000000"
-],
-"points": [
-41,
-10,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-7
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-11
-],
-[
-1,
-13
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-15
-],
-[
-1,
-12
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-17
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-15
-],
-[
-1,
-11
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-1,
-9
-],
-[
-1,
-4
-],
-[
-1,
-4
-]
-],
-"level": null,
-"beta": null,
-"name": "Arms (Two-handed) Build",
-"spec": "Arms",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents#zb1",
-"guide": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents",
-"category": "Leveo"
-}
-],
+"method:/wow-forever/wow-forever-warrior-leveling-guide-and-talents": [],
 "wfb:/guide/affliction-drain-tank-warlock-leveling": [],
 "wfb:/guide/affliction-warlock-pve-guide": [],
 "wfb:/guide/affliction-warlock-pvp-guide": [
@@ -23475,6 +23292,12 @@
 [
 "WARRIOR",
 1,
+14,
+12319
+],
+[
+"WARRIOR",
+1,
 16,
 23881
 ],
@@ -23529,32 +23352,26 @@
 [
 "WARRIOR",
 1,
-8,
-1310315
-],
-[
-"WARRIOR",
-1,
-2,
-1323964
-],
-[
-"WARRIOR",
-1,
-14,
-12319
-],
-[
-"WARRIOR",
-1,
 4,
 1323963
 ],
 [
 "WARRIOR",
 1,
+8,
+1310315
+],
+[
+"WARRIOR",
+1,
 11,
 20500
+],
+[
+"WARRIOR",
+1,
+2,
+1323964
 ],
 [
 "WARRIOR",
@@ -23567,54 +23384,6 @@
 2,
 17,
 23922
-],
-[
-"WARRIOR",
-2,
-13,
-12312
-],
-[
-"WARRIOR",
-2,
-14,
-12809
-],
-[
-"WARRIOR",
-2,
-10,
-12308
-],
-[
-"WARRIOR",
-2,
-6,
-12975
-],
-[
-"WARRIOR",
-2,
-7,
-1310316
-],
-[
-"WARRIOR",
-2,
-5,
-12287
-],
-[
-"WARRIOR",
-2,
-1,
-12298
-],
-[
-"WARRIOR",
-2,
-9,
-12792
 ],
 [
 "WARRIOR",
@@ -23637,6 +23406,18 @@
 [
 "WARRIOR",
 2,
+13,
+12312
+],
+[
+"WARRIOR",
+2,
+14,
+12809
+],
+[
+"WARRIOR",
+2,
 11,
 1310317
 ],
@@ -23649,8 +23430,32 @@
 [
 "WARRIOR",
 2,
+10,
+12308
+],
+[
+"WARRIOR",
+2,
 4,
 12797
+],
+[
+"WARRIOR",
+2,
+6,
+12975
+],
+[
+"WARRIOR",
+2,
+7,
+1310316
+],
+[
+"WARRIOR",
+2,
+5,
+12287
 ],
 [
 "WARRIOR",
@@ -23663,6 +23468,18 @@
 2,
 3,
 12297
+],
+[
+"WARRIOR",
+2,
+1,
+12298
+],
+[
+"WARRIOR",
+2,
+9,
+12792
 ],
 [
 "WARRIOR",
@@ -28114,12 +27931,16 @@
 2
 ],
 "B5": [
-3,
+2,
 3
 ],
 "B6": [
 2,
 4
+],
+"B8": [
+2,
+5
 ],
 "B9": [
 2,
@@ -28145,6 +27966,10 @@
 2,
 11
 ],
+"Bg": [
+2,
+12
+],
 "Bh": [
 2,
 13
@@ -28153,17 +27978,21 @@
 2,
 14
 ],
-"Bk": [
+"Bl": [
 2,
-12
+15
 ],
 "Bm": [
 2,
-15
+16
 ],
 "Bp": [
 2,
 17
+],
+"C0": [
+3,
+1
 ],
 "C1": [
 3,
@@ -28171,11 +28000,15 @@
 ],
 "C2": [
 3,
-4
+3
 ],
 "C4": [
 3,
-1
+4
+],
+"C6": [
+3,
+5
 ],
 "C7": [
 3,
@@ -28191,7 +28024,7 @@
 ],
 "Ca": [
 3,
-5
+9
 ],
 "Cb": [
 3,
@@ -28203,11 +28036,11 @@
 ],
 "Cd": [
 3,
-9
+12
 ],
 "Ce": [
 3,
-12
+13
 ],
 "Cg": [
 3,
@@ -28219,15 +28052,11 @@
 ],
 "Ci": [
 3,
-13
-],
-"Cj": [
-3,
-17
+16
 ],
 "Cm": [
 3,
-16
+17
 ],
 "Cp": [
 3,
@@ -29097,7 +28926,7 @@
 ],
 "Aa": [
 1,
-15
+8
 ],
 "Ac": [
 1,
@@ -29125,7 +28954,7 @@
 ],
 "Am": [
 1,
-8
+15
 ],
 "Ap": [
 1,
@@ -29785,6 +29614,10 @@
 2,
 6
 ],
+"B8": [
+2,
+7
+],
 "B9": [
 2,
 8
@@ -29799,7 +29632,7 @@
 ],
 "Bc": [
 2,
-7
+11
 ],
 "Bd": [
 2,
@@ -29815,11 +29648,15 @@
 ],
 "Bg": [
 2,
-17
+15
 ],
 "Bh": [
 2,
 16
+],
+"Bj": [
+2,
+17
 ],
 "Bk": [
 2,
