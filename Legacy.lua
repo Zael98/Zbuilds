@@ -3,6 +3,57 @@
 -- /zb legacy (or /zbuildslegacydump) writes it to ZbuildsDB.legacyDump and sums it up in the chat.
 local _, ns = ...
 
+-- The Legacy trees' grid in the game data (see /zb legacy): perks sit NODE_STEP apart from the origin.
+local ORIGIN_X, ORIGIN_Y, NODE_STEP = 2400, 1050, 750
+
+function ns.LegacyData()
+    return ZbuildsData and ZbuildsData.legacy
+end
+
+function ns.PlanRank(plan, t, i)
+    return tonumber(plan.ranks[t]:sub(i, i)) or 0
+end
+
+-- The character's Legacy as the game has it: { configID, available, spent, rank[t][i], node[t][i], spell[t][i] },
+-- or nil, error. Nodes are matched to the data's perks by grid position, so it works in any client language.
+function ns.ReadLegacy(data)
+    if not (C_Traits and C_Traits.GetConfigIDByTreeID) then return nil, ns.L.NO_API end
+    local configID = C_Traits.GetConfigIDByTreeID(data.trees[1].id)
+    if not configID then return nil, ns.L.LEGACY_LOCKED end
+    local result = { configID = configID, rank = {}, node = {}, spell = {}, spent = 0 }
+    for t, tree in ipairs(data.trees) do
+        local byPos = {}
+        for i, perk in ipairs(tree.perks) do byPos[perk.row * 10 + perk.col] = i end
+        result.rank[t], result.node[t], result.spell[t] = {}, {}, {}
+        for i in ipairs(tree.perks) do result.rank[t][i] = 0 end
+        for _, nodeID in ipairs(C_Traits.GetTreeNodes(tree.id) or {}) do
+            local n = C_Traits.GetNodeInfo(configID, nodeID)
+            local i = n and n.posX and byPos[(floor((n.posY - ORIGIN_Y) / NODE_STEP + 0.5) + 1) * 10
+                + floor((n.posX - ORIGIN_X) / NODE_STEP + 0.5) + 1]
+            if i then
+                local entry = n.entryIDs and n.entryIDs[1] and C_Traits.GetEntryInfo(configID, n.entryIDs[1])
+                local def = entry and entry.definitionID and C_Traits.GetDefinitionInfo(entry.definitionID)
+                result.rank[t][i], result.node[t][i] = n.currentRank or 0, nodeID
+                result.spell[t][i] = def and def.spellID
+                result.spent = result.spent + (n.ranksPurchased or 0)
+            end
+        end
+    end
+    local currency = C_Traits.GetTreeCurrencyInfo(configID, data.trees[1].id, false)
+    result.available = currency and currency[1] and currency[1].quantity or 0
+    return result
+end
+
+-- The plan's first point the character does not have yet: t, i, rank (nil when the plan is complete).
+function ns.NextLegacyStep(plan, legacy)
+    local seen = {}
+    for _, step in ipairs(plan.order) do
+        local t, i = step[1], step[2]
+        seen[t * 100 + i] = (seen[t * 100 + i] or 0) + 1
+        if seen[t * 100 + i] > legacy.rank[t][i] then return t, i, seen[t * 100 + i] end
+    end
+end
+
 -- calls an API that may be missing or may error: nil when missing, { error = "..." } when it fails
 local function call(fn, ...)
     if type(fn) ~= "function" then return nil end

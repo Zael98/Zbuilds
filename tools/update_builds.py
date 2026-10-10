@@ -140,8 +140,12 @@ class ClassTrees:
 RENAMES = {}  # old talent name -> current name, from talentsforever
 
 
+TF_DATA = {}  # talentsforever's data.json, read once (talent trees, and the Legacy trees and challenges)
+
+
 def load_trees():
     data = json.loads(fetch(TF + "/data.json"))
+    TF_DATA.update(data)
     try:
         m = re.search(r"TALENT_RENAMES\s*=\s*(\{[^}]*\})", fetch(TF + "/talents.js"))
         RENAMES.update(json.loads(m.group(1)))
@@ -400,6 +404,122 @@ def parse_method(code, classes):
     return cls, ranks, order
 
 
+# ---------------------------------------------------------------- Legacy (account-wide perk trees)
+# Trees and challenges come from talentsforever (CC BY 4.0). No site publishes Legacy builds yet, so the
+# plans are made here from wowforeverbuilds' perks grouped by goal: each goal's perks, in the site's
+# order, get the 16 points, with the points each perk needs in its tree first and the perk it requires.
+
+LEGACY_POINTS = 16
+
+
+def slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def legacy_goals():
+    """[(goal, [perk slug, ...])] from wowforeverbuilds' Legacy builds page, in the page's order."""
+    page = html.unescape(fetch(WFB + "/legacy/builds"))
+    start = page.find("Perks by goal")
+    if start < 0:
+        raise ValueError("no 'Perks by goal' section")
+    page = page[start:]
+    heads = [(m.start(), clean(m.group(1))) for m in re.finditer(r"<h3[^>]*>(.*?)</h3>", page, re.S)]
+    goals = []
+    for k, (at, name) in enumerate(heads):
+        end = heads[k + 1][0] if k + 1 < len(heads) else len(page)
+        perks = []
+        for perk in re.findall(r'href="/legacy/tree/[a-z]+#([a-z0-9-]+)"', page[at:end]):
+            if perk not in perks:
+                perks.append(perk)
+        if perks:
+            goals.append((name, perks))
+    return goals
+
+
+def legacy_plan(trees, wanted):
+    """Ranks and point order (16 points at most) for a goal: wanted is a list of (tree, perk) indexes."""
+    ranks = [[0] * len(t["perks"]) for t in trees]
+    order, left = [], [LEGACY_POINTS]
+
+    def in_tree(t):
+        return sum(ranks[t])
+
+    def buy(t, i, n):
+        while n > 0 and left[0] > 0 and ranks[t][i] < trees[t]["perks"][i]["max"]:
+            ranks[t][i] += 1
+            order.append([t + 1, i + 1])
+            left[0] -= 1
+            n -= 1
+
+    def ready(t, i):
+        perk = trees[t]["perks"][i]
+        req = perk.get("req")
+        return in_tree(t) >= perk["gate"] and (req is None or ranks[t][req] >= trees[t]["perks"][req]["max"])
+
+    def unlock(t, i):
+        """Spends what perk i needs first: its required perk maxed, then points in its tree up to its gate."""
+        perk = trees[t]["perks"][i]
+        req = perk.get("req")
+        if req is not None and ranks[t][req] < trees[t]["perks"][req]["max"]:
+            if not unlock(t, req):
+                return False
+            buy(t, req, trees[t]["perks"][req]["max"])
+            if ranks[t][req] < trees[t]["perks"][req]["max"]:
+                return False
+        while in_tree(t) < perk["gate"]:
+            # fill the gate with the goal's own perks of that tree first, then any open perk of the tree
+            mine = [j for tt, j in wanted if tt == t and j != i]
+            others = [j for j in range(len(trees[t]["perks"])) if j != i and j not in mine]
+            filler = next((j for j in mine + others
+                           if ranks[t][j] < trees[t]["perks"][j]["max"] and ready(t, j)), None)
+            if filler is None or left[0] == 0:
+                return False
+            buy(t, filler, 1)
+        return True
+
+    for t, i in wanted:
+        if left[0] == 0:
+            break
+        saved = ([r[:] for r in ranks], order[:], left[0])
+        if unlock(t, i) and ready(t, i) and left[0] > 0:  # at least one rank of the perk itself
+            buy(t, i, trees[t]["perks"][i]["max"])
+        else:  # it does not fit: undo whatever the attempt spent
+            ranks[:], order[:], left[0] = saved[0], saved[1], saved[2]
+    return ranks, order
+
+
+def legacy_data():
+    raw = TF_DATA["legacy"]
+    trees = []
+    for tree in sorted(raw["trees"], key=lambda tr: tr["id"]):
+        perks = [p for p in tree["perks"] if not p.get("placeholder")]
+        index = {p["name"]: k for k, p in enumerate(perks)}
+        trees.append({
+            "id": tree["id"], "name": tree["name"], "icon": tree.get("icon"),
+            "perks": [{"name": p["name"], "max": p["max"], "row": p["row"], "col": p["col"], "icon": p.get("icon"),
+                       "gate": p.get("gate", 0), "req": index.get(p.get("req")),
+                       "desc": (p.get("ranks") or [None])[-1]} for p in perks],
+        })
+    by_slug = {slug(p["name"]): (t, i) for t, tree in enumerate(trees) for i, p in enumerate(tree["perks"])}
+
+    plans = []
+    for goal, slugs in legacy_goals():
+        wanted = [by_slug[s] for s in slugs if s in by_slug]
+        missing = [s for s in slugs if s not in by_slug]
+        if missing:
+            warn(f"Legacy goal '{goal}': perks not in the trees: {missing}")
+        ranks, order = legacy_plan(trees, wanted)
+        plans.append({"name": goal, "source": "WoW Forever Builds", "url": f"{WFB}/legacy/builds",
+                      "ranks": ["".join(str(r) for r in t) for t in ranks], "points": [sum(t) for t in ranks],
+                      "order": order})
+
+    for tree in trees:  # the game's Lua tables are 1-based
+        for perk in tree["perks"]:
+            perk["req"] = perk["req"] + 1 if perk["req"] is not None else None
+    return {"points": LEGACY_POINTS, "trees": trees, "plans": plans,
+            "challenges": [{"group": c["group"], "name": c["name"], "desc": c["desc"]} for c in raw["challenges"]]}
+
+
 # ---------------------------------------------------------------- decoders shipped to the game
 # The in-game "Import link" reads links offline, so it gets each site's symbols already placed in our
 # trees (by talent name, like the updater does): "symbol" -> {tree, index}, 1-based.
@@ -644,7 +764,10 @@ problems = []  # what failed this run; the GitHub workflow turns a non-empty lis
 def cached(key, produce):
     """produce() now, or, if the site fails, the builds it gave last time (so a bad day loses nothing)."""
     try:
-        cache_new[key] = [b for b in produce() if b]
+        found = [b for b in produce() if b]
+        if not found and cache_old.get(key):
+            raise ValueError(f"no builds now, {len(cache_old[key])} last time (the site may have changed)")
+        cache_new[key] = found
     except Exception as e:
         warn(f"{key}: {e}")
         if key in cache_old:
@@ -742,6 +865,7 @@ def main():
     for token, t, i, spell in cached("spells", lambda: method_spells(classes)):
         next(c for c in classes.values() if c.token == token).trees[t]["talents"][i]["spell"] = spell
     decoders = cached("decoders", lambda: [link_decoders(classes)])
+    legacy = cached("legacy", lambda: [legacy_data()])
     builds = merge_duplicates([dict(b) for b in builds])  # copies: the cache keeps each site's own builds
     PROBLEMS_FILE.write_text("\n".join(problems), encoding="utf-8")
 
@@ -757,6 +881,7 @@ def main():
         "classes": {c.token: c.to_lua() for c in classes.values()},
         "builds": builds,
         "decoders": decoders[0] if decoders else {},
+        "legacy": legacy[0] if legacy else None,
     }
     CACHE.write_text(json.dumps(cache_new, ensure_ascii=False, indent=0), encoding="utf-8")
     content = ("-- Generated by tools/update_builds.py. Do not edit; run the script again instead.\n"

@@ -710,10 +710,311 @@ local function refreshSpecTabs(classData, current)
     end
 end
 
+-- ---------------------------------------------------------------- Legacy view
+-- The account's Legacy trees (Professions, Adventure, Resourcefulness): points available and spent against
+-- the limit, and a plan by goal laid over the trees, with the order of its points. Plans are not applied:
+-- Legacy points cannot be refunded, so they are spent by hand in the game's own Legacy window.
+
+local LEGACY_COLS, LEGACY_ROWS = 3, 4
+local LEGACY_CARD_H = CARD_HEAD + LEGACY_ROWS * (CELL + GAP) - GAP + PAD
+local PLAN_ROW_H = 40
+local lv -- the Legacy view
+local legacyCards, legacyCells, planRows, legacySteps = {}, {}, {}, {}
+
+local function legacyPlans()
+    local data = ns.LegacyData()
+    return data and data.plans or {}
+end
+
+local function selectedPlan()
+    local name = ZbuildsCharDB and ZbuildsCharDB.legacyPlan
+    if name == false then return nil end -- "no plan" chosen
+    for _, plan in ipairs(legacyPlans()) do
+        if plan.name == name then return plan end
+    end
+    return legacyPlans()[1]
+end
+
+local function selectPlan(plan)
+    ZbuildsCharDB = ZbuildsCharDB or {}
+    ZbuildsCharDB.legacyPlan = plan and plan.name or false
+    ns.Refresh()
+end
+
+local function treeName(tree)
+    return L["LEGACY_TREE_" .. tree.id] or tree.name
+end
+
+local function perkName(data, legacy, t, i)
+    local spell = legacy and legacy.spell[t][i]
+    return (spell and C_Spell.GetSpellName(spell)) or data.trees[t].perks[i].name
+end
+
+local function planRow(k)
+    if planRows[k] then return planRows[k] end
+    local row = CreateFrame("Button", nil, lv, "BackdropTemplate")
+    row:SetHeight(PLAN_ROW_H - 4)
+    row:SetPoint("TOPLEFT", PAD, -HEADER_H - PAD - 140 - (k - 1) * PLAN_ROW_H)
+    row:SetWidth(LIST_W)
+    row.accent = row:CreateTexture(nil, "ARTWORK")
+    row.accent:SetPoint("TOPLEFT")
+    row.accent:SetPoint("BOTTOMLEFT")
+    row.accent:SetWidth(3)
+    row.title = text(row, 12)
+    row.title:SetPoint("TOPLEFT", 12, -6)
+    row.title:SetPoint("RIGHT", -8, 0)
+    row.sub = text(row, 10, C.dim)
+    row.sub:SetPoint("BOTTOMLEFT", 12, 6)
+    row.sub:SetPoint("RIGHT", -8, 0)
+    row:SetScript("OnClick", function(self) selectPlan(self.plan) end)
+    planRows[k] = row
+    return row
+end
+
+local function legacyCard(t)
+    if legacyCards[t] then return legacyCards[t] end
+    local c = flat(CreateFrame("Frame", nil, lv.trees, "BackdropTemplate"))
+    c:SetSize(CARD_W, LEGACY_CARD_H)
+    c:SetPoint("TOPLEFT", (t - 1) * (CARD_W + 8), 0)
+    c.stripe = c:CreateTexture(nil, "ARTWORK", nil, 3)
+    c.stripe:SetPoint("TOPLEFT", 1, -1)
+    c.stripe:SetPoint("TOPRIGHT", -1, -1)
+    c.stripe:SetHeight(3)
+    c.stripe:SetColorTexture(C.tree[t][1], C.tree[t][2], C.tree[t][3], 1)
+    c.icon = c:CreateTexture(nil, "ARTWORK")
+    c.icon:SetSize(20, 20)
+    c.icon:SetPoint("TOPLEFT", PAD, -8)
+    c.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    c.title = text(c, 13)
+    c.title:SetPoint("LEFT", c.icon, "RIGHT", 6, 0)
+    c.title:SetPoint("RIGHT", c, "TOPRIGHT", -54, -18)
+    c.points = text(c, 13, C.text, "RIGHT")
+    c.points:SetPoint("TOPRIGHT", -PAD, -11)
+    c.bar = bar(c, 3)
+    c.bar.track:SetPoint("TOPLEFT", PAD, -33)
+    c.bar.track:SetPoint("TOPRIGHT", -PAD, -33)
+    legacyCards[t] = c
+    return c
+end
+
+local function legacyCell(t, i)
+    legacyCells[t] = legacyCells[t] or {}
+    if legacyCells[t][i] then return legacyCells[t][i] end
+    local c = flat(CreateFrame("Button", nil, legacyCard(t), "BackdropTemplate"), { 0, 0, 0, 1 }, C.line, 2)
+    c:SetSize(CELL, CELL)
+    c:SetFrameLevel(legacyCard(t):GetFrameLevel() + 2)
+    c.icon = c:CreateTexture(nil, "ARTWORK")
+    c.icon:SetPoint("TOPLEFT", 2, -2)
+    c.icon:SetPoint("BOTTOMRIGHT", -2, 2)
+    c.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    c.badge = badge(c, "BOTTOMRIGHT", 6, -6)
+    c.next = c:CreateTexture(nil, "OVERLAY")
+    c.next:SetTexture("Interface\\Buttons\\CheckButtonHilight")
+    c.next:SetBlendMode("ADD")
+    c.next:SetPoint("TOPLEFT", -8, 8)
+    c.next:SetPoint("BOTTOMRIGHT", 8, -8)
+    c:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        if self.spell then GameTooltip:SetSpellByID(self.spell) else
+            GameTooltip:SetText(self.name, 1, 1, 1)
+            if self.desc then GameTooltip:AddLine(self.desc, 0.9, 0.9, 0.9, true) end
+        end
+        for _, info in ipairs(self.info) do GameTooltip:AddLine(info[1], unpack(info[2])) end
+        GameTooltip:Show()
+    end)
+    c:SetScript("OnLeave", GameTooltip_Hide)
+    legacyCells[t][i] = c
+    return c
+end
+
+local function legacyStep(k)
+    if legacySteps[k] then return legacySteps[k] end
+    local b = flat(CreateFrame("Frame", nil, lv.order, "BackdropTemplate"), { 0, 0, 0, 1 })
+    b:SetSize(TL_ICON, TL_ICON)
+    b:SetPoint("TOPLEFT", 8 + (k - 1) * TL_STEP, -18)
+    b:EnableMouse(true)
+    b.icon = b:CreateTexture(nil, "ARTWORK")
+    b.icon:SetPoint("TOPLEFT", 1, -1)
+    b.icon:SetPoint("BOTTOMRIGHT", -1, 1)
+    b.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    b.number = text(b, 8, C.dim, "CENTER")
+    b.number:SetPoint("TOP", b, "BOTTOM", 0, -1)
+    b:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        if self.spell then GameTooltip:SetSpellByID(self.spell) else GameTooltip:SetText(self.name, 1, 1, 1) end
+        GameTooltip:Show()
+    end)
+    b:SetScript("OnLeave", GameTooltip_Hide)
+    legacySteps[k] = b
+    return b
+end
+
+local function refreshLegacy()
+    local data = ns.LegacyData()
+    if not data then
+        lv.points:SetText(paint(L.MISSING_DATA, C.over))
+        return
+    end
+    local legacy, err = ns.ReadLegacy(data)
+    local plan = selectedPlan()
+
+    -- points against the limit
+    if legacy then
+        lv.points:SetText(L.LEGACY_POINTS:format(legacy.available, legacy.spent, data.points))
+        lv.pointsBar:Set(legacy.spent / data.points, C.done)
+    else
+        lv.points:SetText(paint(err or "", C.pending))
+        lv.pointsBar:Set(0, C.done)
+    end
+
+    -- plans by goal, then "no plan"
+    local plans = legacyPlans()
+    for k = 1, #plans + 1 do
+        local row, p = planRow(k), plans[k]
+        local selected = p == plan
+        row.plan = p
+        flat(row, selected and C.selected or C.panel, selected and C.pending or C.line)
+        row.accent:SetColorTexture(unpack(C.pending))
+        row.accent:SetShown(selected)
+        row.title:SetText(p and (L["GOAL_" .. p.name] or p.name) or L.LEGACY_NO_PLAN)
+        row.sub:SetText(p and (table.concat(p.points, "/") .. "  ·  " .. p.source) or "")
+        row:Show()
+    end
+    for k = #plans + 2, #planRows do planRows[k]:Hide() end
+
+    -- the trees, with the plan's ranks over the character's
+    local nt, ni, nr
+    if plan and legacy then nt, ni, nr = ns.NextLegacyStep(plan, legacy) end
+    for t, tree in ipairs(data.trees) do
+        local c = legacyCard(t)
+        c.icon:SetTexture("Interface\\Icons\\" .. (tree.icon or "inv_misc_questionmark"))
+        c.title:SetText(treeName(tree))
+        local mineIn = 0
+        for i in ipairs(tree.perks) do mineIn = mineIn + (legacy and legacy.rank[t][i] or 0) end
+        c.points:SetText(plan and (paint(mineIn, C.done) .. paint(" / ", C.dim) .. plan.points[t]) or tostring(mineIn))
+        c.bar:Set((plan and plan.points[t] or mineIn) / data.points, C.tree[t])
+        c:Show()
+        local gridX = (CARD_W - (LEGACY_COLS * (CELL + GAP) - GAP)) / 2
+        for i, perk in ipairs(tree.perks) do
+            local cl = legacyCell(t, i)
+            cl:SetPoint("TOPLEFT", gridX + (perk.col - 1) * (CELL + GAP), -(CARD_HEAD + PAD / 2) - (perk.row - 1) * (CELL + GAP))
+            cl.icon:SetTexture("Interface\\Icons\\" .. (perk.icon or "inv_misc_questionmark"))
+            cl.name, cl.desc, cl.spell = perk.name, perk.desc, legacy and legacy.spell[t][i]
+            local a, mine = plan and ns.PlanRank(plan, t, i) or 0, legacy and legacy.rank[t][i] or 0
+            local color = (mine > a and C.over) or (a > 0 and (mine >= a and C.done or C.pending)) or (mine > 0 and C.done) or nil
+            cl:SetBackdropBorderColor(unpack(color or C.line))
+            cl.icon:SetDesaturated(a == 0 and mine == 0)
+            cl.icon:SetAlpha((a == 0 and mine == 0) and 0.35 or 1)
+            if a > 0 or mine > 0 then cl.badge:Set((plan and a or mine) .. "/" .. perk.max, color) else cl.badge:Hide() end
+            cl.info = { { L.TIP_BUILD_YOU:format(a, perk.max, mine), C.pending } }
+            if perk.gate > 0 then cl.info[#cl.info + 1] = { L.LEGACY_GATE:format(perk.gate), C.dim } end
+            if perk.req then cl.info[#cl.info + 1] = { L.LEGACY_REQ:format(perkName(data, legacy, t, perk.req)), C.dim } end
+            cl.next:SetShown(t == nt and i == ni)
+            cl:Show()
+        end
+    end
+
+    -- header of the plan, the order of its points and what comes next
+    lv.planTitle:SetText(plan and (L["GOAL_" .. plan.name] or plan.name) or L.LEGACY_NO_PLAN)
+    local used = 0
+    for _, pts in ipairs(plan and plan.points or {}) do used = used + pts end
+    lv.planSub:SetText(plan and (paint(plan.source, C.source["WoW Forever Builds"]) .. paint(("   ·   %s   ·   %d/%d"):format(
+        table.concat(plan.points, "/"), used, data.points), C.dim)) or "")
+    lv.planNote:SetText(plan and paint(L.LEGACY_PLAN_NOTE:format(plan.source), C.dim) or "")
+    lv.order:SetShown(plan ~= nil)
+    for _, b in ipairs(legacySteps) do b:Hide() end
+    for k, step in ipairs(plan and plan.order or {}) do
+        local b, t, i = legacyStep(k), step[1], step[2]
+        local perk = data.trees[t].perks[i]
+        b.icon:SetTexture("Interface\\Icons\\" .. (perk.icon or "inv_misc_questionmark"))
+        b.name, b.spell = perk.name, legacy and legacy.spell[t][i]
+        b:SetBackdropBorderColor(C.tree[t][1], C.tree[t][2], C.tree[t][3], 1)
+        b.number:SetText(k)
+        b:Show()
+    end
+    lv.status:SetText((nt and L.NEXT:format(paint(perkName(data, legacy, nt, ni), C.pending), nr))
+        or (plan and legacy and paint(L.COMPLETE, C.done)) or "")
+end
+
+local function createLegacyView()
+    lv = CreateFrame("Frame", nil, frame)
+    lv:SetAllPoints()
+    lv:Hide()
+    frame.legacyView = lv
+    local top, right = -HEADER_H - PAD, PAD + LIST_W + 16
+
+    local title = text(lv, 17)
+    title:SetPoint("TOPLEFT", PAD, top)
+    title:SetText(L.TAB_LEGACY)
+    lv.points = text(lv, 12)
+    lv.points:SetPoint("TOPLEFT", PAD, top - 26)
+    lv.points:SetWidth(LIST_W)
+    lv.points:SetWordWrap(true)
+    lv.pointsBar = bar(lv, 4)
+    lv.pointsBar.track:SetPoint("TOPLEFT", PAD, top - 64)
+    lv.pointsBar.track:SetWidth(LIST_W)
+    local note = text(lv, 11, C.pending)
+    note:SetPoint("TOPLEFT", PAD, top - 76)
+    note:SetWidth(LIST_W)
+    note:SetWordWrap(true)
+    note:SetText(L.LEGACY_NO_REFUND)
+    local plansTitle = text(lv, 13)
+    plansTitle:SetPoint("TOPLEFT", PAD, top - 116)
+    plansTitle:SetText(L.LEGACY_PLANS)
+
+    local divider = lv:CreateTexture(nil, "ARTWORK")
+    divider:SetColorTexture(unpack(C.line))
+    divider:SetWidth(1)
+    divider:SetPoint("TOPLEFT", PAD + LIST_W + 8, -HEADER_H)
+    divider:SetPoint("BOTTOMLEFT", PAD + LIST_W + 8, 0)
+
+    lv.planTitle = text(lv, 17)
+    lv.planTitle:SetPoint("TOPLEFT", right, top)
+    lv.planTitle:SetWidth(TREES_W)
+    lv.planSub = text(lv, 11, C.dim)
+    lv.planSub:SetPoint("TOPLEFT", right, top - 23)
+    lv.planSub:SetWidth(TREES_W)
+    lv.planNote = text(lv, 11, C.dim)
+    lv.planNote:SetPoint("TOPLEFT", right, top - 42)
+    lv.planNote:SetWidth(TREES_W)
+    lv.planNote:SetWordWrap(true)
+
+    lv.trees = CreateFrame("Frame", nil, lv)
+    lv.trees:SetPoint("TOPLEFT", right, top - 82)
+    lv.trees:SetSize(TREES_W, LEGACY_CARD_H)
+
+    lv.order = flat(CreateFrame("Frame", nil, lv, "BackdropTemplate"))
+    lv.order:SetPoint("TOPLEFT", lv.trees, "BOTTOMLEFT", 0, -8)
+    lv.order:SetSize(TREES_W, 18 + TL_ROW_H)
+    local orderTitle = text(lv.order, 10, C.dim)
+    orderTitle:SetPoint("TOPLEFT", 8, -4)
+    orderTitle:SetText(L.LEGACY_ORDER)
+
+    lv.status = text(lv, 12)
+    lv.status:SetPoint("TOPLEFT", lv.order, "BOTTOMLEFT", 0, -10)
+    lv.status:SetWidth(TREES_W)
+    lv.status:SetWordWrap(true)
+end
+
 -- ---------------------------------------------------------------- refresh
 
 function ns.Refresh()
     if not (frame and frame:IsShown()) then return end
+    -- header tabs: the talents view or the Legacy view
+    local legacyMode = state.mode == "legacy"
+    frame.talentsView:SetShown(not legacyMode)
+    frame.legacyView:SetShown(legacyMode)
+    for _, tab in ipairs(frame.modeTabs) do
+        local active = tab.mode == (state.mode or "talents")
+        tab:SetBackdropColor(unpack(active and C.selected or C.raised))
+        tab:SetBackdropBorderColor(unpack(active and C.pending or C.line))
+        tab.label:SetTextColor(unpack(active and C.text or C.dim))
+    end
+    if legacyMode then
+        local color = classColor(ns.PlayerClass())
+        frame.accent:SetColorTexture(color[1], color[2], color[3], 1)
+        return refreshLegacy()
+    end
     local mine = state.class == ns.PlayerClass()
     local classData = ns.ClassData(state.class)
     local tree, err
@@ -874,16 +1175,34 @@ local function create()
     local close = button(header, "x", 24, function() frame:Hide() end)
     close:SetPoint("RIGHT", -5, 0)
 
+    -- the window's two views
+    frame.modeTabs = {}
+    for k, mode in ipairs({ "talents", "legacy" }) do
+        local tab = button(header, mode == "talents" and L.TAB_TALENTS or L.TAB_LEGACY, 110, function()
+            state.mode = mode
+            ns.Refresh()
+        end)
+        tab:SetHeight(24)
+        tab:SetPoint("LEFT", title, "RIGHT", 24 + (k - 1) * 116, 0)
+        tab.mode = mode
+        frame.modeTabs[k] = tab
+    end
+
+    -- below the header: the talents view, swapped with the Legacy view by the header tabs
+    local view = CreateFrame("Frame", nil, frame)
+    view:SetAllPoints()
+    frame.talentsView = view
+
     -- left column: class switcher, spec tabs, search, type and source filters, list
     local top = -HEADER_H - PAD
-    local prev = button(frame, "<", 26, function() cycleClass(-1) end)
+    local prev = button(view, "<", 26, function() cycleClass(-1) end)
     prev:SetPoint("TOPLEFT", PAD, top)
-    local nextBtn = button(frame, ">", 26, function() cycleClass(1) end)
+    local nextBtn = button(view, ">", 26, function() cycleClass(1) end)
     nextBtn:SetPoint("TOPLEFT", PAD + LIST_W - 26, top)
-    frame.classLabel = text(frame, 15, C.text, "CENTER")
+    frame.classLabel = text(view, 15, C.text, "CENTER")
     frame.classLabel:SetPoint("TOP", frame, "TOPLEFT", PAD + LIST_W / 2, top - 5)
 
-    local tabs = CreateFrame("Frame", nil, frame)
+    local tabs = CreateFrame("Frame", nil, view)
     tabs:SetPoint("TOPLEFT", PAD, top - 32)
     tabs:SetSize(LIST_W, 28)
     for t = 1, 3 do
@@ -910,7 +1229,7 @@ local function create()
         specTabs[t] = tab
     end
 
-    local search = input(frame, LIST_W)
+    local search = input(view, LIST_W)
     search:SetPoint("TOPLEFT", PAD, top - 66)
     local hint = text(search, 12, C.dim)
     hint:SetPoint("LEFT", 8, 0)
@@ -923,7 +1242,7 @@ local function create()
 
     local typeW = (LIST_W - (#CATEGORIES - 1) * 4) / #CATEGORIES
     for k, key in ipairs(CATEGORIES) do
-        local chip = button(frame, ns.CategoryName(key), typeW, function()
+        local chip = button(view, ns.CategoryName(key), typeW, function()
             state.category, state.build = key, nil
             ns.Refresh()
         end)
@@ -939,7 +1258,7 @@ local function create()
     local chipW = (LIST_W - (CHIPS_PER_ROW - 1) * 6) / CHIPS_PER_ROW
     for k, source in ipairs(SOURCES) do
         local chip
-        chip = button(frame, SOURCE_SHORT[source] or ns.SourceName(source), chipW, function()
+        chip = button(view, SOURCE_SHORT[source] or ns.SourceName(source), chipW, function()
             state.hidden[source] = not state.hidden[source]
             chip:SetBackdropColor(unpack(state.hidden[source] and C.bg or C.raised))
             chip.label:SetTextColor(unpack(state.hidden[source] and C.dim or C.source[source]))
@@ -952,7 +1271,7 @@ local function create()
         chip:SetPoint("TOPLEFT", PAD + col * (chipW + 6), top - 122 - row * 24)
     end
     local beta
-    beta = button(frame, L.BETA, chipW, function()
+    beta = button(view, L.BETA, chipW, function()
         state.hideBeta = not state.hideBeta
         beta:SetBackdropColor(unpack(state.hideBeta and C.bg or C.raised))
         beta.label:SetTextColor(unpack(state.hideBeta and C.dim or C.same))
@@ -965,7 +1284,7 @@ local function create()
         top - 122 - math.floor(#SOURCES / CHIPS_PER_ROW) * 24)
 
     local listTop = top - 174
-    frame.list = CreateFrame("ScrollFrame", nil, frame)
+    frame.list = CreateFrame("ScrollFrame", nil, view)
     frame.list:SetPoint("TOPLEFT", PAD, listTop)
     frame.list:SetSize(LIST_W, HEIGHT + listTop - PAD - 34)
     frame.list:EnableMouseWheel(true)
@@ -976,15 +1295,15 @@ local function create()
     frame.listContent = CreateFrame("Frame", nil, frame.list)
     frame.listContent:SetWidth(LIST_W)
     frame.list:SetScrollChild(frame.listContent)
-    frame.empty = text(frame, 12, C.dim, "CENTER")
+    frame.empty = text(view, 12, C.dim, "CENTER")
     frame.empty:SetPoint("TOP", frame.list, "TOP", 0, -20)
     frame.empty:SetText(L.NO_MATCH)
 
-    local importBtn = button(frame, L.IMPORT_BTN, LIST_W, function() ns.ShowImport() end)
+    local importBtn = button(view, L.IMPORT_BTN, LIST_W, function() ns.ShowImport() end)
     importBtn:SetSize(LIST_W, 26)
     importBtn:SetPoint("BOTTOMLEFT", PAD, PAD)
 
-    local divider = frame:CreateTexture(nil, "ARTWORK")
+    local divider = view:CreateTexture(nil, "ARTWORK")
     divider:SetColorTexture(unpack(C.line))
     divider:SetWidth(1)
     divider:SetPoint("TOPLEFT", PAD + LIST_W + 8, -HEADER_H)
@@ -992,57 +1311,57 @@ local function create()
 
     -- right column: build header, legend and compare summary, trees, actions
     local right = PAD + LIST_W + 16
-    frame.buildTitle = text(frame, 17)
+    frame.buildTitle = text(view, 17)
     frame.buildTitle:SetPoint("TOPLEFT", right, top)
     frame.buildTitle:SetWidth(TREES_W)
-    frame.buildSub = text(frame, 11, C.dim)
+    frame.buildSub = text(view, 11, C.dim)
     frame.buildSub:SetPoint("TOPLEFT", right, top - 23)
     frame.buildSub:SetWidth(TREES_W)
-    frame.legend = text(frame, 11, C.text)
+    frame.legend = text(view, 11, C.text)
     frame.legend:SetPoint("TOPLEFT", right, top - 44)
     frame.legend:SetWidth(TREES_W)
-    frame.summary = text(frame, 11, C.text)
+    frame.summary = text(view, 11, C.text)
     frame.summary:SetPoint("TOPLEFT", right, top - 61)
     frame.summary:SetWidth(TREES_W)
 
-    frame.trees = CreateFrame("Frame", nil, frame)
+    frame.trees = CreateFrame("Frame", nil, view)
     frame.trees:SetPoint("TOPLEFT", right, top - 82)
     frame.trees:SetSize(TREES_W, CARD_H)
 
     -- under the trees: the point order timeline, or the list of differences when comparing
-    frame.timeline = flat(CreateFrame("Frame", nil, frame, "BackdropTemplate"))
+    frame.timeline = flat(CreateFrame("Frame", nil, view, "BackdropTemplate"))
     frame.timeline:SetPoint("TOPLEFT", frame.trees, "BOTTOMLEFT", 0, -8)
     frame.timeline:SetSize(TREES_W, TL_H)
     frame.timelineTitle = text(frame.timeline, 10, C.dim)
     frame.timelineTitle:SetPoint("TOPLEFT", 8, -4)
     frame.timelineTitle:SetWidth(TREES_W - 16)
 
-    frame.status = text(frame, 12)
+    frame.status = text(view, 12)
     frame.status:SetPoint("TOPLEFT", frame.timeline, "BOTTOMLEFT", 0, -8)
     frame.status:SetWidth(TREES_W)
     frame.status:SetWordWrap(true)
     frame.status:SetSpacing(3)
 
-    frame.apply = button(frame, L.APPLY, 160, function()
+    frame.apply = button(view, L.APPLY, 160, function()
         ns.LearnAndReport(state.build, ns.ClassData(state.class))
         ns.Refresh()
     end)
     frame.apply:SetPoint("BOTTOMLEFT", right, PAD + 18)
     frame.apply:SetBackdropColor(0.12, 0.32, 0.17, 1)
 
-    frame.compareMine = button(frame, L.COMPARE_MINE, 150, function()
+    frame.compareMine = button(view, L.COMPARE_MINE, 150, function()
         local classData = ns.ClassData(state.class)
         local tree = ns.ReadTree(classData)
         state.compare = tree and ns.CurrentAsBuild(classData, tree)
         ns.Refresh()
     end)
     frame.compareMine:SetPoint("LEFT", frame.apply, "RIGHT", 8, 0)
-    frame.clearCompare = button(frame, L.CLEAR_COMPARE, 120, function()
+    frame.clearCompare = button(view, L.CLEAR_COMPARE, 120, function()
         state.compare = nil
         ns.Refresh()
     end)
     frame.clearCompare:SetPoint("LEFT", frame.compareMine, "RIGHT", 8, 0)
-    frame.remove = button(frame, L.DELETE, 80, function()
+    frame.remove = button(view, L.DELETE, 80, function()
         if state.build and state.build.imported then
             ns.RemoveImport(state.build)
             state.build = nil
@@ -1054,7 +1373,7 @@ local function create()
 
     -- link to the source, selectable for Ctrl+C
     -- keep the build as a loadout, to rotate between loadouts on the game's talent window
-    frame.loadout = button(frame, L.LOADOUT_ADD, 150, function()
+    frame.loadout = button(view, L.LOADOUT_ADD, 150, function()
         local build = state.build
         if not build then return end
         ns.Print((ns.ToggleLoadout(build) and L.LOADOUT_ADDED or L.LOADOUT_REMOVED):format(build.name))
@@ -1062,9 +1381,9 @@ local function create()
     end)
     frame.loadout:SetWidth(math.max(frame.loadout:GetWidth(), 150))
     frame.loadout:SetPoint("BOTTOMRIGHT", -PAD, PAD + 50)
-    frame.rename = button(frame, L.LOADOUT_RENAME, 90, function() ns.PromptRename(state.build) end)
+    frame.rename = button(view, L.LOADOUT_RENAME, 90, function() ns.PromptRename(state.build) end)
     frame.rename:SetPoint("RIGHT", frame.loadout, "LEFT", -6, 0)
-    frame.link = input(frame, TREES_W - frame.loadout:GetWidth() - frame.rename:GetWidth() - 14)
+    frame.link = input(view, TREES_W - frame.loadout:GetWidth() - frame.rename:GetWidth() - 14)
     frame.link:SetPoint("BOTTOMLEFT", right, PAD + 50)
     frame.link:SetTextColor(unpack(C.dim))
     frame.link:SetScript("OnEditFocusGained", function(self) self:HighlightText() end)
@@ -1075,10 +1394,12 @@ local function create()
         end
     end)
 
-    local credits = text(frame, 10, C.dim)
+    local credits = text(view, 10, C.dim)
     credits:SetPoint("BOTTOMLEFT", right, 8)
     credits:SetWidth(TREES_W)
     credits:SetText(L.CREDITS:format(ZbuildsData and ZbuildsData.generated or "?"))
+
+    createLegacyView()
 end
 
 -- ---------------------------------------------------------------- import dialog
