@@ -852,25 +852,17 @@ local function legacyStep(k)
     return b
 end
 
--- Shows the achievement in the game's achievement window, trying the ways each client generation has.
--- That window opens under Zbuilds (a higher layer), so Zbuilds steps aside; where no way works, the
--- achievement's link goes to the chat instead.
+-- Shows the challenge in the game: Forever's own Legacy Challenges window first, then the achievement
+-- window of other clients. Only "show" functions: the toggle ones would close a window already open.
+-- Where none exists, the achievement's link goes to the chat instead.
+local SHOW_CHALLENGE = { "ShowLegacyChallenge", "ShowAchievementFrameForAchievement", "OpenAchievementFrameToAchievement" }
+
 local function openAchievement(id)
-    local load = (C_AddOns and C_AddOns.LoadAddOn) or LoadAddOn or UIParentLoadAddOn
-    if not AchievementFrame and load then pcall(load, "Blizzard_AchievementUI") end
-    local function shown() return AchievementFrame and AchievementFrame:IsShown() end
-    if OpenAchievementFrameToAchievement then pcall(OpenAchievementFrameToAchievement, id) end
-    if not shown() then
-        if ToggleAchievementFrame then pcall(ToggleAchievementFrame)
-        elseif AchievementFrame then pcall(ShowUIPanel, AchievementFrame) end
-        if shown() and AchievementFrame_SelectAchievement then pcall(AchievementFrame_SelectAchievement, id) end
+    for _, name in ipairs(SHOW_CHALLENGE) do
+        if type(_G[name]) == "function" and pcall(_G[name], id) then return end
     end
-    if shown() then
-        frame:Hide()
-    else
-        local link = GetAchievementLink and GetAchievementLink(id)
-        if link then ns.Print(link) end
-    end
+    local link = GetAchievementLink and GetAchievementLink(id)
+    if link then ns.Print(link) end
 end
 
 -- one row of the challenge tracker: icon, name and description, progress, difficulty dots
