@@ -1115,3 +1115,14 @@ local trainerTexts = {
 trainerTexts.esMX = trainerTexts.esES
 for key, value in pairs(trainerTexts.enUS) do L[key] = value end
 for key, value in pairs(trainerTexts[locale] or {}) do L[key] = value end
+
+-- trainer notice in the middle of the screen
+local noticeTexts = {
+    enUS = "%d new spells to learn at your trainer", esES = "%d hechizos nuevos para aprender en tu instructor",
+    deDE = "%d neue Zauber bei deinem Lehrer", frFR = "%d nouveaux sorts à apprendre chez votre maître",
+    ptBR = "%d feitiços novos para aprender no seu instrutor", itIT = "%d nuovi incantesimi dal tuo istruttore",
+    ruRU = "Новых заклинаний у наставника: %d", koKR = "상급자에게서 배울 새 주문 %d개",
+    zhCN = "训练师处有 %d 个新法术可学", zhTW = "訓練師處有 %d 個新法術可學",
+}
+noticeTexts.esMX = noticeTexts.esES
+L.TRAINER_NOTICE = noticeTexts[locale] or noticeTexts.enUS

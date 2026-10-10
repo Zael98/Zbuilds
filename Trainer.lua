@@ -53,6 +53,17 @@ local function money(copper)
     return table.concat(parts, " ")
 end
 
+-- On level up, also in the middle of the screen, the way the game shows raid warnings.
+local function notice(count)
+    local text = L.TRAINER_NOTICE:format(count)
+    if RaidNotice_AddMessage and RaidWarningFrame then
+        RaidNotice_AddMessage(RaidWarningFrame, text, { r = 1, g = 0.82, b = 0 })
+    elseif UIErrorsFrame then
+        UIErrorsFrame:AddMessage(text, 1, 0.82, 0)
+    end
+    if SOUNDKIT and SOUNDKIT.RAID_WARNING then PlaySound(SOUNDKIT.RAID_WARNING) end
+end
+
 -- The reminder in the chat; quiet when there is nothing to learn unless asked (/zb trainer).
 function ns.TrainerReminder(asked)
     local due, total, unknown = ns.TrainerDue()
@@ -65,6 +76,7 @@ function ns.TrainerReminder(asked)
         names[#names + 1] = spell.rank > 1 and L.TRAINER_RANK:format(spellName(spell), spell.rank) or spellName(spell)
     end
     ns.Print(L.TRAINER_DUE:format(#due, table.concat(names, ", ")))
+    if not asked then notice(#due) end
     local parts = {}
     if unknown < #due then parts[#parts + 1] = L.TRAINER_COST:format(money(total)) end
     if unknown > 0 then parts[#parts + 1] = L.TRAINER_UNKNOWN:format(unknown) end

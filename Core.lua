@@ -408,6 +408,8 @@ SlashCmdList.ZBUILDS = function(msg)
         ns.LegacyDump()
     elseif msg == "trainer" then
         ns.TrainerReminder(true)
+    elseif msg == "trainertest" then
+        ns.TrainerReminder(false) -- what a level up shows, notice included
     elseif msg == "trainerdump" then
         ns.TrainerDump()
     elseif msg == "minimap" then
