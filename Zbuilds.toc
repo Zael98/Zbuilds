@@ -19,3 +19,4 @@ Core.lua
 Import.lua
 UI.lua
 Launchers.lua
+Legacy.lua

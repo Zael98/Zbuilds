@@ -404,6 +404,8 @@ SlashCmdList.ZBUILDS = function(msg)
     msg = strtrim(msg or ""):lower()
     if msg == "diag" then
         diagnose()
+    elseif msg == "legacy" then
+        ns.LegacyDump()
     elseif msg == "minimap" then
         ns.ToggleMinimapButton()
     else
