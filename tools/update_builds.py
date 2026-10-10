@@ -524,10 +524,22 @@ def legacy_data():
 # Every spell rank a class trainer sells, with the level it is learned at and its spell id (talentsforever:
 # nt marks the ranks the trainer does not sell: talents, tomes, quests), and its training cost in copper from
 # Wowhead's Forever class abilities list (the base price; the addon prefers what it reads at the trainer).
+# A rank without a price says where it comes from instead, from Wowhead's source codes.
+SOURCES = {2: "drop", 4: "quest", 5: "vendor"}
+
 
 def trainer_costs(cls):
     page = fetch(f"https://www.wowhead.com/forever/spells/abilities/{cls.lower()}")
-    return {int(i): int(c) for i, c in re.findall(r'\{"cat":[^{}]*?"id":(\d+)[^{}]*?"trainingcost":(\d+)', page)}
+    out = {}
+    for entry in re.findall(r'\{"cat":[^{}]*?"id":\d+[^{}]*', page):
+        spell = int(re.search(r'"id":(\d+)', entry).group(1))
+        cost = re.search(r'"trainingcost":(\d+)', entry)
+        source = re.search(r'"source":\[(\d+)', entry)
+        if cost:
+            out[spell] = {"cost": int(cost.group(1))}
+        elif source and int(source.group(1)) in SOURCES:
+            out[spell] = {"source": SOURCES[int(source.group(1))]}
+    return out
 
 
 def trainer_data():
@@ -545,9 +557,8 @@ def trainer_data():
         cost = trainer_costs(cls)
         priced = 0
         for sp in spells:
-            if sp["id"] in cost:
-                sp["cost"] = cost[sp["id"]]
-                priced += 1
+            sp.update(cost.get(sp["id"], {}))
+            priced += "cost" in sp
         print(f"  trainer {cls}: {len(spells)} ranks, {priced} with a cost")
     return out
 

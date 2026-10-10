@@ -24,22 +24,22 @@ local function spellName(spell)
 end
 
 -- Ranks you can learn at your level and do not have: per spell, only the ranks above the highest one you know
--- (an old rank you skipped is never worth buying). Returns the list, the total of the known costs, and how
--- many costs are not known yet.
+-- (an old rank you skipped is never worth buying). Returns the list, the total of the known costs, and the
+-- ranks without a known price (quest, drop or vendor ones, or not on Wowhead).
 function ns.TrainerDue()
     local level, best = UnitLevel("player"), {}
     for _, spell in ipairs(classSpells()) do
         if knows(spell.id) and spell.rank > (best[spell.name] or 0) then best[spell.name] = spell.rank end
     end
-    local due, total, unknown = {}, 0, 0
+    local due, total, unpriced = {}, 0, {}
     for _, spell in ipairs(classSpells()) do
         if spell.level <= level and spell.rank > (best[spell.name] or 0) and not knows(spell.id) then
             due[#due + 1] = spell
             local cost = costs()[spell.id] or spell.cost
-            if cost then total = total + cost else unknown = unknown + 1 end
+            if cost then total = total + cost else unpriced[#unpriced + 1] = spell end
         end
     end
-    return due, total, unknown
+    return due, total, unpriced
 end
 
 -- gold, silver and copper with the game's coin icons when it has them
@@ -53,18 +53,28 @@ local function money(copper)
     return table.concat(parts, " ")
 end
 
--- The total, the ranks without a known price, and whether your gold is enough (only said when every price is known).
-local function costLine(due, total, unknown)
-    local parts = {}
-    if unknown < #due then parts[#parts + 1] = L.TRAINER_COST:format(money(total)) end
-    if unknown > 0 then parts[#parts + 1] = L.TRAINER_UNKNOWN:format(unknown) end
+local function rankName(spell)
+    return spell.rank > 1 and L.TRAINER_RANK:format(spellName(spell), spell.rank) or spellName(spell)
+end
+
+-- The total and whether your gold is enough for it.
+local function costLine(due, total, unpriced)
+    if #unpriced == #due then return "" end
     local short = total - GetMoney()
-    if short > 0 then
-        parts[#parts + 1] = "|cffff5050" .. L.TRAINER_SHORT:format(money(short)) .. "|r"
-    elseif unknown == 0 then
-        parts[#parts + 1] = "|cff60ff60" .. L.TRAINER_ENOUGH .. "|r"
+    return L.TRAINER_COST:format(money(total)) .. "   " .. (short > 0
+        and "|cffff5050" .. L.TRAINER_SHORT:format(money(short)) .. "|r"
+        or "|cff60ff60" .. L.TRAINER_ENOUGH .. "|r")
+end
+
+-- The ranks the total leaves out, each with where it comes from when Wowhead says.
+local function unpricedLine(unpriced)
+    if #unpriced == 0 then return "" end
+    local names = {}
+    for _, spell in ipairs(unpriced) do
+        local source = spell.source and L["TRAINER_SOURCE_" .. spell.source:upper()]
+        names[#names + 1] = source and ("%s (%s)"):format(rankName(spell), source) or rankName(spell)
     end
-    return table.concat(parts, "   ")
+    return L.TRAINER_UNPRICED:format(table.concat(names, ", "))
 end
 
 -- On level up, a banner in the middle of the screen like the game's own level-up one: a dark band fading at
@@ -101,12 +111,12 @@ end
 
 local function createBanner()
     local f = CreateFrame("Button", nil, UIParent)
-    f:SetSize(620, 128)
+    f:SetSize(620, 144)
     f:SetPoint("TOP", UIParent, "TOP", 0, -170)
     f:SetFrameStrata("HIGH")
     f:Hide()
-    band(f, "BACKGROUND", "CENTER", 0, 128, 0, { 0, 0, 0 }, 0.9)
-    band(f, "BACKGROUND", "CENTER", 0, 128, 140, { 0, 0, 0 }, 0.5) -- a darker middle, so it reads over snow
+    band(f, "BACKGROUND", "CENTER", 0, 144, 0, { 0, 0, 0 }, 0.9)
+    band(f, "BACKGROUND", "CENTER", 0, 144, 140, { 0, 0, 0 }, 0.5) -- a darker middle, so it reads over snow
     band(f, "BORDER", "TOP", 0, 2, 0, GOLD, 0.9)
     band(f, "BORDER", "BOTTOM", 0, 2, 0, GOLD, 0.9)
     band(f, "ARTWORK", "TOP", -10, 40, 120, GOLD, 0.18) -- a soft gold light behind the title
@@ -137,8 +147,11 @@ local function createBanner()
         f.icons[k] = icon
     end
     f.more = text(f, 14, GOLD)
-    f.cost = text(f, 12, { 0.85, 0.85, 0.85 })
-    f.cost:SetPoint("BOTTOM", 0, 8)
+    f.cost = text(f, 13, { 0.9, 0.9, 0.9 })
+    f.cost:SetPoint("TOP", 0, -104)
+    f.unpriced = text(f, 11, { 0.7, 0.7, 0.7 })
+    f.unpriced:SetPoint("TOP", f.cost, "BOTTOM", 0, -3)
+    f.unpriced:SetWidth(560)
 
     -- in: fade and a short drop into place; then hold; then out
     f.anim = f:CreateAnimationGroup()
@@ -160,7 +173,7 @@ local function sound()
     end
 end
 
-local function notice(due, total, unknown)
+local function notice(due, total, unpriced)
     banner = banner or createBanner()
     banner.title:SetText(L.TRAINER_NOTICE_TITLE)
     banner.sub:SetText(L.TRAINER_NOTICE:format(UnitLevel("player"), #due))
@@ -182,7 +195,8 @@ local function notice(due, total, unknown)
     banner.more:SetText(#due > shown and "+" .. (#due - shown) or "")
     banner.more:ClearAllPoints()
     banner.more:SetPoint("LEFT", banner.icons[math.max(shown, 1)], "RIGHT", 8, 0)
-    banner.cost:SetText(costLine(due, total, unknown))
+    banner.cost:SetText(costLine(due, total, unpriced))
+    banner.unpriced:SetText(unpricedLine(unpriced))
     banner:SetAlpha(1)
     banner:Show()
     banner.anim:Stop()
@@ -192,18 +206,20 @@ end
 
 -- The reminder in the chat; quiet when there is nothing to learn unless asked (/zb trainer).
 function ns.TrainerReminder(asked)
-    local due, total, unknown = ns.TrainerDue()
+    local due, total, unpriced = ns.TrainerDue()
     if #due == 0 then
         if asked then ns.Print(L.TRAINER_NOTHING) end
         return
     end
     local names = {}
     for _, spell in ipairs(due) do
-        names[#names + 1] = spell.rank > 1 and L.TRAINER_RANK:format(spellName(spell), spell.rank) or spellName(spell)
+        names[#names + 1] = rankName(spell)
     end
     ns.Print(L.TRAINER_DUE:format(#due, table.concat(names, ", ")))
-    if not asked then notice(due, total, unknown) end
-    print("   " .. costLine(due, total, unknown))
+    if not asked then notice(due, total, unpriced) end
+    for _, line in ipairs({ costLine(due, total, unpriced), unpricedLine(unpriced) }) do
+        if line ~= "" then print("   " .. line) end
+    end
 end
 
 -- The spell id of a trainer service: from the tooltip data when the client gives it, else by matching
