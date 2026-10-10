@@ -54,6 +54,85 @@ function ns.NextLegacyStep(plan, legacy)
     end
 end
 
+-- The Legacy challenges: account achievements whose reward is a Legacy point (found with /zb legacy).
+-- Achievement ids do not change with the client's language. Each gets a difficulty from 1 (easy) to 5.
+local CHALLENGES = {
+    -- level 25 on a class / 150 in a craft / honor rank 3 / the beta
+    [61502] = 1, [61989] = 1, [61994] = 1, [61997] = 1, [62000] = 1, [62003] = 1, [62006] = 1, [62009] = 1, [61499] = 1,
+    [62012] = 1, [62015] = 1, [62018] = 1, [62021] = 1, [62024] = 1, [62028] = 1, [62041] = 1, [64283] = 1,
+    -- level 45 / 225 skill / Field of Honor week 4 / first dungeons
+    [61503] = 2, [61992] = 2, [61995] = 2, [61998] = 2, [62001] = 2, [62004] = 2, [62007] = 2, [62010] = 2, [61500] = 2,
+    [62013] = 2, [62016] = 2, [62019] = 2, [62022] = 2, [62025] = 2, [62029] = 2, [63340] = 2, [62031] = 2,
+    -- level 60 / 300 skill / rank 7 / week 7 / more dungeons / Onyxia
+    [61504] = 3, [61993] = 3, [61996] = 3, [61999] = 3, [62002] = 3, [62005] = 3, [62008] = 3, [62011] = 3, [61501] = 3,
+    [62014] = 3, [62017] = 3, [62020] = 3, [62023] = 3, [62026] = 3, [62030] = 3, [62042] = 3, [63341] = 3, [62032] = 3,
+    [684] = 3,
+    -- rank 10 / week 10 / the last dungeons / exalted with the battlegrounds / raids / Valthalak / Explorer
+    [62043] = 4, [63342] = 4, [62033] = 4, [62046] = 4, [62047] = 4, [62048] = 4, [62049] = 4, [62034] = 4, [62035] = 4,
+    [62054] = 4, [62382] = 4,
+    -- honor ranks 13 and 14
+    [62044] = 5, [62045] = 5,
+}
+
+-- Reaching a level on a class: progress comes from your level when you play that class.
+local CLASS_LEVELS = {
+    [61502] = { "DRUID", 25 }, [61503] = { "DRUID", 45 }, [61504] = { "DRUID", 60 },
+    [61989] = { "HUNTER", 25 }, [61992] = { "HUNTER", 45 }, [61993] = { "HUNTER", 60 },
+    [61994] = { "MAGE", 25 }, [61995] = { "MAGE", 45 }, [61996] = { "MAGE", 60 },
+    [61997] = { "PALADIN", 25 }, [61998] = { "PALADIN", 45 }, [61999] = { "PALADIN", 60 },
+    [62000] = { "PRIEST", 25 }, [62001] = { "PRIEST", 45 }, [62002] = { "PRIEST", 60 },
+    [62003] = { "ROGUE", 25 }, [62004] = { "ROGUE", 45 }, [62005] = { "ROGUE", 60 },
+    [62006] = { "SHAMAN", 25 }, [62007] = { "SHAMAN", 45 }, [62008] = { "SHAMAN", 60 },
+    [62009] = { "WARLOCK", 25 }, [62010] = { "WARLOCK", 45 }, [62011] = { "WARLOCK", 60 },
+    [61499] = { "WARRIOR", 25 }, [61500] = { "WARRIOR", 45 }, [61501] = { "WARRIOR", 60 },
+}
+
+-- How far along a challenge is: fraction 0..1 and a short text ("10/25", "3/8").
+local function progress(id, completed)
+    if completed then return 1, "" end
+    local class = CLASS_LEVELS[id]
+    if class then
+        if class[1] ~= ns.PlayerClass() then return 0, "" end
+        local level = UnitLevel("player")
+        return math.min(1, level / class[2]), ("%d/%d"):format(level, class[2])
+    end
+    local count = GetAchievementNumCriteria and GetAchievementNumCriteria(id) or 0
+    if count == 1 then
+        local _, _, done, quantity, required = GetAchievementCriteriaInfo(id, 1)
+        if required and required > 1 then
+            return math.min(1, (quantity or 0) / required), ("%d/%d"):format(quantity or 0, required)
+        end
+        return done and 1 or 0, ""
+    end
+    local done = 0
+    for c = 1, count do
+        if select(3, GetAchievementCriteriaInfo(id, c)) then done = done + 1 end
+    end
+    if count == 0 then return 0, "" end
+    return done / count, ("%d/%d"):format(done, count)
+end
+
+-- Every challenge as the game has it now: { id, name, description, icon, completed, tier, progress, progressText },
+-- pending ones first, easiest and most advanced first; then the completed ones.
+function ns.LegacyChallenges()
+    local list = {}
+    for id, tier in pairs(CHALLENGES) do
+        local ok, _, name, _, completed, _, _, _, description, _, icon = pcall(GetAchievementInfo, id)
+        if ok and name then
+            local fraction, text = progress(id, completed == true)
+            list[#list + 1] = { id = id, name = name, description = description, icon = icon, completed = completed == true,
+                tier = tier, progress = fraction, progressText = text }
+        end
+    end
+    table.sort(list, function(a, b)
+        if a.completed ~= b.completed then return b.completed end
+        if a.tier ~= b.tier then return a.tier < b.tier end
+        if a.progress ~= b.progress then return a.progress > b.progress end
+        return a.id < b.id
+    end)
+    return list
+end
+
 -- calls an API that may be missing or may error: nil when missing, { error = "..." } when it fails
 local function call(fn, ...)
     if type(fn) ~= "function" then return nil end
@@ -246,6 +325,18 @@ function ns.LegacyDump()
     print(("   achievements: %d in %d categories, %d with a reward text"):format(total, categories, rewarded))
     print("   Saved to ZbuildsDB.legacyDump: type /reload (or log out) so the game writes it to disk.")
 end
+
+-- keep the challenge list current while the Legacy view is open; Forever errors on unknown events,
+-- so each one is checked before it is registered
+local events = CreateFrame("Frame")
+for _, event in ipairs({ "ACHIEVEMENT_EARNED", "CRITERIA_UPDATE", "TRAIT_CONFIG_UPDATED" }) do
+    if not (C_EventUtils and C_EventUtils.IsEventValid) or C_EventUtils.IsEventValid(event) then
+        events:RegisterEvent(event)
+    end
+end
+events:SetScript("OnEvent", function()
+    if ns.RefreshLegacy then ns.RefreshLegacy() end
+end)
 
 SLASH_ZBUILDSLEGACY1 = "/zbuildslegacydump"
 SlashCmdList.ZBUILDSLEGACY = function() ns.LegacyDump() end

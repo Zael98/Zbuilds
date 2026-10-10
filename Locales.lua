@@ -1021,3 +1021,40 @@ local legacyTexts = {
 legacyTexts.esMX = legacyTexts.esES
 for key, value in pairs(legacyTexts.enUS) do L[key] = value end
 for key, value in pairs(legacyTexts[locale] or {}) do L[key] = value end
+
+-- Legacy challenge tracker
+local challengeTexts = {
+    enUS = { CHALLENGES = "Legacy challenges", CHALLENGES_DONE = "%d / %d done", HIDE_DONE = "Hide done", SHOW_DONE = "Show done",
+        TIER = "Difficulty", TIER_1 = "easy", TIER_2 = "medium", TIER_3 = "hard", TIER_4 = "very hard", TIER_5 = "extreme",
+        CHALLENGE_TIP = "Click: open it in the achievements window" },
+    esES = { CHALLENGES = "Desafíos de Legacy", CHALLENGES_DONE = "%d / %d hechos", HIDE_DONE = "Ocultar hechos", SHOW_DONE = "Mostrar hechos",
+        TIER = "Dificultad", TIER_1 = "fácil", TIER_2 = "media", TIER_3 = "difícil", TIER_4 = "muy difícil", TIER_5 = "extrema",
+        CHALLENGE_TIP = "Clic: abrirlo en la ventana de logros" },
+    deDE = { CHALLENGES = "Legacy-Herausforderungen", CHALLENGES_DONE = "%d / %d erledigt", HIDE_DONE = "Erledigte ausblenden", SHOW_DONE = "Erledigte zeigen",
+        TIER = "Schwierigkeit", TIER_1 = "leicht", TIER_2 = "mittel", TIER_3 = "schwer", TIER_4 = "sehr schwer", TIER_5 = "extrem",
+        CHALLENGE_TIP = "Klick: im Erfolgsfenster öffnen" },
+    frFR = { CHALLENGES = "Défis Legacy", CHALLENGES_DONE = "%d / %d faits", HIDE_DONE = "Masquer faits", SHOW_DONE = "Afficher faits",
+        TIER = "Difficulté", TIER_1 = "facile", TIER_2 = "moyen", TIER_3 = "difficile", TIER_4 = "très difficile", TIER_5 = "extrême",
+        CHALLENGE_TIP = "Clic : l'ouvrir dans la fenêtre des hauts faits" },
+    ptBR = { CHALLENGES = "Desafios de Legacy", CHALLENGES_DONE = "%d / %d feitos", HIDE_DONE = "Ocultar feitos", SHOW_DONE = "Mostrar feitos",
+        TIER = "Dificuldade", TIER_1 = "fácil", TIER_2 = "média", TIER_3 = "difícil", TIER_4 = "muito difícil", TIER_5 = "extrema",
+        CHALLENGE_TIP = "Clique: abrir na janela de conquistas" },
+    itIT = { CHALLENGES = "Sfide Legacy", CHALLENGES_DONE = "%d / %d completate", HIDE_DONE = "Nascondi completate", SHOW_DONE = "Mostra completate",
+        TIER = "Difficoltà", TIER_1 = "facile", TIER_2 = "media", TIER_3 = "difficile", TIER_4 = "molto difficile", TIER_5 = "estrema",
+        CHALLENGE_TIP = "Clic: aprila nella finestra delle imprese" },
+    ruRU = { CHALLENGES = "Испытания наследия", CHALLENGES_DONE = "выполнено %d / %d", HIDE_DONE = "Скрыть выполненные", SHOW_DONE = "Показать выполненные",
+        TIER = "Сложность", TIER_1 = "легко", TIER_2 = "средне", TIER_3 = "сложно", TIER_4 = "очень сложно", TIER_5 = "экстрим",
+        CHALLENGE_TIP = "Клик: открыть в окне достижений" },
+    koKR = { CHALLENGES = "레거시 도전", CHALLENGES_DONE = "%d / %d 완료", HIDE_DONE = "완료 숨기기", SHOW_DONE = "완료 보기",
+        TIER = "난이도", TIER_1 = "쉬움", TIER_2 = "보통", TIER_3 = "어려움", TIER_4 = "매우 어려움", TIER_5 = "극한",
+        CHALLENGE_TIP = "클릭: 업적 창에서 열기" },
+    zhCN = { CHALLENGES = "传承挑战", CHALLENGES_DONE = "已完成 %d / %d", HIDE_DONE = "隐藏已完成", SHOW_DONE = "显示已完成",
+        TIER = "难度", TIER_1 = "简单", TIER_2 = "中等", TIER_3 = "困难", TIER_4 = "非常困难", TIER_5 = "极难",
+        CHALLENGE_TIP = "点击：在成就窗口中打开" },
+    zhTW = { CHALLENGES = "傳承挑戰", CHALLENGES_DONE = "已完成 %d / %d", HIDE_DONE = "隱藏已完成", SHOW_DONE = "顯示已完成",
+        TIER = "難度", TIER_1 = "簡單", TIER_2 = "中等", TIER_3 = "困難", TIER_4 = "非常困難", TIER_5 = "極難",
+        CHALLENGE_TIP = "點擊：在成就視窗中開啟" },
+}
+challengeTexts.esMX = challengeTexts.esES
+for key, value in pairs(challengeTexts.enUS) do L[key] = value end
+for key, value in pairs(challengeTexts[locale] or {}) do L[key] = value end

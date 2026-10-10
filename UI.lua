@@ -719,7 +719,10 @@ local LEGACY_COLS, LEGACY_ROWS = 3, 4
 local LEGACY_CARD_H = CARD_HEAD + LEGACY_ROWS * (CELL + GAP) - GAP + PAD
 local PLAN_ROW_H = 40
 local lv -- the Legacy view
-local legacyCards, legacyCells, planRows, legacySteps = {}, {}, {}, {}
+local legacyCards, legacyCells, planRows, legacySteps, challengeRows = {}, {}, {}, {}, {}
+local CHALLENGE_ROW_H = 34
+local TIER_COLORS = { { 0.4, 0.85, 0.5 }, { 0.6, 0.85, 0.35 }, { 1, 0.78, 0.2 }, { 1, 0.5, 0.25 }, { 1, 0.3, 0.3 } }
+local READY = "Interface\\RaidFrame\\ReadyCheck-Ready"
 
 local function legacyPlans()
     local data = ns.LegacyData()
@@ -849,6 +852,88 @@ local function legacyStep(k)
     return b
 end
 
+-- one row of the challenge tracker: icon, name and description, progress, difficulty dots
+local function challengeRow(k)
+    if challengeRows[k] then return challengeRows[k] end
+    local row = CreateFrame("Button", nil, lv.challengeContent, "BackdropTemplate")
+    row:SetHeight(CHALLENGE_ROW_H - 3)
+    row:SetPoint("TOPLEFT", 0, -(k - 1) * CHALLENGE_ROW_H)
+    row:SetPoint("TOPRIGHT", 0, -(k - 1) * CHALLENGE_ROW_H)
+    flat(row, C.panel, C.line)
+    row.icon = row:CreateTexture(nil, "ARTWORK")
+    row.icon:SetSize(24, 24)
+    row.icon:SetPoint("LEFT", 5, 0)
+    row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    row.check = row:CreateTexture(nil, "OVERLAY")
+    row.check:SetTexture(READY)
+    row.check:SetSize(16, 16)
+    row.check:SetPoint("BOTTOMRIGHT", row.icon, "BOTTOMRIGHT", 4, -4)
+    row.dots = {}
+    for d = 1, 5 do
+        row.dots[d] = row:CreateTexture(nil, "ARTWORK")
+        row.dots[d]:SetSize(5, 5)
+        row.dots[d]:SetPoint("RIGHT", -8 - (5 - d) * 7, 0)
+    end
+    row.progress = text(row, 11, C.text, "RIGHT")
+    row.progress:SetPoint("RIGHT", -48, 0)
+    row.name = text(row, 12)
+    row.name:SetPoint("TOPLEFT", 36, -3)
+    row.name:SetPoint("RIGHT", row.progress, "LEFT", -8, 0)
+    row.desc = text(row, 10, C.dim)
+    row.desc:SetPoint("BOTTOMLEFT", 36, 4)
+    row.desc:SetPoint("RIGHT", row.progress, "LEFT", -8, 0)
+    row.bar = bar(row, 2)
+    row.bar.track:SetPoint("BOTTOMLEFT", 36, 1)
+    row.bar.track:SetPoint("BOTTOMRIGHT", -48, 1)
+    -- open it in the game's achievement window
+    row:SetScript("OnClick", function(self)
+        if not self.id then return end
+        if not AchievementFrame and UIParentLoadAddOn then pcall(UIParentLoadAddOn, "Blizzard_AchievementUI") end
+        if OpenAchievementFrameToAchievement then pcall(OpenAchievementFrameToAchievement, self.id) end
+    end)
+    row:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:SetText(self.name:GetText(), 1, 1, 1)
+        GameTooltip:AddLine(self.desc:GetText(), 0.9, 0.9, 0.9, true)
+        GameTooltip:AddLine(L.TIER .. ": " .. L["TIER_" .. self.tier], unpack(TIER_COLORS[self.tier]))
+        GameTooltip:AddLine(L.CHALLENGE_TIP, 0.6, 0.6, 0.65)
+        GameTooltip:Show()
+    end)
+    row:SetScript("OnLeave", GameTooltip_Hide)
+    challengeRows[k] = row
+    return row
+end
+
+local function refreshChallenges()
+    local all, shown, done = ns.LegacyChallenges(), 0, 0
+    for _, c in ipairs(all) do if c.completed then done = done + 1 end end
+    lv.challengeTitle:SetText(L.CHALLENGES .. paint("   " .. L.CHALLENGES_DONE:format(done, #all), C.dim))
+    for _, c in ipairs(all) do
+        if not (c.completed and state.hideDone) then
+            shown = shown + 1
+            local row = challengeRow(shown)
+            row.id, row.tier = c.id, c.tier
+            row.icon:SetTexture(c.icon or "Interface\\Icons\\inv_misc_questionmark")
+            row.icon:SetDesaturated(c.completed)
+            row.check:SetShown(c.completed)
+            row.name:SetText(c.name)
+            row.name:SetTextColor(unpack(c.completed and C.dim or C.text))
+            row.desc:SetText(c.description or "")
+            row.progress:SetText(c.completed and "" or c.progressText)
+            row.bar:SetShown(not c.completed and c.progress > 0)
+            if not c.completed and c.progress > 0 then row.bar:Set(c.progress, C.done) end
+            for d = 1, 5 do
+                local color = d <= c.tier and TIER_COLORS[c.tier] or C.line
+                row.dots[d]:SetColorTexture(color[1], color[2], color[3], 1)
+            end
+            row:Show()
+        end
+    end
+    for k = shown + 1, #challengeRows do challengeRows[k]:Hide() end
+    lv.challengeContent:SetHeight(math.max(1, shown * CHALLENGE_ROW_H))
+    lv.hideDone.label:SetText(state.hideDone and L.SHOW_DONE or L.HIDE_DONE)
+end
+
 local function refreshLegacy()
     local data = ns.LegacyData()
     if not data then
@@ -934,6 +1019,12 @@ local function refreshLegacy()
     end
     lv.status:SetText((nt and L.NEXT:format(paint(perkName(data, legacy, nt, ni), C.pending), nr))
         or (plan and legacy and paint(L.COMPLETE, C.done)) or "")
+    refreshChallenges()
+end
+
+-- refreshed by achievement events, only while the Legacy view is open
+function ns.RefreshLegacy()
+    if frame and frame:IsShown() and state.mode == "legacy" then ns.Refresh() end
 end
 
 local function createLegacyView()
@@ -994,6 +1085,30 @@ local function createLegacyView()
     lv.status:SetPoint("TOPLEFT", lv.order, "BOTTOMLEFT", 0, -10)
     lv.status:SetWidth(TREES_W)
     lv.status:SetWordWrap(true)
+
+    -- the challenges: read from the game's achievements every time, nothing saved
+    local header = CreateFrame("Frame", nil, lv)
+    header:SetPoint("TOPLEFT", lv.status, "BOTTOMLEFT", 0, -14)
+    header:SetSize(TREES_W, 22)
+    lv.challengeTitle = text(header, 13)
+    lv.challengeTitle:SetPoint("LEFT")
+    lv.hideDone = button(header, L.HIDE_DONE, 130, function()
+        state.hideDone = not state.hideDone
+        ns.Refresh()
+    end)
+    lv.hideDone:SetHeight(20)
+    lv.hideDone:SetPoint("RIGHT")
+    lv.challengeList = CreateFrame("ScrollFrame", nil, lv)
+    lv.challengeList:SetPoint("TOPLEFT", header, "BOTTOMLEFT", 0, -6)
+    lv.challengeList:SetPoint("BOTTOMRIGHT", lv, "BOTTOMLEFT", right + TREES_W, PAD)
+    lv.challengeList:EnableMouseWheel(true)
+    lv.challengeList:SetScript("OnMouseWheel", function(self, delta)
+        local maxScroll = math.max(0, lv.challengeContent:GetHeight() - self:GetHeight())
+        self:SetVerticalScroll(math.max(0, math.min(maxScroll, self:GetVerticalScroll() - delta * CHALLENGE_ROW_H * 2)))
+    end)
+    lv.challengeContent = CreateFrame("Frame", nil, lv.challengeList)
+    lv.challengeContent:SetWidth(TREES_W)
+    lv.challengeList:SetScrollChild(lv.challengeContent)
 end
 
 -- ---------------------------------------------------------------- refresh
