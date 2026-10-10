@@ -408,6 +408,8 @@ SlashCmdList.ZBUILDS = function(msg)
         ns.LegacyDump()
     elseif msg == "trainer" then
         ns.TrainerReminder(true)
+    elseif msg == "trainerdump" then
+        ns.TrainerDump()
     elseif msg == "minimap" then
         ns.ToggleMinimapButton()
     else
