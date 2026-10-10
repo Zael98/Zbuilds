@@ -107,28 +107,31 @@ local function findApis()
     return namespaces, functions
 end
 
--- Achievement categories, and the achievements (with criteria) of any that looks like Legacy or challenges.
+-- Every achievement of every category, with its reward text: the Legacy challenges may be achievements
+-- spread over categories like Adventure or Tradeskills whose reward is a Legacy point.
+local function achievementDump(categoryID, k)
+    local id, name, points, completed, _, _, _, description, flags, _, rewardText = call(GetAchievementInfo, categoryID, k)
+    if type(id) ~= "number" then return nil end
+    local criteria = {}
+    for c = 1, (call(GetAchievementNumCriteria, id) or 0) do
+        local text, _, done, quantity, required = call(GetAchievementCriteriaInfo, id, c)
+        criteria[#criteria + 1] = { text = text, done = done, quantity = quantity, required = required }
+    end
+    return { id = id, name = name, points = points, completed = completed, description = description, flags = flags,
+        reward = rewardText, criteria = criteria }
+end
+
 local function findAchievements()
     if not GetCategoryList then return nil end
-    local out = { categories = {}, matching = {} }
+    local out = { categories = {} }
     for _, categoryID in ipairs(call(GetCategoryList) or {}) do
         local name, parentID = call(GetCategoryInfo, categoryID)
-        out.categories[#out.categories + 1] = { id = categoryID, name = name, parent = parentID }
-        if type(name) == "string" and (name:find("Legacy") or name:find("Challenge") or name:find("Legado")
-            or name:find("Desaf")) then
-            local list = {}
-            for k = 1, (call(GetCategoryNumAchievements, categoryID, true) or 0) do
-                local id, achName, points, completed, _, _, _, description = call(GetAchievementInfo, categoryID, k)
-                local criteria = {}
-                for c = 1, (id and call(GetAchievementNumCriteria, id) or 0) do
-                    local text, _, done, quantity, required = call(GetAchievementCriteriaInfo, id, c)
-                    criteria[#criteria + 1] = { text = text, done = done, quantity = quantity, required = required }
-                end
-                list[#list + 1] = { id = id, name = achName, points = points, completed = completed,
-                    description = description, criteria = criteria }
-            end
-            out.matching[name] = list
+        local category = { id = categoryID, name = name, parent = parentID, achievements = {} }
+        local count = call(GetCategoryNumAchievements, categoryID, true)
+        for k = 1, (type(count) == "number" and count or 0) do
+            category.achievements[#category.achievements + 1] = achievementDump(categoryID, k)
         end
+        out.categories[#out.categories + 1] = category
     end
     return out
 end
@@ -181,10 +184,15 @@ function ns.LegacyDump()
     for name in pairs(dump.namespaces) do spaces[#spaces + 1] = name end
     table.sort(spaces)
     print("   APIs: " .. table.concat(spaces, ", "))
-    local categories = dump.achievements and #dump.achievements.categories or 0
-    local matching = 0
-    for _ in pairs(dump.achievements and dump.achievements.matching or {}) do matching = matching + 1 end
-    print(("   achievement categories: %d (%d look like Legacy/challenges)"):format(categories, matching))
+    local categories, total, rewarded = 0, 0, 0
+    for _, category in ipairs(dump.achievements and dump.achievements.categories or {}) do
+        categories = categories + 1
+        for _, a in ipairs(category.achievements) do
+            total = total + 1
+            if type(a.reward) == "string" and a.reward ~= "" then rewarded = rewarded + 1 end
+        end
+    end
+    print(("   achievements: %d in %d categories, %d with a reward text"):format(total, categories, rewarded))
     print("   Saved to ZbuildsDB.legacyDump: type /reload (or log out) so the game writes it to disk.")
 end
 
