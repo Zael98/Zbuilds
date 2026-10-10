@@ -953,7 +953,9 @@ local function refreshLegacy()
 
     -- points against the limit
     if legacy then
-        lv.points:SetText(L.LEGACY_POINTS:format(legacy.available, legacy.spent, data.points))
+        -- what can be spent now, and what the account has earned of the most there is (start + one per challenge)
+        lv.points:SetText(L.LEGACY_POINTS:format(legacy.available, legacy.spent, data.points) .. "\n"
+            .. paint(L.LEGACY_EARNED:format(legacy.available + legacy.spent, data.points + #data.challenges), C.dim))
         lv.pointsBar:Set(legacy.spent / data.points, C.done)
     else
         lv.points:SetText(paint(err or "", C.pending))
