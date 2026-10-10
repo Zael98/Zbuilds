@@ -1116,13 +1116,18 @@ trainerTexts.esMX = trainerTexts.esES
 for key, value in pairs(trainerTexts.enUS) do L[key] = value end
 for key, value in pairs(trainerTexts[locale] or {}) do L[key] = value end
 
--- trainer notice in the middle of the screen
+-- trainer banner in the middle of the screen
 local noticeTexts = {
-    enUS = "%d new spells to learn at your trainer", esES = "%d hechizos nuevos para aprender en tu instructor",
-    deDE = "%d neue Zauber bei deinem Lehrer", frFR = "%d nouveaux sorts à apprendre chez votre maître",
-    ptBR = "%d feitiços novos para aprender no seu instrutor", itIT = "%d nuovi incantesimi dal tuo istruttore",
-    ruRU = "Новых заклинаний у наставника: %d", koKR = "상급자에게서 배울 새 주문 %d개",
-    zhCN = "训练师处有 %d 个新法术可学", zhTW = "訓練師處有 %d 個新法術可學",
+    enUS = { "New spells!", "Level %d  ·  %d to learn at your trainer" },
+    esES = { "¡Hechizos nuevos!", "Nivel %d  ·  %d para aprender en tu instructor" },
+    deDE = { "Neue Zauber!", "Stufe %d  ·  %d bei deinem Lehrer" },
+    frFR = { "Nouveaux sorts !", "Niveau %d  ·  %d à apprendre chez votre maître" },
+    ptBR = { "Feitiços novos!", "Nível %d  ·  %d para aprender no seu instrutor" },
+    itIT = { "Nuovi incantesimi!", "Livello %d  ·  %d dal tuo istruttore" },
+    ruRU = { "Новые заклинания!", "Уровень %d  ·  у наставника: %d" },
+    koKR = { "새 주문!", "%d레벨  ·  상급자에게서 %d개" },
+    zhCN = { "新法术！", "%d 级  ·  训练师处有 %d 个可学" },
+    zhTW = { "新法術！", "%d 級  ·  訓練師處有 %d 個可學" },
 }
 noticeTexts.esMX = noticeTexts.esES
-L.TRAINER_NOTICE = noticeTexts[locale] or noticeTexts.enUS
+L.TRAINER_NOTICE_TITLE, L.TRAINER_NOTICE = unpack(noticeTexts[locale] or noticeTexts.enUS)

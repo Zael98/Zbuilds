@@ -53,15 +53,126 @@ local function money(copper)
     return table.concat(parts, " ")
 end
 
--- On level up, also in the middle of the screen, the way the game shows raid warnings.
-local function notice(count)
-    local text = L.TRAINER_NOTICE:format(count)
-    if RaidNotice_AddMessage and RaidWarningFrame then
-        RaidNotice_AddMessage(RaidWarningFrame, text, { r = 1, g = 0.82, b = 0 })
-    elseif UIErrorsFrame then
-        UIErrorsFrame:AddMessage(text, 1, 0.82, 0)
+-- On level up, a banner in the middle of the screen like the game's own level-up one: a dark band fading at
+-- both ends between two gold lines, the title, the level, the icons of the new spells and their cost.
+-- It slides in, stays a few seconds and fades away; a click closes it.
+local GOLD = { 1, 0.82, 0 }
+local MAX_ICONS = 10
+local banner
+
+-- A horizontal band that fades out at both ends: two halves meeting in the middle, anchored at the top,
+-- the bottom or the centre of the parent, with an inset at the ends.
+local function band(parent, layer, anchor, y, height, inset, color, alpha)
+    for side = 1, 2 do
+        local tex = parent:CreateTexture(nil, layer)
+        tex:SetColorTexture(1, 1, 1)
+        tex:SetHeight(height)
+        local outer, inner = side == 1 and "LEFT" or "RIGHT", side == 1 and "RIGHT" or "LEFT"
+        local point = anchor == "CENTER" and "" or anchor
+        tex:SetPoint(point .. outer, parent, point .. outer, side == 1 and inset or -inset, y)
+        tex:SetPoint(point .. inner, parent, anchor, 0, y)
+        local clear, solid = CreateColor(color[1], color[2], color[3], 0), CreateColor(color[1], color[2], color[3], alpha)
+        tex:SetGradient("HORIZONTAL", side == 1 and clear or solid, side == 1 and solid or clear)
+        if layer == "ARTWORK" then tex:SetBlendMode("ADD") end
     end
-    if SOUNDKIT and SOUNDKIT.RAID_WARNING then PlaySound(SOUNDKIT.RAID_WARNING) end
+end
+
+local function text(parent, size, color)
+    local fs = parent:CreateFontString(nil, "OVERLAY")
+    fs:SetFont(STANDARD_TEXT_FONT, size, "OUTLINE")
+    fs:SetTextColor(color[1], color[2], color[3])
+    fs:SetShadowOffset(1, -1)
+    return fs
+end
+
+local function createBanner()
+    local f = CreateFrame("Button", nil, UIParent)
+    f:SetSize(620, 128)
+    f:SetPoint("TOP", UIParent, "TOP", 0, -170)
+    f:SetFrameStrata("HIGH")
+    f:Hide()
+    band(f, "BACKGROUND", "CENTER", 0, 128, 0, { 0, 0, 0 }, 0.75)
+    band(f, "BORDER", "TOP", 0, 2, 0, GOLD, 0.9)
+    band(f, "BORDER", "BOTTOM", 0, 2, 0, GOLD, 0.9)
+    band(f, "ARTWORK", "TOP", -10, 40, 120, GOLD, 0.18) -- a soft gold light behind the title
+
+    f.title = text(f, 26, GOLD)
+    f.title:SetPoint("TOP", 0, -12)
+    f.sub = text(f, 13, { 1, 1, 1 })
+    f.sub:SetPoint("TOP", f.title, "BOTTOM", 0, -4)
+    f.icons = {}
+    for k = 1, MAX_ICONS do
+        local icon = CreateFrame("Frame", nil, f)
+        icon:SetSize(32, 32)
+        icon.border = icon:CreateTexture(nil, "ARTWORK")
+        icon.border:SetAllPoints()
+        icon.border:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.8)
+        icon.tex = icon:CreateTexture(nil, "OVERLAY")
+        icon.tex:SetPoint("TOPLEFT", 1, -1)
+        icon.tex:SetPoint("BOTTOMRIGHT", -1, 1)
+        icon.tex:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        icon.rank = text(icon, 10, { 1, 1, 1 })
+        icon.rank:SetPoint("BOTTOMRIGHT", 2, -2)
+        icon:SetScript("OnEnter", function(self)
+            GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
+            GameTooltip:SetSpellByID(self.spellID)
+            GameTooltip:Show()
+        end)
+        icon:SetScript("OnLeave", function() GameTooltip:Hide() end)
+        f.icons[k] = icon
+    end
+    f.more = text(f, 14, GOLD)
+    f.cost = text(f, 12, { 0.85, 0.85, 0.85 })
+    f.cost:SetPoint("BOTTOM", 0, 8)
+
+    -- in: fade and a short drop into place; then hold; then out
+    f.anim = f:CreateAnimationGroup()
+    local fadeIn = f.anim:CreateAnimation("Alpha")
+    fadeIn:SetFromAlpha(0) fadeIn:SetToAlpha(1) fadeIn:SetDuration(0.35) fadeIn:SetOrder(1)
+    local drop = f.anim:CreateAnimation("Translation")
+    drop:SetOffset(0, -14) drop:SetDuration(0.35) drop:SetOrder(1) drop:SetSmoothing("OUT")
+    local fadeOut = f.anim:CreateAnimation("Alpha")
+    fadeOut:SetFromAlpha(1) fadeOut:SetToAlpha(0) fadeOut:SetDuration(1.2) fadeOut:SetStartDelay(6) fadeOut:SetOrder(2)
+    f.anim:SetScript("OnFinished", function() f:Hide() end)
+    f:SetScript("OnClick", function() f.anim:Stop() f:Hide() end)
+    return f
+end
+
+local SOUNDS = { "UI_ALERT_ACHIEVEMENT_GAINED", "ACHIEVEMENT_MENU_OPEN", "RAID_WARNING" }
+local function sound()
+    for _, name in ipairs(SOUNDS) do
+        if SOUNDKIT and SOUNDKIT[name] then PlaySound(SOUNDKIT[name]) return end
+    end
+end
+
+local function notice(due, total, unknown)
+    banner = banner or createBanner()
+    banner.title:SetText(L.TRAINER_NOTICE_TITLE)
+    banner.sub:SetText(L.TRAINER_NOTICE:format(UnitLevel("player"), #due))
+    local shown = math.min(#due, MAX_ICONS)
+    local width = shown * 36 - 4 + (#due > shown and 40 or 0)
+    for k, icon in ipairs(banner.icons) do
+        local spell = due[k]
+        if spell and k <= shown then
+            icon.tex:SetTexture(C_Spell.GetSpellTexture and C_Spell.GetSpellTexture(spell.id) or 134400)
+            icon.rank:SetText(spell.rank > 1 and spell.rank or "")
+            icon.spellID = spell.id
+            icon:ClearAllPoints()
+            icon:SetPoint("TOPLEFT", banner, "TOP", -width / 2 + (k - 1) * 36, -66)
+            icon:Show()
+        else
+            icon:Hide()
+        end
+    end
+    banner.more:SetText(#due > shown and "+" .. (#due - shown) or "")
+    banner.more:ClearAllPoints()
+    banner.more:SetPoint("LEFT", banner.icons[math.max(shown, 1)], "RIGHT", 8, 0)
+    banner.cost:SetText(unknown < #due and L.TRAINER_COST:format(money(total)) or "")
+    banner:SetAlpha(1)
+    banner:Show()
+    banner.anim:Stop()
+    banner.anim:Play()
+    sound()
 end
 
 -- The reminder in the chat; quiet when there is nothing to learn unless asked (/zb trainer).
@@ -76,7 +187,7 @@ function ns.TrainerReminder(asked)
         names[#names + 1] = spell.rank > 1 and L.TRAINER_RANK:format(spellName(spell), spell.rank) or spellName(spell)
     end
     ns.Print(L.TRAINER_DUE:format(#due, table.concat(names, ", ")))
-    if not asked then notice(#due) end
+    if not asked then notice(due, total, unknown) end
     local parts = {}
     if unknown < #due then parts[#parts + 1] = L.TRAINER_COST:format(money(total)) end
     if unknown > 0 then parts[#parts + 1] = L.TRAINER_UNKNOWN:format(unknown) end
