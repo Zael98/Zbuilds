@@ -15,9 +15,12 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Nombres y descripciones en tu idioma** para los talentos de todas las clases.
 - **En la ventana de talentos del juego:** una barra en la franja dorada con el selector de build, la predicción del siguiente punto ("disponible ya" o "nivel 31", más los dos siguientes), el brillo numerado sobre el árbol del juego y "Aprender N puntos".
 - **Loadouts:** guarda builds como loadout, ponles nombre y rota entre ellos con las flechas o la rueda en la ventana de talentos (clic derecho en el selector para renombrar). Como en Classic, para cambiar de build hay que olvidar los talentos en el instructor; después, un clic la aplica entera.
+- **Legacy:** pestaña con los tres árboles de Legacy (Profesiones, Aventura, Recursos), tus rangos y puntos (disponibles, gastados y conseguidos sobre 81), y planes por objetivo de WoW Forever Builds con su orden de puntos.
+- **Desafíos de Legacy:** los 66 desafíos, hechos y pendientes, con su progreso y ordenados por facilidad. Un clic abre el desafío en la ventana Legacy Challenges del juego.
+- **Recordatorio del instructor:** al subir de nivel, un banner en el centro de la pantalla con los hechizos y rangos nuevos que puedes aprender, su coste total y si te llega el oro. Los precios salen de Wowhead y se cambian por los reales al abrir tu instructor.
 - **Accesos:** botón en el minimapa (`/zb minimap` lo oculta) y menú de addons del juego.
 
-Comandos: `/zb` abre la ventana · `/zb minimap` oculta o muestra el botón del minimapa · `/zb diag` comprueba qué permite este cliente
+Comandos: `/zb` abre la ventana · `/zb minimap` oculta o muestra el botón del minimapa · `/zb trainer` lista lo que puedes aprender en tu instructor · `/zb trainertest` muestra el banner del instructor · `/zb diag` comprueba qué permite este cliente
 
 Idiomas: inglés, español, alemán, francés, portugués, italiano, ruso, coreano y chino (simplificado y tradicional). Se elige el del juego automáticamente.
 
