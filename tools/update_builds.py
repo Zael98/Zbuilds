@@ -522,8 +522,13 @@ def legacy_data():
 
 # ---------------------------------------------------------------- trainer spells
 # Every spell rank a class trainer sells, with the level it is learned at and its spell id (talentsforever:
-# nt marks the ranks the trainer does not sell: talents, tomes, quests). The game gives the costs at the
-# trainer, so the addon learns them there.
+# nt marks the ranks the trainer does not sell: talents, tomes, quests), and its training cost in copper from
+# Wowhead's Forever class abilities list (the base price; the addon prefers what it reads at the trainer).
+
+def trainer_costs(cls):
+    page = fetch(f"https://www.wowhead.com/forever/spells/abilities/{cls.lower()}")
+    return {int(i): int(c) for i, c in re.findall(r'\{"cat":[^{}]*?"id":(\d+)[^{}]*?"trainingcost":(\d+)', page)}
+
 
 def trainer_data():
     out = {}
@@ -535,8 +540,15 @@ def trainer_data():
         number = re.match(r"Rank (\d+)", rank)
         out.setdefault(cls.upper().replace(" ", ""), []).append(
             {"id": v["id"], "name": spell, "rank": int(number.group(1)) if number else 1, "level": int(level.group(1))})
-    for spells in out.values():
+    for cls, spells in out.items():
         spells.sort(key=lambda sp: (sp["level"], sp["name"], sp["rank"]))
+        cost = trainer_costs(cls)
+        priced = 0
+        for sp in spells:
+            if sp["id"] in cost:
+                sp["cost"] = cost[sp["id"]]
+                priced += 1
+        print(f"  trainer {cls}: {len(spells)} ranks, {priced} with a cost")
     return out
 
 

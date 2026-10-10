@@ -1,7 +1,7 @@
 -- Trainer reminder: on level up (or /zb trainer), the spell ranks your class trainer sells that you can learn
 -- now and do not have, with their total cost. What the trainer sells comes from Data.lua (spell ids and the
--- level of each rank); what you know comes from the game (IsPlayerSpell); the costs are read at the trainer
--- itself, the only place the game gives them, and kept per account (they are the same for every character).
+-- level of each rank and its price on Wowhead); what you know comes from the game (IsPlayerSpell); the costs
+-- read at the trainer itself (the real price, reputation discount included) replace Wowhead's, kept per account.
 local _, ns = ...
 local L = ns.L
 
@@ -35,7 +35,7 @@ function ns.TrainerDue()
     for _, spell in ipairs(classSpells()) do
         if spell.level <= level and spell.rank > (best[spell.name] or 0) and not knows(spell.id) then
             due[#due + 1] = spell
-            local cost = costs()[spell.id]
+            local cost = costs()[spell.id] or spell.cost
             if cost then total = total + cost else unknown = unknown + 1 end
         end
     end
@@ -51,6 +51,20 @@ local function money(copper)
     if silver > 0 or gold > 0 then parts[#parts + 1] = silver .. "|cffc7c7cfs|r" end
     parts[#parts + 1] = (copper % 100) .. "|cffeda55fc|r"
     return table.concat(parts, " ")
+end
+
+-- The total, the ranks without a known price, and whether your gold is enough (only said when every price is known).
+local function costLine(due, total, unknown)
+    local parts = {}
+    if unknown < #due then parts[#parts + 1] = L.TRAINER_COST:format(money(total)) end
+    if unknown > 0 then parts[#parts + 1] = L.TRAINER_UNKNOWN:format(unknown) end
+    local short = total - GetMoney()
+    if short > 0 then
+        parts[#parts + 1] = "|cffff5050" .. L.TRAINER_SHORT:format(money(short)) .. "|r"
+    elseif unknown == 0 then
+        parts[#parts + 1] = "|cff60ff60" .. L.TRAINER_ENOUGH .. "|r"
+    end
+    return table.concat(parts, "   ")
 end
 
 -- On level up, a banner in the middle of the screen like the game's own level-up one: a dark band fading at
@@ -167,7 +181,7 @@ local function notice(due, total, unknown)
     banner.more:SetText(#due > shown and "+" .. (#due - shown) or "")
     banner.more:ClearAllPoints()
     banner.more:SetPoint("LEFT", banner.icons[math.max(shown, 1)], "RIGHT", 8, 0)
-    banner.cost:SetText(unknown < #due and L.TRAINER_COST:format(money(total)) or "")
+    banner.cost:SetText(costLine(due, total, unknown))
     banner:SetAlpha(1)
     banner:Show()
     banner.anim:Stop()
@@ -188,17 +202,7 @@ function ns.TrainerReminder(asked)
     end
     ns.Print(L.TRAINER_DUE:format(#due, table.concat(names, ", ")))
     if not asked then notice(due, total, unknown) end
-    local parts = {}
-    if unknown < #due then parts[#parts + 1] = L.TRAINER_COST:format(money(total)) end
-    if unknown > 0 then parts[#parts + 1] = L.TRAINER_UNKNOWN:format(unknown) end
-    -- whether the gold is enough is only said when every cost is known
-    local short = total - GetMoney()
-    if short > 0 then
-        parts[#parts + 1] = "|cffff5050" .. L.TRAINER_SHORT:format(money(short)) .. "|r"
-    elseif unknown == 0 then
-        parts[#parts + 1] = L.TRAINER_ENOUGH
-    end
-    print("   " .. table.concat(parts, "   "))
+    print("   " .. costLine(due, total, unknown))
 end
 
 -- The spell id of a trainer service: from the tooltip data when the client gives it, else by matching
