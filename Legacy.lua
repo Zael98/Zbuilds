@@ -133,6 +133,26 @@ local function findAchievements()
     return out
 end
 
+-- What the query functions (Get...) of a namespace return with no arguments: the Legacy challenges
+-- may live in one of these (C_PerksActivities is the retail API for lists of challenges with progress).
+local PROBED = { "C_PerksActivities", "C_PerksProgram", "C_SeasonInfo" }
+
+local function probeNamespaces()
+    local out = {}
+    for _, name in ipairs(PROBED) do
+        local space = _G[name]
+        if type(space) == "table" then
+            out[name] = {}
+            for key, fn in pairs(space) do
+                if type(fn) == "function" and tostring(key):match("^Get") then
+                    out[name][key] = { call(fn) }
+                end
+            end
+        end
+    end
+    return out
+end
+
 function ns.LegacyDump()
     local version, build, _, interface = GetBuildInfo()
     local dump = { time = date("%Y-%m-%d %H:%M:%S"), client = { version, build, interface, GetLocale() },
@@ -140,6 +160,7 @@ function ns.LegacyDump()
     for configID, how in pairs(findConfigs()) do dump.configs[#dump.configs + 1] = configDump(configID, how) end
     dump.namespaces, dump.functions = findApis()
     dump.achievements = findAchievements()
+    dump.probed = probeNamespaces()
     ZbuildsDB = ZbuildsDB or {}
     ZbuildsDB.legacyDump = dump
 
