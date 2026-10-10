@@ -49,7 +49,7 @@ local function money(copper)
     local parts = {}
     if gold > 0 then parts[#parts + 1] = gold .. "|cffffd700g|r" end
     if silver > 0 or gold > 0 then parts[#parts + 1] = silver .. "|cffc7c7cfs|r" end
-    parts[#parts + 1] = (copper % 100) .. "|cffeda55fc|r"
+    if copper % 100 > 0 or #parts == 0 then parts[#parts + 1] = (copper % 100) .. "|cffeda55fc|r" end
     return table.concat(parts, " ")
 end
 
@@ -105,7 +105,8 @@ local function createBanner()
     f:SetPoint("TOP", UIParent, "TOP", 0, -170)
     f:SetFrameStrata("HIGH")
     f:Hide()
-    band(f, "BACKGROUND", "CENTER", 0, 128, 0, { 0, 0, 0 }, 0.75)
+    band(f, "BACKGROUND", "CENTER", 0, 128, 0, { 0, 0, 0 }, 0.9)
+    band(f, "BACKGROUND", "CENTER", 0, 128, 140, { 0, 0, 0 }, 0.5) -- a darker middle, so it reads over snow
     band(f, "BORDER", "TOP", 0, 2, 0, GOLD, 0.9)
     band(f, "BORDER", "BOTTOM", 0, 2, 0, GOLD, 0.9)
     band(f, "ARTWORK", "TOP", -10, 40, 120, GOLD, 0.18) -- a soft gold light behind the title
