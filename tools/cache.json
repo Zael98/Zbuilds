@@ -3,46 +3,6 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30305213132515201",
-"05050100000000000",
-"000000000000000000"
-],
-"points": [
-37,
-11,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Arms",
-"spec": "Arms",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"05000000000000000",
-"05000000000000000",
-"250530120321021351"
-],
-"points": [
-5,
-5,
-36
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
 "05020000000000000",
 "05000000000000000",
 "250533120321021351"
@@ -55,7 +15,7 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #3: Protection",
+"name": "Popular #1: Protection",
 "spec": "Protection",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
@@ -63,22 +23,22 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"05010000000000000",
-"00000000000000000",
-"250533120331021351"
+"30305213132515201",
+"05050100000000000",
+"000000000000000000"
 ],
 "points": [
-6,
-0,
-40
+37,
+11,
+0
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #4: Protection",
-"spec": "Protection",
+"name": "Popular #2: Arms",
+"spec": "Arms",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/0501--250533120331021351-6"
+"url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
 },
 {
 "class": "WARRIOR",
@@ -95,10 +55,50 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #7: Fury",
+"name": "Popular #3: Fury",
 "spec": "Fury",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/30305013002-05253005151010501--6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"00000000000000000",
+"25050030050000000",
+"250033120031011351"
+],
+"points": [
+0,
+20,
+31
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #4: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/-2505003005-250033120031011351-6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"05000000000000000",
+"05000000000000000",
+"250530120321021351"
+],
+"points": [
+5,
+5,
+36
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #5: Protection",
+"spec": "Protection",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
 },
 {
 "class": "PALADIN",
@@ -384,12 +384,12 @@
 "class": "ROGUE",
 "ranks": [
 "00530310501000000",
-"32030320200515231",
+"32030320201515231",
 "0000000000000000000"
 ],
 "points": [
 18,
-32,
+33,
 0
 ],
 "order": null,
@@ -398,7 +398,7 @@
 "name": "Popular #5: Combat",
 "spec": "Combat",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/rogue/60/00530310501-32030320200515231--6"
+"url": "https://talentsforever.com/rogue/60/00530310501-32030320201515231--6"
 },
 {
 "class": "PRIEST",
@@ -803,46 +803,6 @@
 {
 "class": "DRUID",
 "ranks": [
-"0530200100000000",
-"05000000000000000000",
-"5050035103113251"
-],
-"points": [
-11,
-5,
-35
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Restoration",
-"spec": "Restoration",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/05302001-05-5050035103113251-6"
-},
-{
-"class": "DRUID",
-"ranks": [
-"0500220000000000",
-"55200032120032012051",
-"0500000000000000"
-],
-"points": [
-9,
-34,
-5
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Feral Combat",
-"spec": "Feral Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
-},
-{
-"class": "DRUID",
-"ranks": [
 "0500220000000000",
 "55230202120132012551",
 "0000000000000000"
@@ -855,10 +815,30 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #3: Feral Combat",
+"name": "Popular #1: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/druid/60/050022-55230202120132012551--6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0530200100000000",
+"05000000000000000000",
+"5050035103113251"
+],
+"points": [
+11,
+5,
+35
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #2: Restoration",
+"spec": "Restoration",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/05302001-05-5050035103113251-6"
 },
 {
 "class": "DRUID",
@@ -875,7 +855,7 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #4: Balance",
+"name": "Popular #3: Balance",
 "spec": "Balance",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
@@ -883,14 +863,34 @@
 {
 "class": "DRUID",
 "ranks": [
-"0000000000000000",
-"55230332120132012551",
+"0500220000000000",
+"55200032120032012051",
 "0500000000000000"
 ],
 "points": [
-0,
-46,
+9,
+34,
 5
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #4: Feral Combat",
+"spec": "Feral Combat",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500220000000000",
+"55000032021032212051",
+"0500300000000000"
+],
+"points": [
+9,
+34,
+8
 ],
 "order": null,
 "level": 60,
@@ -898,7 +898,7 @@
 "name": "Popular #5: Feral Combat",
 "spec": "Feral Combat",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/-55230332120132012551-05-6"
+"url": "https://talentsforever.com/druid/60/050022-55000032021032212051-05003-6"
 }
 ],
 "iv:/wow-forever/affliction-warlock-ranged-dps-pve-guide": [
@@ -9013,13 +9013,13 @@
 "class": "ROGUE",
 "ranks": [
 "02000000000000000",
-"32033301001300000",
-"0000000000000000000"
+"32033301001411000",
+"0020000000000000000"
 ],
 "points": [
 2,
-19,
-0
+22,
+2
 ],
 "order": [
 [
@@ -9105,10 +9105,30 @@
 [
 2,
 12
+],
+[
+2,
+12
+],
+[
+2,
+13
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+2,
+14
 ]
 ],
 "level": null,
-"beta": true,
+"beta": null,
 "name": "Combat: General Build",
 "spec": "Combat",
 "source": "Method",
@@ -9119,14 +9139,14 @@
 {
 "class": "ROGUE",
 "ranks": [
-"02520310501000000",
-"02000000000000000",
-"0000000000000000000"
+"02520310501101000",
+"12000000000000000",
+"0020000000000000000"
 ],
 "points": [
-19,
-2,
-0
+21,
+3,
+2
 ],
 "order": [
 [
@@ -9212,10 +9232,30 @@
 [
 1,
 9
+],
+[
+1,
+12
+],
+[
+1,
+14
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+2,
+1
 ]
 ],
 "level": null,
-"beta": true,
+"beta": null,
 "name": "Assassination: General Build",
 "spec": "Assassination",
 "source": "Method",
@@ -9608,7 +9648,462 @@
 "category": "Leveo"
 }
 ],
-"method:/wow-forever/wow-forever-warrior-leveling-guide-and-talents": [],
+"method:/wow-forever/wow-forever-warrior-leveling-guide-and-talents": [
+{
+"class": "WARRIOR",
+"ranks": [
+"05325213030515201",
+"05050030000000000",
+"000000000000000000"
+],
+"points": [
+38,
+13,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+7
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+2
+],
+[
+1,
+13
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+17
+],
+[
+1,
+14
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+2
+],
+[
+1,
+2
+]
+],
+"level": null,
+"beta": null,
+"name": "Arms (Two-handed) Build",
+"spec": "Arms",
+"source": "Method",
+"url": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents#zb1",
+"guide": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents",
+"category": "Leveo"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"05025010000000000",
+"05010000000000000",
+"250033020331001351"
+],
+"points": [
+13,
+6,
+32
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+6
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+12
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+15
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+11
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+18
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+7
+],
+[
+3,
+11
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+2,
+4
+]
+],
+"level": null,
+"beta": null,
+"name": "Protection Build",
+"spec": "Protection",
+"source": "Method",
+"url": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents#zb2",
+"guide": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents",
+"category": "Leveo"
+}
+],
 "wfb:/guide/affliction-drain-tank-warlock-leveling": [],
 "wfb:/guide/affliction-warlock-pve-guide": [],
 "wfb:/guide/affliction-warlock-pvp-guide": [
