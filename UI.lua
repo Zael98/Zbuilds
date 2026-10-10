@@ -852,6 +852,27 @@ local function legacyStep(k)
     return b
 end
 
+-- Shows the achievement in the game's achievement window, trying the ways each client generation has.
+-- That window opens under Zbuilds (a higher layer), so Zbuilds steps aside; where no way works, the
+-- achievement's link goes to the chat instead.
+local function openAchievement(id)
+    local load = (C_AddOns and C_AddOns.LoadAddOn) or LoadAddOn or UIParentLoadAddOn
+    if not AchievementFrame and load then pcall(load, "Blizzard_AchievementUI") end
+    local function shown() return AchievementFrame and AchievementFrame:IsShown() end
+    if OpenAchievementFrameToAchievement then pcall(OpenAchievementFrameToAchievement, id) end
+    if not shown() then
+        if ToggleAchievementFrame then pcall(ToggleAchievementFrame)
+        elseif AchievementFrame then pcall(ShowUIPanel, AchievementFrame) end
+        if shown() and AchievementFrame_SelectAchievement then pcall(AchievementFrame_SelectAchievement, id) end
+    end
+    if shown() then
+        frame:Hide()
+    else
+        local link = GetAchievementLink and GetAchievementLink(id)
+        if link then ns.Print(link) end
+    end
+end
+
 -- one row of the challenge tracker: icon, name and description, progress, difficulty dots
 local function challengeRow(k)
     if challengeRows[k] then return challengeRows[k] end
@@ -885,12 +906,7 @@ local function challengeRow(k)
     row.bar = bar(row, 2)
     row.bar.track:SetPoint("BOTTOMLEFT", 36, 1)
     row.bar.track:SetPoint("BOTTOMRIGHT", -48, 1)
-    -- open it in the game's achievement window
-    row:SetScript("OnClick", function(self)
-        if not self.id then return end
-        if not AchievementFrame and UIParentLoadAddOn then pcall(UIParentLoadAddOn, "Blizzard_AchievementUI") end
-        if OpenAchievementFrameToAchievement then pcall(OpenAchievementFrameToAchievement, self.id) end
-    end)
+    row:SetScript("OnClick", function(self) if self.id then openAchievement(self.id) end end)
     row:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         GameTooltip:SetText(self.name:GetText(), 1, 1, 1)
