@@ -86,6 +86,25 @@ fire("PLAYER_LEVEL_UP")
 out[#out+1] = "talent only: " .. tostring(b.title.text) .. " | " .. tostring(b.sub.text) .. " | " .. lines(b)
 ZbuildsData.trainer.SHAMAN = saved
 
+-- the game's own level-up banner on screen: ours waits for it to go, then shows
+b.shown = false
+LevelUpDisplay = CreateFrame("Frame")
+local queue = {}
+C_Timer.After = function(_, f) queue[#queue+1] = f end
+fire("PLAYER_LEVEL_UP")
+for k = 1, 4 do local q = queue queue = {} for _, f in ipairs(q) do f() end end
+out[#out+1] = "game banner on screen: ours shown " .. tostring(b.shown)
+LevelUpDisplay:Hide()
+for k = 1, 2 do local q = queue queue = {} for _, f in ipairs(q) do f() end end
+out[#out+1] = "game banner gone: ours shown " .. tostring(b.shown)
+LevelUpDisplay:Show()
+b.shown = false
+fire("PLAYER_LEVEL_UP")
+for k = 1, 40 do local q = queue queue = {} for _, f in ipairs(q) do f() end end
+out[#out+1] = "game banner never leaves: ours shown " .. tostring(b.shown)
+LevelUpDisplay = nil
+C_Timer.After = function(_, f) f() end
+
 -- options: no banner, no sound, no chat
 b.shown = false
 ns.SetOption("banner", false)

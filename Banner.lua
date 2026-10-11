@@ -110,10 +110,33 @@ local function sound()
     end
 end
 
+-- The game's own banners in the same spot (level up, toasts, boss and zone banners): ours waits for them to go,
+-- checking every half second, and shows anyway after a while so it is never lost.
+local GAME_BANNERS = { "LevelUpDisplay", "EventToastManagerFrame", "BossBanner", "ZoneTextFrame" }
+local WAIT_STEP, WAIT_TRIES = 0.5, 30
+
+local function gameBannerShown()
+    for _, name in ipairs(GAME_BANNERS) do
+        local f = _G[name]
+        if f and f.IsShown and f:IsShown() then return true end
+    end
+end
+
+local show
+
 -- spec = { title, sub, icons = { { texture, spellID or link, rank, dim } }, lines = { text, ... } }
--- (empty lines are skipped). Returns the banner, or nil when the banner is turned off.
-function ns.ShowBanner(spec)
+-- (empty lines are skipped). Shown once the game's own banner is gone; nothing when the banner is turned off.
+function ns.ShowBanner(spec, tries)
     if not ns.Option("banner") then return end
+    tries = tries or 0
+    if gameBannerShown() and tries < WAIT_TRIES then
+        C_Timer.After(WAIT_STEP, function() ns.ShowBanner(spec, tries + 1) end)
+        return
+    end
+    show(spec)
+end
+
+function show(spec)
     banner = banner or createBanner()
     banner.title:SetText(spec.title)
     banner.sub:SetText(spec.sub or "")
@@ -163,5 +186,4 @@ function ns.ShowBanner(spec)
     banner.anim:Stop()
     banner.anim:Play()
     if ns.Option("sound") then sound() end
-    return banner
 end
