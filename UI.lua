@@ -738,6 +738,8 @@ local function selectedPlan()
     return legacyPlans()[1]
 end
 
+ns.SelectedLegacyPlan = selectedPlan
+
 local function selectPlan(plan)
     ZbuildsCharDB = ZbuildsCharDB or {}
     ZbuildsCharDB.legacyPlan = plan and plan.name or false
@@ -1121,24 +1123,101 @@ local function createLegacyView()
     lv.challengeList:SetScrollChild(lv.challengeContent)
 end
 
+-- ---------------------------------------------------------------- options view
+
+local TOGGLES = { "banner", "sound", "talentAlert", "legacyAlert", "chat", "minimap" }
+local DURATIONS = { 4, 6, 10, 15 }
+local ov -- the Options view
+
+local function optionOn(key)
+    if key == "minimap" then return ns.MinimapButtonShown() end
+    return ns.Option(key)
+end
+
+local function toggleRow(key, y)
+    local row = CreateFrame("Button", nil, ov)
+    row:SetSize(LIST_W + TREES_W, 26)
+    row:SetPoint("TOPLEFT", PAD, y)
+    row.box = flat(CreateFrame("Frame", nil, row, "BackdropTemplate"), C.raised)
+    row.box:SetSize(18, 18)
+    row.box:SetPoint("LEFT")
+    row.check = row.box:CreateTexture(nil, "OVERLAY")
+    row.check:SetTexture(READY)
+    row.check:SetSize(16, 16)
+    row.check:SetPoint("CENTER")
+    row.label = text(row, 13)
+    row.label:SetPoint("LEFT", row.box, "RIGHT", 10, 0)
+    row.label:SetText(L["OPT_" .. key:upper()])
+    row:SetScript("OnEnter", function(self) self.box:SetBackdropBorderColor(unpack(C.pending)) end)
+    row:SetScript("OnLeave", function(self) self.box:SetBackdropBorderColor(unpack(C.line)) end)
+    row:SetScript("OnClick", function()
+        if key == "minimap" then ns.ToggleMinimapButton() else ns.SetOption(key, not ns.Option(key)) end
+        ns.Refresh()
+    end)
+    row.key = key
+    return row
+end
+
+local function createOptionsView()
+    ov = CreateFrame("Frame", nil, frame)
+    ov:SetAllPoints()
+    ov:Hide()
+    frame.optionsView = ov
+    local top = -HEADER_H - PAD
+    local title = text(ov, 17)
+    title:SetPoint("TOPLEFT", PAD, top)
+    title:SetText(L.TAB_OPTIONS)
+    local note = text(ov, 11, C.dim)
+    note:SetPoint("TOPLEFT", PAD, top - 24)
+    note:SetText(L.OPT_NOTE)
+    ov.rows = {}
+    for k, key in ipairs(TOGGLES) do ov.rows[k] = toggleRow(key, top - 52 - (k - 1) * 32) end
+    local y = top - 52 - #TOGGLES * 32 - 12
+    ov.duration = button(ov, "", 200, function()
+        local now, nextValue = ns.Option("duration"), DURATIONS[1]
+        for k, value in ipairs(DURATIONS) do if value == now then nextValue = DURATIONS[k % #DURATIONS + 1] end end
+        ns.SetOption("duration", nextValue)
+        ns.Refresh()
+    end)
+    ov.duration:SetPoint("TOPLEFT", PAD, y)
+    ov.testLevel = button(ov, L.OPT_TEST_LEVEL, 200, function() ns.TrainerReminder(false) end)
+    ov.testLevel:SetPoint("TOPLEFT", PAD, y - 40)
+    ov.testLegacy = button(ov, L.OPT_TEST_LEGACY, 200, function() ns.LegacyBannerTest() end)
+    ov.testLegacy:SetPoint("LEFT", ov.testLevel, "RIGHT", 8, 0)
+end
+
+local function refreshOptions()
+    for _, row in ipairs(ov.rows) do
+        local on = optionOn(row.key)
+        row.check:SetShown(on and true or false)
+        -- the sound and the banners' contents only matter with the banner on
+        local muted = row.key ~= "banner" and row.key ~= "chat" and row.key ~= "minimap" and not ns.Option("banner")
+        row.label:SetTextColor(unpack(muted and C.dim or C.text))
+    end
+    ov.duration.label:SetText(L.OPT_DURATION:format(ns.Option("duration")))
+    ov.duration:SetWidth(math.max(200, ov.duration.label:GetStringWidth() + 24))
+end
+
 -- ---------------------------------------------------------------- refresh
 
 function ns.Refresh()
     if not (frame and frame:IsShown()) then return end
     -- header tabs: the talents view or the Legacy view
-    local legacyMode = state.mode == "legacy"
-    frame.talentsView:SetShown(not legacyMode)
+    local mode = state.mode or "talents"
+    local legacyMode = mode == "legacy"
+    frame.talentsView:SetShown(mode == "talents")
     frame.legacyView:SetShown(legacyMode)
+    frame.optionsView:SetShown(mode == "options")
     for _, tab in ipairs(frame.modeTabs) do
         local active = tab.mode == (state.mode or "talents")
         tab:SetBackdropColor(unpack(active and C.selected or C.raised))
         tab:SetBackdropBorderColor(unpack(active and C.pending or C.line))
         tab.label:SetTextColor(unpack(active and C.text or C.dim))
     end
-    if legacyMode then
+    if mode ~= "talents" then
         local color = classColor(ns.PlayerClass())
         frame.accent:SetColorTexture(color[1], color[2], color[3], 1)
-        return refreshLegacy()
+        return legacyMode and refreshLegacy() or refreshOptions()
     end
     local mine = state.class == ns.PlayerClass()
     local classData = ns.ClassData(state.class)
@@ -1302,13 +1381,13 @@ local function create()
 
     -- the window's two views
     frame.modeTabs = {}
-    for k, mode in ipairs({ "talents", "legacy" }) do
-        local tab = button(header, mode == "talents" and L.TAB_TALENTS or L.TAB_LEGACY, 110, function()
+    for k, mode in ipairs({ "talents", "legacy", "options" }) do
+        local tab = button(header, L["TAB_" .. mode:upper()], 110, function()
             state.mode = mode
             ns.Refresh()
         end)
         tab:SetHeight(24)
-        tab:SetPoint("LEFT", title, "RIGHT", 24 + (k - 1) * 116, 0)
+        tab:SetPoint("LEFT", k == 1 and title or frame.modeTabs[k - 1], "RIGHT", k == 1 and 24 or 6, 0)
         tab.mode = mode
         frame.modeTabs[k] = tab
     end
@@ -1525,6 +1604,7 @@ local function create()
     credits:SetText(L.CREDITS:format(ZbuildsData and ZbuildsData.generated or "?"))
 
     createLegacyView()
+    createOptionsView()
 end
 
 -- ---------------------------------------------------------------- import dialog
@@ -1617,6 +1697,14 @@ function ns.ShowImport()
     dialog.types[1]:Click()
     dialog:Show()
     dialog.url:SetFocus()
+end
+
+-- /zb options: the window on its Options tab.
+function ns.ShowOptions()
+    if not (frame and frame:IsShown()) then ns.Toggle() end
+    if not frame then return end
+    state.mode = "options"
+    ns.Refresh()
 end
 
 function ns.Toggle()

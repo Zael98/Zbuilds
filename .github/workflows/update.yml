@@ -19,16 +19,22 @@ jobs:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Descargar builds
         run: python tools/update_builds.py
+
+      # the addon with the new data must pass every test, or nothing is committed nor published
+      - name: Probar el addon
+        run: |
+          pip install 'lupa>=2'
+          python tests/run.py
 
       # a site that fails or stops giving builds keeps yesterday's copy, so nothing breaks in game:
       # say so in one open issue (GitHub mails the owner) instead of failing silently
@@ -75,9 +81,18 @@ jobs:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Probar el addon
+        run: |
+          pip install 'lupa>=2'
+          python tests/run.py
 
       - name: Publicar versión
         uses: BigWigsMods/packager@v2

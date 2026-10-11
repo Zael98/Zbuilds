@@ -19,5 +19,6 @@ Core.lua
 Import.lua
 UI.lua
 Launchers.lua
+Banner.lua
 Legacy.lua
 Trainer.lua

@@ -13,6 +13,21 @@ function ns.Print(msg)
     print(ns.PREFIX .. msg)
 end
 
+-- Account options (the window's Options tab), with their defaults.
+local DEFAULTS = { banner = true, sound = true, chat = true, talentAlert = true, legacyAlert = true, duration = 6 }
+
+function ns.Option(key)
+    local value = ZbuildsDB and ZbuildsDB.options and ZbuildsDB.options[key]
+    if value == nil then return DEFAULTS[key] end
+    return value
+end
+
+function ns.SetOption(key, value)
+    ZbuildsDB = ZbuildsDB or {}
+    ZbuildsDB.options = ZbuildsDB.options or {}
+    ZbuildsDB.options[key] = value
+end
+
 function ns.PlayerClass()
     return select(2, UnitClass("player"))
 end
@@ -343,7 +358,8 @@ function ns.LearnAndReport(build, classData)
     end
 end
 
-local function announceNext()
+-- The talent your build wants next when you have a free point for it: name, rank, spell id, build (or nil).
+function ns.NextTalent()
     local classToken = ns.PlayerClass()
     local build, classData = ns.SelectedBuild(classToken), ns.ClassData(classToken)
     if not (build and classData) then return end
@@ -351,8 +367,13 @@ local function announceNext()
     if not tree then return end
     local t, i, rank = ns.NextStep(build, classData, tree)
     if t and ns.FreePoints(tree) > 0 then
-        ns.Print(L.NEXT_ANNOUNCE:format(build.name, ns.TalentName(classData, tree, t, i), rank))
+        return ns.TalentName(classData, tree, t, i), rank, ns.TalentSpell(classData, tree, t, i), build
     end
+end
+
+local function announceNext()
+    local name, rank, _, build = ns.NextTalent()
+    if name then ns.Print(L.NEXT_ANNOUNCE:format(build.name, name, rank)) end
 end
 
 local events = CreateFrame("Frame")
@@ -412,6 +433,10 @@ SlashCmdList.ZBUILDS = function(msg)
         ns.TrainerReminder(false) -- what a level up shows, notice included
     elseif msg == "trainerdump" then
         ns.TrainerDump()
+    elseif msg == "legacytest" then
+        ns.LegacyBannerTest()
+    elseif msg == "options" then
+        ns.ShowOptions()
     elseif msg == "minimap" then
         ns.ToggleMinimapButton()
     else

@@ -72,6 +72,10 @@ local function refreshButton()
     button:SetShown(not settings().hide)
 end
 
+function ns.MinimapButtonShown()
+    return not settings().hide
+end
+
 function ns.ToggleMinimapButton()
     settings().hide = not settings().hide
     refreshButton()

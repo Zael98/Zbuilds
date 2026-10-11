@@ -542,7 +542,13 @@ def trainer_costs(cls):
     return out
 
 
+# Spellbook tabs whose spells are not the class's own: pet and demon abilities (learned by the pet) and poisons.
+KINDS = {"Pets": "pet", "Demons": "pet", "Poisons": "poison"}
+
+
 def trainer_data():
+    kinds = {(cls, spell[0]): KINDS[tab["name"]] for cls, book in TF_DATA["spellbooks"].items()
+             for tab in book["tabs"] if tab["name"] in KINDS for spell in tab["spells"]}
     out = {}
     for key, v in TF_DATA["spell_desc"].items():
         cls, spell, rank = key.split("|", 2)
@@ -550,16 +556,29 @@ def trainer_data():
         if not level or v.get("nt") or not v.get("id"):
             continue
         number = re.match(r"Rank (\d+)", rank)
-        out.setdefault(cls.upper().replace(" ", ""), []).append(
-            {"id": v["id"], "name": spell, "rank": int(number.group(1)) if number else 1, "level": int(level.group(1))})
+        entry = {"id": v["id"], "name": spell, "rank": int(number.group(1)) if number else 1, "level": int(level.group(1))}
+        if (cls, spell) in kinds:
+            entry["kind"] = kinds[(cls, spell)]
+        out.setdefault(cls.upper().replace(" ", ""), []).append(entry)
+    # a class whose Wowhead page fails, or suddenly prices less than half its ranks (the page changed),
+    # keeps the prices and sources of the last good run, and says so in the problems issue
+    old = {sp["id"]: {k: sp[k] for k in ("cost", "source") if k in sp}
+           for spells in (cache_old.get("trainer") or [{}])[0].values() for sp in spells}
     for cls, spells in out.items():
         spells.sort(key=lambda sp: (sp["level"], sp["name"], sp["rank"]))
-        cost = trainer_costs(cls)
-        priced = 0
+        try:
+            cost = trainer_costs(cls)
+            own = [sp for sp in spells if "kind" not in sp]
+            priced = sum(1 for sp in own if "cost" in cost.get(sp["id"], {}))
+            if priced < len(own) / 2:
+                raise ValueError(f"only {priced} of {len(own)} ranks priced (the page may have changed)")
+        except Exception as e:
+            warn(f"trainer {cls}: {e}")
+            problems.append(f"trainer prices {cls}: {e} (kept the last good prices)")
+            cost = old
         for sp in spells:
             sp.update(cost.get(sp["id"], {}))
-            priced += "cost" in sp
-        print(f"  trainer {cls}: {len(spells)} ranks, {priced} with a cost")
+        print(f"  trainer {cls}: {len(spells)} ranks, {sum('cost' in sp for sp in spells)} with a cost")
     return out
 
 

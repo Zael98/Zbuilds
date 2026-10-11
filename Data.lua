@@ -15745,42 +15745,49 @@ ZbuildsData = {
         name = "Bite",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 7371,
         name = "Charge",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 16827,
         name = "Claw",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 4187,
         name = "Great Stamina",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 2649,
         name = "Growl",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 24844,
         name = "Lightning Breath",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 24545,
         name = "Natural Armor",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 2973,
@@ -15814,6 +15821,7 @@ ZbuildsData = {
         name = "Cower",
         rank = 1,
         level = 5,
+        kind = "pet",
       },
       {
         id = 3044,
@@ -15834,12 +15842,14 @@ ZbuildsData = {
         name = "Bite",
         rank = 2,
         level = 8,
+        kind = "pet",
       },
       {
         id = 16828,
         name = "Claw",
         rank = 2,
         level = 8,
+        kind = "pet",
       },
       {
         id = 5116,
@@ -15853,6 +15863,7 @@ ZbuildsData = {
         name = "Demoralizing Screech",
         rank = 1,
         level = 8,
+        kind = "pet",
       },
       {
         id = 14260,
@@ -15866,6 +15877,7 @@ ZbuildsData = {
         name = "Scorpid Poison",
         rank = 1,
         level = 8,
+        kind = "pet",
       },
       {
         id = 13165,
@@ -15897,18 +15909,21 @@ ZbuildsData = {
         name = "Furious Howl",
         rank = 1,
         level = 10,
+        kind = "pet",
       },
       {
         id = 14916,
         name = "Growl",
         rank = 2,
         level = 10,
+        kind = "pet",
       },
       {
         id = 1265054,
         name = "Mine!",
         rank = 1,
         level = 10,
+        kind = "pet",
       },
       {
         id = 982,
@@ -15949,12 +15964,14 @@ ZbuildsData = {
         name = "Charge",
         rank = 2,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1264758,
         name = "Dismember",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 20736,
@@ -15968,18 +15985,21 @@ ZbuildsData = {
         name = "Dust Cloud",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 4188,
         name = "Great Stamina",
         rank = 2,
         level = 12,
+        kind = "pet",
       },
       {
         id = 25008,
         name = "Lightning Breath",
         rank = 2,
         level = 12,
+        kind = "pet",
       },
       {
         id = 136,
@@ -15993,42 +16013,49 @@ ZbuildsData = {
         name = "Natural Armor",
         rank = 2,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1264735,
         name = "Pinch",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1265065,
         name = "Savage Rend",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1264478,
         name = "Sonic Blast",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1264494,
         name = "Swipe",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1265038,
         name = "Tendon Rip",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 1265843,
         name = "Web",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 2974,
@@ -16063,18 +16090,21 @@ ZbuildsData = {
         name = "Cower",
         rank = 2,
         level = 15,
+        kind = "pet",
       },
       {
         id = 17256,
         name = "Bite",
         rank = 3,
         level = 16,
+        kind = "pet",
       },
       {
         id = 16829,
         name = "Claw",
         rank = 3,
         level = 16,
+        kind = "pet",
       },
       {
         id = 13795,
@@ -16109,6 +16139,7 @@ ZbuildsData = {
         name = "Great Stamina",
         rank = 3,
         level = 18,
+        kind = "pet",
       },
       {
         id = 2643,
@@ -16122,6 +16153,7 @@ ZbuildsData = {
         name = "Natural Armor",
         rank = 3,
         level = 18,
+        kind = "pet",
       },
       {
         id = 13550,
@@ -16149,6 +16181,7 @@ ZbuildsData = {
         name = "Arcane Resistance",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 14282,
@@ -16183,6 +16216,7 @@ ZbuildsData = {
         name = "Fire Resistance",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 1499,
@@ -16196,12 +16230,14 @@ ZbuildsData = {
         name = "Frost Resistance",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 14917,
         name = "Growl",
         rank = 3,
         level = 20,
+        kind = "pet",
       },
       {
         id = 3111,
@@ -16215,30 +16251,35 @@ ZbuildsData = {
         name = "Mine!",
         rank = 2,
         level = 20,
+        kind = "pet",
       },
       {
         id = 24492,
         name = "Nature Resistance",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 24488,
         name = "Shadow Resistance",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 26064,
         name = "Shell Shield",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 1310612,
         name = "Trickster's Dance",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 14323,
@@ -16266,66 +16307,77 @@ ZbuildsData = {
         name = "Bite",
         rank = 4,
         level = 24,
+        kind = "pet",
       },
       {
         id = 26178,
         name = "Charge",
         rank = 3,
         level = 24,
+        kind = "pet",
       },
       {
         id = 16830,
         name = "Claw",
         rank = 4,
         level = 24,
+        kind = "pet",
       },
       {
         id = 24577,
         name = "Demoralizing Screech",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1264927,
         name = "Dismember",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1265901,
         name = "Dust Cloud",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 24605,
         name = "Furious Howl",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 4190,
         name = "Great Stamina",
         rank = 4,
         level = 24,
+        kind = "pet",
       },
       {
         id = 25009,
         name = "Lightning Breath",
         rank = 3,
         level = 24,
+        kind = "pet",
       },
       {
         id = 24551,
         name = "Natural Armor",
         rank = 4,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1264736,
         name = "Pinch",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 14262,
@@ -16339,30 +16391,35 @@ ZbuildsData = {
         name = "Savage Rend",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 24583,
         name = "Scorpid Poison",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1264479,
         name = "Sonic Blast",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1264497,
         name = "Swipe",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1265039,
         name = "Tendon Rip",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 19885,
@@ -16376,12 +16433,14 @@ ZbuildsData = {
         name = "Web",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 1754,
         name = "Cower",
         rank = 3,
         level = 25,
+        kind = "pet",
       },
       {
         id = 14302,
@@ -16451,6 +16510,7 @@ ZbuildsData = {
         name = "Arcane Resistance",
         rank = 2,
         level = 30,
+        kind = "pet",
       },
       {
         id = 13161,
@@ -16471,6 +16531,7 @@ ZbuildsData = {
         name = "Dash",
         rank = 1,
         level = 30,
+        kind = "pet",
       },
       {
         id = 15629,
@@ -16484,6 +16545,7 @@ ZbuildsData = {
         name = "Dive",
         rank = 1,
         level = 30,
+        kind = "pet",
       },
       {
         id = 5384,
@@ -16497,24 +16559,28 @@ ZbuildsData = {
         name = "Fire Resistance",
         rank = 2,
         level = 30,
+        kind = "pet",
       },
       {
         id = 24447,
         name = "Frost Resistance",
         rank = 2,
         level = 30,
+        kind = "pet",
       },
       {
         id = 4191,
         name = "Great Stamina",
         rank = 5,
         level = 30,
+        kind = "pet",
       },
       {
         id = 14918,
         name = "Growl",
         rank = 4,
         level = 30,
+        kind = "pet",
       },
       {
         id = 24118,
@@ -16527,6 +16593,7 @@ ZbuildsData = {
         name = "Mine!",
         rank = 3,
         level = 30,
+        kind = "pet",
       },
       {
         id = 14269,
@@ -16540,18 +16607,21 @@ ZbuildsData = {
         name = "Natural Armor",
         rank = 5,
         level = 30,
+        kind = "pet",
       },
       {
         id = 24502,
         name = "Nature Resistance",
         rank = 2,
         level = 30,
+        kind = "pet",
       },
       {
         id = 24450,
         name = "Prowl",
         rank = 1,
         level = 30,
+        kind = "pet",
       },
       {
         id = 14326,
@@ -16565,24 +16635,28 @@ ZbuildsData = {
         name = "Shadow Resistance",
         rank = 2,
         level = 30,
+        kind = "pet",
       },
       {
         id = 26090,
         name = "Thunderstomp",
         rank = 1,
         level = 30,
+        kind = "pet",
       },
       {
         id = 17258,
         name = "Bite",
         rank = 5,
         level = 32,
+        kind = "pet",
       },
       {
         id = 16831,
         name = "Claw",
         rank = 5,
         level = 32,
+        kind = "pet",
       },
       {
         id = 1221404,
@@ -16644,6 +16718,7 @@ ZbuildsData = {
         name = "Cower",
         rank = 4,
         level = 35,
+        kind = "pet",
       },
       {
         id = 20901,
@@ -16664,24 +16739,28 @@ ZbuildsData = {
         name = "Charge",
         rank = 4,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1264929,
         name = "Dismember",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1265902,
         name = "Dust Cloud",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 4192,
         name = "Great Stamina",
         rank = 6,
         level = 36,
+        kind = "pet",
       },
       {
         id = 14303,
@@ -16695,6 +16774,7 @@ ZbuildsData = {
         name = "Lightning Breath",
         rank = 4,
         level = 36,
+        kind = "pet",
       },
       {
         id = 3662,
@@ -16708,24 +16788,28 @@ ZbuildsData = {
         name = "Natural Armor",
         rank = 6,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1264739,
         name = "Pinch",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1265067,
         name = "Savage Rend",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1264480,
         name = "Sonic Blast",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1293525,
@@ -16739,12 +16823,14 @@ ZbuildsData = {
         name = "Swipe",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 1265040,
         name = "Tendon Rip",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 3034,
@@ -16758,6 +16844,7 @@ ZbuildsData = {
         name = "Web",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 14320,
@@ -16778,6 +16865,7 @@ ZbuildsData = {
         name = "Arcane Resistance",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 1299445,
@@ -16798,18 +16886,21 @@ ZbuildsData = {
         name = "Bite",
         rank = 6,
         level = 40,
+        kind = "pet",
       },
       {
         id = 16832,
         name = "Claw",
         rank = 6,
         level = 40,
+        kind = "pet",
       },
       {
         id = 23109,
         name = "Dash",
         rank = 2,
         level = 40,
+        kind = "pet",
       },
       {
         id = 15630,
@@ -16823,12 +16914,14 @@ ZbuildsData = {
         name = "Dive",
         rank = 2,
         level = 40,
+        kind = "pet",
       },
       {
         id = 24444,
         name = "Fire Resistance",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 14310,
@@ -16842,18 +16935,21 @@ ZbuildsData = {
         name = "Frost Resistance",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 24603,
         name = "Furious Howl",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 14919,
         name = "Growl",
         rank = 5,
         level = 40,
+        kind = "pet",
       },
       {
         id = 14324,
@@ -16873,18 +16969,21 @@ ZbuildsData = {
         name = "Mine!",
         rank = 4,
         level = 40,
+        kind = "pet",
       },
       {
         id = 24503,
         name = "Nature Resistance",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 24452,
         name = "Prowl",
         rank = 2,
         level = 40,
+        kind = "pet",
       },
       {
         id = 14264,
@@ -16898,24 +16997,28 @@ ZbuildsData = {
         name = "Scorpid Poison",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 24506,
         name = "Shadow Resistance",
         rank = 3,
         level = 40,
+        kind = "pet",
       },
       {
         id = 24507,
         name = "Shadow Resistance",
         rank = 4,
         level = 40,
+        kind = "pet",
       },
       {
         id = 26187,
         name = "Thunderstomp",
         rank = 2,
         level = 40,
+        kind = "pet",
       },
       {
         id = 19882,
@@ -16950,12 +17053,14 @@ ZbuildsData = {
         name = "Great Stamina",
         rank = 7,
         level = 42,
+        kind = "pet",
       },
       {
         id = 24554,
         name = "Natural Armor",
         rank = 7,
         level = 42,
+        kind = "pet",
       },
       {
         id = 13553,
@@ -17004,6 +17109,7 @@ ZbuildsData = {
         name = "Cower",
         rank = 5,
         level = 45,
+        kind = "pet",
       },
       {
         id = 20043,
@@ -17045,24 +17151,28 @@ ZbuildsData = {
         name = "Bite",
         rank = 7,
         level = 48,
+        kind = "pet",
       },
       {
         id = 26201,
         name = "Charge",
         rank = 5,
         level = 48,
+        kind = "pet",
       },
       {
         id = 3010,
         name = "Claw",
         rank = 7,
         level = 48,
+        kind = "pet",
       },
       {
         id = 24578,
         name = "Demoralizing Screech",
         rank = 3,
         level = 48,
+        kind = "pet",
       },
       {
         id = 14273,
@@ -17076,36 +17186,42 @@ ZbuildsData = {
         name = "Dismember",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 1265903,
         name = "Dust Cloud",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 4194,
         name = "Great Stamina",
         rank = 8,
         level = 48,
+        kind = "pet",
       },
       {
         id = 25011,
         name = "Lightning Breath",
         rank = 5,
         level = 48,
+        kind = "pet",
       },
       {
         id = 24555,
         name = "Natural Armor",
         rank = 8,
         level = 48,
+        kind = "pet",
       },
       {
         id = 1264741,
         name = "Pinch",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 14265,
@@ -17119,6 +17235,7 @@ ZbuildsData = {
         name = "Savage Rend",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 1310785,
@@ -17132,6 +17249,7 @@ ZbuildsData = {
         name = "Sonic Blast",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 1293526,
@@ -17145,24 +17263,28 @@ ZbuildsData = {
         name = "Swipe",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 1265041,
         name = "Tendon Rip",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 1265881,
         name = "Web",
         rank = 4,
         level = 48,
+        kind = "pet",
       },
       {
         id = 24501,
         name = "Arcane Resistance",
         rank = 4,
         level = 50,
+        kind = "pet",
       },
       {
         id = 1299446,
@@ -17176,6 +17298,7 @@ ZbuildsData = {
         name = "Dash",
         rank = 3,
         level = 50,
+        kind = "pet",
       },
       {
         id = 15631,
@@ -17189,24 +17312,28 @@ ZbuildsData = {
         name = "Dive",
         rank = 3,
         level = 50,
+        kind = "pet",
       },
       {
         id = 24445,
         name = "Fire Resistance",
         rank = 4,
         level = 50,
+        kind = "pet",
       },
       {
         id = 24449,
         name = "Frost Resistance",
         rank = 4,
         level = 50,
+        kind = "pet",
       },
       {
         id = 14920,
         name = "Growl",
         rank = 6,
         level = 50,
+        kind = "pet",
       },
       {
         id = 24120,
@@ -17219,18 +17346,21 @@ ZbuildsData = {
         name = "Mine!",
         rank = 5,
         level = 50,
+        kind = "pet",
       },
       {
         id = 24504,
         name = "Nature Resistance",
         rank = 4,
         level = 50,
+        kind = "pet",
       },
       {
         id = 24453,
         name = "Prowl",
         rank = 3,
         level = 50,
+        kind = "pet",
       },
       {
         id = 13554,
@@ -17244,6 +17374,7 @@ ZbuildsData = {
         name = "Thunderstomp",
         rank = 3,
         level = 50,
+        kind = "pet",
       },
       {
         id = 19879,
@@ -17306,18 +17437,21 @@ ZbuildsData = {
         name = "Great Stamina",
         rank = 9,
         level = 54,
+        kind = "pet",
       },
       {
         id = 24629,
         name = "Natural Armor",
         rank = 9,
         level = 54,
+        kind = "pet",
       },
       {
         id = 16697,
         name = "Cower",
         rank = 6,
         level = 55,
+        kind = "pet",
       },
       {
         id = 20190,
@@ -17331,24 +17465,28 @@ ZbuildsData = {
         name = "Bite",
         rank = 8,
         level = 56,
+        kind = "pet",
       },
       {
         id = 3009,
         name = "Claw",
         rank = 8,
         level = 56,
+        kind = "pet",
       },
       {
         id = 24579,
         name = "Demoralizing Screech",
         rank = 4,
         level = 56,
+        kind = "pet",
       },
       {
         id = 24597,
         name = "Furious Howl",
         rank = 4,
         level = 56,
+        kind = "pet",
       },
       {
         id = 14305,
@@ -17369,6 +17507,7 @@ ZbuildsData = {
         name = "Scorpid Poison",
         rank = 4,
         level = 56,
+        kind = "pet",
       },
       {
         id = 14280,
@@ -17452,12 +17591,14 @@ ZbuildsData = {
         name = "Charge",
         rank = 6,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1264933,
         name = "Dismember",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 15632,
@@ -17471,6 +17612,7 @@ ZbuildsData = {
         name = "Dust Cloud",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 14311,
@@ -17484,12 +17626,14 @@ ZbuildsData = {
         name = "Great Stamina",
         rank = 10,
         level = 60,
+        kind = "pet",
       },
       {
         id = 14921,
         name = "Growl",
         rank = 7,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1299332,
@@ -17502,6 +17646,7 @@ ZbuildsData = {
         name = "Lightning Breath",
         rank = 6,
         level = 60,
+        kind = "pet",
       },
       {
         id = 13544,
@@ -17515,18 +17660,21 @@ ZbuildsData = {
         name = "Natural Armor",
         rank = 10,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1264742,
         name = "Pinch",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1265069,
         name = "Savage Rend",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 25295,
@@ -17540,6 +17688,7 @@ ZbuildsData = {
         name = "Sonic Blast",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1293527,
@@ -17553,18 +17702,21 @@ ZbuildsData = {
         name = "Swipe",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1265042,
         name = "Tendon Rip",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 1264455,
         name = "Thunderstomp",
         rank = 4,
         level = 60,
+        kind = "pet",
       },
       {
         id = 19801,
@@ -17585,6 +17737,7 @@ ZbuildsData = {
         name = "Web",
         rank = 5,
         level = 60,
+        kind = "pet",
       },
       {
         id = 14268,
@@ -17752,12 +17905,14 @@ ZbuildsData = {
         name = "Crippling Poison",
         rank = 1,
         level = 20,
+        kind = "poison",
       },
       {
         id = 8681,
         name = "Instant Poison",
         rank = 1,
         level = 20,
+        kind = "poison",
       },
       {
         id = 1943,
@@ -17820,6 +17975,7 @@ ZbuildsData = {
         name = "Mind-numbing Poison",
         rank = 1,
         level = 24,
+        kind = "poison",
       },
       {
         id = 8724,
@@ -17868,6 +18024,7 @@ ZbuildsData = {
         name = "Instant Poison",
         rank = 2,
         level = 28,
+        kind = "poison",
       },
       {
         id = 8639,
@@ -17888,6 +18045,7 @@ ZbuildsData = {
         name = "Deadly Poison",
         rank = 1,
         level = 30,
+        kind = "poison",
       },
       {
         id = 1842,
@@ -17936,6 +18094,7 @@ ZbuildsData = {
         name = "Wound Poison",
         rank = 1,
         level = 32,
+        kind = "poison",
       },
       {
         id = 8725,
@@ -17956,6 +18115,7 @@ ZbuildsData = {
         name = "Blinding Powder",
         rank = 1,
         level = 34,
+        kind = "poison",
       },
       {
         id = 8696,
@@ -17983,6 +18143,7 @@ ZbuildsData = {
         name = "Instant Poison",
         rank = 3,
         level = 36,
+        kind = "poison",
       },
       {
         id = 8640,
@@ -17996,6 +18157,7 @@ ZbuildsData = {
         name = "Deadly Poison",
         rank = 2,
         level = 38,
+        kind = "poison",
       },
       {
         id = 8633,
@@ -18009,6 +18171,7 @@ ZbuildsData = {
         name = "Mind-numbing Poison",
         rank = 2,
         level = 38,
+        kind = "poison",
       },
       {
         id = 8621,
@@ -18057,6 +18220,7 @@ ZbuildsData = {
         name = "Wound Poison",
         rank = 2,
         level = 40,
+        kind = "poison",
       },
       {
         id = 11267,
@@ -18098,6 +18262,7 @@ ZbuildsData = {
         name = "Instant Poison",
         rank = 4,
         level = 44,
+        kind = "poison",
       },
       {
         id = 11273,
@@ -18111,6 +18276,7 @@ ZbuildsData = {
         name = "Deadly Poison",
         rank = 3,
         level = 46,
+        kind = "poison",
       },
       {
         id = 11197,
@@ -18159,6 +18325,7 @@ ZbuildsData = {
         name = "Wound Poison",
         rank = 3,
         level = 48,
+        kind = "poison",
       },
       {
         id = 11268,
@@ -18172,6 +18339,7 @@ ZbuildsData = {
         name = "Crippling Poison",
         rank = 2,
         level = 50,
+        kind = "poison",
       },
       {
         id = 8643,
@@ -18206,12 +18374,14 @@ ZbuildsData = {
         name = "Instant Poison",
         rank = 5,
         level = 52,
+        kind = "poison",
       },
       {
         id = 11400,
         name = "Mind-numbing Poison",
         rank = 3,
         level = 52,
+        kind = "poison",
       },
       {
         id = 11274,
@@ -18225,6 +18395,7 @@ ZbuildsData = {
         name = "Deadly Poison",
         rank = 4,
         level = 54,
+        kind = "poison",
       },
       {
         id = 11290,
@@ -18259,6 +18430,7 @@ ZbuildsData = {
         name = "Wound Poison",
         rank = 4,
         level = 56,
+        kind = "poison",
       },
       {
         id = 11269,
@@ -18300,6 +18472,7 @@ ZbuildsData = {
         name = "Deadly Poison",
         rank = 5,
         level = 60,
+        kind = "poison",
       },
       {
         id = 31016,
@@ -18327,6 +18500,7 @@ ZbuildsData = {
         name = "Instant Poison",
         rank = 6,
         level = 60,
+        kind = "poison",
       },
       {
         id = 1241584,
@@ -22289,6 +22463,7 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 1,
         level = 1,
+        kind = "pet",
       },
       {
         id = 348,
@@ -22315,6 +22490,7 @@ ZbuildsData = {
         name = "Blood Pact",
         rank = 1,
         level = 4,
+        kind = "pet",
       },
       {
         id = 172,
@@ -22363,6 +22539,7 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 2,
         level = 8,
+        kind = "pet",
       },
       {
         id = 6201,
@@ -22404,6 +22581,7 @@ ZbuildsData = {
         name = "Torment",
         rank = 1,
         level = 10,
+        kind = "pet",
       },
       {
         id = 1108,
@@ -22424,6 +22602,7 @@ ZbuildsData = {
         name = "Phase Shift",
         rank = 1,
         level = 12,
+        kind = "pet",
       },
       {
         id = 705,
@@ -22437,6 +22616,7 @@ ZbuildsData = {
         name = "Blood Pact",
         rank = 2,
         level = 14,
+        kind = "pet",
       },
       {
         id = 6222,
@@ -22464,6 +22644,7 @@ ZbuildsData = {
         name = "Fire Shield",
         rank = 1,
         level = 14,
+        kind = "pet",
       },
       {
         id = 1455,
@@ -22477,6 +22658,7 @@ ZbuildsData = {
         name = "Sacrifice",
         rank = 1,
         level = 16,
+        kind = "pet",
       },
       {
         id = 5697,
@@ -22497,6 +22679,7 @@ ZbuildsData = {
         name = "Consume Shadows",
         rank = 1,
         level = 18,
+        kind = "pet",
       },
       {
         id = 693,
@@ -22510,6 +22693,7 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 3,
         level = 18,
+        kind = "pet",
       },
       {
         id = 5676,
@@ -22551,6 +22735,7 @@ ZbuildsData = {
         name = "Lash of Pain",
         rank = 1,
         level = 20,
+        kind = "pet",
       },
       {
         id = 5740,
@@ -22592,6 +22777,7 @@ ZbuildsData = {
         name = "Torment",
         rank = 2,
         level = 20,
+        kind = "pet",
       },
       {
         id = 6202,
@@ -22626,6 +22812,7 @@ ZbuildsData = {
         name = "Soothing Kiss",
         rank = 1,
         level = 22,
+        kind = "pet",
       },
       {
         id = 6223,
@@ -22653,12 +22840,14 @@ ZbuildsData = {
         name = "Fire Shield",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 19438,
         name = "Sacrifice",
         rank = 2,
         level = 24,
+        kind = "pet",
       },
       {
         id = 5500,
@@ -22679,18 +22868,21 @@ ZbuildsData = {
         name = "Suffering",
         rank = 1,
         level = 24,
+        kind = "pet",
       },
       {
         id = 7805,
         name = "Blood Pact",
         rank = 3,
         level = 26,
+        kind = "pet",
       },
       {
         id = 17850,
         name = "Consume Shadows",
         rank = 2,
         level = 26,
+        kind = "pet",
       },
       {
         id = 1714,
@@ -22725,6 +22917,7 @@ ZbuildsData = {
         name = "Seduction",
         rank = 1,
         level = 26,
+        kind = "pet",
       },
       {
         id = 6217,
@@ -22759,6 +22952,7 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 4,
         level = 28,
+        kind = "pet",
       },
       {
         id = 3699,
@@ -22772,6 +22966,7 @@ ZbuildsData = {
         name = "Lash of Pain",
         rank = 2,
         level = 28,
+        kind = "pet",
       },
       {
         id = 1106,
@@ -22806,6 +23001,7 @@ ZbuildsData = {
         name = "Devour Magic",
         rank = 1,
         level = 30,
+        kind = "pet",
       },
       {
         id = 709,
@@ -22847,6 +23043,7 @@ ZbuildsData = {
         name = "Torment",
         rank = 3,
         level = 30,
+        kind = "pet",
       },
       {
         id = 1293818,
@@ -22874,12 +23071,14 @@ ZbuildsData = {
         name = "Lesser Invisibility",
         rank = 1,
         level = 32,
+        kind = "pet",
       },
       {
         id = 19440,
         name = "Sacrifice",
         rank = 3,
         level = 32,
+        kind = "pet",
       },
       {
         id = 6229,
@@ -22900,12 +23099,14 @@ ZbuildsData = {
         name = "Tainted Blood",
         rank = 1,
         level = 32,
+        kind = "pet",
       },
       {
         id = 17851,
         name = "Consume Shadows",
         rank = 3,
         level = 34,
+        kind = "pet",
       },
       {
         id = 7648,
@@ -22933,6 +23134,7 @@ ZbuildsData = {
         name = "Fire Shield",
         rank = 3,
         level = 34,
+        kind = "pet",
       },
       {
         id = 6219,
@@ -22953,6 +23155,7 @@ ZbuildsData = {
         name = "Soothing Kiss",
         rank = 2,
         level = 34,
+        kind = "pet",
       },
       {
         id = 17951,
@@ -22980,6 +23183,7 @@ ZbuildsData = {
         name = "Lash of Pain",
         rank = 3,
         level = 36,
+        kind = "pet",
       },
       {
         id = 11687,
@@ -23000,12 +23204,14 @@ ZbuildsData = {
         name = "Spell Lock",
         rank = 1,
         level = 36,
+        kind = "pet",
       },
       {
         id = 17750,
         name = "Suffering",
         rank = 2,
         level = 36,
+        kind = "pet",
       },
       {
         id = 11711,
@@ -23019,6 +23225,7 @@ ZbuildsData = {
         name = "Blood Pact",
         rank = 4,
         level = 38,
+        kind = "pet",
       },
       {
         id = 2970,
@@ -23032,6 +23239,7 @@ ZbuildsData = {
         name = "Devour Magic",
         rank = 2,
         level = 38,
+        kind = "pet",
       },
       {
         id = 7651,
@@ -23052,6 +23260,7 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 5,
         level = 38,
+        kind = "pet",
       },
       {
         id = 18879,
@@ -23107,6 +23316,7 @@ ZbuildsData = {
         name = "Sacrifice",
         rank = 4,
         level = 40,
+        kind = "pet",
       },
       {
         id = 18869,
@@ -23120,18 +23330,21 @@ ZbuildsData = {
         name = "Tainted Blood",
         rank = 2,
         level = 40,
+        kind = "pet",
       },
       {
         id = 7811,
         name = "Torment",
         rank = 4,
         level = 40,
+        kind = "pet",
       },
       {
         id = 17852,
         name = "Consume Shadows",
         rank = 4,
         level = 42,
+        kind = "pet",
       },
       {
         id = 7659,
@@ -23166,6 +23379,7 @@ ZbuildsData = {
         name = "Paranoia",
         rank = 1,
         level = 42,
+        kind = "pet",
       },
       {
         id = 17921,
@@ -23200,6 +23414,7 @@ ZbuildsData = {
         name = "Fire Shield",
         rank = 4,
         level = 44,
+        kind = "pet",
       },
       {
         id = 11693,
@@ -23213,6 +23428,7 @@ ZbuildsData = {
         name = "Lash of Pain",
         rank = 4,
         level = 44,
+        kind = "pet",
       },
       {
         id = 11659,
@@ -23247,6 +23463,7 @@ ZbuildsData = {
         name = "Devour Magic",
         rank = 3,
         level = 46,
+        kind = "pet",
       },
       {
         id = 11699,
@@ -23274,6 +23491,7 @@ ZbuildsData = {
         name = "Soothing Kiss",
         rank = 3,
         level = 46,
+        kind = "pet",
       },
       {
         id = 11712,
@@ -23308,12 +23526,14 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 6,
         level = 48,
+        kind = "pet",
       },
       {
         id = 19442,
         name = "Sacrifice",
         rank = 5,
         level = 48,
+        kind = "pet",
       },
       {
         id = 18870,
@@ -23341,24 +23561,28 @@ ZbuildsData = {
         name = "Suffering",
         rank = 3,
         level = 48,
+        kind = "pet",
       },
       {
         id = 19656,
         name = "Tainted Blood",
         rank = 3,
         level = 48,
+        kind = "pet",
       },
       {
         id = 11767,
         name = "Blood Pact",
         rank = 5,
         level = 50,
+        kind = "pet",
       },
       {
         id = 17853,
         name = "Consume Shadows",
         rank = 5,
         level = 50,
+        kind = "pet",
       },
       {
         id = 20756,
@@ -23435,6 +23659,7 @@ ZbuildsData = {
         name = "Torment",
         rank = 5,
         level = 50,
+        kind = "pet",
       },
       {
         id = 11708,
@@ -23462,6 +23687,7 @@ ZbuildsData = {
         name = "Lash of Pain",
         rank = 5,
         level = 52,
+        kind = "pet",
       },
       {
         id = 11660,
@@ -23482,6 +23708,7 @@ ZbuildsData = {
         name = "Spell Lock",
         rank = 2,
         level = 52,
+        kind = "pet",
       },
       {
         id = 18931,
@@ -23502,6 +23729,7 @@ ZbuildsData = {
         name = "Devour Magic",
         rank = 4,
         level = 54,
+        kind = "pet",
       },
       {
         id = 11700,
@@ -23522,6 +23750,7 @@ ZbuildsData = {
         name = "Fire Shield",
         rank = 5,
         level = 54,
+        kind = "pet",
       },
       {
         id = 11684,
@@ -23570,6 +23799,7 @@ ZbuildsData = {
         name = "Sacrifice",
         rank = 6,
         level = 56,
+        kind = "pet",
       },
       {
         id = 18871,
@@ -23590,6 +23820,7 @@ ZbuildsData = {
         name = "Tainted Blood",
         rank = 4,
         level = 56,
+        kind = "pet",
       },
       {
         id = 11713,
@@ -23603,6 +23834,7 @@ ZbuildsData = {
         name = "Consume Shadows",
         rank = 6,
         level = 58,
+        kind = "pet",
       },
       {
         id = 11730,
@@ -23623,6 +23855,7 @@ ZbuildsData = {
         name = "Firebolt",
         rank = 7,
         level = 58,
+        kind = "pet",
       },
       {
         id = 11678,
@@ -23650,6 +23883,7 @@ ZbuildsData = {
         name = "Soothing Kiss",
         rank = 4,
         level = 58,
+        kind = "pet",
       },
       {
         id = 11726,
@@ -23733,6 +23967,7 @@ ZbuildsData = {
         name = "Lash of Pain",
         rank = 6,
         level = 60,
+        kind = "pet",
       },
       {
         id = 18540,
@@ -23767,12 +24002,14 @@ ZbuildsData = {
         name = "Suffering",
         rank = 4,
         level = 60,
+        kind = "pet",
       },
       {
         id = 11775,
         name = "Torment",
         rank = 6,
         level = 60,
+        kind = "pet",
       },
     },
     DRUID = {

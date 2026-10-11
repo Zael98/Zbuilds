@@ -2,6 +2,26 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## v0.9.0 — Options, Train all and smarter reminders
+
+### ⚙️ Options
+- New **Options** tab (also `/zb options`): turn the banner and its sound on or off, choose what it shows (next talent, Legacy challenges), the trainer list in the chat, the minimap button, and how long the banner stays (4, 6, 10 or 15 s).
+- **Preview** buttons for the level-up and the Legacy banners.
+
+### 🎉 Banners
+- The level-up banner now also shows the **next talent** of your build.
+- A banner when you **complete a Legacy challenge**, with the perk your plan wants next.
+
+### 📜 Trainer
+- **Train all** button on the trainer window: learns what you use in one click; Shift-click learns everything.
+- Spells you know but **do not have on your action bars** are shown in grey as optional, with what the rest costs.
+- **Next 5 levels**: how much gold the coming levels will ask for.
+- **Hunter pets and warlock demons**: their abilities are no longer listed as yours; you get the upgrades your pet or demon can learn instead. Rogue poisons are listed once you have their first rank.
+
+### Behind the scenes
+- Every release, daily ones included, is now tested before it is published.
+- If Wowhead fails, the trainer prices of the last good update are kept.
+
 ## v0.8.0 — Legacy, challenges and trainer
 
 Zbuilds becomes a progression addon: besides talent builds, it now plans your Legacy points, tracks the Legacy challenges and reminds you of your trainer.

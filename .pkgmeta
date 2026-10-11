@@ -6,5 +6,6 @@ manual-changelog:
 
 ignore:
   - tools
+  - tests
   - README.md
   - logo.png

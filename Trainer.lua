@@ -2,8 +2,12 @@
 -- now and do not have, with their total cost. What the trainer sells comes from Data.lua (spell ids and the
 -- level of each rank and its price on Wowhead); what you know comes from the game (IsPlayerSpell); the costs
 -- read at the trainer itself (the real price, reputation discount included) replace Wowhead's, kept per account.
+-- Pet and demon abilities (kind "pet") and poisons (kind "poison") are only offered as upgrades of a rank the
+-- pet or you already have: who can learn which of them depends on the pet family or on quests.
 local _, ns = ...
 local L = ns.L
+
+local FORECAST_LEVELS = 5
 
 local function costs()
     ZbuildsDB = ZbuildsDB or {}
@@ -15,31 +19,67 @@ local function classSpells()
     return ZbuildsData and ZbuildsData.trainer and ZbuildsData.trainer[ns.PlayerClass()] or {}
 end
 
-local function knows(spellID)
-    return (IsPlayerSpell and IsPlayerSpell(spellID)) or (IsSpellKnown and IsSpellKnown(spellID)) or false
+local function knows(spell)
+    if spell.kind == "pet" then return IsSpellKnown and IsSpellKnown(spell.id, true) or false end
+    return (IsPlayerSpell and IsPlayerSpell(spell.id)) or (IsSpellKnown and IsSpellKnown(spell.id)) or false
 end
 
 local function spellName(spell)
     return (C_Spell and C_Spell.GetSpellName and C_Spell.GetSpellName(spell.id)) or spell.name
 end
 
--- Ranks you can learn at your level and do not have: per spell, only the ranks above the highest one you know
--- (an old rank you skipped is never worth buying). Returns the list, the total of the known costs, and the
--- ranks without a known price (quest, drop or vendor ones, or not on Wowhead).
-function ns.TrainerDue()
-    local level, best = UnitLevel("player"), {}
-    for _, spell in ipairs(classSpells()) do
-        if knows(spell.id) and spell.rank > (best[spell.name] or 0) then best[spell.name] = spell.rank end
+local function price(spell)
+    return costs()[spell.id] or spell.cost
+end
+
+-- Names of the spells on your action bars (macros included), or nil when the client cannot tell: a known spell
+-- that is not there gets its new ranks marked optional.
+local function barSpells()
+    if not GetActionInfo then return end
+    local names = {}
+    for slot = 1, 180 do
+        local kind, id = GetActionInfo(slot)
+        if kind == "macro" and GetMacroSpell then kind, id = "spell", GetMacroSpell(id) end
+        local name = kind == "spell" and id and C_Spell.GetSpellName(id)
+        if name then names[name] = true end
     end
-    local due, total, unpriced = {}, 0, {}
+    return next(names) and names or nil
+end
+
+-- What your trainer has for you now: { due, optional (spell -> true), total, optionalTotal, unpriced, pet,
+-- forecast }. Per spell, only the ranks above the highest one you know (an old rank you skipped is never worth
+-- buying); a spell you know but do not have on your bars is optional; forecast is the cost of what the next
+-- levels bring.
+function ns.TrainerDue()
+    local level, petLevel = UnitLevel("player"), UnitExists and UnitExists("pet") and UnitLevel("pet") or 0
+    local best = {}
     for _, spell in ipairs(classSpells()) do
-        if spell.level <= level and spell.rank > (best[spell.name] or 0) and not knows(spell.id) then
-            due[#due + 1] = spell
-            local cost = costs()[spell.id] or spell.cost
-            if cost then total = total + cost else unpriced[#unpriced + 1] = spell end
+        local key = (spell.kind or "") .. spell.name
+        if spell.rank > (best[key] or 0) and knows(spell) then best[key] = spell.rank end
+    end
+    local bars = barSpells()
+    local r = { due = {}, optional = {}, total = 0, optionalTotal = 0, unpriced = {}, pet = {}, forecast = 0 }
+    for _, spell in ipairs(classSpells()) do
+        local have = best[(spell.kind or "") .. spell.name] or 0
+        local wanted = spell.rank > have and (not spell.kind or have > 0) and not knows(spell)
+        if wanted and spell.kind == "pet" then
+            if spell.level <= petLevel then r.pet[#r.pet + 1] = spell end
+        elseif wanted and spell.level <= level then
+            r.due[#r.due + 1] = spell
+            local cost = price(spell)
+            local optional = bars and have > 0 and not spell.kind and not bars[spellName(spell)]
+            if optional then r.optional[spell] = true end
+            if not cost then
+                r.unpriced[#r.unpriced + 1] = spell
+            else
+                r.total = r.total + cost
+                if optional then r.optionalTotal = r.optionalTotal + cost end
+            end
+        elseif wanted and spell.level <= level + FORECAST_LEVELS then
+            r.forecast = r.forecast + (price(spell) or 0)
         end
     end
-    return due, total, unpriced
+    return r
 end
 
 -- gold, silver and copper with the game's coin icons when it has them
@@ -57,167 +97,92 @@ local function rankName(spell)
     return spell.rank > 1 and L.TRAINER_RANK:format(spellName(spell), spell.rank) or spellName(spell)
 end
 
--- The total and whether your gold is enough for it.
-local function costLine(due, total, unpriced)
-    if #unpriced == #due then return "" end
-    local short = total - GetMoney()
-    return L.TRAINER_COST:format(money(total)) .. "   " .. (short > 0
-        and "|cffff5050" .. L.TRAINER_SHORT:format(money(short)) .. "|r"
-        or "|cff60ff60" .. L.TRAINER_ENOUGH .. "|r")
+local function names(spells, optional)
+    local out = {}
+    for _, spell in ipairs(spells) do
+        out[#out + 1] = optional and optional[spell] and "|cff888888" .. rankName(spell) .. "|r" or rankName(spell)
+    end
+    return table.concat(out, ", ")
+end
+
+-- The total, what the spells on your bars cost, and whether your gold is enough.
+local function costLine(r)
+    if #r.unpriced == #r.due then return "" end
+    local line = L.TRAINER_COST:format(money(r.total))
+    local essential = r.total - r.optionalTotal
+    if r.optionalTotal > 0 then line = line .. "   " .. L.TRAINER_ON_BARS:format(money(essential)) end
+    local gold = GetMoney()
+    if gold >= r.total then
+        return line .. "   |cff60ff60" .. L.TRAINER_ENOUGH .. "|r"
+    elseif r.optionalTotal > 0 and gold >= essential then
+        return line .. "   |cffffd200" .. L.TRAINER_ENOUGH_BARS .. "|r"
+    end
+    return line .. "   |cffff5050" .. L.TRAINER_SHORT:format(money(r.total - gold)) .. "|r"
 end
 
 -- The ranks the total leaves out, each with where it comes from when Wowhead says.
-local function unpricedLine(unpriced)
-    if #unpriced == 0 then return "" end
-    local names = {}
-    for _, spell in ipairs(unpriced) do
+local function unpricedLine(r)
+    if #r.unpriced == 0 then return "" end
+    local out = {}
+    for _, spell in ipairs(r.unpriced) do
         local source = spell.source and L["TRAINER_SOURCE_" .. spell.source:upper()]
-        names[#names + 1] = source and ("%s (%s)"):format(rankName(spell), source) or rankName(spell)
+        out[#out + 1] = source and ("%s (%s)"):format(rankName(spell), source) or rankName(spell)
     end
-    return L.TRAINER_UNPRICED:format(table.concat(names, ", "))
+    return L.TRAINER_UNPRICED:format(table.concat(out, ", "))
 end
 
--- On level up, a banner in the middle of the screen like the game's own level-up one: a dark band fading at
--- both ends between two gold lines, the title, the level, the icons of the new spells and their cost.
--- It slides in, stays a few seconds and fades away; a click closes it.
-local GOLD = { 1, 0.82, 0 }
-local MAX_ICONS = 10
-local banner
+local function petLine(r)
+    if #r.pet == 0 then return "" end
+    return (ns.PlayerClass() == "WARLOCK" and L.TRAINER_DEMON or L.TRAINER_PET):format(names(r.pet))
+end
 
--- A horizontal band that fades out at both ends: two halves meeting in the middle, anchored at the top,
--- the bottom or the centre of the parent, with an inset at the ends.
-local function band(parent, layer, anchor, y, height, inset, color, alpha)
-    for side = 1, 2 do
-        local tex = parent:CreateTexture(nil, layer)
-        tex:SetColorTexture(1, 1, 1)
-        tex:SetHeight(height)
-        local outer, inner = side == 1 and "LEFT" or "RIGHT", side == 1 and "RIGHT" or "LEFT"
-        local point = anchor == "CENTER" and "" or anchor
-        tex:SetPoint(point .. outer, parent, point .. outer, side == 1 and inset or -inset, y)
-        tex:SetPoint(point .. inner, parent, anchor, 0, y)
-        local clear, solid = CreateColor(color[1], color[2], color[3], 0), CreateColor(color[1], color[2], color[3], alpha)
-        tex:SetGradient("HORIZONTAL", side == 1 and clear or solid, side == 1 and solid or clear)
-        if layer == "ARTWORK" then tex:SetBlendMode("ADD") end
+local function forecastLine(r)
+    if r.forecast == 0 then return "" end
+    return L.TRAINER_FORECAST:format(FORECAST_LEVELS, money(r.forecast))
+end
+
+local function icon(spellID)
+    return C_Spell.GetSpellTexture and C_Spell.GetSpellTexture(spellID) or 134400
+end
+
+-- The level-up banner: the next talent of your build and what your trainer has for you.
+local function levelUpBanner(r)
+    local talent, talentRank, talentSpell = nil, nil, nil
+    if ns.Option("talentAlert") then talent, talentRank, talentSpell = ns.NextTalent() end
+    if #r.due == 0 and #r.pet == 0 and not talent then return end
+    local icons = {}
+    for _, spell in ipairs(r.due) do
+        icons[#icons + 1] = { texture = icon(spell.id), spellID = spell.id, rank = spell.rank, dim = r.optional[spell] }
     end
+    local talentLine = talent and L.BANNER_TALENT:format(
+        talentSpell and ("|T%s:16:16|t "):format(icon(talentSpell)) or "", talent, talentRank) or ""
+    local level = UnitLevel("player")
+    return ns.ShowBanner({
+        title = #r.due > 0 and L.TRAINER_NOTICE_TITLE or (talent and L.BANNER_TALENT_TITLE or L.TRAINER_NOTICE_TITLE),
+        sub = #r.due > 0 and L.TRAINER_NOTICE:format(level, #r.due) or L.BANNER_LEVEL:format(level),
+        icons = icons,
+        lines = { costLine(r), talentLine, petLine(r), unpricedLine(r), forecastLine(r) },
+    })
 end
 
-local function text(parent, size, color)
-    local fs = parent:CreateFontString(nil, "OVERLAY")
-    fs:SetFont(STANDARD_TEXT_FONT, size, "OUTLINE")
-    fs:SetTextColor(color[1], color[2], color[3])
-    fs:SetShadowOffset(1, -1)
-    return fs
-end
-
-local function createBanner()
-    local f = CreateFrame("Button", nil, UIParent)
-    f:SetSize(620, 144)
-    f:SetPoint("TOP", UIParent, "TOP", 0, -170)
-    f:SetFrameStrata("HIGH")
-    f:Hide()
-    band(f, "BACKGROUND", "CENTER", 0, 144, 0, { 0, 0, 0 }, 0.9)
-    band(f, "BACKGROUND", "CENTER", 0, 144, 140, { 0, 0, 0 }, 0.5) -- a darker middle, so it reads over snow
-    band(f, "BORDER", "TOP", 0, 2, 0, GOLD, 0.9)
-    band(f, "BORDER", "BOTTOM", 0, 2, 0, GOLD, 0.9)
-    band(f, "ARTWORK", "TOP", -10, 40, 120, GOLD, 0.18) -- a soft gold light behind the title
-
-    f.title = text(f, 26, GOLD)
-    f.title:SetPoint("TOP", 0, -12)
-    f.sub = text(f, 13, { 1, 1, 1 })
-    f.sub:SetPoint("TOP", f.title, "BOTTOM", 0, -4)
-    f.icons = {}
-    for k = 1, MAX_ICONS do
-        local icon = CreateFrame("Frame", nil, f)
-        icon:SetSize(32, 32)
-        icon.border = icon:CreateTexture(nil, "ARTWORK")
-        icon.border:SetAllPoints()
-        icon.border:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.8)
-        icon.tex = icon:CreateTexture(nil, "OVERLAY")
-        icon.tex:SetPoint("TOPLEFT", 1, -1)
-        icon.tex:SetPoint("BOTTOMRIGHT", -1, 1)
-        icon.tex:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-        icon.rank = text(icon, 10, { 1, 1, 1 })
-        icon.rank:SetPoint("BOTTOMRIGHT", 2, -2)
-        icon:SetScript("OnEnter", function(self)
-            GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
-            GameTooltip:SetSpellByID(self.spellID)
-            GameTooltip:Show()
-        end)
-        icon:SetScript("OnLeave", function() GameTooltip:Hide() end)
-        f.icons[k] = icon
-    end
-    f.more = text(f, 14, GOLD)
-    f.cost = text(f, 13, { 0.9, 0.9, 0.9 })
-    f.cost:SetPoint("TOP", 0, -104)
-    f.unpriced = text(f, 11, { 0.7, 0.7, 0.7 })
-    f.unpriced:SetPoint("TOP", f.cost, "BOTTOM", 0, -3)
-    f.unpriced:SetWidth(560)
-
-    -- in: fade and a short drop into place; then hold; then out
-    f.anim = f:CreateAnimationGroup()
-    local fadeIn = f.anim:CreateAnimation("Alpha")
-    fadeIn:SetFromAlpha(0) fadeIn:SetToAlpha(1) fadeIn:SetDuration(0.35) fadeIn:SetOrder(1)
-    local drop = f.anim:CreateAnimation("Translation")
-    drop:SetOffset(0, -14) drop:SetDuration(0.35) drop:SetOrder(1) drop:SetSmoothing("OUT")
-    local fadeOut = f.anim:CreateAnimation("Alpha")
-    fadeOut:SetFromAlpha(1) fadeOut:SetToAlpha(0) fadeOut:SetDuration(1.2) fadeOut:SetStartDelay(6) fadeOut:SetOrder(2)
-    f.anim:SetScript("OnFinished", function() f:Hide() end)
-    f:SetScript("OnClick", function() f.anim:Stop() f:Hide() end)
-    return f
-end
-
-local SOUNDS = { "UI_ALERT_ACHIEVEMENT_GAINED", "ACHIEVEMENT_MENU_OPEN", "RAID_WARNING" }
-local function sound()
-    for _, name in ipairs(SOUNDS) do
-        if SOUNDKIT and SOUNDKIT[name] then PlaySound(SOUNDKIT[name]) return end
-    end
-end
-
-local function notice(due, total, unpriced)
-    banner = banner or createBanner()
-    banner.title:SetText(L.TRAINER_NOTICE_TITLE)
-    banner.sub:SetText(L.TRAINER_NOTICE:format(UnitLevel("player"), #due))
-    local shown = math.min(#due, MAX_ICONS)
-    local width = shown * 36 - 4 + (#due > shown and 40 or 0)
-    for k, icon in ipairs(banner.icons) do
-        local spell = due[k]
-        if spell and k <= shown then
-            icon.tex:SetTexture(C_Spell.GetSpellTexture and C_Spell.GetSpellTexture(spell.id) or 134400)
-            icon.rank:SetText(spell.rank > 1 and spell.rank or "")
-            icon.spellID = spell.id
-            icon:ClearAllPoints()
-            icon:SetPoint("TOPLEFT", banner, "TOP", -width / 2 + (k - 1) * 36, -66)
-            icon:Show()
-        else
-            icon:Hide()
-        end
-    end
-    banner.more:SetText(#due > shown and "+" .. (#due - shown) or "")
-    banner.more:ClearAllPoints()
-    banner.more:SetPoint("LEFT", banner.icons[math.max(shown, 1)], "RIGHT", 8, 0)
-    banner.cost:SetText(costLine(due, total, unpriced))
-    banner.unpriced:SetText(unpricedLine(unpriced))
-    banner:SetAlpha(1)
-    banner:Show()
-    banner.anim:Stop()
-    banner.anim:Play()
-    sound()
-end
-
--- The reminder in the chat; quiet when there is nothing to learn unless asked (/zb trainer).
+-- The reminder in the chat (quiet when there is nothing to learn unless asked, /zb trainer); on level up
+-- (asked false) also the banner.
 function ns.TrainerReminder(asked)
-    local due, total, unpriced = ns.TrainerDue()
-    if #due == 0 then
-        if asked then ns.Print(L.TRAINER_NOTHING) end
+    local r = ns.TrainerDue()
+    if not asked then levelUpBanner(r) end
+    if not asked and not ns.Option("chat") then return end
+    if #r.due == 0 and #r.pet == 0 then
+        if asked then
+            ns.Print(L.TRAINER_NOTHING)
+            if r.forecast > 0 then print("   " .. forecastLine(r)) end
+        end
         return
     end
-    local names = {}
-    for _, spell in ipairs(due) do
-        names[#names + 1] = rankName(spell)
+    if #r.due > 0 then
+        ns.Print(L.TRAINER_DUE:format(#r.due, names(r.due, r.optional))
+            .. (next(r.optional) and "  " .. L.TRAINER_GREY or ""))
     end
-    ns.Print(L.TRAINER_DUE:format(#due, table.concat(names, ", ")))
-    if not asked then notice(due, total, unpriced) end
-    for _, line in ipairs({ costLine(due, total, unpriced), unpricedLine(unpriced) }) do
+    for _, line in ipairs({ costLine(r), petLine(r), unpricedLine(r), forecastLine(r) }) do
         if line ~= "" then print("   " .. line) end
     end
 end
@@ -248,6 +213,76 @@ local function readTrainer()
     end
     if read > lastRead then ns.Print(L.TRAINER_READ:format(read)) end
     lastRead = read
+end
+
+-- ---------------------------------------------------------------- "Train all" on the trainer window
+
+-- The services you can learn now, with their cost; without the optional ones (spells not on your bars)
+-- unless everything is asked for.
+local function learnable(everything)
+    local optional = {}
+    for spell in pairs(ns.TrainerDue().optional) do optional[spell.id] = true end
+    local out, total = {}, 0
+    for index = 1, GetNumTrainerServices() do
+        local _, _, kind = GetTrainerServiceInfo(index)
+        local spellID = serviceSpell(index)
+        if kind == "available" and (everything or not (spellID and optional[spellID])) then
+            local cost = GetTrainerServiceCost(index) or 0
+            out[#out + 1] = { index = index, cost = cost }
+            total = total + cost
+        end
+    end
+    return out, total
+end
+
+-- Buys from the bottom of the list up, so a purchase does not move the services still to buy; stops buying
+-- what your gold does not cover. A rank that needs the one just bought shows up after, for another click.
+function ns.TrainAll(everything)
+    local gold, learned, spent = GetMoney(), 0, 0
+    local list = learnable(everything)
+    for k = #list, 1, -1 do
+        local service = list[k]
+        if service.cost <= gold - spent then
+            BuyTrainerService(service.index)
+            learned, spent = learned + 1, spent + service.cost
+        end
+    end
+    ns.Print(learned > 0 and L.TRAIN_ALL_DONE:format(learned, money(spent)) or L.TRAIN_ALL_NONE)
+    return learned
+end
+
+local trainButton
+local function trainTooltip(self)
+    local list, total = learnable(false)
+    local all, allTotal = learnable(true)
+    GameTooltip:SetOwner(self, "ANCHOR_TOP")
+    GameTooltip:AddLine(L.TRAIN_ALL)
+    GameTooltip:AddLine(L.TRAIN_ALL_CLICK:format(#list, money(total)), 1, 1, 1, true)
+    if #all > #list then GameTooltip:AddLine(L.TRAIN_ALL_SHIFT:format(#all, money(allTotal)), 0.7, 0.7, 0.7, true) end
+    GameTooltip:Show()
+end
+
+local function showTrainButton()
+    local trainer = ClassTrainerFrame
+    if not trainer or (IsTradeskillTrainer and IsTradeskillTrainer()) or not BuyTrainerService then
+        if trainButton then trainButton:Hide() end
+        return
+    end
+    if not trainButton then
+        trainButton = CreateFrame("Button", nil, trainer, "UIPanelButtonTemplate")
+        trainButton:SetText(L.TRAIN_ALL)
+        trainButton:SetSize(math.max(110, (trainButton:GetFontString() and trainButton:GetFontString():GetStringWidth() or 80) + 24), 22)
+        if ClassTrainerTrainButton then
+            trainButton:SetPoint("RIGHT", ClassTrainerTrainButton, "LEFT", -4, 0)
+        else
+            trainButton:SetPoint("BOTTOMRIGHT", trainer, "BOTTOMRIGHT", -100, 6)
+        end
+        trainButton:SetScript("OnClick", function() ns.TrainAll(IsShiftKeyDown and IsShiftKeyDown()) end)
+        trainButton:SetScript("OnEnter", trainTooltip)
+        trainButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    end
+    trainButton:SetEnabled(#learnable(true) > 0)
+    trainButton:Show()
 end
 
 -- /zb trainerdump, at an open trainer: what this client's trainer functions return, to adapt the reading.
@@ -291,10 +326,14 @@ end
 events:SetScript("OnEvent", function(_, event)
     if event == "TRAINER_SHOW" then
         lastRead = 0
-        C_Timer.After(0.2, readTrainer) -- the services list fills a moment after the window opens
+        C_Timer.After(0.2, function() -- the services list fills a moment after the window opens
+            readTrainer()
+            showTrainButton()
+        end)
     elseif event == "TRAINER_UPDATE" then
         readTrainer()
-    else
-        C_Timer.After(1.5, function() ns.TrainerReminder(false) end) -- after the level's spells are granted
+        showTrainButton()
+    elseif event == "PLAYER_LEVEL_UP" then
+        C_Timer.After(1.5, function() ns.TrainerReminder(false) end) -- after the level's spells and point are granted
     end
 end)

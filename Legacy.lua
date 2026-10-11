@@ -334,9 +334,38 @@ for _, event in ipairs({ "ACHIEVEMENT_EARNED", "CRITERIA_UPDATE", "TRAIT_CONFIG_
         events:RegisterEvent(event)
     end
 end
-events:SetScript("OnEvent", function()
+-- A Legacy challenge done: a banner with it and the perk your plan wants next (the point arrives a moment later).
+local function challengeBanner(id)
+    if not ns.Option("legacyAlert") then return end
+    local _, name, _, _, _, _, _, _, _, icon = GetAchievementInfo(id)
+    local next = ""
+    local data, plan = ns.LegacyData(), ns.SelectedLegacyPlan and ns.SelectedLegacyPlan()
+    local legacy = data and plan and ns.ReadLegacy(data)
+    if legacy then
+        local t, i, rank = ns.NextLegacyStep(plan, legacy)
+        local spell = t and legacy.spell[t][i]
+        local perk = t and ((spell and C_Spell.GetSpellName(spell)) or data.trees[t].perks[i].name)
+        if perk then next = ns.L.LEGACY_BANNER_NEXT:format(perk, rank) end
+    end
+    ns.ShowBanner({
+        title = ns.L.LEGACY_BANNER_TITLE,
+        sub = name,
+        icons = { { texture = icon, link = GetAchievementLink and GetAchievementLink(id) } },
+        lines = { next, ns.L.LEGACY_BANNER_SPEND },
+    })
+end
+
+events:SetScript("OnEvent", function(_, event, id)
+    if event == "ACHIEVEMENT_EARNED" and CHALLENGES[id] then
+        C_Timer.After(1, function() challengeBanner(id) end)
+    end
     if ns.RefreshLegacy then ns.RefreshLegacy() end
 end)
+
+-- /zb legacytest: the challenge banner with the first challenge, to see how it looks.
+function ns.LegacyBannerTest()
+    challengeBanner(62006)
+end
 
 SLASH_ZBUILDSLEGACY1 = "/zbuildslegacydump"
 SlashCmdList.ZBUILDSLEGACY = function() ns.LegacyDump() end
