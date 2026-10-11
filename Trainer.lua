@@ -218,15 +218,26 @@ end
 -- ---------------------------------------------------------------- "Train all" on the trainer window
 
 -- The services you can learn now, with their cost; without the optional ones (spells not on your bars)
--- unless everything is asked for.
+-- unless everything is asked for. The game says which are available; when its answer is not one of the
+-- known words (WoW Forever's may differ), a due rank whose previous rank you know counts as available.
+local KNOWN_KINDS = { available = true, unavailable = true, used = true }
+
 local function learnable(everything)
-    local optional = {}
-    for spell in pairs(ns.TrainerDue().optional) do optional[spell.id] = true end
+    local due = ns.TrainerDue()
+    local optional, ready = {}, {}
+    for spell in pairs(due.optional) do optional[spell.id] = true end
+    local ranks = {}
+    for _, spell in ipairs(classSpells()) do ranks[spell.name .. "#" .. spell.rank] = spell end
+    for _, spell in ipairs(due.due) do
+        local previous = ranks[spell.name .. "#" .. (spell.rank - 1)]
+        if spell.rank == 1 or (previous and knows(previous)) then ready[spell.id] = true end
+    end
     local out, total = {}, 0
     for index = 1, GetNumTrainerServices() do
         local _, _, kind = GetTrainerServiceInfo(index)
         local spellID = serviceSpell(index)
-        if kind == "available" and (everything or not (spellID and optional[spellID])) then
+        local available = kind == "available" or (not KNOWN_KINDS[kind] and spellID and ready[spellID])
+        if available and (everything or not (spellID and optional[spellID])) then
             local cost = GetTrainerServiceCost(index) or 0
             out[#out + 1] = { index = index, cost = cost }
             total = total + cost
@@ -272,11 +283,7 @@ local function showTrainButton()
         trainButton = CreateFrame("Button", nil, trainer, "UIPanelButtonTemplate")
         trainButton:SetText(L.TRAIN_ALL)
         trainButton:SetSize(math.max(110, (trainButton:GetFontString() and trainButton:GetFontString():GetStringWidth() or 80) + 24), 22)
-        if ClassTrainerTrainButton then
-            trainButton:SetPoint("RIGHT", ClassTrainerTrainButton, "LEFT", -4, 0)
-        else
-            trainButton:SetPoint("BOTTOMRIGHT", trainer, "BOTTOMRIGHT", -100, 6)
-        end
+        trainButton:SetPoint("TOPLEFT", trainer, "TOPLEFT", 12, -30) -- free space left of the filters, clear of your gold
         trainButton:SetScript("OnClick", function() ns.TrainAll(IsShiftKeyDown and IsShiftKeyDown()) end)
         trainButton:SetScript("OnEnter", trainTooltip)
         trainButton:SetScript("OnLeave", function() GameTooltip:Hide() end)

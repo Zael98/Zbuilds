@@ -68,6 +68,15 @@ gold = 0; BOUGHT = {}
 trainButton.scripts.OnClick(trainButton)
 out[#out+1] = "no gold: bought " .. #BOUGHT .. " | " .. last(1)
 gold = 50000
+-- a client whose service type is another word (WoW Forever): due ranks with their previous rank known count
+local realInfo = GetTrainerServiceInfo
+GetTrainerServiceInfo = function(i) local name, rank = realInfo(i) return name, rank, "header" end
+IsShiftKeyDown = function() return false end
+BOUGHT = {}
+trainButton.scripts.OnClick(trainButton)
+boughtNames = {} for _, i in ipairs(BOUGHT) do boughtNames[#boughtNames+1] = sold[i].name .. " " .. sold[i].rank end
+out[#out+1] = "other service type: " .. table.concat(boughtNames, ", ")
+GetTrainerServiceInfo = realInfo
 
 -- level up to 12 with little gold: the banner, with the next talent of the build
 level, gold = 12, 500
