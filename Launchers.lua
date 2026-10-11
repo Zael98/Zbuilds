@@ -488,6 +488,23 @@ local function createBar(talentFrame)
 
     talentFrame:HookScript("OnShow", function() place() ns.RefreshTalentBar() end)
     talentFrame:HookScript("OnSizeChanged", place)
+
+    -- a window with tabs (talents and spellbook) keeps the bar on its talents tab only
+    local talentsTab, spellbookTab = talentFrame.TalentsFrame, talentFrame.SpellBookFrame
+    local function syncTab()
+        if talentsTab then
+            bar:SetShown(talentsTab:IsShown())
+        elseif spellbookTab then
+            bar:SetShown(not spellbookTab:IsShown())
+        end
+    end
+    for _, tab in ipairs({ talentsTab, spellbookTab }) do
+        if tab and tab.HookScript then
+            tab:HookScript("OnShow", function() syncTab() ns.RefreshTalentBar() end)
+            tab:HookScript("OnHide", syncTab)
+        end
+    end
+    syncTab()
     ns.RefreshTalentBar()
 end
 

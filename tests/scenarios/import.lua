@@ -2,6 +2,7 @@ local total, same, failed = 0, 0, {}
 local function ord(o) if not o then return "" end local x = {} for _, s in ipairs(o) do x[#x+1] = s[1] .. ":" .. s[2] end return table.concat(x, ",") end
 local function check(b, url, label, compareOrder)
   if url:find("#zb") then return end -- Method builds have no link of their own
+  if url:find("rankedboost%.com") or url:find("wowforevertalent%.com") then return end -- build pages, not calculator links
   total = total + 1
   local d, err = ns.DecodeLink(url, b.name, b.category)
   if not d then failed[#failed+1] = label .. ": " .. err return end

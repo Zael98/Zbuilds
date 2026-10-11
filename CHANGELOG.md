@@ -2,6 +2,13 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## v0.10.0 — Two more build sites
+
+- **RankedBoost**: its builds for every class (DPS, healing, tanking, PvP and leveling).
+- **WoW Forever Talent** (wowforevertalent.com): its own level 10–20 plans, with their point order. The guides it copies from other sites are left out, so a build is not counted twice.
+- Both get their own source filter; a build that another site also recommends is shown once, with "also recommended by".
+- The build bar on the talent window no longer shows on the spellbook tab.
+
 ## v0.9.0 — Options, Train all and smarter reminders
 
 ### ⚙️ Options

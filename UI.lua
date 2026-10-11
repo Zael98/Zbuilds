@@ -21,11 +21,11 @@ local TL_H = 18 + 2 * TL_ROW_H
 local LOGO = "Interface\\AddOns\\Zbuilds\\media\\logo"
 
 local CLASS_ORDER = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
-local SOURCES = { "Talents Forever", "Icy Veins", "Warcraft Tavern", "Method", "WoW Forever Builds", "Guías extra",
-    "Mis enlaces" }
+local SOURCES = { "Talents Forever", "Icy Veins", "Warcraft Tavern", "Method", "WoW Forever Builds", "RankedBoost",
+    "WoW Forever Talent", "Guías extra", "Mis enlaces" }
 -- short names for the filter chips (the list headers keep the full ones)
 local SOURCE_SHORT = { ["Talents Forever"] = "T. Forever", ["WoW Forever Builds"] = "WF Builds",
-    ["Warcraft Tavern"] = "Tavern" }
+    ["Warcraft Tavern"] = "Tavern", ["WoW Forever Talent"] = "WF Talent" }
 local CHIPS_PER_ROW = 4
 local CATEGORIES = { "all", "Leveo", "PvE", "PvP", "none" }
 
@@ -49,6 +49,7 @@ local C = {
     tree = { { 0.72, 0.52, 1 }, { 0.35, 0.85, 0.78 }, { 1, 0.5, 0.66 } },
     source = { ["Talents Forever"] = { 0.5, 0.88, 0.82 }, ["Icy Veins"] = { 0.45, 0.72, 1 },
         ["Warcraft Tavern"] = { 0.95, 0.6, 0.35 }, ["Method"] = { 1, 0.42, 0.5 }, ["WoW Forever Builds"] = { 0.62, 0.86, 0.4 },
+        ["RankedBoost"] = { 0.95, 0.5, 0.85 }, ["WoW Forever Talent"] = { 0.95, 0.88, 0.5 },
         ["Guías extra"] = { 0.8, 0.6, 1 }, ["Mis enlaces"] = { 1, 0.82, 0 } },
 }
 
@@ -1487,7 +1488,8 @@ local function create()
     beta:SetPoint("TOPLEFT", PAD + (#SOURCES % CHIPS_PER_ROW) * (chipW + 6),
         top - 122 - math.floor(#SOURCES / CHIPS_PER_ROW) * 24)
 
-    local listTop = top - 174
+    -- the list starts under the last row of source chips (the Beta chip comes after the sources)
+    local listTop = top - 122 - math.ceil((#SOURCES + 1) / CHIPS_PER_ROW) * 24 - 4
     frame.list = CreateFrame("ScrollFrame", nil, view)
     frame.list:SetPoint("TOPLEFT", PAD, listTop)
     frame.list:SetSize(LIST_W, HEIGHT + listTop - PAD - 34)

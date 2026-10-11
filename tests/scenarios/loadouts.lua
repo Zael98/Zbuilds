@@ -11,6 +11,8 @@ for k, n in ipairs(nodes) do
 end
 local holder = STUB(); holder.GetChildren = function() return unpack(buttons) end
 PlayerSpellsFrame.GetChildren = function() return holder end
+-- the window's two tabs: talents (shown) and the spellbook
+PlayerSpellsFrame.TalentsFrame = STUB(); PlayerSpellsFrame.SpellBookFrame = STUB(); PlayerSpellsFrame.SpellBookFrame.shown = false
 MenuUtil = { CreateContextMenu = function(owner, gen)
   local root = { radios = {} }
   function root:SetScrollMode() end
@@ -19,6 +21,17 @@ MenuUtil = { CreateContextMenu = function(owner, gen)
   gen(owner, root); MENU = root end }
 for _, o in ipairs(ALL) do if o.scripts.OnEvent then o.scripts.OnEvent(o, "ADDON_LOADED", "Blizzard_PlayerSpells") end end
 local bar for _, o in ipairs(ALL) do if o.pick and o.learn then bar = o end end
+local function switch(tab, other)
+  tab.shown, other.shown = true, false
+  for _, f in ipairs(other.hooks and other.hooks.OnHide or {}) do f(other) end
+  for _, f in ipairs(tab.hooks and tab.hooks.OnShow or {}) do f(tab) end
+end
+local talentsTab, bookTab = PlayerSpellsFrame.TalentsFrame, PlayerSpellsFrame.SpellBookFrame
+out[#out+1] = "bar on the talents tab: " .. tostring(bar.shown)
+switch(bookTab, talentsTab)
+out[#out+1] = "bar on the spellbook tab: " .. tostring(bar.shown)
+switch(talentsTab, bookTab)
+out[#out+1] = "bar back on the talents tab: " .. tostring(bar.shown)
 bar.pick.scripts.OnClick(bar.pick)
 -- an Enhancement build whose first point is Thundering Strikes, like the screenshot
 for _, r in ipairs(MENU.radios) do if strip(r.label):find("PvP guide") and strip(r.label):find("Enhancement") then r.setSel() end end

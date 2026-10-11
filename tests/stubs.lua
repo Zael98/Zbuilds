@@ -37,6 +37,7 @@ local function stub()
     if not k:match("^%u") then return nil end
     if k == "SetScript" then return function(self, n, f) self.scripts[n] = f end end
     if k == "GetScript" then return function(self, n) return self.scripts[n] end end
+    if k == "HookScript" then return function(self, n, f) self.hooks = self.hooks or {} self.hooks[n] = self.hooks[n] or {} table.insert(self.hooks[n], f) end end
     if k == "Show" then return function(self) self.shown = true end end
     if k == "Hide" then return function(self) self.shown = false end end
     if k == "SetShown" then return function(self, v) self.shown = not not v end end

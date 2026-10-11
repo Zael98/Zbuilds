@@ -777,6 +777,85 @@ def clean(fragment):
     return html.unescape(re.sub(r"<[^>]+>", "", fragment)).strip()
 
 
+# ---------------------------------------------------------------- RankedBoost (one page per class)
+# Each class page embeds its talents (node id -> name) and its builds as JSON; a build is its ranks per node.
+# No point order is given. Builds marked "sample" are the site's placeholders.
+
+RANKEDBOOST = "https://rankedboost.com/world-of-warcraft/forever/build"
+
+
+def rankedboost_category(name):
+    lower = name.lower()
+    return "PvP" if "pvp" in lower else "Leveo" if "leveling" in lower else "PvE"
+
+
+def rankedboost_class(cls):
+    url = f"{RANKEDBOOST}/{cls.name.lower().replace(' ', '-')}/"
+    m = re.search(r'<script type="application/json" id="wowf-talents-[^"]*">(.*?)</script>', fetch(url), re.S)
+    if not m:
+        raise ValueError("no talent data on the page (the site may have changed)")
+    data = json.loads(m.group(1))
+    names = {str(node["id"]): node["name"] for node in data["nodes"]}
+    builds = []
+    for b in data["builds"]:
+        if b.get("sample"):
+            continue
+        try:
+            ranks = cls.from_ranks({names[node]: rank for node, rank in b["alloc"].items()})
+        except (KeyError, ValueError) as e:
+            warn(f"RankedBoost '{b['name']}': {e}")
+            continue
+        builds.append(make_build(cls, ranks, [], 60, name=b["name"], spec=b["label"].title(),
+                                 source="RankedBoost", url=f"{url}#build={b['slug']}",
+                                 category=rankedboost_category(b["name"])))
+    return builds
+
+
+def rankedboost_builds(classes):
+    builds = []
+    for cls in classes.values():
+        builds += cached(f"rankedboost:{cls.token}", lambda cls=cls: rankedboost_class(cls))
+    return builds
+
+
+# ---------------------------------------------------------------- WoW Forever Talent (wowforevertalent.com)
+# Its own plans only: the "pub-" pages copy guides of other sites (linked as their source), which would count
+# twice, and the "review-" pages are such copies it could not match to the current trees.
+# A plan lists its points level by level, by talent name.
+
+WFT = "https://wowforevertalent.com"
+
+
+def wft_category(path):
+    return "PvP" if "pvp" in path else "PvE" if re.search(r"dungeon|raid|healing|tank", path) else "Leveo"
+
+
+def wft_plan(path, classes):
+    page = html.unescape(fetch(WFT + path))
+    title = re.search(r"<title>(.*?)(?:\s*\|[^<]*)?</title>", page, re.S).group(1).strip()
+    cls = next((c for c in classes.values() if re.search(rf"\b{c.name}\b", title, re.I)), None)
+    if not cls:
+        raise ValueError(f"no class in '{title}'")
+    steps = re.findall(r'<li data-talent-id="[^"]+" data-level="(\d+)">[^:<]*:\s*(.+?) \d+/\d+ \([^)<]*\)</li>', page)
+    if not steps:
+        raise ValueError("no point order on the page (the site may have changed)")
+    ranks, order = cls.from_points([name for _, name in steps])
+    return [make_build(cls, ranks, order, int(steps[-1][0]), name=title, spec=lead_tree(cls, ranks),
+                       source="WoW Forever Talent", url=WFT + path, category=wft_category(path))]
+
+
+def wft_builds(classes):
+    try:
+        paths = sorted(set(re.findall(r'href="(/builds/(?!pub-|review-)[a-z0-9-]+/)"', fetch(WFT + "/builds/"))))
+    except Exception as e:
+        warn(f"WoW Forever Talent index: {e}")
+        paths = [k[len("wft:"):] for k in cache_old if k.startswith("wft:")]
+    builds = []
+    for path in paths:
+        builds += cached(f"wft:{path}", lambda path=path: wft_plan(path, classes))
+    return builds
+
+
 # ---------------------------------------------------------------- your own links
 
 def custom_links(classes):
@@ -916,6 +995,8 @@ def main():
                            ("Warcraft Tavern guides", tavern_guides),
                            ("Method guides", method_guides),
                            ("WoW Forever Builds guides", wfb_guides),
+                           ("RankedBoost builds", rankedboost_builds),
+                           ("WoW Forever Talent plans", wft_builds),
                            ("links.txt", custom_links)):
         print(label)
         found = [b for b in collect(classes) if b]
