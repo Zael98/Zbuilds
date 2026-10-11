@@ -52,18 +52,18 @@ out[#out+1] = "train button: " .. tostring(trainButton and trainButton.shown)
 SlashCmdList.ZBUILDS("trainer")
 out[#out+1] = "after: " .. last(3)
 
--- Train all: a click leaves out Earth Shock 2 (known spell, not on the bars); shift-click buys it too
-IsShiftKeyDown = function() return false end
+-- Train all: shift-click leaves out Earth Shock 2 (known spell, not on the bars); a plain click buys it too
+IsShiftKeyDown = function() return true end
 trainButton.scripts.OnClick(trainButton)
 local boughtNames = {} for _, i in ipairs(BOUGHT) do boughtNames[#boughtNames+1] = sold[i].name .. " " .. sold[i].rank end
-out[#out+1] = "train all: " .. table.concat(boughtNames, ", ") .. " | " .. last(1)
+out[#out+1] = "shift, only the bars: " .. table.concat(boughtNames, ", ") .. " | " .. last(1)
 local descending = true for k = 2, #BOUGHT do if BOUGHT[k] > BOUGHT[k-1] then descending = false end end
 out[#out+1] = "bought from the bottom up: " .. tostring(descending)
 BOUGHT = {}
-IsShiftKeyDown = function() return true end
+IsShiftKeyDown = function() return false end
 trainButton.scripts.OnClick(trainButton)
 boughtNames = {} for _, i in ipairs(BOUGHT) do boughtNames[#boughtNames+1] = sold[i].name .. " " .. sold[i].rank end
-out[#out+1] = "shift: " .. table.concat(boughtNames, ", ")
+out[#out+1] = "plain click, everything: " .. table.concat(boughtNames, ", ")
 gold = 0; BOUGHT = {}
 trainButton.scripts.OnClick(trainButton)
 out[#out+1] = "no gold: bought " .. #BOUGHT .. " | " .. last(1)
@@ -71,7 +71,7 @@ gold = 50000
 -- a client whose service type is another word (WoW Forever): due ranks with their previous rank known count
 local realInfo = GetTrainerServiceInfo
 GetTrainerServiceInfo = function(i) local name, rank = realInfo(i) return name, rank, "header" end
-IsShiftKeyDown = function() return false end
+IsShiftKeyDown = function() return true end
 BOUGHT = {}
 trainButton.scripts.OnClick(trainButton)
 boughtNames = {} for _, i in ipairs(BOUGHT) do boughtNames[#boughtNames+1] = sold[i].name .. " " .. sold[i].rank end

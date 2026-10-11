@@ -13,7 +13,7 @@ Builds are refreshed from the sites every day; a new version is published whenev
 - A banner when you **complete a Legacy challenge**, with the perk your plan wants next.
 
 ### 📜 Trainer
-- **Train all** button on the trainer window: learns what you use in one click; Shift-click learns everything.
+- **Train all** button on the trainer window: learns everything you can in one click; Shift-click learns only what is on your action bars.
 - Spells you know but **do not have on your action bars** are shown in grey as optional, with what the rest costs.
 - **Next 5 levels**: how much gold the coming levels will ask for.
 - **Hunter pets and warlock demons**: their abilities are no longer listed as yours; you get the upgrades your pet or demon can learn instead. Rogue poisons are listed once you have their first rank.

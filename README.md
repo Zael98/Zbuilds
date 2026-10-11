@@ -18,7 +18,7 @@ Addon de **WoW Forever** que reúne builds de talentos de varias webs y te deja 
 - **Legacy:** pestaña con los tres árboles de Legacy (Profesiones, Aventura, Recursos), tus rangos y puntos (disponibles, gastados y conseguidos sobre 81), y planes por objetivo de WoW Forever Builds con su orden de puntos.
 - **Desafíos de Legacy:** los 66 desafíos, hechos y pendientes, con su progreso y ordenados por facilidad. Un clic abre el desafío en la ventana Legacy Challenges del juego.
 - **Recordatorio del instructor:** al subir de nivel, un banner en el centro de la pantalla con los hechizos y rangos nuevos que puedes aprender, el siguiente talento de tu build, el coste total y si te llega el oro, y lo que costarán los próximos 5 niveles. Los hechizos que no tienes en tus barras salen en gris como opcionales. Las mejoras para tu mascota o tu demonio van aparte. Los precios salen de Wowhead y se cambian por los reales al abrir tu instructor.
-- **Entrenar todo:** botón en la ventana del instructor que aprende de un clic lo que usas (Mayús+clic: todo).
+- **Entrenar todo:** botón en la ventana del instructor que aprende de un clic todo lo que puedes (Mayús+clic: solo lo de tus barras).
 - **Banner de Legacy:** al completar un desafío, con el siguiente perk de tu plan.
 - **Opciones:** pestaña para activar o quitar el banner, su sonido y su contenido, la lista en el chat, el botón del minimapa y la duración del banner.
 - **Accesos:** botón en el minimapa (`/zb minimap` lo oculta) y menú de addons del juego.

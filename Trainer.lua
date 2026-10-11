@@ -264,12 +264,12 @@ end
 
 local trainButton
 local function trainTooltip(self)
-    local list, total = learnable(false)
     local all, allTotal = learnable(true)
+    local used, usedTotal = learnable(false)
     GameTooltip:SetOwner(self, "ANCHOR_TOP")
     GameTooltip:AddLine(L.TRAIN_ALL)
-    GameTooltip:AddLine(L.TRAIN_ALL_CLICK:format(#list, money(total)), 1, 1, 1, true)
-    if #all > #list then GameTooltip:AddLine(L.TRAIN_ALL_SHIFT:format(#all, money(allTotal)), 0.7, 0.7, 0.7, true) end
+    GameTooltip:AddLine(L.TRAIN_ALL_CLICK:format(#all, money(allTotal)), 1, 1, 1, true)
+    if #used < #all then GameTooltip:AddLine(L.TRAIN_ALL_SHIFT:format(#used, money(usedTotal)), 0.7, 0.7, 0.7, true) end
     GameTooltip:Show()
 end
 
@@ -284,7 +284,7 @@ local function showTrainButton()
         trainButton:SetText(L.TRAIN_ALL)
         trainButton:SetSize(math.max(110, (trainButton:GetFontString() and trainButton:GetFontString():GetStringWidth() or 80) + 24), 22)
         trainButton:SetPoint("TOPLEFT", trainer, "TOPLEFT", 12, -30) -- free space left of the filters, clear of your gold
-        trainButton:SetScript("OnClick", function() ns.TrainAll(IsShiftKeyDown and IsShiftKeyDown()) end)
+        trainButton:SetScript("OnClick", function() ns.TrainAll(not (IsShiftKeyDown and IsShiftKeyDown())) end)
         trainButton:SetScript("OnEnter", trainTooltip)
         trainButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     end

@@ -28,7 +28,7 @@ CHECKS = {
     "loadouts": (True, [r"entry type now table", r"after rename: window title 'Mi Elemental'"]),
     "timeline": (True, [r"timeline steps shown: 51", r"card points sum 20"]),
     "trainer": (True, [r"before the trainer: .+Searing Totem", r"train button: true",
-                       r"train all: (?!.*Earth Shock 2).+", r"bought from the bottom up: true", r"shift: .*Earth Shock 2",
+                       r"shift, only the bars: (?!.*Earth Shock 2).+", r"bought from the bottom up: true", r"plain click, everything: .*Earth Shock 2",
                        r"no gold: bought 0", r"other service type: (?!.*Earth Shock 2).*Lightning Shield 1", r"banner: .+ \| .*12.* \| .*Convection", r"icons [1-9]\d* \| sounds [1-9]",
                        r"talent only: .+ \| .*12.* \| .*Convection", r"banner off: shown false", r"game banner on screen: ours shown false",
                        r"game banner gone: ours shown true", r"game banner never leaves: ours shown true",
