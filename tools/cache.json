@@ -784,21 +784,21 @@
 "class": "WARLOCK",
 "ranks": [
 "00000000000000000",
-"0305003200220300000",
-"2050315103101351"
+"0305003201221301351",
+"0050055003100000"
 ],
 "points": [
 0,
-20,
-31
+32,
+19
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #5: Destruction",
-"spec": "Destruction",
+"name": "Popular #5: Demonology",
+"spec": "Demonology",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/-03050032002203-2050315103101351-6"
+"url": "https://talentsforever.com/warlock/60/-0305003201221301351-00500550031-6"
 },
 {
 "class": "DRUID",
@@ -905,7 +905,7 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"03550020030201000",
+"24550020000201000",
 "0000000000000000000",
 "0000000000000000"
 ],
@@ -929,7 +929,7 @@
 ],
 [
 1,
-3
+2
 ],
 [
 1,
@@ -949,19 +949,7 @@
 ],
 [
 1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
+3
 ],
 [
 1,
@@ -977,7 +965,15 @@
 ],
 [
 1,
-12
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
 ],
 [
 1,
@@ -985,15 +981,19 @@
 ],
 [
 1,
-10
+12
 ],
 [
 1,
-10
+4
 ],
 [
 1,
-10
+1
+],
+[
+1,
+1
 ],
 [
 1,
@@ -1005,7 +1005,7 @@
 "name": "Affliction Level 30 Talent Build",
 "spec": "Affliction",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-111222223333366bb999d",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-111122222366333bb300d",
 "guide": "https://www.icy-veins.com/wow-forever/affliction-warlock-ranged-dps-pve-guide",
 "category": "PvE"
 }
@@ -7469,6 +7469,7 @@
 "tavern:/forever/guides/warlock/": [],
 "tavern:/forever/guides/warrior/": [],
 "method:/wow-forever/leveling-guides": [],
+"method:/wow-forever/mage-comprehension-and-study-guide-in-wow-forever-how-scrolls-work-and-all-scroll-effects": [],
 "method:/wow-forever/wow-forever-druid-leveling-guide-and-talents": [
 {
 "class": "DRUID",
