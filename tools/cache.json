@@ -683,14 +683,14 @@
 {
 "class": "MAGE",
 "ranks": [
-"050203000100000000",
-"03550010130133051",
-"0054000000000000000"
+"050005000000000000",
+"23552330130113151",
+"0020000000000000000"
 ],
 "points": [
-11,
-31,
-9
+10,
+39,
+2
 ],
 "order": null,
 "level": 60,
@@ -698,7 +698,7 @@
 "name": "Popular #5: Fire",
 "spec": "Fire",
 "source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/0502030001-03550010130133051-0054-6"
+"url": "https://talentsforever.com/mage/60/050005-23552330130113151-002-6"
 },
 {
 "class": "WARLOCK",
@@ -763,26 +763,6 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"00100000000000000",
-"0005003221221301351",
-"0550005103000000"
-],
-"points": [
-1,
-31,
-19
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Demonology",
-"spec": "Demonology",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/001-0005003221221301351-0550005103-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
 "00000000000000000",
 "0305003201221301351",
 "0050055003100000"
@@ -795,10 +775,30 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #5: Demonology",
+"name": "Popular #4: Demonology",
 "spec": "Demonology",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warlock/60/-0305003201221301351-00500550031-6"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"00100000000000000",
+"0005003221221301351",
+"0550005103000000"
+],
+"points": [
+1,
+31,
+19
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #5: Demonology",
+"spec": "Demonology",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warlock/60/001-0005003221221301351-0550005103-6"
 },
 {
 "class": "DRUID",
