@@ -23,26 +23,6 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30305213132515201",
-"05050100000000000",
-"000000000000000000"
-],
-"points": [
-37,
-11,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Arms",
-"spec": "Arms",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
 "30305013002000000",
 "05253005151010501",
 "000000000000000000"
@@ -55,10 +35,30 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Popular #3: Fury",
+"name": "Popular #2: Fury",
 "spec": "Fury",
 "source": "Talents Forever",
 "url": "https://talentsforever.com/warrior/60/30305013002-05253005151010501--6"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"30305213132515201",
+"05050100000000000",
+"000000000000000000"
+],
+"points": [
+37,
+11,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Popular #3: Arms",
+"spec": "Arms",
+"source": "Talents Forever",
+"url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
 },
 {
 "class": "WARRIOR",
