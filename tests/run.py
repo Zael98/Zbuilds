@@ -11,12 +11,13 @@ ROOT = Path(__file__).resolve().parent.parent
 TESTS = Path(__file__).resolve().parent
 LOCALES = ["enUS", "esES", "esMX", "deDE", "frFR", "ptBR", "itIT", "ruRU", "koKR", "zhCN", "zhTW"]
 
-# what each scenario must print; the ones marked all run in every language
+# what each scenario must print; the ones marked all run in every language. They run on a fixed copy of the data
+# (fixtures/data.lua), so they test the addon whatever the sites publish; DATA_CHECKS run on the real Data.lua.
 CHECKS = {
     "talents": (False, [r"name mismatches: $", r"apply2: \d+ nil", r"next after full: nil", r"derived order len 51"]),
     "import": (False, [r"decoded identical: (\d+)/\1$", r"import listed 1, after delete 0"]),
     "window": (False, [r"edges: \d+", r"dialog error: \S", r"after import: Mi elemental", r"imports 0"]),
-    "launchers": (False, [r"Talent tree: 50/50 talents found", r"compartment fn: function", r"beta filter: rows \d+ -> \d+"]),
+    "launchers": (False, [r"Talent tree: (\d+)/\1 talents found, 0 outdated", r"compartment fn: function", r"beta filter: rows \d+ -> \d+"]),
     "legacy_dump": (False, [r"legacy found by 'type 3'", r"/zbuildslegacydump prints 6 lines"]),
     "legacy_tab": (True, [r"by position: 21/21", r"hide done -> rows 65", r"A\) Forever: legacy window 62006, links in chat 0",
                           r"back to talents: talents shown=true legacy shown=false",
@@ -40,6 +41,10 @@ CHECKS = {
                        r"by name and rank: [1-9]\d* costs", r"empty trainer: new messages 0 \| train button enabled false"]),
 }
 
+# whether the sites' data fits the game, from a real dump: only a warning, since the dump is from the build it
+# was taken on and a game patch makes it stale (refreshing it needs someone in game; see scenarios/game.lua)
+GAME = [r"talents: (\d+)/\1 found, 0 outdated", r"legacy perks: (\d+)/\1 found"]
+
 
 def read(path):
     return Path(path).read_text(encoding="utf-8")
@@ -50,11 +55,14 @@ def addon_files():
     return [line.strip() for line in toc if line.strip().endswith(".lua")]
 
 
-def runtime(locale):
+# the scenarios that check the data itself: every build's link decodes to the same build
+DATA_CHECKS = {"import"}
+
+
+def runtime(locale, data=TESTS / "fixtures" / "data.lua"):
     L = lua51.LuaRuntime(unpack_returned_tuples=True)
     L.globals().LOCALE = locale
-    L.execute(read(TESTS / "fixtures" / "probe.lua"))
-    L.execute(read(ROOT / "Data.lua"))
+    L.execute(read(data))
     L.execute(read(TESTS / "stubs.lua"))
     L.execute(read(TESTS / "fixtures" / "legacy_dump.lua"))
     L.execute("print = function() end")  # the chat; scenarios that read it replace it
@@ -97,7 +105,7 @@ def main():
         for locale in LOCALES if every else ["enUS"]:
             runs += 1
             try:
-                output = str(runtime(locale).execute(code))
+                output = str(runtime(locale, ROOT / "Data.lua" if name in DATA_CHECKS else TESTS / "fixtures" / "data.lua").execute(code))
             except Exception as e:  # a Lua error in the addon or the scenario
                 failures.append(f"{name} [{locale}]: {str(e).splitlines()[0]}")
                 continue
@@ -106,6 +114,10 @@ def main():
                     failures.append(f"{name} [{locale}]: missing /{pattern}/")
             if "-v" in sys.argv and locale == "enUS":
                 print(f"--- {name}\n{output}")
+    output = str(runtime("enUS", ROOT / "Data.lua").execute(read(TESTS / "scenarios" / "game.lua")))
+    if not all(re.search(pattern, output, re.M) for pattern in GAME):
+        print("WARN the data does not fit the game dump (stale after a patch? see tests/scenarios/game.lua)")
+        print("    " + output.replace("\n", "\n    "))
     for failure in failures:
         print("FAIL", failure)
     print(f"{runs} scenario runs, {len(failures)} failures")

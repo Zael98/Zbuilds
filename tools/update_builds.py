@@ -896,6 +896,26 @@ def custom_links(classes):
 CACHE = HERE / "cache.json"
 cache_old = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
 cache_new = {}
+changed_trees = set()  # classes whose talent tree is not the one of the last run (a game patch)
+
+
+def tree_shapes(classes):
+    """Each class tree as names, places and ranks: what cached builds, spells and link decoders depend on."""
+    return {c.token: [[[tal["name"], tal["row"], tal["col"], tal["max"]] for tal in t["talents"]] for t in c.trees]
+            for c in classes.values()}
+
+
+def refit(item):
+    """A cached item, without what belongs to a class whose tree changed since: those point at talents by index,
+    so on the new tree they would name other talents."""
+    if isinstance(item, dict) and "ranks" in item:  # a build
+        return None if item["class"] in changed_trees else item
+    if isinstance(item, list) and item and item[0] in changed_trees:  # a Method spell: [class, tree, index, spell]
+        return None
+    if isinstance(item, dict) and all(isinstance(v, dict) for v in item.values()):  # link decoders, per site
+        return {site: {token: m for token, m in per_class.items() if token not in changed_trees}
+                for site, per_class in item.items()}
+    return item
 
 
 PROBLEMS_FILE = HERE / "problems.txt"
@@ -912,8 +932,11 @@ def cached(key, produce):
     except Exception as e:
         warn(f"{key}: {e}")
         if key in cache_old:
-            warn(f"{key}: using the copy from the last successful run")
-            cache_new[key] = cache_old[key]
+            kept = [x for x in map(refit, cache_old[key]) if x is not None]
+            warn(f"{key}: using the copy from the last successful run"
+                 + (f" ({len(cache_old[key]) - len(kept)} left out: made for an older talent tree)"
+                    if len(kept) < len(cache_old[key]) else ""))
+            cache_new[key] = kept
             problems.append(f"{key}: {e} (kept the copy from the last good run)")
         else:
             problems.append(f"{key}: {e}")
@@ -989,6 +1012,11 @@ def lua(value, indent=""):
 def main():
     print("Talent trees: talentsforever.com")
     classes = load_trees()
+    cache_new["trees"] = tree_shapes(classes)
+    changed_trees.update(token for token, shape in cache_new["trees"].items()
+                         if cache_old.get("trees", {}).get(token) != shape)
+    if changed_trees:
+        print("  new talent trees since the last run: " + ", ".join(sorted(changed_trees)))
     builds = []
     for label, collect in (("Talents Forever popular builds", lambda c: cached("popular", lambda: talentsforever_popular(c))),
                            ("Icy Veins guides", icy_veins_guides),

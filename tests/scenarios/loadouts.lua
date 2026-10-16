@@ -1,12 +1,12 @@
 local out = {}
 local strip = function(x) return (tostring(x):gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")) end
 PlayerSpellsFrame = STUB(); PlayerSpellsFrame.GetWidth = function() return 1361 end; PlayerSpellsFrame.GetHeight = function() return 794 end
-local nodes = ForeverBuildsProbeDB.trees[1].nodes
+local nodes = {} for _, n in pairs(TREE_NODES) do nodes[#nodes+1] = n end table.sort(nodes, function(a, b) return a.ID < b.ID end)
 local buttons, MARKED = {}, {}
 for k, n in ipairs(nodes) do
   local b = STUB(); b.slot = k
-  b.GetNodeID = function(self) return nodes[self.slot].id end
-  b.GetFrameLevel = function(self) MARKED[#MARKED+1] = nodes[self.slot].entries[1].name return 1 end
+  b.GetNodeID = function(self) return nodes[self.slot].ID end
+  b.GetFrameLevel = function(self) MARKED[#MARKED+1] = nodes[self.slot].name return 1 end
   buttons[#buttons+1] = b
 end
 local holder = STUB(); holder.GetChildren = function() return unpack(buttons) end

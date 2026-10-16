@@ -2,6 +2,11 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## Game build 1.60.1.70374 — new talent trees
+
+- The talent trees of every class changed with this beta build: builds come from the sites' new trees.
+- Builds saved from the old trees are no longer offered (their points would land on other talents). Fewer builds for now; they come back as each site updates its guides.
+
 ## v0.10.0 — Two more build sites
 
 - **RankedBoost**: its builds for every class (DPS, healing, tanking, PvP and leveling).

@@ -12,6 +12,16 @@ for _, tree in ipairs(real.trees) do
     table.insert(treeNodes[tree.id], n.id)
   end
 end
+-- each perk where Data.lua places it (the game's grid: 750 apart from 2400, 1050), so the tab is tested whatever
+-- the patch; the "game" scenario checks the sites' layout against the real dump
+local perkAt = {}
+for _, tree in ipairs(ns.LegacyData().trees) do for _, perk in ipairs(tree.perks) do perkAt[perk.name] = perk end end
+for _, tree in ipairs(real.trees) do
+  for _, n in ipairs(tree.nodes) do
+    local perk = perkAt[n.entries[1].name]
+    if perk then legacyNodes[n.id].posX, legacyNodes[n.id].posY = 2400 + (perk.col - 1) * 750, 1050 + (perk.row - 1) * 750 end
+  end
+end
 local cNode, cTree, cEntry, cDef, cCur = C_Traits.GetNodeInfo, C_Traits.GetTreeNodes, C_Traits.GetEntryInfo, C_Traits.GetDefinitionInfo, C_Traits.GetTreeCurrencyInfo
 C_Traits.GetConfigIDByTreeID = function(tree) if treeNodes[tree] then return LCFG end end
 C_Traits.GetNodeInfo = function(cfg, id) if cfg == LCFG then return legacyNodes[id] end return cNode(cfg, id) end

@@ -1,11 +1,17 @@
--- WoW API stubs for the scenarios: talents (from fixtures/probe.lua), then frames.
+-- WoW API stubs for the scenarios: talents, then frames. The game's talent tree is laid out from Data.lua's
+-- shaman tree (the game's grid: nodes 600 apart, trees far apart), so the scenarios test the addon, not
+-- whether the sites' data still fits the game: the "game" scenario checks that against a real dump.
 floor = math.floor; tinsert = table.insert; SlashCmdList = {}; StaticPopupDialogs = {}; GetLocale = function() return LOCALE end; CreateColor = function(...) return {...} end; strtrim = function(x) return (x:gsub('^%s+', ''):gsub('%s+$', '')) end
 FREE = 11
 local nodes = {}
-for _, n in ipairs(ForeverBuildsProbeDB.trees[1].nodes) do
-  nodes[n.id] = { ID = n.id, posX = n.x, posY = n.y, maxRanks = n.maxRanks, currentRank = 0,
-                  entryIDs = { n.entries[1].id }, isVisible = true, visibleEdges = n.edges, spell = n.entries[1].spellID, name = n.entries[1].name }
+for t, tree in ipairs(ZbuildsData.classes.SHAMAN.trees) do
+  for i, tal in ipairs(tree.talents) do
+    local id = t * 1000 + i
+    nodes[id] = { ID = id, posX = (t - 1) * 3600 + tal.col * 600, posY = tal.row * 600, maxRanks = tal.max, currentRank = 0,
+                  entryIDs = { id }, isVisible = true, visibleEdges = {}, spell = tal.spell or id, name = tal.name }
+  end
 end
+TREE_NODES = nodes
 local entries = {}
 for _, n in pairs(nodes) do entries[n.entryIDs[1]] = n end
 function UnitClass() return "Shaman", "SHAMAN" end
