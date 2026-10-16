@@ -114,7 +114,9 @@ def main():
                     failures.append(f"{name} [{locale}]: missing /{pattern}/")
             if "-v" in sys.argv and locale == "enUS":
                 print(f"--- {name}\n{output}")
-    output = str(runtime("enUS", ROOT / "Data.lua").execute(read(TESTS / "scenarios" / "game.lua")))
+    game = runtime("enUS", ROOT / "Data.lua")
+    game.execute(read(TESTS / "fixtures" / "game_dump.lua"))
+    output = str(game.execute(read(TESTS / "scenarios" / "game.lua")))
     if not all(re.search(pattern, output, re.M) for pattern in GAME):
         print("WARN the data does not fit the game dump (stale after a patch? see tests/scenarios/game.lua)")
         print("    " + output.replace("\n", "\n    "))

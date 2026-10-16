@@ -48,7 +48,7 @@ Nombre | Tipo | enlace
 
 ## Pruebas
 
-`tests/run.py` carga el addon en Lua 5.1 con el API de WoW simulado y comprueba talentos, importación, ventana, loadouts, Legacy, desafíos, instructor, banners y opciones en los 11 idiomas. GitHub las ejecuta antes de publicar cualquier versión; si fallan, no se publica. Las pruebas usan una copia fija de los datos (`tests/fixtures/data.lua`); sobre los datos reales solo se comprueban los enlaces de cada build y, como aviso que no bloquea, si encajan con un volcado real del juego (`tests/fixtures/legacy_dump.lua`). Tras un parche ese volcado queda viejo: `/zb legacy`, `/reload` y copiar `ZbuildsDB.legacyDump` de `SavedVariables/Zbuilds.lua` a la fixture.
+`tests/run.py` carga el addon en Lua 5.1 con el API de WoW simulado y comprueba talentos, importación, ventana, loadouts, Legacy, desafíos, instructor, banners y opciones en los 11 idiomas. GitHub las ejecuta antes de publicar cualquier versión; si fallan, no se publica. Las pruebas usan una copia fija de los datos (`tests/fixtures/data.lua`); sobre los datos reales solo se comprueban los enlaces de cada build y, como aviso que no bloquea, si encajan con un volcado real del juego (`tests/fixtures/game_dump.lua`). Tras un parche ese volcado queda viejo: `/zb legacy` con cualquier personaje, `/reload` y copiar `ZbuildsDB.legacyDump` de `SavedVariables/Zbuilds.lua` a la fixture como `GAME_DUMP`.
 
 ```
 pip install "lupa>=2"

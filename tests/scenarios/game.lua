@@ -1,8 +1,15 @@
 -- Does the sites' data still fit the game? The talent tree of the dumped character and the Legacy trees,
--- read the way the addon reads them, from a real /zb legacy dump (tests/fixtures/legacy_dump.lua).
+-- read the way the addon reads them, from a real /zb legacy dump (tests/fixtures/game_dump.lua).
 -- After a game patch the dump is from the old build: run /zb legacy and /reload in game, then copy
--- ZbuildsDB.legacyDump from WTF/Account/<account>/SavedVariables/Zbuilds.lua into the fixture.
-local dump, out = REAL_DUMP_DB.legacyDump, {}
+-- ZbuildsDB.legacyDump from WTF/Account/<account>/SavedVariables/Zbuilds.lua into the fixture as GAME_DUMP.
+-- Talents are matched by spell; Legacy perks by name, in English through the English dump of legacy_dump.lua.
+local dump, out = GAME_DUMP, {}
+local english = {}
+for _, c in ipairs(REAL_DUMP_DB.legacyDump.configs) do
+  for _, tree in ipairs(c.trees) do for _, n in ipairs(tree.nodes) do
+    if n.entries[1] and n.entries[1].spellID then english[n.entries[1].spellID] = n.entries[1].name end
+  end end
+end
 local configs = {}
 for _, c in ipairs(dump.configs) do configs[c.id] = c end
 local function treeNodes(tree)
@@ -44,7 +51,7 @@ if tree then
   for t, data in ipairs(cd.trees) do for i in ipairs(data.talents) do
     total = total + 1
     local id = tree.node[t][i]
-    if id and nodesOf[talents.id][id].name == data.talents[i].name then found = found + 1 end
+    if id and nodesOf[talents.id][id].spell == data.talents[i].spell then found = found + 1 end
   end end
   out[#out+1] = ("%s talents: %d/%d found, %d outdated: %s"):format(dump.class, found, total, #tree.mismatches,
     table.concat(tree.mismatches, ", "))
@@ -56,7 +63,8 @@ local found, total, wrong = 0, 0, {}
 for t, data in ipairs(ns.LegacyData().trees) do for i, perk in ipairs(data.perks) do
   total = total + 1
   local id = legacy.node[t][i]
-  local name = id and nodesOf[legacy.configID][id].name
+  local node = id and nodesOf[legacy.configID][id]
+  local name = node and (english[node.spell] or node.name)
   if name == perk.name then found = found + 1 else wrong[#wrong+1] = perk.name end
 end end
 out[#out+1] = ("legacy perks: %d/%d found, not where the data puts them: %s"):format(found, total, table.concat(wrong, ", "))
