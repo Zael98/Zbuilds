@@ -1,911 +1,2880 @@
 {
-"popular": [
-{
-"class": "WARRIOR",
-"ranks": [
-"05020000000000000",
-"05000000000000000",
-"250533120321021351"
-],
-"points": [
-7,
-5,
-39
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/0502-05-250533120321021351-6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"30305013002000000",
-"05253005151010501",
-"000000000000000000"
-],
-"points": [
-17,
-34,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Fury",
-"spec": "Fury",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/30305013002-05253005151010501--6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"30305213132515201",
-"05050100000000000",
-"000000000000000000"
-],
-"points": [
-37,
-11,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Arms",
-"spec": "Arms",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/30305213132515201-050501--6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"00000000000000000",
-"05250030050000000",
-"250033120301021251"
-],
-"points": [
-0,
-20,
-31
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/-0525003005-250033120301021251-6"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"05000000000000000",
-"05000000000000000",
-"250530120321021351"
-],
-"points": [
-5,
-5,
-36
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warrior/60/05-05-250530120321021351-6"
-},
-{
-"class": "PALADIN",
-"ranks": [
-"50003000000000000",
-"5030000000000000",
-"05225131201331321"
-],
-"points": [
-8,
-8,
-35
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Retribution",
-"spec": "Retribution",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/paladin/60/50003-503-05225131201331321-6"
-},
-{
-"class": "PALADIN",
-"ranks": [
-"00000000000000000",
-"4530513321301551",
-"50200000000000000"
-],
-"points": [
-0,
-42,
-7
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Protection",
-"spec": "Protection",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/paladin/60/-4530513321301551-502-6"
-},
-{
-"class": "PALADIN",
-"ranks": [
-"55003000000000000",
-"0000000000000000",
-"05225331001330321"
-],
-"points": [
-13,
-0,
-34
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Retribution",
-"spec": "Retribution",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/paladin/60/55003--05225331001330321-6"
-},
-{
-"class": "PALADIN",
-"ranks": [
-"05320213225131051",
-"5032000000000000",
-"05000000000000000"
-],
-"points": [
-36,
-10,
-5
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Holy",
-"spec": "Holy",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/paladin/60/05320213225131051-5032-05-6"
-},
-{
-"class": "PALADIN",
-"ranks": [
-"51003000000000000",
-"5030000000000000",
-"05225331001330321"
-],
-"points": [
-9,
-8,
-34
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Retribution",
-"spec": "Retribution",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/paladin/60/51003-503-05225331001330321-6"
-},
-{
-"class": "HUNTER",
-"ranks": [
-"5000000000000000",
-"0050050010000000",
-"500230230250222151"
-],
-"points": [
-5,
-11,
-35
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Survival",
-"spec": "Survival",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/hunter/60/5-005005001-500230230250222151-6"
-},
-{
-"class": "HUNTER",
-"ranks": [
-"5000000000000000",
-"3053552011523051",
-"500000000000000000"
-],
-"points": [
-5,
-41,
-5
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Marksmanship",
-"spec": "Marksmanship",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/hunter/60/5-3053552011523051-5-6"
-},
-{
-"class": "HUNTER",
-"ranks": [
-"5000000000000000",
-"0050050010000000",
-"503200230250222151"
-],
-"points": [
-5,
-11,
-35
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Survival",
-"spec": "Survival",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/hunter/60/5-005005001-503200230250222151-6"
-},
-{
-"class": "HUNTER",
-"ranks": [
-"5120021505101251",
-"0050352000500000",
-"000000000000000000"
-],
-"points": [
-31,
-20,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Beast Mastery",
-"spec": "Beast Mastery",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/hunter/60/5120021505101251-00503520005--6"
-},
-{
-"class": "HUNTER",
-"ranks": [
-"5000000000000000",
-"0050450010000000",
-"500230230050220151"
-],
-"points": [
-5,
-15,
-31
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Survival",
-"spec": "Survival",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/hunter/60/5-005045001-500230230050220151-6"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00530310501000000",
-"32300320200515231",
-"0000000000000000000"
-],
-"points": [
-18,
-32,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Combat",
-"spec": "Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/rogue/60/00530310501-32300320200515231--6"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00531310551521051",
-"30230300000000000",
-"0020000000000000000"
-],
-"points": [
-38,
-11,
-2
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Assassination",
-"spec": "Assassination",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/rogue/60/00531310551521051-302303-002-6"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"30502010401000000",
-"32030200200000000",
-"3320023200212210000"
-],
-"points": [
-16,
-12,
-23
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Subtlety",
-"spec": "Subtlety",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/rogue/60/30502010401-320302002-332002320021221-6"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00530310501000000",
-"32003320201515231",
-"0000000000000000000"
-],
-"points": [
-18,
-33,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Combat",
-"spec": "Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/rogue/60/00530310501-32003320201515231--6"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00530310501000000",
-"32030320201515231",
-"0000000000000000000"
-],
-"points": [
-18,
-33,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Combat",
-"spec": "Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/rogue/60/00530310501-32030320201515231--6"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"025003001300000000",
-"30000000000000000",
-"500322501201302251"
-],
-"points": [
-14,
-3,
-34
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Shadow",
-"spec": "Shadow",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/priest/60/0250030013-3-500322501201302251-6"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"525330031305001001",
-"30515100202000000",
-"000000000000000000"
-],
-"points": [
-32,
-19,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Discipline",
-"spec": "Discipline",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/priest/60/525330031305001001-30515100202--6"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"005203031305101531",
-"02505003030000000",
-"000000000000000000"
-],
-"points": [
-33,
-18,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Discipline",
-"spec": "Discipline",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/priest/60/005203031305101531-0250500303--6"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"005303001303100000",
-"03505103030021531",
-"000000000000000000"
-],
-"points": [
-19,
-32,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Holy",
-"spec": "Holy",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/priest/60/0053030013031-03505103030021531--6"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"505330031305021001",
-"31505100202000000",
-"000000000000000000"
-],
-"points": [
-32,
-19,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Discipline",
-"spec": "Discipline",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/priest/60/505330031305021001-31505100202--6"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0505330020000000",
-"052032031005112251",
-"0000000000000000"
-],
-"points": [
-18,
-33,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Enhancement",
-"spec": "Enhancement",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/shaman/60/050533002-052032031005112251--6"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0000000000000000",
-"055000000000000000",
-"5030503315513151"
-],
-"points": [
-0,
-10,
-41
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Restoration",
-"spec": "Restoration",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/shaman/60/-055-5030503315513151-6"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0500030000000000",
-"052032031005112251",
-"0500500000000000"
-],
-"points": [
-8,
-33,
-10
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Enhancement",
-"spec": "Enhancement",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/shaman/60/050003-052032031005112251-05005-6"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"5505301303123151",
-"055002001000000000",
-"0000000000000000"
-],
-"points": [
-38,
-13,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Elemental",
-"spec": "Elemental",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/shaman/60/5505301303123151-055002001--6"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0500331320100000",
-"052032031005112251",
-"0000000000000000"
-],
-"points": [
-18,
-33,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Enhancement",
-"spec": "Enhancement",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/shaman/60/05003313201-052032031005112251--6"
-},
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"00551030130133040",
-"0055000331000300200"
-],
-"points": [
-0,
-29,
-22
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Fire",
-"spec": "Fire",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/-0055103013013304-00550003310003002-6"
-},
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"0555323331321331251"
-],
-"points": [
-0,
-0,
-51
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Frost",
-"spec": "Frost",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/--0555323331321331251-6"
-},
-{
-"class": "MAGE",
-"ranks": [
-"255225223122311531",
-"13000000000000000",
-"0000000000000000000"
-],
-"points": [
-47,
-4,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Arcane",
-"spec": "Arcane",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/255225223122311531-13--6"
-},
-{
-"class": "MAGE",
-"ranks": [
-"050205200102301000",
-"00552330130103110",
-"0020000000000000000"
-],
-"points": [
-21,
-28,
-2
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Fire",
-"spec": "Fire",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/050205200102301-0055233013010311-002-6"
-},
-{
-"class": "MAGE",
-"ranks": [
-"050005000000000000",
-"23552330130113151",
-"0020000000000000000"
-],
-"points": [
-10,
-39,
-2
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Fire",
-"spec": "Fire",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/mage/60/050005-23552330130113151-002-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
-"05550320035201351",
-"0050203001000000000",
-"0000000000000000"
-],
-"points": [
-40,
-11,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Affliction",
-"spec": "Affliction",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/05550320035201351-0050203001--6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
-"05000000000000000",
-"0050203001000000000",
-"2050355103101351"
-],
-"points": [
-5,
-11,
-35
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Destruction",
-"spec": "Destruction",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/05-0050203001-2050355103101351-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
-"00500000000000000",
-"0050233201211031351",
-"2055000100000000"
-],
-"points": [
-5,
-33,
-13
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Demonology",
-"spec": "Demonology",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/005-0050233201211031351-20550001-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
-"00000000000000000",
-"0305003201221301351",
-"0050055003100000"
-],
-"points": [
-0,
-32,
-19
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Demonology",
-"spec": "Demonology",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/-0305003201221301351-00500550031-6"
-},
-{
-"class": "WARLOCK",
-"ranks": [
-"00100000000000000",
-"0005003221221301351",
-"0550005103000000"
-],
-"points": [
+"trees": {
+"WARRIOR": [
+[
+[
+"Improved Heroic Strike",
 1,
-31,
-19
+1,
+3
 ],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Demonology",
-"spec": "Demonology",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/warlock/60/001-0005003221221301351-0550005103-6"
-},
-{
-"class": "DRUID",
-"ranks": [
-"0530200100000000",
-"05000000000000000000",
-"5050035103113251"
-],
-"points": [
-11,
-5,
-35
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #1: Restoration",
-"spec": "Restoration",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/05302001-05-5050035103113251-6"
-},
-{
-"class": "DRUID",
-"ranks": [
-"0500220000000000",
-"55230202120132012551",
-"0000000000000000"
-],
-"points": [
-9,
-42,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #2: Feral Combat",
-"spec": "Feral Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55230202120132012551--6"
-},
-{
-"class": "DRUID",
-"ranks": [
-"5032220115501351",
-"00000000000000000000",
-"5052030000000000"
-],
-"points": [
-36,
-0,
-15
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #3: Balance",
-"spec": "Balance",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/5032220115501351--505203-6"
-},
-{
-"class": "DRUID",
-"ranks": [
-"0500220000000000",
-"55200032120032012051",
-"0500000000000000"
-],
-"points": [
-9,
-34,
+[
+"Deflection",
+1,
+2,
 5
 ],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #4: Feral Combat",
-"spec": "Feral Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55200032120032012051-05-6"
+[
+"Improved Rend",
+1,
+3,
+3
+],
+[
+"Improved Charge",
+2,
+1,
+2
+],
+[
+"Improved Tactical Mastery",
+2,
+2,
+5
+],
+[
+"Improved Overpower",
+2,
+4,
+2
+],
+[
+"Anger Management",
+3,
+2,
+1
+],
+[
+"Deep Wounds",
+3,
+3,
+3
+],
+[
+"Spearing Strike",
+4,
+1,
+1
+],
+[
+"Two-Handed Weapon Specialization",
+4,
+2,
+3
+],
+[
+"Impale",
+4,
+3,
+2
+],
+[
+"Bloodthrill",
+5,
+1,
+5
+],
+[
+"Sweeping Strikes",
+5,
+2,
+1
+],
+[
+"Weaponmaster",
+5,
+3,
+5
+],
+[
+"Improved Slam",
+6,
+1,
+2
+],
+[
+"Improved Hamstring",
+6,
+3,
+3
+],
+[
+"Mortal Strike",
+7,
+2,
+1
+]
+],
+[
+[
+"Booming Voice",
+1,
+2,
+5
+],
+[
+"Cruelty",
+1,
+3,
+5
+],
+[
+"Lingering Rage",
+2,
+2,
+5
+],
+[
+"Unbridled Wrath",
+2,
+3,
+5
+],
+[
+"Furious Precision",
+3,
+1,
+3
+],
+[
+"Piercing Howl",
+3,
+2,
+1
+],
+[
+"Blood Craze",
+3,
+3,
+3
+],
+[
+"Dual Wield Specialization",
+4,
+1,
+5
+],
+[
+"Raging Blows",
+4,
+2,
+1
+],
+[
+"Enrage",
+4,
+3,
+5
+],
+[
+"Improved Execute",
+4,
+4,
+2
+],
+[
+"Improved Berserker Rage",
+5,
+1,
+2
+],
+[
+"Death Wish",
+5,
+2,
+1
+],
+[
+"Improved Intercept",
+5,
+4,
+2
+],
+[
+"Flurry",
+6,
+2,
+5
+],
+[
+"Gore Drinker",
+6,
+3,
+2
+],
+[
+"Bloodthirst",
+7,
+2,
+1
+]
+],
+[
+[
+"Improved Bloodrage",
+1,
+1,
+2
+],
+[
+"Shield Specialization",
+1,
+2,
+5
+],
+[
+"Iron Will",
+1,
+3,
+5
+],
+[
+"Anticipation",
+2,
+1,
+5
+],
+[
+"Improved Revenge",
+2,
+3,
+3
+],
+[
+"Improved Thunder Clap",
+2,
+4,
+3
+],
+[
+"Last Stand",
+3,
+1,
+1
+],
+[
+"Master of Defense",
+3,
+2,
+2
+],
+[
+"Improved Disarm",
+3,
+3,
+3
+],
+[
+"Defiance",
+3,
+4,
+3
+],
+[
+"Improved Sunder Armor",
+4,
+1,
+3
+],
+[
+"Vanguard",
+4,
+2,
+1
+],
+[
+"Improved Shield Bash",
+4,
+3,
+2
+],
+[
+"Improved Shield Wall",
+5,
+1,
+2
+],
+[
+"Concussion Blow",
+5,
+2,
+1
+],
+[
+"Focused Rage",
+5,
+3,
+3
+],
+[
+"Bastion",
+6,
+3,
+5
+],
+[
+"Shield Slam",
+7,
+2,
+1
+]
+]
+],
+"PALADIN": [
+[
+[
+"Divine Strength",
+1,
+2,
+5
+],
+[
+"Divine Intellect",
+1,
+3,
+5
+],
+[
+"Healing Light",
+2,
+1,
+3
+],
+[
+"Spiritual Focus",
+2,
+2,
+2
+],
+[
+"Improved Seals",
+2,
+3,
+3
+],
+[
+"Unyielding Faith",
+2,
+4,
+2
+],
+[
+"Voice of Truth",
+3,
+1,
+1
+],
+[
+"Reverence",
+3,
+2,
+3
+],
+[
+"Purifying Power",
+3,
+3,
+2
+],
+[
+"Infusion of Light",
+4,
+1,
+2
+],
+[
+"Illumination",
+4,
+2,
+5
+],
+[
+"Divine Favor",
+4,
+3,
+1
+],
+[
+"Divine Precision",
+5,
+1,
+3
+],
+[
+"Holy Shock",
+5,
+2,
+1
+],
+[
+"Consecrated Ground",
+5,
+3,
+2
+],
+[
+"Holy Power",
+6,
+3,
+5
+],
+[
+"Light's Vigil",
+7,
+2,
+1
+]
+],
+[
+[
+"Toughness",
+1,
+2,
+5
+],
+[
+"Redoubt",
+1,
+3,
+5
+],
+[
+"Precision",
+2,
+1,
+3
+],
+[
+"Guardian's Favor",
+2,
+2,
+2
+],
+[
+"Anticipation",
+2,
+4,
+5
+],
+[
+"Improved Seal of Fury",
+3,
+1,
+1
+],
+[
+"Improved Righteous Fury",
+3,
+2,
+3
+],
+[
+"Shield Specialization",
+3,
+3,
+3
+],
+[
+"Sacred Duty",
+3,
+4,
+2
+],
+[
+"Swift Judgement",
+4,
+1,
+1
+],
+[
+"One-Handed Weapon Specialization",
+4,
+2,
+3
+],
+[
+"Improved Hammer of Justice",
+4,
+3,
+3
+],
+[
+"Templar's Bulwark",
+5,
+2,
+1
+],
+[
+"Reckoning",
+5,
+3,
+5
+],
+[
+"Iron Creed",
+6,
+3,
+5
+],
+[
+"Holy Shield",
+7,
+2,
+1
+]
+],
+[
+[
+"Deflection",
+1,
+2,
+5
+],
+[
+"Benediction",
+1,
+3,
+5
+],
+[
+"Improved Judgement",
+2,
+1,
+2
+],
+[
+"Holy Conduit",
+2,
+2,
+2
+],
+[
+"Conviction",
+2,
+3,
+5
+],
+[
+"Vindication",
+3,
+1,
+3
+],
+[
+"Sanctified Judgement",
+3,
+2,
+3
+],
+[
+"Seal of Command",
+3,
+3,
+1
+],
+[
+"Pursuit of Justice",
+3,
+4,
+2
+],
+[
+"Eye for an Eye",
+4,
+1,
+2
+],
+[
+"Sacred Arbiter",
+4,
+3,
+1
+],
+[
+"Two-Handed Weapon Specialization",
+5,
+1,
+3
+],
+[
+"Vengeance",
+5,
+2,
+3
+],
+[
+"Repentance",
+5,
+3,
+1
+],
+[
+"Champion of the Light",
+6,
+2,
+3
+],
+[
+"Instrument of Law",
+6,
+3,
+2
+],
+[
+"Twist of Light",
+7,
+2,
+1
+]
+]
+],
+"HUNTER": [
+[
+[
+"Deadly Aspects",
+1,
+2,
+5
+],
+[
+"Endurance Training",
+1,
+3,
+5
+],
+[
+"Focused Fire",
+2,
+1,
+2
+],
+[
+"Improved Aspect of the Monkey",
+2,
+2,
+3
+],
+[
+"Pathfinding",
+2,
+3,
+2
+],
+[
+"Improved Revive Pet",
+2,
+4,
+2
+],
+[
+"Bestial Swiftness",
+3,
+2,
+1
+],
+[
+"Unleashed Fury",
+3,
+3,
+5
+],
+[
+"Improved Mend Pet",
+4,
+1,
+2
+],
+[
+"Ferocity",
+4,
+3,
+5
+],
+[
+"Summon Hawk",
+4,
+4,
+1
+],
+[
+"Spirit Bond",
+5,
+1,
+2
+],
+[
+"Intimidation",
+5,
+2,
+1
+],
+[
+"Bestial Discipline",
+5,
+4,
+2
+],
+[
+"Frenzy",
+6,
+3,
+5
+],
+[
+"Bestial Wrath",
+7,
+2,
+1
+]
+],
+[
+[
+"Hawk Eye",
+1,
+1,
+3
+],
+[
+"Improved Concussive Shot",
+1,
+2,
+5
+],
+[
+"Lethal Attacks",
+1,
+3,
+5
+],
+[
+"Improved Stings",
+2,
+1,
+3
+],
+[
+"Efficiency",
+2,
+2,
+5
+],
+[
+"Careful Aim",
+2,
+3,
+5
+],
+[
+"Rapid Killing",
+3,
+1,
+2
+],
+[
+"Improved Arcane Shot",
+3,
+2,
+5
+],
+[
+"Lone Wolf",
+3,
+4,
+1
+],
+[
+"Trueshot Aura",
+4,
+2,
+1
+],
+[
+"Mortal Shots",
+4,
+3,
+5
+],
+[
+"Rapid Recuperation",
+5,
+1,
+2
+],
+[
+"Barrage",
+5,
+3,
+3
+],
+[
+"Scatter Shot",
+5,
+4,
+1
+],
+[
+"Ranged Weapon Specialization",
+6,
+3,
+5
+],
+[
+"Sniper Shot",
+7,
+2,
+1
+]
+],
+[
+[
+"Improved Tracking",
+1,
+2,
+5
+],
+[
+"Deflection",
+1,
+3,
+5
+],
+[
+"Entrapment",
+2,
+1,
+5
+],
+[
+"Savage Strikes",
+2,
+2,
+2
+],
+[
+"Survivalist",
+2,
+3,
+5
+],
+[
+"Improved Wing Clip",
+2,
+4,
+3
+],
+[
+"Clever Traps",
+3,
+1,
+2
+],
+[
+"Surefooted",
+3,
+2,
+3
+],
+[
+"Deterrence",
+3,
+3,
+1
+],
+[
+"Survival Tactics",
+4,
+1,
+2
+],
+[
+"Predator's Edge",
+4,
+2,
+5
+],
+[
+"Counterattack",
+4,
+3,
+1
+],
+[
+"Resourcefulness",
+5,
+1,
+2
+],
+[
+"Expose Prey",
+5,
+2,
+2
+],
+[
+"Survivalist's Discipline",
+5,
+3,
+2
+],
+[
+"Strider Kick",
+5,
+4,
+1
+],
+[
+"Lightning Reflexes",
+6,
+3,
+5
+],
+[
+"Lacerating Strikes",
+7,
+2,
+1
+]
+]
+],
+"ROGUE": [
+[
+[
+"Improved Gouge",
+1,
+1,
+3
+],
+[
+"Remorseless Attacks",
+1,
+2,
+2
+],
+[
+"Malice",
+1,
+3,
+5
+],
+[
+"Ruthlessness",
+2,
+1,
+3
+],
+[
+"Murder",
+2,
+2,
+2
+],
+[
+"Improved Slice and Dice",
+2,
+4,
+3
+],
+[
+"Relentless Strikes",
+3,
+1,
+1
+],
+[
+"Improved Expose Armor",
+3,
+2,
+2
+],
+[
+"Lethality",
+3,
+3,
+5
+],
+[
+"Vile Poisons",
+4,
+1,
+5
+],
+[
+"Cold Blood",
+4,
+2,
+1
+],
+[
+"Improved Poisons",
+4,
+3,
+5
+],
+[
+"Vigor",
+5,
+1,
+2
+],
+[
+"Mutilate",
+5,
+2,
+1
+],
+[
+"Improved Kidney Shot",
+5,
+3,
+2
+],
+[
+"Seal Fate",
+6,
+3,
+5
+],
+[
+"Venom",
+7,
+2,
+1
+]
+],
+[
+[
+"Improved Eviscerate",
+1,
+1,
+3
+],
+[
+"Improved Sinister Strike",
+1,
+2,
+2
+],
+[
+"Lightning Reflexes",
+1,
+3,
+5
+],
+[
+"Puncturing Wounds",
+2,
+1,
+3
+],
+[
+"Deflection",
+2,
+2,
+3
+],
+[
+"Precision",
+2,
+3,
+3
+],
+[
+"Endurance",
+3,
+1,
+2
+],
+[
+"Riposte",
+3,
+2,
+1
+],
+[
+"Improved Sprint",
+3,
+4,
+2
+],
+[
+"Improved Kick",
+4,
+1,
+2
+],
+[
+"Flawless Execution",
+4,
+2,
+1
+],
+[
+"Dual Wield Specialization",
+4,
+3,
+5
+],
+[
+"Blade Flurry",
+5,
+2,
+1
+],
+[
+"Hack and Slash",
+5,
+3,
+5
+],
+[
+"Weapon Expertise",
+6,
+2,
+2
+],
+[
+"Aggression",
+6,
+3,
+3
+],
+[
+"Adrenaline Rush",
+7,
+2,
+1
+]
+],
+[
+[
+"Camouflage",
+1,
+1,
+5
+],
+[
+"Master of Deception",
+1,
+2,
+3
+],
+[
+"Opportunity",
+1,
+3,
+2
+],
+[
+"Setup",
+2,
+1,
+3
+],
+[
+"Elusiveness",
+2,
+2,
+2
+],
+[
+"Dirty Tricks",
+2,
+3,
+2
+],
+[
+"Improved Ambush",
+2,
+4,
+3
+],
+[
+"Initiative",
+3,
+1,
+3
+],
+[
+"Ghostly Strike",
+3,
+2,
+1
+],
+[
+"Improved Distract",
+3,
+3,
+2
+],
+[
+"Heightened Senses",
+4,
+1,
+2
+],
+[
+"Premeditation",
+4,
+2,
+1
+],
+[
+"Serrated Blades",
+4,
+3,
+3
+],
+[
+"Dirty Deeds",
+5,
+1,
+2
+],
+[
+"Preparation",
+5,
+2,
+1
+],
+[
+"Hemorrhage",
+5,
+3,
+1
+],
+[
+"Quietus",
+6,
+1,
+5
+],
+[
+"Cutthroat",
+6,
+3,
+5
+],
+[
+"Thousand Cuts",
+7,
+2,
+1
+]
+]
+],
+"PRIEST": [
+[
+[
+"Power in Light",
+1,
+1,
+5
+],
+[
+"Wand Specialization",
+1,
+2,
+2
+],
+[
+"Twin Disciplines",
+1,
+3,
+5
+],
+[
+"Silent Resolve",
+2,
+1,
+3
+],
+[
+"Holy Precision",
+2,
+2,
+3
+],
+[
+"Mental Strength",
+2,
+3,
+5
+],
+[
+"Martyrdom",
+2,
+4,
+2
+],
+[
+"Mental Agility",
+3,
+1,
+3
+],
+[
+"Inner Focus",
+3,
+2,
+1
+],
+[
+"Improved Power Word: Shield",
+3,
+3,
+3
+],
+[
+"Meditation",
+3,
+4,
+3
+],
+[
+"Improved Inner Fire",
+4,
+1,
+3
+],
+[
+"Improved Mana Burn",
+4,
+2,
+2
+],
+[
+"Soul Warding",
+4,
+3,
+1
+],
+[
+"Penance",
+5,
+2,
+1
+],
+[
+"Renewed Hope",
+5,
+3,
+5
+],
+[
+"Divine Aegis",
+6,
+3,
+3
+],
+[
+"Power Infusion",
+7,
+2,
+1
+]
+],
+[
+[
+"Twilight Focus",
+1,
+1,
+3
+],
+[
+"Improved Renew",
+1,
+2,
+3
+],
+[
+"Holy Specialization",
+1,
+3,
+5
+],
+[
+"Spell Warding",
+2,
+2,
+5
+],
+[
+"Divine Fury",
+2,
+3,
+5
+],
+[
+"Holy Nova",
+3,
+1,
+1
+],
+[
+"Blessed Recovery",
+3,
+2,
+3
+],
+[
+"Inspiration",
+3,
+4,
+3
+],
+[
+"Holy Reach",
+4,
+1,
+2
+],
+[
+"Improved Healing",
+4,
+2,
+3
+],
+[
+"Searing Light",
+4,
+3,
+2
+],
+[
+"Binding Heal",
+4,
+4,
+1
+],
+[
+"Litany of Light",
+5,
+1,
+2
+],
+[
+"Spirit of Redemption",
+5,
+2,
+1
+],
+[
+"Spiritual Guidance",
+5,
+3,
+5
+],
+[
+"Spiritual Healing",
+6,
+3,
+3
+],
+[
+"Prayer of Mending",
+7,
+2,
+1
+]
+],
+[
+[
+"Shadow Focus",
+1,
+1,
+5
+],
+[
+"Blackout",
+1,
+2,
+5
+],
+[
+"Spirit Tap",
+1,
+3,
+5
+],
+[
+"Improved Mind Blast",
+2,
+1,
+5
+],
+[
+"Improved Shadow Word: Pain",
+2,
+3,
+2
+],
+[
+"Shadow Reach",
+2,
+4,
+2
+],
+[
+"Improved Psychic Scream",
+3,
+2,
+2
+],
+[
+"Mind Flay",
+3,
+3,
+1
+],
+[
+"Improved Mind Flay",
+3,
+4,
+2
+],
+[
+"Dark Inspiration",
+4,
+1,
+5
+],
+[
+"Vampiric Embrace",
+4,
+2,
+1
+],
+[
+"Shadow Weaving",
+4,
+3,
+3
+],
+[
+"Silence",
+5,
+1,
+1
+],
+[
+"Devouring Contagion",
+5,
+3,
+2
+],
+[
+"Early Demise",
+6,
+1,
+2
+],
+[
+"Darkness",
+6,
+3,
+5
+],
+[
+"Shadowform",
+7,
+2,
+1
+]
+]
+],
+"SHAMAN": [
+[
+[
+"Convection",
+1,
+2,
+5
+],
+[
+"Concussion",
+1,
+3,
+5
+],
+[
+"Elemental Devastation",
+2,
+1,
+3
+],
+[
+"Reverberation",
+2,
+2,
+5
+],
+[
+"Elemental Alacrity",
+2,
+3,
+3
+],
+[
+"Call of Flame",
+2,
+4,
+3
+],
+[
+"Elemental Focus",
+3,
+1,
+1
+],
+[
+"Elemental Warding",
+3,
+2,
+3
+],
+[
+"Trial by Fire",
+4,
+1,
+2
+],
+[
+"Eye of the Storm",
+4,
+2,
+3
+],
+[
+"Earthbound",
+4,
+4,
+1
+],
+[
+"Elemental Reach",
+5,
+1,
+2
+],
+[
+"Lava Burst",
+5,
+2,
+1
+],
+[
+"Lightning Overload",
+5,
+3,
+3
+],
+[
+"Elemental Fury",
+6,
+3,
+5
+],
+[
+"Elemental Mastery",
+7,
+2,
+1
+]
+],
+[
+[
+"Earth's Grasp",
+1,
+1,
+2
+],
+[
+"Thundering Strikes",
+1,
+2,
+5
+],
+[
+"Ancestral Knowledge",
+1,
+3,
+5
+],
+[
+"Guardian Totems",
+2,
+1,
+2
+],
+[
+"Mental Dexterity",
+2,
+2,
+3
+],
+[
+"Improved Ghost Wolf",
+2,
+3,
+2
+],
+[
+"Improved Lightning Shield",
+2,
+4,
+3
+],
+[
+"Elemental Weapons",
+3,
+1,
+3
+],
+[
+"Shamanistic Focus",
+3,
+3,
+1
+],
+[
+"Anticipation",
+3,
+4,
+3
+],
+[
+"Toughness",
+4,
+1,
+5
+],
+[
+"Flurry",
+4,
+2,
+5
+],
+[
+"Stormstrike",
+4,
+3,
+1
+],
+[
+"Spirit Weapons",
+5,
+1,
+1
+],
+[
+"Mental Quickness",
+5,
+2,
+2
+],
+[
+"Improved Stormstrike",
+5,
+3,
+2
+],
+[
+"Maelstrom Weapon",
+6,
+3,
+5
+],
+[
+"Rage of the Farseer",
+7,
+2,
+1
+]
+],
+[
+[
+"Improved Healing Wave",
+1,
+2,
+5
+],
+[
+"Tidal Focus",
+1,
+3,
+5
+],
+[
+"Mindfulness",
+2,
+1,
+3
+],
+[
+"Natural Grace",
+2,
+2,
+3
+],
+[
+"Totemic Focus",
+2,
+3,
+5
+],
+[
+"Improved Reincarnation",
+2,
+4,
+2
+],
+[
+"Ancestral Healing",
+3,
+1,
+3
+],
+[
+"Healing Focus",
+3,
+2,
+3
+],
+[
+"Water Shield",
+3,
+3,
+1
+],
+[
+"Tidal Mastery",
+4,
+1,
+5
+],
+[
+"Restorative Totems",
+4,
+2,
+5
+],
+[
+"Mana Tide Totem",
+4,
+3,
+1
+],
+[
+"Healing Way",
+5,
+2,
+3
+],
+[
+"Nature's Swiftness",
+5,
+3,
+1
+],
+[
+"Purification",
+6,
+3,
+5
+],
+[
+"Riptide",
+7,
+2,
+1
+]
+]
+],
+"MAGE": [
+[
+[
+"Wand Specialization",
+1,
+1,
+2
+],
+[
+"Arcane Focus",
+1,
+2,
+5
+],
+[
+"Improved Channeling",
+1,
+3,
+5
+],
+[
+"Missile Barrage",
+1,
+4,
+2
+],
+[
+"Arcane Subtlety",
+2,
+1,
+2
+],
+[
+"Magic Absorption",
+2,
+2,
+2
+],
+[
+"Arcane Concentration",
+2,
+3,
+5
+],
+[
+"Arcane Resilience",
+2,
+4,
+2
+],
+[
+"Arcane Geometry",
+3,
+1,
+2
+],
+[
+"Arcane Impact",
+3,
+2,
+3
+],
+[
+"Arcane Blast",
+3,
+4,
+1
+],
+[
+"Arcane Shielding",
+4,
+1,
+2
+],
+[
+"Improved Counterspell",
+4,
+2,
+2
+],
+[
+"Arcane Meditation",
+4,
+3,
+3
+],
+[
+"Arcane Wrath",
+4,
+4,
+1
+],
+[
+"Presence of Mind",
+5,
+2,
+1
+],
+[
+"Arcane Mind",
+5,
+3,
+5
+],
+[
+"Arcane Instability",
+6,
+3,
+3
+],
+[
+"Arcane Power",
+7,
+2,
+1
+]
+],
+[
+[
+"Improved Fire Blast",
+1,
+1,
+2
+],
+[
+"Incineration",
+1,
+2,
+3
+],
+[
+"Improved Fireball",
+1,
+3,
+5
+],
+[
+"Ignite",
+2,
+1,
+5
+],
+[
+"Flame Throwing",
+2,
+2,
+2
+],
+[
+"Impact",
+2,
+3,
+3
+],
+[
+"Burning Soul",
+3,
+1,
+3
+],
+[
+"Improved Flamestrike",
+3,
+2,
+3
+],
+[
+"Pyroblast",
+3,
+3,
+1
+],
+[
+"Improved Scorch",
+4,
+1,
+3
+],
+[
+"Improved Fire Ward",
+4,
+2,
+2
+],
+[
+"Heating Up",
+4,
+3,
+1
+],
+[
+"Master of Elements",
+4,
+4,
+3
+],
+[
+"Critical Mass",
+5,
+2,
+5
+],
+[
+"Blast Wave",
+5,
+3,
+1
+],
+[
+"Fire Power",
+6,
+3,
+3
+],
+[
+"Combustion",
+7,
+2,
+1
+]
+],
+[
+[
+"Frost Warding",
+1,
+1,
+2
+],
+[
+"Improved Frostbolt",
+1,
+2,
+5
+],
+[
+"Elemental Precision",
+1,
+3,
+5
+],
+[
+"Ice Shards",
+2,
+1,
+5
+],
+[
+"Permafrost",
+2,
+2,
+3
+],
+[
+"Improved Frost Nova",
+2,
+3,
+2
+],
+[
+"Frostbite",
+2,
+4,
+3
+],
+[
+"Piercing Ice",
+3,
+1,
+3
+],
+[
+"Frost Channeling",
+3,
+2,
+3
+],
+[
+"Ice Lance",
+3,
+3,
+1
+],
+[
+"Improved Blizzard",
+3,
+4,
+3
+],
+[
+"Arctic Reach",
+4,
+1,
+2
+],
+[
+"Ice Block",
+4,
+2,
+1
+],
+[
+"Shatter",
+4,
+4,
+3
+],
+[
+"Improved Cone of Cold",
+5,
+1,
+3
+],
+[
+"Cold Snap",
+5,
+2,
+1
+],
+[
+"Fingers of Frost",
+5,
+3,
+2
+],
+[
+"Winter's Chill",
+6,
+3,
+5
+],
+[
+"Ice Barrier",
+7,
+2,
+1
+]
+]
+],
+"WARLOCK": [
+[
+[
+"Improved Life Tap",
+1,
+1,
+2
+],
+[
+"Suppression",
+1,
+2,
+5
+],
+[
+"Improved Corruption",
+1,
+3,
+5
+],
+[
+"Grim Reach",
+2,
+1,
+2
+],
+[
+"Soul Harvest",
+2,
+2,
+2
+],
+[
+"Improved Drains",
+2,
+3,
+3
+],
+[
+"Improved Bane of Agony",
+3,
+1,
+2
+],
+[
+"Fel Concentration",
+3,
+2,
+3
+],
+[
+"Amplify Curse",
+3,
+3,
+1
+],
+[
+"Pandemic",
+3,
+4,
+3
+],
+[
+"Malevolence",
+4,
+1,
+5
+],
+[
+"Nightfall",
+4,
+2,
+2
+],
+[
+"Curse of Exhaustion",
+4,
+3,
+1
+],
+[
+"Siphon Life",
+5,
+2,
+1
+],
+[
+"Soul Siphon",
+5,
+3,
+3
+],
+[
+"Shadow Mastery",
+6,
+3,
+5
+],
+[
+"Wrack",
+7,
+2,
+1
+]
+],
+[
+[
+"Improved Health Funnel",
+1,
+1,
+2
+],
+[
+"Improved Imp",
+1,
+2,
+3
+],
+[
+"Demonic Embrace",
+1,
+3,
+5
+],
+[
+"Unholy Power",
+1,
+4,
+5
+],
+[
+"Demonic Aegis",
+2,
+1,
+2
+],
+[
+"Improved Voidwalker",
+2,
+2,
+3
+],
+[
+"Fel Vitality",
+2,
+3,
+3
+],
+[
+"Demonic Energies",
+2,
+4,
+2
+],
+[
+"Improved Sayaad",
+3,
+1,
+3
+],
+[
+"Demonic Sacrifice",
+3,
+2,
+1
+],
+[
+"Master Summoner",
+3,
+3,
+2
+],
+[
+"Decimation",
+4,
+1,
+2
+],
+[
+"Fel Domination",
+4,
+3,
+1
+],
+[
+"Demonic Brand",
+4,
+4,
+3
+],
+[
+"Improved Felhunter",
+5,
+1,
+3
+],
+[
+"Soul Link",
+5,
+2,
+1
+],
+[
+"Demonic Knowledge",
+5,
+3,
+3
+],
+[
+"Master Demonologist",
+6,
+3,
+5
+],
+[
+"Demonic Pact",
+7,
+2,
+1
+]
+],
+[
+[
+"Destructive Reach",
+1,
+1,
+2
+],
+[
+"Improved Shadow Bolt",
+1,
+2,
+5
+],
+[
+"Bane",
+1,
+3,
+5
+],
+[
+"Molten Skin",
+2,
+1,
+5
+],
+[
+"Cataclysm",
+2,
+2,
+3
+],
+[
+"Aftermath",
+2,
+3,
+5
+],
+[
+"Ruin",
+3,
+2,
+5
+],
+[
+"Shadowburn",
+3,
+3,
+1
+],
+[
+"Intensity",
+4,
+1,
+3
+],
+[
+"Agonizing Flames",
+4,
+2,
+3
+],
+[
+"Conflagrate",
+4,
+3,
+1
+],
+[
+"Pyroclasm",
+5,
+1,
+2
+],
+[
+"Bane of Havoc",
+5,
+2,
+1
+],
+[
+"Fire and Brimstone",
+5,
+3,
+3
+],
+[
+"Shadow and Flame",
+6,
+3,
+5
+],
+[
+"Incinerate",
+7,
+2,
+1
+]
+]
+],
+"DRUID": [
+[
+[
+"Improved Wrath",
+1,
+2,
+5
+],
+[
+"Genesis",
+1,
+3,
+5
+],
+[
+"Moonglow",
+2,
+1,
+3
+],
+[
+"Improved Moonfire",
+2,
+2,
+2
+],
+[
+"Nature's Majesty",
+2,
+3,
+2
+],
+[
+"Nature's Reach",
+2,
+4,
+2
+],
+[
+"Improved Entangling Roots",
+3,
+1,
+3
+],
+[
+"Nature's Splendor",
+3,
+3,
+1
+],
+[
+"Insect Swarm",
+4,
+1,
+1
+],
+[
+"Vengeance",
+4,
+2,
+5
+],
+[
+"Improved Starfire",
+4,
+3,
+5
+],
+[
+"Overgrowth",
+5,
+1,
+2
+],
+[
+"Nature's Grace",
+5,
+2,
+1
+],
+[
+"Eclipse",
+5,
+3,
+3
+],
+[
+"Moonfury",
+6,
+2,
+5
+],
+[
+"Moonkin Form",
+7,
+2,
+1
+]
+],
+[
+[
+"Ferocity",
+1,
+2,
+5
+],
+[
+"Heart of the Wild",
+1,
+3,
+5
+],
+[
+"Feral Swiftness",
+2,
+1,
+2
+],
+[
+"Feral Instinct",
+2,
+2,
+3
+],
+[
+"Brutal Impact",
+2,
+3,
+2
+],
+[
+"Thick Hide",
+2,
+4,
+3
+],
+[
+"Shredding Attacks",
+3,
+1,
+3
+],
+[
+"Savage Fury",
+3,
+2,
+2
+],
+[
+"Feral Charge",
+3,
+3,
+1
+],
+[
+"Sharpened Claws",
+3,
+4,
+2
+],
+[
+"Shifting Power",
+4,
+1,
+1
+],
+[
+"Primal Bite",
+4,
+2,
+1
+],
+[
+"Predatory Strikes",
+4,
+3,
+3
+],
+[
+"Blood Frenzy",
+4,
+4,
+2
+],
+[
+"Improved Shifting Power",
+5,
+1,
+2
+],
+[
+"Leader of the Pack",
+5,
+2,
+1
+],
+[
+"Natural Instinct",
+5,
+4,
+2
+],
+[
+"Natural Reaction",
+6,
+1,
+5
+],
+[
+"Rend and Tear",
+6,
+3,
+5
+],
+[
+"Berserk",
+7,
+2,
+1
+]
+],
+[
+[
+"Nature's Focus",
+1,
+2,
+5
+],
+[
+"Furor",
+1,
+3,
+5
+],
+[
+"Naturalist",
+2,
+1,
+5
+],
+[
+"Subtlety",
+2,
+2,
+3
+],
+[
+"Natural Shapeshifter",
+2,
+3,
+3
+],
+[
+"Reflection",
+3,
+2,
+3
+],
+[
+"Gift of Nature",
+3,
+3,
+5
+],
+[
+"Gift of the Earthmother",
+3,
+4,
+1
+],
+[
+"Tranquil Spirit",
+4,
+2,
+5
+],
+[
+"Improved Rejuvenation",
+4,
+3,
+3
+],
+[
+"Swiftmend",
+4,
+4,
+1
+],
+[
+"Nature's Swiftness",
+5,
+1,
+1
+],
+[
+"Living Spirit",
+5,
+2,
+3
+],
+[
+"Improved Tranquility",
+5,
+4,
+2
+],
+[
+"Improved Regrowth",
+6,
+3,
+5
+],
+[
+"Wild Growth",
+7,
+2,
+1
+]
+]
+]
 },
-{
-"class": "DRUID",
-"ranks": [
-"0500220000000000",
-"55000032021032212051",
-"0500300000000000"
-],
-"points": [
-9,
-34,
-8
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Popular #5: Feral Combat",
-"spec": "Feral Combat",
-"source": "Talents Forever",
-"url": "https://talentsforever.com/druid/60/050022-55000032021032212051-05003-6"
-}
-],
+"popular": [],
 "iv:/wow-forever/affliction-warlock-ranged-dps-pve-guide": [
 {
 "class": "WARLOCK",
 "ranks": [
-"24550020000201000",
+"24520020030201000",
 "0000000000000000000",
 "0000000000000000"
 ],
@@ -969,11 +2938,11 @@
 ],
 [
 1,
-4
+1
 ],
 [
 1,
-4
+1
 ],
 [
 1,
@@ -985,15 +2954,15 @@
 ],
 [
 1,
-4
+10
 ],
 [
 1,
-1
+10
 ],
 [
 1,
-1
+10
 ],
 [
 1,
@@ -1005,7 +2974,7 @@
 "name": "Affliction Level 30 Talent Build",
 "spec": "Affliction",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-111122222366333bb300d",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-111122222366300bb999d",
 "guide": "https://www.icy-veins.com/wow-forever/affliction-warlock-ranged-dps-pve-guide",
 "category": "PvE"
 }
@@ -1014,7 +2983,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"215005220100210000",
+"2052205020100011000",
 "00000000000000000",
 "0000000000000000000"
 ],
@@ -1026,7 +2995,11 @@
 "order": [
 [
 1,
-1
+4
+],
+[
+1,
+4
 ],
 [
 1,
@@ -1034,6 +3007,22 @@
 ],
 [
 1,
+1
+],
+[
+1,
+3
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
 3
 ],
 [
@@ -1046,7 +3035,7 @@
 ],
 [
 1,
-3
+11
 ],
 [
 1,
@@ -1054,43 +3043,19 @@
 ],
 [
 1,
-2
+9
 ],
 [
 1,
-6
+9
 ],
 [
 1,
-6
+7
 ],
 [
 1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-14
-],
-[
-1,
-6
+15
 ],
 [
 1,
@@ -1102,11 +3067,15 @@
 ],
 [
 1,
-13
+7
 ],
 [
 1,
-13
+7
+],
+[
+1,
+16
 ]
 ],
 "level": null,
@@ -1114,7 +3083,7 @@
 "name": "Level 30 Talent Build",
 "spec": "Arcane",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-002222215597755d566cc",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-3300244222a2886e6666f",
 "guide": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
 "category": "PvE"
 }
@@ -1337,7 +3306,115 @@
 "category": "PvE"
 }
 ],
-"iv:/wow-forever/balance-druid-ranged-dps-pve-guide": [],
+"iv:/wow-forever/balance-druid-ranged-dps-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"5032220110000000",
+"00000000000000000000",
+"5000000000000000"
+],
+"points": [
+16,
+0,
+5
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+8
+],
+[
+1,
+9
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+]
+],
+"level": null,
+"beta": true,
+"name": "Level 30 Talent Build",
+"spec": "Balance",
+"source": "Icy Veins",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-0000055443322278AAAAA",
+"guide": "https://www.icy-veins.com/wow-forever/balance-druid-ranged-dps-pve-guide",
+"category": "PvE"
+}
+],
 "iv:/wow-forever/beast-mastery-hunter-ranged-dps-pve-guide": [
 {
 "class": "HUNTER",
@@ -1780,7 +3857,7 @@
 "ranks": [
 "023013111300100000",
 "00000000000000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 16,
@@ -1887,7 +3964,7 @@
 "ranks": [
 "320023001000000000",
 "32000000000000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 11,
@@ -1994,7 +4071,7 @@
 "ranks": [
 "520033021300101000",
 "00000000000000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 21,
@@ -2121,7 +4198,7 @@
 "ranks": [
 "420023001300100000",
 "32000000000000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 16,
@@ -2351,133 +4428,6 @@
 "url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-111114442267772a99988",
 "guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-guide",
 "category": "PvE"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0530301323103110",
-"000000000000000000",
-"0000000000000000"
-],
-"points": [
-26,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-7
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-3
-],
-[
-1,
-11
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-14
-],
-[
-1,
-15
-]
-],
-"level": null,
-"beta": null,
-"name": "Level 30 Talent Build (26-Point Tree)",
-"spec": "Elemental",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-111114442267772a99988cccde",
-"guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-guide",
-"category": "PvE"
 }
 ],
 "iv:/wow-forever/enhancement-shaman-melee-dps-pve-guide": [
@@ -2702,23 +4652,23 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
-"20552030100110100",
+"0002000000000000000",
+"20522030100130000",
 "0000000000000000000"
 ],
 "points": [
-0,
-21,
+2,
+19,
 0
 ],
 "order": [
 [
-2,
-1
+1,
+4
 ],
 [
-2,
-1
+1,
+4
 ],
 [
 2,
@@ -2747,6 +4697,14 @@
 [
 2,
 5
+],
+[
+2,
+1
+],
+[
+2,
+1
 ],
 [
 2,
@@ -2778,15 +4736,7 @@
 ],
 [
 2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
+13
 ],
 [
 2,
@@ -2794,7 +4744,7 @@
 ],
 [
 2,
-15
+13
 ]
 ],
 "level": null,
@@ -2802,120 +4752,12 @@
 "name": "Level 30 Talent Build",
 "spec": "Fire",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-iikkkkkmmlqoooltllluw",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-33lllllnnjjmrpppmuvvv",
 "guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
 "category": "PvE"
 }
 ],
-"iv:/wow-forever/frost-mage-ranged-dps-pve-guide": [
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"0525003001100300100"
-],
-"points": [
-0,
-0,
-21
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-10
-],
-[
-3,
-11
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-17
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Frost",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-AAAAAFFFCCIJCCCMMMBBP",
-"guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/frost-mage-ranged-dps-pve-guide": [],
 "iv:/wow-forever/fury-warrior-melee-dps-pve-guide": [
 {
 "class": "WARRIOR",
@@ -3026,113 +4868,6 @@
 }
 ],
 "iv:/wow-forever/holy-paladin-healer-pve-guide": [
-{
-"class": "PALADIN",
-"ranks": [
-"05321013005001000",
-"0000000000000000",
-"00000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-7
-],
-[
-1,
-5
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-14
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Holy",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-111112223377764aaaaad",
-"guide": "https://www.icy-veins.com/wow-forever/holy-paladin-healer-pve-guide",
-"category": "PvE"
-},
 {
 "class": "PALADIN",
 "ranks": [
@@ -3253,10 +4988,117 @@
 ],
 "level": null,
 "beta": null,
-"name": "26-Point Tree (Full Legacy Talents)",
+"name": "Level 30 Talent Build",
 "spec": "Holy",
 "source": "Icy Veins",
 "url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-111112223377764aaaaad99b4f",
+"guide": "https://www.icy-veins.com/wow-forever/holy-paladin-healer-pve-guide",
+"category": "PvE"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"05321013005001000",
+"0000000000000000",
+"00000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+7
+],
+[
+1,
+5
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+14
+]
+],
+"level": null,
+"beta": true,
+"name": "21-Point Tree (No Legacy Talents)",
+"spec": "Holy",
+"source": "Icy Veins",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-111112223377764aaaaad",
 "guide": "https://www.icy-veins.com/wow-forever/holy-paladin-healer-pve-guide",
 "category": "PvE"
 }
@@ -3267,7 +5109,7 @@
 "ranks": [
 "020000000000000000",
 "33205100000000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 2,
@@ -3374,7 +5216,7 @@
 "ranks": [
 "020000000000000000",
 "33505100002000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 2,
@@ -3501,7 +5343,7 @@
 "ranks": [
 "000000000000000000",
 "03505101032000100",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 0,
@@ -3738,6 +5580,129 @@
 "class": "PALADIN",
 "ranks": [
 "00000000000000000",
+"0530511300000000",
+"50020000000000000"
+],
+"points": [
+0,
+18,
+7
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+3,
+1
+],
+[
+2,
+6
+],
+[
+2,
+7
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+2,
+5
+]
+],
+"level": null,
+"beta": null,
+"name": "Level 30 Talent Build",
+"spec": "Protection",
+"source": "Icy Veins",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiilljjjoooxmnllxxxxAAl",
+"guide": "https://www.icy-veins.com/wow-forever/protection-paladin-tank-pve-guide",
+"category": "PvE"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
 "0530210300000000",
 "50020000000000000"
 ],
@@ -3834,7 +5799,7 @@
 ],
 "level": null,
 "beta": true,
-"name": "Level 30 Talent Build",
+"name": "21-Point Tree (No Legacy Talents)",
 "spec": "Protection",
 "source": "Icy Veins",
 "url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiilljjjoooxxxxxAAm",
@@ -4535,116 +6500,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"020000000000000000",
-"30000000000000000",
-"105022201201000000"
-],
-"points": [
-2,
-3,
-16
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-1
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-12
-]
-],
-"level": null,
-"beta": true,
-"name": "Deep Shadow",
-"spec": "Shadow",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-11iiiBBBBBDDEEzHIIFFK",
-"guide": "https://www.icy-veins.com/wow-forever/shadow-priest-ranged-dps-pve-guide",
-"category": "PvE"
-},
-{
-"class": "PRIEST",
-"ranks": [
 "025003000300000000",
 "30000000000000000",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 13,
@@ -4965,329 +6823,7 @@
 "category": "PvE"
 }
 ],
-"tavern:/forever/guides/druid/": [
-{
-"class": "DRUID",
-"ranks": [
-"5032220110500000",
-"00000000000000000000",
-"0000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-8
-],
-[
-1,
-9
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Balance Build",
-"spec": "Balance",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=A11111444667755aceeeee",
-"guide": "https://www.warcrafttavern.com/forever/guides/druid/",
-"category": null
-},
-{
-"class": "DRUID",
-"ranks": [
-"0000000000000000",
-"53200031121002010000",
-"0000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-9
-],
-[
-2,
-8
-],
-[
-2,
-11
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-16
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Feral Build",
-"spec": "Feral Combat",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=B1111144222888a9cbbffh",
-"guide": "https://www.warcrafttavern.com/forever/guides/druid/",
-"category": null
-},
-{
-"class": "DRUID",
-"ranks": [
-"0000000000000000",
-"02000000000000000000",
-"5050035000100000"
-],
-"points": [
-0,
-2,
-19
-],
-"order": [
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-11
-],
-[
-2,
-2
-],
-[
-2,
-2
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Restoration Build",
-"spec": "Restoration",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=C1111144444999aaaaafB22",
-"guide": "https://www.warcrafttavern.com/forever/guides/druid/",
-"category": null
-}
-],
+"tavern:/forever/guides/druid/": [],
 "tavern:/forever/guides/hunter/": [
 {
 "class": "HUNTER",
@@ -5678,1793 +7214,10 @@
 "category": null
 }
 ],
-"tavern:/forever/guides/mage/": [
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"0520003001000000000"
-],
-"points": [
-0,
-0,
-11
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-10
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Frost Beta Build",
-"spec": "Frost",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=C2211111777a",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": null
-},
-{
-"class": "MAGE",
-"ranks": [
-"023005000100000000",
-"00000000000000000",
-"0000000000000000000"
-],
-"points": [
-11,
-0,
-0
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-10
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Solo Arcane Beta Build",
-"spec": "Arcane",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=A2112266666b",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": "Leveo"
-},
-{
-"class": "MAGE",
-"ranks": [
-"240202000100000000",
-"00000000000000000",
-"0000000000000000000"
-],
-"points": [
-11,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-10
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Dungeon Arcane Beta Build",
-"spec": "Arcane",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=A1111004466b",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": "PvE"
-},
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"0345003001001300100"
-],
-"points": [
-0,
-0,
-21
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-10
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-13
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-4
-],
-[
-3,
-17
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Frost Beta Build",
-"spec": "Frost",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=C1112222777a4444dfff4i",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": null
-},
-{
-"class": "MAGE",
-"ranks": [
-"035005002100310100",
-"00000000000000000",
-"0000000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-10
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-14
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-3
-],
-[
-1,
-16
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Solo Arcane Beta Build",
-"spec": "Arcane",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=A2222166666b1199feee2i",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": "Leveo"
-},
-{
-"class": "MAGE",
-"ranks": [
-"050205003100310100",
-"00000000000000000",
-"0000000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-10
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-14
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-9
-],
-[
-1,
-16
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Solo Arcane Beta Build",
-"spec": "Arcane",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=A111114466666b99feee9i",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": "Leveo"
-},
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"03550020130101000",
-"0000000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-9
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-7
-],
-[
-2,
-12
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-7
-],
-[
-2,
-14
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Fire Beta Build",
-"spec": "Fire",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/mage#?t=B2222244444a1118eccc8h",
-"guide": "https://www.warcrafttavern.com/forever/guides/mage/",
-"category": null
-}
-],
+"tavern:/forever/guides/mage/": [],
 "tavern:/forever/guides/paladin/": [],
-"tavern:/forever/guides/priest/": [
-{
-"class": "PRIEST",
-"ranks": [
-"523010000000000000",
-"00000000000000000",
-"000000000000000000"
-],
-"points": [
-11,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-5
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Discipline DPS Priest Build",
-"spec": "Discipline",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/priest#?t=A11222500000",
-"guide": "https://www.warcrafttavern.com/forever/guides/priest/",
-"category": null
-},
-{
-"class": "PRIEST",
-"ranks": [
-"000000000000000000",
-"00505100000000000",
-"000000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-6
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Holy Priest Build",
-"spec": "Holy",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/priest#?t=B22222666668",
-"guide": "https://www.warcrafttavern.com/forever/guides/priest/",
-"category": null
-},
-{
-"class": "PRIEST",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"505000001000000000"
-],
-"points": [
-0,
-0,
-11
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-9
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Shadow Priest Build",
-"spec": "Shadow",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/priest#?t=C2222200000a",
-"guide": "https://www.warcrafttavern.com/forever/guides/priest/",
-"category": null
-},
-{
-"class": "PRIEST",
-"ranks": [
-"520010211305001000",
-"00000000000000000",
-"000000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-5
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-15
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Discipline DPS Priest",
-"spec": "Discipline",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/priest#?t=A11000005779bbb8dddddh",
-"guide": "https://www.warcrafttavern.com/forever/guides/priest/",
-"category": null
-},
-{
-"class": "PRIEST",
-"ranks": [
-"000000000000000000",
-"20505103030101000",
-"000000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-6
-],
-[
-2,
-1
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-12
-],
-[
-2,
-1
-],
-[
-2,
-14
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Holy Priest Build",
-"spec": "Holy",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/priest#?t=B2222266666bbb80dddf0h",
-"guide": "https://www.warcrafttavern.com/forever/guides/priest/",
-"category": null
-},
-{
-"class": "PRIEST",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"500320401201300000"
-],
-"points": [
-0,
-0,
-21
-],
-"order": [
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-12
-],
-[
-3,
-7
-],
-[
-3,
-7
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Shadow Priest Build",
-"spec": "Shadow",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/priest#?t=C0000066444abb88eeed88",
-"guide": "https://www.warcrafttavern.com/forever/guides/priest/",
-"category": null
-}
-],
-"tavern:/forever/guides/rogue/": [
-{
-"class": "ROGUE",
-"ranks": [
-"02000000000000000",
-"02000000000000000",
-"3020002000000000000"
-],
-"points": [
-2,
-2,
-7
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-7
-],
-[
-3,
-7
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 2/2/7 Build",
-"spec": "Subtlety",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=A11B11C2200077",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"02303201000000000",
-"0000000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Riposte Combat Build",
-"spec": "Combat",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=B22211555669",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"00000000000000000",
-"3023002010000000000"
-],
-"points": [
-0,
-0,
-11
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-9
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 20 Subtlety Ghostly Strike Build",
-"spec": "Subtlety",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=C22000444779",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-},
-{
-"class": "ROGUE",
-"ranks": [
-"02400000000000000",
-"02000000000000000",
-"5020003300000000000"
-],
-"points": [
-6,
-2,
-13
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Ambush/Sinister Strike Crit Build",
-"spec": "Subtlety",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=A11B11C22000777A2222C00888",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-},
-{
-"class": "ROGUE",
-"ranks": [
-"02530010540001000",
-"00000000000000000",
-"0000000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-14
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Assassination Build",
-"spec": "Assassination",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=A22222114448aaaaacccch",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"32003321101410000",
-"0000000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-8
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-9
-],
-[
-2,
-11
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Combat Build",
-"spec": "Combat",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=B11000666555988bdeeeeh",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"00000000000000000",
-"5023003310003001000"
-],
-"points": [
-0,
-0,
-21
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-9
-],
-[
-3,
-4
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-16
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Subtlety  Build",
-"spec": "Subtlety",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/rogue#?t=C220004477794888eee00i",
-"guide": "https://www.warcrafttavern.com/forever/guides/rogue/",
-"category": null
-}
-],
+"tavern:/forever/guides/priest/": [],
+"tavern:/forever/guides/rogue/": [],
 "tavern:/forever/guides/shaman/": [],
 "tavern:/forever/guides/warlock/": [],
 "tavern:/forever/guides/warrior/": [],
@@ -8046,9 +7799,9 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
+"0000000000000000000",
 "00000000000000000",
-"0235003201001300100"
+"0235300201001300100"
 ],
 "points": [
 0,
@@ -8078,15 +7831,15 @@
 ],
 [
 3,
-7
+5
 ],
 [
 3,
-7
+5
 ],
 [
 3,
-7
+5
 ],
 [
 3,
@@ -8153,9 +7906,9 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
+"0000000000000000000",
 "00000000000000000",
-"0535003201001301200"
+"0535300201001301200"
 ],
 "points": [
 0,
@@ -8185,15 +7938,15 @@
 ],
 [
 3,
-7
+5
 ],
 [
 3,
-7
+5
 ],
 [
 3,
-7
+5
 ],
 [
 3,
@@ -8407,628 +8160,7 @@
 "category": "Leveo"
 }
 ],
-"method:/wow-forever/wow-forever-priest-leveling-guide-and-talents": [
-{
-"class": "PRIEST",
-"ranks": [
-"023003211300000000",
-"00000000000000000",
-"005000000000000000"
-],
-"points": [
-15,
-0,
-5
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 1-29",
-"spec": "Discipline",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents#zb1",
-"guide": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents",
-"category": "Leveo"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"500023011332001000",
-"00400000000000000",
-"005000000000000000"
-],
-"points": [
-21,
-4,
-5
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-15
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-]
-],
-"level": null,
-"beta": null,
-"name": "Level 30-39",
-"spec": "Discipline",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents#zb2",
-"guide": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents",
-"category": "Leveo"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"505020401201311051"
-],
-"points": [
-0,
-0,
-31
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-12
-],
-[
-3,
-15
-],
-[
-3,
-14
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-]
-],
-"level": null,
-"beta": null,
-"name": "Level 40",
-"spec": "Shadow",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents#zb3",
-"guide": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents",
-"category": "Leveo"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"005003211303000000",
-"00000000000000000",
-"505020401201311251"
-],
-"points": [
-18,
-0,
-33
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-12
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-14
-],
-[
-3,
-15
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-],
-[
-3,
-16
-],
-[
-3,
-16
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-]
-],
-"level": null,
-"beta": null,
-"name": "Level 41-60",
-"spec": "Shadow",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents#zb4",
-"guide": "https://www.method.gg/wow-forever/wow-forever-priest-leveling-guide-and-talents",
-"category": "Leveo"
-}
-],
+"method:/wow-forever/wow-forever-priest-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-rogue-leveling-guide-and-talents": [
 {
 "class": "ROGUE",
@@ -9287,133 +8419,6 @@
 ],
 "method:/wow-forever/wow-forever-shaman-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-warlock-leveling-guide-and-talents": [
-{
-"class": "WARLOCK",
-"ranks": [
-"05540020035001010",
-"0000000000000000000",
-"0000000000000000"
-],
-"points": [
-26,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-14
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-16
-]
-],
-"level": null,
-"beta": null,
-"name": "Affliction",
-"spec": "Affliction",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents#zb1",
-"guide": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents",
-"category": "Leveo"
-},
 {
 "class": "WARLOCK",
 "ranks": [
@@ -10128,35 +9133,12 @@
 "wfb:/guide/affliction-drain-tank-warlock-leveling": [],
 "wfb:/guide/affliction-hybrid-warlock-pvp-guide-the-tank-21-21-9-soul-li-eqjeww": [],
 "wfb:/guide/affliction-warlock-pve-guide": [],
-"wfb:/guide/affliction-warlock-pvp-guide": [
-{
-"class": "WARLOCK",
-"ranks": [
-"02530013104211250",
-"2050203221201001000",
-"0000000000000000"
-],
-"points": [
-30,
-21,
-0
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Affliction Warlock PvP guide: level 60 Soul Link and Curse of Exhaustion drain build",
-"spec": "Affliction",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warlock?b=0253001310421125-2050200321201201&prof=engineering%2Ctailoring",
-"guide": "https://wowforeverbuilds.com/guide/affliction-warlock-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/affliction-warlock-pvp-guide": [],
 "wfb:/guide/arcane-mage-pve-guide": [
 {
 "class": "MAGE",
 "ranks": [
-"055205000100311531",
+"0551205000100301531",
 "03551020000030000",
 "0000000000000000000"
 ],
@@ -10683,23 +9665,23 @@
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
@@ -10727,23 +9709,23 @@
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
@@ -10845,115 +9827,7 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/beta-20-affliction-warlock-leveling": [
-{
-"class": "WARLOCK",
-"ranks": [
-"00532303012200000",
-"0000000000000000000",
-"0000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-10
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-11
-],
-[
-1,
-11
-]
-],
-"level": null,
-"beta": true,
-"name": "WoW Forever Warlock Leveling 1–30: Affliction Build",
-"spec": "Affliction",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warlock?b=005323030122&o=02020202020404030303090505050707070b0b0a0a",
-"guide": "https://wowforeverbuilds.com/guide/beta-20-affliction-warlock-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/beta-20-affliction-warlock-leveling": [],
 "wfb:/guide/beta-20-beast-mastery-hunter-leveling": [
 {
 "class": "HUNTER",
@@ -11172,115 +10046,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/beta-20-discipline-priest-leveling": [
-{
-"class": "PRIEST",
-"ranks": [
-"025003030300000000",
-"00000000000000000",
-"005000000000000000"
-],
-"points": [
-16,
-0,
-5
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "WoW Forever Priest Leveling 1–30: Discipline Wand Build",
-"spec": "Discipline",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=0250030303--005&o=010122222222220202020502020505090909070707",
-"guide": "https://wowforeverbuilds.com/guide/beta-20-discipline-priest-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/beta-20-discipline-priest-leveling": [],
 "wfb:/guide/beta-20-enhancement-shaman-leveling": [
 {
 "class": "SHAMAN",
@@ -11503,7 +10269,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
+"0000000000000000000",
 "00000000000000000",
 "0055003331000100000"
 ],
@@ -11608,144 +10374,8 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/beta-20-fury-warrior-leveling": [
-{
-"class": "WARRIOR",
-"ranks": [
-"00000000000000000",
-"05050100000000000",
-"000000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-6
-]
-],
-"level": null,
-"beta": true,
-"name": "WoW Forever beta Warrior build for level 20: fixing Rage with Unbridled Wrath",
-"spec": "Fury",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=-050501&o=1111111111131313131315",
-"guide": "https://wowforeverbuilds.com/guide/beta-20-fury-warrior-leveling",
-"category": "Leveo"
-}
-],
-"wfb:/guide/beta-20-retribution-paladin-leveling": [
-{
-"class": "PALADIN",
-"ranks": [
-"00000000000000000",
-"0000000000000000",
-"05005001000000000"
-],
-"points": [
-0,
-0,
-11
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-8
-]
-],
-"level": null,
-"beta": true,
-"name": "WoW Forever beta Paladin build for level 20: Retribution, the class everyone calls overtuned",
-"spec": "Retribution",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/paladin?b=--05005001&o=2121212121242424242427",
-"guide": "https://wowforeverbuilds.com/guide/beta-20-retribution-paladin-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/beta-20-fury-warrior-leveling": [],
+"wfb:/guide/beta-20-retribution-paladin-leveling": [],
 "wfb:/guide/combat-rogue-pve-guide": [],
 "wfb:/guide/combat-rogue-pvp-guide": [],
 "wfb:/guide/combat-swords-rogue-leveling": [],
@@ -11978,235 +10608,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/control-group-holy-priest-dungeon-leveling": [
-{
-"class": "PRIEST",
-"ranks": [
-"005203000000000000",
-"33505133230121531",
-"000000000000000000"
-],
-"points": [
-10,
-41,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-6
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-1
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-9
-],
-[
-2,
-9
-],
-[
-2,
-15
-],
-[
-2,
-15
-],
-[
-2,
-15
-],
-[
-2,
-15
-],
-[
-2,
-15
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-14
-],
-[
-2,
-13
-],
-[
-2,
-17
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-13
-],
-[
-2,
-12
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-7
-]
-],
-"level": null,
-"beta": null,
-"name": "Control Group 5-man: Holy Priest healing and Shackle talents (levels 40–60)",
-"spec": "Holy",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=005203-33505133230121531&o=11111110101414141414151717171019191918181e1e1e1e1e1f1f1f1d1c1g12121212121c1b02020202020303050505161616",
-"guide": "https://wowforeverbuilds.com/guide/control-group-holy-priest-dungeon-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/control-group-holy-priest-dungeon-leveling": [],
 "wfb:/guide/control-group-protection-warrior-dungeon-leveling": [],
 "wfb:/guide/control-group-subtlety-rogue-dungeon-leveling": [
 {
@@ -12839,283 +11241,9 @@
 "category": "PvE"
 }
 ],
-"wfb:/guide/demonology-warlock-pvp-guide": [
-{
-"class": "WARLOCK",
-"ranks": [
-"00550013100010000",
-"2054203201201031351",
-"0000000000000000"
-],
-"points": [
-16,
-35,
-0
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Demonology Warlock PvP guide: level 60 Felhunter and Soul Link survival build",
-"spec": "Demonology",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warlock?b=0055001310001-2054200301201231351&prof=engineering%2Calchemy",
-"guide": "https://wowforeverbuilds.com/guide/demonology-warlock-pvp-guide",
-"category": "PvP"
-}
-],
-"wfb:/guide/destruction-shadow-bolt-warlock-leveling": [
-{
-"class": "WARLOCK",
-"ranks": [
-"25530000000200000",
-"0000000000000000000",
-"0553305133100050"
-],
-"points": [
-17,
-0,
-34
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-8
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-11
-],
-[
-3,
-15
-],
-[
-3,
-15
-],
-[
-3,
-15
-],
-[
-3,
-15
-],
-[
-3,
-15
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-12
-],
-[
-1,
-12
-]
-],
-"level": null,
-"beta": null,
-"name": "Destruction Warlock leveling guide 30–60: Shadow Bolt nuke with Ruin and Nightfall",
-"spec": "Destruction",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warlock?b=255300000002--050335513510003&o=02020202022121212121252525252500002323232626262626272424242a29292929292828282e2e2e01010101010303030b0b",
-"guide": "https://wowforeverbuilds.com/guide/destruction-shadow-bolt-warlock-leveling",
-"category": "Leveo"
-}
-],
-"wfb:/guide/destruction-warlock-pve-guide": [
-{
-"class": "WARLOCK",
-"ranks": [
-"25020000000000000",
-"0050203001000000000",
-"1550305103101051"
-],
-"points": [
-9,
-11,
-31
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Destruction Warlock PvE guide: level 60 Shadow and Flame, Ruin and Incinerate build",
-"spec": "Destruction",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warlock?b=2502-0050200301-1500355105101031&prof=tailoring%2Cengineering",
-"guide": "https://wowforeverbuilds.com/guide/destruction-warlock-pve-guide",
-"category": "PvE"
-}
-],
+"wfb:/guide/demonology-warlock-pvp-guide": [],
+"wfb:/guide/destruction-shadow-bolt-warlock-leveling": [],
+"wfb:/guide/destruction-warlock-pve-guide": [],
 "wfb:/guide/destruction-warlock-pvp-guide": [
 {
 "class": "WARLOCK",
@@ -13144,9 +11272,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005203031305101531",
+"005205031330011531",
 "00525003030000000",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 33,
@@ -13168,9 +11296,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005003231113111531",
+"005003231311111531",
 "32051032030100000",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 31,
@@ -13527,227 +11655,16 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/elemental-shaman-leveling": [
-{
-"class": "SHAMAN",
-"ranks": [
-"5504301303123051",
-"050000000000000000",
-"0000000000000000"
-],
-"points": [
-36,
-5,
-0
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-7
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-11
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-10
-],
-[
-1,
-4
-],
-[
-1,
-16
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-12
-],
-[
-1,
-12
-]
-],
-"level": null,
-"beta": null,
-"name": "Elemental Shaman leveling guide 20–50: Lightning Overload and Lava Burst talent order",
-"spec": "Elemental",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=5504301503123031-05&o=000000000004040401010607070707070a0101010c0c0c09090e0e0e09030f11111111110303030b0b",
-"guide": "https://wowforeverbuilds.com/guide/elemental-shaman-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/elemental-shaman-leveling": [],
 "wfb:/guide/elemental-shaman-pve-guide": [],
-"wfb:/guide/elemental-shaman-pvp-guide": [
-{
-"class": "SHAMAN",
-"ranks": [
-"5505001303103151",
-"055202001300000000",
-"0000000000000000"
-],
-"points": [
-33,
-18,
-0
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Elemental Shaman PvP guide: shocks, Lava Burst and Earthbound for battlegrounds",
-"spec": "Elemental",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=5505001503103131-0552020013&prof=engineering%2Cmining",
-"guide": "https://wowforeverbuilds.com/guide/elemental-shaman-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/elemental-shaman-pvp-guide": [],
 "wfb:/guide/enhancement-shaman-leveling": [
 {
 "class": "SHAMAN",
 "ranks": [
 "0000000000000000",
 "055030031355102251",
-"5000500000000000"
+"5500000000000000"
 ],
 "points": [
 0,
@@ -13921,23 +11838,23 @@
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 2,
@@ -14021,179 +11938,8 @@
 }
 ],
 "wfb:/guide/feral-combat-druid-pvp-guide": [],
-"wfb:/guide/fire-mage-leveling": [
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"00552310100133151",
-"0000000000000000000"
-],
-"points": [
-0,
-31,
-0
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-9
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-12
-],
-[
-2,
-15
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-7
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-17
-]
-],
-"level": null,
-"beta": null,
-"name": "Fire Mage leveling guide 10–40: Ignite, Hot Streak and Combustion talent order",
-"spec": "Fire",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=-00552310100133151&o=121212121213131313131815151514141c1c1c1b1e1d1d1d161f1f1f1f1f1g",
-"guide": "https://wowforeverbuilds.com/guide/fire-mage-leveling",
-"category": "Leveo"
-}
-],
-"wfb:/guide/fire-mage-pve-guide": [
-{
-"class": "MAGE",
-"ranks": [
-"230205000000000000",
-"03552020130133051",
-"0050000000000000000"
-],
-"points": [
-12,
-34,
-5
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Fire Mage PvE guide: level 60 Scorch, Hot Streak and Combustion raid build",
-"spec": "Fire",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=230205-03552020130133051-005&prof=tailoring%2Calchemy",
-"guide": "https://wowforeverbuilds.com/guide/fire-mage-pve-guide",
-"category": "PvE"
-}
-],
+"wfb:/guide/fire-mage-leveling": [],
+"wfb:/guide/fire-mage-pve-guide": [],
 "wfb:/guide/fire-mage-pvp-guide": [],
 "wfb:/guide/frost-aoe-mage-leveling": [],
 "wfb:/guide/frost-mage-pve-guide": [],
@@ -14442,9 +12188,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005302011303000000",
+"005303011230000000",
 "03505103030121531",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 18,
@@ -14462,38 +12208,15 @@
 "category": "PvE"
 }
 ],
-"wfb:/guide/holy-priest-pvp-guide": [
-{
-"class": "PRIEST",
-"ranks": [
-"005003231111100000",
-"30255131030111331",
-"000000000000000000"
-],
-"points": [
-18,
-33,
-0
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Holy Priest PvP guide: battleground healer with Spell Warding and Prayer of Mending",
-"spec": "Holy",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=0050032311111-30255131030111331&prof=engineering%2Cherbalism",
-"guide": "https://wowforeverbuilds.com/guide/holy-priest-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/holy-priest-pvp-guide": [],
 "wfb:/guide/holy-shock-paladin-leveling": [],
 "wfb:/guide/holy-smite-priest-leveling": [
 {
 "class": "PRIEST",
 "ranks": [
-"520033031300000000",
+"520030031330000000",
 "30505130202000500",
-"005000000000000000"
+"00500000000000000"
 ],
 "points": [
 20,
@@ -14683,7 +12406,15 @@
 ],
 [
 1,
-10
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
 ],
 [
 1,
@@ -14695,15 +12426,7 @@
 ],
 [
 1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
+10
 ]
 ],
 "level": null,
@@ -14945,235 +12668,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/hunter-warlock-pet-duo-demonology-warlock-group-leveling": [
-{
-"class": "WARLOCK",
-"ranks": [
-"25550000000000000",
-"0055033201200301351",
-"0000000000000000"
-],
-"points": [
-17,
-34,
-0
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-11
-],
-[
-2,
-11
-],
-[
-2,
-10
-],
-[
-2,
-7
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-16
-],
-[
-2,
-17
-],
-[
-2,
-17
-],
-[
-2,
-17
-],
-[
-2,
-4
-],
-[
-2,
-18
-],
-[
-2,
-18
-],
-[
-2,
-18
-],
-[
-2,
-18
-],
-[
-2,
-18
-],
-[
-2,
-19
-],
-[
-2,
-4
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-1
-],
-[
-1,
-1
-]
-],
-"level": null,
-"beta": null,
-"name": "Hunter + Warlock duo leveling 10–60: Demonology Warlock Soul Link talents",
-"spec": "Demonology",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warlock?b=2555-0055033301200201351&o=020202020212121212121515151616161a1a19171d1d1313131f1g1g1g131h1h1h1h1h1i131717010101010103030303030000",
-"guide": "https://wowforeverbuilds.com/guide/hunter-warlock-pet-duo-demonology-warlock-group-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/hunter-warlock-pet-duo-demonology-warlock-group-leveling": [],
 "wfb:/guide/hybrid-cleave-destruction-warlock-dungeon-leveling": [
 {
 "class": "WARLOCK",
@@ -15470,155 +12965,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/hybrid-cleave-elemental-shaman-dungeon-leveling": [
-{
-"class": "SHAMAN",
-"ranks": [
-"5202301321113151",
-"000000000000000000",
-"0000000000000000"
-],
-"points": [
-31,
-0,
-0
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-7
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-11
-],
-[
-1,
-10
-],
-[
-1,
-14
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-12
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-16
-]
-],
-"level": null,
-"beta": null,
-"name": "Hybrid Cleave 5-man: Elemental Shaman Earthbound and Fire Nova talents (levels 15–40)",
-"spec": "Elemental",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=5202301521113131&o=0000000000040404030306070707070708080a090d0c0c0c0b0e0e0e01010f",
-"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-elemental-shaman-dungeon-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/hybrid-cleave-elemental-shaman-dungeon-leveling": [],
 "wfb:/guide/hybrid-cleave-marksmanship-hunter-dungeon-leveling": [
 {
 "class": "HUNTER",
@@ -16364,7 +13711,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"055225223122301531",
+"0550225223122301531",
 "00000000000000000",
 "2030020000000000000"
 ],
@@ -16396,99 +13743,7 @@
 ],
 [
 1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
+7
 ],
 [
 1,
@@ -16496,35 +13751,11 @@
 ],
 [
 1,
-18
+7
 ],
 [
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
+1,
+7
 ],
 [
 1,
@@ -16536,23 +13767,11 @@
 ],
 [
 1,
-3
+10
 ],
 [
 1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
+10
 ],
 [
 1,
@@ -16564,7 +13783,95 @@
 ],
 [
 1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+16
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+18
+],
+[
+1,
+18
+],
+[
+1,
+18
+],
+[
+1,
 8
+],
+[
+1,
+19
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+6
+],
+[
+3,
+6
 ],
 [
 1,
@@ -16576,7 +13883,47 @@
 ],
 [
 1,
-11
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+12
+],
+[
+1,
+12
 ]
 ],
 "level": null,
@@ -16593,7 +13940,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"055225223122301531",
+"0550225223122301531",
 "00000000000000000",
 "2030020000000000000"
 ],
@@ -16625,99 +13972,7 @@
 ],
 [
 1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
+7
 ],
 [
 1,
@@ -16725,35 +13980,11 @@
 ],
 [
 1,
-18
+7
 ],
 [
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
+1,
+7
 ],
 [
 1,
@@ -16765,23 +13996,11 @@
 ],
 [
 1,
-3
+10
 ],
 [
 1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
+10
 ],
 [
 1,
@@ -16793,7 +14012,95 @@
 ],
 [
 1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+16
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+18
+],
+[
+1,
+18
+],
+[
+1,
+18
+],
+[
+1,
 8
+],
+[
+1,
+19
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+6
+],
+[
+3,
+6
 ],
 [
 1,
@@ -16805,7 +14112,47 @@
 ],
 [
 1,
-11
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+12
+],
+[
+1,
+12
 ]
 ],
 "level": null,
@@ -16818,235 +14165,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/mage-cleave-fire-mage-dungeon-leveling": [
-{
-"class": "MAGE",
-"ranks": [
-"000000000000000000",
-"23552333130133151",
-"0050020000000000000"
-],
-"points": [
-0,
-44,
-7
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-15
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-17
-],
-[
-2,
-9
-],
-[
-2,
-12
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-1
-],
-[
-2,
-1
-]
-],
-"level": null,
-"beta": null,
-"name": "Mage Cleave 5-man: Fire Mage Flamestrike and Blast Wave talents (levels 40–60)",
-"spec": "Fire",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=-23552333130133151-005002&o=1212121212131313131316161617171714141c1c1c1d1d1d1e1f1f1f1f1f1g181b191919222222222225251111111515151010",
-"guide": "https://wowforeverbuilds.com/guide/mage-cleave-fire-mage-dungeon-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/mage-cleave-fire-mage-dungeon-leveling": [],
 "wfb:/guide/mage-cleave-holy-paladin-dungeon-leveling": [],
 "wfb:/guide/mage-cleave-protection-paladin-dungeon-leveling": [
 {
@@ -17749,7 +14868,7 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"0500010000000000",
+"0510000000000000",
 "055030331355112251",
 "0000000000000000"
 ],
@@ -17909,7 +15028,7 @@
 ],
 [
 1,
-6
+3
 ],
 [
 2,
@@ -18011,23 +15130,23 @@
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
@@ -18051,11 +15170,11 @@
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
@@ -18167,15 +15286,15 @@
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
@@ -18658,7 +15777,7 @@
 "ranks": [
 "0000000000000000",
 "000000000000000000",
-"5201500310313151"
+"5501200310313151"
 ],
 "points": [
 0,
@@ -18688,23 +15807,23 @@
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
@@ -18728,11 +15847,11 @@
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
@@ -19034,7 +16153,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"050205203000300000",
+"0500205203000300000",
 "00000000000000000",
 "0531320330321031001"
 ],
@@ -19190,55 +16309,11 @@
 ],
 [
 1,
-6
+7
 ],
 [
 1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-13
+7
 ],
 [
 1,
@@ -19247,6 +16322,50 @@
 [
 1,
 7
+],
+[
+1,
+7
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+8
+],
+[
+1,
+8
 ]
 ],
 "level": null,
@@ -19492,9 +16611,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"025003030303101000",
+"025003030330011000",
 "00000000000000000",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 21,
@@ -19524,15 +16643,15 @@
 ],
 [
 1,
-6
+10
 ],
 [
 1,
-6
+10
 ],
 [
 1,
-6
+10
 ],
 [
 1,
@@ -19544,19 +16663,15 @@
 ],
 [
 1,
-10
+11
 ],
 [
 1,
-10
+11
 ],
 [
 1,
-10
-],
-[
-1,
-8
+11
 ],
 [
 1,
@@ -19564,7 +16679,11 @@
 ],
 [
 1,
-13
+8
+],
+[
+1,
+14
 ],
 [
 1,
@@ -19572,15 +16691,15 @@
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
@@ -20190,7 +17309,7 @@
 "ranks": [
 "0000000000000000",
 "205202001300000000",
-"3330502315013151"
+"3530302315013151"
 ],
 "points": [
 0,
@@ -20957,9 +18076,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"025303231335101531",
+"025305231333011531",
 "23005000000000000",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 41,
@@ -20989,15 +18108,15 @@
 ],
 [
 1,
-6
+10
 ],
 [
 1,
-6
+10
 ],
 [
 1,
-6
+10
 ],
 [
 1,
@@ -21013,15 +18132,15 @@
 ],
 [
 1,
-10
+11
 ],
 [
 1,
-10
+11
 ],
 [
 1,
-10
+11
 ],
 [
 1,
@@ -21029,27 +18148,27 @@
 ],
 [
 1,
-13
+14
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
@@ -21113,15 +18232,15 @@
 ],
 [
 1,
-11
+12
 ],
 [
 1,
-11
+12
 ],
 [
 1,
-11
+12
 ],
 [
 1,
@@ -21411,512 +18530,10 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/shadow-cleave-shadow-priest-dungeon-leveling": [
-{
-"class": "PRIEST",
-"ranks": [
-"025002000000000000",
-"00000000000000000",
-"505322501221312251"
-],
-"points": [
-9,
-0,
-42
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-9
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-12
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-14
-],
-[
-3,
-15
-],
-[
-3,
-15
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-11
-],
-[
-3,
-11
-],
-[
-3,
-16
-],
-[
-3,
-16
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-6
-],
-[
-1,
-6
-]
-],
-"level": null,
-"beta": null,
-"name": "Shadow Cleave 5-man: Shadow Priest Vampiric Embrace talents (levels 40–60)",
-"spec": "Shadow",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=025002--505322501221312251&o=222222222224242323232826262626262b2c2c2c2d2e2e25252g2g2g2g2g2h202020202029292a2a2f2f020202020201010505",
-"guide": "https://wowforeverbuilds.com/guide/shadow-cleave-shadow-priest-dungeon-leveling",
-"category": "Leveo"
-}
-],
-"wfb:/guide/shadow-priest-leveling": [
-{
-"class": "PRIEST",
-"ranks": [
-"025003010000000000",
-"00000000000000000",
-"555022521201310051"
-],
-"points": [
-11,
-0,
-40
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-12
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-7
-],
-[
-3,
-14
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-8
-]
-],
-"level": null,
-"beta": null,
-"name": "Shadow Priest leveling guide 10–60: Spirit Tap, Mind Flay and Shadowform talent order",
-"spec": "Shadow",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=02500301--555022521201310051&o=01012222222222242420202028292926262b2c2c2c262d262625252g2g2g2g2g2h202021212121212727020202050505020207",
-"guide": "https://wowforeverbuilds.com/guide/shadow-priest-leveling",
-"category": "Leveo"
-}
-],
-"wfb:/guide/shadow-priest-pve-guide": [
-{
-"class": "PRIEST",
-"ranks": [
-"005302031301000000",
-"00000000000000000",
-"500320501201312251"
-],
-"points": [
-18,
-0,
-33
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Shadow Priest PvE guide: Shadowform damage and Shadow Weaving at level 60",
-"spec": "Shadow",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=005302031301--500320501201312251&prof=tailoring%2Cenchanting",
-"guide": "https://wowforeverbuilds.com/guide/shadow-priest-pve-guide",
-"category": "PvE"
-}
-],
-"wfb:/guide/shadow-priest-pvp-guide": [
-{
-"class": "PRIEST",
-"ranks": [
-"005300231103000000",
-"00000000000000000",
-"350022321011311251"
-],
-"points": [
-18,
-0,
-33
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Shadow Priest PvP guide: Blackout, Silence and Shadowform for level 60 PvP",
-"spec": "Shadow",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=005300231103--350022321011311251&prof=engineering%2Ctailoring",
-"guide": "https://wowforeverbuilds.com/guide/shadow-priest-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/shadow-cleave-shadow-priest-dungeon-leveling": [],
+"wfb:/guide/shadow-priest-leveling": [],
+"wfb:/guide/shadow-priest-pve-guide": [],
+"wfb:/guide/shadow-priest-pvp-guide": [],
 "wfb:/guide/shaman-warrior-horde-duo-arms-warrior-group-leveling": [],
 "wfb:/guide/shaman-warrior-horde-duo-restoration-shaman-group-leveling": [
 {
@@ -21924,7 +18541,7 @@
 "ranks": [
 "0000000000000000",
 "005200000000000000",
-"5533323310513151"
+"5333523310513151"
 ],
 "points": [
 0,
@@ -22078,23 +18695,23 @@
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 3,
-2
+5
 ],
 [
 2,
@@ -22126,15 +18743,15 @@
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ],
 [
 3,
-5
+2
 ]
 ],
 "level": null,
@@ -22151,7 +18768,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
+"0000000000000000000",
 "00000000000000000",
 "0530321330321031001"
 ],
@@ -22302,7 +18919,7 @@
 "ranks": [
 "000000000000000000",
 "33005103230011531",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 0,
@@ -22745,7 +19362,7 @@
 "ranks": [
 "000000000000000000",
 "33005103230011531",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 0,
@@ -22888,235 +19505,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/spriest-leveling-qf2m3q": [
-{
-"class": "PRIEST",
-"ranks": [
-"025003001300000000",
-"00000000000000000",
-"505022501201312251"
-],
-"points": [
-14,
-0,
-37
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-1
-],
-[
-3,
-9
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-15
-],
-[
-3,
-15
-],
-[
-3,
-12
-],
-[
-3,
-14
-],
-[
-3,
-7
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-],
-[
-3,
-16
-],
-[
-3,
-16
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-9
-]
-],
-"level": null,
-"beta": null,
-"name": "SPriest Leveling",
-"spec": "Shadow",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=0250030013--505022501201312251&o=01012222222222242425252028292920202c2c2c20202e2e2b2d262g2g2g2g2g2h2f2f26262626020202020205050509090908&race=undead&prof=alchemy%2Cherbalism",
-"guide": "https://wowforeverbuilds.com/guide/spriest-leveling-qf2m3q",
-"category": "Leveo"
-}
-],
+"wfb:/guide/spriest-leveling-qf2m3q": [],
 "wfb:/guide/subtlety-rogue-pve-guide": [
 {
 "class": "ROGUE",
@@ -23446,9 +19835,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"025003031305101000",
+"025005031330011000",
 "00000000000000000",
-"005020000000000000"
+"00502000000000000"
 ],
 "points": [
 24,
@@ -23506,15 +19895,15 @@
 ],
 [
 1,
-6
+10
 ],
 [
 1,
-6
+10
 ],
 [
 1,
-6
+10
 ],
 [
 1,
@@ -23526,19 +19915,15 @@
 ],
 [
 1,
-10
+11
 ],
 [
 1,
-10
+11
 ],
 [
 1,
-10
-],
-[
-1,
-8
+11
 ],
 [
 1,
@@ -23546,27 +19931,31 @@
 ],
 [
 1,
-13
+8
 ],
 [
 1,
-12
+14
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
 ],
 [
 1,
-12
+6
+],
+[
+1,
+6
 ],
 [
 1,
@@ -23592,155 +19981,7 @@
 }
 ],
 "wfb:/guide/warlock-shadow-priest-dot-duo-affliction-warlock-group-leveling": [],
-"wfb:/guide/warlock-shadow-priest-dot-duo-shadow-priest-group-leveling": [
-{
-"class": "PRIEST",
-"ranks": [
-"000000000000000000",
-"00000000000000000",
-"205320501201310051"
-],
-"points": [
-0,
-0,
-31
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-9
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-12
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-14
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-]
-],
-"level": null,
-"beta": null,
-"name": "Warlock + Priest duo leveling 15–40: Shadow Priest talents and heals",
-"spec": "Shadow",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=--205320501201310051&o=222222222224242323232826262626262b2c2c2c2d292920202g2g2g2g2g2h",
-"guide": "https://wowforeverbuilds.com/guide/warlock-shadow-priest-dot-duo-shadow-priest-group-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/warlock-shadow-priest-dot-duo-shadow-priest-group-leveling": [],
 "wfb:/guide/warrior-paladin-arms-warrior-group-leveling": [
 {
 "class": "WARRIOR",
@@ -24276,51 +20517,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"025003031300100000",
-"00000000000000000",
-"500320501201312251"
-],
-"points": [
-18,
-0,
-33
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Shadow Priest DPS Build",
-"spec": "Shadow",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-shadow-dps",
-"category": "PvE"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"005302031300000000",
-"13505103030121531",
-"000000000000000000"
-],
-"points": [
-17,
-34,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Holy Priest Healing Build",
-"spec": "Holy",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-holy-healing",
-"category": "PvE"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"005203031303101531",
+"005203031330011531",
 "30505003030100000",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 31,
@@ -24339,9 +20538,9 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005303231030121531",
+"005300231303211531",
 "00000000000000000",
-"150022521000000000"
+"15052221000000000"
 ],
 "points": [
 33,
@@ -24356,27 +20555,6 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-discipline-pvp",
 "category": "PvP"
-},
-{
-"class": "PRIEST",
-"ranks": [
-"025003031300000000",
-"00000000000000000",
-"055020521001302251"
-],
-"points": [
-17,
-0,
-34
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Shadow Priest Leveling Build",
-"spec": "Shadow",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-shadow-leveling",
-"category": "Leveo"
 }
 ],
 "rankedboost:SHAMAN": [
@@ -24404,28 +20582,7 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5505301300103051",
-"050000000000000000",
-"0531500000000000"
-],
-"points": [
-32,
-5,
-14
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Elemental Shaman DPS Build",
-"spec": "Elemental",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-dps",
-"category": "PvE"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0500030000000000",
+"0530000000000000",
 "055030031005112151",
 "0500500000000000"
 ],
@@ -24442,55 +20599,13 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-enhancement-dps",
 "category": "PvE"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0530301303100000",
-"253202001050000000",
-"0000000000000000"
-],
-"points": [
-19,
-20,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Elemental Shaman PvP Build",
-"spec": "Elemental",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-pvp",
-"category": "PvP"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0000000000000000",
-"054032031355112251",
-"0530000000000000"
-],
-"points": [
-0,
-43,
-8
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Enhancement Shaman Leveling Build",
-"spec": "Enhancement",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-enhancement-leveling",
-"category": "Leveo"
 }
 ],
 "rankedboost:MAGE": [
 {
 "class": "MAGE",
 "ranks": [
-"230005000000000000",
+"2300005000000000000",
 "00000000000000000",
 "0505323331321331201"
 ],
@@ -24511,7 +20626,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"255205023100311531",
+"2551205023100301531",
 "23052000000000000",
 "0000000000000000000"
 ],
@@ -24532,28 +20647,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"050205000000000000",
-"03550030130133151",
-"0050000000000000000"
-],
-"points": [
-12,
-34,
-5
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Fire Mage DPS Build",
-"spec": "Fire",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-fire-dps",
-"category": "PvE"
-},
-{
-"class": "MAGE",
-"ranks": [
-"050205003000310000",
+"0501205003000300000",
 "00000000000000000",
 "0555000331000300250"
 ],
@@ -24574,7 +20668,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"050222220002000000",
+"0500222220002000000",
 "00000000000000000",
 "0555323001021301201"
 ],
@@ -24594,48 +20688,6 @@
 }
 ],
 "rankedboost:WARLOCK": [
-{
-"class": "WARLOCK",
-"ranks": [
-"20552313000201351",
-"2050033200201000000",
-"0000000000000000"
-],
-"points": [
-33,
-18,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Affliction Warlock Leveling Build",
-"spec": "Affliction",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/warlock/#build=auth-warlock-affliction-leveling",
-"category": "Leveo"
-},
-{
-"class": "WARLOCK",
-"ranks": [
-"25550300035201351",
-"0050203001000000000",
-"0000000000000000"
-],
-"points": [
-40,
-11,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Affliction Warlock DPS Build",
-"spec": "Affliction",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/warlock/#build=auth-warlock-affliction-dps",
-"category": "PvE"
-},
 {
 "class": "WARLOCK",
 "ranks": [
@@ -24811,7 +20863,7 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"00550001000000000",
+"00520301000000000",
 "0000000000000000000",
 "0000000000000000"
 ],
@@ -24843,15 +20895,15 @@
 ],
 [
 1,
-4
+6
 ],
 [
 1,
-4
+6
 ],
 [
 1,
-4
+6
 ],
 [
 1,
@@ -25017,7 +21069,7 @@
 "ranks": [
 "005203000100000000",
 "00000000000000000",
-"000000000000000000"
+"00000000000000000"
 ],
 "points": [
 11,
@@ -25219,7 +21271,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"000000000000000000",
+"0000000000000000000",
 "00000000000000000",
 "0500320001000000000"
 ],
@@ -26671,19 +22723,19 @@
 [
 "PRIEST",
 0,
-11,
+5,
 18551
 ],
 [
 "PRIEST",
 0,
-13,
+12,
 14750
 ],
 [
 "PRIEST",
 0,
-12,
+13,
 402000
 ],
 [
@@ -26695,7 +22747,7 @@
 [
 "PRIEST",
 0,
-10,
+11,
 14747
 ],
 [
@@ -26707,7 +22759,7 @@
 [
 "PRIEST",
 0,
-9,
+10,
 14521
 ],
 [
@@ -26725,7 +22777,7 @@
 [
 "PRIEST",
 0,
-5,
+9,
 14748
 ],
 [
@@ -26863,61 +22915,55 @@
 [
 "PRIEST",
 2,
-17,
+16,
 15473
 ],
 [
 "PRIEST",
 2,
-16,
+15,
 15259
 ],
 [
 "PRIEST",
 2,
-11,
+10,
 15286
 ],
 [
 "PRIEST",
 2,
-12,
+11,
 15257
 ],
 [
 "PRIEST",
 2,
-10,
-15274
+9,
+1326159
 ],
 [
 "PRIEST",
 2,
-13,
+12,
 15487
 ],
 [
 "PRIEST",
 2,
-9,
+8,
 1225139
 ],
 [
 "PRIEST",
 2,
-8,
+7,
 15407
 ],
 [
 "PRIEST",
 2,
 6,
-15273
-],
-[
-"PRIEST",
-2,
-7,
 15392
 ],
 [
@@ -26936,7 +22982,7 @@
 "PRIEST",
 2,
 3,
-15318
+15273
 ],
 [
 "PRIEST",
@@ -26959,26 +23005,26 @@
 [
 "PRIEST",
 2,
-15,
+14,
 1310076
 ],
 [
 "SHAMAN",
 0,
 15,
-408490
-],
-[
-"SHAMAN",
-0,
-12,
-408438
+16166
 ],
 [
 "SHAMAN",
 0,
 13,
-1222988
+408438
+],
+[
+"SHAMAN",
+0,
+12,
+408490
 ],
 [
 "SHAMAN",
@@ -26990,7 +23036,7 @@
 "SHAMAN",
 0,
 10,
-16120
+1222988
 ],
 [
 "SHAMAN",
@@ -27008,7 +23054,7 @@
 "SHAMAN",
 0,
 7,
-16578
+28996
 ],
 [
 "SHAMAN",
@@ -27031,20 +23077,20 @@
 [
 "SHAMAN",
 0,
-5,
+2,
 30160
 ],
 [
 "SHAMAN",
 0,
-4,
+5,
 16038
 ],
 [
 "SHAMAN",
 0,
-2,
-28996
+4,
+16578
 ],
 [
 "SHAMAN",
@@ -27200,7 +23246,7 @@
 "SHAMAN",
 2,
 1,
-16173
+16179
 ],
 [
 "SHAMAN",
@@ -27236,7 +23282,7 @@
 "SHAMAN",
 2,
 4,
-16179
+16173
 ],
 [
 "SHAMAN",
@@ -27265,91 +23311,91 @@
 [
 "MAGE",
 0,
-17,
+18,
 12042
 ],
 [
 "MAGE",
 0,
-16,
+17,
 15058
 ],
 [
 "MAGE",
 0,
-15,
+16,
 11232
 ],
 [
 "MAGE",
 0,
-14,
+15,
 12043
 ],
 [
 "MAGE",
 0,
-13,
+3,
 400588
 ],
 [
 "MAGE",
 0,
-12,
+13,
 18462
 ],
 [
 "MAGE",
 0,
-11,
+12,
 11255
 ],
 [
 "MAGE",
 0,
-10,
+11,
 11252
 ],
 [
 "MAGE",
 0,
-9,
+10,
 400574
 ],
 [
 "MAGE",
 0,
-8,
+9,
 11242
 ],
 [
 "MAGE",
 0,
-7,
+8,
 11247
 ],
 [
 "MAGE",
 0,
-6,
+7,
 28574
 ],
 [
 "MAGE",
 0,
-5,
+6,
 11213
 ],
 [
 "MAGE",
 0,
-4,
+5,
 29441
 ],
 [
 "MAGE",
 0,
-3,
+4,
 11210
 ],
 [
@@ -27369,6 +23415,12 @@
 0,
 0,
 6057
+],
+[
+"MAGE",
+0,
+14,
+1326079
 ],
 [
 "MAGE",
@@ -27411,12 +23463,6 @@
 1,
 10,
 11094
-],
-[
-"MAGE",
-1,
-9,
-11095
 ],
 [
 "MAGE",
@@ -27547,20 +23593,8 @@
 [
 "MAGE",
 2,
-6,
-11071
-],
-[
-"MAGE",
-2,
 5,
 11165
-],
-[
-"MAGE",
-2,
-4,
-11175
 ],
 [
 "MAGE",
@@ -27668,7 +23702,7 @@
 "WARLOCK",
 0,
 3,
-1225177
+18218
 ],
 [
 "WARLOCK",
@@ -29250,10 +25284,6 @@
 "P": [
 3,
 17
-],
-"Q": [
-3,
-18
 ]
 },
 "SHAMAN": {
@@ -29532,146 +25562,150 @@
 18
 ],
 "i": [
-2,
-1
+1,
+19
 ],
 "j": [
 2,
-2
+1
 ],
 "k": [
 2,
-3
+2
 ],
 "l": [
 2,
-4
+3
 ],
 "m": [
 2,
-5
+4
 ],
 "n": [
 2,
-6
+5
 ],
 "o": [
 2,
-7
+6
 ],
 "p": [
 2,
-8
+7
 ],
 "q": [
 2,
-9
+8
 ],
 "r": [
 2,
-10
+9
 ],
 "s": [
 2,
-11
+10
 ],
 "t": [
 2,
-12
+11
 ],
 "u": [
 2,
-13
+12
 ],
 "v": [
 2,
-14
+13
 ],
 "w": [
 2,
-15
+14
 ],
 "x": [
 2,
-16
+15
 ],
 "y": [
 2,
-17
+16
 ],
 "z": [
-3,
-1
+2,
+17
 ],
 "A": [
 3,
-2
+1
 ],
 "B": [
 3,
-3
+2
 ],
 "C": [
 3,
-4
+3
 ],
 "D": [
 3,
-5
+4
 ],
 "E": [
 3,
-6
+7
 ],
 "F": [
 3,
-7
+6
 ],
 "G": [
 3,
-8
+5
 ],
 "H": [
 3,
-9
+8
 ],
 "I": [
 3,
-10
+9
 ],
 "J": [
 3,
-11
+10
 ],
 "K": [
 3,
-12
+11
 ],
 "L": [
 3,
-13
+12
 ],
 "M": [
 3,
-14
+13
 ],
 "N": [
 3,
-15
+14
 ],
 "O": [
 3,
-16
+15
 ],
 "P": [
 3,
-17
+16
 ],
 "Q": [
 3,
-18
+17
 ],
 "R": [
+3,
+18
+],
+"S": [
 3,
 19
 ]
@@ -30963,23 +26997,23 @@
 1,
 9
 ],
-"Ab": [
+"Aa": [
 1,
 10
 ],
-"Ac": [
+"Ab": [
 1,
 11
 ],
-"Ad": [
+"Ac": [
 1,
 12
 ],
-"Ae": [
+"Ad": [
 1,
 13
 ],
-"Af": [
+"Ae": [
 1,
 14
 ],
@@ -31091,53 +27125,49 @@
 3,
 6
 ],
-"C8": [
+"C9": [
 3,
 7
 ],
-"C9": [
+"Ca": [
 3,
 8
 ],
-"Ca": [
+"Cb": [
 3,
 9
 ],
-"Cb": [
+"Cc": [
 3,
 10
 ],
-"Cc": [
+"Cd": [
 3,
 11
 ],
-"Cd": [
+"Ce": [
 3,
 12
 ],
-"Ce": [
+"Cg": [
 3,
 13
 ],
-"Cg": [
+"Ci": [
 3,
 14
 ],
-"Ci": [
+"Ck": [
 3,
 15
 ],
-"Ck": [
+"Cm": [
 3,
 16
 ],
-"Cm": [
-3,
-17
-],
 "Cp": [
 3,
-18
+17
 ]
 },
 "SHAMAN": {
@@ -31165,11 +27195,11 @@
 1,
 6
 ],
-"A9": [
+"A8": [
 1,
 7
 ],
-"Aa": [
+"A9": [
 1,
 8
 ],
@@ -31181,7 +27211,7 @@
 1,
 10
 ],
-"Ae": [
+"Af": [
 1,
 11
 ],
@@ -31193,7 +27223,7 @@
 1,
 13
 ],
-"Aj": [
+"Ai": [
 1,
 14
 ],
@@ -31355,65 +27385,69 @@
 1,
 3
 ],
-"A4": [
+"A3": [
 1,
 4
 ],
-"A5": [
+"A4": [
 1,
 5
 ],
-"A6": [
+"A5": [
 1,
 6
 ],
-"A7": [
+"A6": [
 1,
 7
 ],
-"A8": [
+"A7": [
 1,
 8
 ],
-"A9": [
+"A8": [
 1,
 9
 ],
-"Ab": [
+"A9": [
 1,
 10
 ],
-"Ac": [
+"Ab": [
 1,
 11
 ],
-"Ad": [
+"Ac": [
 1,
 12
 ],
-"Ae": [
+"Ad": [
 1,
 13
 ],
-"Af": [
+"Ae": [
 1,
 14
 ],
-"Ah": [
+"Af": [
 1,
 15
 ],
-"Ai": [
+"Ah": [
 1,
 16
 ],
-"Am": [
+"Ai": [
 1,
 17
 ],
-"Ap": [
+"Am": [
 1,
 18
+],
+"Ap": [
+1,
+19
 ],
 "B0": [
 2,
@@ -31501,7 +27535,7 @@
 ],
 "C5": [
 3,
-5
+7
 ],
 "C6": [
 3,
@@ -31509,7 +27543,7 @@
 ],
 "C7": [
 3,
-7
+5
 ],
 "C8": [
 3,
@@ -32817,7 +28851,7 @@
 ],
 "0:5": [
 1,
-6
+10
 ],
 "0:6": [
 1,
@@ -32833,23 +28867,23 @@
 ],
 "0:9": [
 1,
-10
+11
 ],
 "0:10": [
 1,
-11
+12
 ],
 "0:11": [
 1,
-12
+6
 ],
 "0:12": [
 1,
-13
+14
 ],
 "0:13": [
 1,
-14
+13
 ],
 "0:14": [
 1,
@@ -32947,10 +28981,6 @@
 3,
 3
 ],
-"2:3": [
-3,
-4
-],
 "2:4": [
 3,
 5
@@ -32961,51 +28991,47 @@
 ],
 "2:6": [
 3,
-7
+4
 ],
 "2:7": [
 3,
-8
+7
 ],
 "2:8": [
 3,
-9
+8
 ],
 "2:9": [
 3,
-10
-],
-"2:10": [
-3,
-11
+9
 ],
 "2:11": [
 3,
-12
+11
 ],
 "2:12": [
 3,
-13
+12
 ],
 "2:13": [
 3,
-14
+13
 ],
 "2:14": [
 3,
-15
+14
 ],
 "2:15": [
 3,
-16
+15
 ],
 "2:16": [
 3,
-17
+16
 ],
 "2:17": [
 3,
-18
+17
 ]
 },
 "SHAMAN": {
@@ -33019,7 +29045,7 @@
 ],
 "0:2": [
 1,
-3
+8
 ],
 "0:3": [
 1,
@@ -33027,11 +29053,11 @@
 ],
 "0:4": [
 1,
-5
+6
 ],
 "0:5": [
 1,
-6
+3
 ],
 "0:6": [
 1,
@@ -33049,29 +29075,25 @@
 1,
 10
 ],
-"0:10": [
-1,
-11
-],
 "0:11": [
 1,
 12
 ],
 "0:12": [
 1,
-13
+14
 ],
 "0:13": [
 1,
-14
+11
 ],
 "0:14": [
 1,
-8
+5
 ],
 "0:15": [
 1,
-16
+13
 ],
 "1:0": [
 2,
@@ -33163,7 +29185,7 @@
 ],
 "2:4": [
 3,
-5
+2
 ],
 "2:5": [
 3,
@@ -33183,7 +29205,7 @@
 ],
 "2:9": [
 3,
-2
+5
 ],
 "2:10": [
 3,
@@ -33225,63 +29247,63 @@
 ],
 "0:3": [
 1,
-4
+5
 ],
 "0:4": [
 1,
-5
+6
 ],
 "0:5": [
 1,
-6
+7
 ],
 "0:6": [
 1,
-7
+8
 ],
 "0:7": [
 1,
-8
+9
 ],
 "0:8": [
 1,
-9
+10
 ],
 "0:9": [
 1,
-10
+11
 ],
 "0:10": [
 1,
-11
+12
 ],
 "0:11": [
 1,
-12
+13
 ],
 "0:12": [
 1,
-13
+14
 ],
 "0:13": [
 1,
-14
+4
 ],
 "0:14": [
 1,
-15
+16
 ],
 "0:15": [
 1,
-16
+17
 ],
 "0:16": [
 1,
-17
+18
 ],
 "0:17": [
 1,
-18
+19
 ],
 "1:0": [
 2,
@@ -33440,10 +29462,6 @@
 "0:2": [
 1,
 3
-],
-"0:3": [
-1,
-4
 ],
 "0:4": [
 1,
@@ -33852,7 +29870,7 @@
 "name": "Master Chef",
 "max": 5,
 "row": 1,
-"col": 3,
+"col": 2,
 "icon": "achievement_profession_chefhat",
 "gate": 5,
 "req": null,
@@ -33912,7 +29930,7 @@
 "name": "Luremaster",
 "max": 2,
 "row": 4,
-"col": 3,
+"col": 2,
 "icon": "inv_misc_basket_04",
 "gate": 5,
 "req": null,
@@ -35785,13 +31803,6 @@
 "cost": 4000
 },
 {
-"id": 5502,
-"name": "Sense Undead",
-"rank": 1,
-"level": 20,
-"source": "quest"
-},
-{
 "id": 19835,
 "name": "Blessing of Might",
 "rank": 3,
@@ -35862,20 +31873,6 @@
 "cost": 5000
 },
 {
-"id": 20163,
-"name": "Seal of Fury",
-"rank": 3,
-"level": 25,
-"cost": 6000
-},
-{
-"id": 1038,
-"name": "Blessing of Salvation",
-"rank": 1,
-"level": 26,
-"cost": 6000
-},
-{
 "id": 19939,
 "name": "Flash of Light",
 "rank": 2,
@@ -35886,6 +31883,26 @@
 "id": 10298,
 "name": "Retribution Aura",
 "rank": 2,
+"level": 26,
+"cost": 6000
+},
+{
+"id": 1325499,
+"name": "Revoke",
+"rank": 1,
+"level": 26
+},
+{
+"id": 1038,
+"name": "Salvation",
+"rank": 1,
+"level": 26,
+"cost": 6000
+},
+{
+"id": 20163,
+"name": "Seal of Fury",
+"rank": 3,
 "level": 26,
 "cost": 6000
 },
@@ -36569,13 +32586,6 @@
 "cost": 46000
 },
 {
-"id": 25895,
-"name": "Greater Blessing of Salvation",
-"rank": 1,
-"level": 60,
-"cost": 46000
-},
-{
 "id": 25918,
 "name": "Greater Blessing of Wisdom",
 "rank": 2,
@@ -36623,6 +32633,13 @@
 "rank": 3,
 "level": 60,
 "cost": 2300
+},
+{
+"id": 25895,
+"name": "Mass Salvation",
+"rank": 1,
+"level": 60,
+"cost": 46000
 },
 {
 "id": 20773,
@@ -36675,13 +32692,6 @@
 "kind": "pet"
 },
 {
-"id": 4187,
-"name": "Great Stamina",
-"rank": 1,
-"level": 1,
-"kind": "pet"
-},
-{
 "id": 2649,
 "name": "Growl",
 "rank": 1,
@@ -36691,13 +32701,6 @@
 {
 "id": 24844,
 "name": "Lightning Breath",
-"rank": 1,
-"level": 1,
-"kind": "pet"
-},
-{
-"id": 24545,
-"name": "Natural Armor",
 "rank": 1,
 "level": 1,
 "kind": "pet"
@@ -36825,6 +32828,13 @@
 "kind": "pet"
 },
 {
+"id": 4187,
+"name": "Great Stamina",
+"rank": 1,
+"level": 10,
+"kind": "pet"
+},
+{
 "id": 14916,
 "name": "Growl",
 "rank": 2,
@@ -36834,6 +32844,13 @@
 {
 "id": 1265054,
 "name": "Mine!",
+"rank": 1,
+"level": 10,
+"kind": "pet"
+},
+{
+"id": 24545,
+"name": "Natural Armor",
 "rank": 1,
 "level": 10,
 "kind": "pet"
@@ -37920,13 +33937,6 @@
 "kind": "pet"
 },
 {
-"id": 24507,
-"name": "Shadow Resistance",
-"rank": 4,
-"level": 40,
-"kind": "pet"
-},
-{
 "id": 26187,
 "name": "Thunderstomp",
 "rank": 2,
@@ -38155,7 +34165,7 @@
 "name": "Sniper Shot",
 "rank": 2,
 "level": 48,
-"cost": 14000
+"cost": 30526
 },
 {
 "id": 1264481,
@@ -38204,7 +34214,7 @@
 "name": "Aspect of the Beast",
 "rank": 3,
 "level": 50,
-"cost": 36000
+"cost": 31578
 },
 {
 "id": 23110,
@@ -38281,6 +34291,13 @@
 "rank": 7,
 "level": 50,
 "cost": 36000
+},
+{
+"id": 24507,
+"name": "Shadow Resistance",
+"rank": 4,
+"level": 50,
+"kind": "pet"
 },
 {
 "id": 26188,
@@ -38462,7 +34479,7 @@
 "name": "Sniper Shot",
 "rank": 3,
 "level": 58,
-"cost": 24000
+"cost": 41052
 },
 {
 "id": 14295,
@@ -38490,7 +34507,7 @@
 "name": "Aspect of the Beast",
 "rank": 4,
 "level": 60,
-"cost": 48000
+"cost": 41052
 },
 {
 "id": 25296,
@@ -41705,6 +37722,13 @@
 "cost": 11000
 },
 {
+"id": 17354,
+"name": "Mana Tide Totem",
+"rank": 2,
+"level": 38,
+"cost": 1100
+},
+{
 "id": 6392,
 "name": "Stoneclaw Totem",
 "rank": 4,
@@ -41759,6 +37783,13 @@
 "rank": 7,
 "level": 40,
 "cost": 12000
+},
+{
+"id": 1238299,
+"name": "Lava Burst",
+"rank": 2,
+"level": 40,
+"cost": 24000
 },
 {
 "id": 8134,
@@ -41936,11 +37967,11 @@
 "cost": 22000
 },
 {
-"id": 17354,
+"id": 17359,
 "name": "Mana Tide Totem",
-"rank": 2,
+"rank": 3,
 "level": 48,
-"cost": 1100
+"cost": 1600
 },
 {
 "id": 10427,
@@ -41957,11 +37988,11 @@
 "cost": 24000
 },
 {
-"id": 1238299,
+"id": 1238300,
 "name": "Lava Burst",
-"rank": 2,
+"rank": 3,
 "level": 50,
-"cost": 24000
+"cost": 34000
 },
 {
 "id": 15207,
@@ -42146,11 +38177,10 @@
 "cost": 32000
 },
 {
-"id": 17359,
+"id": 1325256,
 "name": "Mana Tide Totem",
-"rank": 3,
-"level": 58,
-"cost": 1600
+"rank": 4,
+"level": 58
 },
 {
 "id": 10428,
@@ -42202,11 +38232,10 @@
 "source": "drop"
 },
 {
-"id": 1238300,
+"id": 1326047,
 "name": "Lava Burst",
-"rank": 3,
-"level": 60,
-"cost": 34000
+"rank": 4,
+"level": 60
 },
 {
 "id": 10468,
@@ -42573,6 +38602,12 @@
 "cost": 4000
 },
 {
+"id": 1326053,
+"name": "Frost Blast",
+"rank": 1,
+"level": 24
+},
+{
 "id": 12505,
 "name": "Pyroblast",
 "rank": 2,
@@ -42769,6 +38804,12 @@
 "cost": 12000
 },
 {
+"id": 1326080,
+"name": "Arcane Wrath",
+"rank": 2,
+"level": 36
+},
+{
 "id": 13018,
 "name": "Blast Wave",
 "rank": 2,
@@ -42795,6 +38836,12 @@
 "rank": 7,
 "level": 36,
 "cost": 13000
+},
+{
+"id": 1326054,
+"name": "Frost Blast",
+"rank": 2,
+"level": 36
 },
 {
 "id": 8495,
@@ -43035,6 +39082,12 @@
 "cost": 28000
 },
 {
+"id": 1326081,
+"name": "Arcane Wrath",
+"rank": 3,
+"level": 48
+},
+{
 "id": 10053,
 "name": "Conjure Mana Citrine",
 "rank": 1,
@@ -43061,6 +39114,12 @@
 "rank": 5,
 "level": 48,
 "cost": 28000
+},
+{
+"id": 1326055,
+"name": "Frost Blast",
+"rank": 3,
+"level": 48
 },
 {
 "id": 1240046,
@@ -43252,13 +39311,6 @@
 "cost": 40000
 },
 {
-"id": 10161,
-"name": "Cone of Cold",
-"rank": 5,
-"level": 58,
-"cost": 40000
-},
-{
 "id": 10054,
 "name": "Conjure Mana Ruby",
 "rank": 1,
@@ -43292,6 +39344,12 @@
 "rank": 5,
 "level": 60,
 "cost": 42000
+},
+{
+"id": 1326082,
+"name": "Arcane Wrath",
+"rank": 4,
+"level": 60
 },
 {
 "id": 13021,
@@ -45216,6 +41274,13 @@
 "cost": 2000
 },
 {
+"id": 5221,
+"name": "Shred",
+"rank": 1,
+"level": 20,
+"cost": 3000
+},
+{
 "id": 2912,
 "name": "Starfire",
 "rank": 1,
@@ -45233,13 +41298,6 @@
 "id": 2090,
 "name": "Rejuvenation",
 "rank": 4,
-"level": 22,
-"cost": 3000
-},
-{
-"id": 5221,
-"name": "Shred",
-"rank": 1,
 "level": 22,
 "cost": 3000
 },
