@@ -4884,7 +4884,7 @@
 "ranks": [
 "0002000000000000000",
 "00000000000000000",
-"052530030100300200"
+"051530031100300200"
 ],
 "points": [
 2,
@@ -4937,6 +4937,14 @@
 10
 ],
 [
+1,
+4
+],
+[
+1,
+4
+],
+[
 3,
 4
 ],
@@ -4982,19 +4990,11 @@
 ],
 [
 3,
-3
+9
 ],
 [
 3,
 3
-],
-[
-1,
-4
-],
-[
-1,
-4
 ]
 ],
 "level": null,
@@ -5002,7 +5002,7 @@
 "name": "Level 30 Talent Build",
 "spec": "Frost",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-BBBBBEEEDDJDDDINNNIIQQCC33",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-BBBBBEEEDDJ33DDDHMMMHHPPIC",
 "guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
 "category": "PvE"
 }
@@ -19727,7 +19727,92 @@
 }
 ],
 "wfb:/guide/warrior-paladin-retribution-paladin-group-leveling": [],
-"rankedboost:WARRIOR": [],
+"rankedboost:WARRIOR": [
+{
+"class": "WARRIOR",
+"ranks": [
+"30324003002000000",
+"05053025050210501",
+"000000000000000000"
+],
+"points": [
+17,
+34,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Fury Warrior DPS Build",
+"spec": "Fury",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-fury-dps",
+"category": "PvE"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"02305213032510031",
+"05501130050000000",
+"000000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Arms Warrior PvP Build",
+"spec": "Arms",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-pvp",
+"category": "PvP"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"35015010000000000",
+"00000000000000000",
+"255530120300001351"
+],
+"points": [
+15,
+0,
+36
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Protection Warrior Tank Build",
+"spec": "Protection",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-protection-tank",
+"category": "PvE"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"30325013032015201",
+"05250030050000000",
+"000000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Arms Warrior Leveling Build",
+"spec": "Arms",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-leveling",
+"category": "Leveo"
+}
+],
 "rankedboost:PALADIN": [
 {
 "class": "PALADIN",
@@ -19753,12 +19838,12 @@
 {
 "class": "PALADIN",
 "ranks": [
-"03000000000000000",
+"05003000000000000",
 "5530503320001551",
 "50000000000000000"
 ],
 "points": [
-3,
+8,
 38,
 5
 ],
@@ -19774,14 +19859,14 @@
 {
 "class": "PALADIN",
 "ranks": [
-"50003000000000000",
+"51003000000000000",
 "5030000000000000",
-"05225331001330311"
+"05225331001330321"
 ],
 "points": [
+9,
 8,
-8,
-33
+34
 ],
 "order": null,
 "level": 60,
@@ -19816,14 +19901,14 @@
 {
 "class": "PALADIN",
 "ranks": [
-"55023000000000000",
+"55023003000000000",
 "0000000000000000",
-"05215331201330300"
+"05215331201330301"
 ],
 "points": [
-15,
+18,
 0,
-32
+33
 ],
 "order": null,
 "level": 60,
@@ -20032,6 +20117,48 @@
 {
 "class": "PRIEST",
 "ranks": [
+"025300001330010000",
+"00000000000000000",
+"50052201211312251"
+],
+"points": [
+18,
+0,
+33
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Shadow Priest DPS Build",
+"spec": "Shadow",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-shadow-dps",
+"category": "PvE"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"005302031030000000",
+"13505103030121531",
+"00000000000000000"
+],
+"points": [
+17,
+34,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Holy Priest Healing Build",
+"spec": "Holy",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-holy-healing",
+"category": "PvE"
+},
+{
+"class": "PRIEST",
+"ranks": [
 "005203031330011531",
 "30505003030100000",
 "00000000000000000"
@@ -20070,6 +20197,27 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-discipline-pvp",
 "category": "PvP"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"025003031030000000",
+"00000000000000000",
+"05552021001302251"
+],
+"points": [
+17,
+0,
+34
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Shadow Priest Leveling Build",
+"spec": "Shadow",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-shadow-leveling",
+"category": "Leveo"
 }
 ],
 "rankedboost:SHAMAN": [
@@ -20097,6 +20245,27 @@
 {
 "class": "SHAMAN",
 "ranks": [
+"5505331000001351",
+"050000000000000000",
+"0531500000000000"
+],
+"points": [
+32,
+5,
+14
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Elemental Shaman DPS Build",
+"spec": "Elemental",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-dps",
+"category": "PvE"
+},
+{
+"class": "SHAMAN",
+"ranks": [
 "0530000000000000",
 "055030031005112151",
 "0500500000000000"
@@ -20114,6 +20283,48 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-enhancement-dps",
 "category": "PvE"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"1500331303121341",
+"253202001050000000",
+"0000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Elemental Shaman PvP Build",
+"spec": "Elemental",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-pvp",
+"category": "PvP"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"0000000000000000",
+"054032031355112251",
+"0530000000000000"
+],
+"points": [
+0,
+43,
+8
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Enhancement Shaman Leveling Build",
+"spec": "Enhancement",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-enhancement-leveling",
+"category": "Leveo"
 }
 ],
 "rankedboost:MAGE": [
@@ -20140,6 +20351,48 @@
 }
 ],
 "rankedboost:WARLOCK": [
+{
+"class": "WARLOCK",
+"ranks": [
+"20522323002201351",
+"2050033200201000000",
+"0000000000000000"
+],
+"points": [
+33,
+18,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Affliction Warlock Leveling Build",
+"spec": "Affliction",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warlock/#build=auth-warlock-affliction-leveling",
+"category": "Leveo"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"25520321035201351",
+"0050203001000000000",
+"0000000000000000"
+],
+"points": [
+40,
+11,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Affliction Warlock DPS Build",
+"spec": "Affliction",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warlock/#build=auth-warlock-affliction-dps",
+"category": "PvE"
+},
 {
 "class": "WARLOCK",
 "ranks": [
@@ -20293,12 +20546,12 @@
 "class": "DRUID",
 "ranks": [
 "0000000000000000",
-"55202302020032012501",
+"55232302020032012501",
 "0550300000000000"
 ],
 "points": [
 0,
-35,
+38,
 13
 ],
 "order": null,
@@ -22919,6 +23172,12 @@
 [
 "MAGE",
 1,
+9,
+11095
+],
+[
+"MAGE",
+1,
 6,
 11083
 ],
@@ -23039,6 +23298,12 @@
 [
 "MAGE",
 2,
+2,
+29438
+],
+[
+"MAGE",
+2,
 1,
 11070
 ],
@@ -23059,6 +23324,18 @@
 2,
 6,
 11175
+],
+[
+"MAGE",
+2,
+8,
+11185
+],
+[
+"MAGE",
+2,
+7,
+11160
 ],
 [
 "WARLOCK",
@@ -25101,9 +25378,13 @@
 3,
 7
 ],
-"I": [
+"H": [
 3,
 8
+],
+"I": [
+3,
+9
 ],
 "J": [
 3,
@@ -25111,37 +25392,33 @@
 ],
 "K": [
 3,
-9
+11
 ],
 "L": [
 3,
-11
+12
 ],
 "M": [
 3,
-12
+13
 ],
 "N": [
 3,
-13
+14
 ],
 "O": [
 3,
-14
+15
 ],
 "P": [
 3,
-15
+16
 ],
 "Q": [
 3,
-16
-],
-"R": [
-3,
 17
 ],
-"S": [
+"R": [
 3,
 18
 ]
