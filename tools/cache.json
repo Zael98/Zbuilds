@@ -1899,21 +1899,15 @@
 2
 ],
 [
-"Arcane Focus",
+"Improved Channeling",
 1,
 2,
 5
 ],
 [
-"Improved Channeling",
+"Arcane Resilience",
 1,
 3,
-5
-],
-[
-"Missile Barrage",
-1,
-4,
 2
 ],
 [
@@ -1935,7 +1929,7 @@
 5
 ],
 [
-"Arcane Resilience",
+"Missile Barrage",
 2,
 4,
 2
@@ -2009,19 +2003,13 @@
 ],
 [
 [
-"Improved Fire Blast",
-1,
-1,
-2
-],
-[
 "Incineration",
 1,
 2,
-3
+5
 ],
 [
-"Improved Fireball",
+"Accelerant",
 1,
 3,
 5
@@ -2063,6 +2051,12 @@
 1
 ],
 [
+"Improved Fire Blast",
+3,
+4,
+2
+],
+[
 "Improved Scorch",
 4,
 1,
@@ -2090,7 +2084,7 @@
 "Critical Mass",
 5,
 2,
-5
+3
 ],
 [
 "Blast Wave",
@@ -2125,7 +2119,7 @@
 5
 ],
 [
-"Elemental Precision",
+"Precision",
 1,
 3,
 3
@@ -2977,19 +2971,35 @@
 {
 "class": "MAGE",
 "ranks": [
-"2052205020100011000",
-"00000000000000000",
-"000000000000000000"
+"050205203100311531",
+"53000000000000000",
+"053300000000000000"
 ],
 "points": [
-21,
-0,
-0
+32,
+8,
+11
 ],
 "order": [
 [
 1,
-4
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
 ],
 [
 1,
@@ -2997,55 +3007,87 @@
 ],
 [
 1,
-1
+4
 ],
 [
 1,
-1
+6
 ],
 [
 1,
-3
+6
 ],
 [
 1,
-5
+6
 ],
 [
 1,
-5
+6
 ],
 [
 1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-11
-],
-[
-1,
-3
-],
-[
-1,
-9
-],
-[
-1,
-9
+6
 ],
 [
 1,
 7
+],
+[
+1,
+7
+],
+[
+1,
+10
+],
+[
+1,
+14
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
 ],
 [
 1,
@@ -3053,31 +3095,103 @@
 ],
 [
 1,
-7
+17
 ],
 [
 1,
-7
+17
 ],
 [
 1,
-7
+17
 ],
 [
 1,
-7
+18
 ],
 [
-1,
-16
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
 ]
 ],
 "level": null,
-"beta": true,
+"beta": null,
 "name": "Level 30 Talent Build",
 "spec": "Arcane",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-3300244222a2886e6666f",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-111113355555669d888cccfffffeggghBBBAAAAACCCiiiiijjj",
 "guide": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
 "category": "PvE"
 }
@@ -4773,18 +4887,38 @@
 {
 "class": "MAGE",
 "ranks": [
-"0002000000000000000",
-"20522030100130000",
-"000000000000000000"
+"050205200100100000",
+"55500001230133031",
+"003000000000000000"
 ],
 "points": [
-2,
-19,
-0
+16,
+32,
+3
 ],
 "order": [
 [
 1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
 4
 ],
 [
@@ -4792,32 +4926,40 @@
 4
 ],
 [
-2,
-3
+1,
+6
 ],
 [
-2,
-3
+1,
+6
 ],
 [
-2,
-3
+1,
+6
 ],
 [
-2,
-3
+1,
+6
 ],
 [
-2,
-3
+1,
+6
 ],
 [
-2,
-5
+1,
+7
 ],
 [
-2,
-5
+1,
+7
+],
+[
+1,
+10
+],
+[
+1,
+13
 ],
 [
 2,
@@ -4829,7 +4971,59 @@
 ],
 [
 2,
-4
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+8
 ],
 [
 2,
@@ -4837,19 +5031,7 @@
 ],
 [
 2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-4
+9
 ],
 [
 2,
@@ -4866,131 +5048,54 @@
 [
 2,
 13
-]
 ],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Fire",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-33lllllnnjjmrpppmuvvv",
-"guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
-"category": "PvE"
-}
-],
-"iv:/wow-forever/frost-mage-ranged-dps-pve-guide": [
-{
-"class": "MAGE",
-"ranks": [
-"0002000000000000000",
-"00000000000000000",
-"051530031100300200"
-],
-"points": [
+[
 2,
-0,
-24
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
 10
 ],
 [
-1,
-4
+2,
+10
 ],
 [
-1,
-4
+2,
+10
 ],
 [
-3,
-4
+2,
+14
 ],
 [
-3,
-4
+2,
+14
 ],
 [
-3,
-4
+2,
+14
 ],
 [
-3,
-8
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
+2,
 16
 ],
 [
-3,
+2,
 16
 ],
 [
+2,
+16
+],
+[
+2,
+17
+],
+[
 3,
-9
+3
+],
+[
+3,
+3
 ],
 [
 3,
@@ -5000,13 +5105,14 @@
 "level": null,
 "beta": null,
 "name": "Level 30 Talent Build",
-"spec": "Frost",
+"spec": "Fire",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-BBBBBEEEDDJ33DDDHMMMHHPPIC",
-"guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-111113355555669ciiiiijjjjjkkkkkpqqtuuurrrvvvxxxyBBB",
+"guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
 "category": "PvE"
 }
 ],
+"iv:/wow-forever/frost-mage-ranged-dps-pve-guide": [],
 "iv:/wow-forever/fury-warrior-melee-dps-pve-guide": [
 {
 "class": "WARRIOR",
@@ -7236,6 +7342,7 @@
 "tavern:/forever/guides/shaman/": [],
 "tavern:/forever/guides/warlock/": [],
 "tavern:/forever/guides/warrior/": [],
+"method:/wow-forever/class-guides": [],
 "method:/wow-forever/leveling-guides": [],
 "method:/wow-forever/mage-comprehension-and-study-guide-in-wow-forever-how-scrolls-work-and-all-scroll-effects": [],
 "method:/wow-forever/wow-forever-druid-leveling-guide-and-talents": [
@@ -9430,30 +9537,7 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/arcane-mage-pve-guide": [
-{
-"class": "MAGE",
-"ranks": [
-"0551205000100301531",
-"03551020000030000",
-"000000000000000000"
-],
-"points": [
-32,
-19,
-0
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Arcane Mage PvE guide: level 60 Arcane Blast and Arcane Power raid build",
-"spec": "Arcane",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=055120500010031531-0355102000003&prof=tailoring%2Cenchanting",
-"guide": "https://wowforeverbuilds.com/guide/arcane-mage-pve-guide",
-"category": "PvE"
-}
-],
+"wfb:/guide/arcane-mage-pve-guide": [],
 "wfb:/guide/arcane-mage-pvp-guide": [],
 "wfb:/guide/arms-warrior-leveling": [
 {
@@ -15578,206 +15662,12 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/fire-mage-leveling": [
-{
-"class": "MAGE",
-"ranks": [
-"0000000000000000000",
-"00552310100135131",
-"000000000000000000"
-],
-"points": [
-0,
-31,
-0
-],
-"order": [
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-9
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-13
-],
-[
-2,
-12
-],
-[
-2,
-15
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-7
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-17
-]
-],
-"level": null,
-"beta": null,
-"name": "Fire Mage leveling guide 10–40: Ignite, Heating Up and Combustion talent order",
-"spec": "Fire",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=-00552310100135131&o=121212121213131313131815151514141c1c1c1b1e1d1d1d161f1f1f1d1d1g",
-"guide": "https://wowforeverbuilds.com/guide/fire-mage-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/fire-mage-leveling": [],
 "wfb:/guide/fire-mage-pve-guide": [],
-"wfb:/guide/fire-mage-pvp-guide": [
-{
-"class": "MAGE",
-"ranks": [
-"0000000000000000000",
-"03550330100135101",
-"203132310101300000"
-],
-"points": [
-0,
-31,
-20
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Fire Mage PvP guide: level 60 Impact, Blast Wave and Shatter burst build",
-"spec": "Fire",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=-03550330100135101-20313230110013&prof=engineering%2Cenchanting",
-"guide": "https://wowforeverbuilds.com/guide/fire-mage-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/fire-mage-pvp-guide": [],
 "wfb:/guide/frost-aoe-mage-leveling": [],
 "wfb:/guide/frost-mage-pve-guide": [],
-"wfb:/guide/frost-mage-pvp-guide": [
-{
-"class": "MAGE",
-"ranks": [
-"0500025201002300000",
-"00000000000000000",
-"050532200111321221"
-],
-"points": [
-20,
-0,
-31
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Frost Mage PvP guide: level 60 control build for battlegrounds and world PvP",
-"spec": "Frost",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=05000252010023--0505223001011321221&prof=engineering%2Ctailoring",
-"guide": "https://wowforeverbuilds.com/guide/frost-mage-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/frost-mage-pvp-guide": [],
 "wfb:/guide/frost-shatter-mage-leveling": [],
 "wfb:/guide/fury-warrior-pve-guide": [
 {
@@ -18577,233 +18467,6 @@
 ],
 "wfb:/guide/mage-cleave-arcane-mage-dungeon-leveling": [
 {
-"class": "MAGE",
-"ranks": [
-"0550225223122301531",
-"00000000000000000",
-"203002000000000000"
-],
-"points": [
-44,
-0,
-7
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-16
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-18
-],
-[
-1,
-18
-],
-[
-1,
-18
-],
-[
-1,
-8
-],
-[
-1,
-19
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-1,
-8
-],
-[
-1,
-11
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-12
-],
-[
-1,
-12
-]
-],
-"level": null,
-"beta": null,
-"name": "Mage Cleave 5-man: Arcane Mage Arcane Explosion talents (levels 40–60)",
-"spec": "Arcane",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=055022522312231531--203002&o=0101010101060606060609090904040d0d0d0c0c0e0f0f0f0f0f0g0g0g070h20202222222525070a0202020202050508080b0b",
-"guide": "https://wowforeverbuilds.com/guide/mage-cleave-arcane-mage-dungeon-leveling",
-"category": "Leveo"
-},
-{
 "class": "DRUID",
 "ranks": [
 "5532223005521351",
@@ -19256,233 +18919,6 @@
 "spec": "Balance",
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/druid?b=5532223005521351--5002&o=000000000004040505030302020206060609090909090c0b0b0e0e0e0e0e0f202020202023230a0a0a0a0a0d0d0d0101010101",
-"guide": "https://wowforeverbuilds.com/guide/mage-cleave-balance-druid-dungeon-leveling",
-"category": "Leveo"
-},
-{
-"class": "MAGE",
-"ranks": [
-"0550225223122301531",
-"00000000000000000",
-"203002000000000000"
-],
-"points": [
-44,
-0,
-7
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-13
-],
-[
-1,
-13
-],
-[
-1,
-16
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-17
-],
-[
-1,
-18
-],
-[
-1,
-18
-],
-[
-1,
-18
-],
-[
-1,
-8
-],
-[
-1,
-19
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-1,
-8
-],
-[
-1,
-11
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-12
-],
-[
-1,
-12
-]
-],
-"level": null,
-"beta": null,
-"name": "Mage Cleave 5-man: Balance Druid Hurricane and Moonkin talents (levels 40–60)",
-"spec": "Arcane",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=055022522312231531--203002&o=0101010101060606060609090904040d0d0d0c0c0e0f0f0f0f0f0g0g0g070h20202222222525070a0202020202050508080b0b",
 "guide": "https://wowforeverbuilds.com/guide/mage-cleave-balance-druid-dungeon-leveling",
 "category": "Leveo"
 }
@@ -20099,7 +19535,7 @@
 {
 "class": "MAGE",
 "ranks": [
-"0000000000000000000",
+"000000000000000000",
 "00000000000000000",
 "050212333101331201"
 ],
@@ -29221,29 +28657,7 @@
 "category": "Leveo"
 }
 ],
-"rankedboost:MAGE": [
-{
-"class": "MAGE",
-"ranks": [
-"2551205023100301531",
-"23052000000000000",
-"000000000000000000"
-],
-"points": [
-39,
-12,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Arcane Mage DPS Build",
-"spec": "Arcane",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-arcane-dps",
-"category": "PvE"
-}
-],
+"rankedboost:MAGE": [],
 "rankedboost:WARLOCK": [
 {
 "class": "WARLOCK",
@@ -29866,74 +29280,7 @@
 "category": "PvE"
 }
 ],
-"wft:/builds/frost-mage-solo-10-20/": [
-{
-"class": "MAGE",
-"ranks": [
-"0000000000000000000",
-"00000000000000000",
-"050002300100000000"
-],
-"points": [
-0,
-0,
-11
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-10
-]
-],
-"level": 20,
-"beta": true,
-"name": "Frost Mage Solo 10–20",
-"spec": "Frost",
-"source": "WoW Forever Talent",
-"url": "https://wowforevertalent.com/builds/frost-mage-solo-10-20/",
-"category": "Leveo"
-}
-],
+"wft:/builds/frost-mage-solo-10-20/": [],
 "wft:/builds/fury-warrior-solo-10-20/": [
 {
 "class": "WARRIOR",
@@ -31910,104 +31257,80 @@
 [
 "MAGE",
 0,
-18,
+17,
 12042
 ],
 [
 "MAGE",
 0,
-17,
+16,
 15058
 ],
 [
 "MAGE",
 0,
-16,
+15,
 11232
 ],
 [
 "MAGE",
 0,
-15,
+14,
 12043
 ],
 [
 "MAGE",
 0,
-3,
-400588
-],
-[
-"MAGE",
-0,
-13,
+12,
 18462
 ],
 [
 "MAGE",
 0,
-12,
+11,
 11255
 ],
 [
 "MAGE",
 0,
-11,
+10,
 11252
 ],
 [
 "MAGE",
 0,
-10,
+9,
 400574
 ],
 [
 "MAGE",
 0,
-9,
+8,
 11242
 ],
 [
 "MAGE",
 0,
-8,
+7,
 11247
 ],
 [
 "MAGE",
 0,
-7,
-28574
-],
-[
-"MAGE",
-0,
-6,
+5,
 11213
 ],
 [
 "MAGE",
 0,
-5,
+4,
 29441
 ],
 [
 "MAGE",
 0,
-4,
+3,
 11210
-],
-[
-"MAGE",
-0,
-2,
-11237
-],
-[
-"MAGE",
-0,
-1,
-11222
 ],
 [
 "MAGE",
@@ -32018,7 +31341,7 @@
 [
 "MAGE",
 0,
-14,
+13,
 1326079
 ],
 [
@@ -32038,12 +31361,6 @@
 1,
 14,
 11113
-],
-[
-"MAGE",
-1,
-13,
-11115
 ],
 [
 "MAGE",
@@ -32072,56 +31389,44 @@
 [
 "MAGE",
 1,
-6,
+5,
 11083
 ],
 [
 "MAGE",
 1,
-8,
+7,
 11366
 ],
 [
 "MAGE",
 1,
-7,
+6,
 11108
 ],
 [
 "MAGE",
 1,
-5,
+4,
 11103
 ],
 [
 "MAGE",
 1,
-4,
+3,
 11100
 ],
 [
 "MAGE",
 1,
-3,
+2,
 11119
 ],
 [
 "MAGE",
 1,
-2,
+1,
 11069
-],
-[
-"MAGE",
-1,
-1,
-18459
-],
-[
-"MAGE",
-1,
-0,
-11078
 ],
 [
 "MAGE",
@@ -34173,146 +33478,142 @@
 18
 ],
 "i": [
-1,
-19
+2,
+1
 ],
 "j": [
 2,
-1
+2
 ],
 "k": [
 2,
-2
+3
 ],
 "l": [
 2,
-3
+4
 ],
 "m": [
 2,
-4
+5
 ],
 "n": [
 2,
-5
+6
 ],
 "o": [
 2,
-6
+7
 ],
 "p": [
 2,
-7
+8
 ],
 "q": [
 2,
-8
+9
 ],
 "r": [
 2,
-9
+10
 ],
 "s": [
 2,
-10
+11
 ],
 "t": [
 2,
-11
+12
 ],
 "u": [
 2,
-12
+13
 ],
 "v": [
 2,
-13
+14
 ],
 "w": [
 2,
-14
+15
 ],
 "x": [
 2,
-15
+16
 ],
 "y": [
 2,
-16
-],
-"z": [
-2,
 17
 ],
-"A": [
+"z": [
 3,
 1
 ],
-"B": [
+"A": [
 3,
 2
 ],
-"C": [
+"B": [
 3,
 3
 ],
-"D": [
+"C": [
 3,
 4
 ],
-"E": [
+"D": [
 3,
 5
 ],
-"F": [
+"E": [
 3,
 6
 ],
-"G": [
+"F": [
 3,
 7
 ],
-"H": [
+"G": [
 3,
 8
 ],
-"I": [
+"H": [
 3,
 9
 ],
-"J": [
+"I": [
 3,
 10
 ],
-"K": [
+"J": [
 3,
 11
 ],
-"L": [
+"K": [
 3,
 12
 ],
-"M": [
+"L": [
 3,
 13
 ],
-"N": [
+"M": [
 3,
 14
 ],
-"O": [
+"N": [
 3,
 15
 ],
-"P": [
+"O": [
 3,
 16
 ],
-"Q": [
+"P": [
 3,
 17
 ],
-"R": [
+"Q": [
 3,
 18
 ]
@@ -35984,113 +35285,109 @@
 1,
 1
 ],
-"A1": [
-1,
-2
-],
 "A2": [
 1,
-3
+2
 ],
 "A3": [
 1,
-4
+7
 ],
 "A4": [
 1,
-5
+4
 ],
 "A5": [
 1,
-6
+5
 ],
 "A6": [
 1,
-7
+6
 ],
 "A7": [
 1,
-8
+3
 ],
 "A8": [
 1,
-9
+8
 ],
 "A9": [
 1,
-10
+9
 ],
 "Ab": [
 1,
-11
+10
 ],
 "Ac": [
 1,
-12
+11
 ],
 "Ad": [
 1,
-13
+12
 ],
 "Ae": [
 1,
-14
+13
 ],
 "Af": [
 1,
-15
+14
 ],
 "Ah": [
 1,
-16
+15
 ],
 "Ai": [
 1,
-17
+16
 ],
 "Am": [
 1,
-18
+17
 ],
 "Ap": [
 1,
-19
+18
 ],
 "B0": [
 2,
-1
+9
 ],
 "B1": [
 2,
-2
+1
 ],
 "B2": [
 2,
-3
+2
 ],
 "B4": [
 2,
-4
+3
 ],
 "B5": [
 2,
-5
+4
 ],
 "B6": [
 2,
-6
+5
 ],
 "B8": [
 2,
-7
+6
 ],
 "B9": [
 2,
-8
+7
 ],
 "Ba": [
 2,
-9
+8
 ],
 "Bc": [
 2,
@@ -37864,109 +37161,105 @@
 1,
 1
 ],
-"0:1": [
-1,
-2
-],
 "0:2": [
 1,
-3
+2
 ],
 "0:3": [
 1,
-4
+7
 ],
 "0:4": [
 1,
-5
+4
 ],
 "0:5": [
 1,
-6
+5
 ],
 "0:6": [
 1,
-7
+6
 ],
 "0:7": [
 1,
-8
+3
 ],
 "0:8": [
 1,
-9
+8
 ],
 "0:9": [
 1,
-10
+9
 ],
 "0:10": [
 1,
-11
+10
 ],
 "0:11": [
 1,
-12
+11
 ],
 "0:12": [
 1,
-13
+12
 ],
 "0:13": [
 1,
-14
+13
 ],
 "0:14": [
 1,
-16
+15
 ],
 "0:15": [
 1,
-17
+16
 ],
 "0:16": [
 1,
-18
+17
 ],
 "0:17": [
 1,
-19
+18
 ],
 "1:0": [
 2,
-1
+9
 ],
 "1:1": [
 2,
-2
+1
 ],
 "1:2": [
 2,
-3
+2
 ],
 "1:3": [
 2,
-4
+3
 ],
 "1:4": [
 2,
-5
+4
 ],
 "1:5": [
 2,
-6
+5
 ],
 "1:6": [
 2,
-7
+6
 ],
 "1:7": [
 2,
-8
+7
 ],
 "1:8": [
 2,
-9
+8
 ],
 "1:9": [
 2,
@@ -47241,12 +46534,6 @@
 "cost": 4000
 },
 {
-"id": 1326053,
-"name": "Frost Blast",
-"rank": 1,
-"level": 24
-},
-{
 "id": 12505,
 "name": "Pyroblast",
 "rank": 2,
@@ -47475,12 +46762,6 @@
 "rank": 7,
 "level": 36,
 "cost": 13000
-},
-{
-"id": 1326054,
-"name": "Frost Blast",
-"rank": 2,
-"level": 36
 },
 {
 "id": 8495,
@@ -47753,12 +47034,6 @@
 "rank": 5,
 "level": 48,
 "cost": 28000
-},
-{
-"id": 1326055,
-"name": "Frost Blast",
-"rank": 3,
-"level": 48
 },
 {
 "id": 1240046,
