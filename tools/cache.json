@@ -21186,7 +21186,113 @@
 "category": "Leveo"
 }
 ],
-"rankedboost:MAGE": [],
+"rankedboost:MAGE": [
+{
+"class": "MAGE",
+"ranks": [
+"212005000000000000",
+"00000000000000000",
+"050532333121331231"
+],
+"points": [
+10,
+0,
+41
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Frost Mage Leveling Build",
+"spec": "Frost",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-frost-leveling",
+"category": "Leveo"
+},
+{
+"class": "MAGE",
+"ranks": [
+"250205223100311531",
+"51520000200000000",
+"000000000000000000"
+],
+"points": [
+36,
+15,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Arcane Mage DPS Build",
+"spec": "Arcane",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-arcane-dps",
+"category": "PvE"
+},
+{
+"class": "MAGE",
+"ranks": [
+"212205000000000000",
+"55500301230133131",
+"003000000000000000"
+],
+"points": [
+12,
+36,
+3
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Fire Mage DPS Build",
+"spec": "Fire",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-fire-dps",
+"category": "PvE"
+},
+{
+"class": "MAGE",
+"ranks": [
+"041205103000300000",
+"00000000000000000",
+"053500030120330250"
+],
+"points": [
+19,
+0,
+32
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Frost Mage DPS Build",
+"spec": "Frost",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-frost-dps",
+"category": "PvE"
+},
+{
+"class": "MAGE",
+"ranks": [
+"212224020002000000",
+"00000000000000000",
+"253532300121301201"
+],
+"points": [
+17,
+0,
+34
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Frost Mage PvP Build",
+"spec": "Frost",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/mage/#build=auth-mage-frost-pvp",
+"category": "PvP"
+}
+],
 "rankedboost:WARLOCK": [
 {
 "class": "WARLOCK",
