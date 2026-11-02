@@ -4203,7 +4203,115 @@
 "category": "PvE"
 }
 ],
-"iv:/wow-forever/feral-druid-melee-dps-and-tank-pve-guide": [],
+"iv:/wow-forever/feral-druid-melee-dps-and-tank-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50230032021101010000",
+"0000000000000000"
+],
+"points": [
+0,
+21,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+11
+],
+[
+2,
+12
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+14
+],
+[
+2,
+16
+]
+],
+"level": null,
+"beta": true,
+"name": "Level 30 Talent Build",
+"spec": "Feral",
+"source": "Icy Veins",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggiijjjmmmnnqrpptv",
+"guide": "https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide",
+"category": "PvE"
+}
+],
 "iv:/wow-forever/fire-mage-ranged-dps-pve-guide": [
 {
 "class": "MAGE",
@@ -5929,153 +6037,6 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"05500023035001151",
-"0000000000000000000",
-"0000000000000000"
-],
-"points": [
-31,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-14
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-17
-]
-],
-"level": null,
-"beta": null,
-"name": "Affliction",
-"spec": "Affliction",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents#zb1",
-"guide": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents",
-"category": "Leveo"
-},
-{
-"class": "WARLOCK",
-"ranks": [
 "04000000000000000",
 "0025203201201301351",
 "0000000000000000"
@@ -6229,10 +6190,10 @@
 ],
 "level": null,
 "beta": null,
-"name": "Demonology",
+"name": "A Word on Drain Tanking",
 "spec": "Demonology",
 "source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents#zb2",
+"url": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents#zb1",
 "guide": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents",
 "category": "Leveo"
 },
@@ -6392,10 +6353,10 @@
 ],
 "level": null,
 "beta": null,
-"name": "Destruction",
+"name": "A Word on Drain Tanking",
 "spec": "Destruction",
 "source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents#zb3",
+"url": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents#zb2",
 "guide": "https://www.method.gg/wow-forever/wow-forever-warlock-leveling-guide-and-talents",
 "category": "Leveo"
 }
@@ -7157,8 +7118,54 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/arcane-mage-pve-guide": [],
-"wfb:/guide/arcane-mage-pvp-guide": [],
+"wfb:/guide/arcane-mage-pve-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"052225223100311531",
+"55000000000000000",
+"003000000000000000"
+],
+"points": [
+38,
+10,
+3
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Arcane Mage PvE guide: level 60 Arcane Blast and Arcane Power raid build",
+"spec": "Arcane",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=052225223100311531-55-003&prof=tailoring%2Cenchanting",
+"guide": "https://wowforeverbuilds.com/guide/arcane-mage-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/arcane-mage-pvp-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"023025102102311531",
+"00000000000000000",
+"203032310101300000"
+],
+"points": [
+32,
+0,
+19
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Arcane Mage PvP guide: level 60 Presence of Mind and Arcane Power burst build",
+"spec": "Arcane",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=023025102102311531--2030323101013&prof=engineering%2Ctailoring",
+"guide": "https://wowforeverbuilds.com/guide/arcane-mage-pvp-guide",
+"category": "PvP"
+}
+],
 "wfb:/guide/arms-warrior-leveling": [
 {
 "class": "WARRIOR",
@@ -7488,14 +7495,14 @@
 {
 "class": "DRUID",
 "ranks": [
-"5032223115501051",
+"5532223115501051",
 "00000000000000000000",
-"5000000000000000"
+"0000000000000000"
 ],
 "points": [
-36,
+41,
 0,
-5
+0
 ],
 "order": [
 [
@@ -7624,7 +7631,23 @@
 ],
 [
 1,
-11
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
 ],
 [
 1,
@@ -7643,24 +7666,8 @@
 11
 ],
 [
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
+1,
+11
 ]
 ],
 "level": null,
@@ -7668,7 +7675,7 @@
 "name": "Balance Druid leveling guide 10–50: Moonkin talent order with Improved Wrath",
 "spec": "Balance",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5032223115501051--5&o=0000000000030304040505060606070809090909090c0202020e0e0e0e0e0f0a0a0a0a0a2020202020",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115501051&o=0000000000030304040505060606070809090909090c0202020e0e0e0e0e0f01010101010a0a0a0a0a",
 "guide": "https://wowforeverbuilds.com/guide/balance-caster-druid-leveling",
 "category": "Leveo"
 }
@@ -7701,14 +7708,14 @@
 {
 "class": "DRUID",
 "ranks": [
-"3302213100521251",
+"3302213110521251",
 "00000000000000000000",
-"5053002022100000"
+"5053002012100000"
 ],
 "points": [
-31,
+32,
 0,
-20
+19
 ],
 "order": null,
 "level": null,
@@ -7716,7 +7723,7 @@
 "name": "Balance Druid PvP guide: level 60 Moonkin root, stun and burst build",
 "spec": "Balance",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=3302213100521251--50500320221&prof=engineering%2Cherbalism",
+"url": "https://wowforeverbuilds.com/talents/druid?b=3302213110521251--50530020121&prof=engineering%2Cherbalism",
 "guide": "https://wowforeverbuilds.com/guide/balance-druid-pvp-guide",
 "category": "PvP"
 }
@@ -8094,7 +8101,7 @@
 "name": "Beast Mastery Hunter leveling guide 10–60: pet talents, Bestial Wrath and Summon Hawk",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/hunter?b=5520021525121251-0050502&o=0000000000020201010107070707070909090909060c0b0b0a0e0e0e0e0e0f01010d0d08081212121212141414141416160505",
+"url": "https://wowforeverbuilds.com/talents/hunter?b=5520201525121251-0050502&o=0000000000020201010107070707070909090909060c0b0b0a0e0e0e0e0e0f01010d0d08081212121212141414141416160404",
 "guide": "https://wowforeverbuilds.com/guide/beast-mastery-hunter-leveling",
 "category": "Leveo"
 }
@@ -8412,14 +8419,6 @@
 ],
 [
 1,
-6
-],
-[
-1,
-6
-],
-[
-1,
 3
 ],
 [
@@ -8433,6 +8432,18 @@
 [
 1,
 5
+],
+[
+1,
+2
+],
+[
+1,
+6
+],
+[
+1,
+6
 ],
 [
 1,
@@ -8492,10 +8503,6 @@
 ],
 [
 1,
-12
-],
-[
-1,
 15
 ],
 [
@@ -8516,11 +8523,11 @@
 ],
 [
 1,
-15
+12
 ],
 [
 1,
-2
+15
 ],
 [
 1,
@@ -8600,7 +8607,7 @@
 "name": "WoW Forever Hunter Leveling 1–60: Beast Mastery Build",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/hunter?b=5520221525121251-00505&o=0000000000040402020505070707070709090909090a060c0b0b0e0e0e0e0f0e01010101010d0d080812121212121414141414",
+"url": "https://wowforeverbuilds.com/talents/hunter?b=5520221525121251-00505&o=000000000002020404010505070707070709090909090a060c0b0e0e0e0e0f0b0e010101010d0d080812121212121414141414",
 "guide": "https://wowforeverbuilds.com/guide/beta-20-beast-mastery-hunter-leveling",
 "category": "Leveo"
 }
@@ -9292,8 +9299,464 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/beta-20-feral-druid-leveling": [],
-"wfb:/guide/beta-20-frost-mage-leveling": [],
+"wfb:/guide/beta-20-feral-druid-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"55220332123012125011",
+"0550000000000000"
+],
+"points": [
+0,
+41,
+10
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+13
+],
+[
+2,
+16
+],
+[
+2,
+15
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+19
+],
+[
+2,
+20
+],
+[
+2,
+16
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+2,
+4
+],
+[
+2,
+4
+]
+],
+"level": null,
+"beta": null,
+"name": "WoW Forever Druid Leveling 1–60: Feral Cat Build",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-55220332123012125011-055&o=1010101010121215151518171719191a1a1a1616161d1d1c1f1e1g1g1g1g1g1i1j1f1111111111212121212122222222221313",
+"guide": "https://wowforeverbuilds.com/guide/beta-20-feral-druid-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/beta-20-frost-mage-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"50000000000000000",
+"253532333121331231"
+],
+"points": [
+0,
+5,
+46
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+10
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+13
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+15
+],
+[
+3,
+18
+],
+[
+3,
+12
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+]
+],
+"level": null,
+"beta": null,
+"name": "WoW Forever Mage Leveling 1–60: Frost Build & Talents",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=-5-253532333121331231&o=22222221212424242323292626262323232727272c21212120202c2c25252e2h2b2f2f2828282a2a2d2d2d10101010102g2g2g",
+"guide": "https://wowforeverbuilds.com/guide/beta-20-frost-mage-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/beta-20-fury-warrior-leveling": [
 {
 "class": "WARRIOR",
@@ -9523,7 +9986,235 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/beta-20-retribution-paladin-leveling": [],
+"wfb:/guide/beta-20-retribution-paladin-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"05025000200000000",
+"40000000000000000",
+"05233301201301351"
+],
+"points": [
+14,
+4,
+33
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+9
+],
+[
+3,
+11
+],
+[
+3,
+9
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+14
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+17
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+]
+],
+"level": null,
+"beta": null,
+"name": "WoW Forever Paladin Leveling 1–60: Retribution Build",
+"spec": "Retribution",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=050250002-4-05233301201301351&o=2121212121232323222227242424252525282a282b2b2b2e2e2e2d2f2f2f2g01010101010404040404080803032f2f10101010",
+"guide": "https://wowforeverbuilds.com/guide/beta-20-retribution-paladin-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/combat-rogue-pve-guide": [
 {
 "class": "ROGUE",
@@ -10030,7 +10721,235 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/control-group-holy-priest-dungeon-leveling": [],
+"wfb:/guide/control-group-holy-priest-dungeon-leveling": [
+{
+"class": "PRIEST",
+"ranks": [
+"005203000000000000",
+"33505133230121531",
+"00000000000000000"
+],
+"points": [
+10,
+41,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+6
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+1
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+14
+],
+[
+2,
+13
+],
+[
+2,
+17
+],
+[
+2,
+12
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+13
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+]
+],
+"level": null,
+"beta": null,
+"name": "Control Group 5-man: Holy Priest healing and Shackle talents (levels 40–60)",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/priest?b=005203-33505133230121531&o=11111110101414141414151717171019191918181e1e1e1e1e1f1f1f1d1c1g1b12121212121c02020202020303050505161616",
+"guide": "https://wowforeverbuilds.com/guide/control-group-holy-priest-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/control-group-protection-warrior-dungeon-leveling": [
 {
 "class": "WARRIOR",
@@ -11196,13 +12115,13 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005205031330011531",
-"00525003030000000",
+"005205021330011531",
+"00525003030100000",
 "00000000000000000"
 ],
 "points": [
-33,
-18,
+32,
+19,
 0
 ],
 "order": null,
@@ -11211,19 +12130,42 @@
 "name": "Discipline Priest PvE guide: Penance, Divine Aegis and shields at level 60",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=005205031330011531-0052500303&prof=tailoring%2Cenchanting",
+"url": "https://wowforeverbuilds.com/talents/priest?b=005205021330011531-005250030301&prof=tailoring%2Cenchanting",
 "guide": "https://wowforeverbuilds.com/guide/discipline-priest-pve-guide",
 "category": "PvE"
 }
 ],
-"wfb:/guide/discipline-priest-pvp-guide": [],
+"wfb:/guide/discipline-priest-pvp-guide": [
+{
+"class": "PRIEST",
+"ranks": [
+"005003231311111531",
+"32051032030100000",
+"00000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Discipline Priest PvP guide: shields, Penance and Spell Warding for battlegrounds",
+"spec": "Discipline",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/priest?b=005003231311111531-320510320301&prof=engineering%2Ctailoring",
+"guide": "https://wowforeverbuilds.com/guide/discipline-priest-pvp-guide",
+"category": "PvP"
+}
+],
 "wfb:/guide/druid-hunter-balance-druid-group-leveling": [
 {
 "class": "DRUID",
 "ranks": [
 "5532223115521351",
 "00000000000000000000",
-"5000000000000000"
+"0500000000000000"
 ],
 "points": [
 46,
@@ -11397,6 +12339,18 @@
 ],
 [
 1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
 12
 ],
 [
@@ -11405,35 +12359,23 @@
 ],
 [
 3,
-1
+2
 ],
 [
 3,
-1
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
+2
 ],
 [
 3,
-1
+2
 ],
 [
 3,
-1
+2
 ],
 [
 3,
-1
+2
 ]
 ],
 "level": null,
@@ -11441,7 +12383,7 @@
 "name": "Druid + Hunter duo leveling 40–60: Balance Druid Moonkin talents",
 "spec": "Balance",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115521351--5&o=000000000005050303040407060606080a0a0a0a0a0c0d0d0d0e0e0e0e0e0f090909090901010101010b0b2020020202202020",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115521351--05&o=000000000005050303040407060606080a0a0a0a0a0c0d0d0d0e0e0e0e0e0f090909090901010101010202020b0b2121212121",
 "guide": "https://wowforeverbuilds.com/guide/druid-hunter-balance-druid-group-leveling",
 "category": "Leveo"
 }
@@ -12298,16 +13240,986 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/feral-cat-druid-leveling": [],
-"wfb:/guide/feral-combat-druid-pve-guide": [],
-"wfb:/guide/feral-combat-druid-pvp-guide": [],
-"wfb:/guide/fire-mage-leveling": [],
-"wfb:/guide/fire-mage-pve-guide": [],
-"wfb:/guide/fire-mage-pvp-guide": [],
-"wfb:/guide/frost-aoe-mage-leveling": [],
-"wfb:/guide/frost-mage-pve-guide": [],
-"wfb:/guide/frost-mage-pvp-guide": [],
-"wfb:/guide/frost-shatter-mage-leveling": [],
+"wfb:/guide/feral-cat-druid-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"55200322123012125011",
+"0550300000000000"
+],
+"points": [
+0,
+38,
+13
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+7
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+13
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+15
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+19
+],
+[
+2,
+20
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+2,
+7
+]
+],
+"level": null,
+"beta": null,
+"name": "Feral Druid leveling guide 10–60: Cat Form talents with Rend and Tear and Shifting Power",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-55200322123012125011-05503&o=1010101010121215151519191717181a1a1a161d1d1c1f1f1e1g1g1g1g1g1i1j11111111112121212121222222222224242416",
+"guide": "https://wowforeverbuilds.com/guide/feral-cat-druid-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/feral-combat-druid-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50230332123102125510",
+"0550000000000000"
+],
+"points": [
+0,
+41,
+10
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Feral Druid tank guide: level 60 bear build with Primal Bite, Lacerate and Natural Reaction",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5023033212310212551-055&prof=leatherworking%2Cskinning",
+"guide": "https://wowforeverbuilds.com/guide/feral-combat-druid-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/feral-combat-druid-pvp-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50202202123012125000",
+"0552300050010000"
+],
+"points": [
+0,
+30,
+21
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Feral Druid PvP guide: level 60 cat build with Rend and Tear and Nature's Swiftness",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-50202202123012125-055230005001&prof=engineering%2Cleatherworking",
+"guide": "https://wowforeverbuilds.com/guide/feral-combat-druid-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/fire-mage-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"35523001000133131",
+"000000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+8
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+12
+],
+[
+2,
+15
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+1
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+17
+]
+],
+"level": null,
+"beta": null,
+"name": "Fire Mage leveling guide 10–40: Ignite, Heating Up and Combustion talent order",
+"spec": "Fire",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=-35523001000133131&o=111111111112121212121714141413131c1c1c1b1e1d1d1d101f1f1f10101g",
+"guide": "https://wowforeverbuilds.com/guide/fire-mage-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/fire-mage-pve-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"050205200000000000",
+"55500201230133031",
+"003000000000000000"
+],
+"points": [
+14,
+34,
+3
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Fire Mage PvE guide: level 60 Scorch, Heating Up and Combustion raid build",
+"spec": "Fire",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=0502052-55500201230133031-003&prof=tailoring%2Calchemy",
+"guide": "https://wowforeverbuilds.com/guide/fire-mage-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/fire-mage-pvp-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"53503301200133101",
+"203132310101300000"
+],
+"points": [
+0,
+31,
+20
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Fire Mage PvP guide: level 60 Impact, Blast Wave and Shatter burst build",
+"spec": "Fire",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=-53503301200133101-2031323101013&prof=engineering%2Cenchanting",
+"guide": "https://wowforeverbuilds.com/guide/fire-mage-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/frost-aoe-mage-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"003000000000000000",
+"50000000000000000",
+"253532333121331201"
+],
+"points": [
+3,
+5,
+43
+],
+"order": [
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+15
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+2
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+18
+],
+[
+3,
+4
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+3,
+10
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+]
+],
+"level": null,
+"beta": null,
+"name": "Frost Mage AoE leveling guide 22–60: Blizzard grinding talent order",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=003-5-253532333121331201&o=222222212125252626262828282727272a2a2b21212e2d2d2d21232323232h232020020202292f2f2c2c2c2424241010101010",
+"guide": "https://wowforeverbuilds.com/guide/frost-aoe-mage-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/frost-mage-pve-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"050205203000300000",
+"00000000000000000",
+"253520030121301201"
+],
+"points": [
+20,
+0,
+31
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Frost Mage PvE guide: level 60 raid build, Fingers of Frost priority and stats",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=0502052030003--253520030121301201&prof=tailoring%2Cenchanting",
+"guide": "https://wowforeverbuilds.com/guide/frost-mage-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/frost-mage-pvp-guide": [
+{
+"class": "MAGE",
+"ranks": [
+"023225001002300000",
+"00000000000000000",
+"250532200111321201"
+],
+"points": [
+20,
+0,
+31
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Frost Mage PvP guide: level 60 control build for battlegrounds and world PvP",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=0232250010023--250532200111321201&prof=engineering%2Ctailoring",
+"guide": "https://wowforeverbuilds.com/guide/frost-mage-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/frost-shatter-mage-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"30000000000000000",
+"253532333121331251"
+],
+"points": [
+0,
+3,
+48
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+10
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+14
+],
+[
+3,
+9
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+18
+],
+[
+3,
+8
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+14
+],
+[
+3,
+14
+]
+],
+"level": null,
+"beta": null,
+"name": "Frost Mage leveling guide 10–60: Shatter and Ice Lance single-target talent order",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=-3-253532333121331251&o=212121212124242423232323232525292626262c2c2c2d282b2e2f2f27272h272g2g2g2g2g2a2a222222282810101020202d2d",
+"guide": "https://wowforeverbuilds.com/guide/frost-shatter-mage-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/fury-warrior-pve-guide": [
 {
 "class": "WARRIOR",
@@ -12545,11 +14457,251 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/holy-paladin-pve-guide": [],
-"wfb:/guide/holy-paladin-pvp-guide": [],
-"wfb:/guide/holy-priest-pve-guide": [],
-"wfb:/guide/holy-priest-pvp-guide": [],
-"wfb:/guide/holy-shock-paladin-leveling": [],
+"wfb:/guide/holy-paladin-pve-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"50320215012101251",
+"50022000000000000",
+"05033000000000000"
+],
+"points": [
+31,
+9,
+11
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Holy Paladin PvE guide: raid tank healing with Illumination, Infusion of Light and Light's Vigil",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=50320215012101251-50022-05033&prof=alchemy%2Cherbalism",
+"guide": "https://wowforeverbuilds.com/guide/holy-paladin-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/holy-paladin-pvp-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"50320215222001251",
+"53022030003000000",
+"00000000000000000"
+],
+"points": [
+33,
+18,
+0
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Holy Paladin PvP guide: unkillable battleground healer with Hammer of Justice control",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=50320215222001251-53022030003&prof=engineering%2Calchemy",
+"guide": "https://wowforeverbuilds.com/guide/holy-paladin-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/holy-priest-pve-guide": [
+{
+"class": "PRIEST",
+"ranks": [
+"005303011230000000",
+"03505103030121531",
+"00000000000000000"
+],
+"points": [
+18,
+33,
+0
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Holy Priest PvE guide: Prayer of Mending raid healing for level 60",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/priest?b=00530301123-03505103030121531&prof=tailoring%2Calchemy",
+"guide": "https://wowforeverbuilds.com/guide/holy-priest-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/holy-priest-pvp-guide": [
+{
+"class": "PRIEST",
+"ranks": [
+"005003221301010000",
+"30255131030111331",
+"00000000000000000"
+],
+"points": [
+18,
+33,
+0
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Holy Priest PvP guide: battleground healer with Spell Warding and Prayer of Mending",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/priest?b=00500322130101-30255131030111331&prof=engineering%2Cherbalism",
+"guide": "https://wowforeverbuilds.com/guide/holy-priest-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/holy-shock-paladin-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"05325210100101200",
+"00000000000000000",
+"05030000000000000"
+],
+"points": [
+23,
+0,
+8
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+7
+],
+[
+1,
+12
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+9
+],
+[
+1,
+14
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+]
+],
+"level": null,
+"beta": null,
+"name": "Holy Paladin leveling guide 10–40: Holy Shock hybrid for questing and healing dungeons",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=053252101001012--0503&o=0101010101040404040403030505060b020202080d0e0e2121212121232323",
+"guide": "https://wowforeverbuilds.com/guide/holy-shock-paladin-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/holy-smite-priest-leveling": [
 {
 "class": "PRIEST",
@@ -13003,7 +15155,7 @@
 "name": "Hunter + Warlock duo leveling 10–60: Beast Mastery Hunter talents",
 "spec": "Beast Mastery",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/hunter?b=5320021505121051-00530520003&o=0000000000020201010107070707070609090909090c0b0b0a0e0e0e0e0e0f05051212121212151515151513131316161a1a1a",
+"url": "https://wowforeverbuilds.com/talents/hunter?b=5320201505121051-00530520003&o=0000000000020201010107070707070609090909090c0b0b0a0e0e0e0e0e0f04041212121212151515151513131316161a1a1a",
 "guide": "https://wowforeverbuilds.com/guide/hunter-warlock-pet-duo-beast-mastery-hunter-group-leveling",
 "category": "Leveo"
 }
@@ -13529,6 +15681,153 @@
 "spec": "Protection",
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/warrior?b=--250103120331001351&o=212121212125252520202929292627272a2a2a2b2e2f2f2f232g2g2g2g2g2h",
+"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-destruction-warlock-dungeon-leveling",
+"category": "Leveo"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"00000000000000000000",
+"0553005103113031"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+7
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+16
+]
+],
+"level": null,
+"beta": null,
+"name": "Hybrid Cleave 5-man: Destruction Warlock AoE and Bane of Havoc talents (levels 15–40)",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=--0553005103113031&o=2121212121222222222227262626262929292a262b2c2c2c2323232e2e2e2f",
 "guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-destruction-warlock-dungeon-leveling",
 "category": "Leveo"
 }
@@ -14125,9 +16424,303 @@
 "url": "https://wowforeverbuilds.com/talents/warlock?b=--2551305033021001&o=21212121212222222222262626262628282820202b2b2c242429292924232f",
 "guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-protection-warrior-dungeon-leveling",
 "category": "Leveo"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"00000000000000000000",
+"0553005103113031"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+7
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+16
+]
+],
+"level": null,
+"beta": null,
+"name": "Hybrid Cleave 5-man: Protection Warrior tank talents (levels 15–40)",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=--0553005103113031&o=2121212121222222222227262626262929292a262b2c2c2c2323232e2e2e2f",
+"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-protection-warrior-dungeon-leveling",
+"category": "Leveo"
 }
 ],
 "wfb:/guide/hybrid-cleave-restoration-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"00000000000000000000",
+"0553005103113031"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+7
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+16
+]
+],
+"level": null,
+"beta": null,
+"name": "Hybrid Cleave 5-man: Restoration Druid Wild Growth talents (levels 15–40)",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=--0553005103113031&o=2121212121222222222227262626262929292a262b2c2c2c2323232e2e2e2f",
+"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-restoration-druid-dungeon-leveling",
+"category": "Leveo"
+},
 {
 "class": "WARRIOR",
 "ranks": [
@@ -14423,11 +17016,1151 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/mage-cleave-arcane-mage-dungeon-leveling": [],
-"wfb:/guide/mage-cleave-balance-druid-dungeon-leveling": [],
-"wfb:/guide/mage-cleave-fire-mage-dungeon-leveling": [],
-"wfb:/guide/mage-cleave-holy-paladin-dungeon-leveling": [],
-"wfb:/guide/mage-cleave-protection-paladin-dungeon-leveling": [],
+"wfb:/guide/mage-cleave-arcane-mage-dungeon-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"053205203122311531",
+"05000000000000000",
+"203002000000000000"
+],
+"points": [
+39,
+5,
+7
+],
+"order": [
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+15
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+17
+],
+[
+1,
+3
+],
+[
+1,
+18
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+1,
+10
+],
+[
+1,
+14
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+1,
+11
+],
+[
+1,
+11
+]
+],
+"level": null,
+"beta": null,
+"name": "Mage Cleave 5-man: Arcane Mage Arcane Explosion talents (levels 40–60)",
+"spec": "Arcane",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=053205203122311531-05-203002&o=0101010101050505050508080803030c0c0c0b0b0e0f0f0f0f0f0g0g0g020h20202222222525090d0606020211111111110a0a",
+"guide": "https://wowforeverbuilds.com/guide/mage-cleave-arcane-mage-dungeon-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/mage-cleave-balance-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"5032223005521351",
+"00000000000000000000",
+"0550020000000000"
+],
+"points": [
+39,
+0,
+12
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+13
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+16
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+]
+],
+"level": null,
+"beta": null,
+"name": "Mage Cleave 5-man: Balance Druid Hurricane and Moonkin talents (levels 40–60)",
+"spec": "Balance",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5032223005521351--055002&o=000000000004040505030302020206060609090909090c0b0b0e0e0e0e0e0f2121212121222222222225250a0a0a0a0a0d0d0d",
+"guide": "https://wowforeverbuilds.com/guide/mage-cleave-balance-druid-dungeon-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/mage-cleave-fire-mage-dungeon-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"55523331230133131",
+"203002000000000000"
+],
+"points": [
+0,
+44,
+7
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+15
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+17
+],
+[
+2,
+8
+],
+[
+2,
+12
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+9
+],
+[
+2,
+9
+]
+],
+"level": null,
+"beta": null,
+"name": "Mage Cleave 5-man: Fire Mage Flamestrike and Blast Wave talents (levels 40–60)",
+"spec": "Fire",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=-55523331230133131-203002&o=1111111111121212121215151516161613131c1c1c1d1d1d1e1f1f1f10101g171b191919222222202025251010101414141818",
+"guide": "https://wowforeverbuilds.com/guide/mage-cleave-fire-mage-dungeon-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/mage-cleave-holy-paladin-dungeon-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"50320215022101251",
+"50002000000000000",
+"05230000200000000"
+],
+"points": [
+32,
+7,
+12
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+7
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+12
+],
+[
+1,
+6
+],
+[
+1,
+14
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+6
+],
+[
+1,
+10
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+17
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+1,
+10
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+9
+],
+[
+3,
+9
+]
+],
+"level": null,
+"beta": null,
+"name": "Mage Cleave 5-man: Holy Paladin healing talents for AoE groups (levels 40–60)",
+"spec": "Holy",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=50320215022101251-50002-052300002&o=000000000002020203030707070707060a0a0b050d0e0e05090f0f0f0f0f0g1010101010212121212123232314140922222828",
+"guide": "https://wowforeverbuilds.com/guide/mage-cleave-holy-paladin-dungeon-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/mage-cleave-protection-paladin-dungeon-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"05002000000000000",
+"55302102513521531",
+"00000000000000000"
+],
+"points": [
+7,
+44,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+10
+],
+[
+2,
+14
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+17
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+12
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+]
+],
+"level": null,
+"beta": null,
+"name": "Mage Cleave 5-man: Protection Paladin tank talents for big pulls (levels 40–60)",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=05002-55302102513521531&o=111111111112121214141717151818181a1a1a191d1b1b1b1b1f1f1f18181g1e1e1e1e1e1b10101010101c1c01010101010404",
+"guide": "https://wowforeverbuilds.com/guide/mage-cleave-protection-paladin-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/mage-rogue-combat-rogue-group-leveling": [
 {
 "class": "ROGUE",
@@ -14583,7 +18316,7 @@
 "ranks": [
 "000000000000000000",
 "00000000000000000",
-"050212333101331201"
+"053332030101331201"
 ],
 "points": [
 0,
@@ -14613,11 +18346,15 @@
 ],
 [
 3,
-7
+3
 ],
 [
 3,
-7
+3
+],
+[
+3,
+3
 ],
 [
 3,
@@ -14626,30 +18363,6 @@
 [
 3,
 6
-],
-[
-3,
-5
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-8
-],
-[
-3,
-8
 ],
 [
 3,
@@ -14657,39 +18370,15 @@
 ],
 [
 3,
-13
+5
 ],
 [
 3,
-13
+5
 ],
 [
 3,
-13
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-15
+5
 ],
 [
 3,
@@ -14697,19 +18386,63 @@
 ],
 [
 3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
 12
 ],
 [
 3,
-7
-],
-[
-3,
 16
 ],
 [
 3,
 16
+],
+[
+3,
+15
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+4
 ],
 [
 3,
@@ -14721,7 +18454,7 @@
 "name": "Mage + Rogue duo leveling 20–40: Frost Mage shatter talents",
 "spec": "Frost",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/mage?b=--0502321031301331201&o=212121212124242525262a2a2a2828292d2d2d23232e2e2e2f282c242g2g2i",
+"url": "https://wowforeverbuilds.com/talents/mage?b=--053332030101331201&o=2121212121222222252529242424272c2c2c23232b2f2f2e2d2d2d2727232h",
 "guide": "https://wowforeverbuilds.com/guide/mage-rogue-frost-mage-group-leveling",
 "category": "Leveo"
 }
@@ -15879,7 +19612,235 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/melee-burst-retribution-paladin-dungeon-leveling": [],
+"wfb:/guide/melee-burst-retribution-paladin-dungeon-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"05005000200000000",
+"00000000000000000",
+"05233321221321351"
+],
+"points": [
+12,
+0,
+39
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+14
+],
+[
+3,
+7
+],
+[
+3,
+17
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+7
+],
+[
+3,
+13
+],
+[
+3,
+13
+]
+],
+"level": null,
+"beta": null,
+"name": "Melee Burst 5-man: Retribution Paladin Seal of Command talents (levels 40–60)",
+"spec": "Retribution",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=050050002--05233321221321351&o=2121212121232323222227242424282829292a2b2b2b2e2e2e2f2f2f2d262g2f2f010101010104040404040808252525262c2c",
+"guide": "https://wowforeverbuilds.com/guide/melee-burst-retribution-paladin-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/melee-cleave-arms-warrior-dungeon-leveling": [
 {
 "class": "WARRIOR",
@@ -16176,9 +20137,303 @@
 "url": "https://wowforeverbuilds.com/talents/rogue?b=-32203320021511231&o=1111101010151515141414161612121b1b1b1b1b1c19191a1d1f1f1f1e1e1g",
 "guide": "https://wowforeverbuilds.com/guide/melee-cleave-combat-rogue-dungeon-leveling",
 "category": "Leveo"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50030302123102120510",
+"0000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+19
+]
+],
+"level": null,
+"beta": null,
+"name": "Melee Cleave 5-man: Combat Rogue Blade Flurry talents (levels 20–40)",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5003030212310212051&o=1010101010131313151518171719191b1d1d1a1a1e1a151f1f1h1h1h1h1h1i",
+"guide": "https://wowforeverbuilds.com/guide/melee-cleave-combat-rogue-dungeon-leveling",
+"category": "Leveo"
 }
 ],
 "wfb:/guide/melee-cleave-feral-combat-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50030302123102120510",
+"0000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+19
+]
+],
+"level": null,
+"beta": null,
+"name": "Melee Cleave 5-man: Feral Druid bear tank talents for AoE threat (levels 20–40)",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5003030212310212051&o=1010101010131313151518171719191b1d1d1a1a1e1a151f1f1h1h1h1h1h1i",
+"guide": "https://wowforeverbuilds.com/guide/melee-cleave-feral-combat-druid-dungeon-leveling",
+"category": "Leveo"
+},
 {
 "class": "ROGUE",
 "ranks": [
@@ -16705,8 +20960,464 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/paladin-mage-frost-mage-group-leveling": [],
-"wfb:/guide/paladin-mage-protection-paladin-group-leveling": [],
+"wfb:/guide/paladin-mage-frost-mage-group-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"023225003000300000",
+"00000000000000000",
+"253202333021031001"
+],
+"points": [
+20,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+15
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+18
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+5
+],
+[
+1,
+5
+]
+],
+"level": null,
+"beta": null,
+"name": "Paladin + Mage AoE duo 30–60: Frost Mage Blizzard talents",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=0232250030003--253202333021031001&o=212121212126262625252828282727272a2a2b2222222d2d2d2e202023232h0202020101050505050503030808080c0c0c0404",
+"guide": "https://wowforeverbuilds.com/guide/paladin-mage-frost-mage-group-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/paladin-mage-protection-paladin-group-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"55302132513511531",
+"05000000000000000"
+],
+"points": [
+0,
+46,
+5
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+6
+],
+[
+2,
+14
+],
+[
+2,
+10
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+17
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+13
+]
+],
+"level": null,
+"beta": null,
+"name": "Paladin + Mage AoE duo 30–60: Protection Paladin gathering talents",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=-55302132513511531-05&o=1111111111121212141417171818181a1a1a1b1b151d191e1e1e1e1e1f1f1f1g1b1b1b1818101010101021212121211616161c",
+"guide": "https://wowforeverbuilds.com/guide/paladin-mage-protection-paladin-group-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/priest-shaman-horde-duo-discipline-priest-group-leveling": [
 {
 "class": "PRIEST",
@@ -16925,9 +21636,283 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/protection-aoe-paladin-leveling": [],
-"wfb:/guide/protection-paladin-pve-guide": [],
-"wfb:/guide/protection-paladin-pvp-guide": [],
+"wfb:/guide/protection-aoe-paladin-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"01000000000000000",
+"55302132513501531",
+"05000000000000000"
+],
+"points": [
+1,
+45,
+5
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+6
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+17
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+10
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+1,
+2
+]
+],
+"level": null,
+"beta": null,
+"name": "Protection Paladin AoE leveling guide 30–60: Consecration pulls with Holy Shield",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=01-55302132513501531-05&o=1111111111121212141417171818181a1a1a1818151e1e1e1e1e1f1f1f1b1d1g1b1b191b1b2121212121101010101016161601",
+"guide": "https://wowforeverbuilds.com/guide/protection-aoe-paladin-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/protection-paladin-pve-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"05003000000000000",
+"55302112513501531",
+"00000000000000000"
+],
+"points": [
+8,
+43,
+0
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Protection Paladin PvE guide: Seal of Fury tanking with Templar's Bulwark and Holy Shield",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=05003-55302112513501531&prof=blacksmithing%2Cmining",
+"guide": "https://wowforeverbuilds.com/guide/protection-paladin-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/protection-paladin-pvp-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"45320000000000000",
+"05122132513021531",
+"00000000000000000"
+],
+"points": [
+14,
+37,
+0
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Protection Paladin PvP guide: flag defense with Templar's Bulwark and Hammer of Justice",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=4532-05122132513021531&prof=engineering%2Cblacksmithing",
+"guide": "https://wowforeverbuilds.com/guide/protection-paladin-pvp-guide",
+"category": "PvP"
+}
+],
 "wfb:/guide/protection-warrior-leveling": [
 {
 "class": "WARRIOR",
@@ -17205,15 +22190,61 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/restoration-druid-pve-guide": [],
-"wfb:/guide/restoration-druid-pvp-guide": [],
+"wfb:/guide/restoration-druid-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0530200100000000",
+"00000000000000000000",
+"5053035123113251"
+],
+"points": [
+11,
+0,
+40
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Restoration Druid PvE guide: level 60 Wild Growth and Swiftmend raid healing build",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=05302001--5053035123113251&prof=herbalism%2Calchemy",
+"guide": "https://wowforeverbuilds.com/guide/restoration-druid-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/restoration-druid-pvp-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"05202302123000000000",
+"5053002113113051"
+],
+"points": [
+0,
+20,
+31
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Restoration Druid PvP guide: level 60 flag carrier and battleground healer build",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-05202302123-5053002113113051&prof=engineering%2Cherbalism",
+"guide": "https://wowforeverbuilds.com/guide/restoration-druid-pvp-guide",
+"category": "PvP"
+}
+],
 "wfb:/guide/restoration-hybrid-druid-leveling": [
 {
 "class": "DRUID",
 "ranks": [
 "5000000000000000",
 "00000000000000000000",
-"5053005003113000"
+"5053004103113000"
 ],
 "points": [
 5,
@@ -17295,7 +22326,7 @@
 ],
 [
 3,
-7
+8
 ],
 [
 3,
@@ -17351,7 +22382,7 @@
 "name": "Restoration Druid leveling guide 1–40: solo healer hybrid talent order",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5--5050035003113&o=00000000002020202020222222222225252526262a292929262b2c2c2c2626",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5--5053004103113&o=00000000002020202020222222222223232327262a292929262b2c2c2c2626",
 "guide": "https://wowforeverbuilds.com/guide/restoration-hybrid-druid-leveling",
 "category": "Leveo"
 }
@@ -17404,9 +22435,283 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/retribution-paladin-leveling": [],
-"wfb:/guide/retribution-paladin-pve-guide": [],
-"wfb:/guide/retribution-paladin-pvp-guide": [],
+"wfb:/guide/retribution-paladin-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"05005200200000000",
+"20000000000000000",
+"05233301201321351"
+],
+"points": [
+14,
+2,
+35
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+8
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+14
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+17
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+2,
+1
+],
+[
+2,
+1
+]
+],
+"level": null,
+"beta": null,
+"name": "Retribution Paladin leveling guide 10–60: Seal of Command and Vengeance talent order",
+"spec": "Retribution",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=050052002-2-05233301201321351&o=212121212122222323232724242428282a2b2b2b2e2e2e2d2525252f2f2f2g2f2f2c2c01010101010404040404050508081010",
+"guide": "https://wowforeverbuilds.com/guide/retribution-paladin-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/retribution-paladin-pve-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"05005000200000000",
+"50300000000000000",
+"05233101201301351"
+],
+"points": [
+12,
+8,
+31
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Retribution Paladin PvE guide: Seal of Command, Sanctified Judgement and Unsealed Wrath raid DPS",
+"spec": "Retribution",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=050050002-503-05233101201301351&prof=blacksmithing%2Cmining",
+"guide": "https://wowforeverbuilds.com/guide/retribution-paladin-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/retribution-paladin-pvp-guide": [
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"50322000000000000",
+"25233321221301351"
+],
+"points": [
+0,
+12,
+39
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Retribution Paladin PvP guide: Repentance, Pursuit of Justice and Hammer of Wrath burst",
+"spec": "Retribution",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=-50322-25233321221301351&prof=engineering",
+"guide": "https://wowforeverbuilds.com/guide/retribution-paladin-pvp-guide",
+"category": "PvP"
+}
+],
 "wfb:/guide/rogue-druid-combat-rogue-group-leveling": [
 {
 "class": "ROGUE",
@@ -17534,9 +22839,263 @@
 "url": "https://wowforeverbuilds.com/talents/rogue?b=-30233301000515&o=1010101212131313151515141414171b1b1b1b1b1c1d1d1d1d1d",
 "guide": "https://wowforeverbuilds.com/guide/rogue-druid-combat-rogue-group-leveling",
 "category": "Leveo"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50030302123102120100",
+"0000000000000000"
+],
+"points": [
+0,
+26,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+]
+],
+"level": null,
+"beta": null,
+"name": "Rogue + Druid duo leveling 10–35: Combat Rogue dagger talents",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-500303021231021201&o=1010101010131313151519191717181b1d1d1a1a1e1a151f1f1h",
+"guide": "https://wowforeverbuilds.com/guide/rogue-druid-combat-rogue-group-leveling",
+"category": "Leveo"
 }
 ],
 "wfb:/guide/rogue-druid-feral-combat-druid-group-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50030302123102120100",
+"0000000000000000"
+],
+"points": [
+0,
+26,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+]
+],
+"level": null,
+"beta": null,
+"name": "Rogue + Druid duo leveling 10–35: Feral Druid bear tank and heals",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-500303021231021201&o=1010101010131313151519191717181b1d1d1a1a1e1a151f1f1h",
+"guide": "https://wowforeverbuilds.com/guide/rogue-druid-feral-combat-druid-group-leveling",
+"category": "Leveo"
+},
 {
 "class": "ROGUE",
 "ranks": [
@@ -18127,13 +23686,13 @@
 {
 "class": "PRIEST",
 "ranks": [
-"025305231333011531",
-"23005000000000000",
+"005305031330011531",
+"33505000000100000",
 "00000000000000000"
 ],
 "points": [
-41,
-10,
+34,
+17,
 0
 ],
 "order": [
@@ -18274,44 +23833,24 @@
 8
 ],
 [
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-2
-],
-[
-1,
-2
+2,
+3
 ],
 [
 2,
-2
+3
 ],
 [
 2,
-2
+3
 ],
 [
 2,
-2
+3
+],
+[
+2,
+3
 ],
 [
 2,
@@ -18340,6 +23879,26 @@
 [
 2,
 5
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+12
+],
+[
+2,
+1
 ]
 ],
 "level": null,
@@ -18347,12 +23906,240 @@
 "name": "Shadow Cleave 5-man: Discipline Priest shield and Penance talents (levels 40–60)",
 "spec": "Discipline",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/priest?b=025305231333011531-23005&o=020202020203030305050909090a0a0a080d0505050e0f0f0f0f0f0g0g0g0h07070706060b0b0b010111111110101414141414",
+"url": "https://wowforeverbuilds.com/talents/priest?b=005305031330011531-335050000001&o=020202020203030305050909090a0a0a080d0505050e0f0f0f0f0f0g0g0g0h0707071212121212101014141414141111111b10",
 "guide": "https://wowforeverbuilds.com/guide/shadow-cleave-discipline-priest-dungeon-leveling",
 "category": "Leveo"
 }
 ],
-"wfb:/guide/shadow-cleave-feral-combat-druid-dungeon-leveling": [],
+"wfb:/guide/shadow-cleave-feral-combat-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"53232332123102125510",
+"0500000000000000"
+],
+"points": [
+0,
+46,
+5
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+19
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+]
+],
+"level": null,
+"beta": null,
+"name": "Shadow Cleave 5-man: Feral Druid bear tank talents (levels 40–60)",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5323233212310212551-05&o=1010101010131313151518171719191b1d1d1a1a1e1a151f1f1h1h1h1h1h1i1g1g1g1g1g161616212121212114141212111111",
+"guide": "https://wowforeverbuilds.com/guide/shadow-cleave-feral-combat-druid-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/shadow-cleave-shadow-priest-dungeon-leveling": [
 {
 "class": "PRIEST",
@@ -19317,7 +25104,155 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/spell-cleave-frost-mage-dungeon-leveling": [],
+"wfb:/guide/spell-cleave-frost-mage-dungeon-leveling": [
+{
+"class": "MAGE",
+"ranks": [
+"000000000000000000",
+"00000000000000000",
+"053312333021031001"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+4
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+14
+],
+[
+3,
+15
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+5
+],
+[
+3,
+18
+]
+],
+"level": null,
+"beta": null,
+"name": "Spell Cleave 5-man: Frost Mage talents and Blizzard rotation (levels 15–40)",
+"spec": "Frost",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/mage?b=--053312333021031001&o=212121212126262625252828282727272a2a2b232d2d2d2e2222222323242h",
+"guide": "https://wowforeverbuilds.com/guide/spell-cleave-frost-mage-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/spell-cleave-holy-priest-dungeon-leveling": [
 {
 "class": "PRIEST",
@@ -19465,9 +25400,303 @@
 "url": "https://wowforeverbuilds.com/talents/priest?b=-33005103230011531&o=11111110101414141414151717171019191918181e1e1e1e1e1f1f1f1d1c1g",
 "guide": "https://wowforeverbuilds.com/guide/spell-cleave-holy-priest-dungeon-leveling",
 "category": "Leveo"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"05302102513401031",
+"00000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+10
+],
+[
+2,
+14
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+17
+]
+],
+"level": null,
+"beta": null,
+"name": "Spell Cleave 5-man: Holy Priest healing talents for big pulls (levels 15–40)",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=-05302102513401031&o=111111111112121214141717151818181a1a1a191d1b1b1b1b1f1f1f18181g",
+"guide": "https://wowforeverbuilds.com/guide/spell-cleave-holy-priest-dungeon-leveling",
+"category": "Leveo"
 }
 ],
 "wfb:/guide/spell-cleave-protection-paladin-dungeon-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"05302102513401031",
+"00000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+10
+],
+[
+2,
+14
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+12
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+17
+]
+],
+"level": null,
+"beta": null,
+"name": "Spell Cleave 5-man: Protection Paladin tank talents and pulls (levels 15–40)",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=-05302102513401031&o=111111111112121214141717151818181a1a1a191d1b1b1b1b1f1f1f18181g",
+"guide": "https://wowforeverbuilds.com/guide/spell-cleave-protection-paladin-dungeon-leveling",
+"category": "Leveo"
+},
 {
 "class": "PRIEST",
 "ranks": [
@@ -20754,7 +26983,235 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/warrior-paladin-retribution-paladin-group-leveling": [],
+"wfb:/guide/warrior-paladin-retribution-paladin-group-leveling": [
+{
+"class": "PALADIN",
+"ranks": [
+"05325100200000000",
+"00000000000000000",
+"05233301201301351"
+],
+"points": [
+18,
+0,
+33
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+8
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+14
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+17
+],
+[
+3,
+6
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+]
+],
+"level": null,
+"beta": null,
+"name": "Warrior + Paladin duo leveling 10–60: Retribution Paladin talents and healing",
+"spec": "Retribution",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/paladin?b=053251002--05233301201301351&o=2121212121222223232327242424252528282a2b2e2e2e2b2b2d2f2f2f2f2f2g25010101010102020203030808040404040405",
+"guide": "https://wowforeverbuilds.com/guide/warrior-paladin-retribution-paladin-group-leveling",
+"category": "Leveo"
+}
+],
 "rankedboost:WARRIOR": [
 {
 "class": "WARRIOR",
@@ -22052,6 +28509,12 @@
 [
 "PALADIN",
 0,
+8,
+1237268
+],
+[
+"PALADIN",
+0,
 12,
 1310905
 ],
@@ -22154,6 +28617,12 @@
 [
 "PALADIN",
 1,
+0,
+20257
+],
+[
+"PALADIN",
+1,
 5,
 1311015
 ],
@@ -22198,6 +28667,12 @@
 1,
 11,
 20096
+],
+[
+"PALADIN",
+1,
+12,
+1328546
 ],
 [
 "PALADIN",
@@ -22252,6 +28727,12 @@
 2,
 12,
 1328370
+],
+[
+"PALADIN",
+2,
+6,
+9453
 ],
 [
 "PALADIN",
@@ -26179,7 +32660,7 @@
 1
 ],
 "h": [
-3,
+2,
 2
 ],
 "i": [
@@ -26216,27 +32697,31 @@
 ],
 "q": [
 2,
-20
+11
 ],
 "r": [
 2,
-19
+12
 ],
 "s": [
 2,
-11
+13
 ],
 "t": [
 2,
 14
 ],
-"v": [
+"u": [
 2,
 15
 ],
-"w": [
+"v": [
 2,
 16
+],
+"w": [
+2,
+17
 ],
 "x": [
 2,
@@ -26244,14 +32729,18 @@
 ],
 "y": [
 2,
-17
+19
+],
+"z": [
+2,
+20
 ],
 "A": [
 3,
 1
 ],
 "B": [
-2,
+3,
 2
 ],
 "C": [
@@ -26260,7 +32749,7 @@
 ],
 "D": [
 3,
-6
+4
 ],
 "E": [
 3,
@@ -26268,11 +32757,15 @@
 ],
 "F": [
 3,
-4
+6
 ],
 "G": [
 3,
 7
+],
+"H": [
+3,
+8
 ],
 "I": [
 3,
@@ -28366,11 +34859,11 @@
 "PALADIN": {
 "0:0": [
 1,
-2
+1
 ],
 "0:1": [
-2,
-1
+1,
+2
 ],
 "0:2": [
 1,
@@ -28378,39 +34871,43 @@
 ],
 "0:3": [
 1,
-1
+4
 ],
 "0:4": [
 1,
 5
 ],
 "0:5": [
-3,
+1,
+6
+],
+"0:6": [
+1,
 7
 ],
 "0:7": [
 1,
-4
+8
 ],
 "0:8": [
 1,
-6
+9
 ],
 "0:9": [
 1,
-11
+10
 ],
 "0:10": [
 1,
-8
+11
 ],
 "0:11": [
 1,
-7
+12
 ],
 "0:12": [
 1,
-10
+13
 ],
 "0:13": [
 1,
@@ -28418,7 +34915,7 @@
 ],
 "0:14": [
 1,
-13
+15
 ],
 "0:15": [
 1,
@@ -28430,7 +34927,7 @@
 ],
 "1:0": [
 2,
-9
+1
 ],
 "1:1": [
 2,
@@ -28446,11 +34943,15 @@
 ],
 "1:4": [
 2,
-12
+5
+],
+"1:5": [
+2,
+6
 ],
 "1:6": [
 2,
-11
+7
 ],
 "1:7": [
 2,
@@ -28458,31 +34959,39 @@
 ],
 "1:8": [
 2,
-5
+9
 ],
 "1:9": [
 2,
 10
 ],
+"1:10": [
+2,
+11
+],
 "1:11": [
 2,
-7
+12
 ],
 "1:12": [
 2,
-6
+13
 ],
 "1:13": [
 2,
-15
+14
 ],
 "1:14": [
 2,
-16
+15
 ],
 "1:15": [
 2,
-14
+16
+],
+"1:16": [
+2,
+17
 ],
 "2:0": [
 3,
@@ -28497,12 +35006,12 @@
 3
 ],
 "2:3": [
-1,
-9
+3,
+4
 ],
 "2:4": [
 3,
-4
+5
 ],
 "2:5": [
 3,
@@ -28510,7 +35019,7 @@
 ],
 "2:6": [
 3,
-5
+7
 ],
 "2:7": [
 3,
@@ -28534,13 +35043,17 @@
 ],
 "2:12": [
 3,
-15
+13
 ],
 "2:13": [
 3,
 14
 ],
 "2:14": [
+3,
+15
+],
+"2:15": [
 3,
 16
 ],
@@ -28568,11 +35081,11 @@
 ],
 "0:4": [
 1,
-6
+5
 ],
 "0:5": [
 1,
-5
+6
 ],
 "0:6": [
 1,
@@ -29082,6 +35595,10 @@
 2,
 11
 ],
+"1:11": [
+2,
+12
+],
 "1:12": [
 2,
 13
@@ -29378,53 +35895,57 @@
 1,
 1
 ],
-"0:2": [
+"0:1": [
 1,
 2
 ],
-"0:3": [
-1,
-7
-],
-"0:4": [
-1,
-4
-],
-"0:5": [
-1,
-5
-],
-"0:6": [
-1,
-6
-],
-"0:7": [
+"0:2": [
 1,
 3
 ],
-"0:8": [
+"0:3": [
+1,
+4
+],
+"0:4": [
+1,
+5
+],
+"0:5": [
+1,
+6
+],
+"0:6": [
+1,
+7
+],
+"0:7": [
 1,
 8
 ],
-"0:9": [
+"0:8": [
 1,
 9
 ],
-"0:10": [
+"0:9": [
 1,
 10
 ],
-"0:11": [
+"0:10": [
 1,
 11
 ],
-"0:12": [
+"0:11": [
 1,
 12
 ],
-"0:13": [
+"0:12": [
 1,
 13
+],
+"0:13": [
+1,
+14
 ],
 "0:14": [
 1,
@@ -29444,39 +35965,39 @@
 ],
 "1:0": [
 2,
-9
+1
 ],
 "1:1": [
 2,
-1
+2
 ],
 "1:2": [
 2,
-2
+3
 ],
 "1:3": [
 2,
-3
+4
 ],
 "1:4": [
 2,
-4
+5
 ],
 "1:5": [
 2,
-5
+6
 ],
 "1:6": [
 2,
-6
+7
 ],
 "1:7": [
 2,
-7
+8
 ],
 "1:8": [
 2,
-8
+9
 ],
 "1:9": [
 2,
@@ -29528,7 +36049,7 @@
 ],
 "2:4": [
 3,
-7
+5
 ],
 "2:5": [
 3,
@@ -29536,11 +36057,15 @@
 ],
 "2:6": [
 3,
-5
+7
+],
+"2:7": [
+3,
+8
 ],
 "2:8": [
 3,
-8
+9
 ],
 "2:9": [
 3,
@@ -29548,37 +36073,33 @@
 ],
 "2:10": [
 3,
-9
+11
 ],
 "2:11": [
 3,
-11
+12
 ],
 "2:12": [
 3,
-12
+13
 ],
 "2:13": [
 3,
-13
+14
 ],
 "2:14": [
 3,
-14
+15
 ],
 "2:15": [
 3,
-15
+16
 ],
 "2:16": [
 3,
-16
-],
-"2:17": [
-3,
 17
 ],
-"2:18": [
+"2:17": [
 3,
 18
 ]
@@ -29863,7 +36384,7 @@
 1
 ],
 "1:1": [
-3,
+2,
 2
 ],
 "1:2": [
@@ -29900,27 +36421,31 @@
 ],
 "1:10": [
 2,
-20
+11
 ],
 "1:11": [
 2,
-19
+12
 ],
 "1:12": [
 2,
-11
+13
 ],
 "1:13": [
 2,
 14
 ],
-"1:15": [
+"1:14": [
 2,
 15
 ],
-"1:16": [
+"1:15": [
 2,
 16
+],
+"1:16": [
+2,
+17
 ],
 "1:17": [
 2,
@@ -29928,14 +36453,18 @@
 ],
 "1:18": [
 2,
-17
+19
+],
+"1:19": [
+2,
+20
 ],
 "2:0": [
 3,
 1
 ],
 "2:1": [
-2,
+3,
 2
 ],
 "2:2": [
@@ -29944,7 +36473,7 @@
 ],
 "2:3": [
 3,
-6
+4
 ],
 "2:4": [
 3,
@@ -29952,11 +36481,15 @@
 ],
 "2:5": [
 3,
-4
+6
 ],
 "2:6": [
 3,
 7
+],
+"2:7": [
+3,
+8
 ],
 "2:8": [
 3,
