@@ -17,10 +17,15 @@ for _, b in ipairs(ZbuildsData.builds) do
 end
 local bad = { "https://example.com/x", "https://talentsforever.com/shaman/60/050033-0510-2", "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-zzzzzzz" }
 for _, u in ipairs(bad) do local d, e = ns.DecodeLink(u) failed[#failed+1] = "expected error: " .. tostring(e) end
--- import + list + delete through the API
-local d = ns.DecodeLink("https://talentsforever.com/shaman/60/050033-051032031005112251--BEFRSUVXYbcdefgh-6", "Prueba", "PvP")
+-- import + list + delete through the API, with the first link of the data that decodes: a fixed link stops fitting
+-- when a game patch changes its class tree (as build 1.60.1.70753 did to the shaman's)
+local link
+for _, b in ipairs(ZbuildsData.builds) do
+  if not link and ns.DecodeLink(b.url) then link = b.url end
+end
+local d = assert(link and ns.DecodeLink(link, "Prueba", "PvP"), "no build of the data has a link that decodes")
 ns.AddImport(d)
-local found = 0 for _, b in ipairs(ns.BuildsFor("SHAMAN")) do if b == d then found = found + 1 end end
+local found = 0 for _, b in ipairs(ns.BuildsFor(d.class)) do if b == d then found = found + 1 end end
 ns.RemoveImport(d)
-local after = 0 for _, b in ipairs(ns.BuildsFor("SHAMAN")) do if b == d then after = after + 1 end end
+local after = 0 for _, b in ipairs(ns.BuildsFor(d.class)) do if b == d then after = after + 1 end end
 return ("decoded identical: %d/%d\n%s\nimport listed %d, after delete %d, spec %s, category %s"):format(same, total, table.concat(failed, "\n"), found, after, d.spec, d.category)
