@@ -30,7 +30,7 @@
 "Improved Tactical Mastery",
 2,
 2,
-5
+3
 ],
 [
 "Improved Overpower",
@@ -72,7 +72,7 @@
 "Bloodthrill",
 5,
 1,
-5
+2
 ],
 [
 "Sweeping Strikes",
@@ -149,6 +149,12 @@
 3
 ],
 [
+"Enrage",
+3,
+4,
+5
+],
+[
 "Dual Wield Specialization",
 4,
 1,
@@ -161,10 +167,10 @@
 1
 ],
 [
-"Enrage",
+"Reckless Swings",
 4,
 3,
-5
+1
 ],
 [
 "Improved Execute",
@@ -185,6 +191,12 @@
 1
 ],
 [
+"Gore Drinker",
+5,
+3,
+2
+],
+[
 "Improved Intercept",
 5,
 4,
@@ -194,10 +206,10 @@
 "Flurry",
 6,
 2,
-5
+3
 ],
 [
-"Gore Drinker",
+"Improved Whirlwind",
 6,
 3,
 2
@@ -969,7 +981,7 @@
 3
 ],
 [
-"Murder",
+"Improved Expose Armor",
 2,
 2,
 2
@@ -981,22 +993,22 @@
 3
 ],
 [
-"Relentless Strikes",
+"Vigor",
 3,
 1,
-1
+2
 ],
 [
-"Improved Expose Armor",
+"Blood Splatter",
 3,
 2,
-2
+1
 ],
 [
 "Lethality",
 3,
 3,
-5
+2
 ],
 [
 "Vile Poisons",
@@ -1017,13 +1029,13 @@
 5
 ],
 [
-"Vigor",
+"Relentless Strikes",
 5,
 1,
-2
+5
 ],
 [
-"Mutilate",
+"Venom",
 5,
 2,
 1
@@ -1038,10 +1050,10 @@
 "Seal Fate",
 6,
 3,
-5
+3
 ],
 [
-"Venom",
+"Mutilate",
 7,
 2,
 1
@@ -1049,13 +1061,13 @@
 ],
 [
 [
-"Improved Eviscerate",
+"Coup de Grace",
 1,
 1,
 3
 ],
 [
-"Improved Sinister Strike",
+"Efficient Strikes",
 1,
 2,
 2
@@ -1085,6 +1097,12 @@
 3
 ],
 [
+"Improved Sprint",
+2,
+4,
+2
+],
+[
 "Endurance",
 3,
 1,
@@ -1097,7 +1115,7 @@
 1
 ],
 [
-"Improved Sprint",
+"Composure",
 3,
 4,
 2
@@ -1115,10 +1133,16 @@
 1
 ],
 [
-"Dual Wield Specialization",
+"Aggression",
 4,
 3,
-5
+3
+],
+[
+"Weapon Expertise",
+4,
+4,
+2
 ],
 [
 "Blade Flurry",
@@ -1133,16 +1157,16 @@
 5
 ],
 [
-"Weapon Expertise",
-6,
-2,
+"Dual Wield Specialization",
+5,
+4,
 2
 ],
 [
-"Aggression",
+"Flash of Steel",
 6,
 3,
-3
+5
 ],
 [
 "Adrenaline Rush",
@@ -1153,10 +1177,10 @@
 ],
 [
 [
-"Camouflage",
+"Setup",
 1,
 1,
-5
+3
 ],
 [
 "Master of Deception",
@@ -1168,16 +1192,16 @@
 "Opportunity",
 1,
 3,
-2
+5
 ],
 [
-"Setup",
+"Camouflage",
 2,
 1,
 3
 ],
 [
-"Elusiveness",
+"Dirty Deeds",
 2,
 2,
 2
@@ -1201,37 +1225,37 @@
 3
 ],
 [
-"Ghostly Strike",
-3,
-2,
-1
-],
-[
-"Improved Distract",
-3,
-3,
-2
-],
-[
-"Heightened Senses",
-4,
-1,
-2
-],
-[
 "Premeditation",
-4,
+3,
 2,
 1
 ],
 [
 "Serrated Blades",
-4,
+3,
 3,
 3
 ],
 [
-"Dirty Deeds",
+"Ghostly Strike",
+4,
+1,
+1
+],
+[
+"Elusiveness",
+4,
+2,
+2
+],
+[
+"Quick Getaway",
+4,
+4,
+2
+],
+[
+"Heightened Senses",
 5,
 1,
 2
@@ -1249,19 +1273,13 @@
 1
 ],
 [
-"Quietus",
-6,
-1,
-5
-],
-[
-"Cutthroat",
+"Boot Knife",
 6,
 3,
 5
 ],
 [
-"Thousand Cuts",
+"Death Mark",
 7,
 2,
 1
@@ -1663,7 +1681,7 @@
 2
 ],
 [
-"Lava Burst",
+"Call of Thunder",
 5,
 2,
 1
@@ -1681,7 +1699,7 @@
 5
 ],
 [
-"Elemental Mastery",
+"Lightning Mastery",
 7,
 2,
 1
@@ -1717,12 +1735,6 @@
 2,
 2,
 3
-],
-[
-"Improved Ghost Wolf",
-2,
-3,
-2
 ],
 [
 "Improved Lightning Shield",
@@ -1765,6 +1777,12 @@
 4,
 3,
 1
+],
+[
+"Improved Ghost Wolf",
+4,
+4,
+2
 ],
 [
 "Spirit Weapons",
@@ -3202,224 +3220,8 @@
 "category": "PvE"
 }
 ],
-"iv:/wow-forever/arms-warrior-melee-dps-pve-guide": [
-{
-"class": "WARRIOR",
-"ranks": [
-"02305213130010000",
-"00000000000000000",
-"000000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-7
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-9
-],
-[
-1,
-13
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Arms",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-22211554447774469998c",
-"guide": "https://www.icy-veins.com/wow-forever/arms-warrior-melee-dps-pve-guide",
-"category": "PvE"
-}
-],
-"iv:/wow-forever/assassination-rogue-melee-dps-pve-guide": [
-{
-"class": "ROGUE",
-"ranks": [
-"02530010401401000",
-"00000000000000000",
-"0000000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-11
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-14
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Assassination",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-112223332268888abbbbd",
-"guide": "https://www.icy-veins.com/wow-forever/assassination-rogue-melee-dps-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/arms-warrior-melee-dps-pve-guide": [],
+"iv:/wow-forever/assassination-rogue-melee-dps-pve-guide": [],
 "iv:/wow-forever/balance-druid-ranged-dps-pve-guide": [
 {
 "class": "DRUID",
@@ -3530,115 +3332,7 @@
 }
 ],
 "iv:/wow-forever/beast-mastery-hunter-ranged-dps-pve-guide": [],
-"iv:/wow-forever/combat-rogue-melee-dps-pve-guide": [
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"32003321101410000",
-"0000000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-8
-],
-[
-2,
-6
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-9
-],
-[
-2,
-11
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Combat",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-iihhhlllmmomnnprsssst",
-"guide": "https://www.icy-veins.com/wow-forever/combat-rogue-melee-dps-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/combat-rogue-melee-dps-pve-guide": [],
 "iv:/wow-forever/demonology-warlock-ranged-dps-pve-guide": [
 {
 "class": "WARLOCK",
@@ -3858,351 +3552,8 @@
 }
 ],
 "iv:/wow-forever/discipline-priest-healer-pve-guide": [],
-"iv:/wow-forever/elemental-shaman-ranged-dps-pve-guide": [
-{
-"class": "SHAMAN",
-"ranks": [
-"3500331023001000",
-"000000000000000000",
-"0000000000000000"
-],
-"points": [
-21,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-7
-],
-[
-1,
-6
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-13
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build (21-Point Tree)",
-"spec": "Elemental",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-11111444556500088999c",
-"guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-guide",
-"category": "PvE"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"3500331023101310",
-"000000000000000000",
-"0000000000000000"
-],
-"points": [
-26,
-0,
-0
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-7
-],
-[
-1,
-6
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-13
-],
-[
-1,
-11
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-15
-]
-],
-"level": null,
-"beta": null,
-"name": "Level 30 Talent Build (26-Point Tree)",
-"spec": "Elemental",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-11111444556500088999caddde",
-"guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-guide",
-"category": "PvE"
-}
-],
-"iv:/wow-forever/enhancement-shaman-melee-dps-pve-guide": [
-{
-"class": "SHAMAN",
-"ranks": [
-"0000000000000000",
-"051032031004100100",
-"0000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-3
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-9
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
-],
-[
-2,
-16
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Enhancement",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhikkkllnnnorrrrsv",
-"guide": "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/elemental-shaman-ranged-dps-pve-guide": [],
+"iv:/wow-forever/enhancement-shaman-melee-dps-pve-guide": [],
 "iv:/wow-forever/feral-druid-melee-dps-and-tank-pve-guide": [
 {
 "class": "DRUID",
@@ -4542,115 +3893,7 @@
 }
 ],
 "iv:/wow-forever/frost-mage-ranged-dps-pve-guide": [],
-"iv:/wow-forever/fury-warrior-melee-dps-pve-guide": [
-{
-"class": "WARRIOR",
-"ranks": [
-"00000000000000000",
-"05153105000010000",
-"000000000000000000"
-],
-"points": [
-0,
-21,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-6
-],
-[
-2,
-3
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-8
-],
-[
-2,
-13
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Fury",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-iiiiikkkkklllmjooooot",
-"guide": "https://www.icy-veins.com/wow-forever/fury-warrior-melee-dps-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/fury-warrior-melee-dps-pve-guide": [],
 "iv:/wow-forever/holy-paladin-healer-pve-guide": [],
 "iv:/wow-forever/holy-priest-healer-pve-guide": [],
 "iv:/wow-forever/marksmanship-hunter-ranged-dps-pve-guide": [
@@ -4763,352 +4006,9 @@
 }
 ],
 "iv:/wow-forever/protection-paladin-tank-pve-guide": [],
-"iv:/wow-forever/protection-warrior-tank-pve-guide": [
-{
-"class": "WARRIOR",
-"ranks": [
-"00300000000000000",
-"02000000000000000",
-"250033020001000000"
-],
-"points": [
-3,
-2,
-16
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-6
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-12
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Protection",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-zzzzzCCCDDFFDyyJii222",
-"guide": "https://www.icy-veins.com/wow-forever/protection-warrior-tank-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/protection-warrior-tank-pve-guide": [],
 "iv:/wow-forever/restoration-druid-healer-pve-guide": [],
-"iv:/wow-forever/restoration-shaman-healer-pve-guide": [
-{
-"class": "SHAMAN",
-"ranks": [
-"0000000000000000",
-"000000000000000000",
-"5032003114010100"
-],
-"points": [
-0,
-0,
-21
-],
-"order": [
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-9
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-8
-],
-[
-3,
-12
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-14
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Builds (21-Point Tree)",
-"spec": "Restoration",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-yyyyyAAABBGEEEFJHHHHL",
-"guide": "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-guide",
-"category": "PvE"
-},
-{
-"class": "SHAMAN",
-"ranks": [
-"0000000000000000",
-"000000000000000000",
-"5032003115013110"
-],
-"points": [
-0,
-0,
-26
-],
-"order": [
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-9
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-8
-],
-[
-3,
-12
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-14
-],
-[
-3,
-10
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-15
-]
-],
-"level": null,
-"beta": null,
-"name": "Level 30 Talent Builds (26-Point Tree)",
-"spec": "Restoration",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-yyyyyAAABBGEEEFJHHHHLHKKKM",
-"guide": "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/restoration-shaman-healer-pve-guide": [],
 "iv:/wow-forever/retribution-paladin-melee-dps-pve-guide": [],
 "iv:/wow-forever/shadow-priest-ranged-dps-pve-guide": [
 {
@@ -5326,115 +4226,7 @@
 "category": "PvE"
 }
 ],
-"iv:/wow-forever/subtlety-rogue-melee-dps-pve-guide": [
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"00000000000000000",
-"4023003310013001000"
-],
-"points": [
-0,
-0,
-21
-],
-"order": [
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-9
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-4
-],
-[
-3,
-12
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-1
-],
-[
-3,
-16
-]
-],
-"level": null,
-"beta": true,
-"name": "Level 30 Talent Build",
-"spec": "Subtlety",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-AAyyyEEEBBGFFFBJKKKyN",
-"guide": "https://www.icy-veins.com/wow-forever/subtlety-rogue-melee-dps-pve-guide",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/subtlety-rogue-melee-dps-pve-guide": [],
 "iv:/wow-forever/survival-hunter-melee-dps-pve-guide": [
 {
 "class": "HUNTER",
@@ -5546,6 +4338,180 @@
 ],
 "tavern:/forever/guides/druid/": [],
 "tavern:/forever/guides/hunter/": [
+{
+"class": "HUNTER",
+"ranks": [
+"5120200100000000",
+"0000000000000000",
+"000000000000000000"
+],
+"points": [
+11,
+0,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+2
+],
+[
+1,
+8
+]
+],
+"level": null,
+"beta": true,
+"name": "Level 20 Beta Build",
+"spec": "Beast Mastery",
+"source": "Warcraft Tavern",
+"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/hunter#?t=A1111144662a",
+"guide": "https://www.warcrafttavern.com/forever/guides/hunter/",
+"category": null
+},
+{
+"class": "HUNTER",
+"ranks": [
+"5120200504100100",
+"0000000000000000",
+"000000000000000000"
+],
+"points": [
+21,
+0,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+2
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+8
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+11
+],
+[
+1,
+14
+]
+],
+"level": null,
+"beta": true,
+"name": "Level 30 Beast Mastery Build",
+"spec": "Beast Mastery",
+"source": "Warcraft Tavern",
+"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/hunter#?t=A1111144662aaaaaeeeefj",
+"guide": "https://www.warcrafttavern.com/forever/guides/hunter/",
+"category": null
+},
 {
 "class": "HUNTER",
 "ranks": [
@@ -5768,270 +4734,18 @@
 "tavern:/forever/guides/shaman/": [],
 "tavern:/forever/guides/warlock/": [],
 "tavern:/forever/guides/warrior/": [],
+"method:/wow-forever/azerorth-commerce-authority-and-durotar-supply-and-logistics-reputation-guide": [],
 "method:/wow-forever/class-guides": [],
+"method:/wow-forever/fishing-in-wow-forever-leveling-guide-fishing-items-trainers": [],
 "method:/wow-forever/leveling-guides": [],
 "method:/wow-forever/mage-comprehension-and-study-guide-in-wow-forever-how-scrolls-work-and-all-scroll-effects": [],
+"method:/wow-forever/skinning-in-wow-forever-leveling-guide-skinning-items-enchants-trainers": [],
 "method:/wow-forever/wow-forever-druid-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-hunter-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-mage-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-paladin-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-priest-leveling-guide-and-talents": [],
-"method:/wow-forever/wow-forever-rogue-leveling-guide-and-talents": [
-{
-"class": "ROGUE",
-"ranks": [
-"02000000000000000",
-"32033301001411000",
-"0020000000000000000"
-],
-"points": [
-2,
-22,
-2
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-8
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-11
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-2,
-14
-]
-],
-"level": null,
-"beta": null,
-"name": "Combat: General Build",
-"spec": "Combat",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-rogue-leveling-guide-and-talents#zb1",
-"guide": "https://www.method.gg/wow-forever/wow-forever-rogue-leveling-guide-and-talents",
-"category": "Leveo"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"02520310501101000",
-"12000000000000000",
-"0020000000000000000"
-],
-"points": [
-21,
-3,
-2
-],
-"order": [
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-7
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-11
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-12
-],
-[
-1,
-14
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-2,
-1
-]
-],
-"level": null,
-"beta": null,
-"name": "Assassination: General Build",
-"spec": "Assassination",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-rogue-leveling-guide-and-talents#zb2",
-"guide": "https://www.method.gg/wow-forever/wow-forever-rogue-leveling-guide-and-talents",
-"category": "Leveo"
-}
-],
+"method:/wow-forever/wow-forever-rogue-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-shaman-leveling-guide-and-talents": [],
 "method:/wow-forever/wow-forever-warlock-leveling-guide-and-talents": [
 {
@@ -6361,462 +5075,7 @@
 "category": "Leveo"
 }
 ],
-"method:/wow-forever/wow-forever-warrior-leveling-guide-and-talents": [
-{
-"class": "WARRIOR",
-"ranks": [
-"05325213030515201",
-"05050030000000000",
-"000000000000000000"
-],
-"points": [
-38,
-13,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-7
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-8
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-2
-],
-[
-1,
-13
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-17
-],
-[
-1,
-14
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-2
-],
-[
-1,
-2
-]
-],
-"level": null,
-"beta": null,
-"name": "Arms (Two-handed) Build",
-"spec": "Arms",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents#zb1",
-"guide": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents",
-"category": "Leveo"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"05025010000000000",
-"05010000000000000",
-"250033020331001351"
-],
-"points": [
-13,
-6,
-32
-],
-"order": [
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-5
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-3,
-8
-],
-[
-3,
-8
-],
-[
-3,
-6
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-12
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-10
-],
-[
-3,
-11
-],
-[
-3,
-15
-],
-[
-3,
-16
-],
-[
-3,
-16
-],
-[
-3,
-16
-],
-[
-3,
-11
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-18
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-7
-],
-[
-3,
-11
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-2,
-4
-]
-],
-"level": null,
-"beta": null,
-"name": "Protection Build",
-"spec": "Protection",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents#zb2",
-"guide": "https://www.method.gg/wow-forever/wow-forever-warrior-leveling-guide-and-talents",
-"category": "Leveo"
-}
-],
+"method:/wow-forever/wow-forever-warrior-leveling-guide-and-talents": [],
 "wfb:/guide/affliction-drain-tank-warlock-leveling": [
 {
 "class": "WARLOCK",
@@ -7170,13 +5429,13 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30325213132515031",
-"05050100000000000",
+"30323213132215231",
+"0505013000000000000",
 "000000000000000000"
 ],
 "points": [
-40,
-11,
+37,
+14,
 0
 ],
 "order": [
@@ -7242,14 +5501,6 @@
 ],
 [
 1,
-5
-],
-[
-1,
-5
-],
-[
-1,
 7
 ],
 [
@@ -7259,6 +5510,14 @@
 [
 1,
 10
+],
+[
+1,
+10
+],
+[
+1,
+9
 ],
 [
 1,
@@ -7294,11 +5553,11 @@
 ],
 [
 1,
-10
+12
 ],
 [
 1,
-1
+12
 ],
 [
 1,
@@ -7362,27 +5621,27 @@
 ],
 [
 1,
-12
+15
 ],
 [
 1,
-12
+15
 ],
 [
 1,
-12
+1
 ],
 [
-1,
-12
+2,
+7
 ],
 [
-1,
-12
+2,
+7
 ],
 [
-1,
-9
+2,
+7
 ]
 ],
 "level": null,
@@ -7390,7 +5649,7 @@
 "name": "Arms Warrior leveling guide 10–60: Sweeping Strikes and Mortal Strike talent order",
 "spec": "Arms",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=30325213132515031-050501&o=02020200000303050504070707040404040609090c0d0d0d0d0d0a0a09000g11111111111313131313150f0f0f0b0b0b0b0b08",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=30323213132215231-0505013&o=02020200000303050504070707040406090909080c0d0d0d0d0d0a0a0b0b0g11111111111313131313150f0f0f0e0e00161616",
 "guide": "https://wowforeverbuilds.com/guide/arms-warrior-leveling",
 "category": "Leveo"
 }
@@ -7399,13 +5658,13 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30305213032515001",
-"25050030002000000",
+"30303213132215201",
+"3505003000120000000",
 "000000000000000000"
 ],
 "points": [
-34,
-17,
+32,
+19,
 0
 ],
 "order": null,
@@ -7414,7 +5673,7 @@
 "name": "Arms Warrior PvE guide: two-handed raid DPS with Mortal Strike and Bloodthrill",
 "spec": "Arms",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=30305213032515001-25050030002&prof=engineering%2Cmining",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=30303213132215201-35050030012&prof=engineering%2Cmining",
 "guide": "https://wowforeverbuilds.com/guide/arms-warrior-pve-guide",
 "category": "PvE"
 }
@@ -7423,8 +5682,8 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"02325013032015031",
-"15050130050000000",
+"03323013132015031",
+"0505013500100000000",
 "000000000000000000"
 ],
 "points": [
@@ -7438,7 +5697,7 @@
 "name": "Arms Warrior PvP guide: Mortal Strike, Improved Hamstring and team-fight burst",
 "spec": "Arms",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=02325013032015031-1505013005&prof=engineering",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=03323013132015031-0505013501&prof=engineering",
 "guide": "https://wowforeverbuilds.com/guide/arms-warrior-pvp-guide",
 "category": "PvP"
 }
@@ -7447,14 +5706,14 @@
 {
 "class": "ROGUE",
 "ranks": [
-"00532010551521051",
-"30232300000000000",
-"0020000000000000000"
+"00530320251551031",
+"3022030000000000000",
+"005000000000000000"
 ],
 "points": [
 36,
-13,
-2
+10,
+5
 ],
 "order": null,
 "level": null,
@@ -7462,7 +5721,7 @@
 "name": "Assassination Rogue PvE guide: Mutilate and Venom build for level 60",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=00532010551521051-302323-002&prof=engineering%2Calchemy",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=00530320251551031-302203-005&prof=engineering%2Calchemy",
 "guide": "https://wowforeverbuilds.com/guide/assassination-rogue-pve-guide",
 "category": "PvE"
 }
@@ -7471,13 +5730,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"30532010551001251",
-"30203221220000000",
-"0000000000000000000"
+"30530020251051231",
+"3020332210200000000",
+"000000000000000000"
 ],
 "points": [
-34,
-17,
+33,
+18,
 0
 ],
 "order": null,
@@ -7486,7 +5745,7 @@
 "name": "Assassination Rogue PvP guide: Cold Blood Mutilate burst for battlegrounds",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=30532010551001251-3020322122&prof=engineering%2Cherbalism",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=30530020251051231-30203322102&prof=engineering%2Cherbalism",
 "guide": "https://wowforeverbuilds.com/guide/assassination-rogue-pvp-guide",
 "category": "PvP"
 }
@@ -8616,13 +6875,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"02532010500000000",
-"32230320001515231",
-"0000000000000000000"
+"02530120201000000",
+"3230030202013215251",
+"000000000000000000"
 ],
 "points": [
-18,
-33,
+16,
+35,
 0
 ],
 "order": [
@@ -8660,26 +6919,6 @@
 ],
 [
 2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
 3
 ],
 [
@@ -8688,43 +6927,23 @@
 ],
 [
 2,
-12
+8
 ],
 [
 2,
-12
+8
 ],
 [
 2,
-12
+10
 ],
 [
 2,
-12
+10
 ],
 [
 2,
-12
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
+3
 ],
 [
 2,
@@ -8732,19 +6951,47 @@
 ],
 [
 2,
-16
+13
 ],
 [
 2,
-16
+13
 ],
 [
 2,
-16
+14
+],
+[
+2,
+14
+],
+[
+2,
+12
 ],
 [
 2,
 15
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
 ],
 [
 2,
@@ -8752,11 +6999,31 @@
 ],
 [
 2,
-15
+17
 ],
 [
 2,
-11
+18
+],
+[
+2,
+19
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
 ],
 [
 1,
@@ -8797,6 +7064,14 @@
 [
 1,
 4
+],
+[
+1,
+9
+],
+[
+1,
+9
 ],
 [
 1,
@@ -8804,31 +7079,15 @@
 ],
 [
 1,
-9
+7
 ],
 [
 1,
-9
+6
 ],
 [
 1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-5
-],
-[
-1,
-5
+11
 ]
 ],
 "level": null,
@@ -8836,7 +7095,7 @@
 "name": "WoW Forever Rogue Leveling 1–60: Combat Build & Talents",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=025320105-32230320001515231&o=1111101010151515131313161612121b1b1b1b1b1d1d1d1d1d1c1f1f1f1e1g1e1a020202020201010303030608080808080404",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=02530120201-3230030202012321551&o=1111101010151515121217171919121d1d1d1c1c1b1f1g1g1g1g1g1e1e1h1i1h1h1h1h0202020202010103030308080606050a",
 "guide": "https://wowforeverbuilds.com/guide/beta-20-combat-rogue-leveling",
 "category": "Leveo"
 }
@@ -9075,7 +7334,7 @@
 "class": "SHAMAN",
 "ranks": [
 "0000000000000000",
-"055032031155102251",
+"055030311551202251",
 "5500000000000000"
 ],
 "points": [
@@ -9106,14 +7365,6 @@
 ],
 [
 2,
-6
-],
-[
-2,
-6
-],
-[
-2,
 5
 ],
 [
@@ -9123,6 +7374,30 @@
 [
 2,
 5
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+8
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
 ],
 [
 2,
@@ -9130,19 +7405,47 @@
 ],
 [
 2,
-8
+12
 ],
 [
 2,
-8
+11
 ],
 [
 2,
-8
+11
 ],
 [
 2,
-10
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+3
 ],
 [
 2,
@@ -9150,51 +7453,7 @@
 ],
 [
 2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-3
+13
 ],
 [
 2,
@@ -9230,23 +7489,23 @@
 ],
 [
 2,
-11
+10
 ],
 [
 2,
-11
+10
 ],
 [
 2,
-11
+10
 ],
 [
 2,
-11
+10
 ],
 [
 2,
-11
+10
 ],
 [
 3,
@@ -9294,7 +7553,7 @@
 "name": "WoW Forever Shaman Leveling 1–60: Enhancement Build",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=-055032031155102251-55&o=1111111111151514141418171717191c1b1b1b1b1b1f1f12121212121e1e1h1g1g1g1g1g1a1a1a1a1a21212121212020202020",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=-055030311551202251-55&o=1111111111141414121217161616181b1a1a1a1a1a1f1f1212121c1c1e1e1h1g1g1g1g1g191919191921212121212020202020",
 "guide": "https://wowforeverbuilds.com/guide/beta-20-enhancement-shaman-leveling",
 "category": "Leveo"
 }
@@ -9761,13 +8020,13 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"32005010000000000",
-"05053135052210521",
+"32023000000000000",
+"0505313550122120321",
 "000000000000000000"
 ],
 "points": [
-11,
-40,
+10,
+41,
 0
 ],
 "order": [
@@ -9841,27 +8100,11 @@
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-10
-],
-[
-2,
-13
+8
 ],
 [
 2,
@@ -9873,23 +8116,23 @@
 ],
 [
 2,
-15
+8
 ],
 [
 2,
-15
+14
 ],
 [
 2,
-15
+11
 ],
 [
 2,
-15
+9
 ],
 [
 2,
-15
+9
 ],
 [
 2,
@@ -9897,31 +8140,43 @@
 ],
 [
 2,
-8
+17
 ],
 [
 2,
-8
+17
 ],
 [
 2,
-8
+9
 ],
 [
 2,
-16
+19
 ],
 [
 2,
-16
+9
 ],
 [
 2,
-11
+9
 ],
 [
 2,
-11
+18
+],
+[
+2,
+18
+],
+[
+2,
+15
+],
+[
+2,
+15
 ],
 [
 2,
@@ -9930,6 +8185,14 @@
 [
 2,
 12
+],
+[
+2,
+13
+],
+[
+2,
+13
 ],
 [
 1,
@@ -9953,7 +8216,11 @@
 ],
 [
 1,
-5
+4
+],
+[
+1,
+4
 ],
 [
 1,
@@ -9966,14 +8233,6 @@
 [
 1,
 5
-],
-[
-1,
-5
-],
-[
-1,
-7
 ]
 ],
 "level": null,
@@ -9981,7 +8240,7 @@
 "name": "WoW Forever Warrior Leveling 1–60: Fury Build & Talents",
 "spec": "Fury",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=3200501-05053135052210521&o=111111111113131313131516161614141419191919191c17171e1e1e1e1e1g1717171f1f1a1a1b1b0000000101040404040406",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=32023-050531355122120231&o=111111111113131313131516161614141417171717171c1918181g1g1g181h18181f1f1d1d1a1a1b1b00000001010303040404",
 "guide": "https://wowforeverbuilds.com/guide/beta-20-fury-warrior-leveling",
 "category": "Leveo"
 }
@@ -10219,13 +8478,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"00532210500000000",
-"32103321001515231",
-"0000000000000000000"
+"00530320201000000",
+"3200330202013215251",
+"000000000000000000"
 ],
 "points": [
-18,
-33,
+16,
+35,
 0
 ],
 "order": null,
@@ -10234,7 +8493,7 @@
 "name": "Combat Rogue PvE guide: level 60 swords raid build, rotation and stats",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=005322105-32103321001515231&prof=engineering%2Cmining",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=00530320201-3200330202012321551&prof=engineering%2Cmining",
 "guide": "https://wowforeverbuilds.com/guide/combat-rogue-pve-guide",
 "category": "PvE"
 }
@@ -10243,13 +8502,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"30530010500000000",
-"32003321221315231",
-"0000000000000000000"
+"30520010200000000",
+"3200332210213215251",
+"000000000000000000"
 ],
 "points": [
-17,
-34,
+13,
+38,
 0
 ],
 "order": null,
@@ -10258,7 +8517,7 @@
 "name": "Combat Rogue PvP guide: Adrenaline Rush swords for battlegrounds and world PvP",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=305300105-32003321221315231&prof=engineering%2Cmining",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=305200102-3200332210212321551&prof=engineering%2Cmining",
 "guide": "https://wowforeverbuilds.com/guide/combat-rogue-pvp-guide",
 "category": "PvP"
 }
@@ -10267,13 +8526,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"02532010500000000",
-"32103321001515231",
-"0000000000000000000"
+"02530300200000000",
+"3200330212013215251",
+"000000000000000000"
 ],
 "points": [
-18,
-33,
+15,
+36,
 0
 ],
 "order": [
@@ -10286,12 +8545,8 @@
 2
 ],
 [
-1,
-2
-],
-[
-1,
-2
+2,
+1
 ],
 [
 2,
@@ -10303,7 +8558,15 @@
 ],
 [
 2,
-1
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
 ],
 [
 2,
@@ -10319,15 +8582,7 @@
 ],
 [
 2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
+9
 ],
 [
 2,
@@ -10335,35 +8590,15 @@
 ],
 [
 2,
-7
+8
 ],
 [
 2,
-7
+10
 ],
 [
 2,
-3
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
+10
 ],
 [
 2,
@@ -10371,23 +8606,19 @@
 ],
 [
 2,
-14
+13
 ],
 [
 2,
-14
+13
 ],
 [
 2,
-14
+12
 ],
 [
 2,
-14
-],
-[
-2,
-14
+15
 ],
 [
 2,
@@ -10403,83 +8634,111 @@
 ],
 [
 2,
-11
+16
+],
+[
+2,
+16
 ],
 [
 2,
 17
 ],
 [
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-5
-],
-[
-1,
-5
+2,
+17
 ],
 [
 2,
-15
+18
 ],
 [
 2,
-15
+18
+],
+[
+2,
+19
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+9
+],
+[
+1,
+9
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+6
 ]
 ],
 "level": null,
@@ -10487,7 +8746,7 @@
 "name": "Combat Rogue leveling guide 10–60: Hack and Slash swords talent order",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=025320105-32103321001515231&o=11110101101010141414151515171616121b1b1b1b1b1c1d1d1d1d1d1f1f1f1a1g020202020203030306080808080804041e1e",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=025303002-3200330212012321551&o=111110101015151514141418171719191d1d1d1b1f1g1g1g1g1g1e1e1h1h1i1h1h1h1c1c020202020201010303030808050505",
 "guide": "https://wowforeverbuilds.com/guide/combat-swords-rogue-leveling",
 "category": "Leveo"
 }
@@ -10955,7 +9214,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"05000000000000000",
+"0500000000000000000",
 "253533121331221351"
 ],
 "points": [
@@ -11184,8 +9443,8 @@
 "class": "ROGUE",
 "ranks": [
 "00000000000000000",
-"30203320220300000",
-"1321220310213211501"
+"3200332200210200000",
+"032302031312211151"
 ],
 "points": [
 0,
@@ -11215,14 +9474,6 @@
 ],
 [
 3,
-5
-],
-[
-3,
-5
-],
-[
-3,
 6
 ],
 [
@@ -11235,23 +9486,39 @@
 ],
 [
 3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
 9
 ],
 [
 3,
-8
+10
 ],
 [
 3,
-8
+10
 ],
 [
 3,
-8
-],
-[
-3,
-1
+10
 ],
 [
 3,
@@ -11263,7 +9530,7 @@
 ],
 [
 3,
-13
+12
 ],
 [
 3,
@@ -11287,103 +9554,95 @@
 ],
 [
 3,
-14
+17
 ],
 [
 3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+18
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
 11
 ],
 [
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-17
-],
-[
-3,
-19
-],
-[
 2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-3
-],
-[
-2,
-3
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-9
-],
-[
-2,
-9
-],
-[
-2,
-10
-],
-[
-2,
-10
+11
 ],
 [
 2,
@@ -11391,11 +9650,11 @@
 ],
 [
 2,
-12
+14
 ],
 [
 2,
-12
+14
 ]
 ],
 "level": null,
@@ -11403,7 +9662,7 @@
 "name": "Control Group 5-man: Subtlety Rogue Sap, Blind and Hemorrhage talents (levels 40–60)",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=-302033202203-1321220310213211501&o=2121212222242425252328272727202c2c2c2b2a2e2f2d2d2a2g2g2g2g2g2i10101012121515151414141616181819191b1b1b",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-3200332200212-032030231321211151&o=21212122222626242424272727282929292c2c2a2a2b2e2f2d2g2g2g2g2g2h1010101111151515141414171716161a1a1b1c1c",
 "guide": "https://wowforeverbuilds.com/guide/control-group-subtlety-rogue-dungeon-leveling",
 "category": "Leveo"
 }
@@ -12622,7 +10881,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"15050130050010000",
+"0505013500100100000",
 "000000000000000000"
 ],
 "points": [
@@ -12689,31 +10948,31 @@
 ],
 [
 2,
-1
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+11
 ],
 [
 2,
-13
+14
 ]
 ],
 "level": null,
@@ -12721,7 +10980,7 @@
 "name": "Fury Warrior leveling guide 1–30: early Cruelty build before the Arms respec",
 "spec": "Fury",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=-1505013005001&o=11111111111313131313151616161019191919191c",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=-0505013501001&o=11111111111313131313151616161717171717191c",
 "guide": "https://wowforeverbuilds.com/guide/early-fury-warrior-leveling",
 "category": "Leveo"
 }
@@ -12730,7 +10989,7 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5514331003021350",
+"5514331003011351",
 "050000000000000000",
 "0000000000000000"
 ],
@@ -12834,14 +11093,14 @@
 ],
 [
 1,
+13
+],
+[
+1,
 10
 ],
 [
 1,
-4
-],
-[
-1,
 15
 ],
 [
@@ -12862,7 +11121,7 @@
 ],
 [
 1,
-13
+16
 ],
 [
 2,
@@ -12898,7 +11157,7 @@
 ],
 [
 1,
-12
+4
 ],
 [
 1,
@@ -12907,10 +11166,10 @@
 ],
 "level": null,
 "beta": null,
-"name": "Elemental Shaman leveling guide 20–50: Lightning Overload and Lava Burst talent order",
+"name": "Elemental Shaman leveling guide 20–50: Lightning Overload and Lightning Mastery talent order",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=551433100302135-05&o=00000000000505050101060201010109090404040d0d0d09030e0e0e0e0e0c11111111110303030b0b",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=5514331003011351-05&o=00000000000505050101060201010109090404040d0d0d0c090e0e0e0e0e0f1111111111030303030b",
 "guide": "https://wowforeverbuilds.com/guide/elemental-shaman-leveling",
 "category": "Leveo"
 }
@@ -12919,7 +11178,7 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5505331003021350",
+"5505331003011351",
 "055000000000000000",
 "0500000000000000"
 ],
@@ -12931,10 +11190,10 @@
 "order": null,
 "level": null,
 "beta": null,
-"name": "Elemental Shaman PvE guide: Lava Burst and Lightning Overload at level 60",
+"name": "Elemental Shaman PvE guide: Lightning Overload and Lightning Mastery at level 60",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=550533100302135-055-05&prof=engineering%2Calchemy",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=5505331003011351-055-05&prof=engineering%2Calchemy",
 "guide": "https://wowforeverbuilds.com/guide/elemental-shaman-pve-guide",
 "category": "PvE"
 }
@@ -12943,8 +11202,8 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5515301003101350",
-"055202001300000000",
+"5505301003101351",
+"055200013000200000",
 "0000000000000000"
 ],
 "points": [
@@ -12955,10 +11214,10 @@
 "order": null,
 "level": null,
 "beta": null,
-"name": "Elemental Shaman PvP guide: shocks, Lava Burst and Earthbound for battlegrounds",
+"name": "Elemental Shaman PvP guide: shocks, Lightning Mastery and Earthbound for battlegrounds",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=551530100310135-0552020013&prof=engineering%2Cmining",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=5505301003101351-0552000130002&prof=engineering%2Cmining",
 "guide": "https://wowforeverbuilds.com/guide/elemental-shaman-pvp-guide",
 "category": "PvP"
 }
@@ -12968,7 +11227,7 @@
 "class": "SHAMAN",
 "ranks": [
 "0000000000000000",
-"055030031355102251",
+"055030313551002251",
 "5500000000000000"
 ],
 "points": [
@@ -13019,19 +11278,19 @@
 ],
 [
 2,
-8
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
 ],
 [
 2,
 8
-],
-[
-2,
-8
-],
-[
-2,
-9
 ],
 [
 2,
@@ -13039,27 +11298,27 @@
 ],
 [
 2,
-12
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
 ],
 [
 2,
 12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
 ],
 [
 2,
@@ -13111,6 +11370,58 @@
 ],
 [
 2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+2,
 10
 ],
 [
@@ -13122,64 +11433,12 @@
 10
 ],
 [
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
+2,
+10
 ],
 [
 2,
-11
-],
-[
-2,
-11
-],
-[
-2,
-11
-],
-[
-2,
-11
-],
-[
-2,
-11
+10
 ]
 ],
 "level": null,
@@ -13187,7 +11446,7 @@
 "name": "Enhancement Shaman leveling guide 10–60: Flurry, Stormstrike and Maelstrom Weapon",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=-055030031355102251-55&o=1111111111141414121217171718121b1b1b1b1b1c1f1f1e1e1g1g1g1g1g1h1212191919202020202021212121211a1a1a1a1a",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=-055030313551002251-55&o=1111111111141414121216161617121a1a1a1a1a1b1f1f1e1e1g1g1g1g1g1h1212181818202020202021212121211919191919",
 "guide": "https://wowforeverbuilds.com/guide/enhancement-shaman-leveling",
 "category": "Leveo"
 }
@@ -13197,7 +11456,7 @@
 "class": "SHAMAN",
 "ranks": [
 "5533001000000000",
-"055030031005112251",
+"055030310051012251",
 "0000000000000000"
 ],
 "points": [
@@ -13211,7 +11470,7 @@
 "name": "Enhancement Shaman PvE guide: Maelstrom Weapon and Rage of the Farseer for raids",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=5533001-055030031005112251&prof=engineering%2Cleatherworking",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=5533001-055030310051012251&prof=engineering%2Cleatherworking",
 "guide": "https://wowforeverbuilds.com/guide/enhancement-shaman-pve-guide",
 "category": "PvE"
 }
@@ -13221,7 +11480,7 @@
 "class": "SHAMAN",
 "ranks": [
 "5502000000000000",
-"055232031025102251",
+"055230310251202251",
 "0000000000000000"
 ],
 "points": [
@@ -13235,7 +11494,7 @@
 "name": "Enhancement Shaman PvP guide: Stormstrike burst and Windfury for world PvP",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=5502-055232031025102251&prof=engineering%2Cmining",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=5502-055230310251202251&prof=engineering%2Cmining",
 "guide": "https://wowforeverbuilds.com/guide/enhancement-shaman-pvp-guide",
 "category": "PvP"
 }
@@ -14224,22 +12483,22 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30305013000000000",
-"25053035150010501",
+"30313013000000000",
+"2505300550122100321",
 "000000000000000000"
 ],
 "points": [
-15,
-36,
+14,
+37,
 0
 ],
 "order": null,
 "level": null,
 "beta": null,
-"name": "Fury Warrior PvE guide: dual-wield raid DPS with Bloodthirst, Raging Blows and Furious Precision",
+"name": "Fury Warrior PvE guide: dual-wield raid DPS with Bloodthirst, Improved Whirlwind and Reckless Swings",
 "spec": "Fury",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=30305013-25053035150010501&prof=engineering%2Cblacksmithing",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=30313013-250530055122100231&prof=engineering%2Cblacksmithing",
 "guide": "https://wowforeverbuilds.com/guide/fury-warrior-pve-guide",
 "category": "PvE"
 }
@@ -14248,14 +12507,14 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"02305011000000000",
-"05053135050212501",
-"001000000000000000"
+"02323000000000000",
+"0505313550102122321",
+"000000000000000000"
 ],
 "points": [
-12,
-38,
-1
+10,
+41,
+0
 ],
 "order": null,
 "level": null,
@@ -14263,7 +12522,7 @@
 "name": "Fury Warrior PvP guide: Death Wish, Improved Intercept and dual-wield chasing",
 "spec": "Fury",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=02305011-05053135050212501-001&prof=engineering",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=02323-050531355102122231&prof=engineering",
 "guide": "https://wowforeverbuilds.com/guide/fury-warrior-pvp-guide",
 "category": "PvP"
 }
@@ -14272,13 +12531,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"02530000000000000",
-"00000000000000000",
-"5020203310113211501"
+"00500000000000000",
+"3200000000000000000",
+"005320331312001151"
 ],
 "points": [
-10,
-0,
+5,
+5,
 31
 ],
 "order": [
@@ -14292,19 +12551,15 @@
 ],
 [
 3,
-1
+3
 ],
 [
 3,
-1
+3
 ],
 [
 3,
-1
-],
-[
-3,
-7
+3
 ],
 [
 3,
@@ -14316,11 +12571,15 @@
 ],
 [
 3,
-5
+7
 ],
 [
 3,
-5
+4
+],
+[
+3,
+4
 ],
 [
 3,
@@ -14340,43 +12599,7 @@
 ],
 [
 3,
-1
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-13
-],
-[
-3,
-12
-],
-[
-3,
-1
-],
-[
-3,
-16
-],
-[
-3,
-14
-],
-[
-3,
-14
-],
-[
-3,
-15
+4
 ],
 [
 3,
@@ -14384,7 +12607,39 @@
 ],
 [
 3,
-17
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+12
+],
+[
+3,
+16
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+5
+],
+[
+3,
+5
 ],
 [
 3,
@@ -14404,55 +12659,59 @@
 ],
 [
 3,
-19
+17
 ],
 [
-1,
-3
+3,
+18
 ],
 [
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
+2,
 2
 ],
 [
-1,
+2,
 2
 ],
 [
-1,
-4
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
 ],
 [
 1,
-4
+3
 ],
 [
 1,
-4
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
 ]
 ],
 "level": null,
 "beta": null,
-"name": "Subtlety Rogue leveling guide 20–50: Hemorrhage, Premeditation and Thousand Cuts",
+"name": "Subtlety Rogue leveling guide 20–50: Hemorrhage, Boot Knife and Death Mark",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=0253--5020203310113211501&o=2222202020262626242427272728202c2c2c2b202f2d2d2e2a2g2g2g2g2g2i02020202020101030303",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=005-32-005233031321001151&o=2222222222252525242427272728242b2929292a2f2a2e23232g2g2g2g2g2h11111010100202020202",
 "guide": "https://wowforeverbuilds.com/guide/hemorrhage-rogue-leveling",
 "category": "Leveo"
 }
@@ -15541,7 +13800,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"00000000000000000",
+"0000000000000000000",
 "250103120331001351"
 ],
 "points": [
@@ -15836,7 +14095,7 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5202331022111350",
+"5102331022111351",
 "000000000000000000",
 "0000000000000000"
 ],
@@ -15940,14 +14199,14 @@
 ],
 [
 1,
+13
+],
+[
+1,
 12
 ],
 [
 1,
-2
-],
-[
-1,
 15
 ],
 [
@@ -15968,7 +14227,7 @@
 ],
 [
 1,
-13
+16
 ]
 ],
 "level": null,
@@ -15976,7 +14235,7 @@
 "name": "Hybrid Cleave 5-man: Elemental Shaman Earthbound and Fire Nova talents (levels 15–40)",
 "spec": "Elemental",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=520233102211135&o=000000000005050503030604040401080809090a0d0d0d0b010e0e0e0e0e0c",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=5102331022111351&o=000000000005050503030604040401080809090a0d0d0d0c0b0e0e0e0e0e0f",
 "guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-elemental-shaman-dungeon-leveling",
 "category": "Leveo"
 }
@@ -16135,7 +14394,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"00000000000000000",
+"0000000000000000000",
 "250103120331001351"
 ],
 "points": [
@@ -16725,7 +14984,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"00000000000000000",
+"0000000000000000000",
 "250103120331001351"
 ],
 "points": [
@@ -18166,8 +16425,8 @@
 "class": "ROGUE",
 "ranks": [
 "00000000000000000",
-"32203320001515031",
-"0000000000000000000"
+"3210330202013015221",
+"000000000000000000"
 ],
 "points": [
 0,
@@ -18217,39 +16476,23 @@
 ],
 [
 2,
-7
-],
-[
-2,
-7
-],
-[
-2,
 5
 ],
 [
 2,
-3
+8
 ],
 [
 2,
-3
+8
 ],
 [
 2,
-12
+10
 ],
 [
 2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-11
+10
 ],
 [
 2,
@@ -18261,23 +16504,19 @@
 ],
 [
 2,
-14
+13
 ],
 [
 2,
-14
+13
 ],
 [
 2,
-14
+3
 ],
 [
 2,
-14
-],
-[
-2,
-14
+15
 ],
 [
 2,
@@ -18293,11 +16532,31 @@
 ],
 [
 2,
-12
+16
+],
+[
+2,
+16
 ],
 [
 2,
 17
+],
+[
+2,
+17
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+19
 ]
 ],
 "level": null,
@@ -18305,7 +16564,7 @@
 "name": "Mage + Rogue duo leveling 20–40: Combat Rogue Blade Flurry talents",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=-32203320001515031&o=1111101010151515141416161412121b1b1b1a1b1c1d1d1d1d1d1f1f1f1b1g",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-3210330202010321521&o=1111101010151515141414171719191b1d1d1d121f1g1g1g1g1g1e1e1h1h1i",
 "guide": "https://wowforeverbuilds.com/guide/mage-rogue-combat-rogue-group-leveling",
 "category": "Leveo"
 }
@@ -18700,13 +16959,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"00532010550501051",
-"30233320020000000",
-"0000000000000000000"
+"00530221250451031",
+"3023230200200000000",
+"000000000000000000"
 ],
 "points": [
-33,
-18,
+34,
+17,
 0
 ],
 "order": [
@@ -18744,11 +17003,19 @@
 ],
 [
 1,
-5
+6
 ],
 [
 1,
-5
+6
+],
+[
+1,
+9
+],
+[
+1,
+9
 ],
 [
 1,
@@ -18756,23 +17023,11 @@
 ],
 [
 1,
-9
+7
 ],
 [
 1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
-],
-[
-1,
-9
+8
 ],
 [
 1,
@@ -18793,46 +17048,6 @@
 [
 1,
 10
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
-],
-[
-1,
-16
 ],
 [
 1,
@@ -18840,9 +17055,57 @@
 ],
 [
 1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+13
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+16
+],
+[
+1,
+12
+],
+[
+1,
 17
 ],
 [
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
 2,
 1
 ],
@@ -18896,23 +17159,19 @@
 ],
 [
 2,
-5
+8
 ],
 [
 2,
-7
+8
 ],
 [
 2,
-7
+11
 ],
 [
 2,
-10
-],
-[
-2,
-10
+11
 ]
 ],
 "level": null,
@@ -18920,7 +17179,7 @@
 "name": "Melee Burst 5-man: Assassination Rogue Mutilate talents (levels 40–60)",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=00532010550501051-3023332002&o=0202020202030303040406080808080809090909090b0b0b0b0b0f0f0f0f0f0d0g101010121215151513131314141416161919",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=00530221250451031-30232302002&o=02020202020303030505080806060709090909090d0c0c0c0c0c0f0f0f0b0g0b0b0b1010101212151515131313141417171a1a",
 "guide": "https://wowforeverbuilds.com/guide/melee-burst-assassination-rogue-dungeon-leveling",
 "category": "Leveo"
 }
@@ -18930,7 +17189,7 @@
 "class": "SHAMAN",
 "ranks": [
 "0510000000000000",
-"055030331355112251",
+"055033313551012251",
 "0000000000000000"
 ],
 "points": [
@@ -18973,6 +17232,18 @@
 ],
 [
 2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
 7
 ],
 [
@@ -18989,39 +17260,27 @@
 ],
 [
 2,
-8
+11
 ],
 [
 2,
-8
+11
 ],
 [
 2,
-9
+11
 ],
 [
 2,
-12
+11
 ],
 [
 2,
-12
-],
-[
-2,
-12
+11
 ],
 [
 2,
 12
-],
-[
-2,
-12
-],
-[
-2,
-13
 ],
 [
 2,
@@ -19093,23 +17352,11 @@
 ],
 [
 2,
-11
+10
 ],
 [
 2,
-11
-],
-[
-2,
-11
-],
-[
-2,
-11
-],
-[
-2,
-11
+10
 ],
 [
 2,
@@ -19122,6 +17369,18 @@
 [
 2,
 10
+],
+[
+2,
+9
+],
+[
+2,
+9
+],
+[
+2,
+9
 ],
 [
 2,
@@ -19149,7 +17408,7 @@
 "name": "Melee Burst 5-man: Enhancement Shaman Stormstrike and Maelstrom talents (levels 40–60)",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=051-055030331355112251&o=1111111111141414161616171717181b1b1b1b1b1c1d1e1e1f1f1g1g1g1g1g1h0101010101021a1a1a1a1a1919191212121212",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=051-055033313551012251&o=1111111111141414151515161616171a1a1a1a1a1b1d1e1e1f1f1g1g1g1g1g1h01010101010219191919191818181212121212",
 "guide": "https://wowforeverbuilds.com/guide/melee-burst-enhancement-shaman-dungeon-leveling",
 "category": "Leveo"
 }
@@ -19159,7 +17418,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"05053030051210501",
+"0505013500122120301",
 "250503100301000000"
 ],
 "points": [
@@ -19266,18 +17525,6 @@
 ],
 [
 2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
 7
 ],
 [
@@ -19290,35 +17537,39 @@
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
-],
-[
-2,
-12
-],
-[
-2,
-12
+8
 ],
 [
 2,
 11
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+13
 ],
 [
 2,
@@ -19334,19 +17585,27 @@
 ],
 [
 2,
-15
-],
-[
-2,
-15
-],
-[
-2,
-15
+17
 ],
 [
 2,
 17
+],
+[
+2,
+17
+],
+[
+2,
+12
+],
+[
+2,
+6
+],
+[
+2,
+19
 ],
 [
 3,
@@ -19378,7 +17637,7 @@
 "name": "Melee Burst 5-man: Fury Warrior tank talents with Protection (levels 40–60)",
 "spec": "Fury",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=-05053030051210501-250503100301&o=11111111111313131313212121212125252520202629292914141416161619191919191b1b1a1c1e1e1e1e1e1g23232323232b",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=-050501350122120031-250503100301&o=1111111111131313131321212121212525252020262929291616161717171717191a1c1b1b1d1d1g1g1g1a151h23232323232b",
 "guide": "https://wowforeverbuilds.com/guide/melee-burst-fury-warrior-dungeon-leveling",
 "category": "Leveo"
 }
@@ -19845,8 +18104,8 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"23325013032015001",
-"00000000000000000",
+"33323013132015001",
+"0000000000000000000",
 "000000000000000000"
 ],
 "points": [
@@ -19909,27 +18168,27 @@
 ],
 [
 1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
 7
+],
+[
+1,
+1
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+11
 ],
 [
 1,
@@ -19941,10 +18200,6 @@
 ],
 [
 1,
-11
-],
-[
-1,
 14
 ],
 [
@@ -19974,6 +18229,10 @@
 [
 1,
 2
+],
+[
+1,
+9
 ],
 [
 1,
@@ -19985,7 +18244,7 @@
 "name": "Melee Cleave 5-man: Arms Warrior Sweeping Strikes talents (levels 20–40)",
 "spec": "Arms",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=23325013032015001&o=000002020203030404040707070404090909060a0c0a0d0d0d0d0d0101010g",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=33323013132015001&o=0000020202030304040407070706000909090a0a0c0d0d0d0d0d010101080g",
 "guide": "https://wowforeverbuilds.com/guide/melee-cleave-arms-warrior-dungeon-leveling",
 "category": "Leveo"
 }
@@ -19995,8 +18254,8 @@
 "class": "ROGUE",
 "ranks": [
 "00000000000000000",
-"32203320021511231",
-"0000000000000000000"
+"3220330200212215201",
+"000000000000000000"
 ],
 "points": [
 0,
@@ -20050,15 +18309,11 @@
 ],
 [
 2,
-7
+8
 ],
 [
 2,
-7
-],
-[
-2,
-3
+8
 ],
 [
 2,
@@ -20066,35 +18321,7 @@
 ],
 [
 2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
-],
-[
-2,
-10
-],
-[
-2,
-10
+3
 ],
 [
 2,
@@ -20102,23 +18329,19 @@
 ],
 [
 2,
+11
+],
+[
+2,
+12
+],
+[
+2,
 14
 ],
 [
 2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-15
+14
 ],
 [
 2,
@@ -20127,6 +18350,42 @@
 [
 2,
 17
+],
+[
+2,
+17
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+19
 ]
 ],
 "level": null,
@@ -20134,7 +18393,7 @@
 "name": "Melee Cleave 5-man: Combat Rogue Blade Flurry talents (levels 20–40)",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=-32203320021511231&o=1111101010151515141414161612121b1b1b1b1b1c19191a1d1f1f1f1e1e1g",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-3220330200212221501&o=1111101010151515141414171712121a1a1b1c1c1f1e1e1g1g1g1g1g1d1d1i",
 "guide": "https://wowforeverbuilds.com/guide/melee-cleave-combat-rogue-dungeon-leveling",
 "category": "Leveo"
 },
@@ -20438,8 +18697,8 @@
 "class": "ROGUE",
 "ranks": [
 "00000000000000000",
-"32203320021511231",
-"0000000000000000000"
+"3220330200212215201",
+"000000000000000000"
 ],
 "points": [
 0,
@@ -20493,15 +18752,11 @@
 ],
 [
 2,
-7
+8
 ],
 [
 2,
-7
-],
-[
-2,
-3
+8
 ],
 [
 2,
@@ -20509,35 +18764,7 @@
 ],
 [
 2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-13
-],
-[
-2,
-10
-],
-[
-2,
-10
+3
 ],
 [
 2,
@@ -20545,23 +18772,19 @@
 ],
 [
 2,
+11
+],
+[
+2,
+12
+],
+[
+2,
 14
 ],
 [
 2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-16
-],
-[
-2,
-15
+14
 ],
 [
 2,
@@ -20570,6 +18793,42 @@
 [
 2,
 17
+],
+[
+2,
+17
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+19
 ]
 ],
 "level": null,
@@ -20577,7 +18836,7 @@
 "name": "Melee Cleave 5-man: Feral Druid bear tank talents for AoE threat (levels 20–40)",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=-32203320021511231&o=1111101010151515141414161612121b1b1b1b1b1c19191a1d1f1f1f1e1e1g",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-3220330200212221501&o=1111101010151515141414171712121a1a1b1c1c1f1e1e1g1g1g1g1g1d1d1i",
 "guide": "https://wowforeverbuilds.com/guide/melee-cleave-feral-combat-druid-dungeon-leveling",
 "category": "Leveo"
 }
@@ -20735,14 +18994,14 @@
 {
 "class": "ROGUE",
 "ranks": [
-"02530010551001251",
-"30232320000500000",
-"0000000000000000000"
+"02530300251251231",
+"3023030000000000000",
+"005000000000000000"
 ],
 "points": [
-31,
-20,
-0
+35,
+11,
+5
 ],
 "order": [
 [
@@ -20767,6 +19026,18 @@
 ],
 [
 1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
 2
 ],
 [
@@ -20775,22 +19046,6 @@
 ],
 [
 1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-7
-],
-[
-1,
 9
 ],
 [
@@ -20799,15 +19054,15 @@
 ],
 [
 1,
-9
+6
 ],
 [
 1,
-9
+6
 ],
 [
 1,
-9
+6
 ],
 [
 1,
@@ -20827,14 +19082,6 @@
 ],
 [
 1,
-15
-],
-[
-1,
-15
-],
-[
-1,
 10
 ],
 [
@@ -20847,7 +19094,15 @@
 ],
 [
 1,
-16
+15
+],
+[
+1,
+15
+],
+[
+1,
+13
 ],
 [
 1,
@@ -20863,13 +19118,45 @@
 ],
 [
 1,
-16
+13
+],
+[
+1,
+13
 ],
 [
 1,
 17
 ],
 [
+1,
+13
+],
+[
+1,
+13
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
 2,
 1
 ],
@@ -20914,39 +19201,11 @@
 4
 ],
 [
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
+1,
 12
 ],
 [
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
-12
-],
-[
-2,
+1,
 12
 ]
 ],
@@ -20955,7 +19214,7 @@
 "name": "Assassination Rogue leveling guide 30–60: Mutilate and Seal Fate talents",
 "spec": "Assassination",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=02530010551001251-302323200005&o=020202020201010303030608080808080a0909090e0e09090d0f0f0f0f0f0g1010101212151515131313161614141b1b1b1b1b",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=02530300251251231-302303-005&o=0202020202030303010108080505050a09090909090d0e0e0c0f0f0f0c0c0g0c0c222222222210101012121515151313130b0b",
 "guide": "https://wowforeverbuilds.com/guide/mutilate-rogue-leveling",
 "category": "Leveo"
 }
@@ -21532,7 +19791,7 @@
 "class": "SHAMAN",
 "ranks": [
 "0000000000000000",
-"052030031105010000",
+"052030311050010000",
 "0000000000000000"
 ],
 "points": [
@@ -21583,11 +19842,15 @@
 ],
 [
 2,
-8
+7
 ],
 [
 2,
-8
+7
+],
+[
+2,
+7
 ],
 [
 2,
@@ -21599,27 +19862,23 @@
 ],
 [
 2,
-10
+11
 ],
 [
 2,
-12
+11
 ],
 [
 2,
-12
+11
 ],
 [
 2,
-12
+11
 ],
 [
 2,
-12
-],
-[
-2,
-12
+11
 ],
 [
 2,
@@ -21631,7 +19890,7 @@
 "name": "Priest + Shaman duo leveling 10–30: Enhancement Shaman melee talents",
 "spec": "Enhancement",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=-05203003110501&o=1111111111141414121217171718191b1b1b1b1b1d",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=-05203031105001&o=1111111111141414121216161617181a1a1a1a1a1d",
 "guide": "https://wowforeverbuilds.com/guide/priest-shaman-horde-duo-enhancement-shaman-group-leveling",
 "category": "Leveo"
 }
@@ -21918,7 +20177,7 @@
 "class": "WARRIOR",
 "ranks": [
 "10000000000000000",
-"05000000000000000",
+"0500000000000000000",
 "255533120331021351"
 ],
 "points": [
@@ -22147,7 +20406,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"05030000000000000",
+"0503000000000000000",
 "255520123330021351"
 ],
 "points": [
@@ -22171,7 +20430,7 @@
 "class": "WARRIOR",
 "ranks": [
 "00000000000000000",
-"05050100000000000",
+"0505010000000000000",
 "255530122001221351"
 ],
 "points": [
@@ -22416,13 +20675,13 @@
 "class": "SHAMAN",
 "ranks": [
 "0000000000000000",
-"205202001300000000",
-"3530302315013151"
+"225200013000200000",
+"3530300315013151"
 ],
 "points": [
 0,
-15,
-36
+17,
+34
 ],
 "order": null,
 "level": null,
@@ -22430,7 +20689,7 @@
 "name": "Restoration Shaman PvP guide: Nature's Swiftness, Riptide and totem control",
 "spec": "Restoration",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/shaman?b=-2052020013-3530302315013151&prof=engineering%2Calchemy",
+"url": "https://wowforeverbuilds.com/talents/shaman?b=-2252000130002-3530300315013151&prof=engineering%2Calchemy",
 "guide": "https://wowforeverbuilds.com/guide/restoration-shaman-pvp-guide",
 "category": "PvP"
 }
@@ -22717,8 +20976,8 @@
 "class": "ROGUE",
 "ranks": [
 "00000000000000000",
-"30233301000515000",
-"0000000000000000000"
+"3023330210010213200",
+"000000000000000000"
 ],
 "points": [
 0,
@@ -22784,51 +21043,51 @@
 ],
 [
 2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
 8
 ],
 [
 2,
-12
+8
 ],
 [
 2,
-12
+15
 ],
 [
 2,
-12
+17
 ],
 [
 2,
-12
+17
 ],
 [
 2,
-12
+16
 ],
 [
 2,
-13
+16
 ],
 [
 2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
+16
 ]
 ],
 "level": null,
@@ -22836,7 +21095,7 @@
 "name": "Rogue + Druid duo leveling 10–35: Combat Rogue dagger talents",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=-30233301000515&o=1010101212131313151515141414171b1b1b1b1b1c1d1d1d1d1d",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-30233302100120213&o=1010101212131313151515141414181b1c1c17171f1e1e1g1g1g",
 "guide": "https://wowforeverbuilds.com/guide/rogue-druid-combat-rogue-group-leveling",
 "category": "Leveo"
 },
@@ -23100,8 +21359,8 @@
 "class": "ROGUE",
 "ranks": [
 "00000000000000000",
-"30233301000515000",
-"0000000000000000000"
+"3023330210010213200",
+"000000000000000000"
 ],
 "points": [
 0,
@@ -23167,51 +21426,51 @@
 ],
 [
 2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
 8
 ],
 [
 2,
-12
+8
 ],
 [
 2,
-12
+15
 ],
 [
 2,
-12
+17
 ],
 [
 2,
-12
+17
 ],
 [
 2,
-12
+16
 ],
 [
 2,
-13
+16
 ],
 [
 2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
-],
-[
-2,
-14
+16
 ]
 ],
 "level": null,
@@ -23219,7 +21478,7 @@
 "name": "Rogue + Druid duo leveling 10–35: Feral Druid bear tank and heals",
 "spec": "Combat",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=-30233301000515&o=1010101212131313151515141414171b1b1b1b1b1c1d1d1d1d1d",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-30233302100120213&o=1010101212131313151515141414181b1c1c17171f1e1e1g1g1g",
 "guide": "https://wowforeverbuilds.com/guide/rogue-druid-feral-combat-druid-group-leveling",
 "category": "Leveo"
 }
@@ -24650,8 +22909,8 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"32320203032515001",
-"05053020040000000",
+"32320203132215201",
+"0505003500100000000",
 "000000000000000000"
 ],
 "points": [
@@ -24774,11 +23033,11 @@
 ],
 [
 1,
-12
+9
 ],
 [
 1,
-12
+15
 ],
 [
 1,
@@ -24786,7 +23045,7 @@
 ],
 [
 1,
-12
+15
 ],
 [
 2,
@@ -24827,18 +23086,6 @@
 [
 2,
 4
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-5
 ],
 [
 2,
@@ -24850,19 +23097,31 @@
 ],
 [
 2,
-10
+7
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
 ],
 [
 2,
-10
+8
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+11
 ]
 ],
 "level": null,
@@ -24870,7 +23129,7 @@
 "name": "Shaman + Warrior duo leveling 30–60: Arms Warrior talents for multi-mob pulls",
 "spec": "Arms",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=32320203032515001-0505302004&o=0202020101030305050007070700000909090a0a0c0d0d0d0d0d0b0b0b0b0g0b11111111111313131313141414161619191919",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=32320203132215201-0505003501&o=0202020101030305050007070700000909090a0a0c0d0d0d0d0d0b0b080e0g0e11111111111313131313161616171717171719",
 "guide": "https://wowforeverbuilds.com/guide/shaman-warrior-horde-duo-arms-warrior-group-leveling",
 "category": "Leveo"
 }
@@ -25986,13 +24245,13 @@
 {
 "class": "ROGUE",
 "ranks": [
-"00532311500000000",
-"00000000000000000",
-"0321203310213211501"
+"00530201200000000",
+"3200020000000000000",
+"105020331312021151"
 ],
 "points": [
-20,
-0,
+13,
+7,
 31
 ],
 "order": null,
@@ -26001,7 +24260,7 @@
 "name": "Subtlety Rogue PvE guide: Hemorrhage and Rupture build for Forever raids",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=005323115--0321203310213211501&prof=engineering%2Cleatherworking",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=005302012-320002-105203031321021151&prof=engineering%2Cleatherworking",
 "guide": "https://wowforeverbuilds.com/guide/subtlety-rogue-pve-guide",
 "category": "PvE"
 }
@@ -26010,14 +24269,14 @@
 {
 "class": "ROGUE",
 "ranks": [
-"30522010501000000",
-"00000000000000000",
-"3023220310213211501"
+"30530020201000000",
+"3100000000000000000",
+"302322031312021141"
 ],
 "points": [
-19,
-0,
-32
+16,
+4,
+31
 ],
 "order": null,
 "level": null,
@@ -26025,7 +24284,7 @@
 "name": "Subtlety Rogue PvP guide: Hemorrhage, Preparation and Cold Blood control",
 "spec": "Subtlety",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/rogue?b=30522010501--3023220310213211501&prof=engineering%2Cleatherworking",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=30530020201-31-302230231321021141&prof=engineering%2Cleatherworking",
 "guide": "https://wowforeverbuilds.com/guide/subtlety-rogue-pvp-guide",
 "category": "PvP"
 }
@@ -26758,8 +25017,8 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"35325213032515001",
-"05050000000000000",
+"35323213132215221",
+"0505000000000000000",
 "000000000000000000"
 ],
 "points": [
@@ -26822,15 +25081,15 @@
 ],
 [
 1,
-5
-],
-[
-1,
-5
-],
-[
-1,
 7
+],
+[
+1,
+6
+],
+[
+1,
+6
 ],
 [
 1,
@@ -26902,23 +25161,15 @@
 ],
 [
 1,
-12
+15
 ],
 [
 1,
-12
+15
 ],
 [
 1,
-12
-],
-[
-1,
-6
-],
-[
-1,
-6
+9
 ],
 [
 2,
@@ -26967,6 +25218,14 @@
 [
 1,
 2
+],
+[
+1,
+16
+],
+[
+1,
+16
 ],
 [
 1,
@@ -26978,7 +25237,7 @@
 "name": "Warrior + Paladin duo leveling 10–60: Arms Warrior talents and pulls",
 "spec": "Arms",
 "source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/warrior?b=35325213032515001-0505&o=020202000003030404040707070404060909090a0c0a0d0d0d0d0d0101010g0b0b0b0b0b050511111111111313131313010100",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=35323213132215221-0505&o=020202000003030404040707070605050909090a0c0a0d0d0d0d0d0101010g0b0b0e0e081111111111131313131301010f0f00",
 "guide": "https://wowforeverbuilds.com/guide/warrior-paladin-arms-warrior-group-leveling",
 "category": "Leveo"
 }
@@ -27212,34 +25471,14 @@
 "category": "Leveo"
 }
 ],
-"rankedboost:WARRIOR": [
+"rankedboost:WARRIOR": [],
+"rankedboost:PALADIN": [
 {
-"class": "WARRIOR",
+"class": "PALADIN",
 "ranks": [
-"30324003002000000",
-"05053025050210501",
-"000000000000000000"
-],
-"points": [
-17,
-34,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Fury Warrior DPS Build",
-"spec": "Fury",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-fury-dps",
-"category": "PvE"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"02305213032510031",
-"05501130050000000",
-"000000000000000000"
+"50320215012101251",
+"51022000500500000",
+"00000000000000000"
 ],
 "points": [
 31,
@@ -27249,56 +25488,97 @@
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Arms Warrior PvP Build",
-"spec": "Arms",
+"name": "Holy Paladin Healing Build",
+"spec": "Holy",
 "source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-pvp",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/paladin/#build=auth-paladin-holy-healing",
+"category": "PvE"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"00000000000000000",
+"55302102513521531",
+"52000000000000000"
+],
+"points": [
+0,
+44,
+7
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Protection Paladin Tank Build",
+"spec": "Protection",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/paladin/#build=auth-paladin-protection-tank",
+"category": "PvE"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"05005000200000000",
+"50300000000000000",
+"05233301001301351"
+],
+"points": [
+12,
+8,
+31
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Retribution Paladin DPS Build",
+"spec": "Retribution",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/paladin/#build=auth-paladin-retribution-dps",
+"category": "PvE"
+},
+{
+"class": "PALADIN",
+"ranks": [
+"50320215022101000",
+"52022130500520000",
+"00000000000000000"
+],
+"points": [
+24,
+27,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Holy Paladin PvP Build",
+"spec": "Holy",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/paladin/#build=auth-paladin-holy-pvp",
 "category": "PvP"
 },
 {
-"class": "WARRIOR",
+"class": "PALADIN",
 "ranks": [
-"35015010000000000",
-"00000000000000000",
-"255530120300001351"
+"25023000200000000",
+"50000000000000000",
+"05233301201301341"
 ],
 "points": [
-15,
-0,
-36
+14,
+5,
+32
 ],
 "order": null,
 "level": 60,
 "beta": null,
-"name": "Protection Warrior Tank Build",
-"spec": "Protection",
+"name": "Retribution Paladin Leveling Build",
+"spec": "Retribution",
 "source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-protection-tank",
-"category": "PvE"
-},
-{
-"class": "WARRIOR",
-"ranks": [
-"30325013032015201",
-"05250030050000000",
-"000000000000000000"
-],
-"points": [
-31,
-20,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Arms Warrior Leveling Build",
-"spec": "Arms",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-leveling",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/paladin/#build=auth-paladin-retribution-leveling",
 "category": "Leveo"
 }
 ],
-"rankedboost:PALADIN": [],
 "rankedboost:HUNTER": [
 {
 "class": "HUNTER",
@@ -27383,57 +25663,36 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/hunter/#build=auth-hunter-survival-pvp",
 "category": "PvP"
+},
+{
+"class": "HUNTER",
+"ranks": [
+"0521221525021251",
+"0053502000000000",
+"000000000000000000"
+],
+"points": [
+36,
+15,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Beast Mastery Hunter Leveling Build",
+"spec": "Beast Mastery",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/hunter/#build=auth-hunter-beast-mastery-leveling",
+"category": "Leveo"
 }
 ],
 "rankedboost:ROGUE": [
 {
 "class": "ROGUE",
 "ranks": [
-"00532310551501051",
-"30230310000000000",
-"0020000000000000000"
-],
-"points": [
-37,
-12,
-2
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Assassination Rogue DPS Build",
-"spec": "Assassination",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-assassination-dps",
-"category": "PvE"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"00530310501000000",
-"32203311001515231",
-"0000000000000000000"
-],
-"points": [
-18,
-33,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Combat Rogue DPS Build",
-"spec": "Combat",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-combat-dps",
-"category": "PvE"
-},
-{
-"class": "ROGUE",
-"ranks": [
 "00500000000000000",
-"30500320220000000",
-"0323223310213211000"
+"3050032200200000000",
+"332022331312021100"
 ],
 "points": [
 5,
@@ -27448,27 +25707,6 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-subtlety-pvp",
 "category": "PvP"
-},
-{
-"class": "ROGUE",
-"ranks": [
-"02532010200000000",
-"32503321001515131",
-"0000000000000000000"
-],
-"points": [
-15,
-36,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Combat Rogue Leveling Build",
-"spec": "Combat",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-combat-leveling",
-"category": "Leveo"
 }
 ],
 "rankedboost:PRIEST": [
@@ -27491,6 +25729,48 @@
 "spec": "Shadow",
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-shadow-dps",
+"category": "PvE"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"005302031030000000",
+"13505103030121531",
+"00000000000000000"
+],
+"points": [
+17,
+34,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Holy Priest Healing Build",
+"spec": "Holy",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-holy-healing",
+"category": "PvE"
+},
+{
+"class": "PRIEST",
+"ranks": [
+"005203031330011531",
+"30505003030100000",
+"00000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Discipline Priest Healing Build",
+"spec": "Discipline",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/priest/#build=auth-priest-discipline-healing",
 "category": "PvE"
 },
 {
@@ -27561,29 +25841,8 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5505331000001351",
-"050000000000000000",
-"0531500000000000"
-],
-"points": [
-32,
-5,
-14
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Elemental Shaman DPS Build",
-"spec": "Elemental",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-dps",
-"category": "PvE"
-},
-{
-"class": "SHAMAN",
-"ranks": [
 "0530000000000000",
-"055030031005112151",
+"055030310051012151",
 "0500500000000000"
 ],
 "points": [
@@ -27603,29 +25862,8 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"1500331303121341",
-"253202001050000000",
-"0000000000000000"
-],
-"points": [
-31,
-20,
-0
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Elemental Shaman PvP Build",
-"spec": "Elemental",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-pvp",
-"category": "PvP"
-},
-{
-"class": "SHAMAN",
-"ranks": [
 "0000000000000000",
-"054032031355112251",
+"054030313551212251",
 "0530000000000000"
 ],
 "points": [
@@ -27878,6 +26116,90 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-balance-dps",
 "category": "PvE"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500200000000000",
+"55200202123102125510",
+"0500000000000000"
+],
+"points": [
+7,
+39,
+5
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Feral Combat Druid Hybrid Build",
+"spec": "Feral Combat",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-feral-combat-hybrid",
+"category": "PvE"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500100000000000",
+"00000000000000000000",
+"5553005153113251"
+],
+"points": [
+6,
+0,
+45
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Restoration Druid Healing Build",
+"spec": "Restoration",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-restoration-healing",
+"category": "PvE"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"05202100100000000000",
+"5550325103113051"
+],
+"points": [
+0,
+11,
+40
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Restoration Druid PvP Build",
+"spec": "Restoration",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-restoration-pvp",
+"category": "PvP"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"55232302023002120510",
+"0550300000000000"
+],
+"points": [
+0,
+38,
+13
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Feral Combat Druid Leveling Build",
+"spec": "Feral Combat",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-feral-combat-leveling",
+"category": "Leveo"
 }
 ],
 "wft:/builds/affliction-warlock-solo-10-20/": [
@@ -27949,213 +26271,12 @@
 }
 ],
 "wft:/builds/beast-mastery-hunter-solo-10-20/": [],
-"wft:/builds/combat-rogue-solo-10-20/": [
-{
-"class": "ROGUE",
-"ranks": [
-"00000000000000000",
-"32002300100000000",
-"0000000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-1
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-5
-],
-[
-2,
-5
-],
-[
-2,
-9
-]
-],
-"level": 20,
-"beta": true,
-"name": "Combat Rogue Solo 10–20",
-"spec": "Combat",
-"source": "WoW Forever Talent",
-"url": "https://wowforevertalent.com/builds/combat-rogue-solo-10-20/",
-"category": "Leveo"
-}
-],
+"wft:/builds/combat-rogue-solo-10-20/": [],
 "wft:/builds/discipline-priest-dungeon-healing-10-20/": [],
-"wft:/builds/enhancement-shaman-solo-10-20/": [
-{
-"class": "SHAMAN",
-"ranks": [
-"0000000000000000",
-"050002301000000000",
-"0000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-6
-],
-[
-2,
-6
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-7
-],
-[
-2,
-9
-]
-],
-"level": 20,
-"beta": true,
-"name": "Enhancement Shaman Solo 10–20",
-"spec": "Enhancement",
-"source": "WoW Forever Talent",
-"url": "https://wowforevertalent.com/builds/enhancement-shaman-solo-10-20/",
-"category": "Leveo"
-}
-],
+"wft:/builds/enhancement-shaman-solo-10-20/": [],
 "wft:/builds/feral-druid-dungeon-tank-10-20/": [],
 "wft:/builds/frost-mage-solo-10-20/": [],
-"wft:/builds/fury-warrior-solo-10-20/": [
-{
-"class": "WARRIOR",
-"ranks": [
-"00000000000000000",
-"05050010000000000",
-"000000000000000000"
-],
-"points": [
-0,
-11,
-0
-],
-"order": [
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-2
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-4
-],
-[
-2,
-7
-]
-],
-"level": 20,
-"beta": true,
-"name": "Fury Warrior Solo 10–20",
-"spec": "Fury",
-"source": "WoW Forever Talent",
-"url": "https://wowforevertalent.com/builds/fury-warrior-solo-10-20/",
-"category": "Leveo"
-}
-],
+"wft:/builds/fury-warrior-solo-10-20/": [],
 "wft:/builds/protection-paladin-dungeon-tank-10-20/": [],
 "spells": [
 [
@@ -28221,12 +26342,6 @@
 [
 "WARRIOR",
 0,
-4,
-12295
-],
-[
-"WARRIOR",
-0,
 3,
 12285
 ],
@@ -28251,55 +26366,37 @@
 [
 "WARRIOR",
 0,
-11,
-1289682
-],
-[
-"WARRIOR",
-0,
 14,
 12862
 ],
 [
 "WARRIOR",
 1,
-13,
+15,
 20504
 ],
 [
 "WARRIOR",
 1,
-12,
+13,
 12328
 ],
 [
 "WARRIOR",
 1,
-14,
-12319
-],
-[
-"WARRIOR",
-1,
-16,
+18,
 23881
 ],
 [
 "WARRIOR",
 1,
-9,
-12317
-],
-[
-"WARRIOR",
-1,
-10,
+11,
 20502
 ],
 [
 "WARRIOR",
 1,
-7,
+8,
 23584
 ],
 [
@@ -28341,13 +26438,13 @@
 [
 "WARRIOR",
 1,
-8,
+9,
 1310315
 ],
 [
 "WARRIOR",
 1,
-11,
+12,
 20500
 ],
 [
@@ -28355,12 +26452,6 @@
 1,
 2,
 1323964
-],
-[
-"WARRIOR",
-1,
-15,
-1323967
 ],
 [
 "WARRIOR",
@@ -29079,26 +27170,8 @@
 [
 "ROGUE",
 0,
-13,
-1310707
-],
-[
-"ROGUE",
-0,
-15,
-14186
-],
-[
-"ROGUE",
-0,
 14,
 14174
-],
-[
-"ROGUE",
-0,
-16,
-1310703
 ],
 [
 "ROGUE",
@@ -29117,30 +27190,6 @@
 0,
 10,
 14177
-],
-[
-"ROGUE",
-0,
-8,
-14128
-],
-[
-"ROGUE",
-0,
-7,
-14168
-],
-[
-"ROGUE",
-0,
-12,
-14983
-],
-[
-"ROGUE",
-0,
-4,
-14158
 ],
 [
 "ROGUE",
@@ -29174,12 +27223,6 @@
 ],
 [
 "ROGUE",
-0,
-6,
-14179
-],
-[
-"ROGUE",
 1,
 0,
 14162
@@ -29193,55 +27236,37 @@
 [
 "ROGUE",
 1,
-16,
+18,
 13750
 ],
 [
 "ROGUE",
 1,
-14,
-30919
-],
-[
-"ROGUE",
-1,
-13,
+15,
 13960
 ],
 [
 "ROGUE",
 1,
-12,
+14,
 13877
 ],
 [
 "ROGUE",
 1,
-15,
-18427
-],
-[
-"ROGUE",
-1,
-8,
-13743
-],
-[
-"ROGUE",
-1,
-9,
+10,
 13754
 ],
 [
 "ROGUE",
 1,
-7,
+8,
 14251
 ],
 [
 "ROGUE",
 1,
-6,
+7,
 13742
 ],
 [
@@ -29259,19 +27284,13 @@
 [
 "ROGUE",
 1,
-11,
-13715
-],
-[
-"ROGUE",
-1,
 1,
 13732
 ],
 [
 "ROGUE",
 1,
-10,
+11,
 1310711
 ],
 [
@@ -29283,26 +27302,8 @@
 [
 "ROGUE",
 2,
-11,
-14183
-],
-[
-"ROGUE",
-2,
-13,
-14082
-],
-[
-"ROGUE",
-2,
 14,
 14185
-],
-[
-"ROGUE",
-2,
-10,
-30894
 ],
 [
 "ROGUE",
@@ -29319,44 +27320,8 @@
 [
 "ROGUE",
 2,
-17,
-462708
-],
-[
-"ROGUE",
-2,
-3,
-13983
-],
-[
-"ROGUE",
-2,
-12,
-14171
-],
-[
-"ROGUE",
-2,
-4,
-13981
-],
-[
-"ROGUE",
-2,
-8,
-14278
-],
-[
-"ROGUE",
-2,
 7,
 13976
-],
-[
-"ROGUE",
-2,
-0,
-13975
 ],
 [
 "ROGUE",
@@ -29367,32 +27332,8 @@
 [
 "ROGUE",
 2,
-2,
-14057
-],
-[
-"ROGUE",
-2,
 1,
 13958
-],
-[
-"ROGUE",
-2,
-18,
-1310721
-],
-[
-"ROGUE",
-2,
-16,
-1310728
-],
-[
-"ROGUE",
-2,
-9,
-14084
 ],
 [
 "PRIEST",
@@ -29715,12 +27656,6 @@
 [
 "SHAMAN",
 0,
-12,
-408490
-],
-[
-"SHAMAN",
-0,
 11,
 28999
 ],
@@ -29817,7 +27752,7 @@
 [
 "SHAMAN",
 1,
-12,
+11,
 17364
 ],
 [
@@ -29835,44 +27770,38 @@
 [
 "SHAMAN",
 1,
-10,
+9,
 16252
 ],
 [
 "SHAMAN",
 1,
-11,
+10,
 16256
 ],
 [
 "SHAMAN",
 1,
-9,
+8,
 16254
 ],
 [
 "SHAMAN",
 1,
-8,
+7,
 1223030
 ],
 [
 "SHAMAN",
 1,
-7,
+6,
 16266
 ],
 [
 "SHAMAN",
 1,
-6,
-16261
-],
-[
-"SHAMAN",
-1,
 5,
-16262
+16261
 ],
 [
 "SHAMAN",
@@ -31053,6 +28982,220 @@
 ],
 "q": [
 2,
+11
+],
+"r": [
+2,
+12
+],
+"s": [
+2,
+13
+],
+"t": [
+2,
+14
+],
+"u": [
+2,
+15
+],
+"v": [
+2,
+16
+],
+"w": [
+2,
+18
+],
+"x": [
+2,
+17
+],
+"y": [
+2,
+19
+],
+"z": [
+3,
+1
+],
+"A": [
+3,
+2
+],
+"B": [
+3,
+3
+],
+"C": [
+3,
+4
+],
+"D": [
+3,
+5
+],
+"E": [
+3,
+6
+],
+"F": [
+3,
+7
+],
+"G": [
+3,
+8
+],
+"H": [
+3,
+9
+],
+"I": [
+3,
+10
+],
+"J": [
+3,
+11
+],
+"K": [
+3,
+12
+],
+"L": [
+3,
+13
+],
+"M": [
+3,
+14
+],
+"N": [
+3,
+15
+],
+"O": [
+3,
+16
+],
+"P": [
+3,
+17
+],
+"Q": [
+3,
+18
+]
+},
+"PALADIN": {
+"0": [
+1,
+1
+],
+"1": [
+1,
+2
+],
+"2": [
+1,
+3
+],
+"3": [
+1,
+4
+],
+"4": [
+1,
+5
+],
+"5": [
+1,
+6
+],
+"6": [
+1,
+7
+],
+"7": [
+1,
+8
+],
+"8": [
+1,
+9
+],
+"9": [
+1,
+10
+],
+"a": [
+1,
+11
+],
+"b": [
+1,
+12
+],
+"c": [
+1,
+13
+],
+"d": [
+1,
+14
+],
+"e": [
+1,
+15
+],
+"f": [
+1,
+16
+],
+"g": [
+1,
+17
+],
+"h": [
+2,
+1
+],
+"i": [
+2,
+2
+],
+"j": [
+2,
+3
+],
+"k": [
+2,
+4
+],
+"l": [
+2,
+5
+],
+"m": [
+2,
+6
+],
+"n": [
+2,
+7
+],
+"o": [
+2,
+8
+],
+"p": [
+2,
+9
+],
+"q": [
+2,
 10
 ],
 "r": [
@@ -31150,196 +29293,6 @@
 "O": [
 3,
 17
-],
-"P": [
-3,
-18
-]
-},
-"PALADIN": {
-"0": [
-1,
-2
-],
-"1": [
-2,
-1
-],
-"2": [
-1,
-3
-],
-"3": [
-1,
-1
-],
-"4": [
-1,
-5
-],
-"5": [
-3,
-7
-],
-"7": [
-1,
-4
-],
-"8": [
-1,
-6
-],
-"9": [
-1,
-11
-],
-"a": [
-1,
-8
-],
-"b": [
-1,
-7
-],
-"c": [
-1,
-10
-],
-"d": [
-1,
-14
-],
-"e": [
-1,
-13
-],
-"f": [
-1,
-16
-],
-"g": [
-1,
-17
-],
-"h": [
-2,
-9
-],
-"i": [
-2,
-2
-],
-"j": [
-2,
-3
-],
-"k": [
-2,
-4
-],
-"l": [
-2,
-12
-],
-"n": [
-2,
-11
-],
-"o": [
-2,
-8
-],
-"p": [
-2,
-5
-],
-"q": [
-2,
-10
-],
-"s": [
-2,
-7
-],
-"t": [
-2,
-6
-],
-"u": [
-2,
-15
-],
-"v": [
-2,
-16
-],
-"w": [
-2,
-14
-],
-"x": [
-3,
-1
-],
-"y": [
-3,
-2
-],
-"z": [
-3,
-3
-],
-"A": [
-1,
-9
-],
-"B": [
-3,
-4
-],
-"C": [
-3,
-6
-],
-"D": [
-3,
-5
-],
-"E": [
-3,
-8
-],
-"F": [
-3,
-9
-],
-"G": [
-3,
-10
-],
-"H": [
-3,
-11
-],
-"I": [
-3,
-12
-],
-"J": [
-3,
-15
-],
-"K": [
-3,
-14
-],
-"L": [
-3,
-16
-],
-"N": [
-3,
-17
 ]
 },
 "HUNTER": {
@@ -31361,11 +29314,11 @@
 ],
 "4": [
 1,
-6
+5
 ],
 "5": [
 1,
-5
+6
 ],
 "6": [
 1,
@@ -31663,99 +29616,103 @@
 ],
 "t": [
 2,
-13
+14
 ],
 "u": [
 2,
-14
+13
 ],
 "v": [
 2,
-15
+17
 ],
 "w": [
 2,
-16
+15
 ],
 "x": [
 2,
-17
+16
 ],
 "y": [
-3,
-1
+2,
+18
 ],
 "z": [
-3,
-2
+2,
+19
 ],
 "A": [
 3,
-3
+1
 ],
 "B": [
 3,
-4
+2
 ],
 "C": [
 3,
-5
+3
 ],
 "D": [
 3,
-6
+5
 ],
 "E": [
 3,
-7
+4
 ],
 "F": [
 3,
-8
+7
 ],
 "G": [
 3,
-9
+6
 ],
 "H": [
 3,
-10
+8
 ],
 "I": [
 3,
-11
+9
 ],
 "J": [
 3,
-12
+10
 ],
 "K": [
 3,
-13
+12
 ],
 "L": [
 3,
-14
+11
 ],
 "M": [
 3,
-15
+13
 ],
 "N": [
 3,
-16
+14
 ],
 "O": [
 3,
-17
+15
 ],
 "P": [
 3,
-18
+16
 ],
 "Q": [
 3,
-19
+17
+],
+"R": [
+3,
+18
 ]
 },
 "PRIEST": {
@@ -31874,6 +29831,10 @@
 "s": [
 2,
 11
+],
+"t": [
+2,
+12
 ],
 "u": [
 2,
@@ -32013,10 +29974,6 @@
 1,
 12
 ],
-"c": [
-1,
-13
-],
 "d": [
 1,
 14
@@ -32051,35 +30008,35 @@
 ],
 "l": [
 2,
-6
+13
 ],
 "m": [
 2,
-7
+6
 ],
 "n": [
 2,
-8
+7
 ],
 "o": [
 2,
-9
+8
 ],
 "p": [
 2,
-10
+9
 ],
 "q": [
 2,
-11
+10
 ],
 "r": [
 2,
-12
+11
 ],
 "s": [
 2,
-13
+12
 ],
 "t": [
 2,
@@ -32899,45 +30856,49 @@
 2,
 7
 ],
-"Bc": [
+"Bb": [
 2,
 8
 ],
-"Bd": [
+"Bc": [
 2,
 9
 ],
-"Be": [
-2,
-10
-],
-"Bf": [
+"Bd": [
 2,
 11
 ],
-"Bg": [
+"Bf": [
 2,
 12
 ],
-"Bh": [
+"Bg": [
 2,
 13
 ],
-"Bj": [
+"Bh": [
 2,
 14
 ],
-"Bl": [
+"Bi": [
 2,
 15
 ],
-"Bm": [
+"Bj": [
 2,
 16
 ],
-"Bp": [
+"Bk": [
+2,
+18
+],
+"Bm": [
 2,
 17
+],
+"Bp": [
+2,
+19
 ],
 "C0": [
 3,
@@ -33015,11 +30976,11 @@
 "PALADIN": {
 "A1": [
 1,
-2
+1
 ],
 "A2": [
-2,
-1
+1,
+2
 ],
 "A4": [
 1,
@@ -33027,39 +30988,43 @@
 ],
 "A5": [
 1,
-1
+4
 ],
 "A6": [
 1,
 5
 ],
 "A7": [
-3,
+1,
+6
+],
+"A8": [
+1,
 7
 ],
 "A9": [
 1,
-4
+8
 ],
 "Aa": [
 1,
-6
+9
 ],
 "Ac": [
 1,
-11
+10
 ],
 "Ad": [
 1,
-8
+11
 ],
 "Ae": [
 1,
-7
+12
 ],
 "Ag": [
 1,
-10
+13
 ],
 "Ah": [
 1,
@@ -33067,7 +31032,7 @@
 ],
 "Ai": [
 1,
-13
+15
 ],
 "Am": [
 1,
@@ -33079,7 +31044,7 @@
 ],
 "B1": [
 2,
-9
+1
 ],
 "B2": [
 2,
@@ -33095,11 +31060,15 @@
 ],
 "B7": [
 2,
-12
+5
+],
+"B8": [
+2,
+6
 ],
 "B9": [
 2,
-11
+7
 ],
 "Ba": [
 2,
@@ -33107,19 +31076,27 @@
 ],
 "Bb": [
 2,
-5
+9
 ],
 "Bc": [
 2,
 10
 ],
+"Bd": [
+2,
+11
+],
 "Be": [
 2,
-7
+12
+],
+"Bg": [
+2,
+13
 ],
 "Bh": [
 2,
-6
+14
 ],
 "Bi": [
 2,
@@ -33131,7 +31108,7 @@
 ],
 "Bp": [
 2,
-14
+17
 ],
 "C1": [
 3,
@@ -33146,12 +31123,12 @@
 3
 ],
 "C5": [
-1,
-9
+3,
+4
 ],
 "C6": [
 3,
-4
+5
 ],
 "C8": [
 3,
@@ -33159,7 +31136,7 @@
 ],
 "C9": [
 3,
-5
+7
 ],
 "Ca": [
 3,
@@ -33173,23 +31150,27 @@
 3,
 10
 ],
-"Ce": [
+"Cd": [
 3,
 11
 ],
-"Cg": [
+"Cf": [
 3,
 12
 ],
-"Ch": [
+"Cg": [
 3,
-15
+13
 ],
-"Ci": [
+"Ch": [
 3,
 14
 ],
-"Cl": [
+"Ci": [
+3,
+15
+],
+"Cm": [
 3,
 16
 ],
@@ -33217,11 +31198,11 @@
 ],
 "A6": [
 1,
-6
-],
-"A7": [
-1,
 5
+],
+"A8": [
+1,
+6
 ],
 "A9": [
 1,
@@ -33493,49 +31474,57 @@
 2,
 6
 ],
-"B8": [
+"B7": [
 2,
 7
 ],
-"B9": [
+"B8": [
 2,
 8
 ],
-"Bb": [
+"B9": [
 2,
 9
 ],
-"Bc": [
+"Bb": [
 2,
 10
 ],
-"Bd": [
+"Bc": [
 2,
 11
 ],
-"Be": [
+"Bd": [
 2,
 12
 ],
-"Bh": [
-2,
-13
-],
-"Bi": [
+"Be": [
 2,
 14
 ],
-"Bl": [
+"Bf": [
+2,
+13
+],
+"Bg": [
+2,
+17
+],
+"Bh": [
 2,
 15
 ],
-"Bm": [
+"Bi": [
 2,
 16
 ],
+"Bm": [
+2,
+18
+],
 "Bp": [
 2,
-17
+19
 ],
 "C0": [
 3,
@@ -33551,19 +31540,19 @@
 ],
 "C4": [
 3,
-4
+5
 ],
 "C5": [
 3,
-5
+4
 ],
 "C6": [
 3,
-6
+7
 ],
 "C7": [
 3,
-7
+6
 ],
 "C8": [
 3,
@@ -33579,13 +31568,13 @@
 ],
 "Cc": [
 3,
-11
+12
 ],
 "Cd": [
 3,
-12
+11
 ],
-"Ce": [
+"Cf": [
 3,
 13
 ],
@@ -33601,17 +31590,13 @@
 3,
 16
 ],
-"Ck": [
+"Cm": [
 3,
 17
 ],
-"Cm": [
-3,
-18
-],
 "Cp": [
 3,
-19
+18
 ]
 },
 "PRIEST": {
@@ -33730,6 +31715,10 @@
 "Be": [
 2,
 11
+],
+"Bf": [
+2,
+12
 ],
 "Bg": [
 2,
@@ -33909,31 +31898,31 @@
 2,
 6
 ],
-"B7": [
+"B8": [
 2,
 7
 ],
-"B8": [
+"Ba": [
 2,
 8
 ],
-"Ba": [
+"Bb": [
 2,
 9
 ],
-"Bb": [
+"Bc": [
 2,
 10
 ],
-"Bc": [
+"Bd": [
 2,
 11
 ],
-"Bd": [
+"Be": [
 2,
 12
 ],
-"Be": [
+"Bf": [
 2,
 13
 ],
@@ -34027,13 +32016,13 @@
 1,
 1
 ],
-"A2": [
+"A1": [
 1,
 2
 ],
-"A3": [
+"A2": [
 1,
-7
+3
 ],
 "A4": [
 1,
@@ -34049,7 +32038,7 @@
 ],
 "A7": [
 1,
-3
+7
 ],
 "A8": [
 1,
@@ -34095,10 +32084,6 @@
 1,
 18
 ],
-"B0": [
-2,
-9
-],
 "B1": [
 2,
 1
@@ -34130,6 +32115,10 @@
 "Ba": [
 2,
 8
+],
+"Bb": [
+2,
+9
 ],
 "Bc": [
 2,
@@ -34516,7 +32505,7 @@
 1
 ],
 "B2": [
-3,
+2,
 2
 ],
 "B4": [
@@ -34553,15 +32542,15 @@
 ],
 "Bc": [
 2,
-20
+11
 ],
 "Bd": [
 2,
-19
+12
 ],
 "Be": [
 2,
-11
+13
 ],
 "Bf": [
 2,
@@ -34577,18 +32566,26 @@
 ],
 "Bk": [
 2,
+17
+],
+"Bn": [
+2,
 18
 ],
-"Bm": [
+"Bp": [
 2,
-17
+19
+],
+"Bq": [
+2,
+20
 ],
 "C1": [
 3,
 1
 ],
 "C2": [
-2,
+3,
 2
 ],
 "C4": [
@@ -34597,7 +32594,7 @@
 ],
 "C5": [
 3,
-6
+4
 ],
 "C6": [
 3,
@@ -34605,11 +32602,15 @@
 ],
 "C9": [
 3,
-4
+6
 ],
 "Ca": [
 3,
 7
+],
+"Cb": [
+3,
+8
 ],
 "Cd": [
 3,
@@ -34753,35 +32754,39 @@
 ],
 "1:9": [
 2,
-10
+11
 ],
 "1:10": [
 2,
-11
+12
 ],
 "1:11": [
 2,
-12
+13
 ],
 "1:12": [
 2,
-13
+14
 ],
 "1:13": [
 2,
-14
+15
 ],
 "1:14": [
 2,
-15
+16
 ],
 "1:15": [
 2,
-16
+18
 ],
 "1:16": [
 2,
 17
+],
+"1:17": [
+2,
+19
 ],
 "2:0": [
 3,
@@ -35383,23 +33388,31 @@
 ],
 "1:12": [
 2,
-13
+14
 ],
 "1:13": [
 2,
-14
+13
 ],
 "1:14": [
 2,
-15
+17
 ],
 "1:15": [
 2,
-16
+15
 ],
 "1:16": [
 2,
-17
+16
+],
+"1:17": [
+2,
+18
+],
+"1:18": [
+2,
+19
 ],
 "2:0": [
 3,
@@ -35415,19 +33428,19 @@
 ],
 "2:3": [
 3,
-4
+5
 ],
 "2:4": [
 3,
-5
+4
 ],
 "2:5": [
 3,
-6
+7
 ],
 "2:6": [
 3,
-7
+6
 ],
 "2:7": [
 3,
@@ -35443,11 +33456,11 @@
 ],
 "2:10": [
 3,
-11
+12
 ],
 "2:11": [
 3,
-12
+11
 ],
 "2:12": [
 3,
@@ -35472,10 +33485,6 @@
 "2:17": [
 3,
 18
-],
-"2:18": [
-3,
-19
 ]
 },
 "PRIEST": {
@@ -39249,6 +37258,12 @@
 "source": "drop"
 },
 {
+"id": 1239570,
+"name": "Holy Shield",
+"rank": 4,
+"level": 60
+},
+{
 "id": 10333,
 "name": "Holy Strike",
 "rank": 8,
@@ -41450,6 +39465,12 @@
 "rank": 2,
 "level": 18,
 "cost": 2900
+},
+{
+"id": 1328825,
+"name": "Poised",
+"rank": 1,
+"level": 18
 },
 {
 "id": 2590,
@@ -43986,7 +42007,7 @@
 },
 {
 "id": 437009,
-"name": "Totemic Projection",
+"name": "Totemic Call",
 "rank": 1,
 "level": 22,
 "cost": 3000
@@ -44419,13 +42440,6 @@
 "cost": 12000
 },
 {
-"id": 1238299,
-"name": "Lava Burst",
-"rank": 2,
-"level": 40,
-"cost": 24000
-},
-{
 "id": 8134,
 "name": "Lightning Shield",
 "rank": 5,
@@ -44620,13 +42634,6 @@
 "rank": 4,
 "level": 50,
 "cost": 24000
-},
-{
-"id": 1238300,
-"name": "Lava Burst",
-"rank": 3,
-"level": 50,
-"cost": 34000
 },
 {
 "id": 15207,
@@ -44864,12 +42871,6 @@
 "rank": 10,
 "level": 60,
 "source": "drop"
-},
-{
-"id": 1326047,
-"name": "Lava Burst",
-"rank": 4,
-"level": 60
 },
 {
 "id": 10468,
@@ -48160,6 +46161,12 @@
 "rank": 6,
 "level": 32,
 "cost": 8000
+},
+{
+"id": 1328829,
+"name": "Poised",
+"rank": 1,
+"level": 32
 },
 {
 "id": 6785,
