@@ -4732,6 +4732,7 @@
 "method:/wow-forever/class-guides": [],
 "method:/wow-forever/fishing-in-wow-forever-leveling-guide-fishing-items-trainers": [],
 "method:/wow-forever/herbalism-in-wow-forever-leveling-guide-herbalism-items-enchants-trainers": [],
+"method:/wow-forever/leatherworking-in-wow-forever-leveling-guide-and-trainers": [],
 "method:/wow-forever/leveling-guides": [],
 "method:/wow-forever/mage-comprehension-and-study-guide-in-wow-forever-how-scrolls-work-and-all-scroll-effects": [],
 "method:/wow-forever/skinning-in-wow-forever-leveling-guide-skinning-items-enchants-trainers": [],
@@ -25467,7 +25468,92 @@
 "category": "Leveo"
 }
 ],
-"rankedboost:WARRIOR": [],
+"rankedboost:WARRIOR": [
+{
+"class": "WARRIOR",
+"ranks": [
+"30323013002000000",
+"050530255002100231",
+"000000000000000000"
+],
+"points": [
+17,
+34,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Fury Warrior DPS Build",
+"spec": "Fury",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-fury-dps",
+"category": "PvE"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"02323213132210231",
+"055011350000000000",
+"000000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Arms Warrior PvP Build",
+"spec": "Arms",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-pvp",
+"category": "PvP"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"35013010000000000",
+"000000000000000000",
+"255530120300021351"
+],
+"points": [
+13,
+0,
+38
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Protection Warrior Tank Build",
+"spec": "Protection",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-protection-tank",
+"category": "PvE"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"30323213032015201",
+"052500350000000000",
+"000000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Arms Warrior Leveling Build",
+"spec": "Arms",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-leveling",
+"category": "Leveo"
+}
+],
 "rankedboost:PALADIN": [
 {
 "class": "PALADIN",
@@ -25837,6 +25923,27 @@
 {
 "class": "SHAMAN",
 "ranks": [
+"5505331000001351",
+"050000000000000000",
+"0531500000000000"
+],
+"points": [
+32,
+5,
+14
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Elemental Shaman DPS Build",
+"spec": "Elemental",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-dps",
+"category": "PvE"
+},
+{
+"class": "SHAMAN",
+"ranks": [
 "0530000000000000",
 "055030310051012151",
 "0500500000000000"
@@ -25854,6 +25961,27 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-enhancement-dps",
 "category": "PvE"
+},
+{
+"class": "SHAMAN",
+"ranks": [
+"1500331303121341",
+"255200010300200000",
+"0000000000000000"
+],
+"points": [
+31,
+20,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Elemental Shaman PvP Build",
+"spec": "Elemental",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/shaman/#build=auth-shaman-elemental-pvp",
+"category": "PvP"
 },
 {
 "class": "SHAMAN",
