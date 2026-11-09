@@ -4728,8 +4728,11 @@
 "tavern:/forever/guides/shaman/": [],
 "tavern:/forever/guides/warlock/": [],
 "tavern:/forever/guides/warrior/": [],
+"method:/wow-forever/alchemy-in-wow-forever-leveling-guide-and-trainers": [],
 "method:/wow-forever/azerorth-commerce-authority-and-durotar-supply-and-logistics-reputation-guide": [],
+"method:/wow-forever/blacksmithing-in-wow-forever-leveling-guide-and-trainers": [],
 "method:/wow-forever/class-guides": [],
+"method:/wow-forever/enchanting-in-wow-forever-1-300-leveling-guide-and-trainers": [],
 "method:/wow-forever/fishing-in-wow-forever-leveling-guide-fishing-items-trainers": [],
 "method:/wow-forever/herbalism-in-wow-forever-leveling-guide-herbalism-items-enchants-trainers": [],
 "method:/wow-forever/leatherworking-in-wow-forever-leveling-guide-and-trainers": [],
@@ -25772,6 +25775,48 @@
 {
 "class": "ROGUE",
 "ranks": [
+"00530320251551031",
+"3023030101000000000",
+"002000000000000000"
+],
+"points": [
+36,
+13,
+2
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Assassination Rogue DPS Build",
+"spec": "Assassination",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-assassination-dps",
+"category": "PvE"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00530320201000000",
+"3220330111012311551",
+"000000000000000000"
+],
+"points": [
+16,
+35,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Combat Rogue DPS Build",
+"spec": "Combat",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-combat-dps",
+"category": "PvE"
+},
+{
+"class": "ROGUE",
+"ranks": [
 "00500000000000000",
 "3050032200200000000",
 "332203231321021100"
@@ -25789,6 +25834,27 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-subtlety-pvp",
 "category": "PvP"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"02530020200000000",
+"3250330211011301551",
+"000000000000000000"
+],
+"points": [
+14,
+37,
+0
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Combat Rogue Leveling Build",
+"spec": "Combat",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/rogue/#build=auth-rogue-combat-leveling",
+"category": "Leveo"
 }
 ],
 "rankedboost:PRIEST": [
