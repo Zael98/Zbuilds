@@ -25475,13 +25475,13 @@
 {
 "class": "WARRIOR",
 "ranks": [
-"30323013002000000",
-"050530255002100231",
+"30303213102000000",
+"050530055102100231",
 "000000000000000000"
 ],
 "points": [
-17,
-34,
+18,
+33,
 0
 ],
 "order": null,
@@ -25555,6 +25555,27 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-leveling",
 "category": "Leveo"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"30303213132215201",
+"050500050110000000",
+"200000000000000000"
+],
+"points": [
+32,
+17,
+2
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Arms Warrior DPS Build",
+"spec": "Arms",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/warrior/#build=auth-warrior-arms-dps",
+"category": "PvE"
 }
 ],
 "rankedboost:PALADIN": [
@@ -25861,13 +25882,13 @@
 {
 "class": "PRIEST",
 "ranks": [
-"025300001330010000",
-"00000000000000000",
-"50052201211312251"
+"005304000030000000",
+"30000000000000000",
+"50042101251312051"
 ],
 "points": [
-18,
-0,
+15,
+3,
 33
 ],
 "order": null,
@@ -25882,8 +25903,8 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005302031030000000",
-"13505103030121531",
+"005305001030000000",
+"03505103032021531",
 "00000000000000000"
 ],
 "points": [
@@ -25903,8 +25924,8 @@
 {
 "class": "PRIEST",
 "ranks": [
-"005203031330011531",
-"30505003030100000",
+"005005031330011531",
+"30505103102000000",
 "00000000000000000"
 ],
 "points": [
@@ -25969,13 +25990,13 @@
 "class": "SHAMAN",
 "ranks": [
 "0000000000000000",
-"050000000000000000",
-"5530503315513151"
+"055000000000000000",
+"5530003315513151"
 ],
 "points": [
 0,
-5,
-46
+10,
+41
 ],
 "order": null,
 "level": 60,
@@ -25989,14 +26010,14 @@
 {
 "class": "SHAMAN",
 "ranks": [
-"5505331000001351",
+"5500331023121351",
 "050000000000000000",
-"0531500000000000"
+"0532000010000000"
 ],
 "points": [
-32,
+35,
 5,
-14
+11
 ],
 "order": null,
 "level": 60,
@@ -26096,14 +26117,14 @@
 {
 "class": "MAGE",
 "ranks": [
-"250205223100311531",
-"51520000200000000",
-"000000000000000000"
+"050205203100311531",
+"52500001200100000",
+"003000000000000000"
 ],
 "points": [
-36,
-15,
-0
+32,
+16,
+3
 ],
 "order": null,
 "level": 60,
@@ -26117,13 +26138,13 @@
 {
 "class": "MAGE",
 "ranks": [
-"212205000000000000",
-"55500301230133131",
+"050205200100100000",
+"55500001230133031",
 "003000000000000000"
 ],
 "points": [
-12,
-36,
+16,
+32,
 3
 ],
 "order": null,
@@ -26203,14 +26224,14 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"25520321035201351",
+"05500320035201351",
 "0050203001000000000",
-"0000000000000000"
+"0500000000000000"
 ],
 "points": [
-40,
+35,
 11,
-0
+5
 ],
 "order": null,
 "level": 60,
@@ -26224,14 +26245,14 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"05000000000000000",
-"0055003231020001350",
-"0550005001000000"
+"00200000000000000",
+"0005003231220301351",
+"0550005003000000"
 ],
 "points": [
-5,
-30,
-16
+2,
+31,
+18
 ],
 "order": null,
 "level": 60,
@@ -26245,14 +26266,14 @@
 {
 "class": "WARLOCK",
 "ranks": [
-"05000000000000000",
+"05200000000000000",
 "0050203001000000000",
-"0050255133101351"
+"0050355103101351"
 ],
 "points": [
-5,
+7,
 11,
-35
+33
 ],
 "order": null,
 "level": 60,
@@ -26331,14 +26352,14 @@
 {
 "class": "DRUID",
 "ranks": [
-"0500100000000000",
+"0530200100000000",
 "00000000000000000000",
-"5553005153113251"
+"5553025103113051"
 ],
 "points": [
-6,
+11,
 0,
-45
+40
 ],
 "order": null,
 "level": 60,
@@ -26390,6 +26411,48 @@
 "source": "RankedBoost",
 "url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-feral-combat-leveling",
 "category": "Leveo"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0500220000000000",
+"55000032023012125001",
+"0550000000000000"
+],
+"points": [
+9,
+32,
+10
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Feral Combat Druid DPS Build",
+"spec": "Feral Combat",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-feral-combat-dps",
+"category": "PvE"
+},
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"55030032123102125510",
+"0550000000000000"
+],
+"points": [
+0,
+41,
+10
+],
+"order": null,
+"level": 60,
+"beta": null,
+"name": "Feral Combat Druid Tank Build",
+"spec": "Feral Combat",
+"source": "RankedBoost",
+"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-feral-combat-tank",
+"category": "PvE"
 }
 ],
 "wft:/builds/affliction-warlock-solo-10-20/": [
