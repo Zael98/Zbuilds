@@ -46,22 +46,33 @@ local function barSpells()
     return next(names) and names or nil
 end
 
--- What your trainer has for you now: { due, optional (spell -> true), total, optionalTotal, unpriced, pet,
--- forecast }. Per spell, only the ranks above the highest one you know (an old rank you skipped is never worth
--- buying); a spell you know but do not have on your bars is optional; forecast is the cost of what the next
--- levels bring.
-function ns.TrainerDue()
-    local level, petLevel = UnitLevel("player"), UnitExists and UnitExists("pet") and UnitLevel("pet") or 0
+-- The highest rank you know of each spell, by kind and name; and whether a rank is worth learning: above that
+-- (an old rank you skipped never is) and, for a pet ability or a poison, an upgrade of one you already have
+-- (who learns their first rank depends on the pet family or on quests).
+local function bestRanks()
     local best = {}
     for _, spell in ipairs(classSpells()) do
         local key = (spell.kind or "") .. spell.name
         if spell.rank > (best[key] or 0) and knows(spell) then best[key] = spell.rank end
     end
+    return best
+end
+
+local function wanted(spell, best)
+    local have = best[(spell.kind or "") .. spell.name] or 0
+    return spell.rank > have and (not spell.kind or have > 0) and not knows(spell), have
+end
+
+-- What your trainer has for you now: { due, optional (spell -> true), total, optionalTotal, unpriced, pet,
+-- forecast }. Per spell, only the ranks worth learning; a spell you know but do not have on your bars is
+-- optional; forecast is the cost of what the next levels bring.
+function ns.TrainerDue()
+    local level, petLevel = UnitLevel("player"), UnitExists and UnitExists("pet") and UnitLevel("pet") or 0
+    local best = bestRanks()
     local bars = barSpells()
     local r = { due = {}, optional = {}, total = 0, optionalTotal = 0, unpriced = {}, pet = {}, forecast = 0 }
     for _, spell in ipairs(classSpells()) do
-        local have = best[(spell.kind or "") .. spell.name] or 0
-        local wanted = spell.rank > have and (not spell.kind or have > 0) and not knows(spell)
+        local wanted, have = wanted(spell, best)
         if wanted and spell.kind == "pet" then
             if spell.level <= petLevel then r.pet[#r.pet + 1] = spell end
         elseif wanted and spell.level <= level then
@@ -82,6 +93,35 @@ function ns.TrainerDue()
     return r
 end
 
+-- Every rank of your class for the spellbook's trainer list: { now = {spell...}, later = {{level, {spell...}}...},
+-- known = {spell...} }. Now: worth learning at your level (a pet ability at your pet's); later: by the level that
+-- brings it; known: what you have. Ranks never worth learning are left out. Each list keeps the data's order
+-- (level, name, rank).
+function ns.TrainingList()
+    local level, petLevel = UnitLevel("player"), UnitExists and UnitExists("pet") and UnitLevel("pet") or 0
+    local best = bestRanks()
+    local r, byLevel = { now = {}, later = {}, known = {} }, {}
+    for _, spell in ipairs(classSpells()) do
+        if knows(spell) then
+            r.known[#r.known + 1] = spell
+        elseif wanted(spell, best) then
+            if spell.level <= (spell.kind == "pet" and petLevel or level) then
+                r.now[#r.now + 1] = spell
+            else
+                if not byLevel[spell.level] then
+                    byLevel[spell.level] = {}
+                    r.later[#r.later + 1] = { spell.level, byLevel[spell.level] }
+                end
+                table.insert(byLevel[spell.level], spell)
+            end
+        end
+    end
+    table.sort(r.later, function(a, b) return a[1] < b[1] end)
+    return r
+end
+
+ns.TrainerPrice = price   -- (read at the trainer, else the data's)
+
 -- gold, silver and copper with the game's coin icons when it has them
 local function money(copper)
     if GetCoinTextureString then return GetCoinTextureString(copper) end
@@ -96,6 +136,7 @@ end
 local function rankName(spell)
     return spell.rank > 1 and L.TRAINER_RANK:format(spellName(spell), spell.rank) or spellName(spell)
 end
+ns.Money, ns.RankName = money, rankName   -- (the spellbook's trainer list)
 
 local function names(spells, optional)
     local out = {}

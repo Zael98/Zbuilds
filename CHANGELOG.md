@@ -2,6 +2,12 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## Trainer in the spellbook
+
+- **A trainer panel beside the spellbook** (its spellbook tab): every spell of your class trainer and the level that brings it. First what you can learn now, with the total cost and each price in red when your gold does not reach it. Then each coming level with its new spells and ranks. Old ranks you skipped are left out, as in the trainer reminder.
+- Hovering a spell shows the game's tooltip with the level and the cost. "Show learned spells" adds the ones you already have.
+- The close button folds it to a book on the window's edge; a click on the book brings it back. It is remembered for the account.
+
 ## Sites read again
 
 - **Icy Veins**: its builds moved to each guide's "Talents" page, and its links now carry the version of its calculator. They are read again (44 builds, from about 11).
