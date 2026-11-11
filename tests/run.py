@@ -15,7 +15,7 @@ LOCALES = ["enUS", "esES", "esMX", "deDE", "frFR", "ptBR", "itIT", "ruRU", "koKR
 # (fixtures/data.lua), so they test the addon whatever the sites publish; DATA_CHECKS run on the real Data.lua.
 CHECKS = {
     "talents": (False, [r"name mismatches: $", r"apply2: \d+ nil", r"next after full: nil", r"derived order len 51"]),
-    "import": (False, [r"decoded identical: (\d+)/\1$", r"import listed 1, after delete 0"]),
+    "import": (False, [r"decoded identical: (\d+)/\1$", r"import listed 1, after delete 0", r"version suffix same: true$"]),
     "window": (False, [r"edges: \d+", r"dialog error: \S", r"after import: Mi elemental", r"imports 0"]),
     "launchers": (False, [r"Talent tree: (\d+)/\1 talents found, 0 outdated", r"compartment fn: function", r"beta filter: rows \d+ -> \d+"]),
     "legacy_dump": (False, [r"legacy found by 'type 3'", r"/zbuildslegacydump prints 6 lines"]),

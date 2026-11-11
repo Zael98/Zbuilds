@@ -33,13 +33,13 @@ REQUEST_DELAY = 1.0  # seconds between requests to the same site
 
 TF = "https://talentsforever.com"
 IV = "https://www.icy-veins.com"
-IV_JSON = "https://static.icy-veins.com/json/forever-talent-calculator/"
+# its calculator data, one folder per version ("70888-0650090c"); index.json names the latest
+IV_TALENTS = "https://static.icy-veins.com/r2/icydb/wowf/talents"
 
 # talentsforever build code format v6 (see its page source): one symbol per talent, flat across the trees.
 TF_CODE_VERSION = 6
 TF_SYMS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz056789"
-# Icy Veins calculator: one character per invested point, in order; talents numbered across trees.
-IV_SYMS = [str(i) for i in range(10)] + list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-._~[]()")
+# Icy Veins calculator: one character per invested point, in order (each talent's urlId), then "~<version>".
 
 # Build types shown in the addon. Icy Veins says it in the guide URL; Talents Forever's popular list does not.
 CATEGORIES = {"leveling": "Leveo", "leveo": "Leveo", "pve": "PvE", "pvp": "PvP"}
@@ -219,21 +219,47 @@ def talentsforever_popular(classes):
 
 # ---------------------------------------------------------------- Icy Veins
 
-def iv_symbols(slug, cache={}):
-    """Icy Veins point symbol -> talent name, from its own calculator data (talents numbered across trees)."""
-    if slug not in cache:
-        data = json.loads(fetch(IV_JSON + slug + ".json"))
-        names = [tal["name"] for group in data["talentGroups"] for tal in group["talents"] if tal]
-        cache[slug] = dict(zip(IV_SYMS, names))
-    return cache[slug]
+def iv_latest(cache={}):
+    """The latest version of Icy Veins' calculator data ("70888-0650090c"), read once."""
+    if "latest" not in cache:
+        cache["latest"] = json.loads(fetch(IV_TALENTS + "/index.json"))["latest"]
+    return cache["latest"]
+
+
+def iv_symbols(slug, version=None, cache={}):
+    """Icy Veins point symbol (a talent's urlId) -> talent name, in the calculator data of that version
+    (default: the latest; the symbols move a little between versions)."""
+    version = version or iv_latest()
+    if (slug, version) not in cache:
+        data = json.loads(fetch(f"{IV_TALENTS}/{version}/{slug}.json"))
+        cache[(slug, version)] = {tal["urlId"]: tal["name"] for group in data["talentGroups"]
+                                  for tal in group["talents"] if tal and tal.get("urlId")}
+    return cache[(slug, version)]
 
 
 def parse_iv_points(slug, points, classes):
-    cls, symbols = class_by_slug(slug, classes), iv_symbols(slug)
+    # "<points>~70755-d1899b7d": read with that version's data ("~" alone can be a point, as Icy Veins reads it)
+    points, version = re.fullmatch(r"(.*?)(?:~(\d+-[0-9a-f]+))?", points).groups()
+    cls, symbols = class_by_slug(slug, classes), iv_symbols(slug, version)
     if any(ch not in symbols for ch in points):
         raise ValueError("point symbol with no talent")
     ranks, order = cls.from_points(symbols[ch] for ch in points)
     return cls, ranks, order
+
+
+def iv_latest_points(slug, cls, order):
+    """The same points in Icy Veins' latest data ("<points>~<version>"), or None when a talent is not in it.
+    The game's Import link reads Icy Veins links with the latest symbols only, and Icy Veins opens any version."""
+    latest = iv_symbols(slug)
+    spots = {}
+    for sym, name in latest.items():
+        try:
+            spots.setdefault(cls.resolve(name), sym)
+        except ValueError:
+            pass
+    if any(spot not in spots for spot in order):
+        return None
+    return "".join(spots[spot] for spot in order) + "~" + iv_latest()
 
 
 # ---------------------------------------------------------------- Warcraft Tavern (warcraftdb calculator)
@@ -318,12 +344,13 @@ def method_data():
 
 
 def method_nodes(class_token):
-    """Method's node list for a class, sorted by node id as its codes are: [(node id, tree, row, col, max)]."""
+    """Method's node list for a class, sorted by node id as its codes are: [(node id, tree, row, col, max)].
+    As its calculator, a node counts when it has spells or rank details (Forever's own talents have no spell)."""
     data = method_data()
     nodes = []
     for tab in data["classes"][class_token]["tabs"]:
         for node_id, n in data[tab["treeID"]].items():
-            if n["curFlag"] == tab["curFlag"] and n["spells"]:
+            if n["curFlag"] == tab["curFlag"] and (n["spells"] or n.get("rankDetails")):
                 nodes.append((int(node_id), tab["order"], round((n["y"] - TREE_ORIGIN_Y) / NODE_SPACING) + 1,
                               round((n["x"] - TREE_ORIGIN_X[tab["order"]]) / NODE_SPACING) + 1, n["maxRank"]))
     return sorted(nodes)
@@ -349,13 +376,16 @@ def method_spells(classes):
     return out
 
 
-METHOD_CLASS_IDS = {1: "WARRIOR", 2: "PALADIN", 4: "HUNTER", 8: "ROGUE", 16: "PRIEST", 64: "SHAMAN",
-                    128: "MAGE", 256: "WARLOCK", 1024: "DRUID"}
+# the class field: a class mask in version 1 codes, Method's own class id in version 2 (since 2026-11)
+METHOD_CLASS_IDS = {1: {1: "WARRIOR", 2: "PALADIN", 4: "HUNTER", 8: "ROGUE", 16: "PRIEST", 64: "SHAMAN",
+                        128: "MAGE", 256: "WARLOCK", 1024: "DRUID"},
+                    2: {1482: "MAGE", 1484: "DRUID", 1485: "HUNTER", 1486: "PALADIN", 1487: "PRIEST",
+                        1488: "ROGUE", 1489: "SHAMAN", 1490: "WARLOCK", 1491: "WARRIOR"}}
 
 
 def parse_method(code, classes):
     """'<export>;<leveling>': the export is a bit stream (6 bits per character, low bits first):
-    version 8, class 16, tree hash 16x8, then per node: selected 1 [purchased 1 [partial 1 [rank 6]] choice 1 [2]].
+    version 8 (1 or 2), class 16, tree hash 16x8, then per node: selected 1 [purchased 1 [partial 1 [rank 6]] choice 1 [2]].
     The leveling part is one character per point: the index of the node in id order."""
     export, _, leveling = code.partition(";")
     bits = [(B64.index(ch) >> b) & 1 for ch in export for b in range(6)]
@@ -369,9 +399,10 @@ def parse_method(code, classes):
         pos += n
         return value
 
-    if read(8) != 1:
-        raise ValueError("unknown Method export version")
-    token = METHOD_CLASS_IDS.get(read(16))
+    version = read(8)
+    if version not in METHOD_CLASS_IDS:
+        raise ValueError(f"unknown Method export version {version}")
+    token = METHOD_CLASS_IDS[version].get(read(16))
     cls = next((c for c in classes.values() if c.token == token), None)
     if not cls:
         raise ValueError(f"unknown class in Method export: {token}")
@@ -641,7 +672,8 @@ def link_build(url, classes):
     m = re.search(IV_LINK, url)
     if m:
         cls, ranks, order = parse_iv_points(m.group("ivc"), m.group("ivp"), classes)
-        return cls, None, ranks, order, f"{IV}/wow-forever/{m.group('ivc')}-talent-calculator#tc-{m.group('ivp')}"
+        points = iv_latest_points(m.group("ivc"), cls, order) or m.group("ivp")
+        return cls, None, ranks, order, f"{IV}/wow-forever/{m.group('ivc')}-talent-calculator#tc-{points}"
     m = re.search(TAVERN_LINK, url)
     if m:
         cls, ranks, order = parse_tavern_points(m.group("tvc"), m.group("tvp"), classes)
@@ -730,9 +762,11 @@ def crawl(source, key, classes, base, paths=(), index_urls=(), link_pattern=None
 
 
 def tavern_guides(classes):
-    # one guide per class, with every build of the class in it
-    return crawl("Warcraft Tavern", "tavern", classes, TAVERN,
-                 paths=[f"/forever/guides/{name.lower()}/" for name in classes])
+    # one guide per spec ("/forever/guides/arcane-mage/"), listed on its Forever page; since 2026-11 the class
+    # guides have no builds
+    names = "|".join(name.lower() for name in classes)
+    return crawl("Warcraft Tavern", "tavern", classes, TAVERN, index_urls=[f"{TAVERN}/forever/"],
+                 link_pattern=rf'href="(?:https://www\.warcrafttavern\.com)?(/forever/guides/[a-z-]+-(?:{names})/)"')
 
 
 def method_guides(classes):
@@ -756,8 +790,10 @@ def icy_veins_guides(classes):
         paths = [k[3:] for k in cache_old if k.startswith("iv:")]
     builds = []
     for path in paths:
-        builds += cached("iv:" + path, lambda: page_builds(
-            IV + path, classes, "Icy Veins", guide_category(path), spec=guide_spec(path, "")))
+        # since 2026-11 the builds are on the guide's own Talents page ("...-pve-spec-builds-talents")
+        talents = re.sub(r"-guide$", "-spec-builds-talents", path)
+        builds += cached("iv:" + path, lambda: [b for url in (IV + path, IV + talents) for b in page_builds(
+            url, classes, "Icy Veins", guide_category(path), spec=guide_spec(path, ""))])
     return builds
 
 
@@ -839,7 +875,8 @@ def wft_plan(path, classes):
     steps = re.findall(r'<li data-talent-id="[^"]+" data-level="(\d+)">[^:<]*:\s*(.+?) \d+/\d+ \([^)<]*\)</li>', page)
     if not steps:
         raise ValueError("no point order on the page (the site may have changed)")
-    ranks, order = cls.from_points([name for _, name in steps])
+    # (since 2026-11 each name is a link to the class reference: its text only)
+    ranks, order = cls.from_points([clean(name) for _, name in steps])
     return [make_build(cls, ranks, order, int(steps[-1][0]), name=title, spec=lead_tree(cls, ranks),
                        source="WoW Forever Talent", url=WFT + path, category=wft_category(path))]
 

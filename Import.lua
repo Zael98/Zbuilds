@@ -101,8 +101,10 @@ local function fromPoints(token, classData, map, symbols)
     return token, classData, ranks, order, nil
 end
 
--- icy-veins.com/wow-forever/<class>-talent-calculator#tc-<one symbol per point, in order>
+-- icy-veins.com/wow-forever/<class>-talent-calculator#tc-<one symbol per point, in order>[~<data version>]
+-- (the symbols come from Icy Veins' latest data; the version suffix is not a point)
 local function decodeIcyVeins(slug, points)
+    points = points:gsub("~%d+%-%x+$", "")
     local token, classData = classFromSlug(slug)
     local symbols = {}
     for k = 1, #points do symbols[k] = points:sub(k, k) end

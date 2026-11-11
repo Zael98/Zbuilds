@@ -2,6 +2,14 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## Sites read again
+
+- **Icy Veins**: its builds moved to each guide's "Talents" page, and its links now carry the version of its calculator. They are read again (44 builds, from about 11).
+- **Warcraft Tavern**: its builds moved from the class guides to one guide per spec (24 builds, from 4).
+- **Method**: its new build format is read again (13 builds, from 1).
+- **WoW Forever Talent**: its point plans are read again (9 builds, from 1).
+- Import link: Icy Veins links with the version at the end ("…~70888-0650090c") import as before.
+
 ## Game build 1.60.1.70374 — new talent trees
 
 - The talent trees of every class changed with this beta build: builds come from the sites' new trees.

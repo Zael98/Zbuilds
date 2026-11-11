@@ -24,8 +24,20 @@ for _, b in ipairs(ZbuildsData.builds) do
   if not link and ns.DecodeLink(b.url) then link = b.url end
 end
 local d = assert(link and ns.DecodeLink(link, "Prueba", "PvP"), "no build of the data has a link that decodes")
+-- Icy Veins links end in "~<data version>" since 2026-11: the same build as without it
+local suffix = "no Icy Veins link"
+for _, b in ipairs(ZbuildsData.builds) do
+  local base = b.url:find("#tc%-") and b.url:gsub("~%d+%-%x+$", "")
+  local plain = base and ns.DecodeLink(base)
+  if plain and suffix == "no Icy Veins link" then
+    local versioned = ns.DecodeLink(base .. "~70888-0650090c")
+    local same = versioned ~= nil and versioned.class == plain.class
+    for t = 1, #plain.ranks do same = same and versioned.ranks[t] == plain.ranks[t] end
+    suffix = tostring(same)
+  end
+end
 ns.AddImport(d)
 local found = 0 for _, b in ipairs(ns.BuildsFor(d.class)) do if b == d then found = found + 1 end end
 ns.RemoveImport(d)
 local after = 0 for _, b in ipairs(ns.BuildsFor(d.class)) do if b == d then after = after + 1 end end
-return ("decoded identical: %d/%d\n%s\nimport listed %d, after delete %d, spec %s, category %s"):format(same, total, table.concat(failed, "\n"), found, after, d.spec, d.category)
+return ("decoded identical: %d/%d\n%s\nimport listed %d, after delete %d, spec %s, category %s\nversion suffix same: %s"):format(same, total, table.concat(failed, "\n"), found, after, d.spec, d.category, suffix)
