@@ -1392,3 +1392,20 @@ local spellbookTexts = {
 spellbookTexts.esMX = spellbookTexts.esES
 for key, value in pairs(spellbookTexts.enUS) do L[key] = value end
 for key, value in pairs(spellbookTexts[locale] or {}) do L[key] = value end
+
+-- gear advice on item tooltips
+local gearTexts = {
+    enUS = { OPT_GEAR = "Gear advice on item tooltips", GEAR_EMPTY = "Zbuilds (%s): empty slot, an upgrade", GEAR_BETTER = "Zbuilds (%s): %d%% better", GEAR_WORSE = "Zbuilds (%s): %d%% worse", GEAR_SAME = "Zbuilds (%s): about the same" },
+    esES = { OPT_GEAR = "Consejo de equipo en la ficha de los objetos", GEAR_EMPTY = "Zbuilds (%s): ranura vacía, es una mejora", GEAR_BETTER = "Zbuilds (%s): un %d%% mejor", GEAR_WORSE = "Zbuilds (%s): un %d%% peor", GEAR_SAME = "Zbuilds (%s): más o menos igual" },
+    deDE = { OPT_GEAR = "Ausrüstungstipp im Gegenstands-Tooltip", GEAR_EMPTY = "Zbuilds (%s): leerer Platz, eine Verbesserung", GEAR_BETTER = "Zbuilds (%s): %d%% besser", GEAR_WORSE = "Zbuilds (%s): %d%% schlechter", GEAR_SAME = "Zbuilds (%s): etwa gleich" },
+    frFR = { OPT_GEAR = "Conseil d'équipement dans l'infobulle des objets", GEAR_EMPTY = "Zbuilds (%s) : emplacement vide, une amélioration", GEAR_BETTER = "Zbuilds (%s) : %d%% mieux", GEAR_WORSE = "Zbuilds (%s) : %d%% moins bien", GEAR_SAME = "Zbuilds (%s) : à peu près pareil" },
+    ptBR = { OPT_GEAR = "Dica de equipamento na dica dos itens", GEAR_EMPTY = "Zbuilds (%s): espaço vazio, é uma melhoria", GEAR_BETTER = "Zbuilds (%s): %d%% melhor", GEAR_WORSE = "Zbuilds (%s): %d%% pior", GEAR_SAME = "Zbuilds (%s): mais ou menos igual" },
+    itIT = { OPT_GEAR = "Consiglio sull'equipaggiamento nel tooltip degli oggetti", GEAR_EMPTY = "Zbuilds (%s): slot vuoto, è un miglioramento", GEAR_BETTER = "Zbuilds (%s): %d%% meglio", GEAR_WORSE = "Zbuilds (%s): %d%% peggio", GEAR_SAME = "Zbuilds (%s): più o meno uguale" },
+    ruRU = { OPT_GEAR = "Совет по экипировке в подсказке предметов", GEAR_EMPTY = "Zbuilds (%s): ячейка пуста, это улучшение", GEAR_BETTER = "Zbuilds (%s): на %d%% лучше", GEAR_WORSE = "Zbuilds (%s): на %d%% хуже", GEAR_SAME = "Zbuilds (%s): примерно так же" },
+    koKR = { OPT_GEAR = "아이템 툴팁에 장비 조언", GEAR_EMPTY = "Zbuilds (%s): 빈 칸, 향상", GEAR_BETTER = "Zbuilds (%s): %d%% 더 좋음", GEAR_WORSE = "Zbuilds (%s): %d%% 더 나쁨", GEAR_SAME = "Zbuilds (%s): 거의 같음" },
+    zhCN = { OPT_GEAR = "在物品提示中显示装备建议", GEAR_EMPTY = "Zbuilds（%s）：空栏位，是提升", GEAR_BETTER = "Zbuilds（%s）：好 %d%%", GEAR_WORSE = "Zbuilds（%s）：差 %d%%", GEAR_SAME = "Zbuilds（%s）：差不多" },
+    zhTW = { OPT_GEAR = "在物品提示中顯示裝備建議", GEAR_EMPTY = "Zbuilds（%s）：空欄位，是提升", GEAR_BETTER = "Zbuilds（%s）：好 %d%%", GEAR_WORSE = "Zbuilds（%s）：差 %d%%", GEAR_SAME = "Zbuilds（%s）：差不多" },
+}
+gearTexts.esMX = gearTexts.esES
+for key, value in pairs(gearTexts.enUS) do L[key] = value end
+for key, value in pairs(gearTexts[locale] or {}) do L[key] = value end

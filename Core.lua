@@ -15,7 +15,7 @@ end
 
 -- Account options (the window's Options tab), with their defaults.
 local DEFAULTS = { banner = true, sound = true, chat = true, talentAlert = true, legacyAlert = true, duration = 6,
-    trainingPanel = true, trainingKnown = false }   -- (the trainer panel on the spellbook: open; learned spells shown)
+    trainingPanel = true, trainingKnown = false, gear = true }   -- (the trainer panel on the spellbook: open; learned spells shown)
 
 function ns.Option(key)
     local value = ZbuildsDB and ZbuildsDB.options and ZbuildsDB.options[key]

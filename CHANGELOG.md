@@ -2,6 +2,12 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## Gear advice
+
+- **Item tooltips say whether an item is an upgrade for your specialisation**: "Zbuilds (Fury): 12% better" in green, or worse in red, compared with what you wear in that slot (the weaker of two rings, trinkets or one-handers; main and off hand together for a two-hander). An empty slot says it is an upgrade. It works on quest rewards, loot and vendors.
+- Your specialisation is the talent tree with most points (or your selected build's before you have any). Each role weighs the item's stats: strength, agility, hunters, feral druids, tanks, casters and healers. Effects written as text on the item ("+1% critical strike") are not counted.
+- It can be turned off in Options.
+
 ## Trainer in the spellbook
 
 - **A trainer panel beside the spellbook** (its spellbook tab): every spell of your class trainer and the level that brings it. First what you can learn now, with the total cost and each price in red when your gold does not reach it. Then each coming level with its new spells and ranks. Old ranks you skipped are left out, as in the trainer reminder.

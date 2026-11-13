@@ -1126,7 +1126,7 @@ end
 
 -- ---------------------------------------------------------------- options view
 
-local TOGGLES = { "banner", "sound", "talentAlert", "legacyAlert", "chat", "minimap" }
+local TOGGLES = { "banner", "sound", "talentAlert", "legacyAlert", "chat", "minimap", "gear" }
 local DURATIONS = { 4, 6, 10, 15 }
 local ov -- the Options view
 
@@ -1192,7 +1192,7 @@ local function refreshOptions()
         local on = optionOn(row.key)
         row.check:SetShown(on and true or false)
         -- the sound and the banners' contents only matter with the banner on
-        local muted = row.key ~= "banner" and row.key ~= "chat" and row.key ~= "minimap" and not ns.Option("banner")
+        local muted = row.key ~= "banner" and row.key ~= "chat" and row.key ~= "minimap" and row.key ~= "gear" and not ns.Option("banner")
         row.label:SetTextColor(unpack(muted and C.dim or C.text))
     end
     ov.duration.label:SetText(L.OPT_DURATION:format(ns.Option("duration")))
