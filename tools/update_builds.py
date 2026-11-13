@@ -893,6 +893,104 @@ def wft_builds(classes):
     return builds
 
 
+# ---------------------------------------------------------------- wowforever.gg
+# Each class calculator (/en/talents/<class>/) names its talents (<details id="talent-<id>"><summary>name) and
+# links a level 60 preset per spec for dungeons, raids and PvP ("?build=2.<class>.<id>-<rank>_..."). Each leveling
+# page (/en/builds/<class>-<spec>-leveling/) shows the build at levels 10, 20 ... 60: what each step adds is
+# taken in the order it is listed, which gives the point order.
+
+GG = "https://wowforever.gg"
+GG_PRESETS = {"dungeons": "PvE", "raids": "PvE", "pvp": "PvP"}
+
+
+def gg_calculator(cls, cache={}):
+    """(talent id -> name, [(spec, kind, code)]) of a class calculator."""
+    slug = cls.name.lower().replace(" ", "")
+    if slug not in cache:
+        page = fetch(f"{GG}/en/talents/{slug}/")
+        names = {i: clean(n) for i, n in re.findall(r'<details id="talent-(\d+)"><summary>(.*?)</summary>', page, re.S)}
+        presets = re.findall(r'data-planner-preset="([a-z]+)" href="\?build=([0-9a-z._-]+)[^"]*"'
+                             r' aria-label="([^"·]+?) ·', html.unescape(page))
+        if not names or not presets:
+            raise ValueError("no talents or presets on the calculator (the site may have changed)")
+        cache[slug] = names, [(spec.strip(), kind, code) for kind, code, spec in presets]
+    return cache[slug]
+
+
+def gg_ranks(cls, code, names):
+    """'2.shaman.564-5_563-5_...' -> {talent name: rank}."""
+    ranks = {}
+    for part in code.split(".", 2)[2].split("_"):
+        tid, rank = part.split("-")
+        if tid not in names:
+            raise ValueError(f"talent {tid} is not on the calculator")
+        ranks[names[tid]] = int(rank)
+    return ranks
+
+
+def gg_class(cls):
+    names, presets = gg_calculator(cls)
+    slug = cls.name.lower().replace(" ", "")
+    builds = []
+    for spec, kind, code in presets:
+        name = f"{spec} · {kind.capitalize() if kind != 'pvp' else 'PvP'}"
+        try:
+            ranks = cls.from_ranks(gg_ranks(cls, code, names))
+        except ValueError as e:
+            warn(f"wowforever.gg '{cls.name} {name}': {e}")
+            continue
+        builds.append(make_build(cls, ranks, [], 60, name=name, spec=lead_tree(cls, ranks), source="wowforever.gg",
+                                 url=f"{GG}/en/talents/{slug}/?build={code}", category=GG_PRESETS[kind],
+                                 guide=f"{GG}/en/guides/{slug}-{spec.lower().replace(' ', '-')}/"))
+    return builds
+
+
+def gg_leveling(path, classes):
+    page = fetch(GG + path)
+    cls = next((c for c in classes.values() if path.startswith(f"/en/builds/{c.name.lower().replace(' ', '')}-")), None)
+    if not cls:
+        raise ValueError("no class in the page's address")
+    names, _ = gg_calculator(cls)
+    code = re.search(r'\?build=([0-9a-z._-]+)', page).group(1)
+    ranks = cls.from_ranks(gg_ranks(cls, code, names))
+    # the steps: what each level's snapshot adds to the one before, in the order it lists them
+    points, had, level = [], {}, 60
+    for step in page.split("<article>")[1:]:
+        m = re.search(r'Level <b[^>]*>(\d+)</b>', step)
+        if not m:
+            continue
+        level = int(m.group(1))
+        for tid, rank in re.findall(r'data-guide-talent-id="(\d+)".*?<b[^>]*>(\d+)/\d+</b>', step, re.S):
+            name = names.get(tid)
+            if not name:
+                raise ValueError(f"talent {tid} is not on the calculator")
+            points += [name] * (int(rank) - had.get(name, 0))
+            had[name] = max(had.get(name, 0), int(rank))
+    order = []
+    if points:
+        stepped, order = cls.from_points(points)
+        if stepped != ranks:  # the steps do not add up to the build: its ranks only
+            order = []
+    spec = path.rsplit("/", 2)[-2].split("-", 1)[1].rsplit("-", 1)[0].replace("-", " ").title()
+    return [make_build(cls, ranks, order, level, name=f"{spec} leveling", spec=lead_tree(cls, ranks),
+                       source="wowforever.gg", url=f"{GG}/en/talents/{cls.name.lower().replace(' ', '')}/?build={code}",
+                       guide=GG + path, category="Leveo")]
+
+
+def gg_builds(classes):
+    builds = []
+    for cls in classes.values():
+        builds += cached(f"gg:{cls.token}", lambda cls=cls: gg_class(cls))
+    try:
+        paths = sorted(set(re.findall(r'href="(/en/builds/[a-z-]+-leveling/)"', fetch(GG + "/en/builds/"))))
+    except Exception as e:
+        warn(f"wowforever.gg index: {e}")
+        paths = [k[len("gg:"):] for k in cache_old if k.startswith("gg:/")]
+    for path in paths:
+        builds += cached(f"gg:{path}", lambda path=path: gg_leveling(path, classes))
+    return builds
+
+
 # ---------------------------------------------------------------- your own links
 
 def custom_links(classes):
@@ -1062,6 +1160,7 @@ def main():
                            ("WoW Forever Builds guides", wfb_guides),
                            ("RankedBoost builds", rankedboost_builds),
                            ("WoW Forever Talent plans", wft_builds),
+                           ("wowforever.gg builds", gg_builds),
                            ("links.txt", custom_links)):
         print(label)
         found = [b for b in collect(classes) if b]
@@ -1086,6 +1185,7 @@ def main():
             {"name": "Warcraft Tavern", "url": TAVERN + "/forever/guides/"},
             {"name": "Method", "url": METHOD + "/wow-forever"},
             {"name": "WoW Forever Builds", "url": WFB},
+            {"name": "wowforever.gg", "url": GG + "/en/builds/"},
         ],
         "classes": {c.token: c.to_lua() for c in classes.values()},
         "builds": builds,

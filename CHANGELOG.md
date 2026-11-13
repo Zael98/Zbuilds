@@ -2,6 +2,11 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## New source: wowforever.gg
+
+- **wowforever.gg**: its level 60 builds for every spec, for dungeons, raids and PvP, and its leveling build of each spec with the point order level by level (about 100 builds).
+- Builds that use a talent the current tree does not have yet are left out until the game has it.
+
 ## Gear advice
 
 - **Item tooltips say whether an item is an upgrade for your specialisation**: "Zbuilds (Fury): 12% better" in green, or worse in red, compared with what you wear in that slot (the weaker of two rings, trinkets or one-handers; main and off hand together for a two-hander). An empty slot says it is an upgrade. It works on quest rewards, loot and vendors.
