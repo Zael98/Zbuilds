@@ -3,6 +3,7 @@ local function ord(o) if not o then return "" end local x = {} for _, s in ipair
 local function check(b, url, label, compareOrder)
   if url:find("#zb") then return end -- Method builds have no link of their own
   if url:find("rankedboost%.com") or url:find("wowforevertalent%.com") then return end -- build pages, not calculator links
+  if url:find("wowforever%.gg") then return end -- its calculator links open on the site; the import does not read them
   total = total + 1
   local d, err = ns.DecodeLink(url, b.name, b.category)
   if not d then failed[#failed+1] = label .. ": " .. err return end
