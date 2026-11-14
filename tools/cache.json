@@ -6535,7 +6535,7 @@
 "class": "SHAMAN",
 "ranks": [
 "0533031020000000",
-"053030310031212200",
+"053030310021212210",
 "0530000000000000"
 ],
 "points": [
@@ -6607,10 +6607,6 @@
 [
 2,
 12
-],
-[
-2,
-11
 ],
 [
 2,
@@ -6747,6 +6743,10 @@
 [
 2,
 13
+],
+[
+2,
+17
 ]
 ],
 "level": null,
@@ -6754,7 +6754,7 @@
 "name": "Solo and Dungeon Level 60 Build",
 "spec": "Enhancement",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhiiikkknnnosrrrvvuutzzzzzAAA11111222555633388ll~70938-3ee47080",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhiiikkknnnosrrvvuutzzzzzAAA11111222555633388llw~70938-3ee47080",
 "guide": "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
