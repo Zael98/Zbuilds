@@ -2,6 +2,14 @@
 
 Builds are refreshed from the sites every day; a new version is published whenever any of them changes.
 
+## New spells onto your action bars
+
+- **When you learn a spell or a new rank** (at the trainer, from a quest or a talent), a small "New spells" window lists it.
+- With a **lower rank on your bars**, "Replace" puts the new rank on every button that has the old one. Learning several ranks at once offers only the highest.
+- **Not on your bars**, "Place" puts it on your cursor: click the action bar button you want it on.
+- Passive spells and spells already on a bar (the game places some itself) are left out. Bars cannot be changed in combat, so the window waits for the end of it, and nothing changes while you hold something on the cursor.
+- It can be turned off in Options.
+
 ## New source: wowforever.gg
 
 - **wowforever.gg**: its level 60 builds for every spec, for dungeons, raids and PvP, and its leveling build of each spec with the point order level by level (about 100 builds).
