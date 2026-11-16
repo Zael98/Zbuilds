@@ -24,3 +24,4 @@ Legacy.lua
 Trainer.lua
 Spellbook.lua
 Gear.lua
+NewSpells.lua

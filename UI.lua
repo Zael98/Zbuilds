@@ -1126,7 +1126,7 @@ end
 
 -- ---------------------------------------------------------------- options view
 
-local TOGGLES = { "banner", "sound", "talentAlert", "legacyAlert", "chat", "minimap", "gear" }
+local TOGGLES = { "banner", "sound", "talentAlert", "legacyAlert", "chat", "minimap", "gear", "newSpells" }
 local DURATIONS = { 4, 6, 10, 15 }
 local ov -- the Options view
 
