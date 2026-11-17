@@ -62,3 +62,7 @@ python tools/update_builds.py
 ```
 
 Necesita Python 3.10 o superior. Después, `/reload` en el juego.
+
+## ☕ Apoyar
+
+Zbuilds es gratis y lo seguirá siendo. Si te resulta útil, puedes invitarme a un café en [ko-fi.com/zael98](https://ko-fi.com/zael98). ¡Gracias!
