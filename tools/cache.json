@@ -19121,6 +19121,7 @@
 "method:/wow-forever/azerorth-commerce-authority-and-durotar-supply-and-logistics-reputation-guide": [],
 "method:/wow-forever/blacksmithing-in-wow-forever-leveling-guide-and-trainers": [],
 "method:/wow-forever/class-guides": [],
+"method:/wow-forever/dungeon-tier-sets-and-full-tier-dungeon-set-quest-chain-guide-in-wow-forever": [],
 "method:/wow-forever/enchanting-in-wow-forever-1-300-leveling-guide-and-trainers": [],
 "method:/wow-forever/first-aid-in-wow-forever-1-300-leveling-guide-and-trainers": [],
 "method:/wow-forever/fishing-in-wow-forever-leveling-guide-fishing-items-trainers": [],
@@ -22609,6 +22610,243 @@
 "category": "PvP"
 }
 ],
+"wfb:/guide/balance-caster-druid-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"5532223115501051",
+"00000000000000000000",
+"0000000000000000"
+],
+"points": [
+41,
+0,
+0
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+8
+],
+[
+1,
+9
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+13
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+16
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+]
+],
+"level": null,
+"beta": null,
+"name": "Balance Druid leveling guide 10–50: Moonkin talent order with Improved Wrath",
+"spec": "Balance",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115501051&o=0000000000030304040505060606070809090909090c0202020e0e0e0e0e0f01010101010a0a0a0a0a",
+"guide": "https://wowforeverbuilds.com/guide/balance-caster-druid-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/balance-druid-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"5532220115501351",
+"00000000000000000000",
+"5050000000000000"
+],
+"points": [
+41,
+0,
+10
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Balance Druid PvE guide: level 60 Moonkin, Eclipse and Genesis raid build",
+"spec": "Balance",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5532220115501351--505&prof=herbalism%2Calchemy",
+"guide": "https://wowforeverbuilds.com/guide/balance-druid-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/balance-druid-pvp-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"3302213110521251",
+"00000000000000000000",
+"5053002012100000"
+],
+"points": [
+32,
+0,
+19
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Balance Druid PvP guide: level 60 Moonkin root, stun and burst build",
+"spec": "Balance",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=3302213110521251--50530020121&prof=engineering%2Cherbalism",
+"guide": "https://wowforeverbuilds.com/guide/balance-druid-pvp-guide",
+"category": "PvP"
+}
+],
 "wfb:/guide/battle-healer-shaman-leveling": [
 {
 "class": "SHAMAN",
@@ -24177,6 +24415,235 @@
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/shaman?b=-055030311551202251-55&o=1111111111141414121217161616181b1a1a1a1a1a1f1f1212121c1c1e1e1h1g1g1g1g1g191919191921212121212020202020",
 "guide": "https://wowforeverbuilds.com/guide/beta-20-enhancement-shaman-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/beta-20-feral-druid-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"55220332123012125011",
+"0550000000000000"
+],
+"points": [
+0,
+41,
+10
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+13
+],
+[
+2,
+16
+],
+[
+2,
+15
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+19
+],
+[
+2,
+20
+],
+[
+2,
+16
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+2,
+4
+],
+[
+2,
+4
+]
+],
+"level": null,
+"beta": null,
+"name": "WoW Forever Druid Leveling 1–60: Feral Cat Build",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-55220332123012125011-055&o=1010101010121215151518171719191a1a1a1616161d1d1c1f1e1g1g1g1g1g1i1j1f1111111111212121212122222222221313",
+"guide": "https://wowforeverbuilds.com/guide/beta-20-feral-druid-leveling",
 "category": "Leveo"
 }
 ],
@@ -26811,6 +27278,235 @@
 "category": "PvP"
 }
 ],
+"wfb:/guide/druid-hunter-balance-druid-group-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"5532223115521351",
+"00000000000000000000",
+"0500000000000000"
+],
+"points": [
+46,
+0,
+5
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+8
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+9
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+13
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+16
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+2
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+]
+],
+"level": null,
+"beta": null,
+"name": "Druid + Hunter duo leveling 40–60: Balance Druid Moonkin talents",
+"spec": "Balance",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115521351--05&o=000000000005050303040407060606080a0a0a0a0a0c0d0d0d0e0e0e0e0e0f090909090901010101010202020b0b2121212121",
+"guide": "https://wowforeverbuilds.com/guide/druid-hunter-balance-druid-group-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/druid-hunter-beast-mastery-hunter-group-leveling": [
 {
 "class": "HUNTER",
@@ -27660,6 +28356,283 @@
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/shaman?b=5502-055230310251202251&prof=engineering%2Cmining",
 "guide": "https://wowforeverbuilds.com/guide/enhancement-shaman-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/feral-cat-druid-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"55200322123012125011",
+"0550300000000000"
+],
+"points": [
+0,
+38,
+13
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+7
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+13
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+15
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+19
+],
+[
+2,
+20
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+2,
+7
+]
+],
+"level": null,
+"beta": null,
+"name": "Feral Druid leveling guide 10–60: Cat Form talents with Rend and Tear and Shifting Power",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-55200322123012125011-05503&o=1010101010121215151519191717181a1a1a161d1d1c1f1f1e1g1g1g1g1g1i1j11111111112121212121222222222224242416",
+"guide": "https://wowforeverbuilds.com/guide/feral-cat-druid-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/feral-combat-druid-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50230332123102125510",
+"0550000000000000"
+],
+"points": [
+0,
+41,
+10
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Feral Druid tank guide: level 60 bear build with Primal Bite, Lacerate and Natural Reaction",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5023033212310212551-055&prof=leatherworking%2Cskinning",
+"guide": "https://wowforeverbuilds.com/guide/feral-combat-druid-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/feral-combat-druid-pvp-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50202202123012125000",
+"0552300050010000"
+],
+"points": [
+0,
+30,
+21
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Feral Druid PvP guide: level 60 cat build with Rend and Tear and Nature's Swiftness",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-50202202123012125-055230005001&prof=engineering%2Cleatherworking",
+"guide": "https://wowforeverbuilds.com/guide/feral-combat-druid-pvp-guide",
 "category": "PvP"
 }
 ],
@@ -30719,6 +31692,449 @@
 "category": "Leveo"
 }
 ],
+"wfb:/guide/hybrid-cleave-restoration-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"00000000000000000000",
+"0553005103113031"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+8
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+11
+],
+[
+3,
+7
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+15
+],
+[
+3,
+16
+]
+],
+"level": null,
+"beta": null,
+"name": "Hybrid Cleave 5-man: Restoration Druid Wild Growth talents (levels 15–40)",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=--0553005103113031&o=2121212121222222222227262626262929292a262b2c2c2c2323232e2e2e2f",
+"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-restoration-druid-dungeon-leveling",
+"category": "Leveo"
+},
+{
+"class": "WARRIOR",
+"ranks": [
+"00000000000000000",
+"000000000000000000",
+"250103120331001351"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+7
+],
+[
+3,
+8
+],
+[
+3,
+8
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+11
+],
+[
+3,
+12
+],
+[
+3,
+15
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+16
+],
+[
+3,
+4
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+17
+],
+[
+3,
+18
+]
+],
+"level": null,
+"beta": null,
+"name": "Hybrid Cleave 5-man: Restoration Druid Wild Growth talents (levels 15–40)",
+"spec": "Protection",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/warrior?b=--250103120331001351&o=212121212125252520202929292627272a2a2a2b2e2f2f2f232g2g2g2g2g2h",
+"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-restoration-druid-dungeon-leveling",
+"category": "Leveo"
+},
+{
+"class": "WARLOCK",
+"ranks": [
+"00000000000000000",
+"0000000000000000000",
+"2551305033021001"
+],
+"points": [
+0,
+0,
+31
+],
+"order": [
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+7
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+9
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+12
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+5
+],
+[
+3,
+5
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+5
+],
+[
+3,
+4
+],
+[
+3,
+16
+]
+],
+"level": null,
+"beta": null,
+"name": "Hybrid Cleave 5-man: Restoration Druid Wild Growth talents (levels 15–40)",
+"spec": "Destruction",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/warlock?b=--2551305033021001&o=21212121212222222222262626262628282820202b2b2c242429292924232f",
+"guide": "https://wowforeverbuilds.com/guide/hybrid-cleave-restoration-druid-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/mage-cleave-arcane-mage-dungeon-leveling": [
 {
 "class": "MAGE",
@@ -30945,6 +32361,235 @@
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/mage?b=053205203122311531-05-203002&o=0101010101050505050508080803030c0c0c0b0b0e0f0f0f0f0f0g0g0g020h20202222222525090d0606020211111111110a0a",
 "guide": "https://wowforeverbuilds.com/guide/mage-cleave-arcane-mage-dungeon-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/mage-cleave-balance-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"5032223005521351",
+"00000000000000000000",
+"0550020000000000"
+],
+"points": [
+39,
+0,
+12
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+5
+],
+[
+1,
+5
+],
+[
+1,
+6
+],
+[
+1,
+6
+],
+[
+1,
+4
+],
+[
+1,
+4
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+3
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+7
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+10
+],
+[
+1,
+13
+],
+[
+1,
+12
+],
+[
+1,
+12
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+15
+],
+[
+1,
+16
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+6
+],
+[
+3,
+6
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+11
+],
+[
+1,
+14
+],
+[
+1,
+14
+],
+[
+1,
+14
+]
+],
+"level": null,
+"beta": null,
+"name": "Mage Cleave 5-man: Balance Druid Hurricane and Moonkin talents (levels 40–60)",
+"spec": "Balance",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5032223005521351--055002&o=000000000004040505030302020206060609090909090c0b0b0e0e0e0e0e0f2121212121222222222225250a0a0a0a0a0d0d0d",
+"guide": "https://wowforeverbuilds.com/guide/mage-cleave-balance-druid-dungeon-leveling",
 "category": "Leveo"
 }
 ],
@@ -33760,6 +35405,302 @@
 "category": "Leveo"
 }
 ],
+"wfb:/guide/melee-cleave-feral-combat-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50030302123102120510",
+"0000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+19
+]
+],
+"level": null,
+"beta": null,
+"name": "Melee Cleave 5-man: Feral Druid bear tank talents for AoE threat (levels 20–40)",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5003030212310212051&o=1010101010131313151518171719191b1d1d1a1a1e1a151f1f1h1h1h1h1h1i",
+"guide": "https://wowforeverbuilds.com/guide/melee-cleave-feral-combat-druid-dungeon-leveling",
+"category": "Leveo"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00000000000000000",
+"3220330200212221501",
+"000000000000000000"
+],
+"points": [
+0,
+31,
+0
+],
+"order": [
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+12
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+16
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+19
+]
+],
+"level": null,
+"beta": null,
+"name": "Melee Cleave 5-man: Feral Druid bear tank talents for AoE threat (levels 20–40)",
+"spec": "Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-3220330200212221501&o=1111101010151515141414171712121a1a1b1c1c1f1e1e1g1g1g1g1g1d1d1i",
+"guide": "https://wowforeverbuilds.com/guide/melee-cleave-feral-combat-druid-dungeon-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/melee-cleave-restoration-shaman-dungeon-leveling": [
 {
 "class": "SHAMAN",
@@ -35368,6 +37309,203 @@
 "category": "PvP"
 }
 ],
+"wfb:/guide/restoration-druid-pve-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0530200100000000",
+"00000000000000000000",
+"5053035123113251"
+],
+"points": [
+11,
+0,
+40
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Restoration Druid PvE guide: level 60 Wild Growth and Swiftmend raid healing build",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=05302001--5053035123113251&prof=herbalism%2Calchemy",
+"guide": "https://wowforeverbuilds.com/guide/restoration-druid-pve-guide",
+"category": "PvE"
+}
+],
+"wfb:/guide/restoration-druid-pvp-guide": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"05202302123000000000",
+"5053002113113051"
+],
+"points": [
+0,
+20,
+31
+],
+"order": null,
+"level": null,
+"beta": null,
+"name": "Restoration Druid PvP guide: level 60 flag carrier and battleground healer build",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-05202302123-5053002113113051&prof=engineering%2Cherbalism",
+"guide": "https://wowforeverbuilds.com/guide/restoration-druid-pvp-guide",
+"category": "PvP"
+}
+],
+"wfb:/guide/restoration-hybrid-druid-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"5000000000000000",
+"00000000000000000000",
+"5053004103113000"
+],
+"points": [
+5,
+0,
+26
+],
+"order": [
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+1,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+1
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+3
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+4
+],
+[
+3,
+8
+],
+[
+3,
+7
+],
+[
+3,
+11
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+10
+],
+[
+3,
+7
+],
+[
+3,
+12
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+13
+],
+[
+3,
+7
+],
+[
+3,
+7
+]
+],
+"level": null,
+"beta": null,
+"name": "Restoration Druid leveling guide 1–40: solo healer hybrid talent order",
+"spec": "Restoration",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=5--5053004103113&o=00000000002020202020222222222223232327262a292929262b2c2c2c2626",
+"guide": "https://wowforeverbuilds.com/guide/restoration-hybrid-druid-leveling",
+"category": "Leveo"
+}
+],
 "wfb:/guide/restoration-shaman-pve-guide": [
 {
 "class": "SHAMAN",
@@ -35946,6 +38084,262 @@
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/druid?b=-500303021231021201&o=1010101010131313151519191717181b1d1d1a1a1e1a151f1f1h",
 "guide": "https://wowforeverbuilds.com/guide/rogue-druid-combat-rogue-group-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/rogue-druid-feral-combat-druid-group-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"50030302123102120100",
+"0000000000000000"
+],
+"points": [
+0,
+26,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+]
+],
+"level": null,
+"beta": null,
+"name": "Rogue + Druid duo leveling 10–35: Feral Druid bear tank and heals",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-500303021231021201&o=1010101010131313151519191717181b1d1d1a1a1e1a151f1f1h",
+"guide": "https://wowforeverbuilds.com/guide/rogue-druid-feral-combat-druid-group-leveling",
+"category": "Leveo"
+},
+{
+"class": "ROGUE",
+"ranks": [
+"00000000000000000",
+"3023330210012021300",
+"000000000000000000"
+],
+"points": [
+0,
+26,
+0
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+9
+],
+[
+2,
+12
+],
+[
+2,
+13
+],
+[
+2,
+13
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+16
+],
+[
+2,
+15
+],
+[
+2,
+15
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+]
+],
+"level": null,
+"beta": null,
+"name": "Rogue + Druid duo leveling 10–35: Feral Druid bear tank and heals",
+"spec": "Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/rogue?b=-30233302100120213&o=1010101212131313151515141414181b1c1c17171f1e1e1g1g1g",
+"guide": "https://wowforeverbuilds.com/guide/rogue-druid-feral-combat-druid-group-leveling",
 "category": "Leveo"
 }
 ],
@@ -36633,6 +39027,235 @@
 "source": "WoW Forever Builds",
 "url": "https://wowforeverbuilds.com/talents/priest?b=005305031330011531-335050000001&o=020202020203030305050909090a0a0a080d0505050e0f0f0f0f0f0g0g0g0h0707071212121212101014141414141111111b10",
 "guide": "https://wowforeverbuilds.com/guide/shadow-cleave-discipline-priest-dungeon-leveling",
+"category": "Leveo"
+}
+],
+"wfb:/guide/shadow-cleave-feral-combat-druid-dungeon-leveling": [
+{
+"class": "DRUID",
+"ranks": [
+"0000000000000000",
+"53232332123102125510",
+"0500000000000000"
+],
+"points": [
+0,
+46,
+5
+],
+"order": [
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+1
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+4
+],
+[
+2,
+6
+],
+[
+2,
+6
+],
+[
+2,
+9
+],
+[
+2,
+8
+],
+[
+2,
+8
+],
+[
+2,
+10
+],
+[
+2,
+10
+],
+[
+2,
+12
+],
+[
+2,
+14
+],
+[
+2,
+14
+],
+[
+2,
+11
+],
+[
+2,
+11
+],
+[
+2,
+15
+],
+[
+2,
+11
+],
+[
+2,
+6
+],
+[
+2,
+16
+],
+[
+2,
+16
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+18
+],
+[
+2,
+19
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+17
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+2,
+7
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+3,
+2
+],
+[
+2,
+5
+],
+[
+2,
+5
+],
+[
+2,
+3
+],
+[
+2,
+3
+],
+[
+2,
+2
+],
+[
+2,
+2
+],
+[
+2,
+2
+]
+],
+"level": null,
+"beta": null,
+"name": "Shadow Cleave 5-man: Feral Druid bear tank talents (levels 40–60)",
+"spec": "Feral Combat",
+"source": "WoW Forever Builds",
+"url": "https://wowforeverbuilds.com/talents/druid?b=-5323233212310212551-05&o=1010101010131313151518171719191b1d1d1a1a1e1a151f1f1h1h1h1h1h1i1g1g1g1g1g161616212121212114141212111111",
+"guide": "https://wowforeverbuilds.com/guide/shadow-cleave-feral-combat-druid-dungeon-leveling",
 "category": "Leveo"
 }
 ],
