@@ -2557,7 +2557,7 @@
 "DRUID": [
 [
 [
-"Improved Wrath",
+"Starlight Wrath",
 1,
 2,
 5
@@ -2575,7 +2575,7 @@
 3
 ],
 [
-"Improved Moonfire",
+"Moon and Stars",
 2,
 2,
 2
@@ -2620,7 +2620,7 @@
 "Improved Starfire",
 4,
 3,
-5
+2
 ],
 [
 "Overgrowth",
@@ -2641,7 +2641,7 @@
 3
 ],
 [
-"Moonfury",
+"Dreamstate",
 6,
 2,
 5
@@ -3100,7 +3100,7 @@
 "name": "Wrack Build",
 "spec": "Affliction",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-00111112222266999aaaaabbdfffffgjjjjjllnnnqBBBBBeee8~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-00111112222266999aaaaabbdfffffgjjjjjllnnnqBBBBBeee8~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/affliction-warlock-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -3329,7 +3329,7 @@
 "name": "Arcane Fire Talent Build",
 "spec": "Arcane",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-22222446666677999adddegggggfhhhillkkkkCCCmmmmmkrjju~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-22222446666677999adddegggggfhhhillkkkkCCCmmmmmkrjju~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -3558,7 +3558,7 @@
 "name": "Mortal Strike Two Handed Build",
 "spec": "Arms",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-0002224445567778999aabbcdddddeegiiiiikkkkkqqqqqQryy~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-0002224445567778999aabbcdddddeegiiiiikkkkkqqqqqQryy~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/arms-warrior-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -3787,240 +3787,12 @@
 "name": "Mutilate Assassination",
 "spec": "Assassination",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-2222233355c7788a99999RRRRRgfffdhhhjjmmmkkk66b5nnrvv~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-2222233355c7788a99999RRRRRgfffdhhhjjmmmkkk66b5nnrvv~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/assassination-rogue-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
 ],
-"iv:/wow-forever/balance-druid-ranged-dps-pve-guide": [
-{
-"class": "DRUID",
-"ranks": [
-"5532220115501351",
-"00000000000000000000",
-"5050000000000000"
-],
-"points": [
-41,
-0,
-10
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-8
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-9
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-13
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-]
-],
-"level": null,
-"beta": null,
-"name": "Balance Default - Eclipse & DoTs",
-"spec": "Balance",
-"source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-000001111122233447999998aaaaacdddeeeeefAAAAACCCCC55~71091-a81826a1",
-"guide": "https://www.icy-veins.com/wow-forever/balance-druid-ranged-dps-pve-spec-builds-talents",
-"category": "PvE"
-}
-],
+"iv:/wow-forever/balance-druid-ranged-dps-pve-guide": [],
 "iv:/wow-forever/beast-mastery-hunter-ranged-dps-pve-guide": [
 {
 "class": "HUNTER",
@@ -4245,7 +4017,7 @@
 "name": "PvE Talent Build",
 "spec": "Beast Mastery",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-0000022551677777a99999cddeeeeefiiiiillllljjjmmqqqqq~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-0000022551677777a99999cddeeeeefiiiiillllljjjmmqqqqq~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/beast-mastery-hunter-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -4472,7 +4244,7 @@
 "name": "Beast Mastery Hunter PvP / World / Leveling Talent Build",
 "spec": "Beast Mastery",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-000002255144677777a99999cddeeefwwwwwyyyyyDDDCFgggEF~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-000002255144677777a99999cddeeefwwwwwyyyyyDDDCFgggEF~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/beast-mastery-hunter-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -4701,7 +4473,7 @@
 "name": "Sinister Strike Combat",
 "spec": "Combat",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-iihhhmmmpp66nnjrvvwwwSStuuuuusssssx2222233377555c8a~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-iihhhmmmpp66nnjrvvwwwSStuuuuusssssx2222233377555c8a~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/combat-rogue-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -4928,7 +4700,7 @@
 "name": "Backtstab Combat",
 "spec": "Combat",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-iihhhkkkmmmnn66wwvvwrSStuuuuusssssx2222233377555c8a~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-iihhhkkkmmmnn66wwvvwrSStuuuuusssssx2222233377555c8a~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/combat-rogue-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -5157,7 +4929,7 @@
 "name": "Demonic Pact Succubus Build",
 "spec": "Demonology",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-CCCCCBBBBBGGGGGJJJ22kkkkkoonnnqppprruuuswxxxyyyyysz~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-CCCCCBBBBBGGGGGJJJ22kkkkkoonnnqppprruuuswxxxyyyyysz~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/demonology-warlock-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -5386,7 +5158,7 @@
 "name": "Demonic Sacrifice Destruction Fire Talent Build",
 "spec": "Destruction",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-1111122jjjjjllnnnqCCCCCFFFFFEEEGGGGGHJJJKMNNNOOOOOP~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warlock-talent-calculator#tc-1111122jjjjjllnnnqCCCCCFFFFFEEEGGGGGHJJJKMNNNOOOOOP~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/destruction-warlock-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -5615,7 +5387,7 @@
 "name": "The Mitigation Machine",
 "spec": "Discipline",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-22222555558777aaa999dfffffeggghkkkkkmmmmmiiinpppssq~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-22222555558777aaa999dfffffeggghkkkkkmmmmmiiinpppssq~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/discipline-priest-healer-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -5844,7 +5616,7 @@
 "name": "Elemental PvE Raid Support Talent Build",
 "spec": "Elemental",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-11111444000055568899dddceeeeef9hhhhzzzzzAAAGCCCCCBJ~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-11111444000055568899dddceeeeef9hhhhzzzzzAAAGCCCCCBJ~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -6071,7 +5843,7 @@
 "name": "Elemental PvE Raid Maximum Throughput Talent Build",
 "spec": "Elemental",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-11111444000055568899dddceeeeef9hhhhzzzzzAAACCGh0iii~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-11111444000055568899dddceeeeef9hhhhzzzzzAAACCGh0iii~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -6298,7 +6070,7 @@
 "name": "PvP / World / Leveling Talent Build",
 "spec": "Elemental",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-111114445565000a9998dddc8eeeeefzzzzzAAADDGhhhhh00ii~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-111114445565000a9998dddc8eeeeefzzzzzAAADDGhhhhh00ii~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -6527,7 +6299,7 @@
 "name": "Standard Endgame PvE Build",
 "spec": "Enhancement",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhkkkiiinnnorrrrrsvvuutllwwwwwx11111555222336388~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhkkkiiinnnorrrrrsvvuutllwwwwwx11111555222336388~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -6754,7 +6526,7 @@
 "name": "Solo and Dungeon Level 60 Build",
 "spec": "Enhancement",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhiikkkonnnillsrrrrrvvuutwwxzzzzzAAA000005552226~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-hhhhhiikkkonnnillsrrrrrvvuutwwxzzzzzAAA000005552226~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -6983,7 +6755,7 @@
 "name": "Hybrid Bear and Cat Talent Build",
 "spec": "Feral",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggjjjiionnpprqsvwwssyyyyyzBBBBBCCCCC11111455ulll~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggjjjiionnpprqsvwwssyyyyyzBBBBBCCCCC11111455ulll~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -7210,7 +6982,7 @@
 "name": "Bear Tank Only Talent Build",
 "spec": "Feral",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggjjjiionnpprsvwwssyyyyyzBBBBBCCCCC11111455lll4t~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggjjjiionnpprsvwwssyyyyyzBBBBBCCCCC11111455lll4t~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -7437,7 +7209,7 @@
 "name": "Cat DPS Talent Build",
 "spec": "Feral",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggiionnppsvwwssyyyyyBBBBBCCCCC11111454tthhhmmmqu~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-gggggiionnppsvwwssyyyyyBBBBBCCCCC11111454tthhhmmmqu~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -7666,7 +7438,7 @@
 "name": "Frostfire Bolt Talent Build",
 "spec": "Fire",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CCCAADDDDDFHHHJMMMLEPPlllllkkkkkmmmmmrjjuvssswwwyyy~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CCCAADDDDDFHHHJMMMLEPPlllllkkkkkmmmmmrjjuvssswwwyyy~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -7893,7 +7665,7 @@
 "name": "Fire Arcane Talent Build",
 "spec": "Fire",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-22222446666677adkkkkklllllmmmmmrjjvvvussswwwyyyzCCC~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-22222446666677adkkkkklllllmmmmmrjjvvvussswwwyyyzCCC~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -8122,7 +7894,7 @@
 "name": "Deep Frost Build",
 "spec": "Frost",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CCBBBBBJDDDDMMMDLPPONNNHHHIRCQQQQQKKGGIIA3330044FFG~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CCBBBBBJDDDDMMMDLPPONNNHHHIRCQQQQQKKGGIIA3330044FFG~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -8349,7 +8121,7 @@
 "name": "Cone of Cold Raiding Build - Arcane Meditation",
 "spec": "Frost",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-003334466666558ddBBBBBCCCDDDDDJKKMMMPPONNNQQQQQLRId~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-003334466666558ddBBBBBCCCDDDDDJKKMMMPPONNNQQQQQLRId~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -8576,7 +8348,7 @@
 "name": "Cone of Cold Raiding Build - Incineration",
 "spec": "Frost",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-0033344666BBBBBCCCDDDDDJKKMMMPPONNNQQQQQLRIkkkkkHHH~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-0033344666BBBBBCCCDDDDDJKKMMMPPONNNQQQQQLRIkkkkkHHH~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -8803,7 +8575,7 @@
 "name": "Frost Mage AoE Build",
 "spec": "Frost",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-AACCCGGGFFDDDDDJIIIHHHMMMPPNNNOR333006666644999dddL~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-AACCCGGGFFDDDDDJIIIHHHMMMPPNNNOR333006666644999dddL~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -9032,7 +8804,7 @@
 "name": "Bloodthirst Dual Wield Build",
 "spec": "Fury",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-000222444567775aaiiiiikkkkklllqqoooooQtssqppvvvx8qq~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-000222444567775aaiiiiikkkkklllqqoooooQtssqppvvvx8qq~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/fury-warrior-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -9261,7 +9033,7 @@
 "name": "Light's Vigil Talent Build",
 "spec": "Holy",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzz11111ppkBBBFF3333377222aaaaab88c996dPPfffffg~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzz11111ppkBBBFF3333377222aaaaab88c996dPPfffffg~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/holy-paladin-healer-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -9490,7 +9262,7 @@
 "name": "Full Throttle Group Healer",
 "spec": "Holy",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-jjjkkkkkmmmmmnpppssrrruuvwwwwwyxxx2222255555aaa8333~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-jjjkkkkkmmmmmnpppssrrruuvwwwwwyxxx2222255555aaa8333~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/holy-priest-healer-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -9719,7 +9491,7 @@
 "name": "Lone Wolf PvE Talent Build",
 "spec": "Marksmanship",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiillllljjjmmqqqqqprrsssuuuuuvwwwww00000kkkkgggko~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiillllljjjmmqqqqqprrsssuuuuuvwwwww00000kkkkgggko~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/marksmanship-hunter-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -9946,7 +9718,7 @@
 "name": "Pet PvE Talent Build",
 "spec": "Marksmanship",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiillllljjjmmqqqqqprrssuuuuuv00000225517777a6wwww~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiillllljjjmmqqqqqprrssuuuuuv00000225517777a6wwww~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/marksmanship-hunter-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -10173,7 +9945,7 @@
 "name": "PvP / World / Leveling Talent Build",
 "spec": "Marksmanship",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiillllljmmqqqqqprrssuuuuuv00000225517777a644tggg~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiillllljmmqqqqqprrssuuuuuv00000225517777a644tggg~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/marksmanship-hunter-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -10402,7 +10174,7 @@
 "name": "Deep Protection Talent Build",
 "spec": "Protection",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiijjjppoothhnnnqlllllwuuuuuvvvmyyyyyBBBzzFFDDHDh~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiijjjppoothhnnnqlllllwuuuuuvvvmyyyyyBBBzzFFDDHDh~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/protection-paladin-tank-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -10629,7 +10401,7 @@
 "name": "Deep Holy Talent Build",
 "spec": "Protection",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiijjjppoothhnnnqlwllllvvvOOOOO44444AA7788cc6bdee~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-iiiiijjjppoothhnnnqlwllllvvvOOOOO44444AA7788cc6bdee~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/protection-paladin-tank-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -10858,7 +10630,7 @@
 "name": "Raid Build",
 "spec": "Protection",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-zzzzzBBBBBEFFCCCHHHJLLMNNOOOOOP11111iiiiijjjjjqqqqq~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-zzzzzBBBBBEFFCCCHHHJLLMNNOOOOOP11111iiiiijjjjjqqqqq~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/protection-warrior-tank-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -11085,7 +10857,7 @@
 "name": "Dungeon Farming Build",
 "spec": "Protection",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-zzzzzCCCDDEFFHHHDJKKNNNMLOOOOOPiiiiijjjjjmqqqqQqL11~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/warrior-talent-calculator#tc-zzzzzCCCDDEFFHHHDJKKNNNMLOOOOOPiiiiijjjjjmqqqqQqL11~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/protection-warrior-tank-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -11314,7 +11086,7 @@
 "name": "Restoration Default Build",
 "spec": "Restoration",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-0000055BBBBBCCCCCDDDGGGGGHJJJKMMMLOOOOOP11111447228~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/druid-talent-calculator#tc-0000055BBBBBCCCCCDDDGGGGGHJJJKMMMLOOOOOP11111447228~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/restoration-druid-healer-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -11543,7 +11315,7 @@
 "name": "Restoration Standard Talent Build",
 "spec": "Restoration",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-zzzzzAAAyyGyyyFJHHHHLKKKHMMMMMNFFEEEhhhhhIIIIIiiiii~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator#tc-zzzzzAAAyyGyyyFJHHHHLKKKHMMMMMNFFEEEhhhhhIIIIIiiiii~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -11772,7 +11544,7 @@
 "name": "Unsealed Wrath Talent Build",
 "spec": "Retribution",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzzBBBDDDEFFIIIH5JJJKLLLLLN11111jjjOOOOO44444AA~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzzBBBDDDEFFIIIH5JJJKLLLLLN11111jjjOOOOO44444AA~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/retribution-paladin-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -11999,7 +11771,7 @@
 "name": "Shockadin Talent Build",
 "spec": "Retribution",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzzBBBDDDEFFIIIH5JJJKLLLLLOOOOO44444AA877bcc86d~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/paladin-talent-calculator#tc-yyyyyzzBBBDDDEFFIIIH5JJJKLLLLLOOOOO44444AA877bcc86d~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/retribution-paladin-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -12228,7 +12000,7 @@
 "name": "Cookie Cutter Talent Build",
 "spec": "Shadow",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-zzzzzDDCCCCEGHHJIIIIIKKKMMLOOOOOPiii2222233355aaa55~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/priest-talent-calculator#tc-zzzzzDDCCCCEGHHJIIIIIKKKMMLOOOOOPiii2222233355aaa55~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/shadow-priest-ranged-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -12457,7 +12229,7 @@
 "name": "Subtlety Bleed Build",
 "spec": "Subtlety",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-AAAAAEEEBBKKKJLGByyNiiMFFFPPPPPQhhh1122233322c855L8~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/rogue-talent-calculator#tc-AAAAAEEEBBKKKJLGByyNiiMFFFPPPPPQhhh1122233322c855L8~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/subtlety-rogue-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -12686,7 +12458,7 @@
 "name": "Melee Hunter Build",
 "spec": "Survival",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiiwwwwwzzAAADDDCCGGGGGJJKKLlll000002211177777a99~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiiwwwwwzzAAADDDCCGGGGGJJKKLlll000002211177777a99~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/survival-hunter-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -12913,7 +12685,7 @@
 "name": "Melee-Weaving Ranged Talent Build",
 "spec": "Survival",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiiwwwwwzzAAADDDCCGGGGGJJIILMMMMMllllljjjonpqqqqq~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiiwwwwwzzAAADDDCCGGGGGJJIILMMMMMllllljjjonpqqqqq~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/survival-hunter-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 },
@@ -13140,7 +12912,7 @@
 "name": "Ranged-Only Talent Build",
 "spec": "Survival",
 "source": "Icy Veins",
-"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiiwwwwwzzAAADDDCCAAFFxIIJJxMMMMMllllljjjkopqqqq0~71091-a81826a1",
+"url": "https://www.icy-veins.com/wow-forever/hunter-talent-calculator#tc-iiiiiwwwwwzzAAADDDCCAAFFxIIJJxMMMMMllllljjjkopqqqq0~71139-3690ff24",
 "guide": "https://www.icy-veins.com/wow-forever/survival-hunter-melee-dps-pve-spec-builds-talents",
 "category": "PvE"
 }
@@ -13832,235 +13604,7 @@
 ],
 "tavern:/forever/guides/arms-warrior/": [],
 "tavern:/forever/guides/assassination-rogue/": [],
-"tavern:/forever/guides/balance-druid/": [
-{
-"class": "DRUID",
-"ranks": [
-"5532220115501351",
-"00000000000000000000",
-"2503000000000000"
-],
-"points": [
-41,
-0,
-10
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-8
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-13
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-1
-],
-[
-3,
-1
-]
-],
-"level": null,
-"beta": null,
-"name": "Standard Balance Druid Build (41/0/10)",
-"spec": "Balance",
-"source": "Warcraft Tavern",
-"url": "https://www.warcrafttavern.com/forever/tools/talent-calculator/druid#?t=A1111122222444556677acdddddeeeeehiiilllllpC2222255511",
-"guide": "https://www.warcrafttavern.com/forever/guides/balance-druid/",
-"category": null
-}
-],
+"tavern:/forever/guides/balance-druid/": [],
 "tavern:/forever/guides/beast-mastery-hunter/": [
 {
 "class": "HUNTER",
@@ -19588,233 +19132,6 @@
 "url": "https://www.method.gg/wow-forever/wow-forever-druid-leveling-guide-and-talents#zb2",
 "guide": "https://www.method.gg/wow-forever/wow-forever-druid-leveling-guide-and-talents",
 "category": "Leveo"
-},
-{
-"class": "DRUID",
-"ranks": [
-"2532223115501351",
-"00000000000000000000",
-"5050000000000000"
-],
-"points": [
-41,
-0,
-10
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-8
-],
-[
-1,
-9
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-13
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-16
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-]
-],
-"level": null,
-"beta": null,
-"name": "Balance Build",
-"spec": "Balance",
-"source": "Method",
-"url": "https://www.method.gg/wow-forever/wow-forever-druid-leveling-guide-and-talents#zb3",
-"guide": "https://www.method.gg/wow-forever/wow-forever-druid-leveling-guide-and-talents",
-"category": "Leveo"
 }
 ],
 "method:/wow-forever/wow-forever-hunter-leveling-guide-and-talents": [
@@ -22610,243 +21927,9 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/balance-caster-druid-leveling": [
-{
-"class": "DRUID",
-"ranks": [
-"5532223115501051",
-"00000000000000000000",
-"0000000000000000"
-],
-"points": [
-41,
-0,
-0
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-8
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-13
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-]
-],
-"level": null,
-"beta": null,
-"name": "Balance Druid leveling guide 10–50: Moonkin talent order with Improved Wrath",
-"spec": "Balance",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115501051&o=0000000000030304040505060606070809090909090c0202020e0e0e0e0e0f01010101010a0a0a0a0a",
-"guide": "https://wowforeverbuilds.com/guide/balance-caster-druid-leveling",
-"category": "Leveo"
-}
-],
-"wfb:/guide/balance-druid-pve-guide": [
-{
-"class": "DRUID",
-"ranks": [
-"5532220115501351",
-"00000000000000000000",
-"5050000000000000"
-],
-"points": [
-41,
-0,
-10
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Balance Druid PvE guide: level 60 Moonkin, Eclipse and Genesis raid build",
-"spec": "Balance",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5532220115501351--505&prof=herbalism%2Calchemy",
-"guide": "https://wowforeverbuilds.com/guide/balance-druid-pve-guide",
-"category": "PvE"
-}
-],
-"wfb:/guide/balance-druid-pvp-guide": [
-{
-"class": "DRUID",
-"ranks": [
-"3302213110521251",
-"00000000000000000000",
-"5053002012100000"
-],
-"points": [
-32,
-0,
-19
-],
-"order": null,
-"level": null,
-"beta": null,
-"name": "Balance Druid PvP guide: level 60 Moonkin root, stun and burst build",
-"spec": "Balance",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=3302213110521251--50530020121&prof=engineering%2Cherbalism",
-"guide": "https://wowforeverbuilds.com/guide/balance-druid-pvp-guide",
-"category": "PvP"
-}
-],
+"wfb:/guide/balance-caster-druid-leveling": [],
+"wfb:/guide/balance-druid-pve-guide": [],
+"wfb:/guide/balance-druid-pvp-guide": [],
 "wfb:/guide/battle-healer-shaman-leveling": [
 {
 "class": "SHAMAN",
@@ -27278,235 +26361,7 @@
 "category": "PvP"
 }
 ],
-"wfb:/guide/druid-hunter-balance-druid-group-leveling": [
-{
-"class": "DRUID",
-"ranks": [
-"5532223115521351",
-"00000000000000000000",
-"0500000000000000"
-],
-"points": [
-46,
-0,
-5
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-8
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-9
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-13
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-]
-],
-"level": null,
-"beta": null,
-"name": "Druid + Hunter duo leveling 40–60: Balance Druid Moonkin talents",
-"spec": "Balance",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5532223115521351--05&o=000000000005050303040407060606080a0a0a0a0a0c0d0d0d0e0e0e0e0e0f090909090901010101010202020b0b2121212121",
-"guide": "https://wowforeverbuilds.com/guide/druid-hunter-balance-druid-group-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/druid-hunter-balance-druid-group-leveling": [],
 "wfb:/guide/druid-hunter-beast-mastery-hunter-group-leveling": [
 {
 "class": "HUNTER",
@@ -32364,235 +31219,7 @@
 "category": "Leveo"
 }
 ],
-"wfb:/guide/mage-cleave-balance-druid-dungeon-leveling": [
-{
-"class": "DRUID",
-"ranks": [
-"5032223005521351",
-"00000000000000000000",
-"0550020000000000"
-],
-"points": [
-39,
-0,
-12
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-7
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-13
-],
-[
-1,
-12
-],
-[
-1,
-12
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-2
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-6
-],
-[
-3,
-6
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-11
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-]
-],
-"level": null,
-"beta": null,
-"name": "Mage Cleave 5-man: Balance Druid Hurricane and Moonkin talents (levels 40–60)",
-"spec": "Balance",
-"source": "WoW Forever Builds",
-"url": "https://wowforeverbuilds.com/talents/druid?b=5032223005521351--055002&o=000000000004040505030302020206060609090909090c0b0b0e0e0e0e0e0f2121212121222222222225250a0a0a0a0a0d0d0d",
-"guide": "https://wowforeverbuilds.com/guide/mage-cleave-balance-druid-dungeon-leveling",
-"category": "Leveo"
-}
-],
+"wfb:/guide/mage-cleave-balance-druid-dungeon-leveling": [],
 "wfb:/guide/mage-cleave-fire-mage-dungeon-leveling": [
 {
 "class": "MAGE",
@@ -43170,27 +41797,6 @@
 {
 "class": "DRUID",
 "ranks": [
-"5532220115501351",
-"00000000000000000000",
-"5050000000000000"
-],
-"points": [
-41,
-0,
-10
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Balance Druid DPS Build",
-"spec": "Balance",
-"source": "RankedBoost",
-"url": "https://rankedboost.com/world-of-warcraft/forever/build/druid/#build=auth-druid-balance-dps",
-"category": "PvE"
-},
-{
-"class": "DRUID",
-"ranks": [
 "0500200000000000",
 "55200202123102125510",
 "0500000000000000"
@@ -45443,72 +44049,6 @@
 {
 "class": "DRUID",
 "ranks": [
-"5032220115301351",
-"00000000000000000000",
-"0553031000000000"
-],
-"points": [
-34,
-0,
-17
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Balance · Dungeons",
-"spec": "Balance",
-"source": "wowforever.gg",
-"url": "https://wowforever.gg/en/talents/druid/?build=2.druid.762-5_783-3_763-2_90051-2_764-2_90052-1_827-1_792-5_784-3_789-1_90054-3_790-5_793-1_808-5_824-5_829-3_841-3_828-1",
-"category": "PvE",
-"guide": "https://wowforever.gg/en/guides/druid-balance/"
-},
-{
-"class": "DRUID",
-"ranks": [
-"5032220115501351",
-"00000000000000000000",
-"0553020000000000"
-],
-"points": [
-36,
-0,
-15
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Balance · Raids",
-"spec": "Balance",
-"source": "wowforever.gg",
-"url": "https://wowforever.gg/en/talents/druid/?build=2.druid.762-5_783-3_763-2_90051-2_764-2_90052-1_827-1_792-5_784-5_789-1_90054-3_790-5_793-1_808-5_824-5_829-3_841-2",
-"category": "PvE",
-"guide": "https://wowforever.gg/en/guides/druid-balance/"
-},
-{
-"class": "DRUID",
-"ranks": [
-"3502223115021351",
-"00000000000000000000",
-"5303301000000000"
-],
-"points": [
-36,
-0,
-15
-],
-"order": null,
-"level": 60,
-"beta": null,
-"name": "Balance · PvP",
-"spec": "Balance",
-"source": "wowforever.gg",
-"url": "https://wowforever.gg/en/talents/druid/?build=2.druid.762-3_90050-5_763-2_90051-2_764-2_90055-3_90052-1_827-1_792-5_90066-2_789-1_90054-3_790-5_793-1_823-5_808-3_829-3_781-3_828-1",
-"category": "PvP",
-"guide": "https://wowforever.gg/en/guides/druid-balance/"
-},
-{
-"class": "DRUID",
-"ranks": [
 "0000000000000000",
 "55230332123100101510",
 "0550300000000000"
@@ -45639,235 +44179,7 @@
 "guide": "https://wowforever.gg/en/guides/druid-restoration/"
 }
 ],
-"gg:/en/builds/druid-balance-leveling/": [
-{
-"class": "DRUID",
-"ranks": [
-"5532220015001311",
-"00000000000000000000",
-"5053002050000000"
-],
-"points": [
-31,
-0,
-20
-],
-"order": [
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-1
-],
-[
-1,
-2
-],
-[
-1,
-6
-],
-[
-1,
-6
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-3
-],
-[
-1,
-5
-],
-[
-1,
-5
-],
-[
-1,
-4
-],
-[
-1,
-4
-],
-[
-1,
-9
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-10
-],
-[
-1,
-13
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-2
-],
-[
-1,
-10
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-14
-],
-[
-1,
-15
-],
-[
-1,
-16
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-1
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-3
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-4
-],
-[
-3,
-7
-],
-[
-3,
-7
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-9
-],
-[
-3,
-9
-]
-],
-"level": 60,
-"beta": null,
-"name": "Balance leveling",
-"spec": "Balance",
-"source": "wowforever.gg",
-"url": "https://wowforever.gg/en/talents/druid/?build=2.druid.762-5_90050-5_783-3_763-2_90051-2_764-2_827-1_792-5_789-1_90054-3_790-1_793-1_823-5_824-5_829-3_828-2_843-5",
-"guide": "https://wowforever.gg/en/builds/druid-balance-leveling/",
-"category": "Leveo"
-}
-],
+"gg:/en/builds/druid-balance-leveling/": [],
 "gg:/en/builds/druid-feral-leveling/": [
 {
 "class": "DRUID",
@@ -54136,12 +52448,6 @@
 [
 "DRUID",
 0,
-10,
-16850
-],
-[
-"DRUID",
-0,
 12,
 16880
 ],
@@ -54150,12 +52456,6 @@
 0,
 13,
 408248
-],
-[
-"DRUID",
-0,
-14,
-16896
 ],
 [
 "DRUID",
@@ -59897,10 +58197,6 @@
 "0:13": [
 1,
 14
-],
-"0:14": [
-1,
-15
 ],
 "0:15": [
 1,
